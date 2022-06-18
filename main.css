@@ -35,6 +35,9 @@
     display: none !important;
 }
 html {
+    font-family: "Helvetica";
+    src: url('Helvetica.ttf') format('truetype'),;
+    font-style: normal;
     background-color: rgb(75, 75, 75);
     color: white;
 }
