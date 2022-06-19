@@ -27,7 +27,7 @@
 }
 .navbarlogincontainer {
     position: relative;
-    padding-right: 5px;
+    padding-right: 10px;
     margin-right: 0px;
     margin-left: auto;
     float: right;
@@ -63,6 +63,7 @@
     display: none !important;
 }
 html {
+    margin: 0px;
     font-family: "Helvetica";
     src: url('Helvetica.ttf') format('truetype'),;
     font-style: normal;
@@ -70,8 +71,8 @@ html {
     color: white;
 }
 body {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 0px;
 }
 .content {
