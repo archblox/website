@@ -1,4 +1,4 @@
-.alert {
+#alert {
     height: 50px;
     margin: 0px;
     padding-left: 5px;
@@ -52,7 +52,7 @@
     text-align: left;
     background-color: black;
 }
-#invisible {
+.invisible {
     display: none !important;
 }
 html {
