@@ -16,7 +16,7 @@ window.onload = function() {
     if (window.location.hostname == "") {   
         alerttext.innerHTML = "You are using this locally.";
         alert.className = "";
-    } else if (window.location.hostname == "github.io") {
+    } else if (window.location.hostname == "thomasluigi07.github.io") {
         alerttext.innerHTML = "You are using this on the github pages site.";
         alert.className = "";
     } else if (window.location.hostname == "MORBLOX.com") {
