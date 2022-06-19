@@ -34,8 +34,6 @@
 }
 .smallnavbarbutton {
     position: relative;
-    top: 3px;
-    padding-left: 5px;
     text-align: center;
     font-size: 15px;
 }
