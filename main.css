@@ -13,10 +13,31 @@
     padding-left: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+    color: white;
+    line-height: normal;
     display: inline-flex;
+    vertical-align: middle;
     width: 100%;
     text-align: left;
     background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+}
+.navbarbuttoncontainer, .smallnavbarbuttoncontainer {
+    padding-left: 5px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.navbarbutton {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.smallnavbarbutton {
+    position: relative;
+    top: 3px;
+    padding-left: 5px;
+    text-align: center;
+    font-size: 15px;
 }
 .smallnav {
     height: 25px;
@@ -24,8 +45,10 @@
     padding-left: 5px;
     display: inline-table;
     padding-top: 3px;
+    vertical-align: middle;
     padding-bottom: 3px;
     width: 100%;
+    line-height: normal;
     color: rgb(255, 255, 255);
     text-size-adjust: auto;
     text-align: left;
@@ -63,4 +86,9 @@ footer {
 }
 p,h1 {
     margin: 0px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
 }
