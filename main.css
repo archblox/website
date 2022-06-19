@@ -1,8 +1,8 @@
 #alert {
-    height: 50px;
+    height: fit-content;
     margin: 0px;
-    padding-left: 5px;
-    padding-top: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     width: 100%;
     text-align: center;
 	background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
@@ -59,7 +59,7 @@ html {
     font-family: "Helvetica";
     src: url('Helvetica.ttf') format('truetype'),;
     font-style: normal;
-    background-color: rgb(75, 75, 75);
+    background-color: #4b4b4b;
     color: white;
 }
 body {

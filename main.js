@@ -10,3 +10,20 @@ window.addEventListener('resize', function() {
         logo_full.className = "";
     }
 });
+window.onload = function() {
+    var alert = document.getElementById("alert")
+    var alerttext = document.getElementById("alerttext")
+    if (window.location.hostname == "") {   
+        alerttext.innerHTML = "You are using this locally.";
+        alert.className = "";
+    } else if (window.location.hostname == "github.com") {
+        alerttext.innerHTML = "You are using this on the github pages site.";
+        alert.className = "";
+    } else if (window.location.hostname == "MORBLOX.com") {
+            alerttext.innerHTML = "You are using MORBLOX.com";
+            alert.className = "";
+    } else if (window.location.hostname == "morblox.us") {
+        alerttext.innerHTML = "You are using morblox.us";
+        alert.className = "";
+    }
+};
