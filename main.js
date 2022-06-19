@@ -16,7 +16,7 @@ window.onload = function() {
     if (window.location.hostname == "") {   
         alerttext.innerHTML = "You are using this locally.";
         alert.className = "";
-    } else if (window.location.hostname == "github.com") {
+    } else if (window.location.hostname == "github.io") {
         alerttext.innerHTML = "You are using this on the github pages site.";
         alert.className = "";
     } else if (window.location.hostname == "MORBLOX.com") {
@@ -24,6 +24,9 @@ window.onload = function() {
             alert.className = "";
     } else if (window.location.hostname == "morblox.us") {
         alerttext.innerHTML = "You are using morblox.us";
+        alert.className = "";
+    } else {
+        alerttext.innerHTML = `You are using an unknown site (${window.location.hostname})`;
         alert.className = "";
     }
 };
