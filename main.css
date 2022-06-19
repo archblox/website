@@ -18,13 +18,20 @@
     display: inline-flex;
     vertical-align: middle;
     width: 100%;
-    text-align: left;
     background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
 }
-.navbarbuttoncontainer, .smallnavbarbuttoncontainer {
+.navbarbuttoncontainer, .smallnavbarbuttoncontainer, .navbarlogincontainer {
     padding-left: 5px;
     display: table-cell;
     vertical-align: middle;
+}
+.navbarlogincontainer {
+    position: relative;
+    padding-right: 5px;
+    margin-right: 0px;
+    margin-left: auto;
+    float: right;
+    top: 11px;
 }
 .navbarbutton {
     position: relative;
