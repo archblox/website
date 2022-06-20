@@ -83,6 +83,10 @@ window.onload = function() {
         username = ""
         navbarsignedincontainer.className = "invisible"
         navbarlogincontainer.className = ""
+    } else if (username == "") {
+        username = ""
+        navbarsignedincontainer.className = "invisible"
+        navbarlogincontainer.className = ""
     } else {
         navbarsignedincontainer.className = ""
         navbarlogincontainer.className = "invisible"

@@ -45,7 +45,7 @@ window.onload = function() {
     } else if (username == "") {
         usernamecontainer.innerHTML = `Not signed in.`
     } else {
-        usernamecontainer.innerHTML = `Hello, ${username}!`
+        usernamecontainer.innerHTML = `${username}`
     }
     var logo_full = document.getElementById("logo_full")
     var logo_small = document.getElementById("logo_small")
