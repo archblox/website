@@ -1,3 +1,7 @@
+@keyframes animatedbackground {
+    from {background-position-x: 0px; animation-timing-function: linear;}
+    to {background-position-x: 2000px; animation-timing-function: linear;}
+}
 #alert {
     height: fit-content;
     margin: 0px;
@@ -77,18 +81,28 @@ html {
     font-family: "Helvetica";
     src: url('Helvetica.ttf') format('truetype'),;
     font-style: normal;
-    background-color: #4b4b4b;
+    background-color: #2e7eff;
     color: white;
+    animation-name: animatedbackground;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    background-image: url(animated.png);
+    background-position: center 100%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
 }
 body {
     margin-left: 0px;
-    margin-right: 0px;  
+    margin-right: 0px;
     margin-top: 0px;
+    padding-bottom: 0px;
 }
 .content {
     color: black;
     min-height: 300px;
-    max-width: 1500px;
+    max-width: 1000px;
+    margin-right: 20px;
+    margin-left: 20px;
     margin: auto;
     margin-top: 105px;
     padding-left: 5px;
@@ -102,15 +116,19 @@ body {
 }
 footer {
     text-align: center;
-    max-width: 1500px;
+    max-width: 1000px;
+    margin-right: 20px;
+    margin-left: 20px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
-    color: black;
     padding-top: 5px;
     background-color: rgb(179, 179, 179);
     min-height: fit-content;
     margin: auto;
+}
+footer p, footer a {
+    color: black;
 }
 p,h1 {
     margin: 0px;
