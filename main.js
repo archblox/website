@@ -93,4 +93,17 @@ window.onload = function() {
         alerttext.innerHTML = `You are using an unknown site (${window.location.hostname})`;
         alert.className = "";
     }
+    var username = localStorage.getItem("username");
+    var navbarsignedincontainer = document.getElementById("navbarsignedincontainer");
+    var navbarusername = document.getElementById("navbarusername");
+    var navbarlogincontainer = document.getElementById("navbarlogincontainer");
+    if (username == null) {
+        username = ""
+        navbarsignedincontainer.className = "invisible"
+        navbarlogincontainer.className = ""
+    } else {
+        navbarsignedincontainer.className = ""
+        navbarlogincontainer.className = "invisible"
+    }
+    navbarusername.innerHTML = username
 };

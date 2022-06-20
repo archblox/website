@@ -32,7 +32,7 @@
     display: table-cell;
     vertical-align: middle;
 }
-.navbarlogincontainer {
+#navbarlogincontainer, #navbarsignedincontainer {
     position: relative;
     padding-right: 10px;
     margin-right: 3%;
@@ -114,7 +114,7 @@ footer {
 p,h1 {
     margin: 0px;
 }
-a {
+a, #navbarusername {
     color: white;
     text-decoration: none;
     font-weight: bolder;

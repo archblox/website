@@ -107,8 +107,16 @@ window.onload = function() {
     }
     var usernamecontainer = document.getElementById("UsernameContainer");
     var username = localStorage.getItem("username");
+    var navbarsignedincontainer = document.getElementById("navbarsignedincontainer");
+    var navbarusername = document.getElementById("navbarusername");
+    var navbarlogincontainer = document.getElementById("navbarlogincontainer");
     if (username == null) {
         username = ""
+        navbarsignedincontainer.className = "invisible"
+        navbarlogincontainer.className = ""
+    } else {
+        navbarsignedincontainer.className = ""
+        navbarlogincontainer.className = "invisible"
     }
     usernamecontainer.innerHTML = "Your username is: " + username
     document.getElementById('UsernameButton').onclick = function() {
@@ -116,5 +124,7 @@ window.onload = function() {
         var usernamecontainer = document.getElementById("UsernameContainer");
         localStorage.setItem("username",usernameset);
         usernamecontainer.innerHTML = "Your username is: " + usernameset
+        navbarusername.innerHTML = username
      };
+     navbarusername.innerHTML = username
 }; 
