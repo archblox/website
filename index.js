@@ -107,6 +107,9 @@ window.onload = function() {
     }
     var usernamecontainer = document.getElementById("UsernameContainer");
     var username = localStorage.getItem("username");
+    if (username == null) {
+        username = ""
+    }
     usernamecontainer.innerHTML = "Your username is: " + username
     document.getElementById('UsernameButton').onclick = function() {
         var usernameset = document.getElementById("UsernameSet").value;
