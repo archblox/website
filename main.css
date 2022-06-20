@@ -97,7 +97,7 @@ body {
     padding-bottom: 5px;
     padding-top: 5px;
 }
-.content p a {
+.content p a, .content a {
     color: black
 }
 footer {

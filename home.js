@@ -38,17 +38,14 @@ window.addEventListener('resize', function() {
     }
 });
 window.onload = function() {
-    var morblox = document.getElementById("morblox")
-    if (window.location.hostname == "") {   
-        morblox.className = "";
-    } else if (window.location.hostname == "thomasluigi07.github.io") {
-        morblox.className = "";
-    } else if (window.location.hostname == "MORBLOX.com") {
-            morblox.className = "";
-    } else if (window.location.hostname == "morblox.us") {
-        morblox.className = "invisible";
+    var username = localStorage.getItem("username");
+    var usernamecontainer = document.getElementById("usernameframe")
+    if (username == null) {
+        usernamecontainer.innerHTML = `Not signed in.`
+    } else if (username == "") {
+        usernamecontainer.innerHTML = `Not signed in.`
     } else {
-        morblox.className = "";
+        usernamecontainer.innerHTML = `Hello, ${username}!`
     }
     var logo_full = document.getElementById("logo_full")
     var logo_small = document.getElementById("logo_small")
@@ -105,13 +102,4 @@ window.onload = function() {
         alerttext.innerHTML = `You are using an unknown site (${window.location.hostname})`;
         alert.className = "";
     }
-    var usernamecontainer = document.getElementById("UsernameContainer");
-    var username = localStorage.getItem("username");
-    usernamecontainer.innerHTML = "Your username is: " + username
-    document.getElementById('UsernameButton').onclick = function() {
-        var usernameset = document.getElementById("UsernameSet").value;
-        var usernamecontainer = document.getElementById("UsernameContainer");
-        localStorage.setItem("username",usernameset);
-        usernamecontainer.innerHTML = "Your username is: " + usernameset
-     };
-}; 
+};
