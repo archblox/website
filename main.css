@@ -138,7 +138,7 @@ html {
     font-family: "Helvetica";
     src: url('Helvetica.ttf') format('truetype'),;
     font-style: normal;
-    background-color: rgb(49, 107, 223);
+    background-color: #316bdf;
     color: white;
     animation-name: animatedbackground;
     animation-duration: 50s;

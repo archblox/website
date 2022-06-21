@@ -5,7 +5,7 @@
         {
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "Launch Edge against localhost",
+            "name": "Launch Web-App",
             "url": "file:///${workspaceFolder}/index.html",
             "webRoot": "${workspaceFolder}"
         }
