@@ -1,0 +1,13 @@
+{
+    // Launch Code for Edge Debugging
+    "version": "9.10.21",
+    "configurations": [
+        {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Launch Edge against localhost",
+            "url": "file:///${workspaceFolder}/index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

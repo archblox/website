@@ -8,14 +8,14 @@ window.addEventListener('resize', function() {
     var smallbtn1 = document.getElementById("smallbtn4")
     var smallbtn5 = document.getElementById("smallbtn5")
     var viewport_width = window.innerWidth;
-    if (viewport_width < 900) {
+    if (viewport_width < 1000) {
         logo_full.className = "invisible";
         logo_small.className = "";
     } else {
         logo_small.className = "invisible";
         logo_full.className = "";
     }
-    if (viewport_width < 600) {
+    if (viewport_width < 860) {
         smallbtn.className = "invisible";
         smallbtn2.className = "invisible";
         smallbtn3.className = "invisible";
@@ -24,14 +24,14 @@ window.addEventListener('resize', function() {
         smallbtn2.className = "navbarbutton";
         smallbtn3.className = "navbarbutton";
     }
-    if (viewport_width < 425) {
+    if (viewport_width < 660) {
         smallbtn0.className = "invisible";
         smallbtn1.className = "invisible";
     } else {
         smallbtn0.className = "navbarbutton";
         smallbtn1.className = "navbarbutton";
     }
-    if (viewport_width < 280) {
+    if (viewport_width < 510) {
         smallbtn5.className = "invisible";
     } else {
         smallbtn5.className = "navbarbutton";
@@ -39,13 +39,20 @@ window.addEventListener('resize', function() {
 });
 window.onload = function() {
     var username = localStorage.getItem("username");
-    var usernamecontainer = document.getElementById("usernameframe")
+    var usernamecontainer = document.getElementById("usernameframe");
+    var onlinestatus = document.getElementById("onlinestatus");
     if (username == null) {
-        usernamecontainer.innerHTML = `Not signed in.`
+        usernamecontainer.innerHTML = 'OnlyTwentyCharacters'
+        onlinestatus.className = "onlinestatus_offline"
+        onlinestatus.innerHTML = "Offline"
     } else if (username == "") {
-        usernamecontainer.innerHTML = `Not signed in.`
+        usernamecontainer.innerHTML = 'OnlyTwentyCharacters'
+        onlinestatus.className = "onlinestatus_ingame"
+        onlinestatus.innerHTML = "In Game - MORBLOX HQ"
     } else {
         usernamecontainer.innerHTML = `${username}`
+        onlinestatus.className = "onlinestatus_website"
+        onlinestatus.innerHTML = "Website"
     }
     var logo_full = document.getElementById("logo_full")
     var logo_small = document.getElementById("logo_small")
@@ -56,14 +63,14 @@ window.onload = function() {
     var smallbtn1 = document.getElementById("smallbtn4")
     var smallbtn5 = document.getElementById("smallbtn5")
     var viewport_width = window.innerWidth;
-    if (viewport_width < 900) {
+    if (viewport_width < 1000) {
         logo_full.className = "invisible";
         logo_small.className = "";
     } else {
         logo_small.className = "invisible";
         logo_full.className = "";
     }
-    if (viewport_width < 600) {
+    if (viewport_width < 860) {
         smallbtn.className = "invisible";
         smallbtn2.className = "invisible";
         smallbtn3.className = "invisible";
@@ -72,14 +79,14 @@ window.onload = function() {
         smallbtn2.className = "navbarbutton";
         smallbtn3.className = "navbarbutton";
     }
-    if (viewport_width < 425) {
+    if (viewport_width < 660) {
         smallbtn0.className = "invisible";
         smallbtn1.className = "invisible";
     } else {
         smallbtn0.className = "navbarbutton";
         smallbtn1.className = "navbarbutton";
     }
-    if (viewport_width < 280) {
+    if (viewport_width < 510) {
         smallbtn5.className = "invisible";
     } else {
         smallbtn5.className = "navbarbutton";
@@ -100,5 +107,5 @@ window.onload = function() {
         navbarsignedincontainer.className = ""
         navbarlogincontainer.className = "invisible"
     }
-    navbarusername.innerHTML = username
+    navbarusername.innerHTML = `Logged in as: ${username} <a href=\"logout.html\">Log out...</a>`;
 };
