@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>morblox.us - MORBLOX HQ</title>
-        <meta content="morblox.us - MORBLOX HQ" property="og:title"/>
+        <title>morblox.us - Settings</title>
+        <meta content="morblox.us - Settings" property="og:title"/>
         <meta content="MORBLOX is a work in progress revival." property="og:description"/>
         <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/" property="og:url"/>
         <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/MORBLOXlogo.png" property="og:image"/>
@@ -45,29 +45,36 @@
         <div class="invisible" id="alert">
             <p class="alerttext" id="alerttext">ALERT TEXT</p>
         </div>
-        <div class="invisible" id="LoadingGame">
-            <button class="redbutton" id="closebuttondl">X</button>
-            <img id="loadlogo" src="MORBLOXlogoshort.png">
-            <p>Loading MORBLOX...</p>
-            <p id="downloadask">Don't have MORBLOX installed?</p>
-            <button class="bluebutton" id="loadingdlbutton">Download and Play!</button>
-        </div>
         <div class="content">
-            <div class="content_special" id="gametopcontainer">
-                <div class="leftgamecontainer">
-                    <img id="gamethumbnail_large">
+            <h1>Settings</h1>
+            <div class="content_special" style="align-content: flex-end; align-items: flex-start;">
+                <div class="content_special" style="flex-wrap: wrap; flex-direction: column; width: 50%;">
+                    <h3>Bio</h3>
+                    <textarea style="resize: none; width: 100%; height: 75px;" placeholder="Hello!"></textarea>
+                    <button class="bluebutton">Save</button>
                 </div>
-                <div class="rightgamecontainer">
-                    <h1 id="gamename">OnlyTwentyCharacters's Place</h1> 
-                    <p>By <a href="profile.html" id="gamecreator">OnlyTwentyCharacters</a></p>
-                    <button id="playbutton" class="greenbutton" style="width: 100%; height: 50px; font-size: x-large; margin-top: 115px; align-content: center;">Play</button>
+                <div class="content_special" style="flex-wrap: wrap; flex-direction: column; width: 50%; text-align: end;">
+                    <p>Username: OnlyTwentyCharacters <button class="bluebutton">Edit</button></p>
+                    <p>E-Mail: t****@ex********.com <button class="bluebutton">Edit</button></p>
+                    <p>Date of Birth: 01/01/01 <button class="bluebutton">Edit</button></p>
+                    <p>Password: ******** <button class="bluebutton">Edit</button></p>
+                    <p>Date Display Preference: D/M/YY <button class="bluebutton">Edit</button></p>
+                    <p>Time Display Preference: 12 Hour <button class="bluebutton">Edit</button></p>
                 </div>
             </div>
-            <ul></ul>
-            <p id="placedescription">This is a description for the place "OnlyTwentyCharacters's Place", made by "OnlyTwentyCharacters".</p>
-            <ul></ul>
-            <div style="text-align: center;">
-                <p>Visits: 0 | Created: 21/6/2022 | Last updated: 22/6/2022</p>
+            <div>
+                <h3>Invite Keys</h3>
+                <p>You can only create 1 invite every week.</p>
+                <p><button class="bluebutton" disabled>Create Invite Key</button> You cannot invite until 29/6/22.</p>
+                <h3>Invite History</h3>
+                <p>9/10/21 - Invited <a href="profile.html">a guy that got invited</a></p>
+                <p>16/10/21 - Invited <a href="profile.html">a guy that got invited hater</a></p>
+                <p>22/6/22 - Invited <a href="profile.html">OnlyTwentyMORBLOXers</a></p>
+            </div>
+            <div style="flex-wrap: wrap; flex-direction: column;">
+                <h3>DANGER ZONE</h3>
+                <p>Thesse buttons can fully delete data. Use with caution!</p>
+                <p><button class="redbutton">Delete Account</button> <button class="redbutton">Delete All Places</button> <button class="redbutton">Delete All Avatar Items</button></p>
             </div>
         </div>
         <div id="footer">
