@@ -2,6 +2,25 @@
     from {background-position-x: 0px; animation-timing-function: linear;}
     to {background-position-x: 2000px; animation-timing-function: linear;}
 }
+#LoadingGame {
+    top: 0%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #3D414A;
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    background: linear-gradient(rgba(209, 209, 209,0.7) 10%, rgba(88, 88, 88,0.7) 100%);
+}
+#closebuttondl {height: 15%;width: 15%;font-size: large;margin-left: 80%;}
 #alert {
     height: fit-content;
     margin: 0px;
@@ -83,6 +102,39 @@
     padding-right: 5px;
     width: 50%;
 }
+.leftgamecontainer  {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: inherit;
+}
+.rightgamecontainer  {
+    text-align: right;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#gamethumbnail_large {
+    background-color: black;
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url("gameplaceholder.png");
+    background-size: contain;
+    border-width: 0px;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.gamethumbnail_small {
+    background-color: black;
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url("gameplaceholder.png");
+    background-size: contain;
+    border-width: 0px;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 130px;
+}
 #gamesframe, #profilerightcontainer {
     text-align: center;
     padding-left: 5px;
@@ -100,6 +152,19 @@
 }
 #btncontainer {
     margin-left: 75%;
+}
+#loadingdlbutton {
+    margin-top: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: max-content;
+    font-size: x-large;
+}
+#downloadask {
+    margin-top: 10%;
+}
+#loadlogo {
+    width: 20%;
 }
 .navbarbutton {
     position: relative;
@@ -161,12 +226,12 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
+    justify-content: center;
 }
 .content {
     color: black;
-    max-width: 1000px;
+    max-width: 880px;
     margin: auto;
     margin-top: 105px;
     padding-left: 5px;
@@ -195,7 +260,7 @@ body {
 }
 #footer {
     text-align: center;
-    max-width: 1000px;
+    max-width: 880px;
     margin: auto;
     padding-left: 5px;
     padding-right: 5px;

@@ -48,7 +48,7 @@ window.onload = function() {
     } else if (username == "") {
         usernamecontainer.innerHTML = 'OnlyTwentyCharacters'
         onlinestatus.className = "onlinestatus_ingame"
-        onlinestatus.innerHTML = "In Game - MORBLOX HQ"
+        onlinestatus.innerHTML = "In Game - OnlyTwentyCharacters's Place"
     } else {
         usernamecontainer.innerHTML = `${username}`
         onlinestatus.className = "onlinestatus_website"
