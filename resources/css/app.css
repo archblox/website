@@ -1,0 +1,152 @@
+@keyframes animatedbackground {
+    from {background-position-x: 0px; animation-timing-function: linear;}
+    to {background-position-x: 2000px; animation-timing-function: linear;}
+}
+#alert {
+    height: fit-content;
+    margin: 0px;
+    position: fixed;
+    top: 72px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100%;
+    text-align: center;
+	background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
+}
+.navbar {
+    height: 40px;
+    margin: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    position: fixed;
+    top: 0px;
+    padding-bottom: 2px;
+    color: white;
+    line-height: normal;
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+    background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+}
+.navbarbuttoncontainer, .smallnavbarbuttoncontainer, .navbarlogincontainer {
+    padding-left: 5px;
+    display: table-cell;
+    vertical-align: middle;
+}
+#navbarlogincontainer, #navbarsignedincontainer {
+    position: relative;
+    padding-right: 10px;
+    margin-right: 3%;
+    margin-left: auto;
+    float: inline-end;
+    top: 11px;
+}
+#profilefriendscontainer p, #profilefriendscontainer a {
+    display: inline;
+}
+#profiletopcontainer {
+    margin-bottom: 30px;
+    display: block;
+    width: 100%;
+}
+#profilemiddlecontainer {
+    text-align: center;
+    margin-right: 50%;
+}
+#btncontainer {
+    margin-left: 75%;
+}
+.navbarbutton {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.smallnavbarbutton {
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+}
+.smallnav {
+    height: 25px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: fixed;
+    top: 43px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: inline-table;
+    vertical-align: middle;
+    width: 100%;
+    line-height: normal;
+    color: rgb(255, 255, 255);
+    text-size-adjust: auto;
+    text-align: left;
+    background-color: black;
+}
+.invisible {
+    display: none !important;
+}
+html {
+    margin: 0px;
+    font-family: "Helvetica";
+    src: url('Helvetica.ttf') format('truetype'),;
+    font-style: normal;
+    background-color: #2e7eff;
+    color: white;
+    animation-name: animatedbackground;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    background-image: url(animated.png);
+    background-position: center 100%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 35px;
+    padding-bottom: 0px;
+}
+.content {
+    color: black;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 105px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.content p a, .content a {
+    color: black
+}
+#footer {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: rgba(172, 172, 172, 0.8);
+    min-height: fit-content;
+}
+#footer p, #footer a {
+    color: black;
+}
+p,h1 {
+    margin: 0px;
+}
+a, #navbarusername {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
