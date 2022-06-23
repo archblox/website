@@ -1,0 +1,297 @@
+@keyframes animatedbackground {
+  from {background-position-x: 0px; animation-timing-function: linear;}
+  to {background-position-x: 2000px; animation-timing-function: linear;}
+}
+#alert {
+  height: fit-content;
+  margin: 0px;
+  position: fixed;
+  top: 72px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 100%;
+  text-align: center;
+background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
+}
+.navbar {
+  height: 40px;
+  margin: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+  position: fixed;
+  top: 0px;
+  padding-bottom: 2px;
+  color: white;
+  line-height: normal;
+  display: inline-flex;
+  vertical-align: middle;
+  width: 100%;
+  background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+}
+.navbarbuttoncontainer, .smallnavbarbuttoncontainer, .navbarlogincontainer {
+  padding-left: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#navbarlogincontainer, #navbarsignedincontainer {
+  position: relative;
+  padding-right: 10px;
+  margin-right: 3%;
+  margin-left: auto;
+  float: inline-end;
+  top: 11px;
+}
+#profilefriendscontainer p, #profilefriendscontainer a {
+  display: inline;
+}
+#profiletopcontainer {
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+}
+.onlinestatus_website {
+  color: #2260DD;
+}
+.onlinestatus_ingame {
+  color: green;
+}
+.onlinestatus_offline {
+  color: black;
+}
+#yes, #no {
+  width: 50%;
+}
+#FeedBox {
+  width: 100%;
+  height: 22px;
+}
+#FeedButton {
+  width: 100%;
+  height: 22px;
+}
+#logo_signup, #logo-signup p {
+  margin: auto;
+  text-align: center;
+  width: 200px;
+}
+#feed, #profileleftcontainer {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 50%;
+}
+#gamesframe, #profilerightcontainer {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 50%;
+}
+.FeedContainerBox {
+  border-radius: 1px;
+  text-align: left;
+  width: 100%;
+  vertical-align: top;
+  display: inline-flex;
+  border: 1px solid #000000;
+  border-width: 1px;
+}
+#btncontainer {
+  margin-left: 75%;
+}
+.navbarbutton {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.smallnavbarbutton {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+}
+.smallnav {
+  height: 25px;
+  margin: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: fixed;
+  top: 43px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: inline-table;
+  vertical-align: middle;
+  width: 100%;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+  text-size-adjust: auto;
+  text-align: left;
+  background-color: black;
+}
+.invisible, #invisible {
+  display: none !important;
+}
+html {
+  margin: 0px;
+  font-family: "Helvetica";
+  src: url('Helvetica.ttf') format('truetype'),;
+  font-style: normal;
+  background-color: rgb(49, 107, 223);
+  color: white;
+  animation-name: animatedbackground;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  background-image: url('../img/animated.png');
+  background-position: center 100%;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 35px;
+  padding-bottom: 0px;
+}
+.content_special, #content_special {
+  display: inline-flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content {
+  color: black;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 105px;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-height: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.content_signup {
+  color: black;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.content_signup  input, .content_signup button {
+  width: 90%;
+}
+.content p a, .content a, .content_signup p a, .content_signup a, .content_special p a, .content_special a {
+  color: black
+}
+#footer {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: rgba(172, 172, 172, 0.8);
+  min-height: fit-content;
+}
+button {
+font-weight: 400;
+text-align: center;
+  border-radius: 3px;
+border: 1px solid #3D414A;
+font-family: "Helvetica";
+color: #fff;
+}
+button.bluebutton {
+background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+}
+button:hover.bluebutton {
+background: linear-gradient(#7ca1ef 10%, #4a7de4 49%, #396fdb 50%, #3168d6 100%);
+  cursor: pointer;
+}
+button:disabled.bluebutton {
+background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button.greybutton {
+background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+}
+button:hover.greybutton {
+background: linear-gradient(#d1d8e6 10%, #b3b8c2 49%, #868a91 50%, #393b3e 100%);
+  cursor: pointer;
+}
+button:disabled.greybutton {
+background:  linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button.redbutton {
+background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
+}
+button:hover.redbutton {
+background: linear-gradient(#e56c6c 10%, #dd4e4e 49%, #d14343 50%, #da2e2e 100%);
+  cursor: pointer;
+}
+button:disabled.redbutton {
+background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button.greenbutton {
+background: linear-gradient(#5acf77 10%, #3abc44 49%, #359c32 50%, #1a5c2e 100%);
+}
+button:hover.greenbutton {
+background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%);
+  cursor: pointer;
+}
+button:disabled.greenbutton {
+background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#footer_signup {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: rgba(172, 172, 172, 0.8);
+  min-height: fit-content;
+}
+#footer p, #footer a, #footer_signup p, #footer_signup a {
+  color: black;
+}
+p,h1,h2,h3,h4,h5,h6 {
+  margin: 0px;
+}
+a, #navbarusername {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.nonbolded {
+  font-weight: normal !important;
+}
+.logoutframe {
+  color: black;
+  max-width: fit-content;
+  margin: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
