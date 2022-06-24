@@ -35,9 +35,6 @@
                 here!</a></p>
         <p id="discord">Also, <a href="https://discord.gg/nudzQ7hkWY">Join our Discord!</a></p>
         <ul></ul>
-        <h2>DEBUG SETTINGS BELOW!</h2>
-        <p>Feel free to toy around with these, before they're gone forever!</p>
-        <ul></ul>
         <h3>Page Links</h3>
         <a href="{{ route('home') }}">Home</a>
         <a href="games.html">Games</a>
@@ -45,14 +42,9 @@
         <a href="404.html">404</a>
         <a href="logout.html">Logout</a>
         <ul></ul>
-        <h3>Set LocalStorage Data</h3>
         <ul></ul>
-        <form>
-            <input id="UsernameSet" type="text" name="username" placeholder="Enter a Username">
-            <button class="bluebutton" id="SaveButton">Save to LocalStorage...</button>
-            <p id="UsernameContainer">Saved Username:</p>
-        </form>
-        <ul></ul>
+        <h3>User Count</h3>
+        <p>There are <strong>{{ App\Models\User::count() }}</strong> users registered</p>
     </div>
     <div id="footer_signup">
         <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin

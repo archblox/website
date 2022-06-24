@@ -22,16 +22,16 @@
 
 <body>
     <div class="navbar">
-        <a id="logo_full" href="{{ route('home') }}"><img alt="MORBLOX Logo"
+        <a id="logo_full" href="{{ route('index') }}"><img alt="MORBLOX Logo"
                 src="{{ asset('img/MORBLOXlogo.png') }}" width="200" height="40" /></a>
-        <a id="logo_small" class="invisible" href="{{ route('home') }}"><img alt="MORBLOX Logo"
+        <a id="logo_small" class="invisible" href="{{ route('index') }}"><img alt="MORBLOX Logo"
                 src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
         <div class="navbarbuttoncontainer">
             <a class="navbarbutton" id="smallbtn5" href="games.html">Games</a>
             <a class="navbarbutton" id="smallbtn4" href="catalog.html">Catalog</a>
             <a class="navbarbutton" id="smallbtn0" href="build.html">Build</a>
             <a class="navbarbutton" id="smallbtn1" href="forum.html">Forum</a>
-            <a class="navbarbutton" id="smallbtn2" href="{{ route('profile', Auth::user()->id) }}">Profile</a>
+            <a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}  @else {{ route('profile', Auth::id()) }} @endguest">Profile</a>
             <a class="navbarbutton" id="smallbtn3" href="forum.html">Settings</a>
         </div>
         @guest

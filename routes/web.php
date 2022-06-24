@@ -23,8 +23,8 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/privacy', [App\Http\Controllers\PageController::class, 'privacy'])->name('privacy');
 Route::get('/tos', [App\Http\Controllers\PageController::class, 'tos'])->name('tos');
+Route::get('/user/{id}', [App\Http\Controllers\PageController::class, 'profile'])->name('profile');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
-    Route::get('/user/{id}', [App\Http\Controllers\PageController::class, 'profile'])->name('profile');
 });
