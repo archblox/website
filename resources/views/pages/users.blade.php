@@ -5,7 +5,8 @@
 
 @section('content')
     @if (request()->query('q'))
-        <h1 id="usernameframe">Users - {{ DB::table('users')->where('name', 'LIKE', '%'.request()->query('q').'%')->count() }} found</h1>
+        <h1 id="usernameframe">Users -
+            {{ DB::table('users')->where('name', 'LIKE', '%' . request()->query('q') . '%')->count() }} found</h1>
         <a href="{{ route('users') }}" style="color:#2260DD">Clear Search</a>
     @else
         <h1 id="usernameframe">Users</h1>
@@ -14,7 +15,8 @@
     <ul></ul>
     <form method="GET" action="{{ route('users') }}">
         <p><input type="text" id="q" name="q" placeholder="Enter a Username..." value="{{ request()->q }}">
-            <button class="greybutton" type="submit">Search</button></p>
+            <button class="greybutton" type="submit">Search</button>
+        </p>
     </form>
     <ul></ul>
     <div id="SearchContainer">
@@ -27,7 +29,11 @@
                 <div id="ProfileContainerBox1TextContainer">
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
                     <p>"I'm new to MORBLOX!"</p>
-                    <p class="onlinestatus_website">Online</p>
+                    @if (Cache::has('is_online_' . $user->id))
+                        <p id="onlinestatus" class="onlinestatus_website">Website</p>
+                    @else
+                        <p id="onlinestatus" class="onlinestatus_offline">Offline</p>
+                    @endif
                 </div>
             </div>
         @endforeach
