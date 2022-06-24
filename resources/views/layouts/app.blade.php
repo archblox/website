@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta content="Morblox" property="og:title" />
     <meta content="MORBLOX is a work in progress revival." property="og:description" />
-    <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/" property="og:url" />
-    <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/MORBLOXlogo.png" property="og:image" />
+    <meta content="https://morblox.us" property="og:url" />
+    <meta content="https://morblox.us/img/MORBLOXlogo.png" property="og:image" />
     <meta content="#4b4b4b" data-react-helmet="true" name="theme-color" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,9 +22,9 @@
 
 <body>
     <div class="navbar">
-        <a id="logo_full" href="{{ route('index') }}"><img alt="MORBLOX Logo"
+        <a id="logo_full" href="{{ route('home') }}"><img alt="MORBLOX Logo"
                 src="{{ asset('img/MORBLOXlogo.png') }}" width="200" height="40" /></a>
-        <a id="logo_small" class="invisible" href="{{ route('index') }}"><img alt="MORBLOX Logo"
+        <a id="logo_small" class="invisible" href="{{ route('home') }}"><img alt="MORBLOX Logo"
                 src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
         <div class="navbarbuttoncontainer">
             <a class="navbarbutton" id="smallbtn5" href="games.html">Games</a>
@@ -54,6 +54,7 @@
             <a class="smallnavbarbutton" href="friends.html">Friends</a>
             <a class="smallnavbarbutton" href="avatar.html">Avatar</a>
             <a class="smallnavbarbutton" href="Settings.html">Transactions</a>
+            <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
         </div>
     </div>
     @yield('alert')

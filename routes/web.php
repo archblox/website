@@ -27,4 +27,6 @@ Route::get('/user/{id}', [App\Http\Controllers\PageController::class, 'profile']
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+    Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
+    Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
 });

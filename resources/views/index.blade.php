@@ -35,13 +35,6 @@
                 here!</a></p>
         <p id="discord">Also, <a href="https://discord.gg/nudzQ7hkWY">Join our Discord!</a></p>
         <ul></ul>
-        <h3>Page Links</h3>
-        <a href="{{ route('home') }}">Home</a>
-        <a href="games.html">Games</a>
-        <a href="profile.html">Profile</a>
-        <a href="404.html">404</a>
-        <a href="logout.html">Logout</a>
-        <ul></ul>
         <ul></ul>
         <h3>User Count</h3>
         <p>There are <strong>{{ App\Models\User::count() }}</strong> users registered</p>

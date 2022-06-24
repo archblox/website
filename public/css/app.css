@@ -89,7 +89,7 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   padding-right: 5px;
   width: 50%;
 }
-.FeedContainerBox {
+.FeedContainerBox, .ProfileContainerBox {
   border-radius: 1px;
   text-align: left;
   width: 100%;
@@ -97,6 +97,7 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   display: inline-flex;
   border: 1px solid #000000;
   border-width: 1px;
+  margin-bottom: 5px;
 }
 #btncontainer {
   margin-left: 75%;
@@ -294,4 +295,12 @@ a, #navbarusername {
   background-color: rgba(255, 255, 255, 0.3);
   padding-bottom: 5px;
   padding-top: 5px;
+}
+.w-5 {
+  display: none;
+}
+.flex {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
 }

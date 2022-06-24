@@ -1,0 +1,37 @@
+@extends('layouts.app')
+@section('title')
+    <title>Users - {{ env('APP_NAME') }}</title>
+@endsection
+
+@section('content')
+    @if (request()->query('q'))
+        <h1 id="usernameframe">Users - {{ DB::table('users')->where('name', 'LIKE', '%'.request()->query('q').'%')->count() }} found</h1>
+        <a href="{{ route('users') }}" style="color:#2260DD">Clear Search</a>
+    @else
+        <h1 id="usernameframe">Users</h1>
+    @endif
+    <ul></ul>
+    <ul></ul>
+    <form method="GET" action="{{ route('users') }}">
+        <p><input type="text" id="q" name="q" placeholder="Enter a Username..." value="{{ request()->q }}">
+            <button class="greybutton" type="submit">Search</button></p>
+    </form>
+    <ul></ul>
+    <div id="SearchContainer">
+        @foreach ($users as $user)
+            <div class="ProfileContainerBox" id="ProfileContainerBox1">
+                <div id="ProfileContainerBox1ImageContainer">
+                    <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
+                            src="{{ asset('img/reviewpending.png') }}" width="60px" height="100%"></a>
+                </div>
+                <div id="ProfileContainerBox1TextContainer">
+                    <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
+                    <p>"I'm new to MORBLOX!"</p>
+                    <p class="onlinestatus_website">Online</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+    <ul></ul>
+    {{ $users->appends($_GET)->links() }}
+@endsection
