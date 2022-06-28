@@ -7,9 +7,9 @@
     <div id="profiletopcontainer">
         <h1 id="usernameframe">{{ $data['user']->name }}</h1>
         @if (Cache::has('is_online_' . $data['user']->id))
-            <p id="onlinestatus" class="onlinestatus_website">Website</p>
+             <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
         @else
-            <p id="onlinestatus" class="onlinestatus_offline">Offline</p>
+             <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online {{ Carbon\Carbon::parse($data['user']->last_seen)->diffForHumans() }}</strong>
         @endif
     </div>
     <div id="content_special">
