@@ -30,9 +30,9 @@
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
                     <p>"I'm new to MORBLOX!"</p>
                     @if (Cache::has('is_online_' . $user->id))
-                        <p id="onlinestatus" class="onlinestatus_website">Website</p>
+                        <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
                     @else
-                        <p id="onlinestatus" class="onlinestatus_offline">Offline</p>
+                        <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online {{ $user->last_seen->diffForHumans() }}</strong>
                     @endif
                 </div>
             </div>
