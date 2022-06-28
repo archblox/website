@@ -24,13 +24,6 @@ local function IsTouchDevice()
 	return touchEnabled 	
 end 
 
-local function IsPhone()
-	if gui.AbsoluteSize.Y <= 320 then 
-		return true
-	end 
-	return false 
-end
-
 waitForChild(game,"Players")
 waitForProperty(game.Players,"LocalPlayer")
 local player = game.Players.LocalPlayer
@@ -47,7 +40,7 @@ CurrentLoadout.Parent = gui
 local CLBackground = Instance.new('ImageLabel')						
 CLBackground.Name = 'Background';
 CLBackground.Size = UDim2.new(1.2, 0, 1.2, 0);
-CLBackground.Image = "rbxasset://Textures/IPadInGameGUIToolbar.png"
+CLBackground.Image = "http://www.morblox.us/asset/?id=96536002"
 CLBackground.BackgroundTransparency = 1.0;
 CLBackground.Position = UDim2.new(-0.1, 0, -0.1, 0);
 CLBackground.ZIndex = 0.0;	
@@ -57,7 +50,7 @@ CLBackground.Visible = false
 local BackgroundUp = Instance.new('ImageLabel')
 BackgroundUp.Size = UDim2.new(1, 0, 0.025, 1)
 BackgroundUp.Position = UDim2.new(0, 0, 0, 0)
-BackgroundUp.Image = 'rbxasset://Textures/IPadInGameGUIToolbarTop03.png'
+BackgroundUp.Image = 'http://www.morblox.us/asset/?id=97662207'
 BackgroundUp.BackgroundTransparency = 1.0
 BackgroundUp.Parent = CLBackground
 
@@ -71,7 +64,7 @@ BackpackButton.RobloxLocked = true
 BackpackButton.Visible = false
 BackpackButton.Name = "BackpackButton"
 BackpackButton.BackgroundTransparency = 1
-BackpackButton.Image = "rbxasset://Textures/IPadInGameGUIToolbarBkpkTabTopV3.png"
+BackpackButton.Image = "http://www.morblox.us/asset/?id=97617958"
 BackpackButton.Position = UDim2.new(0.5, -60, 1, -108)
 BackpackButton.Size = UDim2.new(0, 120, 0, 18)
 waitForChild(gui,"ControlFrame")
@@ -79,7 +72,7 @@ BackpackButton.Parent = gui.ControlFrame
 
 local NumSlots = 9
 
-if IsPhone() then 
+if gui.AbsoluteSize.Y <= 320 then 
 	NumSlots = 3
 	CurrentLoadout.Size = UDim2.new(0, 180, 0, 54)
 	CurrentLoadout.Position = UDim2.new(0.5, -90, 1, -85)
@@ -122,12 +115,12 @@ TempSlot.Style = 'Custom'
 TempSlot.Visible = false
 TempSlot.RobloxLocked = true
 TempSlot.Parent = CurrentLoadout
-TempSlot.ZIndex = 4.0
+TempSlot.ZIndex = 3.0
 
 	local slotBackground = Instance.new('ImageLabel')
 	slotBackground.Name = 'Background'
 	slotBackground.BackgroundTransparency = 1.0
-	slotBackground.Image = 'rbxasset://Textures/IPadInGameGUITool.png'
+	slotBackground.Image = 'http://www.morblox.us/asset/?id=97613075'
 	slotBackground.Size = UDim2.new(1, 0, 1, 0)	
 	slotBackground.Parent = TempSlot
 
@@ -222,7 +215,6 @@ TempSlot.ZIndex = 4.0
 	GearText.TextColor3 = Color3.new(1,1,1)
 	GearText.TextWrap = true
 	GearText.Parent = TempSlot
-	GearText.ZIndex = 5.0
 
 --- Great, now lets make the inventory!
 
