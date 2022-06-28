@@ -1,0 +1,2 @@
+%wASXKJCwAC8/pfxO8PWb28u2Yi4QDRXySjsW9/ZvHb/YdfTseRyLtuRvjQ3u4AM59qO7nW3CVWpwm0//J/V1A017fCEK6k+68aGX3jErP2n2G9dT2hYhZ8dryLSCpcpqenJ2L8X9UHR9TuOUWmQZApcj7qGjNF9Fh3dMo6Fvpb4=%
+game:GetService("ScriptContext"):AddStarterScript(1)
