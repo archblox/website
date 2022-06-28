@@ -6,7 +6,7 @@
             "type": "pwa-msedge",
             "request": "launch",
             "name": "Launch Web-App",
-            "url": "file:///${workspaceFolder}/public/index.php",
+            "url": "file:///${workspaceFolder}/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
