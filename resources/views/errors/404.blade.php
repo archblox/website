@@ -4,8 +4,8 @@
         <title>{{ env('APP_NAME') }} - 404</title>
         <meta content="morblox.us - 404" property="og:title"/>
         <meta content="MORBLOX is a work in progress revival." property="og:description"/>
-        <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/" property="og:url"/>
-        <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/MORBLOXlogo.png" property="og:image"/>
+        <meta content="https://morblox.us" property="og:url"/>
+        <meta content="https://morblox.us/img/MORBLOXlogo.png" property="og:image"/>
         <meta content="#4b4b4b" data-react-helmet="true" name="theme-color"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
