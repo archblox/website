@@ -23,8 +23,13 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/privacy', [App\Http\Controllers\PageController::class, 'privacy'])->name('privacy');
 Route::get('/tos', [App\Http\Controllers\PageController::class, 'tos'])->name('tos');
+Route::get('/user/{id}', [App\Http\Controllers\PageController::class, 'profile'])->name('profile');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
-    Route::get('/user/{id}', [App\Http\Controllers\PageController::class, 'profile'])->name('profile');
+    Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
+    Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
+    Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
+    Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
+    Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 });

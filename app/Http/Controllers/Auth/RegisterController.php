@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\InviteKey;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 
 class RegisterController extends Controller
 {
@@ -65,11 +67,51 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $this->verifyKey($data['key']);
+        $invited_by = $this->getInviter($data['key']);
+        $this->updateKeyTable($data['key']);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'dob' => $data['dob'],
             'password' => Hash::make($data['password']),
+            'badges' => [3],
+            'invited_by' => $invited_by,
         ]);
+    }
+
+    protected function verifyKey($key)
+    {
+        $fetchKey = InviteKey::where('key', $key)->orderBy('id', 'desc')->first();
+
+        if (empty($fetchKey) || !$fetchKey->active) {
+            throw ValidationException::withMessages(['key' => 'Incorrect invite key']);
+        } else {
+            return true;
+        }
+    }
+
+    protected function getInviter($key)
+    {
+        $fetchKey = InviteKey::where('key', $key)->orderBy('id', 'desc')->first();
+
+        return $fetchKey->created_by;
+    }
+
+    protected function updateKeyTable($key) : void
+    {
+        if (!User::exists()) {
+            $newId = 0;
+        } else {
+            $newId = User::orderBy('id', 'desc')->first()->id;
+        }
+
+        $updateDetails = [
+            'user_invited' => ++$newId,
+            'active' => false,
+        ];
+
+        InviteKey::where('key', $key)->orderBy('id', 'desc')->first()->update($updateDetails);
     }
 }

@@ -3,18 +3,21 @@
 
 <head>
     <title>Login - {{ env('APP_NAME') }}</title>
-    <meta content="morblox.us - Log In" property="og:title" />
+    <meta charset="utf-8">
+    <meta content="Login - Morblox" property="og:title" />
     <meta content="MORBLOX is a work in progress revival." property="og:description" />
-    <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/" property="og:url" />
-    <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/MORBLOXlogo.png" property="og:image" />
+    <meta content="https://morblox.us" property="og:url" />
+    <meta content="https://morblox.us/img/MORBLOXlogo.png" property="og:image" />
     <meta content="#4b4b4b" data-react-helmet="true" name="theme-color" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="{{ asset('img/MORBLOX.png') }}" />
+    <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="MORBLOX.png" />
-    <link rel="apple-touch-startup-image" href="MORBLOXSplash.png" />
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/main.js') }}"></script>
 </head>
 
 <body>
@@ -33,13 +36,12 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <h3>Username/E-Mail Address</h3>
-            <input id="email" type="email" name="email" value="{{ old('email') }}" required
-                autocomplete="email" autofocus>
-            @error('email')
+            <input id="login" type="text" name="login" value="{{ old('login') }}" required autofocus>
+            @if ($errors->has('name') || $errors->has('email'))
                 <span style="color:red" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <strong>{{ $errors->first('name') ?: $errors->first('email') }}</strong>
                 </span>
-            @enderror
+            @endif
             <h3>Password</h3>
             <input id="password" type="password" name="password" required autocomplete="current-password">
             @error('password')
@@ -65,8 +67,10 @@
         </form>
     </div>
     <div id="footer_signup">
-        <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin time!</p>
-        <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>      
+        <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin
+            time!</p>
+        <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a>
+        </p>
     </div id="footer">
 </body>
 

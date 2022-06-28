@@ -6,14 +6,14 @@
     <meta charset="utf-8">
     <meta content="Morblox" property="og:title" />
     <meta content="MORBLOX is a work in progress revival." property="og:description" />
-    <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/" property="og:url" />
-    <meta content="https://thomasluigi07.github.io/MORBLOX-WEBSITE/MORBLOXlogo.png" property="og:image" />
+    <meta content="https://morblox.us" property="og:url" />
+    <meta content="https://morblox.us/img/MORBLOXlogo.png" property="og:image" />
     <meta content="#4b4b4b" data-react-helmet="true" name="theme-color" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" href="MORBLOX.png" />
-    <link rel="apple-touch-startup-image" href="MORBLOXSplash.png" />
+    <link rel="apple-touch-icon" href="{{ asset('img/MORBLOX.png') }}" />
+    <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -31,8 +31,8 @@
             <a class="navbarbutton" id="smallbtn4" href="catalog.html">Catalog</a>
             <a class="navbarbutton" id="smallbtn0" href="build.html">Build</a>
             <a class="navbarbutton" id="smallbtn1" href="forum.html">Forum</a>
-            <a class="navbarbutton" id="smallbtn2" href="{{ route('profile', Auth::user()->id) }}">Profile</a>
-            <a class="navbarbutton" id="smallbtn3" href="forum.html">Settings</a>
+            <a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}  @else {{ route('profile', Auth::id()) }} @endguest">Profile</a>
+            <a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a>
         </div>
         @guest
             <div id="navbarlogincontainer">
@@ -54,6 +54,7 @@
             <a class="smallnavbarbutton" href="friends.html">Friends</a>
             <a class="smallnavbarbutton" href="avatar.html">Avatar</a>
             <a class="smallnavbarbutton" href="Settings.html">Transactions</a>
+            <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
         </div>
     </div>
     @yield('alert')
