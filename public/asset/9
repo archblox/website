@@ -166,7 +166,7 @@ local Chat = {
 			Messages_List = {},
 			MessageThread = nil,
 
-			Admins_List = {'Thomas', 'MORBLOX', 'Conkley', 'Josh', 'Penguin', 'BagOfDreams', 'Template', 'AliMine8555'
+			Admins_List = {'Thomas', 'MORBLOX', 'Conkley', 'Josh', 'Penguin', 'BagOfDreams', 'Mura', 'templater', 'AliMine8555'
 								},
 
 			SafeChat_List = {

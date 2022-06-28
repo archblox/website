@@ -7,13 +7,14 @@
 
 local ADMINS =
 {
-	thomas = 1,
-	morblox = 1,
-	conkley = 1,
-	josh = 1,
-	penguin = 1,
-	bagofdreams = 1,
-	template = 1,
+	Thomas = 1,
+	MORBLOX = 1,
+	Conkley = 1,
+	Josh = 1,
+	Penguin = 1,
+	BagOfDreams = 1,
+	templater = 1,
+	Mura = 1,
 	AliMine8555 = 1,
 }
 
