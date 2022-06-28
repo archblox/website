@@ -32,7 +32,7 @@
                     @if (Cache::has('is_online_' . $user->id))
                         <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
                     @else
-                        <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online {{ Carbon::parse($user->last_seen)->diffForHumans() }}</strong>
+                        <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online {{ Carbon\Carbon::parse($user->last_seen)->diffForHumans() }}</strong>
                     @endif
                 </div>
             </div>
