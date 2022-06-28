@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Carbon\Carbon;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
@@ -23,8 +24,7 @@ class UserLastActivity
             $expireTime = Carbon::now()->addMinute(2); // keep online for 2 min
             Cache::put('is_online_' . Auth::user()->id, true, $expireTime);
 
-            /*Last Seen
-            User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);*/
+            User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);
         }
         return $next($request);
     }

@@ -29,4 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
     Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
     Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
+    Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
+    Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
+    Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 });

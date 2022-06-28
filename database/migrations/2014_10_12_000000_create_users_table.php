@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Carbon\Carbon;
 
 class CreateUsersTable extends Migration
 {
@@ -25,6 +26,9 @@ class CreateUsersTable extends Migration
             $table->string('blurb')->default('Hello!');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('last_seen')->default(Carbon::now());
+            $table->json('badges');
+            $table->integer('invited_by');
         });
     }
 

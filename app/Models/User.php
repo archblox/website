@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -22,6 +23,8 @@ class User extends Authenticatable
         'email',
         'dob',
         'password',
+        'badges',
+        'invited_by',
     ];
 
     /**
@@ -41,5 +44,15 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'badges' => 'array'
     ];
+
+    public static function isAdmin()
+    {
+        if (Auth::guest() || !Auth::user()->admin) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

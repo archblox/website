@@ -27,12 +27,18 @@ class PageController extends Controller
     public function profile($id)
     {
         $user = User::find($id);
+        $badges = DB::table('badges')->get();
 
         if (!$user) {
             abort(404);
         }
 
-        return view('pages.profile')->with('user', $user);
+        $data = [
+            'user' => $user,
+            'badges' => $badges
+        ];
+
+        return view('pages.profile')->with('data', $data);
     }
 
     public function users(Request $request)
@@ -44,5 +50,10 @@ class PageController extends Controller
         }
 
         return view('pages.users')->with('users', $users);
+    }
+
+    public function settings()
+    {
+        return view('misc.settings');
     }
 }

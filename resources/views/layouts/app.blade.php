@@ -32,7 +32,7 @@
             <a class="navbarbutton" id="smallbtn0" href="build.html">Build</a>
             <a class="navbarbutton" id="smallbtn1" href="forum.html">Forum</a>
             <a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}  @else {{ route('profile', Auth::id()) }} @endguest">Profile</a>
-            <a class="navbarbutton" id="smallbtn3" href="forum.html">Settings</a>
+            <a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a>
         </div>
         @guest
             <div id="navbarlogincontainer">
