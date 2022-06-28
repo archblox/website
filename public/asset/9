@@ -1307,10 +1307,6 @@ function Chat:Initialize()
 	-- NOTE: PlayerAdded only fires on the server, hence ChildAdded is used here 
 	PlayersService.ChildAdded:connect(function()
 		Chat.EventListener:disconnect()  
-		self.EventListener = PlayersService.PlayerChatted:connect(function(...) 	
-			-- This event has 4 callback arguments 
-			-- Enum.PlayerChatType.All, chatPlayer, message, targetPlayer 
-			Chat:PlayerChatted(...)
 		end)
 	end)
 
