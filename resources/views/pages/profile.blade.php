@@ -24,7 +24,7 @@
                 <h3>Place Visits: 0</h3>
             </div>
             <ul></ul>
-            <h2>MORBLOX Badges</h2>
+            <h2>Role</h2>
             <div style="white-space:nowrap">
                 @foreach ($data['badges'] as $badge)
                     @foreach ($data['user']->badges as $user_badge)
@@ -38,8 +38,8 @@
                 @endforeach
             </div>
             <ul></ul>
-            <h2>Game Badges</h2>
-            <p>This user has not collected any game badges yet!</p>
+            <h2>Badges</h2>
+            <p>This user has not collected any badges yet!</p>
         </div>
         <div id="profilerightcontainer">
             <h2>Games</h2>
