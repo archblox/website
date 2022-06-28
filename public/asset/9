@@ -166,10 +166,7 @@ local Chat = {
 			Messages_List = {},
 			MessageThread = nil,
 
-			Admins_List = {'Sorcus', 'Shedletsky', 'Telamon', 'Tarabyte', 'StickMasterLuke', 'OnlyTwentyCharacters', 'PenguinMania', 'Penguin', 
-								'Disasterocks', 'Uknown.png', 'Builderman', 'MegaCd64', 'Josemax64', 'Mario', 'GongfuTiger', 'Erik.Cassel', 'Matt Dusek', 'Keith',
-								'Totbl', 'LordRugDump', 'David.Baszucki', 'Dbapostle', 'DaveYorkRBX', 'nJay', 'OstrichSized', 'TobotRobot', 'ICEBLOX', 'ROBLOX', 'RBAdam', 'Doughtless',
-								'Anaminus', 'Stravant', 'Cr3470r', 'CodeWriter', 'Games', 'AcesWayUpHigh', 'Phil'
+			Admins_List = {'Thomas', 'MORBLOX', 'Conkley', 'Josh', 'Penguin', 'BagOfDreams', 'Template', 'AliMine8555'
 								},
 
 			SafeChat_List = {
