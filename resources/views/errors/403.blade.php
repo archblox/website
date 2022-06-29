@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script src="{{ asset('js/403.js') }}"></script>
     </head>
     <body>
         <ul></ul>
@@ -25,7 +26,7 @@
         <div class="content_signup">
             <h2>403 Forbidden</h2>
             <p>OH SHIT WHAT HAVE YOU DONE GO BACK NOW BEFORE LUIGI KILLS US ALL!!!!!!</p>
-            <p>Luigi: I AM GOING TO KILL EVERYONE IN {{ #a timer counts down to 0 here, when it reaches 0 redirect the client }}!</p>
+            <p>Luigi: I AM GOING TO KILL EVERYONE IN <span id="timeElement">5</span></p>
             <img alt="Angry Luigi" src="{{ asset('img/error.png') }}" width="100%" height="max-content">
         </div>
         <div id="footer_signup">
