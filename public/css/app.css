@@ -338,3 +338,26 @@ a, #navbarusername {
   margin-right: auto;
   margin-left: auto;
 }
+.iphone-sidebar {
+  position: fixed;
+  color: black;
+  width: 20%;
+  height: 100%;
+  margin-left: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.iphone-content {
+  position: relative;
+  color: black;
+  width: 80%;
+  height: 100%;
+  left: 20%;
+  background-color: rgba(132, 132, 132, 0.5);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+#InviteTreeContainer {
+  background-color: rgb(255, 255, 255);
+}

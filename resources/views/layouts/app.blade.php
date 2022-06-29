@@ -31,7 +31,10 @@
             <a class="navbarbutton" id="smallbtn4" href="catalog.html">Catalog</a>
             <a class="navbarbutton" id="smallbtn0" href="build.html">Build</a>
             <a class="navbarbutton" id="smallbtn1" href="forum.html">Forum</a>
-            <a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}  @else {{ route('profile', Auth::id()) }} @endguest">Profile</a>
+            <a class="navbarbutton" id="smallbtn2"
+                href="@guest {{ route('login') }}
+@else
+{{ route('profile', Auth::id()) }} @endguest">Profile</a>
             <a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a>
         </div>
         @guest
@@ -40,8 +43,11 @@
             </div>
         @else
             <div id="navbarsignedincontainer">
-                <p class="nonbolded" id="navbarusername">Logged in as: {{ Auth::user()->name }} <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">Log out...</a></p>
+                <p class="nonbolded" id="navbarusername">Logged in as: {{ Auth::user()->name }} <a
+                        href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Log
+                        out...</a></p>
             </div>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
@@ -55,6 +61,9 @@
             <a class="smallnavbarbutton" href="avatar.html">Avatar</a>
             <a class="smallnavbarbutton" href="Settings.html">Transactions</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
+            @if (!Auth::guest() && Auth::user()->isAdmin())
+                <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
+            @endif
         </div>
     </div>
     @yield('alert')
@@ -63,8 +72,10 @@
         @yield('content')
     </div>
     <div id="footer">
-        <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin time!</p>
-        <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>      
+        <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin
+            time!</p>
+        <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a>
+        </p>
     </div>
 </body>
 
