@@ -16,8 +16,8 @@
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/main.js') }}"></script>
+    <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+    <script src="{{ asset('js/main.js?id=z3b8JK2bff') }}"></script>
 </head>
 
 <body>
@@ -27,10 +27,10 @@
         <a id="logo_small" class="invisible" href="{{ route('home') }}"><img alt="MORBLOX Logo"
                 src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
         <div class="navbarbuttoncontainer">
-            <a class="navbarbutton" id="smallbtn5" href="games.html">Games</a>
-            <a class="navbarbutton" id="smallbtn4" href="catalog.html">Catalog</a>
-            <a class="navbarbutton" id="smallbtn0" href="build.html">Build</a>
-            <a class="navbarbutton" id="smallbtn1" href="forum.html">Forum</a>
+            <a class="navbarbutton" id="smallbtn5" href="#">Games</a>
+            <a class="navbarbutton" id="smallbtn4" href="#">Catalog</a>
+            <a class="navbarbutton" id="smallbtn0" href="#">Build</a>
+            <a class="navbarbutton" id="smallbtn1" href="#">Forum</a>
             <a class="navbarbutton" id="smallbtn2"
                 href="@guest {{ route('login') }}
 @else
@@ -57,9 +57,9 @@
     </div>
     <div class="smallnav">
         <div class="smallnavbarbuttoncontainer">
-            <a class="smallnavbarbutton" href="friends.html">Friends</a>
-            <a class="smallnavbarbutton" href="avatar.html">Avatar</a>
-            <a class="smallnavbarbutton" href="Settings.html">Transactions</a>
+            <a class="smallnavbarbutton" href="#">Friends</a>
+            <a class="smallnavbarbutton" href="#">Avatar</a>
+            <a class="smallnavbarbutton" href="#">Transactions</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
             @if (!Auth::guest() && Auth::user()->isAdmin())
                 <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
