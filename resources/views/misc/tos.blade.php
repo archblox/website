@@ -39,6 +39,8 @@
             <p>&#x2022; Do not harass other users. (Ban for few days, Termination)</p>
             <p>&#x2022; Do not make accounts for the purpose of breaking rules. (Termination)</p>
             <p>&#x2022; Exploiting is NOT allowed, unless you are testing it in your own game. (Termination)</p>
+            <p>&#x2022; Don't impersonate other users. (Termination)</p>
+            <p>&#x2022; Don't make accounts named "MORBLOX" or "ARCHBLOX". (Name Change)</p>
             <p>&#x2022; Do not ban evade. (Termination)</p>
             <p>&#x2022; Don't spam. (Warning, Ban for few days)</p>
             <br>
