@@ -43,7 +43,7 @@
             </div>
         @else
             <div id="navbarsignedincontainer">
-                <p class="nonbolded" id="navbarusername">Logged in as: {{ Auth::user()->name }} <a
+                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} <a
                         href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log

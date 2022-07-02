@@ -1,3 +1,5 @@
+/*i suck at css lols*/
+/*everything should kinda make sense i hope, if you need help understanding this dm thomas (me)*/
 @keyframes animatedbackground {
   from {background-position-x: 0px; animation-timing-function: linear;}
   to {background-position-x: 2000px; animation-timing-function: linear;}
