@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <title>{{ env('APP_NAME') }} - It's ARCHBLOX time.</title>
+    <title>{{ env('APP_NAME') }} - We're Still Morbin'</title>
     <meta charset="utf-8">
     <meta content="ARCHBLOX" property="og:title" />
     <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
@@ -25,7 +25,7 @@
     <div id="logo_signup">
         <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
                 width="200" height="40" /></a>
-        <p id="morbin">It's ARCHBLOX time.</p>
+        <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
         <h1>Welcome to ARCHBLOX!</h1>
