@@ -28,7 +28,7 @@
                 </div>
                 <div id="ProfileContainerBox1TextContainer">
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
-                    <p>"I'm new to MORBLOX!"</p>
+                    <p>"I'm new to ARCHBLOX!"</p>
                     @if (Cache::has('is_online_' . $user->id))
                         <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
                     @else

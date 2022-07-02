@@ -14,7 +14,7 @@
     </div>
     <div id="content_special">
         <div id="profileleftcontainer">
-            <p id="status">"I'm new to MORBLOX!"</p>
+            <p id="status">"I'm new to ARCHBLOX!"</p>
             <img alt="profile image" src="{{ asset('img/reviewpending.png') }}" width="75%">
             <p id="bio">{{ $data['user']->blurb }}</p>
             <ul></ul>

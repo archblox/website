@@ -2,10 +2,10 @@
 <html lang="en-us">
     <head>
         <title>{{ env('APP_NAME') }} - 403</title>
-        <meta content="morblox.us - 403" property="og:title"/>
-        <meta content="MORBLOX is a work in progress revival." property="og:description"/>
-        <meta content="https://morblox.us" property="og:url"/>
-        <meta content="https://morblox.us/img/MORBLOXlogo.png" property="og:image"/>
+        <meta content="ARCHBLOX - 403" property="og:title"/>
+        <meta content="ARCHBLOX is a work in progress revival." property="og:description"/>
+        <meta content="https://archblox.com" property="og:url"/>
+        <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image"/>
         <meta content="#4b4b4b" data-react-helmet="true" name="theme-color"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
@@ -19,9 +19,9 @@
     <body>
         <ul></ul>
         <div id="logo_signup">
-            <a href="{{ route('index') }}"><img alt="MORBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
                 width="200" height="40" /></a>
-            <p id="morbin">It's MORBLOX time.</p>
+            <p id="morbin">It's ARCHBLOX time.</p>
         </div>
         <div class="content_signup">
             <h2>403 Forbidden</h2>
@@ -30,7 +30,7 @@
             <img alt="Angry Luigi" src="{{ asset('img/error.png') }}" width="100%" height="max-content">
         </div>
         <div id="footer_signup">
-            <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin
+            <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin
                 time!</p>
             <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>
         </div>

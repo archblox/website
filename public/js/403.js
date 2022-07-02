@@ -1,7 +1,7 @@
 var time = 5;
 
 function redirect() {
-	window.location.replace("https://morblox.us");
+	window.location.replace("https://archblox.com");
 }
 
 function countdown() {
