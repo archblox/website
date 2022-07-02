@@ -39,11 +39,11 @@
         </div>
         @guest
             <div id="navbarlogincontainer">
-                <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Log In</a>
+                <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Log In</a></p>
             </div>
         @else
             <div id="navbarsignedincontainer">
-                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a
+                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} : <a
                         href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log
