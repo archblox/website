@@ -2,6 +2,9 @@
 @section('title')
     <title>Home - {{ env('APP_NAME') }}</title>
 @endsection
+@section('titlediscord')
+<meta content="Home - {{env('APP_NAME')}}" property="og:title" />
+@endsection
 
 @section('content')
     <h1 id="usernameframe">Hello, {{ Auth::user()->name }}!</h1>

@@ -4,7 +4,7 @@
 <head>
     @yield('title')
     <meta charset="utf-8">
-    <meta content="ARCHBLOX" property="og:title" />
+    @yield('titlediscord')
     <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
     <meta content="https://archblox.com" property="og:url" />
     <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image" />

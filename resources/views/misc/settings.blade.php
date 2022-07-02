@@ -2,6 +2,9 @@
 @section('title')
 <title>Settings - {{ env('APP_NAME') }}</title>
 @endsection
+@section('titlediscord')
+<meta content="Settings - {{env('APP_NAME')}}" property="og:title" />
+@endsection
 
 @section('popup_content')
 <div class="popupcontainer" id="invisible">

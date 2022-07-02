@@ -2,6 +2,9 @@
 @section('title')
 <title>Friends - {{ env('APP_NAME') }}</title>
 @endsection
+@section('titlediscord')
+<meta content="Friends - {{env('APP_NAME')}}" property="og:title" />
+@endsection
 
 @section('content')
 <h1 id="usernameframe">Friends</h1>

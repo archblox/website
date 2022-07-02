@@ -2,6 +2,9 @@
 @section('title')
     <title>Users - {{ env('APP_NAME') }}</title>
 @endsection
+@section('titlediscord')
+<meta content="Users - {{env('APP_NAME')}}" property="og:title" />
+@endsection
 
 @section('content')
     @if (request()->query('q'))

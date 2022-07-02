@@ -2,6 +2,9 @@
 @section('title')
 <title>{{ $data['user']->name }} - {{ env('APP_NAME') }}</title>
 @endsection
+@section('titlediscord')
+<meta content="{{ $data['user']->name }} - {{env('APP_NAME')}}" property="og:title" />
+@endsection
 
 @section('content')
 <div id="profiletopcontainer">
