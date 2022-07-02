@@ -21,20 +21,20 @@
 </head>
 
 <body>
-    <ul></ul>
-    <ul></ul>
+    <br>
+    <br>
     <div id="logo_signup">
-        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
             width="200" height="40" /></a>
         <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
         <h1>Welcome to ARCHBLOX!</h1>
         <p>Have an account already? <a href="{{ route('login') }}">Click here</a> to log in.</p>
-        <ul></ul>
+        <br>
         <p>Before entering anything, please read the <a href="{{ route('privacy') }}">Privacy Policy</a> and the <a
                 href="{{ route('tos') }}">Terms of Service</a>.</p>
-        <ul></ul>
+        <br>
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <h3>Username</h3>
@@ -46,7 +46,7 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @enderror
-            <ul></ul>
+            <br>
             <h3>E-Mail Address</h3>
             <input id="email" type="email" name="email" value="{{ old('email') }}" required
                 autocomplete="email">
@@ -63,7 +63,7 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @enderror
-            <ul></ul>
+            <br>
             <h3>Date of Birth</h3>
             <input id="dob" type="date" name="dob" value="{{ old('dob') }}" required>
             @error('dob')
@@ -71,7 +71,7 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @enderror
-            <ul></ul>
+            <br>
             <h3>Password</h3>
             <input id="password" type="password" name="password" required autocomplete="password">
             <p>Don't reuse passwords, and don't use a simple one!</p>
@@ -81,7 +81,7 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @enderror
-            <ul></ul>
+            <br>
             <h3>Invite Key</h3>
             <input id="key" type="text" name="key" placeholder="Invite Key" value="{{ old('key') }}"
                 required>
@@ -92,7 +92,7 @@
             @enderror
             <p>An Invite Key is required to sign up. You can obtain one from a person that has played ARCHBLOX.</p>
             <p>Don't beg for keys.</p>
-            <ul></ul>
+            <br>
             <button class="greenbutton">Sign Up!</button>
     </div>
     <div id="footer_signup">

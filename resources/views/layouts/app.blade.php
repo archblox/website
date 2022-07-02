@@ -57,7 +57,7 @@
     </div>
     <div class="smallnav">
         <div class="smallnavbarbuttoncontainer">
-            <a class="smallnavbarbutton" href="#">Friends</a>
+            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends</a>
             <a class="smallnavbarbutton" href="#">Avatar</a>
             <a class="smallnavbarbutton" href="#">Transactions</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
@@ -68,6 +68,8 @@
     </div>
     @yield('alert')
 
+
+    @yield('popup_content')
     <div class="content">
         @yield('content')
     </div>

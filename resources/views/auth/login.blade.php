@@ -21,17 +21,17 @@
 </head>
 
 <body>
-    <ul></ul>
-    <ul></ul>
+    <br>
+    <br>
     <div id="logo_signup">
-        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
                 width="200" height="40" /></a>
         <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
         <h1>Welcome back!</h1>
         <p>Don't have an account? <a href="{{ route('register') }}">Click here</a> to sign up.</p>
-        <ul></ul>
+        <br>
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -49,7 +49,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <ul></ul>
+            <br>
             <input style="width:5%;margin-bottom:15px" type="checkbox" name="remember" id="remember"
                 {{ old('remember') ? 'checked' : '' }}>
 
@@ -58,7 +58,7 @@
             </label>
             <button type="submit" class="greenbutton">Log in!</button>
             @if (Route::has('password.request'))
-                <ul></ul>
+                <br>
                 <a class="btn btn-link" href="{{ route('password.request') }}"
                     style="text-align:center;display:block;width:90%">
                     {{ __('Forgot Your Password?') }}

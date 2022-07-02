@@ -18,17 +18,17 @@
         <script src="{{ asset('js/main.js') }}"></script>
     </head>
     <body>
-        <ul></ul>
-        <ul></ul>
+        <br>
+        <br>
         <div id="logo_signup">
-            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
                 width="200" height="40" /></a>
             <p id="morbin">We're Still Morbin'</p>
         </div>
         <div class="content_signup">
             <h1>Terms of Service</h1>
             <p>Welcome to ARCHBLOX! Before playing, you'll need to know the rules to make sure you know what you can and can't do here.</p>
-            <ul></ul>
+            <br>
             <h2>Our Rules</h2>
             <h5>At the end of every rule there is a "()" section containing what the punishment is for breaking that rule.</h5>
             <p>&#x2022; Swearing is fine, but please do not say any racial or homophobic slurs. (Ban for few days, Termination)</p>
@@ -41,10 +41,10 @@
             <p>&#x2022; Exploiting is NOT allowed, unless you are testing it in your own game. (Termination)</p>
             <p>&#x2022; Do not ban evade. (Termination)</p>
             <p>&#x2022; Don't spam. (Warning, Ban for few days)</p>
-            <ul></ul>
+            <br>
             <h2>Asset Moderation</h2>
             <p>If we believe that any of your assets is breaking the rules, we will remove or change that Asset as required, and then take action onto your ARCHBLOX account.</p>
-            <ul></ul>
+            <br>
         </div>
         <div id="footer_signup">
             <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin time!</p>

@@ -18,10 +18,10 @@
         <script src="{{ asset('js/main.js') }}"></script>
     </head>
     <body>
-        <ul></ul>
-        <ul></ul>
+        <br>
+        <br>
         <div id="logo_signup">
-            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
                 width="200" height="40" /></a>
             <p id="morbin">We're Still Morbin'</p>
         </div>
@@ -55,7 +55,7 @@
             <p>This Policy can change from time to time and is available on our website. You will be notified of this change.</p>
             <h2>Privacy Policy Complaints and Enquiries</h2>
             <p>If you have any queries or complaints about our Privacy Policy, please contact us on our Discord.</p>
-            <ul></ul>
+            <br>
         </div>
         <div id="footer_signup">
             <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin time!</p>

@@ -5,14 +5,14 @@
 
 @section('content')
     <h1 id="usernameframe">Hello, {{ Auth::user()->name }}!</h1>
-    <ul></ul>
+    <br>
     <div class="content_special">
         <div id="feed">
             <h2>My Feed</h2>
-            <ul></ul>
+            <br>
             <input id="FeedBox" type="text" placeholder="Say something...">
             <button class="greybutton" id="FeedButton">Post it!</button>
-            <ul></ul>
+            <br>
             <div id="FeedContainer">
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
@@ -85,18 +85,18 @@
         </div>
         <div id="gamesframe">
             <h2>Friends (0)</h2>
-            <ul></ul>
+            <br>
             <div class="friendslist">
                 <p>You don't have any friends yet!</p>
             </div>
-            <ul></ul>
+            <br>
             <h2>Recently Played</h2>
-            <ul></ul>
+            <br>
             <div class="gamelist">
                 <p>You haven't played any games yet!</p>
             </div>
-            <ul></ul>
+            <br>
         </div>
     </div>
-    <ul></ul>
+    <br>
 @endsection

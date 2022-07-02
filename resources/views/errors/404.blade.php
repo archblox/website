@@ -16,9 +16,9 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
-        <ul></ul>
+        <br>
         <div id="logo_signup">
-            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+            <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
                 width="200" height="40" /></a>
             <p id="morbin">We're Still Morbin'</p>
         </div>

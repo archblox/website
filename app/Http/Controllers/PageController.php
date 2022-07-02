@@ -51,9 +51,14 @@ class PageController extends Controller
 
         return view('pages.users')->with('users', $users);
     }
-
+    
     public function settings()
     {
         return view('misc.settings');
+    }
+
+    public function friends()
+    {
+        return view('pages.friends');
     }
 }

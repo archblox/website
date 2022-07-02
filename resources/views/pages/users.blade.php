@@ -11,14 +11,12 @@
     @else
         <h1 id="usernameframe">Users</h1>
     @endif
-    <ul></ul>
-    <ul></ul>
     <form method="GET" action="{{ route('users') }}">
         <p><input type="text" id="q" name="q" placeholder="Enter a Username..." value="{{ request()->q }}">
             <button class="greybutton" type="submit">Search</button>
         </p>
     </form>
-    <ul></ul>
+    <br>
     <div id="SearchContainer">
         @foreach ($users as $user)
             <div class="ProfileContainerBox" id="ProfileContainerBox1">
@@ -38,6 +36,6 @@
             </div>
         @endforeach
     </div>
-    <ul></ul>
+    <br>
     {{ $users->appends($_GET)->links() }}
 @endsection

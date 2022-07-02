@@ -21,24 +21,24 @@
 </head>
 
 <body>
-    <ul></ul>
+    <br>
     <div id="logo_signup">
-        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
                 width="200" height="40" /></a>
         <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
         <h1>Welcome to ARCHBLOX!</h1>
         <p>ARCHBLOX is a Work-In-Progress revival.</p>
-        <ul></ul>
+        <br>
         <a href="{{ route('login') }}">Log In</a>
         <a href="{{ route('register') }}">Sign Up</a>
-        <ul></ul>
+        <br>
         <p id="ARCHBLOX" class="invisible">Want to check out the published site? <a href="https://archblox.com">Click
                 here!</a></p>
         <p id="discord">Also, <a href="https://discord.gg/nudzQ7hkWY">Join our Discord!</a></p>
-        <ul></ul>
-        <ul></ul>
+        <br>
+        <br>
         <h3>User Count</h3>
         <p>There are <strong>{{ App\Models\User::count() }}</strong> users registered</p>
     </div>

@@ -1,7 +1,15 @@
 @keyframes animatedbackground {
-  from {background-position-x: 0px; animation-timing-function: linear;}
-  to {background-position-x: 2000px; animation-timing-function: linear;}
+  from {
+    background-position-x: 0px;
+    animation-timing-function: linear;
+  }
+
+  to {
+    background-position-x: 2000px;
+    animation-timing-function: linear;
+  }
 }
+
 #alert {
   height: fit-content;
   margin: 0px;
@@ -13,21 +21,24 @@
   padding-left: 5px;
   width: 100%;
   text-align: center;
-background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
+  background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
 }
+
 .warningtext {
   color: red;
 }
+
 .popupcontainer {
   top: 0%;
   position: fixed;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   z-index: 100000000;
 }
+
 .popup {
-  color:#000000;
+  color: #000000;
   text-align: center;
   position: fixed;
   top: 50%;
@@ -40,9 +51,11 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   width: max-content;
   border-radius: 3px;
   border: 1px solid #3D414A;
-  background: rgb(80, 80, 80); /* Fallback for IE 11*/
+  background: rgb(80, 80, 80);
+  /* Fallback for IE 11*/
   background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
 }
+
 .navbar {
   height: 40px;
   margin: 0px;
@@ -57,15 +70,21 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   display: inline-flex;
   vertical-align: middle;
   width: 100%;
-  background: rgb(58, 83, 242); /* Fallback for IE 11*/
+  background: rgb(58, 83, 242);
+  /* Fallback for IE 11*/
   background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
 }
-.navbarbuttoncontainer, .smallnavbarbuttoncontainer, .navbarlogincontainer {
+
+.navbarbuttoncontainer,
+.smallnavbarbuttoncontainer,
+.navbarlogincontainer {
   padding-left: 5px;
   display: table-cell;
   vertical-align: middle;
 }
-#navbarlogincontainer, #navbarsignedincontainer {
+
+#navbarlogincontainer,
+#navbarsignedincontainer {
   position: relative;
   padding-right: 10px;
   margin-right: 3%;
@@ -73,52 +92,70 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   float: inline-end;
   top: 11px;
 }
-#profilefriendscontainer p, #profilefriendscontainer a {
+
+#profilefriendscontainer p,
+#profilefriendscontainer a {
   display: inline;
 }
+
 #profiletopcontainer {
   margin-bottom: 30px;
   display: block;
   width: 100%;
 }
+
 .onlinestatus_website {
   color: #2260DD;
 }
+
 .onlinestatus_ingame {
   color: green;
 }
+
 .onlinestatus_offline {
   color: black;
 }
-#yes, #no {
+
+#yes,
+#no {
   width: 50%;
 }
+
 #FeedBox {
   width: 100%;
   height: 22px;
 }
+
 #FeedButton {
   width: 100%;
   height: 22px;
 }
-#logo_signup, #logo-signup p {
+
+#logo_signup,
+#logo-signup p {
   margin: auto;
   text-align: center;
   width: 200px;
 }
-#feed, #profileleftcontainer {
+
+#feed,
+#profileleftcontainer {
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
   width: 50%;
 }
-#gamesframe, #profilerightcontainer {
+
+#gamesframe,
+#profilerightcontainer {
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
   width: 50%;
 }
-.FeedContainerBox, .ProfileContainerBox {
+
+.FeedContainerBox,
+.ProfileContainerBox {
   border-radius: 1px;
   text-align: left;
   width: 100%;
@@ -128,20 +165,35 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   border-width: 1px;
   margin-bottom: 5px;
 }
+.FriendsContainerBox {
+  border-radius: 1px;
+  text-align: left;
+  width: 100%;
+  min-width: max-content;
+  vertical-align: top;
+  display: inline-flex;
+  border: 1px solid #000000;
+  border-width: 1px;
+  margin-bottom: 5px;
+}
+
 #btncontainer {
   margin-left: 75%;
 }
+
 .navbarbutton {
   position: relative;
   top: 10px;
   text-align: center;
   font-size: 18px;
 }
+
 .smallnavbarbutton {
   position: relative;
   text-align: center;
   font-size: 15px;
 }
+
 .smallnav {
   height: 25px;
   margin: 0px;
@@ -160,13 +212,16 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   text-align: left;
   background-color: black;
 }
-.invisible, #invisible {
+
+.invisible,
+#invisible {
   display: none !important;
 }
+
 html {
   margin: 0px;
   font-family: "Helvetica";
-  src: url('Helvetica.ttf') format('truetype'),;
+  src: url('Helvetica.ttf') format('truetype'), ;
   font-style: normal;
   background-color: rgb(49, 107, 223);
   color: white;
@@ -178,6 +233,7 @@ html {
   background-repeat: repeat-x;
   background-attachment: fixed;
 }
+
 body {
   margin-left: 0px;
   margin-right: 0px;
@@ -185,15 +241,18 @@ body {
   margin-bottom: 35px;
   padding-bottom: 0px;
 }
-.content_special, #content_special {
+
+.content_special,
+#content_special {
   display: inline-flex;
   width: 100%;
-  flex-wrap: nowrap;
   flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   align-content: center;
   justify-content: flex-start;
-  align-items: flex-start;
 }
+
 .content {
   color: black;
   max-width: 1000px;
@@ -202,11 +261,13 @@ body {
   padding-left: 5px;
   padding-right: 5px;
   min-height: 300px;
-  background: rgb(255,255,255); /* Fallback for IE 11*/
+  background: rgb(255, 255, 255);
+  /* Fallback for IE 11*/
   background-color: rgba(255, 255, 255, 0.8);
   padding-bottom: 5px;
   padding-top: 5px;
 }
+
 .content_signup {
   color: black;
   max-width: 500px;
@@ -214,17 +275,27 @@ body {
   margin-top: 30px;
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(255,255,255); /* Fallback for IE 11*/
+  background: rgb(255, 255, 255);
+  /* Fallback for IE 11*/
   background-color: rgba(255, 255, 255, 0.8);
   padding-bottom: 5px;
   padding-top: 5px;
 }
-.content_signup  input, .content_signup button {
+
+.content_signup input,
+.content_signup button {
   width: 90%;
 }
-.content p a, .content a, .content_signup p a, .content_signup a, .content_special p a, .content_special a {
+
+.content p a,
+.content a,
+.content_signup p a,
+.content_signup a,
+.content_special p a,
+.content_special a {
   color: black
 }
+
 #footer {
   text-align: center;
   max-width: 1000px;
@@ -233,66 +304,109 @@ body {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(172,172,172); /* Fallback for IE 11*/
+  background: rgb(172, 172, 172);
+  /* Fallback for IE 11*/
   background-color: rgba(172, 172, 172, 0.8);
   min-height: fit-content;
 }
+
+.tab {
+  background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+  font-weight: 400;
+  text-align: center;
+  height: 20px;
+  border-radius: 1px;
+  border: 1px solid #3D414A;
+  font-family: "Helvetica";
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff !important;
+}
+
+.tab_selected {
+  background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+  font-weight: 400;
+  text-align: center;
+  height: 20px;
+  border-radius: 1px;
+  border: 1px solid #3D414A;
+  font-family: "Helvetica";
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff !important;
+}
+
 button {
-font-weight: 400;
-text-align: center;
+  background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+  font-weight: 400;
+  text-align: center;
+  height: 20px;
   border-radius: 3px;
-border: 1px solid #3D414A;
-font-family: "Helvetica";
-color: #fff;
+  border: 1px solid #3D414A;
+  font-family: "Helvetica";
+  color: #fff;
 }
+
 button.bluebutton {
-background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+  background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
 }
+
 button:hover.bluebutton {
-background: linear-gradient(#7ca1ef 10%, #4a7de4 49%, #396fdb 50%, #3168d6 100%);
+  background: linear-gradient(#7ca1ef 10%, #4a7de4 49%, #396fdb 50%, #3168d6 100%);
   cursor: pointer;
 }
+
 button:disabled.bluebutton {
-background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+  background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 button.greybutton {
-background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+  background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
 }
+
 button:hover.greybutton {
-background: linear-gradient(#d1d8e6 10%, #b3b8c2 49%, #868a91 50%, #393b3e 100%);
+  background: linear-gradient(#d1d8e6 10%, #b3b8c2 49%, #868a91 50%, #393b3e 100%);
   cursor: pointer;
 }
+
 button:disabled.greybutton {
-background:  linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+  background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 button.redbutton {
-background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
+  background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
 }
+
 button:hover.redbutton {
-background: linear-gradient(#e56c6c 10%, #dd4e4e 49%, #d14343 50%, #da2e2e 100%);
+  background: linear-gradient(#e56c6c 10%, #dd4e4e 49%, #d14343 50%, #da2e2e 100%);
   cursor: pointer;
 }
+
 button:disabled.redbutton {
-background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
+  background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 button.greenbutton {
-background: linear-gradient(#5acf77 10%, #3abc44 49%, #359c32 50%, #1a5c2e 100%);
+  background: linear-gradient(#5acf77 10%, #3abc44 49%, #359c32 50%, #1a5c2e 100%);
 }
+
 button:hover.greenbutton {
-background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%);
+  background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%);
   cursor: pointer;
 }
+
 button:disabled.greenbutton {
-background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%);
+  background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%);
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 #footer_signup {
   text-align: center;
   max-width: 500px;
@@ -301,43 +415,63 @@ background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%)
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(172,172,172); /* Fallback for IE 11*/
+  background: rgb(172, 172, 172);
+  /* Fallback for IE 11*/
   background-color: rgba(172, 172, 172, 0.8);
   min-height: fit-content;
 }
-#footer p, #footer a, #footer_signup p, #footer_signup a {
+
+#footer p,
+#footer a,
+#footer_signup p,
+#footer_signup a {
   color: black;
 }
-p,h1,h2,h3,h4,h5,h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0px;
 }
-a, #navbarusername {
+
+a,
+#navbarusername {
   color: white;
   text-decoration: none;
   font-weight: bolder;
 }
+
 .nonbolded {
   font-weight: normal !important;
 }
+
 .logoutframe {
   color: black;
   max-width: fit-content;
   margin: auto;
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(255,255,255); /* Fallback for IE 11*/
+  background: rgb(255, 255, 255);
+  /* Fallback for IE 11*/
   background-color: rgba(255, 255, 255, 0.3);
   padding-bottom: 5px;
   padding-top: 5px;
 }
+
 .w-5 {
   display: none;
 }
+
 .flex {
   display: table;
   margin-right: auto;
   margin-left: auto;
 }
+
 .iphone-sidebar {
   position: fixed;
   color: black;
@@ -348,6 +482,7 @@ a, #navbarusername {
   padding-bottom: 5px;
   padding-top: 5px;
 }
+
 .iphone-content {
   position: relative;
   color: black;
@@ -358,6 +493,7 @@ a, #navbarusername {
   padding-bottom: 5px;
   padding-top: 5px;
 }
+
 #InviteTreeContainer {
   background-color: rgb(255, 255, 255);
 }
