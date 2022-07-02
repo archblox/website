@@ -5,6 +5,9 @@
 @section('titlediscord')
 <meta content="Users - {{env('APP_NAME')}}" property="og:title" />
 @endsection
+@section('descdiscord')
+    <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+@endsection
 
 @section('content')
     @if (request()->query('q'))

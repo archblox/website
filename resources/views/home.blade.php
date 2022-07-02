@@ -5,6 +5,9 @@
 @section('titlediscord')
 <meta content="Home - {{env('APP_NAME')}}" property="og:title" />
 @endsection
+@section('descdiscord')
+    <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+@endsection
 
 @section('content')
     <h1 id="usernameframe">Hello, {{ Auth::user()->name }}!</h1>
