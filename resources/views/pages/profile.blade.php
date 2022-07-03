@@ -63,19 +63,19 @@
             <a href="{{ route('friends') }}" style="margin-left: 5px"> <button class="bluebutton"
                     style="margin-top: 5px">View All</button></a>
         </div>
-        <div id="profilefriendcontainer" class="content_special" style="flex-wrap: wrap; justify-content: center; flex-direction: row;">
+        <div id="profilefriendcontainer" class="content_special" style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
             <div class="profilefriend">
-            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="20%" height="100%"></a>
+            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="90%" height="100%"></a>
             <br>
             <a href="#" id="FeedContainerBox1Username">BallsGamer123</a>
             </div>
             <div class="profilefriend">
-            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="20%" height="100%"></a>
+            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="90%" height="100%"></a>
             <br>
             <a href="#" id="FeedContainerBox1Username">BallsGamer123</a>
             </div>
             <div class="profilefriend">
-            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="20%" height="100%"></a>
+            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="90%" height="100%"></a>
             <br>
             <a href="#" id="FeedContainerBox1Username">BallsGamer123</a>
             </div>  
