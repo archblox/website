@@ -337,6 +337,8 @@ body {
 }
 
 button {
+  background: rgb(45, 45, 45);
+  /*Fallback for IE 11*/
   background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
   font-weight: 400;
   text-align: center;
@@ -348,6 +350,8 @@ button {
 }
 
 button.bluebutton {
+  background:rgb(35, 98, 222);
+  /*Fallback for IE 11*/
   background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
 }
 
@@ -363,6 +367,8 @@ button:disabled.bluebutton {
 }
 
 button.greybutton {
+  background: rgb(45, 45, 45);
+  /*Fallback for IE 11*/
   background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
 }
 
@@ -378,6 +384,8 @@ button:disabled.greybutton {
 }
 
 button.redbutton {
+  background: rgb(223, 24, 24);
+  /*Fallback for IE 11*/
   background: linear-gradient(#e65a5a 10%, #e13535 49%, #d92c2c 50%, #df1818 100%);
 }
 
@@ -393,6 +401,8 @@ button:disabled.redbutton {
 }
 
 button.greenbutton {
+  background: rgb(26, 92, 46);
+  /*Fallback for IE 11*/
   background: linear-gradient(#5acf77 10%, #3abc44 49%, #359c32 50%, #1a5c2e 100%);
 }
 
