@@ -1,10 +1,5 @@
 %12%
--- This script creates almost all gui elements found in the backpack (warning: there are a lot!)
--- TODO: automate this process
-
 if game.CoreGui.Version < 3 then return end -- peace out if we aren't using the right client
-
-local gui = script.Parent
 
 -- A couple of necessary functions
 local function waitForChild(instance, name)
@@ -18,850 +13,816 @@ local function waitForProperty(instance, property)
 	end
 end
 
-local function IsTouchDevice()	
-	local touchEnabled = false
-	pcall(function() touchEnabled = Game:GetService('UserInputService').TouchEnabled end)
-	return touchEnabled 	
-end 
 
+
+
+
+--- Begin Locals
 waitForChild(game,"Players")
 waitForProperty(game.Players,"LocalPlayer")
 local player = game.Players.LocalPlayer
 
--- First up is the current loadout
-local CurrentLoadout = Instance.new("Frame")
-CurrentLoadout.Name = "CurrentLoadout"
-CurrentLoadout.Position = UDim2.new(0.5, -300, 1, -85)
-CurrentLoadout.Size = UDim2.new(0, 600, 0, 54)
-CurrentLoadout.BackgroundTransparency = 1
-CurrentLoadout.RobloxLocked = true
-CurrentLoadout.Parent = gui
+waitForChild(game, "LocalBackpack")
+game.LocalBackpack:SetOldSchoolBackpack(false)
 
-local CLBackground = Instance.new('ImageLabel')						
-CLBackground.Name = 'Background';
-CLBackground.Size = UDim2.new(1.2, 0, 1.2, 0);
-CLBackground.Image = "http://www.morblox.us/asset/?id=96536002"
-CLBackground.BackgroundTransparency = 1.0;
-CLBackground.Position = UDim2.new(-0.1, 0, -0.1, 0);
-CLBackground.ZIndex = 0.0;	
-CLBackground.Parent = CurrentLoadout
-CLBackground.Visible = false 
+local currentLoadout = script.Parent
+local maxNumLoadoutItems = 10
 
-local BackgroundUp = Instance.new('ImageLabel')
-BackgroundUp.Size = UDim2.new(1, 0, 0.025, 1)
-BackgroundUp.Position = UDim2.new(0, 0, 0, 0)
-BackgroundUp.Image = 'http://www.morblox.us/asset/?id=97662207'
-BackgroundUp.BackgroundTransparency = 1.0
-BackgroundUp.Parent = CLBackground
+waitForChild(currentLoadout.Parent,"Backpack")
+local guiBackpack = currentLoadout.Parent.Backpack
 
-local Debounce = Instance.new("BoolValue")
-Debounce.Name = "Debounce"
-Debounce.RobloxLocked = true
-Debounce.Parent = CurrentLoadout
+local characterChildAddedCon = nil
+local backpackChildCon = nil
 
-local BackpackButton = Instance.new("ImageButton")
-BackpackButton.RobloxLocked = true
-BackpackButton.Visible = false
-BackpackButton.Name = "BackpackButton"
-BackpackButton.BackgroundTransparency = 1
-BackpackButton.Image = "http://www.morblox.us/asset/?id=97617958"
-BackpackButton.Position = UDim2.new(0.5, -60, 1, -108)
-BackpackButton.Size = UDim2.new(0, 120, 0, 18)
-waitForChild(gui,"ControlFrame")
-BackpackButton.Parent = gui.ControlFrame
+local debounce = script.Parent.Debounce
 
-local NumSlots = 9
+local waitingOnEnlarge = nil
 
-if gui.AbsoluteSize.Y <= 320 then 
-	NumSlots = 3
-	CurrentLoadout.Size = UDim2.new(0, 180, 0, 54)
-	CurrentLoadout.Position = UDim2.new(0.5, -90, 1, -85)
+local canSaveLoadout = true
+
+local enlargeFactor = 1.18
+local buttonSizeEnlarge = UDim2.new(1 * enlargeFactor,0,1 * enlargeFactor,0)
+local buttonSizeNormal = UDim2.new(1,0,1,0)
+local enlargeOverride = true
+
+local guiTweenSpeed = 0.5
+
+for i = 0, 9 do
+	game:GetService("GuiService"):AddKey(tostring(i)) -- register our keys
 end
 
-
-for i = 0, NumSlots do	
-	local slotFrame = Instance.new("Frame")
-	slotFrame.RobloxLocked = true
-	slotFrame.BackgroundColor3 = Color3.new(0,0,0)
-	slotFrame.BackgroundTransparency = 1
-	slotFrame.BorderColor3 = Color3.new(1, 1, 1)
-	slotFrame.Name = "Slot" .. tostring(i)
-	slotFrame.ZIndex = 4.0
-	if i == 0 then
-		slotFrame.Position = UDim2.new(0.9, 0, 0, 0)
-	else
-		slotFrame.Position = UDim2.new((i - 1) * 0.1, (i-1)* 6,0,0)
-	end	
-
-
-	slotFrame.Size = UDim2.new(0, 54, 1, 0)
-	slotFrame.Parent = CurrentLoadout	
-
-	if gui.AbsoluteSize.Y <= 320 then 
-		slotFrame.Position = UDim2.new(0, (i-1)* 60, 0, -50)
-		print('Well got here', slotFrame, slotFrame.Position.X.Scale, slotFrame.Position.X.Offset)		
-	end 
-	if gui.AbsoluteSize.Y <= 320 and i == 0 then 
-		slotFrame:Destroy() 
-	end 
+local gearSlots = {}
+for i = 1, maxNumLoadoutItems do
+	gearSlots[i] = "empty"
 end
 
-local TempSlot = Instance.new("ImageButton")
-TempSlot.Name = "TempSlot"
-TempSlot.Active = true
-TempSlot.Size = UDim2.new(1,0,1,0)
-TempSlot.BackgroundTransparency = 1.0
-TempSlot.Style = 'Custom'
-TempSlot.Visible = false
-TempSlot.RobloxLocked = true
-TempSlot.Parent = CurrentLoadout
-TempSlot.ZIndex = 3.0
+local inventory = {}
+local lastLoadout = {}
+--- End Locals
 
-	local slotBackground = Instance.new('ImageLabel')
-	slotBackground.Name = 'Background'
-	slotBackground.BackgroundTransparency = 1.0
-	slotBackground.Image = 'http://www.morblox.us/asset/?id=97613075'
-	slotBackground.Size = UDim2.new(1, 0, 1, 0)	
-	slotBackground.Parent = TempSlot
 
-	local HighLight = Instance.new('ImageLabel')
-	HighLight.Name = 'Highlight'
-	HighLight.BackgroundTransparency = 1.0
-	HighLight.Image = 'http://www.morblox.us/asset/?id=97643886'
-	HighLight.Size = UDim2.new(1, 0, 1, 0)	
-	--HighLight.Parent = TempSlot
-	HighLight.Visible = false 
 
-	-- TempSlot Children
-	local GearReference = Instance.new("ObjectValue")
-	GearReference.Name = "GearReference"
-	GearReference.RobloxLocked = true
-	GearReference.Parent = TempSlot
-	
 
-	local ToolTipLabel = Instance.new("TextLabel")
-	ToolTipLabel.Name = "ToolTipLabel"
-	ToolTipLabel.RobloxLocked = true
-	ToolTipLabel.Text = ""
-	ToolTipLabel.BackgroundTransparency = 0.5
-	ToolTipLabel.BorderSizePixel = 0
-	ToolTipLabel.Visible = false
-	ToolTipLabel.TextColor3 = Color3.new(1,1,1)
-	ToolTipLabel.BackgroundColor3 = Color3.new(0,0,0)
-	ToolTipLabel.TextStrokeTransparency = 0
-	ToolTipLabel.Font = Enum.Font.ArialBold
-	ToolTipLabel.FontSize = Enum.FontSize.Size14
-	--ToolTipLabel.TextWrap = true
-	ToolTipLabel.Size = UDim2.new(1,60,0,20)
-	ToolTipLabel.Position = UDim2.new(0,-30,0,-30)
-	ToolTipLabel.Parent = TempSlot
-	
 
-	local Kill = Instance.new("BoolValue")
-	Kill.Name = "Kill"
-	Kill.RobloxLocked = true
-	Kill.Parent = TempSlot
 
-	local GearImage = Instance.new("ImageLabel")
-	GearImage.Name = "GearImage"
-	GearImage.BackgroundTransparency = 1
-	GearImage.Position = UDim2.new(0, 0, 0, 0)
-	GearImage.Size = UDim2.new(1, 0, 1, 0)
-	GearImage.ZIndex = 5.0
-	GearImage.RobloxLocked = true
-	GearImage.Parent = TempSlot
-
-	local SlotNumber = Instance.new("TextLabel")
-	SlotNumber.Name = "SlotNumber"
-	SlotNumber.BackgroundTransparency = 1
-	SlotNumber.BorderSizePixel = 0
-	SlotNumber.Font = Enum.Font.ArialBold
-	SlotNumber.FontSize = Enum.FontSize.Size18
-	SlotNumber.Position = UDim2.new(0, 0, 0, 0)
-	SlotNumber.Size = UDim2.new(0,10,0,15)
-	SlotNumber.TextColor3 = Color3.new(1,1,1)
-	SlotNumber.TextTransparency = 0
-	SlotNumber.TextXAlignment = Enum.TextXAlignment.Left
-	SlotNumber.TextYAlignment = Enum.TextYAlignment.Bottom	
-	SlotNumber.RobloxLocked = true
-	SlotNumber.Parent = TempSlot
-	SlotNumber.ZIndex = 5
-
-	if IsTouchDevice() then 
-		SlotNumber.Visible = false 
+-- Begin Functions
+local function kill(prop,con,gear)
+	if con then con:disconnect() end
+	if prop == true and gear then
+		reorganizeLoadout(gear,false)
 	end
-	
-	local SlotNumberDownShadow = SlotNumber:Clone()
-	SlotNumberDownShadow.Name = "SlotNumberDownShadow"
-	SlotNumberDownShadow.TextColor3 = Color3.new(0,0,0)	
-	SlotNumberDownShadow.Position = UDim2.new(0, 1, 0, -1)
-	SlotNumberDownShadow.Parent = TempSlot
-	SlotNumberDownShadow.ZIndex = 2
-	
-	local SlotNumberUpShadow = SlotNumberDownShadow:Clone()
-	SlotNumberUpShadow.Name = "SlotNumberUpShadow"
-	SlotNumberUpShadow.Position = UDim2.new(0, -1, 0, -1)
-	SlotNumberUpShadow.Parent = TempSlot
+end
 
-	local GearText = Instance.new("TextLabel")
-	GearText.RobloxLocked = true
-	GearText.Name = "GearText"
-	GearText.BackgroundTransparency = 1
-	GearText.Font = Enum.Font.Arial
-	GearText.FontSize = Enum.FontSize.Size14
-	GearText.Position = UDim2.new(0,-8,0,-8)	
-	GearText.Size = UDim2.new(1,16,1,16)
-	GearText.Text = ""
-	GearText.TextColor3 = Color3.new(1,1,1)
-	GearText.TextWrap = true
-	GearText.Parent = TempSlot
-
---- Great, now lets make the inventory!
-
-local Backpack = Instance.new("Frame")
-Backpack.RobloxLocked = true
-Backpack.Visible = false
-Backpack.Name = "Backpack"
-Backpack.Position = UDim2.new(0.5, 0, 0.5, 0)
-Backpack.BackgroundColor3 = Color3.new(32/255, 32/255, 32/255)
-Backpack.BackgroundTransparency = 0.0
-Backpack.BorderSizePixel = 0
-Backpack.Parent = gui
-Backpack.Active = true
-
-	-- Backpack Children
-	local SwapSlot = Instance.new("BoolValue")
-	SwapSlot.RobloxLocked = true
-	SwapSlot.Name = "SwapSlot"
-	SwapSlot.Parent = Backpack
-		
-		-- SwapSlot Children
-		local Slot = Instance.new("IntValue")
-		Slot.RobloxLocked = true
-		Slot.Name = "Slot"
-		Slot.Parent = SwapSlot
-		
-		local GearButton = Instance.new("ObjectValue")
-		GearButton.RobloxLocked = true
-		GearButton.Name = "GearButton"
-		GearButton.Parent = SwapSlot
-	
-	local Tabs = Instance.new("Frame")
-	Tabs.Name = "Tabs"
-	Tabs.Visible = false
-	Tabs.Active = false
-	Tabs.RobloxLocked = true
-	Tabs.BackgroundColor3 = Color3.new(0,0,0)
-	Tabs.BackgroundTransparency = 0.08
-	Tabs.BorderSizePixel = 0
-	Tabs.Position = UDim2.new(0,0,-0.1,-4)
-	Tabs.Size = UDim2.new(1,0,0.1,4)
-	Tabs.Parent = Backpack
-	
-		-- Tabs Children
-		
-		local tabLine = Instance.new("Frame")
-		tabLine.RobloxLocked = true
-		tabLine.Name = "TabLine"
-		tabLine.BackgroundColor3 = Color3.new(53/255, 53/255, 53/255)
-		tabLine.BorderSizePixel = 0
-		tabLine.Position = UDim2.new(0,5,1,-4)
-		tabLine.Size = UDim2.new(1,-10,0,4)
-		tabLine.ZIndex = 2
-		tabLine.Parent = Tabs
-		
-		local InventoryButton = Instance.new("TextButton")
-		InventoryButton.RobloxLocked = true
-		InventoryButton.Name = "InventoryButton"
-		InventoryButton.Size = UDim2.new(0,60,0,30)
-		InventoryButton.Position = UDim2.new(0,7,1,-31)
-		InventoryButton.BackgroundColor3 = Color3.new(1,1,1)
-		InventoryButton.BorderColor3 = Color3.new(1,1,1)
-		InventoryButton.Font = Enum.Font.ArialBold
-		InventoryButton.FontSize = Enum.FontSize.Size18
-		InventoryButton.Text = "Gear"
-		InventoryButton.AutoButtonColor = false
-		InventoryButton.TextColor3 = Color3.new(0,0,0)
-		InventoryButton.Selected = true
-		InventoryButton.Active = true
-		InventoryButton.ZIndex = 3
-		InventoryButton.Parent = Tabs
-		
-		if game.CoreGui.Version >= 8 then
-			local WardrobeButton = Instance.new("TextButton")
-			WardrobeButton.RobloxLocked = true
-			WardrobeButton.Name = "WardrobeButton"
-			WardrobeButton.Size = UDim2.new(0,90,0,30)
-			WardrobeButton.Position = UDim2.new(0,77,1,-31)
-			WardrobeButton.BackgroundColor3 = Color3.new(0,0,0)
-			WardrobeButton.BorderColor3 = Color3.new(1,1,1)
-			WardrobeButton.Font = Enum.Font.ArialBold
-			WardrobeButton.FontSize = Enum.FontSize.Size18
-			WardrobeButton.Text = "Wardrobe"
-			WardrobeButton.AutoButtonColor = false
-			WardrobeButton.TextColor3 = Color3.new(1,1,1)
-			WardrobeButton.Selected = false
-			WardrobeButton.Active = true
-			WardrobeButton.Parent = Tabs
+function removeGear(gear)
+	local emptySlot = nil
+	for i = 1, #gearSlots do
+		if gearSlots[i] == gear and gear.Parent ~= nil then
+			emptySlot = i
+			break
 		end
-			
-		local closeButton = Instance.new("TextButton")
-		closeButton.RobloxLocked = true
-		closeButton.Name = "CloseButton"
-		closeButton.Font = Enum.Font.ArialBold
-		closeButton.FontSize = Enum.FontSize.Size24
-		closeButton.Position = UDim2.new(1,-33,0,4)
-		closeButton.Size = UDim2.new(0,30,0,30)
-		closeButton.Style = Enum.ButtonStyle.RobloxButton
-		closeButton.Text = ""
-		closeButton.TextColor3 = Color3.new(1,1,1)
-		closeButton.Parent = Tabs
-		closeButton.Modal = true
-		
-			--closeButton child
-			local XImage = Instance.new("ImageLabel")
-			XImage.RobloxLocked = true
-			XImage.Name = "XImage"
-			game:GetService("ContentProvider"):Preload("http://www.morblox.us/asset/?id=75547445")
-			XImage.Image = "http://www.morblox.us/asset/?id=75547445"  --TODO: move to rbxasset
-			XImage.BackgroundTransparency = 1
-			XImage.Position = UDim2.new(-.25,-1,-.25,-1)
-			XImage.Size = UDim2.new(1.5,2,1.5,2)
-			XImage.ZIndex = 2
-			XImage.Parent = closeButton
-			
-		-- Generic Search gui used across backpack	
-		local SearchFrame = Instance.new("Frame")
-		SearchFrame.RobloxLocked = true
-		SearchFrame.Name = "SearchFrame"
-		SearchFrame.BackgroundTransparency = 1
-		SearchFrame.Position = UDim2.new(1,-220,0,2)
-		SearchFrame.Size = UDim2.new(0,220,0,24)
-		SearchFrame.Parent = Backpack
-		
-			-- SearchFrame Children
-			local SearchButton = Instance.new("ImageButton")
-			SearchButton.RobloxLocked = true
-			SearchButton.Name = "SearchButton"
-			SearchButton.Size = UDim2.new(0,25,0,25)
-			SearchButton.BackgroundTransparency = 1
-			SearchButton.Image = "rbxasset://textures/ui/SearchIcon.png"
-			SearchButton.Parent = SearchFrame
-			
-			local SearchBoxFrame = Instance.new("TextButton")
-			SearchBoxFrame.RobloxLocked = true
-			SearchBoxFrame.Position = UDim2.new(0,25,0,0)
-			SearchBoxFrame.Size = UDim2.new(1,-28,0,26)
-			SearchBoxFrame.Name = "SearchBoxFrame"
-			SearchBoxFrame.Text = ""
-			SearchBoxFrame.Style = Enum.ButtonStyle.RobloxButton
-			SearchBoxFrame.Parent = SearchFrame
-			
-				-- SearchBoxFrame Children
-				local SearchBox = Instance.new("TextBox")
-				SearchBox.RobloxLocked = true
-				SearchBox.Name = "SearchBox"
-				SearchBox.BackgroundTransparency = 1
-				SearchBox.Font = Enum.Font.ArialBold
-				SearchBox.FontSize = Enum.FontSize.Size12
-				SearchBox.Position = UDim2.new(0,-5,0,-5)
-				SearchBox.Size = UDim2.new(1,10,1,10)
-				SearchBox.TextColor3 = Color3.new(1,1,1)
-				SearchBox.TextXAlignment = Enum.TextXAlignment.Left
-				SearchBox.ZIndex = 2
-				SearchBox.TextWrap = true
-				SearchBox.Text = "Search..."
-				SearchBox.Parent = SearchBoxFrame
+	end
+	if emptySlot then
+		if gearSlots[emptySlot].GearReference.Value then
+			if gearSlots[emptySlot].GearReference.Value.Parent == game.Players.LocalPlayer.Character then -- if we currently have this equipped, unequip it
+				gearSlots[emptySlot].GearReference.Value.Parent = game.Players.LocalPlayer.Backpack
+			end
+
+			if gearSlots[emptySlot].GearReference.Value:IsA("HopperBin") and gearSlots[emptySlot].GearReference.Value.Active then -- this is an active hopperbin
+				gearSlots[emptySlot].GearReference.Value:Disable()
+				gearSlots[emptySlot].GearReference.Value.Active = false
+			end
+		end
+
+		gearSlots[emptySlot] = "empty"
+
+		local centerizeX = gear.Size.X.Scale/2
+		local centerizeY = gear.Size.Y.Scale/2
+		gear:TweenSizeAndPosition(UDim2.new(0,0,0,0),
+			UDim2.new(gear.Position.X.Scale + centerizeX,gear.Position.X.Offset,gear.Position.Y.Scale + centerizeY,gear.Position.Y.Offset),
+			Enum.EasingDirection.Out, Enum.EasingStyle.Quad,guiTweenSpeed/4,true)
+		delay(guiTweenSpeed/2,
+			function()
+				gear:remove()
+			end)
+	end
+end
+
+function insertGear(gear, addToSlot)
+	local pos = nil
+	if not addToSlot then
+		for i = 1, #gearSlots do
+			if gearSlots[i] == "empty" then
+				pos = i
+				break
+			end
+		end
+
+		if pos == 1 and gearSlots[1] ~= "empty" then gear:remove() return end -- we are currently full, can't add in
+	else
+		pos = addToSlot
+		-- push all gear down one slot
+		local start = 1
+		for i = 1, #gearSlots do
+			if gearSlots[i] == "empty" then
+				start = i
+				break
+			end
+		end
+		for i = start, pos + 1, -1 do
+			gearSlots[i] = gearSlots[i - 1]
+			if i == 10 then
+				gearSlots[i].SlotNumber.Text = "0"
+				gearSlots[i].SlotNumberDownShadow.Text = "0"
+				gearSlots[i].SlotNumberUpShadow.Text = "0"
+			else
+				gearSlots[i].SlotNumber.Text = i
+				gearSlots[i].SlotNumberDownShadow.Text = i
+				gearSlots[i].SlotNumberUpShadow.Text = i
+			end
+		end
+	end
+
+	gearSlots[pos] = gear
+	if pos ~= maxNumLoadoutItems then
+		if(type(tostring(pos)) == "string") then
+			local posString = tostring(pos)
+			gear.SlotNumber.Text = posString
+			gear.SlotNumberDownShadow.Text = posString
+			gear.SlotNumberUpShadow.Text = posString
+		end
+	else -- tenth gear doesn't follow mathematical pattern :(
+		gear.SlotNumber.Text = "0"
+		gear.SlotNumberDownShadow.Text = "0"
+		gear.SlotNumberUpShadow.Text = "0"
+	end
+	gear.Visible = true
+
+	local con = nil
+	con = gear.Kill.Changed:connect(function(prop) kill(prop,con,gear) end)
+end
+
+
+function reorganizeLoadout(gear, inserting, equipped, addToSlot)
+	if inserting then -- add in gear
+		insertGear(gear, addToSlot)
+	else
+		removeGear(gear)
+	end
+	if gear ~= "empty" then	gear.ZIndex = 1 end
+end
+
+function checkToolAncestry(child,parent)
+	if child:IsA("Tool") or child:IsA("HopperBin") then
+		for i = 1, #gearSlots do
+			if gearSlots[i] ~= "empty" and gearSlots[i].GearReference.Value == child then
+				if parent == nil then
+					gearSlots[i].Kill.Value = true
+					return false
+				elseif child.Parent == player.Character then
+					gearSlots[i].Selected = true
+					return true
+				elseif child.Parent == player.Backpack then
+					if child:IsA("Tool") or child:IsA("HopperBin") then gearSlots[i].Selected = false end
+					return true
+				else
+					gearSlots[i].Kill.Value = true
+					return false
+				end
+				return true
+			end
+		end
+	end
+end
+
+function removeAllEquippedGear(physGear)
+	local stuff = player.Character:GetChildren()
+	for i = 1, #stuff do
+		if ( stuff[i]:IsA("Tool") or stuff[i]:IsA("HopperBin") ) and stuff[i] ~= physGear then
+			if stuff[i]:IsA("Tool") then stuff[i].Parent = player.Backpack end
+			if stuff[i]:IsA("HopperBin") then
+				stuff[i]:Disable()
+			end
+		end
+	end
+end
+
+function hopperBinSwitcher(numKey, physGear)
+	if not physGear then return end
+
+	physGear:ToggleSelect()
+
+	if gearSlots[numKey] == "empty" then return end
+
+	if not physGear.Active then
+		gearSlots[numKey].Selected = false
+		normalizeButton(gearSlots[numKey])
+	else
+		gearSlots[numKey].Selected = true
+		enlargeButton(gearSlots[numKey])
+	end
+end
+
+function toolSwitcher(numKey)
+
+	if not gearSlots[numKey] then return end
+	local physGear = gearSlots[numKey].GearReference.Value
+	if physGear == nil then return end
+
+	removeAllEquippedGear(physGear) -- we don't remove this gear, as then we get a double switcheroo
+
+	local key = numKey
+	if numKey == 0 then key = 10 end
+
+	for i = 1, #gearSlots do
+		if gearSlots[i] and gearSlots[i] ~= "empty" and i ~= key then
+			normalizeButton(gearSlots[i])
+			gearSlots[i].Selected = false
+			if gearSlots[i].GearReference and gearSlots[i].GearReference.Value and gearSlots[i].GearReference.Value:IsA("HopperBin") and gearSlots[i].GearReference.Value.Active then
+				gearSlots[i].GearReference.Value:ToggleSelect()
+			end
+		end
+	end
+
+	if physGear:IsA("HopperBin") then
+		hopperBinSwitcher(numKey,physGear)
+	else
+		if physGear.Parent == player.Character then
+			physGear.Parent = player.Backpack
 				
-			
-			local ResetButton = Instance.new("TextButton")
-			ResetButton.RobloxLocked = true
-			ResetButton.Visible = false
-			ResetButton.Name = "ResetButton"
-			ResetButton.Position = UDim2.new(1,-26,0,3)
-			ResetButton.Size = UDim2.new(0,20,0,20)
-			ResetButton.Style = Enum.ButtonStyle.RobloxButtonDefault
-			ResetButton.Text = "X"
-			ResetButton.TextColor3 = Color3.new(1,1,1)
-			ResetButton.Font = Enum.Font.ArialBold
-			ResetButton.FontSize = Enum.FontSize.Size18
-			ResetButton.ZIndex = 3
-			ResetButton.Parent = SearchFrame
-		
-------------------------------- GEAR -------------------------------------------------------
-	local Gear = Instance.new("Frame")
-	Gear.Name = "Gear"
-	Gear.RobloxLocked = true
-	Gear.BackgroundTransparency = 1
-	Gear.Size  = UDim2.new(1,0,1,0)
-	Gear.Parent = Backpack
+			if gearSlots[numKey] ~= "empty" then
+				gearSlots[numKey].Selected = false
+				normalizeButton(gearSlots[numKey])
+			end
+		else
+			physGear.Parent = player.Character
+			gearSlots[numKey].Selected = true
 
-		-- Gear Children
-		local AssetsList = Instance.new("Frame")
-		AssetsList.RobloxLocked = true
-		AssetsList.Name = "AssetsList"
-		AssetsList.BackgroundTransparency = 1
-		AssetsList.Size = UDim2.new(0.2,0,1,0)
-		AssetsList.Style = Enum.FrameStyle.RobloxSquare
-		AssetsList.Visible = false
-		AssetsList.Parent = Gear
-			
-		local GearGrid = Instance.new("Frame")
-		GearGrid.RobloxLocked = true
-		GearGrid.Name = "GearGrid"
-		GearGrid.Size = UDim2.new(0.95, 0, 1, 0)
-		GearGrid.BackgroundTransparency = 1
-		GearGrid.Parent = Gear	
-				
-			
-			local GearButton = Instance.new("ImageButton")
-			GearButton.RobloxLocked = true
-			GearButton.Visible = false
-			GearButton.Name = "GearButton"
-			GearButton.Size = UDim2.new(0, 54, 0, 54)
-			GearButton.Style = 'Custom'
-			GearButton.Parent = GearGrid
-			GearButton.BackgroundTransparency = 1.0
-
-					local slotBackground = Instance.new('ImageLabel')
-					slotBackground.Name = 'Background'
-					slotBackground.BackgroundTransparency = 1.0
-					slotBackground.Image = 'http://www.morblox.us/asset/?id=97613075'
-					slotBackground.Size = UDim2.new(1, 0,  1, 0)
-					slotBackground.Parent = GearButton
+			enlargeButton(gearSlots[numKey])
+		end
+	end
+end
 
 
-				-- GearButton Children
-				local GearReference = Instance.new("ObjectValue")
-				GearReference.RobloxLocked = true
-				GearReference.Name = "GearReference"
-				GearReference.Parent = GearButton
-				
-				local GreyOutButton = Instance.new("Frame")
-				GreyOutButton.RobloxLocked = true
-				GreyOutButton.Name = "GreyOutButton"
-				GreyOutButton.BackgroundTransparency = 0.5
-				GreyOutButton.Size = UDim2.new(1,0,1,0)
-				GreyOutButton.Active = true
-				GreyOutButton.Visible = false
-				GreyOutButton.ZIndex = 3
-				GreyOutButton.Parent = GearButton
-				
-				local GearText = Instance.new("TextLabel")
-				GearText.RobloxLocked = true
-				GearText.Name = "GearText"
-				GearText.BackgroundTransparency = 1
-				GearText.Font = Enum.Font.Arial
-				GearText.FontSize = Enum.FontSize.Size14
-				GearText.Position = UDim2.new(0,-8,0,-8)
-				GearText.Size = UDim2.new(1,16,1,16)
-				GearText.Text = ""
-				GearText.ZIndex = 2
-				GearText.TextColor3 = Color3.new(1,1,1)
-				GearText.TextWrap = true
-				GearText.Parent = GearButton
+function activateGear(num)
+	local numKey = nil
+	if num == "0" then
+		numKey = 10 -- why do lua indexes have to start at 1? :(
+	else
+		numKey = tonumber(num)
+	end
 
-		local GearGridScrollingArea = Instance.new("Frame")
-		GearGridScrollingArea.RobloxLocked = true
-		GearGridScrollingArea.Name = "GearGridScrollingArea"
-		GearGridScrollingArea.Position = UDim2.new(1, -19, 0, 35)
-		GearGridScrollingArea.Size = UDim2.new(0, 17, 1, -45)
-		GearGridScrollingArea.BackgroundTransparency = 1
-		GearGridScrollingArea.Parent = Gear
+	if(numKey == nil) then return end
 
-		local GearLoadouts = Instance.new("Frame")
-		GearLoadouts.RobloxLocked = true
-		GearLoadouts.Name = "GearLoadouts"
-		GearLoadouts.BackgroundTransparency = 1
-		GearLoadouts.Position = UDim2.new(0.7,23,0.5,1)
-		GearLoadouts.Size = UDim2.new(0.3,-23,0.5,-1)
-		GearLoadouts.Parent = Gear
-		GearLoadouts.Visible = false
-		
-			-- GearLoadouts Children
-			local GearLoadoutsHeader = Instance.new("Frame")
-			GearLoadoutsHeader.RobloxLocked = true
-			GearLoadoutsHeader.Name = "GearLoadoutsHeader"
-			GearLoadoutsHeader.BackgroundColor3 = Color3.new(0,0,0)
-			GearLoadoutsHeader.BackgroundTransparency = 0.2
-			GearLoadoutsHeader.BorderColor3 = Color3.new(1,0,0)
-			GearLoadoutsHeader.Size = UDim2.new(1,2,0.15,-1)
-			GearLoadoutsHeader.Parent = GearLoadouts
+	if gearSlots[numKey] ~= "empty" then
+		toolSwitcher(numKey)
+	end
+end
 
-				-- GearLoadoutsHeader Children
-				local LoadoutsHeaderText = Instance.new("TextLabel")
-				LoadoutsHeaderText.RobloxLocked = true
-				LoadoutsHeaderText.Name = "LoadoutsHeaderText"
-				LoadoutsHeaderText.BackgroundTransparency = 1
-				LoadoutsHeaderText.Font = Enum.Font.ArialBold
-				LoadoutsHeaderText.FontSize = Enum.FontSize.Size18
-				LoadoutsHeaderText.Size = UDim2.new(1,0,1,0)
-				LoadoutsHeaderText.Text = "Loadouts"
-				LoadoutsHeaderText.TextColor3 = Color3.new(1,1,1)
-				LoadoutsHeaderText.Parent = GearLoadoutsHeader
-	
-				local GearLoadoutsScrollingArea = GearGridScrollingArea:clone()
-				GearLoadoutsScrollingArea.RobloxLocked = true
-				GearLoadoutsScrollingArea.Name = "GearLoadoutsScrollingArea"
-				GearLoadoutsScrollingArea.Position = UDim2.new(1,-15,0.15,2)
-				GearLoadoutsScrollingArea.Size = UDim2.new(0,17,0.85,-2)
-				GearLoadoutsScrollingArea.Parent = GearLoadouts
 
-				local LoadoutsList = Instance.new("Frame")
-				LoadoutsList.RobloxLocked = true
-				LoadoutsList.Name = "LoadoutsList"
-				LoadoutsList.Position = UDim2.new(0,0,0.15,2)
-				LoadoutsList.Size = UDim2.new(1,-17,0.85,-2)
-				LoadoutsList.Style = Enum.FrameStyle.RobloxSquare
-				LoadoutsList.Parent = GearLoadouts
-							
-		local GearPreview = Instance.new("Frame")
-		GearPreview.RobloxLocked = true
-		GearPreview.Name = "GearPreview"
-		GearPreview.Position = UDim2.new(0.7,23,0,0)
-		GearPreview.Size = UDim2.new(0.3,-28,0.5,-1)
-		GearPreview.BackgroundTransparency = 1
-		GearPreview.ZIndex = 7
-		GearPreview.Parent = Gear
-		
-			-- GearPreview Children
-			local GearStats = Instance.new("Frame")
-			GearStats.RobloxLocked = true
-			GearStats.Name = "GearStats"
-			GearStats.BackgroundTransparency = 1
-			GearStats.Position = UDim2.new(0,0,0.75,0)
-			GearStats.Size = UDim2.new(1,0,0.25,0)
-			GearStats.ZIndex = 8
-			GearStats.Parent = GearPreview
-				
-				-- GearStats Children
-				local GearName = Instance.new("TextLabel")
-				GearName.RobloxLocked = true
-				GearName.Name = "GearName"
-				GearName.BackgroundTransparency = 1
-				GearName.Font = Enum.Font.ArialBold
-				GearName.FontSize = Enum.FontSize.Size18
-				GearName.Position = UDim2.new(0,-3,0,0)
-				GearName.Size = UDim2.new(1,6,1,5)
-				GearName.Text = ""
-				GearName.TextColor3 = Color3.new(1,1,1)
-				GearName.TextWrap = true
-				GearName.ZIndex = 9
-				GearName.Parent = GearStats
-				
-			local GearImage = Instance.new("ImageLabel")
-			GearImage.RobloxLocked = true
-			GearImage.Name = "GearImage"
-			GearImage.Image = ""
-			GearImage.BackgroundTransparency = 1
-			GearImage.Position = UDim2.new(0.125,0,0,0)
-			GearImage.Size = UDim2.new(0.75,0,0.75,0)
-			GearImage.ZIndex = 8
-			GearImage.Parent = GearPreview
-			
-				--GearImage Children
-				local GearIcons = Instance.new("Frame")
-				GearIcons.BackgroundColor3 = Color3.new(0,0,0)
-				GearIcons.BackgroundTransparency = 0.5
-				GearIcons.BorderSizePixel = 0
-				GearIcons.RobloxLocked = true
-				GearIcons.Name = "GearIcons"
-				GearIcons.Position = UDim2.new(0.4,2,0.85,-2)
-				GearIcons.Size = UDim2.new(0.6,0,0.15,0)
-				GearIcons.Visible = false
-				GearIcons.ZIndex = 9
-				GearIcons.Parent = GearImage
-				
-					-- GearIcons Children
-					local GenreImage = Instance.new("ImageLabel")
-					GenreImage.RobloxLocked = true
-					GenreImage.Name = "GenreImage"
-					GenreImage.BackgroundColor3 = Color3.new(102/255,153/255,1)
-					GenreImage.BackgroundTransparency = 0.5
-					GenreImage.BorderSizePixel = 0
-					GenreImage.Size = UDim2.new(0.25,0,1,0)
-					GenreImage.Parent = GearIcons
-					
-					local AttributeOneImage = GenreImage:clone()
-					AttributeOneImage.RobloxLocked = true
-					AttributeOneImage.Name = "AttributeOneImage"
-					AttributeOneImage.BackgroundColor3 = Color3.new(1,51/255,0)
-					AttributeOneImage.Position = UDim2.new(0.25,0,0,0)
-					AttributeOneImage.Parent = GearIcons
-					
-					local AttributeTwoImage = GenreImage:clone()
-					AttributeTwoImage.RobloxLocked = true
-					AttributeTwoImage.Name = "AttributeTwoImage"
-					AttributeTwoImage.BackgroundColor3 = Color3.new(153/255,1,153/255)
-					AttributeTwoImage.Position = UDim2.new(0.5,0,0,0)
-					AttributeTwoImage.Parent = GearIcons
-					
-					local AttributeThreeImage = GenreImage:clone()
-					AttributeThreeImage.RobloxLocked = true
-					AttributeThreeImage.Name = "AttributeThreeImage"
-					AttributeThreeImage.BackgroundColor3 = Color3.new(0,0.5,0.5)
-					AttributeThreeImage.Position = UDim2.new(0.75,0,0,0)
-					AttributeThreeImage.Parent = GearIcons
-					
-------------------------------- WARDROBE -------------------------------------------------------
-	if game.CoreGui.Version < 8 then
-		-- no need for this to stick around, we aren't ready for wardrobe
-		script:remove()
+enlargeButton = function(button)
+	if button.Size.Y.Scale > 1 then return end
+	if not button.Parent then return end
+	if not button.Selected then return end
+
+	for i = 1, #gearSlots do
+		if gearSlots[i] == "empty" then break end
+		if gearSlots[i] ~= button then
+			normalizeButton(gearSlots[i])
+		end
+	end
+
+	if not enlargeOverride then
+		waitingOnEnlarge = button
 		return
 	end
 
-	local function  makeCharFrame(frameName, parent)
-		local frame = Instance.new("Frame")
-		frame.RobloxLocked = true
-		frame.Size = UDim2.new(1,0,1,-70)
-		frame.Position = UDim2.new(0,0,0,20)
-		frame.Name = frameName
-		frame.BackgroundTransparency = 1
-		frame.Parent = parent
-		frame.Visible = false
-		return frame
+	if button:IsA("ImageButton") or button:IsA("TextButton") then
+		button.ZIndex = 2
+		local centerizeX = -(buttonSizeEnlarge.X.Scale - button.Size.X.Scale)/2
+		local centerizeY = -(buttonSizeEnlarge.Y.Scale - button.Size.Y.Scale)/2
+		button:TweenSizeAndPosition(buttonSizeEnlarge,
+			UDim2.new(button.Position.X.Scale + centerizeX,button.Position.X.Offset,button.Position.Y.Scale + centerizeY,button.Position.Y.Offset),
+			Enum.EasingDirection.Out, Enum.EasingStyle.Quad,guiTweenSpeed/5,enlargeOverride)
 	end
-	local function makeZone( zoneName, image, size, position, parent )
-		local zone = Instance.new("ImageLabel")
-		zone.RobloxLocked = true
-		zone.Name = zoneName
-		zone.Image = image
-		zone.Size = size
-		zone.BackgroundTransparency = 1
-		zone.Position = position
-		zone.Parent = parent
-		return zone
-	end
-	local function  makeStyledButton( buttonName, size, position, parent, buttonStyle )
-		local button = Instance.new("ImageButton")
-		button.RobloxLocked = true
-		button.Name = buttonName
-		button.Size = size
-		button.Position = position
-		if buttonStyle then
-			button.Style = buttonStyle
-		else
-			button.BackgroundColor3 = Color3.new(0,0,0)
-			button.BorderColor3 = Color3.new(1,1,1)
+end
+
+normalizeAllButtons = function()
+	for i = 1, #gearSlots do
+		if gearSlots[i] == "empty" then break end
+		if gearSlots[i] ~= button then
+			normalizeButton(gearSlots[i],0.1)
 		end
-		button.Parent = parent
-		return button
 	end
-	local function makeTextLabel( TextLabelName,text,position,parent )	
-		local label = Instance.new("TextLabel")
-		label.RobloxLocked = true
-		label.BackgroundTransparency = 1
-		label.Size = UDim2.new(0,32,0,14)
-		label.Name = TextLabelName
-		label.Font = Enum.Font.Arial
-		label.TextColor3 = Color3.new(1,1,1)
-		label.FontSize = Enum.FontSize.Size14
-		label.Text = text
-		label.Position = position
-		label.Parent = parent
+end
+
+
+normalizeButton = function(button, speed)
+	if not button then return end
+	if button.Size.Y.Scale <= 1 then return end
+	if button.Selected then return end
+	if not button.Parent then return end
+
+	local moveSpeed = speed
+	if moveSpeed == nil or type(moveSpeed) ~= "number" then moveSpeed = guiTweenSpeed/5 end
+
+	if button:IsA("ImageButton") or button:IsA("TextButton") then
+		button.ZIndex = 1
+		local inverseEnlarge = 1/enlargeFactor
+		local centerizeX = -(buttonSizeNormal.X.Scale - button.Size.X.Scale)/2
+		local centerizeY = -(buttonSizeNormal.Y.Scale - button.Size.Y.Scale)/2
+		button:TweenSizeAndPosition(buttonSizeNormal,
+			UDim2.new(button.Position.X.Scale + centerizeX,button.Position.X.Offset,button.Position.Y.Scale + centerizeY,button.Position.Y.Offset),
+			Enum.EasingDirection.Out, Enum.EasingStyle.Quad,moveSpeed,enlargeOverride)
+	end
+end
+
+waitForDebounce = function()
+	if debounce.Value then
+		debounce.Changed:wait()
+	end
+end
+
+function pointInRectangle(point,rectTopLeft,rectSize)
+	if point.x > rectTopLeft.x and point.x < (rectTopLeft.x + rectSize.x) then
+		if point.y > rectTopLeft.y and point.y < (rectTopLeft.y + rectSize.y) then
+			return true
+		end
+	end
+	return false
+end
+
+function swapGear(gearClone,toFrame)
+	local toFrameChildren = toFrame:GetChildren()
+	if #toFrameChildren == 1 then
+		if toFrameChildren[1]:FindFirstChild("SlotNumber") then
+
+			local toSlot = tonumber(toFrameChildren[1].SlotNumber.Text)
+			local gearCloneSlot = tonumber(gearClone.SlotNumber.Text)
+			if toSlot == 0 then toSlot = 10 end
+			if gearCloneSlot == 0 then gearCloneSlot = 10 end
+
+			gearSlots[toSlot] = gearClone
+			gearSlots[gearCloneSlot] = toFrameChildren[1]
+
+			toFrameChildren[1].SlotNumber.Text = gearClone.SlotNumber.Text
+			toFrameChildren[1].SlotNumberDownShadow.Text = gearClone.SlotNumber.Text
+			toFrameChildren[1].SlotNumberUpShadow.Text = gearClone.SlotNumber.Text
+
+			local subString = string.sub(toFrame.Name,5)
+			gearClone.SlotNumber.Text = subString
+			gearClone.SlotNumberDownShadow.Text = subString
+			gearClone.SlotNumberUpShadow.Text = subString
+
+			gearClone.Position = UDim2.new(gearClone.Position.X.Scale,0,gearClone.Position.Y.Scale,0)
+			toFrameChildren[1].Position = UDim2.new(toFrameChildren[1].Position.X.Scale,0,toFrameChildren[1].Position.Y.Scale,0)
+
+			toFrameChildren[1].Parent = gearClone.Parent
+			gearClone.Parent = toFrame
+		end
+	else
+		local slotNum = tonumber(gearClone.SlotNumber.Text)
+		if slotNum == 0 then slotNum = 10 end
+		gearSlots[slotNum] = "empty" -- reset this gear slot
+
+		local subString = string.sub(toFrame.Name,5)
+		gearClone.SlotNumber.Text = subString
+		gearClone.SlotNumberDownShadow.Text = subString
+		gearClone.SlotNumberUpShadow.Text = subString
+
+		local toSlotNum = tonumber(gearClone.SlotNumber.Text)
+		if toSlotNum == 0 then toSlotNum = 10 end
+		gearSlots[toSlotNum] = gearClone
+		gearClone.Position = UDim2.new(gearClone.Position.X.Scale,0,gearClone.Position.Y.Scale,0)
+		gearClone.Parent = toFrame
+	end
+end
+
+function resolveDrag(gearClone,x,y)
+	local mousePoint = Vector2.new(x,y)
+
+	local frame = gearClone.Parent
+	local frames = frame.Parent:GetChildren()
+
+	for i = 1, #frames do
+		if frames[i]:IsA("Frame") then
+			if pointInRectangle(mousePoint, frames[i].AbsolutePosition,frames[i].AbsoluteSize) then
+				swapGear(gearClone,frames[i])
+				--saveGearPositions()
+				return true
+			end
+		end
+	end
+
+	if x < frame.AbsolutePosition.x or x > ( frame.AbsolutePosition.x + frame.AbsoluteSize.x ) then
+		reorganizeLoadout(gearClone,false)
+		--saveGearPositions()
+		return false
+	elseif y < frame.AbsolutePosition.y or y > ( frame.AbsolutePosition.y + frame.AbsoluteSize.y ) then
+		reorganizeLoadout(gearClone,false)
+		--saveGearPositions()
+		return false
+	else
+		if dragBeginPos then gearClone.Position = dragBeginPos end
+		return -1
+	end
+end
+
+function saveGearPositions()
+	if not canSaveLoadout then return end
+	
+	lastLoadout = {}
+	for i = 1, #gearSlots do
+		if gearSlots[i] and gearSlots[i] ~= "empty" then
+			lastLoadout[i] = gearSlots[i]
+		end
+	end
+end
+
+function unequipAllItems(dontEquipThis)
+	for i = 1, #gearSlots do
+		if gearSlots[i] == "empty" then break end
+		if gearSlots[i].GearReference.Value and gearSlots[i].GearReference.Value ~= dontEquipThis then
+			if gearSlots[i].GearReference.Value:IsA("HopperBin") then
+				gearSlots[i].GearReference.Value:Disable()
+			elseif gearSlots[i].GearReference.Value:IsA("Tool") then
+				gearSlots[i].GearReference.Value.Parent = game.Players.LocalPlayer.Backpack
+			end
+			gearSlots[i].Selected = false
+		end
+	end
+end
+
+function showToolTip(button, tip)
+	if button and button:FindFirstChild("ToolTipLabel") and button.ToolTipLabel:IsA("TextLabel") then
+		button.ToolTipLabel.Text = tostring(tip)
+		local xSize = button.ToolTipLabel.TextBounds.X + 6
+		button.ToolTipLabel.Size = UDim2.new(0,xSize,0,20)
+		button.ToolTipLabel.Position = UDim2.new(0.5,-xSize/2,0,-30)
+		button.ToolTipLabel.Visible = true
+	end
+end
+
+function hideToolTip(button, tip)
+	if button and button:FindFirstChild("ToolTipLabel") and button.ToolTipLabel:IsA("TextLabel") then
+		button.ToolTipLabel.Visible = false
+	end
+end
+
+local addingPlayerChild = function(child, equipped, addToSlot, inventoryGearButton)
+	waitForDebounce()
+	debounce.Value = true
+	
+	if not child:IsA("Tool") then
+		if not child:IsA("HopperBin") then
+			debounce.Value = false
+			return  -- we don't care about anything besides tools (sigh...)
+		end
+	end
+
+	if not addToSlot then
+		for i = 1, #gearSlots do
+			if gearSlots[i] ~= "empty" and gearSlots[i].GearReference.Value == child then -- we already have gear, do nothing
+				debounce.Value = false
+				return
+			end
+		end
 	end
 
 
-	local Wardrobe = Instance.new("Frame")
-	Wardrobe.Name = "Wardrobe"
-	Wardrobe.RobloxLocked = true
-	Wardrobe.BackgroundTransparency = 1
-	Wardrobe.Visible = false
-	Wardrobe.Size  = UDim2.new(1,0,1,0)
-	Wardrobe.Parent = Backpack
+	local gearClone = currentLoadout.TempSlot:clone()
+	gearClone.Name = child.Name
+	gearClone.GearImage.Image = child.TextureId
+	if gearClone.GearImage.Image == "" then
+		gearClone.GearText.Text = child.Name
+	end
+	gearClone.GearReference.Value = child
+	
+	gearClone.MouseEnter:connect(function()
+		pcall(function() if gearClone.GearReference and gearClone.GearReference.Value["ToolTip"] and gearClone.GearReference.Value.ToolTip ~= "" then
+							showToolTip(gearClone, gearClone.GearReference.Value.ToolTip)
+						 end
+		end)
+	end)
+	
+	gearClone.MouseLeave:connect(function()
+		pcall(function() if gearClone.GearReference and gearClone.GearReference.Value["ToolTip"] and gearClone.GearReference.Value.ToolTip ~= "" then
+							hideToolTip(gearClone, gearClone.GearReference.Value.ToolTip)
+						 end
+		end)
+	end)
 
-		local AssetList = Instance.new("Frame")
-		AssetList.RobloxLocked = true
-		AssetList.Name = "AssetList"
-		AssetList.Position = UDim2.new(0,4,0,5)
-		AssetList.Size = UDim2.new(0,85,1,-5)
-		AssetList.BackgroundTransparency = 1
-		AssetList.Visible = true
-		AssetList.Parent = Wardrobe
+	gearClone.RobloxLocked = true
 
-		local PreviewAssetFrame = Instance.new("Frame")
-		PreviewAssetFrame.RobloxLocked = true
-		PreviewAssetFrame.Name = "PreviewAssetFrame"
-		PreviewAssetFrame.BackgroundTransparency = 1
-		PreviewAssetFrame.Position = UDim2.new(1,-240,0,30)
-		PreviewAssetFrame.Size = UDim2.new(0,250,0,250)
-		PreviewAssetFrame.Parent = Wardrobe
+	local slotToMod = -1
 
-			local PreviewAssetBacking = Instance.new("TextButton")
-			PreviewAssetBacking.RobloxLocked = true
-			PreviewAssetBacking.Name = "PreviewAssetBacking"
-			PreviewAssetBacking.Active = false
-			PreviewAssetBacking.Text = ""
-			PreviewAssetBacking.AutoButtonColor = false
-			PreviewAssetBacking.Size = UDim2.new(1,0,1,0)
-			PreviewAssetBacking.Style = Enum.ButtonStyle.RobloxButton
-			PreviewAssetBacking.Visible = false
-			PreviewAssetBacking.ZIndex = 9
-			PreviewAssetBacking.Parent = PreviewAssetFrame
+	if not addToSlot then
+		for i = 1, #gearSlots do
+			if gearSlots[i] == "empty" then
+				slotToMod = i
+				break
+			end
+		end
+	else
+		slotToMod = addToSlot
+	end
 
-				local PreviewAssetImage = Instance.new("ImageLabel")
-				PreviewAssetImage.RobloxLocked = true
-				PreviewAssetImage.Name = "PreviewAssetImage"
-				PreviewAssetImage.BackgroundTransparency = 0.8
-				PreviewAssetImage.Position = UDim2.new(0.5,-100,0,0)
-				PreviewAssetImage.Size = UDim2.new(0,200,0,200)
-				PreviewAssetImage.BorderSizePixel = 0
-				PreviewAssetImage.ZIndex = 10
-				PreviewAssetImage.Parent = PreviewAssetBacking
+	if slotToMod == - 1 then -- No available slot to add in!
+		debounce.Value = false
+		return 
+	end 
 
-				local AssetNameLabel = Instance.new("TextLabel")
-				AssetNameLabel.Name = "AssetNameLabel"
-				AssetNameLabel.RobloxLocked = true
-				AssetNameLabel.BackgroundTransparency = 1
-				AssetNameLabel.Position = UDim2.new(0,0,1,-20)
-				AssetNameLabel.Size = UDim2.new(0.5,0,0,24)
-				AssetNameLabel.ZIndex = 10
-				AssetNameLabel.Font = Enum.Font.Arial
-				AssetNameLabel.Text = ""
-				AssetNameLabel.TextColor3 = Color3.new(1,1,1)
-				AssetNameLabel.TextScaled = true
-				AssetNameLabel.Parent = PreviewAssetBacking
+	local slotNum = slotToMod % 10
+	local parent = currentLoadout:FindFirstChild("Slot"..tostring(slotNum))
+	gearClone.Parent = parent
 
-				local AssetTypeLabel = AssetNameLabel:clone()
-				AssetTypeLabel.RobloxLocked = true
-				AssetTypeLabel.Name = "AssetTypeLabel"
-				AssetTypeLabel.TextScaled = false
-				AssetTypeLabel.FontSize = Enum.FontSize.Size18
-				AssetTypeLabel.Position = UDim2.new(0.5,3,1,-20)
-				AssetTypeLabel.Parent = PreviewAssetBacking
+	if inventoryGearButton then
+		local absolutePositionFinal = inventoryGearButton.AbsolutePosition
+		local currentAbsolutePosition = gearClone.AbsolutePosition
+		local diff = absolutePositionFinal - currentAbsolutePosition
+		gearClone.Position = UDim2.new(gearClone.Position.X.Scale,diff.x,gearClone.Position.Y.Scale,diff.y)
+		gearClone.ZIndex = 4
+	end
+
+	if addToSlot then
+		reorganizeLoadout(gearClone, true, equipped, addToSlot)
+	else
+		reorganizeLoadout(gearClone, true)
+	end
+
+	if gearClone.Parent == nil then debounce.Value = false return end -- couldn't fit in (hopper is full!)
+
+	if equipped then
+		gearClone.Selected = true
+		unequipAllItems(child)
+		delay(guiTweenSpeed + 0.01,function() -- if our gear is equipped, we will want to enlarge it when done moving
+			if gearClone:FindFirstChild("GearReference") and ( (gearClone.GearReference.Value:IsA("Tool") and gearClone.GearReference.Value.Parent == player.Character) or
+				(gearClone.GearReference.Value:IsA("HopperBin") and gearClone.GearReference.Value.Active == true) ) then
+					enlargeButton(gearClone)
+			end
+		end)
+	end
+
+	local dragBeginPos = nil
+	local clickCon, buttonDeleteCon, mouseEnterCon, mouseLeaveCon, dragStop, dragBegin = nil
+	clickCon = gearClone.MouseButton1Click:connect(function() if not gearClone.Draggable then activateGear(gearClone.SlotNumber.Text) end end)
+	mouseEnterCon = gearClone.MouseEnter:connect(function()
+		if guiBackpack.Visible then
+			gearClone.Draggable = true
+		end
+	end)
+	dragBegin = gearClone.DragBegin:connect(function(pos)
+		dragBeginPos = pos
+		gearClone.ZIndex = 7
+		local children = gearClone:GetChildren()
+		for i = 1, #children do
+			if children[i]:IsA("TextLabel") then
+				if string.find(children[i].Name,"Shadow") then
+					children[i].ZIndex = 8
+				else
+					children[i].ZIndex = 9
+				end
+			elseif children[i]:IsA("Frame") or children[i]:IsA("ImageLabel") then
+				 children[i].ZIndex = 7
+			end
+		end
+	end)
+	dragStop = gearClone.DragStopped:connect(function(x,y)
+		if gearClone.Selected then
+			gearClone.ZIndex = 2
+		else
+			gearClone.ZIndex = 1
+		end
+		local children = gearClone:GetChildren()
+		for i = 1, #children do
+			if children[i]:IsA("TextLabel") then
+				if string.find(children[i].Name,"Shadow") then
+					children[i].ZIndex = 3
+				else
+					children[i].ZIndex = 4
+				end
+			elseif children[i]:IsA("Frame") or children[i]:IsA("ImageLabel") then
+				 children[i].ZIndex = 2
+			end
+		end
+		resolveDrag(gearClone,x,y)
+	end)
+	mouseLeaveCon = gearClone.MouseLeave:connect(function()
+		gearClone.Draggable = false
+	end)
+	buttonDeleteCon = gearClone.AncestryChanged:connect(function()
+			if gearClone.Parent and gearClone.Parent.Parent == currentLoadout then return end
+			if clickCon then clickCon:disconnect() end
+			if buttonDeleteCon then buttonDeleteCon:disconnect() end
+			if mouseEnterCon then mouseEnterCon:disconnect() end
+			if mouseLeaveCon then mouseLeaveCon:disconnect() end
+			if dragStop then dragStop:disconnect() end
+			if dragBegin then dragBegin:disconnect() end
+	end) -- this probably isn't necessary since objects are being deleted (probably), but this might still leak just in case
+
+	local childCon = nil
+	local childChangeCon = nil
+	childCon = child.AncestryChanged:connect(function(newChild,parent)
+		if not checkToolAncestry(newChild,parent) then
+			if childCon then childCon:disconnect() end
+			if childChangeCon then childChangeCon:disconnect() end
+			removeFromInventory(child)
+		elseif parent == game.Players.LocalPlayer.Backpack then
+			normalizeButton(gearClone)
+		end
+	end)
+
+	childChangeCon = child.Changed:connect(function(prop)
+		if prop == "Name" then
+			if gearClone and gearClone.GearImage.Image == "" then
+				gearClone.GearText.Text = child.Name
+			end
+		elseif prop == "Active" then
+			if child and child:IsA("HopperBin") then
+				if not child.Active then
+					gearClone.Selected = false
+					normalizeButton(gearClone)
+				end
+			end
+		end
+	end)
+
+	debounce.Value = false
+
+end
+
+function addToInventory(child)
+	if not child:IsA("Tool") or not child:IsA("HopperBin") then return end
+
+	local slot = nil
+	for i = 1, #inventory do
+		if inventory[i] and inventory[i] == child then return end
+		if not inventory[i] then slot = i end
+	end
+	if slot then
+		inventory[slot] = child
+	elseif #inventory < 1 then
+		inventory[1] = child
+	else
+		inventory[#inventory + 1] = child
+	end
+end
+
+function removeFromInventory(child)
+	for i = 1, #inventory do
+		if inventory[i] == child then
+			table.remove(inventory,i)
+			inventory[i] = nil
+		end
+	end
+end
+
+-- these next two functions are used for safe guarding
+-- when we are waiting for character to come back after dying
+function activateLoadout()
+	currentLoadout.Visible = true
+end
+
+function deactivateLoadout()
+	currentLoadout.Visible = false
+end
+
+function setupBackpackListener()
+	if backpackChildCon then backpackChildCon:disconnect() backpackChildCon = nil end
+	backpackChildCon = player.Backpack.ChildAdded:connect(function(child)
+		addingPlayerChild(child)
+		addToInventory(child)
+			
+		-- now store info in case of death
+		--saveGearPositions()
+	end)
+end
+
+function playerCharacterChildAdded(child)
+	addingPlayerChild(child,true)
+	addToInventory(child)
+	
+	-- now store info in case of death
+	--saveGearPositions()
+end
+-- End Functions
 
 
 
-		local PreviewButton = Instance.new("TextButton")
-		PreviewButton.RobloxLocked = true
-		PreviewButton.Name = "PreviewButton"
-		PreviewButton.Text = "Rotate"
-		PreviewButton.BackgroundColor3 = Color3.new(0,0,0)
-		PreviewButton.BackgroundTransparency = 0.5
-		PreviewButton.BorderColor3 = Color3.new(1,1,1)
-		PreviewButton.Position = UDim2.new(1.2,-62,1,-50)
-		PreviewButton.Size = UDim2.new(0,125,0,50)
-		PreviewButton.Font = Enum.Font.ArialBold
-		PreviewButton.FontSize = Enum.FontSize.Size24
-		PreviewButton.TextColor3 = Color3.new(1,1,1)
-		PreviewButton.TextWrapped = true
-		PreviewButton.TextStrokeTransparency = 0
-		PreviewButton.Parent = Wardrobe
-
-		local CharacterPane = Instance.new("Frame")
-		CharacterPane.RobloxLocked = true
-		CharacterPane.Name = "CharacterPane"
-		CharacterPane.Position = UDim2.new(1,-220,0,32)
-		CharacterPane.Size = UDim2.new(0,220,1,-40)
-		CharacterPane.BackgroundTransparency = 1
-		CharacterPane.Visible = true
-		CharacterPane.Parent = Wardrobe
-
-			--CharacterPane Children
-			local FaceFrame = makeCharFrame("FacesFrame", CharacterPane)
-				game:GetService("ContentProvider"):Preload("http://www.morblox.us/asset/?id=75460621")
-				makeZone("FaceZone","http://www.morblox.us/asset/?id=75460621",UDim2.new(0,157,0,137),UDim2.new(0.5,-78,0.5,-68),FaceFrame)
-				makeStyledButton("Face",UDim2.new(0,64,0,64),UDim2.new(0.5,-32,0.5,-135),FaceFrame)
-
-			local HeadFrame = makeCharFrame("HeadsFrame", CharacterPane)
-				makeZone("FaceZone","http://www.morblox.us/asset/?id=75460621",UDim2.new(0,157,0,137),UDim2.new(0.5,-78,0.5,-68),HeadFrame)
-				makeStyledButton("Head",UDim2.new(0,64,0,64),UDim2.new(0.5,-32,0.5,-135),HeadFrame)
-
-			local HatsFrame = makeCharFrame("HatsFrame", CharacterPane)
-				game:GetService("ContentProvider"):Preload("http://www.morblox.us/asset/?id=75457888")
-				local HatsZone = makeZone("HatsZone","http://www.morblox.us/asset/?id=75457888",UDim2.new(0,186,0,184),UDim2.new(0.5,-93,0.5,-100), HatsFrame)
-					makeStyledButton("Hat1Button",UDim2.new(0,64,0,64),UDim2.new(0,-1,0,-1),HatsZone,Enum.ButtonStyle.RobloxButton)
-					makeStyledButton("Hat2Button",UDim2.new(0,64,0,64),UDim2.new(0,63,0,-1),HatsZone,Enum.ButtonStyle.RobloxButton)
-					makeStyledButton("Hat3Button",UDim2.new(0,64,0,64),UDim2.new(0,127,0,-1),HatsZone,Enum.ButtonStyle.RobloxButton)
-
-			local PantsFrame = makeCharFrame("PantsFrame", CharacterPane)
-				game:GetService("ContentProvider"):Preload("http://www.morblox.us/asset/?id=75457920")
-				makeZone("PantsZone","http://www.morblox.us/asset/?id=75457920",UDim2.new(0,121,0,99),UDim2.new(0.5,-60,0.5,-100),PantsFrame)
-
-				local pantFrame = Instance.new("Frame")
-				pantFrame.RobloxLocked = true
-				pantFrame.Size = UDim2.new(0,25,0,56)
-				pantFrame.Position = UDim2.new(0.5,-26,0.5,0)
-				pantFrame.BackgroundColor3 = Color3.new(0,0,0)
-				pantFrame.BorderColor3 = Color3.new(1,1,1)
-				pantFrame.Name = "PantFrame"
-				pantFrame.Parent = PantsFrame
-
-				local otherPantFrame = pantFrame:clone()
-				otherPantFrame.Position = UDim2.new(0.5,3,0.5,0)
-				otherPantFrame.RobloxLocked = true
-				otherPantFrame.Parent = PantsFrame
-
-				local CurrentPants = Instance.new("ImageButton")
-				CurrentPants.RobloxLocked = true
-				CurrentPants.BackgroundTransparency = 1
-				CurrentPants.ZIndex = 2
-				CurrentPants.Name = "CurrentPants"
-				CurrentPants.Position = UDim2.new(0.5,-31,0.5,-4)
-				CurrentPants.Size = UDim2.new(0,54,0,59)
-				CurrentPants.Parent = PantsFrame
-
-			local MeshFrame = makeCharFrame("PackagesFrame", CharacterPane)
-				local torsoButton = makeStyledButton("TorsoMeshButton", UDim2.new(0,64,0,64),UDim2.new(0.5,-32,0.5,-110),MeshFrame,Enum.ButtonStyle.RobloxButton)
-				makeTextLabel("TorsoLabel","Torso",UDim2.new(0.5,-16,0,-25),torsoButton)
-				local leftLegButton = makeStyledButton("LeftLegMeshButton", UDim2.new(0,64,0,64),UDim2.new(0.5,0,0.5,-25),MeshFrame,Enum.ButtonStyle.RobloxButton)
-				makeTextLabel("LeftLegLabel","Left Leg",UDim2.new(0.5,-16,0,-25),leftLegButton)
-				local rightLegButton =	makeStyledButton("RightLegMeshButton", UDim2.new(0,64,0,64),UDim2.new(0.5,-64,0.5,-25),MeshFrame,Enum.ButtonStyle.RobloxButton)
-				makeTextLabel("RightLegLabel","Right Leg",UDim2.new(0.5,-16,0,-25),rightLegButton)
-				local rightArmButton = makeStyledButton("RightArmMeshButton", UDim2.new(0,64,0,64),UDim2.new(0.5,-96,0.5,-110),MeshFrame,Enum.ButtonStyle.RobloxButton)
-				makeTextLabel("RightArmLabel","Right Arm",UDim2.new(0.5,-16,0,-25),rightArmButton)
-				local leftArmButton = makeStyledButton("LeftArmMeshButton", UDim2.new(0,64,0,64),UDim2.new(0.5,32,0.5,-110),MeshFrame,Enum.ButtonStyle.RobloxButton)
-				makeTextLabel("LeftArmLabel","Left Arm",UDim2.new(0.5,-16,0,-25),leftArmButton)
-
-			local TShirtFrame = makeCharFrame("T-ShirtsFrame",CharacterPane)
-				game:GetService("ContentProvider"):Preload("http://www.morblox.us/asset/?id=75460642")
-				makeZone("TShirtZone","http://www.morblox.us/asset/?id=75460642",UDim2.new(0,121,0,154),UDim2.new(0.5,-60,0.5,-100),TShirtFrame)
-				makeStyledButton("TShirtButton", UDim2.new(0,64,0,64),UDim2.new(0.5,-32,0.5,-64),TShirtFrame)
 
 
-			local ShirtFrame = makeCharFrame("ShirtsFrame", CharacterPane)
-				makeZone("ShirtZone","http://www.morblox.us/asset/?id=75460642",UDim2.new(0,121,0,154),UDim2.new(0.5,-60,0.5,-100),ShirtFrame)
-				makeStyledButton("ShirtButton", UDim2.new(0,64,0,64),UDim2.new(0.5,-32,0.5,-64),ShirtFrame)
 
+-- Begin Script
+wait() -- let stuff initialize incase this is first heartbeat...
 
-			local ColorFrame = makeCharFrame("ColorFrame", CharacterPane)
-				game:GetService("ContentProvider"):Preload("http://www.morblox.us/asset/?id=76049888")
-				local ColorZone = makeZone("ColorZone","http://www.morblox.us/asset/?id=76049888", UDim2.new(0,120,0,150),UDim2.new(0.5,-60,0.5,-100),ColorFrame)
-					makeStyledButton("Head",UDim2.new(0.26,0,0.19,0),UDim2.new(0.37,0,0.02,0),ColorZone).AutoButtonColor = false
-					makeStyledButton("LeftArm",UDim2.new(0.19,0,0.36,0),UDim2.new(0.78,0,0.26,0),ColorZone).AutoButtonColor = false
-					makeStyledButton("RightArm",UDim2.new(0.19,0,0.36,0),UDim2.new(0.025,0,0.26,0),ColorZone).AutoButtonColor = false
-					makeStyledButton("Torso",UDim2.new(0.43,0,0.36,0),UDim2.new(0.28,0,0.26,0),ColorZone).AutoButtonColor = false
-					makeStyledButton("RightLeg",UDim2.new(0.19,0,0.31,0),UDim2.new(0.275,0,0.67,0),ColorZone).AutoButtonColor = false
-					makeStyledButton("LeftLeg",UDim2.new(0.19,0,0.31,0),UDim2.new(0.525,0,0.67,0),ColorZone).AutoButtonColor = false
+waitForChild(player,"Backpack")
+waitForProperty(player,"Character")
+local backpackChildren = player.Backpack:GetChildren()
+local size = math.min(10,#backpackChildren)
+for i = 1, size do
+	addingPlayerChild(backpackChildren[i],false)
+	
+	-- now store info in case of death
+	--saveGearPositions()
+end
+setupBackpackListener()
 
-			-- Character Panel label (shows what category we are currently browsing)
-			local CategoryLabel = Instance.new("TextLabel")
-			CategoryLabel.RobloxLocked = true
-			CategoryLabel.Name = "CategoryLabel"
-			CategoryLabel.BackgroundTransparency = 1
-			CategoryLabel.Font = Enum.Font.ArialBold
-			CategoryLabel.FontSize = Enum.FontSize.Size18
-			CategoryLabel.Position = UDim2.new(0,0,0,-7)
-			CategoryLabel.Size = UDim2.new(1,0,0,20)
-			CategoryLabel.TextXAlignment = Enum.TextXAlignment.Center
-			CategoryLabel.Text = "All"
-			CategoryLabel.TextColor3 = Color3.new(1,1,1)
-			CategoryLabel.Parent = CharacterPane
+waitForProperty(player,"Character")
+for i,v in ipairs(player.Character:GetChildren()) do
+	playerCharacterChildAdded(v)
+end
+characterChildAddedCon = player.Character.ChildAdded:connect(function(child) playerCharacterChildAdded(child) end)
 
-			--Save Button
-			local SaveButton = Instance.new("TextButton")
-			SaveButton.RobloxLocked = true
-			SaveButton.Name = "SaveButton"
-			SaveButton.Size = UDim2.new(0.6,0,0,50)
-			SaveButton.Position = UDim2.new(0.2,0,1,-50)
-			SaveButton.Style = Enum.ButtonStyle.RobloxButton
-			SaveButton.Selected = false
-			SaveButton.Font = Enum.Font.ArialBold
-			SaveButton.FontSize = Enum.FontSize.Size18
-			SaveButton.Text = "Save"
-			SaveButton.TextColor3 = Color3.new(1,1,1)
-			SaveButton.Parent = CharacterPane
+waitForChild(player.Character,"Humanoid")
+humanoidDiedCon = player.Character.Humanoid.Died:connect(function()
+	if humanoidDiedCon then humanoidDiedCon:disconnect() humanoidDiedCon = nil end
+	deactivateLoadout()
+	if backpackChildCon then backpackChildCon:disconnect() backpackChildCon = nil end
+end)
 
--- no need for this to stick around
+player.CharacterRemoving:connect(function()
+	for i = 1, #gearSlots do
+		if gearSlots[i] ~= "empty" then
+			gearSlots[i].Parent = nil
+			gearSlots[i] = "empty"
+		end
+	end
+end)
 
-script:Destroy()
+player.CharacterAdded:connect(function()
+	--canSaveLoadout = false -- we need to save loadout table until we check it out
+	
+	waitForProperty(game.Players,"LocalPlayer")
+	player = game.Players.LocalPlayer -- make sure we are still looking at the correct character
+	waitForChild(player,"Backpack")
+
+	--[[local loadoutCount = 0
+	
+	local backpackChildren = player.Backpack:GetChildren()
+	-- Make sure we put gear back in where we last had them
+	for i = 1, #backpackChildren do
+		for pos,v in pairs(lastLoadout) do
+			if v["Name"] and v.Name == backpackChildren[i].Name then
+					addingPlayerChild(backpackChildren[i],false,pos)
+					lastLoadout[pos] = nil
+					loadoutCount = loadoutCount + 1
+					break
+			end	
+		end
+		if loadoutCount >= 10 then -- we've accounted for all slots, no need to go thru rest of gear
+			break
+		end
+	end]]
+	--canSaveLoadout = true -- used loadout table, allow script to edit this again
+	
+	local backpackChildren = player.Backpack:GetChildren()
+	local size = math.min(10,#backpackChildren)
+	for i = 1, size do
+		addingPlayerChild(backpackChildren[i],false)
+	end
+
+	setupBackpackListener()
+	
+	if characterChildAddedCon then 
+		characterChildAddedCon:disconnect()
+		characterChildAddedCon = nil
+	end
+
+	characterChildAddedCon =
+		player.Character.ChildAdded:connect(function(child)
+			addingPlayerChild(child,true)
+			
+			-- now store info in case of death
+		--	saveGearPositions()
+		end)
+
+	waitForChild(player.Character,"Humanoid")
+	humanoidDiedCon =
+		player.Character.Humanoid.Died:connect(function()
+			deactivateLoadout()
+						
+			if humanoidDiedCon then humanoidDiedCon:disconnect() humanoidDiedCon = nil end
+			if backpackChildCon then backpackChildCon:disconnect() backpackChildCon = nil end
+		end)
+	activateLoadout()
+end)
+
+waitForChild(guiBackpack,"SwapSlot")
+guiBackpack.SwapSlot.Changed:connect(function()
+	if guiBackpack.SwapSlot.Value then
+		local swapSlot = guiBackpack.SwapSlot
+		local pos = swapSlot.Slot.Value
+		if pos == 0 then pos = 10 end
+		if gearSlots[pos] then
+			reorganizeLoadout(gearSlots[pos],false)
+		end
+		if swapSlot.GearButton.Value then
+			addingPlayerChild(swapSlot.GearButton.Value.GearReference.Value,false,pos)
+				
+			-- now store info in case of death
+			--saveGearPositions()
+		end
+		guiBackpack.SwapSlot.Value = false
+	end
+end)
+
+game:GetService("GuiService").KeyPressed:connect(function(key) activateGear(key) end)

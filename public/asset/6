@@ -465,54 +465,42 @@ function removeDialog(dialog)
 end	
 
 function addDialog(dialog)
-	if dialog.Parent then
-		if dialog.Parent:IsA("BasePart") then
-			local chatGui = chatNotificationGui:clone()
-			chatGui.Enabled = not dialog.InUse		
-			chatGui.Adornee = dialog.Parent
-			chatGui.RobloxLocked = true
-			chatGui.Parent = game.CoreGui
-			chatGui.Image.Button.MouseButton1Click:connect(function() startDialog(dialog) end)
-			setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
-			
-			dialogMap[dialog] = chatGui
+	if dialog.Parent and dialog.Parent:IsA("BasePart") then
+		local chatGui = chatNotificationGui:clone()
+		chatGui.Enabled = not dialog.InUse		
+		chatGui.Adornee = dialog.Parent
+      chatGui.RobloxLocked = true
+		chatGui.Parent = game.CoreGui
+		chatGui.Image.Button.MouseButton1Click:connect(function() startDialog(dialog) end)
+		setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
+		
+      dialogMap[dialog] = chatGui
 
-			dialogConnections[dialog] = dialog.Changed:connect(function(prop)
-				if prop == "Parent" and dialog.Parent then 
-					--This handles the reparenting case, seperate from removal case
-					removeDialog(dialog) 
-					addDialog(dialog) 
-				elseif prop == "InUse" then
-					chatGui.Enabled = not currentConversationDialog and not dialog.InUse
-					if dialog == currentConversationDialog then
+      dialogConnections[dialog] = dialog.Changed:connect(function(prop)
+          if prop == "Parent" and dialog.Parent then 
+		        --This handles the reparenting case, seperate from removal case
+              removeDialog(dialog) 
+				  addDialog(dialog) 
+          elseif prop == "InUse" then
+              chatGui.Enabled = not currentConversationDialog and not dialog.InUse
+				  if dialog == currentConversationDialog then
 						timeoutDialog()
-					end
-				elseif prop == "Tone" or prop == "Purpose" then
-					setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
-				end 
-			end)
-		else -- still need to listen to parent changes even if current parent is not a BasePart
-			dialogConnections[dialog] = dialog.Changed:connect(function(prop)
-				if prop == "Parent" and dialog.Parent then 
-					--This handles the reparenting case, seperate from removal case
-					removeDialog(dialog) 
-					addDialog(dialog) 
-				end 
-			end)
-		end
+				  end
+			 elseif prop == "Tone" or prop == "Purpose" then
+				  setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
+          end 
+		end)
 	end
 end
 
 function fetchScripts()
+   --print("InsertService")
 	local model = game:GetService("InsertService"):LoadAsset(39226062)
-    if type(model) == "string" then -- load failed, lets try again
-		wait(0.1)
+   --print(model)
+   while type(model) == "string" do
+		--print("Trying again to fetch Scripts")
 		model = game:GetService("InsertService"):LoadAsset(39226062)
 	end
-	if type(model) == "string" then -- not going to work, lets bail
-		return
-	end
-	
 	waitForChild(model,"TimeoutScript")
 	timeoutScript = model.TimeoutScript
 	waitForChild(model,"ReenableDialogScript")

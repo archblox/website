@@ -43,18 +43,10 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/asset/" . $id)){
 		sign($file);
 	}else if($id == 14){
         sign($file);
-	}else if($id == 15){
+	}else if($id == 1000){
 		sign($file);
-	}else if($id == 16){
+	}else if($id == 38037265){
 		sign($file);
-	}else if($id == 17){
-		sign($file);
-	}else if($id == 18){
-		sign($file);
-	}else if($id == 19){
-		sign($file);
-	}else if($id == 20){
-        sign($file);
     }else{
         echo $file;
     }
