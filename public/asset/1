@@ -37,6 +37,9 @@ local scriptContext = game:GetService("ScriptContext")
 -- Resizer (dynamically resizes gui)
 scriptContext:AddCoreScript(2,screenGui,"Resizer")
 
+-- Chat script
+scriptContext:AddCoreScript(1000, screenGui, "CoreScripts/ChatScript")	
+
 -- SubMenuBuilder (builds out the material,surface and color panels)
 scriptContext:AddCoreScript(3,screenGui,"SubMenuBuilder")
 
@@ -67,8 +70,6 @@ if game.CoreGui.Version >= 2 then
 	-- Friend Notification Script (probably can use this script to expand out to other notifications)
 	scriptContext:AddCoreScript(9,screenGui,"NotificationScript")
 	scriptContext:AddCoreScript(38037265,screenGui,"HealthScript 4.0")
-    -- Chat script
-    scriptContext:AddCoreScript(1000, screenGui, "CoreScripts/ChatScript")	
 end
 
 -- For Deepak Testing
