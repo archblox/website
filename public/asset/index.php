@@ -4,7 +4,7 @@ ob_start();
     function sign($data) {
         $PrivKey = file_get_contents("./PrivKey.pem");
         openssl_sign($data, $signature, $PrivKey, OPENSSL_ALGO_SHA1);
-        echo "" . sprintf("%%%s%%%s", base64_encode($signature), $data);
+        echo sprintf("%%%s%%%s", base64_encode($signature), $data);
     }
 
 $id = (int)($_GET["id"] ?? die(json_encode(["message" => "Error handling your request."])));
@@ -54,8 +54,6 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/asset/" . $id)){
 	}else if($id == 19){
 		sign($file);
 	}else if($id == 20){
-        sign($file);
-	}else if($id == 52177590){
         sign($file);
     }else{
         echo $file;

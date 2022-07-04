@@ -39,7 +39,6 @@ pcall(function()
 	waitForProperty(game,"PlaceId")
 	if game.PlaceId == deepakTestingPlace then
 		scriptContext:AddCoreScript(52177626,screenGui,"RBXStatusBuffsGUIScript")
-		scriptContext:AddCoreScript(52177590,screenGui,"HealthScript v4.0")
 	end
 end)
 

@@ -4,6 +4,7 @@ local function waitForChild(instance, name)
 	assert(instance)
 	assert(name)
 	while not instance:FindFirstChild(name) do
+		print('Waiting for ...', instance, name)
 		instance.ChildAdded:wait()
 	end
 	return instance:FindFirstChild(name)
@@ -15,6 +16,13 @@ local function waitForProperty(instance, property)
 		instance.Changed:wait()
 	end
 end
+
+local function IsTouchDevice()
+	local touchEnabled = false
+	pcall(function() touchEnabled = Game:GetService('UserInputService').TouchEnabled end)
+	return touchEnabled 
+end 
+
 
 waitForChild(game,"Players")
 waitForProperty(game.Players,"LocalPlayer")
@@ -67,7 +75,7 @@ local searchRequestedEvent = waitForChild(backpackManager,"SearchRequestedEvent"
 local tellBackpackReadyFunc = waitForChild(backpackManager,"BackpackReady")
 
 -- creating scroll bar early as to make sure items get placed correctly
-local scrollFrame, scrollUp, scrollDown, recalculateScroll = RbxGui.CreateScrollingFrame(nil,"grid")
+local scrollFrame, scrollUp, scrollDown, recalculateScroll = RbxGui.CreateScrollingFrame(nil, "grid", Vector2.new(6, 6))
 
 scrollFrame.Position = UDim2.new(0,0,0,30)
 scrollFrame.Size = UDim2.new(1,0,1,-30)
@@ -236,6 +244,7 @@ end
 
 function previewGear(button)
 	if not browsingMenu then
+		gearPreview.Visible = false
 		gearPreview.GearImage.Image = button.Image
 		gearPreview.GearStats.GearName.Text = button.GearReference.Value.Name
 	end
@@ -276,7 +285,7 @@ end
 function resizeGrid()
 	for k,v in pairs(backpackItems) do
 		if not v:FindFirstChild("RobloxBuildTool") then
-			if not buttons[v] then
+			if not buttons[v] then 
 				local buttonClone = gearButton:clone()
 				buttonClone.Parent = grid.ScrollingFrame
 				buttonClone.Visible = true
@@ -289,18 +298,26 @@ function resizeGrid()
 				buttonClone.Draggable = true 
 				buttons[v] = buttonClone
 				
-				local unequipMenu = getGearContextMenu()
+
+				if not IsTouchDevice() then 
+					local unequipMenu = getGearContextMenu()
+
 				
-				unequipMenu.Visible = false
-				unequipMenu.Parent = buttonClone
+					unequipMenu.Visible = false
+					unequipMenu.Parent = buttonClone
+				end 
 				
 				local beginPos = nil
 				buttonClone.DragBegin:connect(function(value)
-					buttonClone.ZIndex = 9
+					waitForChild(buttonClone, 'Background')					
+					buttonClone['Background'].ZIndex = 10
+					buttonClone.ZIndex = 10					
 					beginPos = value
 				end)
 				buttonClone.DragStopped:connect(function(x,y)
-					buttonClone.ZIndex = 1
+					waitForChild(buttonClone, 'Background')
+					buttonClone['Background'].ZIndex = 1.0
+					buttonClone.ZIndex = 2					
 					if beginPos ~= buttonClone.Position then
 						if not checkForSwap(buttonClone,x,y) then
 							buttonClone:TweenPosition(beginPos,Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5, true)
@@ -622,7 +639,7 @@ function nukeBackpack()
 	end
 end
 
-function getGearContextMenu()
+function getGearContextMenu()	
 	local gearContextMenu = Instance.new("Frame")
 	gearContextMenu.Active = true
 	gearContextMenu.Name = "UnequipContextMenu"
@@ -671,27 +688,30 @@ function getGearContextMenu()
 			button.ZIndex = 9
 			button.Parent = gearContextMenuButton
 
-			button.MouseButton1Click:connect(function()
-				if button.Active and not gearContextMenu.Parent.Active then
-					local success, result = pcall(function() element.DoIt(element, gearContextMenu) end)
-					browsingMenu = false
-					gearContextMenu.Visible = false
-					clearHighlight(button)
-					clearPreview()
-				end
-			end)
-			
-			button.MouseEnter:connect(function()
-				if button.Active and gearContextMenu.Parent.Active then
-					highlight(button)
-				end
-			end)
-			button.MouseLeave:connect(function()
-				if button.Active and gearContextMenu.Parent.Active then
-					clearHighlight(button)
-				end
-			end)
-			
+			if not IsTouchDevice() then 
+
+				button.MouseButton1Click:connect(function()
+					if button.Active and not gearContextMenu.Parent.Active then
+						local success, result = pcall(function() element.DoIt(element, gearContextMenu) end)
+						browsingMenu = false
+						gearContextMenu.Visible = false
+						clearHighlight(button)
+						clearPreview()
+					end
+				end)
+				
+				button.MouseEnter:connect(function()
+					if button.Active and gearContextMenu.Parent.Active then
+						highlight(button)
+					end
+				end)
+				button.MouseLeave:connect(function()
+					if button.Active and gearContextMenu.Parent.Active then
+						clearHighlight(button)
+					end
+				end)
+			end 
+
 			contextElement.Button = button
 			contextElement.Element = button
 		elseif element.Type == "Label" then

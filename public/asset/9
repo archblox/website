@@ -418,64 +418,7 @@ local Chat = {
 		}
 ---------------------------------------------------
 
-local function GetNameValue(pName)
-	local value = 0
-	for index = 1, #pName do 
-		local cValue = string.byte(string.sub(pName, index, index))
-		local reverseIndex = #pName - index + 1
-		if #pName%2 == 1 then 
-			reverseIndex = reverseIndex - 1			
-		end
-		if reverseIndex%4 >= 2 then 
-			cValue = -cValue 			
-		end 
-		value = value + cValue 
-	end 
-	return value%8
-end 
 
-function Chat:ComputeChatColor(pName)
-	return self.ChatColors[GetNameValue(pName) + 1].Color
-end 
-
--- This is context based scrolling 
-function Chat:EnableScrolling(toggle)
-	-- Genius idea gone to fail, if we switch the camera type we can effectively lock the 
-	-- camera and do no click scrolling 
-	self.MouseOnFrame = false  
-	if self.RenderFrame then 
-		self.RenderFrame.MouseEnter:connect(function()			
-			local character = Player.Character 
-			local torso = WaitForChild(character, 'Torso')
-			local humanoid = WaitForChild(character, 'Humanoid')
-			local head = WaitForChild(character, 'Head')
-			if toggle then 
-				self.MouseOnFrame = true 
-				Camera.CameraType = 'Scriptable'
-				-- Get relative position of camera and keep to it 
-				Spawn(function()	
-					local currentRelativePos = Camera.CoordinateFrame.p - torso.Position
-					while Chat.MouseOnFrame do
-						Camera.CoordinateFrame = CFrame.new(torso.Position + currentRelativePos, head.Position)
-						wait(0.015)  
-					end 
-				end)
-			end 
-		end)
-
-		self.RenderFrame.MouseLeave:connect(function()
-			Camera.CameraType = 'Custom'
-			self.MouseOnFrame = false 
-		end)
-	end 	
-end 
-
--- TODO: Scrolling using Mouse wheel 
-function Chat:OnScroll(speed)
-	if self.MouseOnFrame then 
-		-- 
-	end 
-end 
 
 -- Check if we are running on a touch device 
 function Chat:IsTouchDevice()
@@ -503,85 +446,7 @@ function Chat:ScrollQueue(value)
 	end 
 end
 
--- Handles the rendering of the text objects in their appropriate places
-function Chat:UpdateQueue(field)	
-	-- Have to do some sort of correction here 						
-	for i = #self.MessageQueue, 1, -1 do 			
-		if self.MessageQueue[i] then 						
-			for _, label in pairs(self.MessageQueue[i]) do 						
-				if label and type(label) ~= 'table' and type(label) ~= 'number' then					
-					if label:IsA('TextLabel') or label:IsA('TextButton') then 						
-						if self.SlotPositions_List[i] and self.MessageQueue[i] ~= field then 													
-							label.Position = self.SlotPositions_List[i][1] - UDim2.new(0, 0, field['Message'].Size.Y.Scale, 0) 
-							label.Position = UDim2.new(self.Configuration.XScale, 0, label.Position.Y.Scale, 0)
-						else 
-							label.Position = UDim2.new(self.Configuration.XScale, 0, label.Position.Y.Scale - field['Message'].Size.Y.Scale , 0)
-						end 
-						if field == self.MessageQueue[i] then 						
-							-- Just to show up popping effect for the latest message in chat 
-							Spawn(function()
-								wait(0.15)
-								while label.TextTransparency > 0 do 
-									label.TextTransparency = label.TextTransparency - 0.2
-									wait() 
-								end 			
-							end)
-						end  
-						if label.Position.Y.Scale < -0.05 or label.Position.Y.Scale > 1.0 then 
-							label.TextTransparency = 1.0
-						else 
-							label.TextTransparency = 0.0
-						end 
-					end 
-				end 						
-			end 
-		end 
-	end	
-end 
 
-function Chat:InsertIntoQueue(field)
-	-- This is a ring buffer where insertions happen at the beginning 	
-	-- One optimization here would be to not copy the queue by reference 
-	-- And reuse the same queue and do the insertion in place 
-	-- But rendering code must be changed accordingly and this becomes rather hard to manage
-	-- plus the effects are minimal 
-	-- TODO: Revist if this becomes a problem for optimization
-	local tmpQueue = self.MessageQueue
-	self.MessageQueue = {} 
-	self.MessageQueue[1] = field 
-	self.MessageQueue[1].Previous = tmpQueue[i]
-	self.MessageQueue[1].Next = nil
-
-	self.SlotPositions_List = {}
-	self.SlotPositions_List[1] = {field.Position, field.Size}	
-
-	if tmpQueue[self.Configuration.HistoryLength] then 
-		if tmpQueue[self.Configuration.HistoryLength]['Player']  then 
-			tmpQueue[self.Configuration.HistoryLength]['Player']:Destroy() 
-		end 
-		if tmpQueue[self.Configuration.HistoryLength]['Message'] then 
-			tmpQueue[self.Configuration.HistoryLength]['Message']:Destroy() 
-		end 
-		tmpQueue[self.Configuration.HistoryLength] = nil 
-	end 
-
-	for i = 1, self.Configuration.HistoryLength - 1 do 
-		if tmpQueue[i] and tmpQueue[i]['Player'] and tmpQueue[i]['Player'].Parent then 
-			table.insert(self.MessageQueue, tmpQueue[i])
-			self.MessageQueue[#self.MessageQueue].Previous = tmpQueue[i+1] or nil
-			self.MessageQueue[#self.MessageQueue].Next = tmpQueue[i-1] or nil
-
-			self.SlotPositions_List[#self.MessageQueue] = {tmpQueue[i]['Message'].Position, tmpQueue[i]['Message'].Size}			
-		end 
-	end 
-	-- Now, render the queue 	
-	Chat:UpdateQueue(field)
-end 
-
-function Chat:CreateScrollBar()
-	-- Code for scrolling is in here, partially, but scroll bar drawing isn't drawn 
-	-- TODO: Implement 
-end
 
 function Chat:FocusOnChatBar()
 	if self.ClickToChatButton then 
@@ -620,7 +485,7 @@ function Chat:CreateTouchButton()
 								Size = UDim2.new(1, 0, 1, 0);
 								Position = UDim2.new(0, 0, 0, 0);
 								BackgroundTransparency = 1.0;
-								Image = 'http://morblox.us/asset/?id=97078724'
+								Image = 'http://www.roblox.com/asset/?id=97078724'
 							};
 						}
 	self.TapToChatLabel = self.ChatTouchFrame.ChatLabel	
@@ -740,106 +605,7 @@ function Chat:ComputeSpaceString(pLabel)
 	return nString	
 end
 
--- When the playerChatted event fires 
--- The message is what the player chatted 
-function Chat:UpdateChat(cPlayer, message)		
-	local pName = cPlayer.Name			
-	local pLabel
-	local mLabel 
-	-- Our history stores upto 50 messages that is 100 textlabels 
-	-- If we ever hit the mark, which would be in every popular game btw 
-	-- we wrap around and reuse the labels 
-	if #self.MessageQueue > self.Configuration.HistoryLength then 
-		pLabel = self.MessageQueue[#self.MessageQueue]['Player']
-		mLabel = self.MessageQueue[#self.MessageQueue]['Message']
 
-		pLabel.Text = pName
-		pLabel.Name = pName
-		pLabel.TextColor3 = Chat:ComputeChatColor(pName)
-
-		local nString 
-
-		if not self.CachedSpaceStrings_List[pName] then 
-			nString = Chat:ComputeSpaceString(pLabel)
-		else 
-			nString = self.CachedSpaceStrings_List[pName]
-		end 	
-
-		mLabel.Name = pName .. " - message"
-		mLabel.Text = nString .. message; 
-
-		-- Reinserted at the beginning, ring buffer 
-		self.MessageQueue[#self.MessageQueue] = nil 
-	else 
-		-- Haven't hit the mark yet, so keep creating 
-		pLabel = Gui.Create'TextButton' 
-					{
-						Name = pName;
-						Text = pName .. ":";
-						TextColor3 = Chat:ComputeChatColor(pName);
-						FontSize = Chat.Configuration.FontSize;
-						TextXAlignment = Enum.TextXAlignment.Left;
-						TextYAlignment = Enum.TextYAlignment.Top;
-						Parent = self.RenderFrame;
-						TextWrapped = false;
-						Size = UDim2.new(1, 0, 0.1, 0);
-						BackgroundTransparency = 1.0;
-						TextTransparency = 1.0;	
-						Position = UDim2.new(0, 0, 1, 0);
-						BorderSizePixel = 0.0; 
-					};	
-
-		local nString 
-
-		if not self.CachedSpaceStrings_List[pName] then 
-			nString = Chat:ComputeSpaceString(pLabel)
-		else 
-			nString = self.CachedSpaceStrings_List[pName]
-		end 		
-
-		mLabel = Gui.Create'TextButton' 
-						{
-							Name = pName .. ' - message';
-							-- Max is 3 lines
-							Size = UDim2.new(1, 0, 0.5, 0);
-							Text = nString .. message;
-							TextColor3 = Chat.Configuration.MessageColor;
-							FontSize = Chat.Configuration.FontSize;
-							TextXAlignment = Enum.TextXAlignment.Left;	
-							TextYAlignment = Enum.TextYAlignment.Top;						
-							Parent = self.RenderFrame;			
-							TextWrapped = true;			
-							BackgroundTransparency = 1.0;						
-							TextTransparency = 1.0;
-							Position = UDim2.new(0, 0, 1, 0);
-							BorderSizePixel = 0.0;
-						};
-	end 
-
-	-- This is to find if we need to wrap the text around
-	-- Expensive, but works well and worthwhile 
-	-- This will give beautiful multilines as well 
-	local heightField = 0.1 * self.RenderFrame.AbsoluteSize.Y 
-
-	while heightField < mLabel.TextBounds.Y do 
-		heightField = heightField + 1
-	end 
-
-	pLabel.Visible = true
-	mLabel.Visible = true 
-
-	mLabel.Size = UDim2.new(1, 0, heightField/self.RenderFrame.AbsoluteSize.Y, 0)	
-	pLabel.Size = mLabel.Size
-	local yPixels = self.RenderFrame.AbsoluteSize.Y
-	local yFieldSize = mLabel.TextBounds.Y
-
-	local queueField = {}	
-	queueField['Player'] = pLabel 
-	queueField['Message'] = mLabel 
-	queueField['SpawnTime'] = tick() -- Used for identifying when to make the message invisible 
-
-	Chat:InsertIntoQueue(queueField) 
-end
 
 function Chat:ScreenSizeChanged() 
 	while self.Frame.AbsoluteSize.Y > 120 do 
@@ -864,7 +630,7 @@ function Chat:CreateGui()
 					Gui.Create'ImageLabel'
 					{
 						Name = 'Background';
-						Image = 'http://morblox.us/asset/?id=97120937'; --96551212';
+						Image = 'http://www.roblox.com/asset/?id=97120937'; --96551212';
 						Size = UDim2.new(1.3, 0, 1.64, 0);
 						Position = UDim2.new(0, 0, 0, 0);
 						BackgroundTransparency = 1.0;								
@@ -891,7 +657,7 @@ function Chat:CreateGui()
 						BackgroundTransparency = 1.0;
 						ClipsDescendants = true;
 						ZIndex = 0.0;			
-						Visible = false;
+
 					};					
 				};						
 	
@@ -1042,7 +808,7 @@ function Chat:CreateSafeChatGui()
 								Size = UDim2.new(0, 44, 0, 31);
 								Position = UDim2.new(0, 1, 0.35, 0);
 								BackgroundTransparency = 1.0;
-								Image = 'http://morblox.us/asset/?id=97080365';
+								Image = 'http://www.roblox.com/asset/?id=97080365';
 							};
 						}
 
@@ -1115,48 +881,9 @@ function Chat:FindMessageInSafeChat(message, list)
 	return foundMessage
 end
 
--- Just a wrapper around our PlayerChatted event 
-function Chat:PlayerChatted(...)
-	local args = {...}
-	local argCount = select('#', ...)
-	local player
-	local message 
-	-- This doesn't look very good, but what else to do?
-	if args[2] then 
-		player = args[2]
-	end
-	if args[3] then 
-		message = args[3]
-	end 
-	if PlayersService.ClassicChat then 				
-		if Player.ChatMode == Enum.ChatMode.TextAndMenu then 
-			Chat:UpdateChat(player, message) 
-		elseif Player.ChatMode == Enum.ChatMode.Menu and string.sub(message, 3) == '/sc' then 			
-			Chat:UpdateChat(player, message)
-		else 
-			if Chat:FindMessageInSafeChat(message, self.SafeChat_List) then 
-				Chat:UpdateChat(player, message)
-			end 
-		end 
-	end 
-end
 
--- After 5 minutes of existence, the labels become invisible 
--- Runs only every 5 seconds and has to loop through 50 values
--- Shouldn't be too expensive 
-function Chat:CullThread()
-	while true do 
-		if #self.MessageQueue > 0 then 
-			for _, field in pairs(self.MessageQueue) do 				
-				if tick() - field['SpawnTime'] > self.Configuration.LifeTime and field['Player'] and field['Message'] then 
-					field['Player'].Visible = false 
-					field['Message'].Visible = false 
-				end 
-			end 
-		end 
-	wait(5.0)
-	end
-end
+
+
 
 -- RobloxLock everything so users can't delete them(?) 
 function Chat:LockAllFields(gui)
