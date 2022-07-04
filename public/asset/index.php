@@ -43,9 +43,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/asset/" . $id)){
 		sign($file);
 	}else if($id == 14){
         sign($file);
-	}else if($id == 1000){
-		sign($file);
-	}else if($id == 38037265){
+	}else if($id == 15){
 		sign($file);
     }else{
         echo $file;
