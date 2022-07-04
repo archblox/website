@@ -1,71 +1,23 @@
 %2%
--- this script is responsible for keeping the gui proportions under control
+-- Library Registration Script
+-- This script is used to register RbxLua libraries on game servers, so game scripts have
+-- access to all of the libraries (otherwise only local scripts do)
 
-local screen = script.Parent
-
-local BottomLeftControl
-local BottomRightControl
-local TopLeftControl
-local BuildTools
-
-local controlFrame = script.Parent:FindFirstChild("ControlFrame")
-local loadoutPadding = 43
-local currentLoadout
-
-BottomLeftControl = controlFrame:FindFirstChild("BottomLeftControl")
-BottomRightControl = controlFrame:FindFirstChild("BottomRightControl")
-TopLeftControl = controlFrame:FindFirstChild("TopLeftControl")
-currentLoadout = script.Parent:FindFirstChild("CurrentLoadout")
-BuildTools = controlFrame:FindFirstChild("BuildTools")
-
-function makeYRelative()
-
-	BottomLeftControl.SizeConstraint = 2
-	BottomRightControl.SizeConstraint = 2
-	if TopLeftControl then TopLeftControl.SizeConstraint = 2 end
-	if currentLoadout then currentLoadout.SizeConstraint = 2 end
-	if BuildTools then BuildTools.Frame.SizeConstraint = 2 end
-	
-	BottomLeftControl.Position = UDim2.new(0,0,1,-BottomLeftControl.AbsoluteSize.Y)
-	BottomRightControl.Position = UDim2.new(1,-BottomRightControl.AbsoluteSize.X,1,-BottomRightControl.AbsoluteSize.Y)
-	
+local sc = game:GetService("ScriptContext")
+local tries = 0
+ 
+while not sc and tries < 3 do
+	tries = tries + 1
+	sc = game:GetService("ScriptContext")
+	wait(0.2)
 end
-
-
-
-function makeXRelative()
-
-	BottomLeftControl.SizeConstraint = 1
-	BottomRightControl.SizeConstraint = 1
-	if TopLeftControl then TopLeftControl.SizeConstraint = 1 end
-	if currentLoadout then currentLoadout.SizeConstraint = 1 end
-	if BuildTools then BuildTools.Frame.SizeConstraint = 1 end
-
-	BottomLeftControl.Position = UDim2.new(0,0,1,-BottomLeftControl.AbsoluteSize.Y)
-	BottomRightControl.Position = UDim2.new(1,-BottomRightControl.AbsoluteSize.X,1,-BottomRightControl.AbsoluteSize.Y)
-
+ 
+if sc then
+	sc:RegisterLibrary("Libraries/RbxGui", "17")
+	sc:RegisterLibrary("Libraries/RbxGear", "18")
+	sc:RegisterLibrary("Libraries/RbxUtility", "19")
+	sc:RegisterLibrary("Libraries/RbxStamper", "20")
+	sc:LibraryRegistrationComplete()
+else
+	print("failed to find script context, libraries did not load")
 end
-
-local function resize()
-	if screen.AbsoluteSize.x > screen.AbsoluteSize.y then
-		makeYRelative()
-	else
-		makeXRelative()
-	end
-	if currentLoadout then
-		currentLoadout.Position =
-			UDim2.new(0,screen.AbsoluteSize.X/2 -currentLoadout.AbsoluteSize.X/2,currentLoadout.Position.Y.Scale,-currentLoadout.AbsoluteSize.Y - loadoutPadding)
-	end
-end
-screen.Changed:connect(function(property)
-
-	if property == "AbsoluteSize" then
-		wait()
-		resize()
-	end
-
-end)
-
-wait()
-resize()
-
