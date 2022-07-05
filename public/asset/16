@@ -1,147 +1,247 @@
 %16%
--- Responsible for giving out tools in personal servers
+-- A couple of necessary functions
+print("BackpackWardrobe.lua loaded - edit 14")
 
--- first, lets see if buildTools have already been created
--- create the object in lighting (TODO: move to some sort of "container" object when we have one)
-local toolsArray = game.Lighting:FindFirstChild("BuildToolsModel")
-local ownerArray = game.Lighting:FindFirstChild("OwnerToolsModel")
-local hasBuildTools = false
-
-function getIds(idTable, assetTable)
-  for i = 1, #idTable do
-		local model = game:GetService("InsertService"):LoadAsset(idTable[i])
-		if model then
-			local children = model:GetChildren()
-			for i = 1, #children do
-				if children[i]:IsA("Tool") then
-					table.insert(assetTable,children[i])
-				end
-			end
-		end
+local function waitForChild(instance, name)
+	assert(instance)
+	assert(name)
+	while not instance:FindFirstChild(name) do
+		instance.ChildAdded:wait()
+	end
+	return instance:FindFirstChild(name)
+end
+local function waitForProperty(instance, property)
+	assert(instance)
+	assert(property)
+	while not instance[property] do
+		instance.Changed:wait()
 	end
 end
 
-function storeInLighting(modelName, assetTable)
-	local model = Instance.new("Model")
-	model.Archivable = false
-	model.Name = modelName
-	
-	for i = 1, #assetTable do
-		assetTable[i].Parent = model
-	end
-	
-	if not game.Lighting:FindFirstChild(modelName) then -- no one beat us to it, we get to insert
-		model.Parent = game.Lighting
-	end
-end
+waitForChild(game,"Players")
+waitForProperty(game.Players,"LocalPlayer")
+local player = game.Players.LocalPlayer
 
-if not toolsArray then -- no one has made build tools yet, we get to!
-	local buildToolIds = {}
-	local ownerToolIds = {}
+local RbxGui, msg = LoadLibrary("RbxGui")
+if not RbxGui then print("could not find RbxGui!") return end
 
-	table.insert(buildToolIds,73089166) -- PartSelectionTool
-	table.insert(buildToolIds,73089190) -- DeleteTool
-	table.insert(buildToolIds,73089204) -- CloneTool
-	table.insert(buildToolIds,73089214) -- RotateTool	
-	table.insert(buildToolIds,73089239) -- ConfigTool
-	table.insert(buildToolIds,73089259) -- WiringTool
-	table.insert(buildToolIds,58921588) -- ClassicTool
-	
-	table.insert(ownerToolIds, 65347268)
+--- Begin Locals
+local StaticTabName = "wardrobe"
 
-	-- next, create array of our tools
-	local buildTools = {}
-	local ownerTools = {}
-	
-	getIds(buildToolIds, buildTools)
-	getIds(ownerToolIds, ownerTools)
-	
-	storeInLighting("BuildToolsModel",buildTools)
-	storeInLighting("OwnerToolsModel",ownerTools)
-	
-	toolsArray = game.Lighting:FindFirstChild("BuildToolsModel")
-	ownerArray = game.Lighting:FindFirstChild("OwnerToolsModel")
-end
+local backpack = script.Parent
+local screen = script.Parent.Parent
 
-local localBuildTools = {}
-
-function giveBuildTools()
-	if not hasBuildTools then
-		hasBuildTools = true
-		local theTools = toolsArray:GetChildren()
-		for i = 1, #theTools do
-			local toolClone = theTools[i]:clone()
-			if toolClone then
-				toolClone.Parent = game.Players.LocalPlayer.Backpack
-				table.insert(localBuildTools,toolClone)
-			end
-		end
-	end
-end
-
-function giveOwnerTools()
-	local theOwnerTools = ownerArray:GetChildren()
-	for i = 1, #theOwnerTools do
-		local ownerToolClone = theOwnerTools[i]:clone()
-		if ownerToolClone then
-			ownerToolClone.Parent = game.Players.LocalPlayer.Backpack
-			table.insert(localBuildTools,ownerToolClone)
-		end
-	end
-end
-
-function removeBuildTools()
-	if hasBuildTools then
-		hasBuildTools = false
-		for i = 1, #localBuildTools do
-			localBuildTools[i].Parent = nil
-		end
-		localBuildTools = {}
-	end
-end
-
-if game.Players.LocalPlayer.HasBuildTools then
-	giveBuildTools()
-end
-if game.Players.LocalPlayer.PersonalServerRank >= 255 then
-	giveOwnerTools()
-end
+local backpackItems = {}
+local buttons = {}
 
 local debounce = false
-game.Players.LocalPlayer.Changed:connect(function(prop)
-	if prop == "HasBuildTools" then
-		while debounce do
-			wait(0.5)
-		end
-		
-		debounce = true
-		
-		if game.Players.LocalPlayer.HasBuildTools then
-			giveBuildTools()
-		else
-			removeBuildTools()
-		end
-		
-		if game.Players.LocalPlayer.PersonalServerRank >= 255 then
-			giveOwnerTools()
-		end
-		
-		debounce = false
-	elseif prop == "PersonalServerRank" then
-		if game.Players.LocalPlayer.PersonalServerRank >= 255 then
-			giveOwnerTools()
-		elseif game.Players.LocalPlayer.PersonalServerRank <= 0 then
-			game.Players.LocalPlayer:Remove() -- you're banned, goodbye!
+local browsingMenu = false
+
+local mouseEnterCons = {}
+local mouseClickCons = {}
+
+local characterChildAddedCon = nil
+local characterChildRemovedCon = nil
+local backpackAddCon = nil
+
+local Camera = game.Workspace.CurrentCamera
+
+local playerBackpack = waitForChild(player,"Backpack")
+
+waitForChild(backpack,"Tabs")
+
+waitForChild(backpack,"Wardrobe")
+
+local currentLoadout = waitForChild(backpack.Parent,"CurrentLoadout")
+
+local walkSpeed = 16
+local screenSize = game:GetService("CoreGui"):FindFirstChild("RobloxGui").AbsoluteSize
+local rotateCharacter = false
+local rotateCharacterButton = waitForChild(backpack.Wardrobe,"PreviewButton")
+
+local swapSlot = waitForChild(script.Parent,"SwapSlot")
+
+local backpackManager = waitForChild(script.Parent,"CoreScripts/BackpackScripts/BackpackManager")
+local backpackOpenEvent = waitForChild(backpackManager,"BackpackOpenEvent")
+local backpackCloseEvent = waitForChild(backpackManager,"BackpackCloseEvent")
+local tabClickedEvent = waitForChild(backpackManager,"TabClickedEvent")
+local resizeEvent = waitForChild(backpackManager,"ResizeEvent")
+local searchRequestedEvent = waitForChild(backpackManager,"SearchRequestedEvent")
+local tellBackpackReadyFunc = waitForChild(backpackManager,"BackpackReady")
+
+-- creating scroll bar early as to make sure items get placed correctly
+
+
+-- Begin Functions
+function lerpTest(from, to)
+	local ax, ay, az, a11, a12, a13, a21, a22, a23, a31, a32, a33 = from:components()
+	local bx, by, bz, b11, b12, b13, b21, b22, b23, b31, b32, b33 = to:components()
+
+	local diffx = bx - ax;
+	local diffy = by - ay;
+	local diffz = bz - az;
+
+	local diff11 = b11 - a11;
+	local diff12 = b12 - a12;
+	local diff13 = b13 - a13;
+
+	local diff21 = b21 - a21;
+	local diff22 = b22 - a22;
+	local diff23 = b23 - a23;
+
+	local diff31 = b31 - a31;
+	local diff32 = b32 - a32;
+	local diff33 = b33 - a33;
+
+	while wait(0.1) do
+		break
+	end
+end
+
+function removeFromMap(map,object)
+	for i = 1, #map do
+		if map[i] == object then
+			table.remove(map,i)
+			break
 		end
 	end
+end
+
+function robloxLock(instance)
+  instance.RobloxLocked = true
+  children = instance:GetChildren()
+  if children then
+	 for i, child in ipairs(children) do
+		robloxLock(child)
+	 end
+  end
+end
+
+function buttonClick(button)
+	if button:FindFirstChild("UnequipContextMenu") and not button.Active then
+		button.UnequipContextMenu.Visible = true
+		browsingMenu = true
+	end
+end
+
+function tabClickHandler(tabName)
+	if tabName == StaticTabName then
+		backpackOpenHandler(tabName)
+	else
+		backpackCloseHandler(tabName)
+	end
+end
+
+function backpackOpenHandler(currentTab)
+	if currentTab and currentTab ~= StaticTabName then 
+		backpack.Wardrobe.Visible = false
+		return
+	end
+	
+	backpack.Wardrobe.Visible = true
+	createView()
+	tellBackpackReadyFunc:Invoke()
+end
+
+function backpackCloseHandler(currentTab)
+	if currentTab and currentTab ~= StaticTabName then
+		backpack.Wardrobe.Visible = false
+		revertView()
+		return
+	end
+	
+	backpack.Wardrobe.Visible = false
+	revertView()
+	tellBackpackReadyFunc:Invoke()
+end
+
+function highlight(button)
+	button.TextColor3 = Color3.new(0,0,0)
+	button.BackgroundColor3 = Color3.new(0.8,0.8,0.8)
+end
+function clearHighlight(button)
+	button.TextColor3 = Color3.new(1,1,1)
+	button.BackgroundColor3 = Color3.new(0,0,0)
+end
+
+function trim(s)
+  return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+function splitByWhitespace(text)
+	if type(text) ~= "string" then return nil end
+	
+	local terms = {}
+	for token in string.gmatch(text, "[^%s]+") do
+	   if string.len(token) > 0 then
+			table.insert(terms,token)
+	   end
+	end
+	return terms
+end
+
+function createView()
+	-- stop player from moving and store initial speed (they can still jump though)
+	if player.Character.Humanoid.WalkSpeed ~= 0 then walkSpeed = player.Character.Humanoid.WalkSpeed end
+	player.Character.Humanoid.WalkSpeed = 0
+
+	-- initialize camera
+	Camera.CameraType = Enum.CameraType.Scriptable
+	focusCamera()
+end
+
+function revertView()
+	-- restore initial walk speed
+	player.Character.Humanoid.WalkSpeed = walkSpeed
+
+	-- restore player camera
+	Camera.CameraType = Enum.CameraType.Custom
+
+	-- if character spin is enabled then disable it
+	if rotateCharacter then toggleCharacterSpin() end
+end
+
+function focusCamera()
+	if not backpack.Wardrobe.Visible then return end
+	
+	local cameraAngle = CFrame.fromEulerAnglesXYZ(0, math.pi, 0) * CFrame.fromEulerAnglesXYZ(0, -0.1, 0)
+	local cameraPosition = CFrame.new(screenSize.X*0.00983455882, 0, screenSize.Y*-0.01527777777)
+
+	Camera.CoordinateFrame = game.Players.LocalPlayer.Character.Torso.CFrame * cameraPosition * cameraAngle
+end
+
+function toggleCharacterSpin()
+	rotateCharacter = not rotateCharacter
+
+	if rotateCharacter then
+		rotateCharacterButton.Text = "Pause"
+	else
+		rotateCharacterButton.Text = "Rotate"
+	end
+
+	while rotateCharacter do 
+		wait(0.05) 
+		player.Character.Torso.CFrame = player.Character.Torso.CFrame * CFrame.Angles(0,0.035,0) 
+	end
+end
+
+------------------------- Start Lifelong Connections -----------------------
+
+
+resizeEvent.Event:connect(function(absSize)
+	if debounce then return end
+	
+	debounce = true
+	wait()
+	screenSize = absSize
+	focusCamera()
+	debounce = false
 end)
 
-game.Players.LocalPlayer.CharacterAdded:connect(function()
-	hasBuildTools = false
-	if game.Players.LocalPlayer.HasBuildTools then
-		giveBuildTools()
-	end
-	if game.Players.LocalPlayer.PersonalServerRank >= 255 then
-		giveOwnerTools()
-	end
-end)
+
+------------------------- End Lifelong Connections -----------------------
+
+backpackOpenEvent.Event:connect(backpackOpenHandler)
+backpackCloseEvent.Event:connect(backpackCloseHandler)
+tabClickedEvent.Event:connect(tabClickHandler)
+rotateCharacterButton.MouseButton1Click:connect(toggleCharacterSpin)
