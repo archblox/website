@@ -21,10 +21,14 @@
 </head>
 
 <body>
-    @yield('popup_content')
+    @yield('alert')
     <div class="iphone-sidebar" style="color: #000000; background-color: #ffffff">
         <p><img src="https://archblox.com/img/MORBLOXlogo.png" width="50%"> Studio</p>
         <p>Logged in as: {{ Auth::user()->name }}</p>
+        <br>
+        <a style="color: blue;" href="#">My Games</a>
+        <br>
+        <a style="color: black;" href="#">My Assets</a>
     </div>
     <div class="iphone-content"
         style="padding-left: 5px; padding-right: 0px; overflow-x: hidden; position: fixed; height: 100%; color: #000000; background-color: #aaaaaa">
