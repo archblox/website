@@ -93,23 +93,3 @@ if game.CoreGui.Version >= 3 then
 	-- Backpack Script
 	scriptContext:AddCoreScript(13,screenGui.CurrentLoadout,"BackpackScript")
 end
-
-local IsPersonalServer = not not game.Workspace:FindFirstChild("PSVariable")
-if IsPersonalServer then	
-	game:GetService("ScriptContext"):AddCoreScript(16,game.Players.LocalPlayer,"BuildToolManager")
-end
-game.Workspace.ChildAdded:connect(function(nchild)
-	if nchild.Name=='PSVariable' and nchild:IsA('BoolValue') then
-		IsPersonalServer = true		
-		game:GetService("ScriptContext"):AddCoreScript(16,game.Players.LocalPlayer,"BuildToolManager")
-	end
-end)
-
-if touchEnabled then -- touch devices don't use same control frame
-	waitForChild(screenGui, 'ControlFrame')
-	waitForChild(screenGui.ControlFrame, 'BottomLeftControl')
-	screenGui.ControlFrame.BottomLeftControl.Visible = false
-
-	waitForChild(screenGui.ControlFrame, 'TopLeftControl')
-	screenGui.ControlFrame.TopLeftControl.Visible = false 
-end 
