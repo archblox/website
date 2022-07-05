@@ -1,4 +1,4 @@
-%14&
+%14%
 -- A couple of necessary functions
 local function waitForChild(instance, name)
 	assert(instance)
