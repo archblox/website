@@ -70,26 +70,28 @@ else
 end 
 
 if game.CoreGui.Version >= 3 then
-	-- Backpack Builder, creates most of the backpack gui
-	scriptContext:AddCoreScript(12,screenGui,"CoreScripts/BackpackScripts/BackpackBuilder")
-
+	waitForProperty(game,"PlaceId")
+	local inRightPlace = true
+	for i,v in ipairs(backpackTestPlaces) do
+		if v == game.PlaceId then
+			inRightPlace = true
+			break
+		end
+	end
+	
+	waitForChild(game,"Players")
+	waitForProperty(game.Players,"LocalPlayer")
+	if game.Players.LocalPlayer.userId == 7210880 or game.Players.LocalPlayer.userId == 0 then inRightPlace = true end
+	
+	if not inRightPlace then return end -- restricting availability of backpack
+	
+	-- Backpack Builder
+	scriptContext:AddCoreScript(12,screenGui,"BackpackBuilder")
 	waitForChild(screenGui,"CurrentLoadout")
-	waitForChild(screenGui,"Backpack")
-	local Backpack = screenGui.Backpack
-	
-	-- Manager handles all big backpack state changes, other scripts subscribe to this and do things accordingly
-	if game.CoreGui.Version >= 7 then
-		scriptContext:AddCoreScript(13,Backpack,"CoreScripts/BackpackScripts/BackpackManager")
-	end
-	
-	-- Backpack Gear (handles all backpack gear tab stuff)
-	game:GetService("ScriptContext"):AddCoreScript(14,Backpack,"CoreScripts/BackpackScripts/BackpackGear")
-	-- Loadout Script, used for gear hotkeys
-	scriptContext:AddCoreScript(15,screenGui.CurrentLoadout,"CoreScripts/BackpackScripts/LoadoutScript")
-	if game.CoreGui.Version >= 8 then
-		-- Wardrobe script handles all character dressing operations
-		scriptContext:AddCoreScript(-1,Backpack,"CoreScripts/BackpackScripts/BackpackWardrobe")
-	end
+	waitForChild(screenGui.CurrentLoadout,"TempSlot")
+	waitForChild(screenGui.CurrentLoadout.TempSlot,"SlotNumber")
+	-- Backpack Script
+	scriptContext:AddCoreScript(13,screenGui.CurrentLoadout,"BackpackScript")
 end
 
 local IsPersonalServer = not not game.Workspace:FindFirstChild("PSVariable")
