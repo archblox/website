@@ -61,4 +61,9 @@ class PageController extends Controller
     {
         return view('pages.friends');
     }
+
+    public function idelanding()
+    {
+        return view('pages.idelanding');
+    }
 }

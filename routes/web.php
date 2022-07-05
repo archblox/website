@@ -31,6 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
     Route::get('/my/friends', [App\Http\Controllers\PageController::class, 'friends'])->name('friends');
+    Route::get('/IDE/Landing', [App\Http\Controllers\PageController::class, 'idelanding'])->name('idelanding');
 });
 
 // Admin only
