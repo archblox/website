@@ -35,7 +35,7 @@
             <p>&#x2022; Do not upload NSFW/NSFL content to ARCHBLOX, or post links to that contents. (Termination)</p>
             <p>&#x2022; You must be over the age of 13 to play ARCHBLOX. (Termination)</p>
             <p>&#x2022; Don't mini-mod, or pretend to be a ARCHBLOX Developer or Administrator. (Warning, Ban for few days)</p>
-            <p>&#x2022; Do not scam other users for their MORBUX. (Ban for few days, Termination)</p>
+            <p>&#x2022; Do not scam other users for their ARKOTs. (Ban for few days, Termination)</p>
             <p>&#x2022; Do not harass other users. (Ban for few days, Termination)</p>
             <p>&#x2022; Do not make accounts for the purpose of breaking rules. (Termination)</p>
             <p>&#x2022; Exploiting is NOT allowed, unless you are testing it in your own game. (Termination)</p>
