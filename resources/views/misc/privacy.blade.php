@@ -37,7 +37,7 @@
             <h2>What is Personal Information and why do we collect it?</h2>
             <p>Personal Information is information that identifies an individual. The Personal Information we collect include your username, age and email address.
                 We also store your Places, Decals, T-Shirts, Shirts, Pants, Audios, Settings, Friends and MORBUX until you delete it yourself, or we moderate it (see our Terms of Service).
-                This Personal Information is obtained from our website archblox.com. We do not store your IP Address.
+                This Personal Information is obtained from our website archblox.com. <a style="color: blue;" href="https://media.discordapp.net/attachments/987687460974788669/991175756602409041/unknown.png?width=1440&height=345">We do not store your IP Address.</a>
                 We collect your Personal Information for the primary purpose of using the services. We may also use your Personal Information for secondary purposes closely related to the primary purpose, in circumstances where you would reasonably expect such use or disclosure.
                 When we collect Personal Information, we will, where appropriate and where possible, explain to you why we are collecting the information and how we plan to use it.</p>
             <h2>What happens when your account gets terminated?</h2>

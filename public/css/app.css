@@ -220,6 +220,13 @@
   }
 
   html {
+    animation-name: animatedbackground;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    background: url('../img/animated.png');
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
     margin: 0px;
     font-family: "Helvetica";
     src: url('Helvetica.ttf') format('truetype'), ;
@@ -230,13 +237,6 @@
   }
 
   body {
-    animation-name: animatedbackground;
-    animation-duration: 50s;
-    animation-iteration-count: infinite;
-    background: url('../img/animated.png');
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-attachment: fixed;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
@@ -491,7 +491,7 @@
     width: 20%;
     height: 100%;
     margin-left: 0px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(132, 132, 132, 0.5);
     padding-bottom: 5px;
     padding-top: 5px;
   }
@@ -502,7 +502,7 @@
     width: 80%;
     height: 100%;
     left: 20%;
-    background-color: rgba(132, 132, 132, 0.5);
+    background-color: #ffffff;
     padding-bottom: 5px;
     padding-top: 5px;
   }
