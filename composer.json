@@ -12,6 +12,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
+        "multicaret/laravel-acquaintances": "^3.5",
         "webpatser/laravel-uuid": "^4.0"
     },
     "require-dev": {

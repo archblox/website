@@ -3,7 +3,7 @@
     <title>Home - {{ env('APP_NAME') }}</title>
 @endsection
 @section('titlediscord')
-<meta content="Home - {{env('APP_NAME')}}" property="og:title" />
+    <meta content="Home - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
     <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
@@ -22,8 +22,8 @@
             <div id="FeedContainer">
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="60px"
-                                height="100%"></a>
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
+                                width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                         <a href="#" id="FeedContainerBox1Username">skeuomorphism hater</a>
@@ -33,8 +33,8 @@
                 </div>
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="60px"
-                                height="100%"></a>
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
+                                width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                         <a href="#" id="FeedContainerBox1Username">Thomas</a>
@@ -44,8 +44,8 @@
                 </div>
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="60px"
-                                height="100%"></a>
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
+                                width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                         <a href="#" id="FeedContainerBox1Username">skeuomorphism hater</a>
@@ -55,8 +55,8 @@
                 </div>
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="60px"
-                                height="100%"></a>
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
+                                width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                         <a href="#" id="FeedContainerBox1Username">Thomas</a>
@@ -67,8 +67,8 @@
                 </div>
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="60px"
-                                height="100%"></a>
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
+                                width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                         <a href="#" id="FeedContainerBox1Username">the night guard from five nights at freddy</a>
@@ -78,8 +78,8 @@
                 </div>
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="60px"
-                                height="100%"></a>
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
+                                width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                         <a href="#" id="FeedContainerBox1Username">Thomas</a>
@@ -90,11 +90,34 @@
             </div>
         </div>
         <div id="gamesframe">
-            <h2>Friends (0)</h2>
+            <div class="content_special" style="justify-content: center;">
+                <h2>Friends ({{ Auth::user()->getFriendsCount() }})</h2>
+                @if (Auth::user()->getFriendsCount() > 0)
+                    <a href="{{ route('friends') }}" style="margin-left: 5px"> <button class="bluebutton"
+                            style="margin-top: 5px">View
+                            All</button></a>
+                @endif
+            </div>
+            <br>
             <br>
             <div class="friendslist">
-                <p>You don't have any friends yet!</p>
+                @if (Auth::user()->getFriendsCount() > 0)
+                    <div id="profilefriendcontainer" class="content_special"
+                        style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
+                        @foreach ($friends as $friend)
+                            <div class="profilefriend">
+                                <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
+                                        src="{{ asset('img/reviewpending.png') }}" width="150px" height="110px"></a>
+                                <br>
+                                <a href="{{ route('profile', $friend->id) }}"
+                                    id="FeedContainerBox1Username">{{ $friend->name }}</a>
+                            </div>
+                        @endforeach
+                    </div>
             </div>
+        @else
+            <p>You don't have any friends yet!</p>
+        @endif
             <br>
             <h2>Recently Played</h2>
             <br>

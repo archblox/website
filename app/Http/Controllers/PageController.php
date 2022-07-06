@@ -28,6 +28,7 @@ class PageController extends Controller
     {
         $user = User::find($id);
         $badges = DB::table('badges')->get();
+        $friends = $user->getFriends($perPage = 3);
 
         if (!$user) {
             abort(404);
@@ -35,10 +36,28 @@ class PageController extends Controller
 
         $data = [
             'user' => $user,
-            'badges' => $badges
+            'badges' => $badges,
+            'friends' => $friends
         ];
 
         return view('pages.profile')->with('data', $data);
+    }
+
+    public function profile_friends($id)
+    {
+        $user = User::find($id);
+        $friends = $user->getFriends($perPage = 10);
+
+        if (!$user) {
+            abort(404);
+        }
+
+        $data = [
+            'user' => $user,
+            'friends' => $friends
+        ];
+
+        return view('pages.profile_friends')->with('data', $data);
     }
 
     public function users(Request $request)
@@ -55,10 +74,5 @@ class PageController extends Controller
     public function settings()
     {
         return view('misc.settings');
-    }
-
-    public function friends()
-    {
-        return view('pages.friends');
     }
 }

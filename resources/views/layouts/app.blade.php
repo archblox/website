@@ -57,7 +57,7 @@
     </div>
     <div class="smallnav">
         <div class="smallnavbarbuttoncontainer">
-            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends</a>
+            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() && count(Auth::user()->getFriendRequests())) <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span> @endif</a>
             <a class="smallnavbarbutton" href="#">Avatar</a>
             <a class="smallnavbarbutton" href="#">Transactions</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>

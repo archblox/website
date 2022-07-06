@@ -1,87 +1,107 @@
 @extends('layouts.app')
 @section('title')
-<title>{{ $data['user']->name }} - {{ env('APP_NAME') }}</title>
+    <title>{{ $data['user']->name }} - {{ env('APP_NAME') }}</title>
 @endsection
 @section('titlediscord')
-<meta content="{{ $data['user']->name }} - {{env('APP_NAME')}}" property="og:title" />
+    <meta content="{{ $data['user']->name }} - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
     <meta content="{{ $data['user']->blurb }} | ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 
 @section('content')
-<div id="profiletopcontainer">
-    <h1 id="usernameframe">{{ $data['user']->name }}</h1>
-    @if (Cache::has('is_online_' . $data['user']->id))
-    <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
-    @else
-    <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
-        {{ Carbon\Carbon::parse($data['user']->last_seen)->diffForHumans() }}</strong>
-    @endif
-    <br>
-    <a href="#"><button class="bluebutton">Add Friend</button></a>
-    <a href="#"><button class="greybutton">Message</button></a>
-</div>
-<div class="content_special">
-    <div id="profileleftcontainer">
-        <p id="status">"I'm new to ARCHBLOX!"</p>
-        <img alt="profile image" src="{{ asset('img/reviewpending.png') }}" width="75%">
-        <p id="bio">{{ $data['user']->blurb }}</p>
+    <div id="profiletopcontainer">
+        <h1 id="usernameframe">{{ $data['user']->name }}</h1>
+        @if (Cache::has('is_online_' . $data['user']->id))
+            <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
+        @else
+            <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
+                {{ Carbon\Carbon::parse($data['user']->last_seen)->diffForHumans() }}</strong>
+        @endif
         <br>
-        <div id="stats">
-            <h3>Joined: {{ $data['user']->created_at->format('d/m/Y') }}</h3>
-            <h3>Place Visits: 0</h3>
-        </div>
-        <br>
-        <h2>Role</h2>
-        <div style="white-space:nowrap">
-            @foreach ($data['badges'] as $badge)
-            @foreach ($data['user']->badges as $user_badge)
-            @if ($badge->id == $user_badge)
-            <div style="width:120px;display:inline-block">
-                <img src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
-                <h3>{{ $badge->title }}</h3>
-            </div>
+        @if (!Auth::guest() && Auth::id() != $data['user']->id)
+            @if (Auth::user()->hasSentFriendRequestTo($data['user']))
+                <button class="bluebutton" type="submit" disabled>Pending...</button>
+            @elseif (Auth::user()->hasFriendRequestFrom($data['user']))
+                <form action="{{ route('friend_handle', $data['user']->id) }}" method="POST">
+                    @csrf
+                    <button class="greenbutton" name="action" type="submit" value="accept">Accept</button>
+                    <button class="redbutton" name="action" type="submit" value="decline">Decline</button>
+                </form>
+            @elseif (Auth::user()->isFriendWith($data['user']))
+                <form action="{{ route('friend_remove', $data['user']->id) }}" method="POST"
+                    style="display:inline-block">
+                    @csrf
+                    <button class="redbutton" type="submit">Unfriend</button>
+                </form>
+            @else
+                <form action="{{ route('friend_add', $data['user']->id) }}" method="POST" style="display:inline-block">
+                    @csrf
+                    <button class="bluebutton" type="submit">Add Friend</button>
+                </form>
             @endif
-            @endforeach
-            @endforeach
-        </div>
-        <br>
-        <h2>Badges</h2>
-        <p>This user has not collected any badges yet!</p>
+            <a href="#"><button class="greybutton">Message</button></a>
+        @endif
     </div>
-    <div id="profilerightcontainer">
-        <div class="content_special" style="justify-content: center;">
-            <h2>Games </h2>
-            <a href="#" style="margin-left: 5px"> <button class="bluebutton" style="margin-top: 5px">View
-                    All</button></a>
-        </div>
-        <p>This user hasn't made any games yet!</p>
-        <br>
-        <div class="content_special" style="justify-content: center;">
-            <h2>Friends (1337)</h2>
-            <a href="{{ route('friends') }}" style="margin-left: 5px"> <button class="bluebutton"
-                    style="margin-top: 5px">View All</button></a>
-        </div>
-        <div id="profilefriendcontainer" class="content_special" style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
-            <div class="profilefriend">
-            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="90%" height="100%"></a>
+    <div class="content_special">
+        <div id="profileleftcontainer">
+            <p id="status">"I'm new to ARCHBLOX!"</p>
+            <img alt="profile image" src="{{ asset('img/reviewpending.png') }}" width="75%">
+            <p id="bio">{{ $data['user']->blurb }}</p>
             <br>
-            <a href="#" id="FeedContainerBox1Username">BallsGamer123</a>
+            <div id="stats">
+                <h3>Joined: {{ $data['user']->created_at->format('d/m/Y') }}</h3>
+                <h3>Place Visits: 0</h3>
             </div>
-            <div class="profilefriend">
-            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="90%" height="100%"></a>
             <br>
-            <a href="#" id="FeedContainerBox1Username">BallsGamer123</a>
+            <h2>Role</h2>
+            <div style="white-space:nowrap">
+                @foreach ($data['badges'] as $badge)
+                    @foreach ($data['user']->badges as $user_badge)
+                        @if ($badge->id == $user_badge)
+                            <div style="width:120px;display:inline-block">
+                                <img src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
+                                <h3>{{ $badge->title }}</h3>
+                            </div>
+                        @endif
+                    @endforeach
+                @endforeach
             </div>
-            <div class="profilefriend">
-            <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}" width="90%" height="100%"></a>
             <br>
-            <a href="#" id="FeedContainerBox1Username">BallsGamer123</a>
-            </div>  
+            <h2>Badges</h2>
+            <p>This user has not collected any badges yet!</p>
+        </div>
+        <div id="profilerightcontainer">
+            <div class="content_special" style="justify-content: center;">
+                <h2>Games </h2>
+                <a href="#" style="margin-left: 5px"> <button class="bluebutton" style="margin-top: 5px">View
+                        All</button></a>
+            </div>
+            <p>This user hasn't made any games yet!</p>
+            <br>
+            <div class="content_special" style="justify-content: center;">
+                <h2>Friends ({{ $data['user']->getFriendsCount() }})</h2>
+                @if ($data['user']->getFriendsCount() > 0)
+                    <a href="{{ route('profile_friends', $data['user']->id) }}" style="margin-left: 5px"> <button class="bluebutton"
+                            style="margin-top: 5px">View All</button></a>
+            </div>
+            <div id="profilefriendcontainer" class="content_special"
+                style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
+                @foreach ($data['friends'] as $friend)
+                    <div class="profilefriend">
+                        <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
+                                src="{{ asset('img/reviewpending.png') }}" width="150px" height="110px"></a>
+                        <br>
+                        <a href="{{ route('profile', $friend->id) }}"
+                            id="FeedContainerBox1Username">{{ $friend->name }}</a>
+                    </div>
+                @endforeach
+            </div>
+        @else
         </div>
         <p>This user hasn't made friends with anyone!</p>
+        @endif
     </div>
-</div>
-<br>
+    </div>
+    <br>
 @endsection
