@@ -75,4 +75,9 @@ class PageController extends Controller
     {
         return view('misc.settings');
     }
+    
+    public function download()
+    {
+        return view('pages.download');
+    }
 }

@@ -31,6 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
+    Route::post('/download', [App\Http\Controllers\PageController::class, 'download'])->name('download');
 
     // Friendship system routes
     Route::get('/my/friends', [App\Http\Controllers\FriendController::class, 'friends'])->name('friends');
