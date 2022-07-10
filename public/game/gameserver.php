@@ -7,8 +7,9 @@ $rbxl = addslashes($_GET["rbxl"]);
 
 ob_start();
 ?>
+-- Start Game Script Arguments
 
--- FIX MISSING TEXTURES by @THOMAS
+-- test
 local assetPropertyNames = {"Texture", "TextureId", "SoundId", "MeshId", "SkyboxUp", "SkyboxLf", "SkyboxBk", "SkyboxRt", "SkyboxFt", "SkyboxDn", "PantsTemplate", "ShirtTemplate", "Graphic", "Frame", "ImageLabel", "GuiMain", "Image", "LinkedSource", "AnimationId"}
 local variations = {"http://www%.roblox%.com/asset/%?id=", "http://www%.roblox%.com/asset%?id=", "http://%.roblox%.com/asset/%?id=", "http://%.roblox%.com/asset%?id="}
 
@@ -43,8 +44,6 @@ for i, v in pairs(GetDescendants(game)) do
 		end)
 	end
 end
-
--- Start Game Script Arguments
 
 ------------------- UTILITY FUNCTIONS --------------------------
 
