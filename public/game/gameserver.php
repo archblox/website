@@ -64,10 +64,11 @@ local badgeUrlFlagExists, badgeUrlFlagValue = pcall(function () return settings(
 local newBadgeUrlEnabled = badgeUrlFlagExists and badgeUrlFlagValue
 if url~=nil then
 	local url = "http://www.morblox.us"
+	local robloxurl = "http://www.roblox.com"
 
 	pcall(function() game:GetService("Players"):SetAbuseReportUrl(url .. "/AbuseReport/InGameChatHandler.ashx") end)
 	pcall(function() game:GetService("ScriptInformationProvider"):SetAssetUrl(url .. "/Asset/") end)
-	pcall(function() game:GetService("ContentProvider"):SetBaseUrl(url .. "/") end)
+	pcall(function() game:GetService("ContentProvider"):SetBaseUrl(robloxurl .. "/") end)
 	pcall(function() game:GetService("Players"):SetChatFilterUrl(url .. "/Game/ChatFilter.ashx") end)
 	
 	if gameCode then
