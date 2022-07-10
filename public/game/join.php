@@ -111,9 +111,9 @@ end
 -- called when the client connection closes
 function onDisconnection(peer, lostConnection)
 	if lostConnection then
-		showErrorWindow("You have lost connection", "LostConnection", "LostConnection")
+		showErrorWindow("You have lost connection  (ID: 200)", "LostConnection", "LostConnection")
 	else
-		showErrorWindow("This game has been shutdown", "Kick", "Kick")
+		showErrorWindow("This game has been shut down (ID: 210)", "Kick", "Kick")
 	end
 end
 
@@ -187,13 +187,13 @@ end
 
 -- called when the client connection fails
 function onConnectionFailed(_, error)
-	showErrorWindow("Failed to connect to the Game. (ID=" .. error .. ")", "ID" .. error, "Other")
+	showErrorWindow("Failed to connect. (ID=" .. error .. ")", "ID" .. error, "Other")
 end
 
 -- called when the client connection is rejected
 function onConnectionRejected()
 	connectionFailed:disconnect()
-	showErrorWindow("This game is not available. Please try another", "WrongVersion", "WrongVersion")
+	showErrorWindow("Your connection has been rejected. (ID: 300)", "WrongVersion", "WrongVersion")
 end
 
 pcall(function() settings().Diagnostics:LegacyScriptMode() end)
@@ -201,7 +201,7 @@ local success, err = pcall(function()
 
 	game:SetRemoteBuildMode(true)
 	
-	setMessage("Connecting to <?php echo $ip; ?>:<?php echo $port; ?>")
+	setMessage("Joining <?php echo $ip; ?>:<?php echo $port; ?>")
 	client.ConnectionAccepted:connect(onConnectionAccepted)
 	client.ConnectionRejected:connect(onConnectionRejected)
 	connectionFailed = client.ConnectionFailed:connect(onConnectionFailed)
@@ -220,7 +220,7 @@ local success, err = pcall(function()
 	
 	player.CharacterAppearance = "<?php echo $app; ?>"	
 	if not test then visit:SetUploadUrl("")end
-        player.Name = "<?php echo $username; ?>"
+    player.Name = "<?php echo $username; ?>"
 end)
 
 pcall(function() game:SetScreenshotInfo("") end)
