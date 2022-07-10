@@ -36,6 +36,11 @@ class ClientController extends Controller
         return view('client.join');
     }*/
 
+    public function chatfilter()
+    {
+        return view('client.chatfilter');
+    }
+
     public function toolbox()
     {
         return view('client.toolbox');

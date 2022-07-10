@@ -51,6 +51,7 @@ Route::group(['middleware' => 'AdminCheck'], function() {
 // Client routes
 Route::get('/game/studio.ashx', [App\Http\Controllers\ClientController::class, 'studio'])->name('studio');
 Route::get('/game/visit.ashx', [App\Http\Controllers\ClientController::class, 'visit'])->name('visit');
+Route::get('/game/ChatFilter.ashx', [App\Http\Controllers\ClientController::class, 'chatfilter'])->name('chatfilter');
 // Route::get('/game/join.php', [App\Http\Controllers\ClientController::class, 'join'])->name('join');
 Route::get('/ide/welcome', [App\Http\Controllers\ClientController::class, 'ide'])->name('ide');
 Route::get('/IDE/ClientToolbox.aspx', [App\Http\Controllers\ClientController::class, 'toolbox'])->name('toolbox');
