@@ -43,13 +43,13 @@ for i, v in pairs(GetDescendants(game)) do
 	end
 end
 
-print("DONE! Replaced " .. replacedProperties .. " properties")
 local Port = <?php echo $port ; ?>
 Server = game:GetService("NetworkServer")
 RunService = game:GetService("RunService")
-Server:start(Port, 20)
+Server:Start(Port, 20)
 game:GetService("Visit")
-RunService:run()
+RunService:Run()
+game.Players.PlayerAdded:connect(function(plr) 
 function onJoined(newPlayer)
 print ("An new connection was accepted.")
 newPlayer:LoadCharacter()
@@ -63,6 +63,7 @@ end
 end
 
 game.Players.PlayerAdded:connect(onJoined)
+
 <?php
 $data = ob_get_clean();
 $signature;
