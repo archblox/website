@@ -46,11 +46,13 @@ end
 local Port = <?php echo $port ; ?>
 Server = game:GetService("NetworkServer")
 RunService = game:GetService("RunService")
-Server:Start(Port, 20)
+Server:Start(Port)
 game:GetService("Visit")
 RunService:Run()
 game.Players.PlayerAdded:connect(function(plr) 
 function onJoined(newPlayer)
+Server:Start(Port)
+RunService:Run()
 print ("An new connection was accepted.")
 newPlayer:LoadCharacter()
 while true do 
