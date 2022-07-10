@@ -43,6 +43,7 @@ for i, v in pairs(GetDescendants(game)) do
 	end
 end
 
+print("DONE! Replaced " .. replacedProperties .. " properties")
 game:GetService("NetworkServer"):Start(<?php echo $port; ?>) 
 game:GetService("RunService"):Run() 
 game.Lighting.GlobalShadows = true
@@ -73,7 +74,6 @@ end
 end) 
 end) 
 game.Players.PlayerAdded:connect(onJoined) 
-
 <?php
 $data = ob_get_clean();
 $signature;
