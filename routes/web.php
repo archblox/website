@@ -47,3 +47,6 @@ Route::group(['middleware' => 'AdminCheck'], function() {
     Route::get('/iphone/users', [App\Http\Controllers\AdminController::class, 'users'])->name('admin_users');
     Route::get('/iphone/keys', [App\Http\Controllers\AdminController::class, 'keys'])->name('admin_keys');
 });
+
+// Client routes
+Route::get('/game/studio.ashx', [App\Http\Controllers\ClientController::class, 'studio'])->name('studio');
