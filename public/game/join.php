@@ -140,11 +140,11 @@ function requestCharacter(replicator)
 		end
 	end)
 	
-	setMessage("Requesting character")
+	setMessage("Requesting server...")
 	
 	local success, err = pcall(function()	
 		replicator:RequestCharacter()
-		setMessage("Waiting for character")
+		setMessage("Waiting for server...")
 		waitingForCharacter = true
 	end)
 end
