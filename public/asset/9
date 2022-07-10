@@ -261,7 +261,7 @@ local Chat = {
 															},
 												['Games'] = {'/sc 6_4', true,
 																['Action'] = true, ['Puzzle'] = true, ['Strategy'] = true, ['Racing'] = true, ['RPG'] = true, ['Obstacle Course'] = true, ['Tycoon'] = true, 
-																['Roblox'] = { ['BrickBattle'] = true, ['Community Building'] = true, ['Roblox Minigames'] = true, ['Contest Place'] = true},
+																['ARCHBLOX'] = { ['BrickBattle'] = true, ['Community Building'] = true, ['ARCHBLOX Minigames'] = true, ['Contest Place'] = true},
 																['Board games'] = { ['Chess'] = true, ['Checkers'] = true, ['Settlers of Catan'] = true, ['Tigris and Euphrates'] = true, ['El Grande'] = true, 
         																			['Stratego'] = true, ['Carcassonne'] = true}
 															},
@@ -349,7 +349,12 @@ local Chat = {
 												['GET OFF MAH LAWN'] = true,
 												['TEH EPIK DUCK IS COMING!!!'] = true,
 												['ROFL'] = true,
-												['1337'] = {true, ['i r teh pwnz0r!'] = true, ['w00t!'] = true, ['z0mg h4x!'] = true, ['ub3rR0xXorzage!'] = true}
+												['1337'] = {true, ['i r teh pwnz0r!'] = true, ['w00t!'] = true, ['z0mg h4x!'] = true, ['ub3rR0xXorzage!'] = true},
+												['It\'s Morbin Time!'] = true,
+												['What\'s 9+10.'] = true,
+												['19'] = true,
+												['21'] = true,
+												['You stupid.'] = true,
 											},
 								['Yes'] = {
 											['Absolutely!'] = true,
@@ -397,7 +402,10 @@ local Chat = {
 										    ['^_^'] = true,
 											['<(0_0<) <(0_0)> (>0_0)> KIRBY DANCE'] = true,
 											[')\';'] = true, 
-											[':3'] = true
+											[':3'] = true,
+											['3:'] = true,
+											['>:3'] = true,
+											['3:<'] = true
 										},
 								['Ratings'] = {
 												['Rate it!'] = true,

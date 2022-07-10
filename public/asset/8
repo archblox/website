@@ -71,8 +71,8 @@ game.Players.FriendRequestEvent:connect(function(fromPlayer,toPlayer,event)
 
 	if fromPlayer == localPlayer then
 		if event == Enum.FriendRequestEvent.Accept then
-			game:GetService("GuiService"):SendNotification("You are Friends",
-			"With " .. toPlayer.Name .. "!",
+			game:GetService("GuiService"):SendNotification("Frined Joined",
+			toPlayer.Name,
 			"http://www.morblox.us/thumbs/avatar.ashx?userId="..tostring(toPlayer.userId).."&x=48&y=48",
 			5,
 			function()
@@ -83,15 +83,15 @@ game.Players.FriendRequestEvent:connect(function(fromPlayer,toPlayer,event)
 		if event == Enum.FriendRequestEvent.Issue then
 			if friendRequestBlacklist[fromPlayer] then return end -- previously cancelled friend request, we don't want it!
 			game:GetService("GuiService"):SendNotification("Friend Request",
-				"From " .. fromPlayer.Name,
+				"from " .. fromPlayer.Name,
 				"http://www.morblox.us/thumbs/avatar.ashx?userId="..tostring(fromPlayer.userId).."&x=48&y=48",
 				8,
 				function()
 					makeFriend(fromPlayer,toPlayer)
 				end)
 		elseif event == Enum.FriendRequestEvent.Accept then
-			game:GetService("GuiService"):SendNotification("You are Friends",
-			"With " .. fromPlayer.Name .. "!",
+			game:GetService("GuiService"):SendNotification("Friend Request Accepted",
+			fromPlayer.Name .. " is now your friend!",
 			"http://www.morblox.us/thumbs/avatar.ashx?userId="..tostring(fromPlayer.userId).."&x=48&y=48",
 			5,
 			function()
