@@ -384,13 +384,14 @@ local Chat = {
 													['I can\'t decide'] = true,
 													['Hmm...'] = true
 												},
-								[':-)'] = {
-											[':-('] = true, 
+								['Emoticons'] = {
+											[':)'] = true, 
+											[':('] = true, 
 										    [':D'] = true, 
-										    [':-O'] = true, 
+										    [':O'] = true, 
 										    ['lol'] = true, 
-										    ['=D'] = true, 
-										    ['D='] = true, 
+										    [':X'] = true, 
+										    ['DX'] = true, 
 										    ['XD'] = true, 
 										    [';D'] = true, 
 										    [';)'] = true, 
@@ -401,7 +402,7 @@ local Chat = {
 										    ['T_T'] = true, 
 										    ['^_^'] = true,
 											['<(0_0<) <(0_0)> (>0_0)> KIRBY DANCE'] = true,
-											[')\';'] = true, 
+											[')\';'] = true,
 											[':3'] = true,
 											['3:'] = true,
 											['>:3'] = true,
