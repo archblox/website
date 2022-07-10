@@ -8,11 +8,17 @@ use Storage;
 
 class ClientController extends Controller
 {
+    /*
     public function studio()
     {
         $content = Storage::disk('client')->get('studio.ashx');
 
         return $content;
+    }*/
+
+    public function studio()
+    {
+        return view('client.studio');
     }
 
     public function ide()
@@ -25,10 +31,10 @@ class ClientController extends Controller
         return view('client.visit');
     }
 
-    // public function join()
-    // {
-        // return view('client.join');
-    // }
+    /* public function join()
+    {
+        return view('client.join');
+    }*/
 
     public function toolbox()
     {
