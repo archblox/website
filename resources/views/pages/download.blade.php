@@ -30,12 +30,12 @@
     <div class="content_signup">
         <h1>Downloads</h1>
         <strong>Requires Windows 7 or newer and Microsoft .net 3.1.</strong>
-        <p>ARCHBLOX will be installed to C:\ARCHBLOX\.</p>
+        <p>ARCHBLOX will be installed to %LOCALAPPDATA%\Archblx\Versions</p>
         <br>
-        <p>Client Downloader (Download this first)</p>
+        <p>Client Downloader v1.1 (Download this first)</p>
         <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> <a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a></p>
         <br>
-        <p>ARCHBLOX Launcher (Use after downloading and using the Client Downloader)</p>
+        <p>ARCHBLOX Launcher v1.2 (Use after downloading and using the Client Downloader)</p>
         <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> <a href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
         <br>
         <p>If you get a popup saying "Windows protected your PC", press "More info" and then press "Run anyway".</p>

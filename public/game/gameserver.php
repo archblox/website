@@ -3,9 +3,10 @@
 header("content-type:text/plain");
 
 $port = addslashes($_GET["port"]);
+$rbxl = addslashes($_GET["rbxl"]);
 ob_start();
 ?>
-game:Load('rbxasset://temp.rbxl')
+game:Load('rbxasset://<?php echo $rbxl; ?>')
 local assetPropertyNames = {"Texture", "TextureId", "SoundId", "MeshId", "SkyboxUp", "SkyboxLf", "SkyboxBk", "SkyboxRt", "SkyboxFt", "SkyboxDn", "PantsTemplate", "ShirtTemplate", "Graphic", "Frame", "ImageLabel", "GuiMain", "Image", "LinkedSource", "AnimationId"}
 local variations = {"http://www%.roblox%.com/asset/%?id=", "http://www%.roblox%.com/asset%?id=", "http://%.roblox%.com/asset/%?id=", "http://%.roblox%.com/asset%?id="}
 
