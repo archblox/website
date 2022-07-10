@@ -43,28 +43,36 @@ for i, v in pairs(GetDescendants(game)) do
 	end
 end
 
-local Port = <?php echo $port ; ?>
-Server = game:GetService("NetworkServer")
-RunService = game:GetService("RunService")
-Server:Start(Port)
-game:GetService("Visit")
-RunService:Run()
+game:GetService("NetworkServer"):Start(<?php echo $port; ?>) 
+game:GetService("RunService"):Run() 
+game.Lighting.GlobalShadows = true
 game.Players.PlayerAdded:connect(function(plr) 
-function onJoined(newPlayer)
-Server:Start(Port)
-RunService:Run()
-print ("An new connection was accepted.")
-newPlayer:LoadCharacter()
-while true do 
-wait(0.001) 
-if newPlayer.Character.Humanoid.Health == 0
-then print ("Player died") wait(5) newPlayer:LoadCharacter() print("Player respawned")
-elseif newPlayer.Character.Parent == nil then wait(5) newPlayer:LoadCharacter() -- to make sure nobody is deleted.
-end
-end
-end
-
-game.Players.PlayerAdded:connect(onJoined)
+Player.Changed:connect(function(Property) 
+if (Property=="Character") and (Player.Character~=nil) then 
+local Character=Player.Character 
+local Humanoid=Character:FindFirstChild("Humanoid") 
+if (Humanoid~=nil) then 
+Humanoid.Died:connect(function() delay(RespawnTime,function() Player:LoadCharacter() LoadCharacterNew(newWaitForChild(Player,"Appearance"),Player.Character,Player.Backpack) end) end) 
+end 
+end 
+end) 
+end) 
+game.Players.PlayerAdded:connect(onJoined) 
+game:GetService("NetworkServer"):Start(<?php echo $port; ?>) 
+game:GetService("RunService"):Run() 
+game.Lighting.GlobalShadows = true
+game.Players.PlayerAdded:connect(function(plr) 
+Player.Changed:connect(function(Property) 
+if (Property=="Character") and (Player.Character~=nil) then 
+local Character=Player.Character 
+local Humanoid=Character:FindFirstChild("Humanoid") 
+if (Humanoid~=nil) then 
+Humanoid.Died:connect(function() delay(RespawnTime,function() Player:LoadCharacter() LoadCharacterNew(newWaitForChild(Player,"Appearance"),Player.Character,Player.Backpack) end) end) 
+end 
+end 
+end) 
+end) 
+game.Players.PlayerAdded:connect(onJoined) 
 
 <?php
 $data = ob_get_clean();
