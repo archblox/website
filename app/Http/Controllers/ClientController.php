@@ -25,6 +25,11 @@ class ClientController extends Controller
         return view('client.visit');
     }
 
+    public function join()
+    {
+        return view('client.join');
+    }
+
     public function toolbox()
     {
         return view('client.toolbox');

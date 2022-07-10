@@ -1,15 +1,22 @@
-<?php
+@php
 
 header("content-type:text/plain");
 
-$username = addslashes($_GET["username"]);
+/*$username = addslashes($_GET["username"]);
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
 $id = addslashes($_GET["id"]);
-$app = addslashes($_GET["app"]);
+$app = addslashes($_GET["app"]);*/
+
+$username = addslashes(Auth::user()->name);
+$ip = addslashes($_GET["ip"]);
+$port = addslashes($_GET["port"]);
+$id = addslashes(Auth::id());
+$app = 'test';
+//$app = addslashes($_GET["app"]);
 
 ob_start();
-?>
+@endphp
 
 --This is a joinscript that works in 2013 and back, etc.
 
@@ -35,8 +42,6 @@ pcall(function() settings().Rendering.EnableFRM = true end)
 pcall(function() settings().Physics.Is30FpsThrottleEnabled = false end)
 pcall(function() settings()["Task Scheduler"].PriorityMethod = Enum.PriorityMethod.AccumulatedError end)
 pcall(function() settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.DefaultAuto end)
-
-pcall(function() game:GetService("ScriptContext"):AddCoreScript(1,game:GetService("ScriptContext"),"StarterScript") end)
 
 local threadSleepTime = ...
 
@@ -227,10 +232,10 @@ local success, err = pcall(function()
 end)
 
 pcall(function() game:SetScreenshotInfo("") end)
-<?php
+@php
 $data = ob_get_clean();
 $signature;
-$key = file_get_contents("../GameRBLX/PrivKey.pem");
+$key = file_get_contents(asset('GameRBLX/PrivKey.pem'));
 openssl_sign($data, $signature, $key, OPENSSL_ALGO_SHA1);
 echo "" . sprintf("%%%s%%%s", base64_encode($signature), $data);
-?>
+@endphp

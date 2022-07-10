@@ -3,10 +3,9 @@
 header("content-type:text/plain");
 
 $port = addslashes($_GET["port"]);
-$rbxl = addslashes($_GET["rbxl"]);
 ob_start();
 ?>
-game:Load('rbxasset://<?php echo $rbxl; ?>')
+game:Load('rbxasset://temp.rbxl')
 local assetPropertyNames = {"Texture", "TextureId", "SoundId", "MeshId", "SkyboxUp", "SkyboxLf", "SkyboxBk", "SkyboxRt", "SkyboxFt", "SkyboxDn", "PantsTemplate", "ShirtTemplate", "Graphic", "Frame", "ImageLabel", "GuiMain", "Image", "LinkedSource", "AnimationId"}
 local variations = {"http://www%.roblox%.com/asset/%?id=", "http://www%.roblox%.com/asset%?id=", "http://%.roblox%.com/asset/%?id=", "http://%.roblox%.com/asset%?id="}
 
@@ -43,36 +42,25 @@ for i, v in pairs(GetDescendants(game)) do
 end
 
 print("DONE! Replaced " .. replacedProperties .. " properties")
-game:GetService("NetworkServer"):Start(<?php echo $port; ?>) 
-game:GetService("RunService"):Run() 
-game.Lighting.GlobalShadows = true
-game.Players.PlayerAdded:connect(function(plr) 
-Player.Changed:connect(function(Property) 
-if (Property=="Character") and (Player.Character~=nil) then 
-local Character=Player.Character 
-local Humanoid=Character:FindFirstChild("Humanoid") 
-if (Humanoid~=nil) then 
-Humanoid.Died:connect(function() delay(RespawnTime,function() Player:LoadCharacter() LoadCharacterNew(newWaitForChild(Player,"Appearance"),Player.Character,Player.Backpack) end) end) 
-end 
-end 
-end) 
-end) 
-game.Players.PlayerAdded:connect(onJoined) 
-game:GetService("NetworkServer"):Start(<?php echo $port; ?>) 
-game:GetService("RunService"):Run() 
-game.Lighting.GlobalShadows = true
-game.Players.PlayerAdded:connect(function(plr) 
-Player.Changed:connect(function(Property) 
-if (Property=="Character") and (Player.Character~=nil) then 
-local Character=Player.Character 
-local Humanoid=Character:FindFirstChild("Humanoid") 
-if (Humanoid~=nil) then 
-Humanoid.Died:connect(function() delay(RespawnTime,function() Player:LoadCharacter() LoadCharacterNew(newWaitForChild(Player,"Appearance"),Player.Character,Player.Backpack) end) end) 
-end 
-end 
-end) 
-end) 
-game.Players.PlayerAdded:connect(onJoined) 
+local Port = <?php echo $port ; ?>
+Server = game:GetService("NetworkServer")
+RunService = game:GetService("RunService")
+Server:start(Port, 20)
+game:GetService("Visit")
+RunService:run()
+function onJoined(newPlayer)
+print ("An new connection was accepted.")
+newPlayer:LoadCharacter()
+while true do 
+wait(0.001) 
+if newPlayer.Character.Humanoid.Health == 0
+then print ("Player died") wait(5) newPlayer:LoadCharacter() print("Player respawned")
+elseif newPlayer.Character.Parent == nil then wait(5) newPlayer:LoadCharacter() -- to make sure nobody is deleted.
+end
+end
+end
+
+game.Players.PlayerAdded:connect(onJoined)
 <?php
 $data = ob_get_clean();
 $signature;
