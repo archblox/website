@@ -174,7 +174,7 @@ Game:GetService("RunService"):Run()
 <?php
 $data = ob_get_clean();
 $signature;
-$key = file_get_contents("./PrivateKey.pem");
+$key = file_get_contents("../GameRBLX/PrivKey.pem");
 openssl_sign($data, $signature, $key, OPENSSL_ALGO_SHA1);
 echo "" . sprintf("%%%s%%%s", base64_encode($signature), $data);
 ?>
