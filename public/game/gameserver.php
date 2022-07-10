@@ -68,7 +68,7 @@ if url~=nil then
 
 	pcall(function() game:GetService("Players"):SetAbuseReportUrl(url .. "/AbuseReport/InGameChatHandler.ashx") end)
 	pcall(function() game:GetService("ScriptInformationProvider"):SetAssetUrl(url .. "/Asset/") end)
-	pcall(function() game:GetService("ContentProvider"):SetBaseUrl(url .. "/") end)
+	pcall(function() game:GetService("ContentProvider"):SetBaseUrl(robloxurl .. "/") end)
 	pcall(function() game:GetService("Players"):SetChatFilterUrl(url .. "/Game/ChatFilter.ashx") end)
 	
 	if gameCode then
@@ -100,8 +100,8 @@ if url~=nil then
 	game:GetService("InsertService"):SetBaseSetsUrl(url .. "/Game/Tools/InsertAsset.ashx?nsets=10&type=base")
 	game:GetService("InsertService"):SetUserSetsUrl(url .. "/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d")
 	game:GetService("InsertService"):SetCollectionUrl(url .. "/Game/Tools/InsertAsset.ashx?sid=%d")
-	game:GetService("InsertService"):SetAssetUrl(robloxurl .. "/Asset/?id=%d")
-	game:GetService("InsertService"):SetAssetVersionUrl(robloxurl .. "/Asset/?assetversionid=%d")
+	game:GetService("InsertService"):SetAssetUrl(url .. "/Asset/?id=%d")
+	game:GetService("InsertService"):SetAssetVersionUrl(url .. "/Asset/?assetversionid=%d")
 	
 	pcall(function() loadfile(url .. "/Game/LoadPlaceInfo.ashx?PlaceId=" .. placeId)() end)
 	
