@@ -33,7 +33,7 @@ for i, v in pairs(GetDescendants(game)) do
 			if v[property] and not v:FindFirstChild(property) then --Check for property, make sure we're not getting a child instead of a property
 				assetText = string.lower(v[property])
 				for _, variation in pairs(variations) do
-					v[property], matches = string.gsub(assetText, variation, "http://www%.morblox%.us/asset/%?id=")
+					v[property], matches = string.gsub(assetText, variation, "http://www%.roblox%.com/asset/%?id=")
 					if matches > 0 then
 						replacedProperties = replacedProperties + 1
 						print("Replaced " .. property .. " asset link for " .. v.Name)
