@@ -7,6 +7,43 @@ $rbxl = addslashes($_GET["rbxl"]);
 
 ob_start();
 ?>
+
+-- FIX MISSING TEXTURES by @THOMAS
+local assetPropertyNames = {"Texture", "TextureId", "SoundId", "MeshId", "SkyboxUp", "SkyboxLf", "SkyboxBk", "SkyboxRt", "SkyboxFt", "SkyboxDn", "PantsTemplate", "ShirtTemplate", "Graphic", "Frame", "ImageLabel", "GuiMain", "Image", "LinkedSource", "AnimationId"}
+local variations = {"http://www%.roblox%.com/asset/%?id=", "http://www%.roblox%.com/asset%?id=", "http://%.roblox%.com/asset/%?id=", "http://%.roblox%.com/asset%?id="}
+
+function GetDescendants(o)
+    local allObjects = {}
+    function FindChildren(Object)
+       for _,v in pairs(Object:GetChildren()) do
+            table.insert(allObjects,v)
+            FindChildren(v)
+        end
+    end
+    FindChildren(o)
+    return allObjects
+end
+
+local replacedProperties = 0--Amount of properties changed
+
+for i, v in pairs(GetDescendants(game)) do
+	for _, property in pairs(assetPropertyNames) do
+		pcall(function()
+			if v[property] and not v:FindFirstChild(property) then --Check for property, make sure we're not getting a child instead of a property
+				assetText = string.lower(v[property])
+				for _, variation in pairs(variations) do
+					v[property], matches = string.gsub(assetText, variation, "http://www%.morblox%.us/asset/%?id=")
+					if matches > 0 then
+						replacedProperties = replacedProperties + 1
+						print("Replaced " .. property .. " asset link for " .. v.Name)
+						break
+					end
+				end
+			end
+		end)
+	end
+end
+
 -- Start Game Script Arguments
 
 ------------------- UTILITY FUNCTIONS --------------------------
@@ -64,11 +101,10 @@ local badgeUrlFlagExists, badgeUrlFlagValue = pcall(function () return settings(
 local newBadgeUrlEnabled = badgeUrlFlagExists and badgeUrlFlagValue
 if url~=nil then
 	local url = "http://www.morblox.us"
-	local robloxurl = "http://www.roblox.com"
 
 	pcall(function() game:GetService("Players"):SetAbuseReportUrl(url .. "/AbuseReport/InGameChatHandler.ashx") end)
 	pcall(function() game:GetService("ScriptInformationProvider"):SetAssetUrl(url .. "/Asset/") end)
-	pcall(function() game:GetService("ContentProvider"):SetBaseUrl(robloxurl .. "/") end)
+	pcall(function() game:GetService("ContentProvider"):SetBaseUrl(url .. "/") end)
 	pcall(function() game:GetService("Players"):SetChatFilterUrl(url .. "/Game/ChatFilter.ashx") end)
 	
 	if gameCode then
