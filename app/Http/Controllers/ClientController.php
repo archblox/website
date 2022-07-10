@@ -14,4 +14,19 @@ class ClientController extends Controller
 
         return $content;
     }
+
+    public function ide()
+    {
+        return view('pages.idelanding');
+    }
+
+    public function visit()
+    {
+        return view('client.visit');
+    }
+
+    public function toolbox()
+    {
+        return view('client.toolbox');
+    }
 }
