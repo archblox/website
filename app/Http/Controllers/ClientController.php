@@ -23,7 +23,7 @@ class ClientController extends Controller
 
     public function ide()
     {
-        return view('pages.idelanding');
+        return view('client.idelanding');
     }
 
     public function visit()
