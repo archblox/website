@@ -53,11 +53,15 @@
         <div class="content_special" style="align-content: flex-end; align-items: flex-start; width=100%;">
             <div class="content_special" style="flex-wrap: wrap; flex-direction: column; width: 50%;">
                 <h3>Bio</h3>
-                <textarea style="resize: none; width: 100%; height: 75px;" name="bio">@if(!old('bio')){{ Auth::user()->blurb }}@else{{old('bio')}}@endif</textarea>
+                <textarea style="resize: none; width: 100%; height: 75px;" name="bio">
+@if (!old('bio'))
+{{ Auth::user()->blurb }}@else{{ old('bio') }}
+@endif
+</textarea>
                 @if ($errors->any())
                     <span class="warningtext">{{ $errors->first() }}</span>
                 @endif
-                @if(session()->has('success'))
+                @if (session()->has('success'))
                     <span style="color:green">{{ session()->get('success') }}</span>
                 @endif
                 <button class="bluebutton" type="submit">Save</button>
@@ -66,12 +70,12 @@
     </div>
     <div class="content_special"
         style="flex-wrap: wrap; flex-direction: row-reverse; width: 50%; text-align: end; align-content: flex-end;">
-        <p style="width: 100%;">Username: {{ Auth::user()->name }} <button class="bluebutton">Edit</button></p>
-        <p style="width: 100%;">E-Mail: {{ Auth::user()->email }} <button class="bluebutton">Edit</button></p>
-        <p style="width: 100%;">Date of Birth: {{ Auth::user()->dob }} <button class="bluebutton">Edit</button></p>
-        <p style="width: 100%;">Password: ******** <button class="bluebutton">Edit</button></p>
-        <p style="width: 100%;">Date Display Preference: D/M/YY <button class="bluebutton">Edit</button></p>
-        <p style="width: 100%;">Time Display Preference: 12 Hour <button class="bluebutton">Edit</button></p>
+        <p style="width: 100%;">Username: {{ Auth::user()->name }} <button class="bluebutton" disabled>Edit</button></p>
+        <p style="width: 100%;">E-Mail: {{ Auth::user()->email }} <button class="bluebutton" disabled>Edit</button></p>
+        <p style="width: 100%;">Date of Birth: {{ Auth::user()->dob }} <button class="bluebutton" disabled>Edit</button></p>
+        <p style="width: 100%;">Password: ******** <button class="bluebutton" disabled>Edit</button></p>
+        <p style="width: 100%;">Date Display Preference: D/M/YY <button class="bluebutton" disabled>Edit</button></p>
+        <p style="width: 100%;">Time Display Preference: 12 Hour <button class="bluebutton" disabled>Edit</button></p>
     </div>
     </div>
     <div class="content_special" style="align-content: flex-end; align-items: flex-start;">
