@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class PageController extends Controller
@@ -63,19 +64,32 @@ class PageController extends Controller
     public function users(Request $request)
     {
         if ($request->has('q')) {
-            $users = DB::table('users')->where('name', 'LIKE', '%'.$request->q.'%')->paginate(10);
+            $users = DB::table('users')->where('name', 'LIKE', '%' . $request->q . '%')->paginate(10);
         } else {
             $users = User::paginate(10);
         }
 
         return view('pages.users')->with('users', $users);
     }
-    
+
     public function settings()
     {
         return view('misc.settings');
     }
-    
+
+    public function change_settings(Request $request)
+    {
+        $request->validate([
+            'bio' => 'required|min:3|max:2000'
+        ]);
+
+        $user = Auth::user();
+        $user->blurb = $request->bio;
+        $user->save();
+
+        return redirect()->back()->with('success', 'Your bio has been updated.');
+    }
+
     public function download()
     {
         return view('pages.download');

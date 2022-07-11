@@ -47,7 +47,9 @@
         <div id="profileleftcontainer">
             <p id="status">"I'm new to ARCHBLOX!"</p>
             <img alt="profile image" src="{{ asset('img/reviewpending.png') }}" width="75%">
-            <p id="bio">{{ $data['user']->blurb }}</p>
+            <div id="bio"
+                style="min-width:350px;max-width:350px;text-align:center;margin:0 auto;max-height:275px;overflow-y: auto;">
+                {!! nl2br(e($data['user']->blurb)) !!}</div>
             <br>
             <div id="stats">
                 <h3>Joined: {{ $data['user']->created_at->format('d/m/Y') }}</h3>
@@ -82,8 +84,8 @@
             <div class="content_special" style="justify-content: center;">
                 <h2>Friends ({{ $data['user']->getFriendsCount() }})</h2>
                 @if ($data['user']->getFriendsCount() > 0)
-                    <a href="{{ route('profile_friends', $data['user']->id) }}" style="margin-left: 5px"> <button class="bluebutton"
-                            style="margin-top: 5px">View All</button></a>
+                    <a href="{{ route('profile_friends', $data['user']->id) }}" style="margin-left: 5px"> <button
+                            class="bluebutton" style="margin-top: 5px">View All</button></a>
             </div>
             <div id="profilefriendcontainer" class="content_special"
                 style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
