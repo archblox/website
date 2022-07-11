@@ -56,3 +56,5 @@ Route::get('/game/ChatFilter.ashx', [App\Http\Controllers\ClientController::clas
 // Route::get('/game/join.php', [App\Http\Controllers\ClientController::class, 'join'])->name('join');
 Route::get('/ide/welcome', [App\Http\Controllers\ClientController::class, 'ide'])->name('ide');
 Route::get('/IDE/ClientToolbox.aspx', [App\Http\Controllers\ClientController::class, 'toolbox'])->name('toolbox');
+Route::get('/UploadMedia/PostImage.aspx', [App\Http\Controllers\ClientController::class, 'postimage'])->name('postimage');
+Route::get('/UploadMedia/UploadVideo.aspx', [App\Http\Controllers\ClientController::class, 'uploadvideo'])->name('uploadvideo');

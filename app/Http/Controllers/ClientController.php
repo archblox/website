@@ -45,4 +45,15 @@ class ClientController extends Controller
     {
         return view('client.toolbox');
     }
+
+    public function postimage()
+    {
+        return view('client.postimage');
+    }
+
+    public function uploadvideo()
+    {
+        return view('client.uploadvideo');
+    }
+
 }
