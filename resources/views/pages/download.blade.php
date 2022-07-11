@@ -41,8 +41,7 @@
         <p>If you get a popup saying "Windows protected your PC", press "More info" and then press "Run anyway".</p>
     </div>
     <div id="footer_signup">
-        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin
-            time!</p>
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>
     </div>
 </body>
