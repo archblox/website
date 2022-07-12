@@ -160,7 +160,9 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   color: rgb(255, 255, 255);
   text-size-adjust: auto;
   text-align: left;
-  background: linear-gradient(#2f2f2f 10%, #000000 100%);  ;
+  /*Fallback for IE 11*/
+  background: black;
+  background: linear-gradient(#2f2f2f 10%, #000000 100%);
 }
 .invisible, #invisible {
   display: none !important;
