@@ -9,6 +9,7 @@ $id = addslashes($_GET["id"]);
 $app = addslashes($_GET["app"]);*/
 
 if (Auth::check()) {
+	$randName = 0;
 	$username = addslashes(Auth::user()->name);
 	$id = addslashes(Auth::id());
 } else {
@@ -103,6 +104,11 @@ pcall( function()
 	  settings().Network.MtuOverride = 1400
 	end
 end)
+
+if <?php echo $username; ?> == "Guest " .. <?php echo $randName; ?> then
+	showErrorWindow("You are not authenticated. (ID: 400)", "Kick", "Kick")
+	error("oops! you have to put your cd in your computer.")
+end
 
 
 client = game:GetService("NetworkClient")
