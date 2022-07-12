@@ -698,7 +698,7 @@ if UserSettings and LoadLibrary then
 		end
 	end
 
-	local function getIconForPlayer(membershipType,name)
+	local function getMembershipTypeIcon(membershipType,name)
 		for i,v in ipairs(adminUserNames) do
 			if v == name then
 				return "rbxasset://textures/ui/TinyAdminIcon.png"
@@ -722,11 +722,11 @@ if UserSettings and LoadLibrary then
 		local fontHeight = 20
 
 		local friendIconImage = getFriendStatusIcon(friendStatus)
-		nameObject.UserIconLabel.FriendStatusLabel.Visible = (friendIconImage ~= nil)
+		nameObject.MembershipTypeLabel.FriendStatusLabel.Visible = (friendIconImage ~= nil)
 
 		if friendIconImage ~= nil then 
 			--Show friend icon
-			nameObject.UserIconLabel.FriendStatusLabel.Image = friendIconImage
+			nameObject.MembershipTypeLabel.FriendStatusLabel.Image = friendIconImage
 			nameObject.NameLabel.Position =UDim2.new(0,2*fontHeight,0,1)
 			nameObject.NameLabel.Size = UDim2.new(1,-2*fontHeight,1,-2)
 		else
@@ -739,7 +739,7 @@ if UserSettings and LoadLibrary then
 		local fontHeight = 20
 
 		nameObject.Size = UDim2.new(1,0,0,fontHeight)
-		nameObject.UserIconLabel.Image = getIconForPlayer(membershipStatus,nameObject.NameLabel.Text)
+		nameObject.MembershipTypeLabel.Image = getMembershipTypeIcon(membershipStatus,nameObject.NameLabel.Text)
 	end
 
 	
@@ -770,13 +770,13 @@ if UserSettings and LoadLibrary then
 		frame.BackgroundTransparency = 0.5
 		frame.BorderSizePixel = 0
 		
-		local UserIconStatusLabel = Instance.new("ImageLabel")
-		UserIconStatusLabel.Name = "UserIconLabel"
-		UserIconStatusLabel.BackgroundTransparency = 1
-		UserIconStatusLabel.Size = UDim2.new(1,0,1,0)
-		UserIconStatusLabel.Position = UDim2.new(0,0,0,0)
-		UserIconStatusLabel.SizeConstraint = Enum.SizeConstraint.RelativeYY
-		UserIconStatusLabel.Parent = frame
+		local membershipStatusLabel = Instance.new("ImageLabel")
+		membershipStatusLabel.Name = "MembershipTypeLabel"
+		membershipStatusLabel.BackgroundTransparency = 1
+		membershipStatusLabel.Size = UDim2.new(1,0,1,0)
+		membershipStatusLabel.Position = UDim2.new(0,0,0,0)
+		membershipStatusLabel.SizeConstraint = Enum.SizeConstraint.RelativeYY
+		membershipStatusLabel.Parent = frame
 
 		local friendStatusLabel = Instance.new("ImageLabel")
 		friendStatusLabel.Name = "FriendStatusLabel"
