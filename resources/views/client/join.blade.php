@@ -13,8 +13,8 @@ if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
 	$id = addslashes(Auth::id());
 } else {
-	$randName = mt_rand(1000, 9999);
-	$randId = mt_rand(100000, 999999);
+	$randName = mt_rand(1, 9999);
+	$randId = mt_rand(-1, -9999);
 	$username = "Guest " . $randName;
 	$id = $randId;
 }
