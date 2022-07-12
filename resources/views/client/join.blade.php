@@ -120,8 +120,8 @@ function setMessage(message)
 end
 
 if "<?php echo $username; ?>" == "Guest " .. tostring(<?php echo $randName; ?>) then
-	setMessage("You are not authenticated. (ID: 400)", "Kick", "Kick")
-	error("oops")
+	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
+	error("Not logged in")
 end
 
 function showErrorWindow(message, errorType, errorCategory)
