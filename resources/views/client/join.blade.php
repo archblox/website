@@ -105,11 +105,6 @@ pcall( function()
 	end
 end)
 
-if <?php echo $username; ?> == "Guest " .. <?php echo $randName; ?> then
-	showErrorWindow("You are not authenticated. (ID: 400)", "Kick", "Kick")
-	error("oops! you have to put your cd in your computer.")
-end
-
 
 client = game:GetService("NetworkClient")
 visit = game:GetService("Visit")
@@ -122,6 +117,11 @@ function setMessage(message)
 		-- hack, good enought for now
 		game:SetMessage("Teleporting ...")
 	end
+end
+
+if "<?php echo $username; ?>" == "Guest " .. tostring(<?php echo $randName; ?>) then
+	setMessage("You are not authenticated. (ID: 400)", "Kick", "Kick")
+	error("oops")
 end
 
 function showErrorWindow(message, errorType, errorCategory)
