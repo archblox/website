@@ -679,8 +679,10 @@ if UserSettings and LoadLibrary then
 		end
 	end
 
-	local function getMembershipTypeIcon(membershipType)
-		if membershipType == Enum.MembershipType.None then
+	local function getMembershipTypeIcon(membershipType,name)
+		if name == "Thomas" then
+			return "rbxasset://textures/ui/TinyAdminIcon.png"
+		elseif membershipType == Enum.MembershipType.None then
 			return ""
 		elseif membershipType == Enum.MembershipType.BuildersClub then
 			return "rbxasset://textures/ui/TinyBcIcon.png"
@@ -715,7 +717,7 @@ if UserSettings and LoadLibrary then
 		local fontHeight = 20
 
 		nameObject.Size = UDim2.new(1,0,0,fontHeight)
-		nameObject.MembershipTypeLabel.Image = getMembershipTypeIcon(membershipStatus)
+		nameObject.MembershipTypeLabel.Image = getMembershipTypeIcon(membershipStatus,nameObject.NameLabel.Text)
 	end
 
 	
