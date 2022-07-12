@@ -8,10 +8,17 @@ $port = addslashes($_GET["port"]);
 $id = addslashes($_GET["id"]);
 $app = addslashes($_GET["app"]);*/
 
-$username = addslashes(Auth::user()->name);
+if (Auth::check()) {
+	$username = addslashes(Auth::user()->name);
+	$id = addslashes(Auth::id());
+} else {
+	$randName = mt_rand(1000, 9999);
+	$randId = mt_rand(100000, 999999);
+	$username = "Guest " . $randName;
+	$id = $randId;
+}
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
-$id = addslashes(Auth::id());
 $app = 'test';
 //$app = addslashes($_GET["app"]);
 
@@ -118,9 +125,9 @@ end
 -- called when the client connection closes
 function onDisconnection(peer, lostConnection)
 	if lostConnection then
-		showErrorWindow("You have lost connection", "LostConnection", "LostConnection")
+		showErrorWindow("You have lost connection  (ID: 200)", "LostConnection", "LostConnection")
 	else
-		showErrorWindow("This game has been shutdown", "Kick", "Kick")
+		showErrorWindow("This game has been shut down (ID: 210)", "Kick", "Kick")
 	end
 end
 
@@ -147,11 +154,11 @@ function requestCharacter(replicator)
 		end
 	end)
 	
-	setMessage("Requesting character")
+	setMessage("Requesting server...")
 	
 	local success, err = pcall(function()	
 		replicator:RequestCharacter()
-		setMessage("Waiting for character")
+		setMessage("Waiting for server...")
 		waitingForCharacter = true
 	end)
 end
@@ -194,13 +201,13 @@ end
 
 -- called when the client connection fails
 function onConnectionFailed(_, error)
-	showErrorWindow("Failed to connect to the Game. (ID=" .. error .. ")", "ID" .. error, "Other")
+	showErrorWindow("Failed to connect. (ID=" .. error .. ")", "ID" .. error, "Other")
 end
 
 -- called when the client connection is rejected
 function onConnectionRejected()
 	connectionFailed:disconnect()
-	showErrorWindow("This game is not available. Please try another", "WrongVersion", "WrongVersion")
+	showErrorWindow("Your connection has been rejected. (ID: 300)", "WrongVersion", "WrongVersion")
 end
 
 pcall(function() settings().Diagnostics:LegacyScriptMode() end)
@@ -208,7 +215,7 @@ local success, err = pcall(function()
 
 	game:SetRemoteBuildMode(true)
 	
-	setMessage("Connecting to Server")
+	setMessage("Joining <?php echo $ip; ?>:<?php echo $port; ?>")
 	client.ConnectionAccepted:connect(onConnectionAccepted)
 	client.ConnectionRejected:connect(onConnectionRejected)
 	connectionFailed = client.ConnectionFailed:connect(onConnectionFailed)
@@ -227,8 +234,7 @@ local success, err = pcall(function()
 	
 	player.CharacterAppearance = "<?php echo $app; ?>"	
 	if not test then visit:SetUploadUrl("")end
-        player.Name = "<?php echo $username; ?>"
-		
+    player.Name = "<?php echo $username; ?>"
 end)
 
 pcall(function() game:SetScreenshotInfo("") end)
