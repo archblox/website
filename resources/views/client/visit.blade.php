@@ -1,8 +1,6 @@
 @php
 
 header("content-type:text/plain");
-
-$port = addslashes($_GET["port"]);
 ob_start();
 @endphp
 
