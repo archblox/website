@@ -104,7 +104,7 @@ function setMessage(message)
 	end
 end
 
-setMessage("Your ARCHBLOX launcher does not support the new join method. (ID: 410)", "Kick", "Kick")
+setMessage("Your ARCHBLOX launcher does not support the new join method. \n Please update it. (ID: 410)", "Kick", "Kick")
 error("Out of Date Launcher")
 
 function showErrorWindow(message, errorType, errorCategory)
