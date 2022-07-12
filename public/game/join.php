@@ -104,6 +104,9 @@ function setMessage(message)
 	end
 end
 
+setMessage("Your ARCHBLOX launcher is out of date. Please update it. (ID: 410)", "Kick", "Kick")
+error("Out of Date Launcher")
+
 function showErrorWindow(message, errorType, errorCategory)
 	game:SetMessage(message)
 end
