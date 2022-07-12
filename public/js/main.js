@@ -1,7 +1,6 @@
 window.addEventListener('resize', function() {
     var logo_full = document.getElementById("logo_full")
     var logo_small = document.getElementById("logo_small")
-    var smallbtn = document.getElementById("smallbtn1")
     var smallbtn0 = document.getElementById("smallbtn0")
     var smallbtn2 = document.getElementById("smallbtn2")
     var smallbtn3 = document.getElementById("smallbtn3")
@@ -17,11 +16,9 @@ window.addEventListener('resize', function() {
         logo_full.className = "";
     }
     if (viewport_width < 730) {
-        smallbtn.className = "invisible";
         smallbtn2.className = "invisible";
         smallbtn3.className = "invisible";
     } else {
-        smallbtn.className = "navbarbutton";
         smallbtn2.className = "navbarbutton";
         smallbtn3.className = "navbarbutton";
     }
@@ -47,7 +44,6 @@ window.addEventListener('resize', function() {
 window.onload = function() {
     var logo_full = document.getElementById("logo_full")
     var logo_small = document.getElementById("logo_small")
-    var smallbtn = document.getElementById("smallbtn1")
     var smallbtn0 = document.getElementById("smallbtn0")
     var smallbtn2 = document.getElementById("smallbtn2")
     var smallbtn3 = document.getElementById("smallbtn3")
@@ -63,11 +59,9 @@ window.onload = function() {
         logo_full.className = "";
     }
     if (viewport_width < 730) {
-        smallbtn.className = "invisible";
         smallbtn2.className = "invisible";
         smallbtn3.className = "invisible";
     } else {
-        smallbtn.className = "navbarbutton";
         smallbtn2.className = "navbarbutton";
         smallbtn3.className = "navbarbutton";
     }

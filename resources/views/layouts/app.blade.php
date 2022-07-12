@@ -30,7 +30,6 @@
             <a class="navbarbutton" id="smallbtn5" href="#">Games</a>
             <a class="navbarbutton" id="smallbtn4" href="#">Catalog</a>
             <a class="navbarbutton" id="smallbtn0" href="#">Build</a>
-            <a class="navbarbutton" id="smallbtn1" href="#">Forum</a>
             <a class="navbarbutton" id="smallbtn2"
                 href="@guest {{ route('login') }}
 @else
