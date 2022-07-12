@@ -9,13 +9,12 @@ $id = addslashes($_GET["id"]);
 $app = addslashes($_GET["app"]);*/
 
 if (Auth::check()) {
-	$randName = 0;
 	$username = addslashes(Auth::user()->name);
 	$id = addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
-	$id = 0;
+	$id = mt_rand(9999, 999999);
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
