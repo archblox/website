@@ -60,7 +60,7 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   vertical-align: middle;
   width: 100%;
   background: rgb(58, 83, 242); /* Fallback for IE 11*/
-  background: linear-gradient(#759CF0 10%, #3B72E1 49%, #2260DD 50%, #2362DE 100%);
+  background: linear-gradient(#759CF0 10%, #2362DE 100%);
 }
 .navbarbuttoncontainer, .smallnavbarbuttoncontainer, .navbarlogincontainer {
   padding-left: 5px;
@@ -160,7 +160,7 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   color: rgb(255, 255, 255);
   text-size-adjust: auto;
   text-align: left;
-  background-color: black;
+  background: linear-gradient(#2f2f2f 10%, #000000 100%);  ;
 }
 .invisible, #invisible {
   display: none !important;
