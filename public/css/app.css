@@ -211,7 +211,7 @@
     color: rgb(255, 255, 255);
     text-size-adjust: auto;
     text-align: left;
-    background-color: black;
+    background: linear-gradient(#444444 10%, #000000 100%);;
   }
 
   .invisible,
