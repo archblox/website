@@ -15,7 +15,7 @@
   padding-left: 5px;
   width: 100%;
   text-align: center;
-background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
+  background: linear-gradient(#f07575 10%,#de2323 100%);
 }
 .warningtext {
   color: red;
@@ -43,7 +43,7 @@ background: linear-gradient(#f07575 10%, #e13b3b 49%, #d22 50%, #de2323 100%);
   border-radius: 3px;
   border: 1px solid #3D414A;
   background: rgb(80, 80, 80); /* Fallback for IE 11*/
-  background: linear-gradient(#cacbcc 10%, #99999a 49%, #747474 50%, #2d2d2d 100%);
+  background: linear-gradient(#cacbcc 10%, #2d2d2d 100%);
 }
 .navbar {
   height: 40px;
@@ -206,8 +206,7 @@ body {
   padding-left: 5px;
   padding-right: 5px;
   min-height: 300px;
-  background: rgb(255,255,255); /* Fallback for IE 11*/
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgb(255,255,255); 
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -218,8 +217,7 @@ body {
   margin-top: 30px;
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(255,255,255); /* Fallback for IE 11*/
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgb(255,255,255); 
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -237,8 +235,7 @@ body {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(172,172,172); /* Fallback for IE 11*/
-  background-color: rgba(172, 172, 172, 0.8);
+  background: rgb(172,172,172);
   min-height: fit-content;
 }
 button {
@@ -305,8 +302,7 @@ background: linear-gradient(#75f094 10%, #39d746 49%, #21b71c 50%, #137a32 100%)
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(172,172,172); /* Fallback for IE 11*/
-  background-color: rgba(172, 172, 172, 0.8);
+  background: rgb(172,172,172);
   min-height: fit-content;
 }
 #footer p, #footer a, #footer_signup p, #footer_signup a {
@@ -329,8 +325,7 @@ a, #navbarusername {
   margin: auto;
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(255,255,255); /* Fallback for IE 11*/
-  background-color: rgba(255, 255, 255, 0.3);
+  background: rgb(255, 255, 255);
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -348,7 +343,7 @@ a, #navbarusername {
   width: 20%;
   height: 100%;
   margin-left: 0px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255);
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -358,10 +353,10 @@ a, #navbarusername {
   width: 80%;
   height: 100%;
   left: 20%;
-  background-color: rgba(132, 132, 132, 0.5);
+  background: rgb(182, 182, 182);
   padding-bottom: 5px;
   padding-top: 5px;
 }
 #InviteTreeContainer {
-  background-color: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
