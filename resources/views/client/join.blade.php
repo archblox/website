@@ -13,7 +13,8 @@ if (Auth::check()) {
 	$id = addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
-	$username = "Guest " . $randName;
+	$username = "Thomas";
+	//$username = "Guest " . $randName;
 	$id = mt_rand(9999, 999999);
 }
 $ip = addslashes($_GET["ip"]);
