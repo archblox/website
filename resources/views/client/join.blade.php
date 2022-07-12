@@ -14,9 +14,8 @@ if (Auth::check()) {
 	$id = addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
-	$randId = mt_rand(-1, -9999);
 	$username = "Guest " . $randName;
-	$id = $randId;
+	$id = 0;
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
@@ -120,7 +119,7 @@ function setMessage(message)
 end
 
 -- Check if client is not logged in, disabled right now
--- if "<?php echo $username; ?>" == "Guest " .. tostring(<?php echo $randName; ?>) then
+-- if <?php echo $id; ?> == 0 then
 	-- setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
 	-- error("Not logged in")
 -- end
