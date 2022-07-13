@@ -70,9 +70,8 @@
 #navbarlogincontainer, #navbarsignedincontainer {
   position: relative;
   padding-right: 10px;
-  margin-right: 3%;
+  margin-right: 0%;
   margin-left: auto;
-  float: inline-end;
   top: 11px;
 }
 #profilefriendscontainer p, #profilefriendscontainer a {
