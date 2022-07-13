@@ -34,8 +34,7 @@
         <br><br>
         <a href="{{ route('home') }}"><span style="font-size:20px">←</span> Return to Main Site</a>
     </div>
-    <div class="iphone-content"
-        style="padding-left: 5px; padding-right: 0px; overflow-x: hidden; position: fixed; height: 100%; color: black;">
+    <div class="iphone-content">
         @yield('content')
     </div>
 </body>
