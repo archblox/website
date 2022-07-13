@@ -14,6 +14,8 @@ if (Auth::check()) {
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
+	// $username = "   ";
+	// $id = 0);
 	$id = mt_rand(9999, 999999);
 }
 $ip = addslashes($_GET["ip"]);
@@ -23,8 +25,6 @@ $app = 'test';
 
 ob_start();
 @endphp
-
---This is a joinscript that works in 2013 and back, etc.
 
 -- functions --------------------------
 function onPlayerAdded(player)

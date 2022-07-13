@@ -18,7 +18,7 @@
             <br>
             <p style="display: flex;">
                 <input id="FeedBox" type="text" placeholder="Say something..." style="width: 80%;">
-                <button style="width: 20%;height: 28px;" class="greybutton" id="FeedButton">Post it!</button>
+                <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton">Post it!</button>
             </p>
             <br>
             <div id="FeedContainer">
