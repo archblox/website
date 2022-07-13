@@ -24,7 +24,7 @@
             <div id="FeedContainer">
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/iosload.gif') }}"
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
                                 width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
