@@ -11,7 +11,7 @@
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
                     <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
-                            src="{{ asset('img/reviewpending.png') }}" width="60px" height="100%"></a>
+                            src="{{ asset('img/unaprooved.png') }}" width="60px" height="100%"></a>
                 </div>
                 <div id="FriendsContainerBox1TextContainer">
                     <a href="{{ route('profile', $friend->id) }}" id="FeedContainerBox1Username">{{ $friend->name }}</a>

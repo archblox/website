@@ -46,7 +46,7 @@
     <div class="content_special">
         <div id="profileleftcontainer">
             <p id="status">"I'm new to ARCHBLOX!"</p>
-            <img alt="profile image" src="{{ asset('img/reviewpending.png') }}" width="75%">
+            <img alt="profile image" src="{{ asset('img/unaprooved.png') }}" width="75%">
             <div id="bio"
                 style="min-width:350px;max-width:350px;text-align:center;margin:0 auto;max-height:275px;overflow-y: auto;">
                 {!! nl2br(e($data['user']->blurb)) !!}</div>
@@ -92,7 +92,7 @@
                 @foreach ($data['friends'] as $friend)
                     <div class="profilefriend">
                         <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
-                                src="{{ asset('img/reviewpending.png') }}" width="150px" height="110px"></a>
+                                src="{{ asset('img/unaprooved.png') }}" width="150px" height="110px"></a>
                         <br>
                         <a href="{{ route('profile', $friend->id) }}"
                             id="FeedContainerBox1Username">{{ $friend->name }}</a>

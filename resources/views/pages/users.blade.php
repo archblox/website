@@ -28,7 +28,7 @@
             <div class="ProfileContainerBox" id="ProfileContainerBox1">
                 <div id="ProfileContainerBox1ImageContainer">
                     <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
-                            src="{{ asset('img/reviewpending.png') }}" width="60px" height="100%"></a>
+                            src="{{ asset('img/unaprooved.png') }}" width="60px" height="100%"></a>
                 </div>
                 <div id="ProfileContainerBox1TextContainer">
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
