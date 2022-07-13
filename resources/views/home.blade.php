@@ -24,7 +24,7 @@
             <div id="FeedContainer">
                 <div class="FeedContainerBox" id="FeedContainerBox1">
                     <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/unaprooved.png') }}"
+                        <a href="#"><img alt="Profile Image" src="{{ asset('img/iosload.gif') }}"
                                 width="60px" height="100%"></a>
                     </div>
                     <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
@@ -53,7 +53,7 @@
                         @foreach ($friends as $friend)
                             <div class="profilefriend">
                                 <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
-                                        src="{{ asset('img/unaprooved.png') }}" width="150px" height="110px"></a>
+                                        src="{{ asset('img/iosload.gif') }}" width="150px" height="110px"></a>
                                 <br>
                                 <a href="{{ route('profile', $friend->id) }}"
                                     id="FeedContainerBox1Username">{{ $friend->name }}</a>

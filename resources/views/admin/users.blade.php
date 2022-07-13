@@ -24,7 +24,7 @@
             <div id="SearchContainer">
                 <div class="ProfileContainerBox" id="ProfileContainerBox1" style="background-color: white;">
                     <div id="ProfileContainerBox1ImageContainer">
-                        <img alt="Profile Image" src="https://archblox.com/img/unaprooved.png" width="60px"
+                        <img alt="Profile Image" src="https://archblox.com/img/iosload.gif" width="60px"
                             height="100%">
                     </div>
                     <div id="ProfileContainerBox1TextContainer" style="color:black">
