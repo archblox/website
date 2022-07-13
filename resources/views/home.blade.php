@@ -16,8 +16,10 @@
         <div id="feed">
             <h2>My Feed</h2>
             <br>
-            <input id="FeedBox" type="text" placeholder="Say something...">
-            <button style="width: 100%;" class="greybutton" id="FeedButton">Post it!</button>
+            <p style="display: flex;">
+                <input id="FeedBox" type="text" placeholder="Say something..." style="width: 80%;">
+                <button style="width: 20%;height: 28px;" class="greybutton" id="FeedButton">Post it!</button>
+            </p>
             <br>
             <div id="FeedContainer">
                 <div class="FeedContainerBox" id="FeedContainerBox1">
