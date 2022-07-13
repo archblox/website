@@ -440,6 +440,10 @@ h6 {
   margin: 0px;
 }
 
+img {
+  object-fit: contain;
+}
+
 a,
 #navbarusername {
   color: white;
