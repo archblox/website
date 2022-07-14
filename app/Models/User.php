@@ -14,6 +14,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Friendable;
 
+    protected $table = 'users';
+    public $primaryKey = 'id';
+    public $timestamps = true;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -55,5 +59,10 @@ class User extends Authenticatable
         } else {
             return true;
         }
+    }
+
+    public function feedposts()
+    {
+        return $this->hasMany('App\Models\FeedPost');
     }
 }

@@ -16,24 +16,43 @@
         <div id="feed">
             <h2>My Feed</h2>
             <br>
-            <p style="display: flex;">
-                <input id="FeedBox" type="text" placeholder="Say something..." style="width: 80%;">
-                <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton">Post it!</button>
-            </p>
+            <form action="{{ route('feed_post') }}" method="POST">
+                @csrf
+                <p style="display: flex;">
+                    <input id="FeedBox" type="text" name="status" placeholder="Say something..." style="width: 80%;"
+                        value="{{ old('status') }}">
+                    <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton"
+                        type="submit" onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Post
+                        it!</button>
+                </p>
+                @if ($errors->any())
+                    <span class="warningtext">{{ $errors->first() }}</span>
+                @endif
+                @if (session()->has('success'))
+                    <span style="color:green">{{ session()->get('success') }}</span>
+                @endif
+            </form>
             <br>
             <div id="FeedContainer">
-                <div class="FeedContainerBox" id="FeedContainerBox1">
-                    <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
-                        <a href="#"><img alt="Profile Image" src="{{ asset('img/reviewpending.png') }}"
-                                width="60px" height="100%"></a>
+                @foreach ($data['posts'] as $post)
+                    <div class="FeedContainerBox" id="FeedContainerBox1">
+                        <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
+                            <a href="{{ route('profile', $post->user->id) }}"><img alt="Profile Image"
+                                    src="{{ asset('img/iosload.gif') }}" width="60px" height="100%"></a>
+                        </div>
+                        <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
+                            <a href="{{ route('profile', $post->user->id) }}"
+                                id="FeedContainerBox1Username">{{ $post->user->name }}</a>
+                            <p id="FeedContainerBox1Text">"{{ $post->status }}"</p>
+                            <p id="FeedContainerBox1Timestamp">{{ $post->created_at->format('F d, Y H:i A') }}</p>
+                        </div>
                     </div>
-                    <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
-                        <a href="#" id="FeedContainerBox1Username">Placeholder</a>
-                        <p id="FeedContainerBox1Text">"This is a placeholder for future My Feed posts."</p>
-                        <p id="FeedContainerBox1Timestamp">July 13, 2022 01:42 AM</p>
-                    </div>
-                </div>
+                @endforeach
+                @if ($data['posts']->isEmpty())
+                    <p>Your feed is empty.</p>
+                @endif
             </div>
+            {{ $data['posts']->links() }}
         </div>
         <div id="gamesframe">
             <div class="content_special" style="justify-content: center;">
@@ -50,7 +69,7 @@
                 @if (Auth::user()->getFriendsCount() > 0)
                     <div id="profilefriendcontainer" class="content_special"
                         style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
-                        @foreach ($friends as $friend)
+                        @foreach ($data['friends'] as $friend)
                             <div class="profilefriend">
                                 <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
                                         src="{{ asset('img/iosload.gif') }}" width="150px" height="110px"></a>
@@ -63,7 +82,7 @@
             </div>
         @else
             <p>You don't have any friends yet!</p>
-        @endif
+            @endif
             <br>
             <h2>Recently Played</h2>
             <br>

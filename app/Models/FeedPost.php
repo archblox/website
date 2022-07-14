@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class InviteKey extends Model
+class FeedPost extends Model
 {
     use HasFactory;
 
-    protected $table = 'invite_keys';
+    protected $table = 'feed_posts';
     public $primaryKey = 'id';
     public $timestamps = true;
 
@@ -19,9 +19,12 @@ class InviteKey extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'key',
-        'created_by',
-        'user_invited',
-        'active',
+        'user_id',
+        'status',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

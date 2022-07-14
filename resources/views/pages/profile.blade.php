@@ -45,7 +45,11 @@
     </div>
     <div class="content_special">
         <div id="profileleftcontainer">
-            <p id="status">"I'm new to ARCHBLOX!"</p>
+            @if (!empty($data['user']->feedposts->last()->status))
+                <address id="status">"{{ $data['user']->feedposts->last()->status }}"</address>
+            @else
+                <address id="status">"I'm new to ARCHBLOX!"</address>
+            @endif
             <img alt="profile image" src="{{ asset('img/iosload.gif') }}" width="75%">
             <div id="bio"
                 style="min-width:350px;max-width:350px;text-align:center;margin:0 auto;max-height:275px;overflow-y: auto;">

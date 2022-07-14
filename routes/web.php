@@ -26,6 +26,12 @@ Route::get('/user/{id}/friends', [App\Http\Controllers\PageController::class, 'p
 // Must be logged in
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+
+    // Rate limit + auth
+    Route::middleware(['throttle:feed_post'])->group(function () {
+        Route::post('/home', [App\Http\Controllers\HomeController::class, 'feed_post'])->name('feed_post');
+    });
+
     Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
     Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
     Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
