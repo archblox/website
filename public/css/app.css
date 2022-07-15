@@ -107,6 +107,10 @@ top: 11px;
   color: #2260DD;
 }
 
+.onlinestatus_studio {
+  color: rgb(185, 135, 20);
+}
+
 .onlinestatus_ingame {
   color: green;
 }
