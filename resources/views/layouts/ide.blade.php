@@ -24,9 +24,9 @@
     <div class="iphone-sidebar" style="color: #000000; background-color: #ffffff">
         <p><img src="https://archblox.com/img/MORBLOXlogo.png" width="50%"> Studio</p>
         @guest
-            <a href="{{ route('login') }}">Log In</a>
+            <a style="color: #000" href="{{ route('login') }}">Log In</a>
         @else
-                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a
+                <p style="color: #000" id="navbarusername">{{ Auth::user()->name }} | <a style="color: #000"
                         href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log
