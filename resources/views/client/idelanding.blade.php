@@ -11,6 +11,7 @@
 
 @section('content')
 <h1>My Games</h1>
-<button class="greenbutton">Create a Game</button>
+<button class="greenbutton">Create a Game (disabled)</button>
+<p>This page does not have any functionality yet other than logging in.</p>
 <p>You haven't made any games yet!</p>
 @endsection
