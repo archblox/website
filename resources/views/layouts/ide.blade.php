@@ -23,7 +23,11 @@
     @yield('alert')
     <div class="iphone-sidebar" style="color: #000000; background-color: #ffffff">
         <p><img src="https://archblox.com/img/MORBLOXlogo.png" width="50%"> Studio</p>
-        <p>Logged in as: {{ Auth::user()->name }}</p>
+        @auth
+            <p>Logged in as: {{ Auth::user()->name }}</p>
+        @else
+            <p>Not Logged In</p>
+        @endauth
         <br>
         <a style="color: blue;" href="#">My Games</a>
         <br>
