@@ -14,9 +14,7 @@ if (Auth::check()) {
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
-	// $username = "   ";
-	// $id = 0);
-	$id = mt_rand(9999, 999999);
+	$id = 0;
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
@@ -117,11 +115,11 @@ function setMessage(message)
 	end
 end
 
--- Check if client is not logged in, disabled right now
--- if <?php echo $id; ?> == 0 then
-	-- setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
-	-- error("Not logged in")
--- end
+-- Check if client is not logged in
+if <?php echo $id; ?> == 0 then
+	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
+	error("Not logged in")
+end
 
 function showErrorWindow(message, errorType, errorCategory)
 	game:SetMessage(message)

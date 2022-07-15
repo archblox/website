@@ -23,7 +23,18 @@
     @yield('alert')
     <div class="iphone-sidebar" style="color: #000000; background-color: #ffffff">
         <p><img src="https://archblox.com/img/MORBLOXlogo.png" width="50%"> Studio</p>
-        <p>Logged in as: {{ Auth::user()->name }}</p>
+        @guest
+            <a href="{{ route('login') }}">Log In</a>
+        @else
+                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a
+                        href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Log
+                        out...</a></p>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                @csrf
+            </form>
+        @endguest        
         <br>
         <a style="color: blue;" href="#">My Games</a>
         <br>
