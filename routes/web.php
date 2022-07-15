@@ -60,7 +60,8 @@ Route::get('/game/studio.ashx', [App\Http\Controllers\ClientController::class, '
 Route::get('/game/visit.ashx', [App\Http\Controllers\ClientController::class, 'visit'])->name('visit');
 Route::get('/game/ChatFilter.ashx', [App\Http\Controllers\ClientController::class, 'chatfilter'])->name('chatfilter');
 Route::get('/game/join.ashx', [App\Http\Controllers\ClientController::class, 'join'])->name('join');
-Route::get('/ide/welcome', [App\Http\Controllers\ClientController::class, 'ide'])->name('ide');
+Route::get('/IDE/Landing.aspx', [App\Http\Controllers\ClientController::class, 'idelanding'])->name('idelanding');
+Route::get('/ide/welcome', [App\Http\Controllers\ClientController::class, 'idelanding'])->name('idewelcome');
 Route::get('/IDE/ClientToolbox.aspx', [App\Http\Controllers\ClientController::class, 'toolbox'])->name('toolbox');
 Route::get('/UploadMedia/PostImage.aspx', [App\Http\Controllers\ClientController::class, 'postimage'])->name('postimage');
 Route::get('/UploadMedia/UploadVideo.aspx', [App\Http\Controllers\ClientController::class, 'uploadvideo'])->name('uploadvideo');

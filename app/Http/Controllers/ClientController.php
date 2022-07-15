@@ -21,7 +21,7 @@ class ClientController extends Controller
         return view('client.studio');
     }
 
-    public function ide()
+    public function idelanding()
     {
         return view('client.idelanding');
     }
