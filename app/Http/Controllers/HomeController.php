@@ -44,7 +44,7 @@ class HomeController extends Controller
 
             $query->whereIn('user_id', $friendIds)
                 ->orWhere('user_id', '=', Auth::id());
-        })->orderBy('id', 'desc')->paginate(10);
+        })->orderBy('id', 'desc')->paginate(10, ["*"], "feedPage");
 
         $data = [
             'friends' => $friends,
