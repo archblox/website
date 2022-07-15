@@ -447,10 +447,6 @@ img {
   object-fit: contain;
 }
 
-.FeedContainerBoxImageContainer a img {
-  object-fit: fill;
-}
-
 a,
 #navbarusername {
   color: white;
