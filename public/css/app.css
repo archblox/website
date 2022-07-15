@@ -161,6 +161,8 @@ top: 11px;
   vertical-align: top;
   display: inline-flex;
   border: 1px solid #000000;
+  overflow-y: hidden;
+  overflow-x: hidden;
   border-width: 1px;
   margin-bottom: 5px;
 }
