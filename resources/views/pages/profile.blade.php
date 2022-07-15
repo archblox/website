@@ -92,7 +92,7 @@
                             class="bluebutton" style="margin-top: 5px">View All</button></a>
             </div>
             <div id="profilefriendcontainer" class="content_special"
-                style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
+                style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
                 @foreach ($data['friends'] as $friend)
                     <div class="profilefriend">
                         <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"

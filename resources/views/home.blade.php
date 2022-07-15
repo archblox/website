@@ -68,7 +68,7 @@
             <div class="friendslist">
                 @if (Auth::user()->getFriendsCount() > 0)
                     <div id="profilefriendcontainer" class="content_special"
-                        style="flex-wrap: nowrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
+                        style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
                         @foreach ($data['friends'] as $friend)
                             <div class="profilefriend">
                                 <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
