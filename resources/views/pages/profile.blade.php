@@ -46,7 +46,7 @@
     <div class="content_special">
         <div id="profileleftcontainer">
             @if (!empty($data['user']->feedposts->last()->status))
-                <address id="status">"{{ $data['user']->feedposts->last()->status }}"</address>
+                <address id="status" style="word-wrap:break-word">"{{ $data['user']->feedposts->last()->status }}"</address>
             @else
                 <address id="status">"I'm new to ARCHBLOX!"</address>
             @endif

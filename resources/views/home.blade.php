@@ -43,7 +43,7 @@
                         <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                             <a href="{{ route('profile', $post->user->id) }}"
                                 id="FeedContainerBox1Username">{{ $post->user->name }}</a>
-                            <p id="FeedContainerBox1Text">"{{ $post->status }}"</p>
+                            <p id="FeedContainerBox1Text" style="word-wrap:break-word;max-width:400px">"{{ $post->status }}"</p>
                             <p id="FeedContainerBox1Timestamp">{{ $post->created_at->format('F d, Y h:i A') }}</p>
                         </div>
                     </div>
