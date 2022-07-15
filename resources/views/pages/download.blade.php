@@ -36,7 +36,7 @@
         <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> <a href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
         <br>
         <p>ARCHBLOX Studio Bootstrapper v1.2</p>
-        <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> <a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a>
+        <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> <a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a></p>
         <br>
         <p>If you get a popup saying "Windows protected your PC", press "More info" and then press "Run anyway".</p>
     </div>
