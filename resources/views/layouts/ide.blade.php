@@ -26,14 +26,7 @@
         @guest
             <a href="{{ route('login') }}">Log In</a>
         @else
-                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a
-                        href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">Log
-                        out...</a></p>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
-                @csrf
-            </form>
+            <p class="nonbolded">{{ Auth::user()->name }}<p>
         @endguest        
         <br>
         <a style="color: blue;" href="#">My Games</a>
