@@ -21,12 +21,12 @@
 
 <body>
     @yield('alert')
-    <div class="iphone-sidebar" style="color: #000000; background-color: #ffffff">
+    <div class="iphone-sidebar">
         <p><img src="https://archblox.com/img/MORBLOXlogo.png" width="50%"> Studio</p>
         @guest
-            <a style="color: #000" href="{{ route('login') }}">Log In</a>
+            <a href="{{ route('login') }}">Log In</a>
         @else
-                <p style="color: #000" id="navbarusername">{{ Auth::user()->name }} | <a style="color: #000"
+                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a
                         href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log
@@ -40,8 +40,7 @@
         <br>
         <a style="color: black;" href="#">My Assets</a>
     </div>
-    <div class="iphone-content"
-        style="padding-left: 5px; padding-right: 0px; overflow-x: hidden; position: fixed; height: 100%; color: #000000; background-color: #aaaaaa">
+    <div class="iphone-content">
         @yield('content')
     </div>
 </body>
