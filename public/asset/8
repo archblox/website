@@ -72,7 +72,7 @@ game.Players.FriendRequestEvent:connect(function(fromPlayer,toPlayer,event)
 	if fromPlayer == localPlayer then
 		if event == Enum.FriendRequestEvent.Accept then
 			game:GetService("GuiService"):SendNotification("New Friend",
-			fromPlayer.Name .. " is now your friend!",
+			toPlayer.Name .. " is now your friend!",
 			"http://www.morblox.us/thumbs/avatar.ashx?userId="..tostring(fromPlayer.userId).."&x=48&y=48",
 			5,
 			function()
