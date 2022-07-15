@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <h1 id="usernameframe">Friends ({{ count($userFriends) }})</h1>
+    <h1 id="usernameframe">Friends ({{ Auth::user()->getFriendsCount() }})</h1>
     <a href="#" class="tab_selected">All Friends</a>
     <a href="{{ route('requests') }}" class="tab">Pending Requests ({{ count(Auth::user()->getFriendRequests()) }})</a>
     <br>
