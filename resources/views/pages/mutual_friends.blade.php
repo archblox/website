@@ -1,15 +1,13 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $data['user']->name }}'s Friends - {{ env('APP_NAME') }}</title>
+    <title>{{ $data['user']->name }}'s Friends (Mutual) - {{ env('APP_NAME') }}</title>
 @endsection
 
 @section('content')
-    <h1 id="usernameframe">{{ $data['user']->name }}'s Friends ({{ $data['user']->getFriendsCount() }})</h1>
-    <a href="#" class="tab_selected">All Friends</a>
+    <h1 id="usernameframe">Your Mutual Friends with {{ $data['user']->name }} ({{ Auth::user()->getMutualFriendsCount($data['user']) }})</h1>
+    <a href="{{ route('profile_friends', $data['user']->id) }}" class="tab">All Friends</a>
     @auth
-    @if ($data['user']->id != Auth::id())
-    <a href="{{ route('mutual_friends', $data['user']->id) }}" class="tab">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($data['user']) }})</a>
-    @endif
+    <a href="#" class="tab_selected">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($data['user']) }})</a>
     @endauth
     <br>
     <br>
@@ -44,8 +42,8 @@
                 </div>
             </div>
         @endforeach
-        @if (!$data['user']->getFriendsCount())
-            <p>{{ $data['user']->name }} hasn't made friends with anyone yet.</p>
+        @if (!Auth::user()->getMutualFriendsCount($data['user']))
+            <p>You don't have any mutual friends with {{ $data['user']->name }}.</p>
         @endif
         {{ $data['friends']->links() }}
     </div>

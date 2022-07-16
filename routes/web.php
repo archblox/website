@@ -32,6 +32,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/home', [App\Http\Controllers\HomeController::class, 'feed_post'])->name('feed_post');
     });
 
+    Route::get('/user/{id}/friends/mutual', [App\Http\Controllers\PageController::class, 'mutual_friends'])->name('mutual_friends');
     Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
     Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
     Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');

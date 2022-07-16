@@ -47,11 +47,11 @@ class PageController extends Controller
     public function profile_friends($id)
     {
         $user = User::find($id);
-        $friends = $user->getFriends($perPage = 10);
-
         if (!$user) {
             abort(404);
         }
+
+        $friends = $user->getFriends($perPage = 10);
 
         $data = [
             'user' => $user,
@@ -59,6 +59,23 @@ class PageController extends Controller
         ];
 
         return view('pages.profile_friends')->with('data', $data);
+    }
+
+    public function mutual_friends($id)
+    {
+        $user = User::find($id);
+        if (!$user || $user->id == Auth::id()) {
+            abort(404);
+        }
+
+        $friends = Auth::user()->getMutualFriends($user, $perPage = 10);
+
+        $data = [
+            'user' => $user,
+            'friends' => $friends
+        ];
+
+        return view('pages.mutual_friends')->with('data', $data);
     }
 
     public function users(Request $request)
