@@ -28,6 +28,7 @@
         </form>
         @if ($data['user'])
             <div id="SearchContainer">
+                <h2>User Found: {{ $data['user']->name }}</h2>
                 <ul>
                     <li>
                         <h3><a
