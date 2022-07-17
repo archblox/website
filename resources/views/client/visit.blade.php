@@ -106,7 +106,7 @@ function doVisit()
 	else
 		player = game:GetService("Players"):CreateLocalPlayer(0)
 	end
-	player.Name = <?php echo $username; ?>
+	player.Name = "<?php echo $username; ?>"
 	player.CharacterAppearance = "http://www.morblox.us/Asset/CharacterFetch.ashx?userId=1&placeId=0"
 	local propExists, canAutoLoadChar = false
 	propExists = pcall(function()  canAutoLoadChar = game.Players.CharacterAutoLoads end)
