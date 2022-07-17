@@ -32,14 +32,14 @@
                 <ul>
                     <li>
                         <h3><a
-                                href="{{ route('profile', App\Models\User::where('name', $data['invited_by'])->first()->id) }}">{{ $data['invited_by'] }}</a>
+                                href="{{ route('profile', App\Models\User::where('name', $data['invited_by'])->first()->id) }}" target="_blank">{{ $data['invited_by'] }}</a>
                         </h3>
                     </li>
                     <ul>
-                        <li><a href="{{ route('profile', $data['user']->id) }}">{{ $data['user']->name }}</a></li>
+                        <li><a href="{{ route('profile', $data['user']->id) }}" target="_blank">{{ $data['user']->name }}</a></li>
                         <ul>
                             @foreach ($data['children'] as $child)
-                                <li><a href="{{ route('profile', $child->id) }}">{{ $child->name }}</a></li>
+                                <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a></li>
                             @endforeach
                         </ul>
                     </ul>
