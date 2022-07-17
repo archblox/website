@@ -2,6 +2,13 @@
 
 header("content-type:text/plain");
 ob_start();
+
+if (Auth::check()) {
+	$username = addslashes(Auth::user()->name);
+} else {
+	$username = "Player";
+}
+
 @endphp
 
 -- Prepended to Edit.lua and Visit.lua and Studio.lua and PlaySolo.lua--
@@ -96,10 +103,10 @@ function doVisit()
 	message.Text = "Creating Player"
 	if false then
 		player = game:GetService("Players"):CreateLocalPlayer(0)
-		player.Name = [====[Guest 4708]====]
 	else
 		player = game:GetService("Players"):CreateLocalPlayer(0)
 	end
+	player.Name = <?php echo $username; ?>
 	player.CharacterAppearance = "http://www.morblox.us/Asset/CharacterFetch.ashx?userId=1&placeId=0"
 	local propExists, canAutoLoadChar = false
 	propExists = pcall(function()  canAutoLoadChar = game.Players.CharacterAutoLoads end)
