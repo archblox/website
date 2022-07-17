@@ -53,7 +53,7 @@ Route::middleware(['auth'])->group(function () {
 Route::group(['middleware' => 'AdminCheck'], function() {
     Route::get('/iphone/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin_index');
     Route::get('/iphone/users', [App\Http\Controllers\AdminController::class, 'users'])->name('admin_users');
-    Route::get('/iphone/keys', [App\Http\Controllers\AdminController::class, 'keys'])->name('admin_keys');
+    Route::get('/iphone/tree', [App\Http\Controllers\AdminController::class, 'tree'])->name('admin_tree');
 });
 
 // Client routes

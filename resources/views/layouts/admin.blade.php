@@ -29,7 +29,7 @@
         <br>
         <a href="{{ route('admin_users') }}">User List</a>
         <br>
-        <a>Invite Tree</a>
+        <a href="{{ route('admin_tree') }}">Invite Tree</a>
         <br><br>
         <a href="{{ route('home') }}"><span style="font-size:20px">←</span> Return to Main Site</a>
     </div>
