@@ -56,4 +56,9 @@ class ClientController extends Controller
         return view('client.uploadvideo');
     }
 
+    public function keepalive()
+    {
+        return view('client.keepalive');
+    }
+
 }
