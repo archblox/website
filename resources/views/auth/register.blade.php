@@ -76,6 +76,7 @@
             <input id="password" type="password" name="password" required autocomplete="password">
             <p>Don't reuse passwords, and don't use a simple one!</p>
             <p>Passwords must be 8 or more characters, with 1 capital letter, 1 symbol and 1 number.</p>
+            <p class="important">Don't forget your password! Passwords are currently non-recoverable.</p>
             @error('password')
                 <div class="invalid-feedback" style="color:red">
                     <strong>{{ $message }}</strong>

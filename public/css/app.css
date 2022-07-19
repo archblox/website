@@ -119,6 +119,10 @@ top: 11px;
   color: black;
 }
 
+.important {
+  color: red;
+  font-weight: bold;
+}
 #yes,
 #no {
   width: 50%;

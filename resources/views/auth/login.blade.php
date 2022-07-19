@@ -44,6 +44,7 @@
             @endif
             <h3>Password</h3>
             <input id="password" type="password" name="password" required autocomplete="current-password">
+            <p class="important">Don't forget your password! Passwords are currently non-recoverable.</p>
             @error('password')
                 <span style="color:red" role="alert">
                     <strong>{{ $message }}</strong>
