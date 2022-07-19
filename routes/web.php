@@ -22,6 +22,9 @@ Route::get('/privacy', [App\Http\Controllers\PageController::class, 'privacy'])-
 Route::get('/tos', [App\Http\Controllers\PageController::class, 'tos'])->name('tos');
 Route::get('/user/{id}', [App\Http\Controllers\PageController::class, 'profile'])->name('profile');
 Route::get('/user/{id}/friends', [App\Http\Controllers\PageController::class, 'profile_friends'])->name('profile_friends');
+Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
+Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
+Route::get('/download', [App\Http\Controllers\PageController::class, 'download'])->name('download');
 
 // Must be logged in
 Route::middleware(['auth'])->group(function () {
@@ -33,13 +36,10 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/user/{id}/friends/mutual', [App\Http\Controllers\PageController::class, 'mutual_friends'])->name('mutual_friends');
-    Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
-    Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
     Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
     Route::post('/my/settings', [App\Http\Controllers\PageController::class, 'change_settings'])->name('change_settings');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
-    Route::get('/download', [App\Http\Controllers\PageController::class, 'download'])->name('download');
 
     // Friendship system routes
     Route::get('/my/friends', [App\Http\Controllers\FriendController::class, 'friends'])->name('friends');
