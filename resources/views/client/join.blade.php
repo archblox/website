@@ -14,7 +14,7 @@ if (Auth::check()) {
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
-	$id = 2569;
+	$id = 119;
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
