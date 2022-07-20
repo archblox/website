@@ -1,0 +1,11 @@
+All time formats listed below are in D/M/Y and in GMT+10 time.
+This is a log of all of the Client versions.
+You can download these old versions by going to archblox.com/client/version-(version string goes here).zip
+
+New Client version-000000007 at 13/07/2022 12:32 AM
+New Client version-000000006 at 11/07/2022 7:46 PM
+New Client version-000000005 at 11/07/2022 4:47 AM
+New Client version-000000004 at 10/07/2022 6:14 PM
+New Client version-000000003 at 10/07/2022 1:35 AM
+New Client version-000000002 at 10/07/2022 1:35 AM
+New Client version-000000001 at 9/07/2022 9:37 PM
