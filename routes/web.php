@@ -36,8 +36,9 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/user/{id}/friends/mutual', [App\Http\Controllers\PageController::class, 'mutual_friends'])->name('mutual_friends');
-    Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
-    Route::post('/my/settings', [App\Http\Controllers\PageController::class, 'change_settings'])->name('change_settings');
+    Route::get('/my/settings', [App\Http\Controllers\SettingController::class, 'settings'])->name('settings');
+    Route::post('/my/settings', [App\Http\Controllers\SettingController::class, 'change_bio'])->name('change_bio');
+    Route::post('/my/settings/change', [App\Http\Controllers\SettingController::class, 'change_settings'])->name('change_settings');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 
@@ -67,3 +68,7 @@ Route::get('/IDE/ClientToolbox.aspx', [App\Http\Controllers\ClientController::cl
 Route::get('/UploadMedia/PostImage.aspx', [App\Http\Controllers\ClientController::class, 'postimage'])->name('postimage');
 Route::get('/UploadMedia/UploadVideo.aspx', [App\Http\Controllers\ClientController::class, 'uploadvideo'])->name('uploadvideo');
 Route::get('/Game/KeepAlivePinger.ashx', [App\Http\Controllers\ClientController::class, 'keepalive'])->name('keepalive');
+
+Route::get('/mergetable', function () {
+    return view('misc.mergetable');
+});

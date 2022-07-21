@@ -57,7 +57,7 @@
                 {!! nl2br(e($data['user']->blurb)) !!}</div>
             <br>
             <div id="stats">
-                <h3>Joined: {{ $data['user']->created_at->format('d/m/Y') }}</h3>
+                <h3>Joined: {{ $data['user']->created_at->format(Auth::user()->settings->date_preference) }}</h3>
                 <h3>Place Visits: 0</h3>
             </div>
             <br>

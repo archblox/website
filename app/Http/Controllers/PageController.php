@@ -89,24 +89,6 @@ class PageController extends Controller
         return view('pages.users')->with('users', $users);
     }
 
-    public function settings()
-    {
-        return view('misc.settings');
-    }
-
-    public function change_settings(Request $request)
-    {
-        $request->validate([
-            'bio' => 'required|min:3|max:2000'
-        ]);
-
-        $user = Auth::user();
-        $user->blurb = $request->bio;
-        $user->save();
-
-        return redirect()->back()->with('success', 'Your bio has been updated.');
-    }
-
     public function download()
     {
         return view('pages.download');
