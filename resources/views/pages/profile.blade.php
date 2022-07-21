@@ -29,8 +29,7 @@
                     <button class="redbutton" name="action" type="submit" value="decline">Decline</button>
                 </form>
             @elseif (Auth::user()->isFriendWith($data['user']))
-                <form action="{{ route('friend_remove', $data['user']->id) }}" method="POST"
-                    style="display:inline-block">
+                <form action="{{ route('friend_remove', $data['user']->id) }}" method="POST" style="display:inline-block">
                     @csrf
                     <button class="redbutton" type="submit">Unfriend</button>
                 </form>
@@ -57,7 +56,11 @@
                 {!! nl2br(e($data['user']->blurb)) !!}</div>
             <br>
             <div id="stats">
-                <h3>Joined: {{ $data['user']->created_at->format(Auth::user()->settings->date_preference) }}</h3>
+                @guest
+                    <h3>Joined: {{ $data['user']->created_at->format('d/m/Y') }}</h3>
+                @else
+                    <h3>Joined: {{ $data['user']->created_at->format(Auth::user()->settings->date_preference) }}</h3>
+                @endguest
                 <h3>Place Visits: 0</h3>
             </div>
             <br>
@@ -93,7 +96,9 @@
                             class="bluebutton" style="margin-top: 5px">View All</button></a>
             </div>
             @if (Auth::check() && Auth::id() != $data['user']->id && Auth::user()->getMutualFriendsCount($data['user']) > 0)
-            <a href="{{ route('mutual_friends', $data['user']->id) }}" style="color:blue;font-size:12px">{{ Auth::user()->getMutualFriendsCount($data['user'])}} Mutual Friends</a>
+                <a href="{{ route('mutual_friends', $data['user']->id) }}"
+                    style="color:blue;font-size:12px">{{ Auth::user()->getMutualFriendsCount($data['user']) }} Mutual
+                    Friends</a>
             @endif
             <div id="profilefriendcontainer" class="content_special"
                 style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
