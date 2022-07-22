@@ -13,7 +13,7 @@
     <button class="greenbutton">.greenbutton</button>
     <button class="bluebutton">.bluebutton</button>
     <button class="redbutton">.redbutton</button>
-    <button class="greenbutton">.greenbutton</button>
+    <button class="greybutton">.greybutton</button>
     <br>
     <br>
     <h4>Tabs</h4>
