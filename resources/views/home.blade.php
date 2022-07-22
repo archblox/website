@@ -43,8 +43,13 @@
                         <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                             <a href="{{ route('profile', $post->user->id) }}"
                                 id="FeedContainerBox1Username">{{ $post->user->name }}</a>
-                            <p id="FeedContainerBox1Text" style="word-wrap:break-word;max-width:400px">"{{ $post->status }}"</p>
-                            <p id="FeedContainerBox1Timestamp">{{ $post->created_at->format('F d, Y h:i A') }}</p>
+                            <p id="FeedContainerBox1Text" style="word-wrap:break-word;max-width:400px">
+                                "{{ $post->status }}"</p>
+                            @if (!Auth::user()->settings->time_preference_24hr)
+                                <p id="FeedContainerBox1Timestamp">{{ $post->created_at->format('F d, Y h:i A') }}</p>
+                            @else
+                                <p id="FeedContainerBox1Timestamp">{{ $post->created_at->format('F d, Y H:i') }}</p>
+                            @endif
                         </div>
                     </div>
                 @endforeach

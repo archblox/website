@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\UserSetting;
 use App\Models\InviteKey;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -71,6 +72,7 @@ class RegisterController extends Controller
         $invited_by = $this->getInviter($data['key']);
         $this->updateKeyTable($data['key']);
 
+        UserSetting::create(['user_id' => User::all()->last()->id+1]);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

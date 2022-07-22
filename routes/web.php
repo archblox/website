@@ -36,8 +36,9 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/user/{id}/friends/mutual', [App\Http\Controllers\PageController::class, 'mutual_friends'])->name('mutual_friends');
-    Route::get('/my/settings', [App\Http\Controllers\PageController::class, 'settings'])->name('settings');
-    Route::post('/my/settings', [App\Http\Controllers\PageController::class, 'change_settings'])->name('change_settings');
+    Route::get('/my/settings', [App\Http\Controllers\SettingController::class, 'settings'])->name('settings');
+    Route::post('/my/settings', [App\Http\Controllers\SettingController::class, 'change_bio'])->name('change_bio');
+    Route::post('/my/settings/change', [App\Http\Controllers\SettingController::class, 'change_settings'])->name('change_settings');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 

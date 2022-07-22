@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('title')
     <title>Settings - {{ env('APP_NAME') }}</title>
+    <script src="{{ asset('js/settings.js') }}"></script>
+    <style>
+        .bio_form {
+            width: 50%
+        }
+    </style>
 @endsection
 @section('titlediscord')
     <meta content="Settings - {{ env('APP_NAME') }}" property="og:title" />
@@ -12,70 +18,118 @@
 @section('popup_content')
     <div class="popupcontainer" id="invisible">
         <div class="popup">
-            <h2>Test Dialog</h2>
-            <p class="warningtext">WARNING TEXT</p>
-            <p>DESCRIPTION OF THE SETTING YOU ARE ABOUT TO CHANGE</p>
-            <input type="text" placeholder="New Username Field">
-            <br>
-            <input type="password" placeholder="Old Password Field">
-            <input type="password" placeholder="New Password Field">
-            <input type="password" placeholder="Confirm New Password Field">
-            <br>
-            <input type="text" placeholder="Confirm Old E-Mail Field">
-            <input type="text" placeholder="New E-Mail Field">
-            <input type="text" placeholder="Confirm New E-Mail Field">
-            <br>
-            <input type="date">
-            <br>
-            <select name="Time Preference">
-                <option value="12hour">12 Hour</option>
-                <option value="24hour">24 Hour</option>
-            </select>
-            <br>
-            <select name="Date Preference">
-                <option value="DMY">DAY/MONTH/YEAR</option>
-                <option value="MDY">MONTH/DAY/YEAR</option>
-                <option value="YDM">YEAR/MONTH/DAY</option>
-            </select>
-            <br>
-            <button class="bluebutton">Confirm_Good</button>
-            <button class="redbutton">Cancel_Bad</button>
-            <button class="redbutton">Confirm_Bad</button>
-            <button class="bluebutton">Cancel_Good</button>
+            <form action="{{ route('change_settings') }}" method="POST">
+                @csrf
+                <input type="hidden" id="activeSetting" name="activeSetting">
+                <h2 id="heading"></h2>
+                <p class="warningtext"></p>
+                <p id="desc"></p>
+                <span class="username_change" id="invisible">
+                    <br>
+                    <h4>New Username</h4>
+                    <input type="text" placeholder="New Username..." id="name" name="name">
+                    <br>
+                    <br>
+                    <input type="checkbox" id="username_change_confirm" name="username_change_confirm" value="true">
+                    <label for="username_change_confirm"> I understand that changing my username is permanent<br> and can
+                        only
+                        be done once.</label>
+                </span>
+                <span class="email_change" id="invisible">
+                    <br>
+                    <h4>New E-Mail</h4>
+                    <input type="email" name="email" placeholder="New E-Mail Field"><br>
+                    <h4>Confirm New E-Mail</h4>
+                    <input type="email" name="email_confirmation" placeholder="Confirm New E-Mail Field">
+                </span>
+                <span class="dob_change" id="invisible">
+                    <br>
+                    <h4>New Date of Birth</h4>
+                    <input type="date" name="dob">
+                </span>
+                <span class="password_change" id="invisible">
+                    <br>
+                    <h4>Old Password</h4>
+                    <input type="password" name="old_password" placeholder="Old Password Field"><br>
+                    <h4>New Password</h4>
+                    <input type="password" name="password" placeholder="New Password Field"><br>
+                    <h4>Confirm New Password</h4>
+                    <input type="password" name="password_confirmation" placeholder="Confirm New Password Field">
+                </span>
+                <span class="date_change" id="invisible">
+                    <br>
+                    <select name="date_preference">
+                        <option value="d/m/Y">DAY/MONTH/YEAR</option>
+                        <option value="m/d/Y">MONTH/DAY/YEAR</option>
+                        <option value="Y/d/m">YEAR/MONTH/DAY</option>
+                    </select>
+                </span>
+                <span class="time_change" id="invisible">
+                    <br>
+                    <select name="time_preference">
+                        <option value="0">12 Hour</option>
+                        <option value="1">24 Hour</option>
+                    </select>
+                </span>
+                <br>
+                <br>
+                <button class="bluebutton" type="submit">Confirm</button>
+                <button class="redbutton" type="reset" onclick="closePopup()">Cancel</button>
+            </form>
         </div>
     </div>
 @endsection
 
+@section('alert')
+    @if ($errors->any())
+        <div style="color:white;background-color:red;text-align:center;margin-top:72px">{{ $errors->first() }}</div>
+    @endif
+    @if (session()->has('change'))
+        <div style="color:white;background-color:green;text-align:center;margin-top:72px">{{ session()->get('change') }}
+        </div>
+    @endif
+@endsection
+
 @section('content')
     <h1>Settings</h1>
-    <form action="{{ route('change_settings') }}" method="POST">
-        @csrf
-        <div class="content_special" style="align-content: flex-end; align-items: flex-start; width=100%;">
-            <div class="content_special" style="flex-wrap: wrap; flex-direction: column; width: 50%;">
+    <div class="content_special" style="align-content: flex-end; align-items: flex-start; width:100%;">
+        <form action="{{ route('change_bio') }}" method="POST" class="bio_form">
+            @csrf
+            <div class="content_special" style="flex-wrap: wrap; flex-direction: column; width: 100%;">
                 <h3>Bio</h3>
                 <textarea style="resize: none; width: 100%; height: 75px;" name="bio">
 @if (!old('bio'))
 {{ Auth::user()->blurb }}@else{{ old('bio') }}
 @endif
 </textarea>
-                @if ($errors->any())
-                    <span class="warningtext">{{ $errors->first() }}</span>
+                @if ($errors->bio_form->any())
+                    <span class="warningtext">{{ $errors->bio_form->first() }}</span>
                 @endif
                 @if (session()->has('success'))
                     <span style="color:green">{{ session()->get('success') }}</span>
                 @endif
                 <button class="bluebutton" type="submit">Save</button>
-    </form>
-    <br>
+        </form>
+        <br>
     </div>
     <div class="content_special"
         style="flex-wrap: wrap; flex-direction: row-reverse; width: 50%; text-align: end; align-content: flex-end;">
-        <p style="width: 100%;">Username: {{ Auth::user()->name }} <button class="bluebutton" disabled>Edit</button></p>
-        <p style="width: 100%;">E-Mail: {{ Auth::user()->email }} <button class="bluebutton" disabled>Edit</button></p>
-        <p style="width: 100%;">Date of Birth: {{ Auth::user()->dob }} <button class="bluebutton" disabled>Edit</button></p>
-        <p style="width: 100%;">Password: ******** <button class="bluebutton" disabled>Edit</button></p>
-        <p style="width: 100%;">Date Display Preference: D/M/YY <button class="bluebutton" disabled>Edit</button></p>
-        <p style="width: 100%;">Time Display Preference: 12 Hour <button class="bluebutton" disabled>Edit</button></p>
+        <p style="width: 100%;">Username: {{ Auth::user()->name }} <button class="bluebutton"
+                onclick="openPopup(1)">Edit</button></p>
+        <p style="width: 100%;">E-Mail: {{ Auth::user()->email }} <button class="bluebutton"
+                onclick="openPopup(2)">Edit</button></p>
+        <p style="width: 100%;">Date of Birth: {{ Auth::user()->dob }} <button class="bluebutton"
+                onclick="openPopup(3)">Edit</button>
+        </p>
+        <p style="width: 100%;">Password: ******** <button class="bluebutton" onclick="openPopup(4)">Edit</button></p>
+        <p style="width: 100%;">Date Display Preference:
+            {{ Auth::user()->settings->date_preference }} <button class="bluebutton"
+                onclick="openPopup(5)">Edit</button>
+        </p>
+        <p style="width: 100%;">Time Display Preference:
+            {{ Auth::user()->settings->time_preference_24hr ? '24 Hour' : '12 Hour' }}
+            <button class="bluebutton" onclick="openPopup(6)">Edit</button>
+        </p>
     </div>
     </div>
     <div class="content_special" style="align-content: flex-end; align-items: flex-start;">
