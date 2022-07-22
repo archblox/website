@@ -18,9 +18,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 </head>
 
-<body style="    height: 100%;
-    margin: 0;
-    width: 100%;">
+<body style="height: 100%; margin: 0; width: 100%; overflow: hidden;">
     <iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%" style="border:none;"></iframe>
 </body>
 
