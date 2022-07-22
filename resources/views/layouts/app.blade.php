@@ -24,7 +24,7 @@
     <div class="navbar">
         <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
                 src="{{ asset('img/MORBLOXlogo.png') }}" width="200" height="40" /></a>
-        <a id="logo_small" class="invisible" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
+        <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
                 src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
         <div class="navbarbuttoncontainer">
             <a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a>
