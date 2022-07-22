@@ -111,4 +111,9 @@ class PageController extends Controller
     {
         return view('pages.download');
     }
+
+    public function incomplete()
+    {
+        return view('pages.incomplete');
+    }
 }

@@ -41,6 +41,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 
+    // Incomplete Pages Placeholder -- Replace/Remove these when they are added
+    Route::get('/games', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+    Route::get('/develop', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+    Route::get('/catalog', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+    Route::get('/my/avatar', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+    Route::get('/my/transactions', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+    Route::get('/my/messages', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+    Route::get('/my/inventory', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+
     // Friendship system routes
     Route::get('/my/friends', [App\Http\Controllers\FriendController::class, 'friends'])->name('friends');
     Route::get('/my/friends/requests', [App\Http\Controllers\FriendController::class, 'requests'])->name('requests');

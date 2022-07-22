@@ -81,7 +81,7 @@
         <div id="profilerightcontainer">
             <div class="content_special" style="justify-content: center;">
                 <h2>Games </h2>
-                <a href="#" style="margin-left: 5px"> <button class="bluebutton" style="margin-top: 5px">View
+                <a href="{{ route('incomplete') }}" style="margin-left: 5px"> <button class="bluebutton" style="margin-top: 5px">View
                         All</button></a>
             </div>
             <p>This user hasn't made any games yet!</p>

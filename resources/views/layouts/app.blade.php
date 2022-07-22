@@ -28,8 +28,8 @@
                 src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
         <div class="navbarbuttoncontainer">
             <a class="navbarbutton" id="smallbtn5" href="{{ route('download') }}">Games</a>
-            <a class="navbarbutton" id="smallbtn4" href="#">Catalog</a>
-            <a class="navbarbutton" id="smallbtn0" href="#">Build</a>
+            <a class="navbarbutton" id="smallbtn4" href="{{ route('incomplete') }}">Catalog</a>
+            <a class="navbarbutton" id="smallbtn0" href="{{ route('incomplete') }}">Build</a>
             <a class="navbarbutton" id="smallbtn2"
                 href="@guest {{ route('login') }}
 @else
@@ -57,7 +57,7 @@
     <div class="smallnav">
         <div class="smallnavbarbuttoncontainer">
             <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() && count(Auth::user()->getFriendRequests())) <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span> @endif</a>
-            <a class="smallnavbarbutton" href="#">Avatar</a>
+            <a class="smallnavbarbutton" href="{{ route('incomplete') }}">Avatar</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
             @if (!Auth::guest() && Auth::user()->isAdmin())
                 <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
