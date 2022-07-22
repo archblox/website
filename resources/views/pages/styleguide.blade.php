@@ -5,10 +5,10 @@
 
 @section('content')
     <h1 id="usernameframe">StyleGuide</h1>
-    <p>This is a page explaining and showing how the CSS works for this site.</p>
+    <p>This is a page explaining and showing how (most) of the CSS works for this site.</p>
     <br>
     <h4>Buttons</h4>
-    <p>Buttons.. Don't you like them? They're used for most things that you need to click that aren't links.</p>
+    <p>Buttons.. Don't you like them? They're used for most things that you need to click that aren't links. These look similar to tabs, but buttons are round and have more variants.</p>
     <br>
     <button class="greenbutton">.greenbutton</button>
     <button class="bluebutton">.bluebutton</button>
@@ -17,7 +17,7 @@
     <br>
     <br>
     <h4>Tabs</h4>
-    <p>These are used on pages that have sub-pages. These look similar to buttons, but they're not rounder.</p>
+    <p>These are used on pages that have sub-pages. These look similar to buttons, but tabs are not round.</p>
     <br>
     <a href="#" class="tab_selected">.tab_selected</a>
     <a href="#" class="tab">.tab</a>
