@@ -60,7 +60,6 @@
     FeedContainerBox1Username, FeedContainerBox1Text, FeedContainerBox1Timestamp</h4>
 <p>The boxes containing the content of My Feed.</p>
 <div id="Feed">
-    <p>#Feed</p>
     <div id="FeedContainer">
         <div class="FeedContainerBox">
             <div class="FeedContainerBoxImageContainer">
@@ -79,7 +78,6 @@
 <br>
 <p>Code</p>
 <textarea style="resize: none; width: 100%; height: 100px;" readonly><div id="Feed">
-    <p>#Feed</p>
     <div id="FeedContainer">
         <div class="FeedContainerBox">
             <div class="FeedContainerBoxImageContainer">
