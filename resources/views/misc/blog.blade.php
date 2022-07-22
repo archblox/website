@@ -57,6 +57,7 @@
                     class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span> @endif</a>
             <a class="smallnavbarbutton" href="{{ route('incomplete') }}">Avatar</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
+            <a class="smallnavbarbutton" href="{{ route('blog') }}">Blog</a>
             @if (!Auth::guest() && Auth::user()->isAdmin())
             <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
             @endif
