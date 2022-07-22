@@ -21,7 +21,7 @@
 <body style="    height: 100%;
     margin: 0;
     width: 100%;">
-    <iframe src="https://archblox.blogspot.com" width="100%" height="100%" style="border:none;"></iframe>
+    <iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%" style="border:none;"></iframe>
 </body>
 
 </html>
