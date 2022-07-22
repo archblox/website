@@ -9,7 +9,15 @@
 <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 @section('extras')
-<base target="_parent" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+        $("a").click(function(){
+            top.window.location.href=$(this).attr("href");
+            return true;
+        })
+    })
+</script>
 <style>
 body {
     height: 100%;
