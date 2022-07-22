@@ -42,9 +42,9 @@
                     <a href="#"><img alt="Profile Image" src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
                 </div> 
                 <div class="FeedContainerBoxTextContainer">
-                    <p id="FeedContainerBox1Username">#FeedContainerBox1Username<p>
-                    <p id="FeedContainerBox1Text">#FeedContainerBox1Text<p>
-                    <p id="FeedContainerBox1Timestamp">#FeedContainerBox1Timestamp<p>
+                    <a id="FeedContainerBox1Username">#FeedContainerBox1Username</a>
+                    <p id="FeedContainerBox1Text" style="word-wrap:break-word;max-width:400px">#FeedContainerBox1Text</p>
+                    <p id="FeedContainerBox1Timestamp">#FeedContainerBox1Timestamp</p>
                 </div> 
             </div>
         </div>
