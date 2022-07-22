@@ -65,7 +65,7 @@
     </div>
     @yield('alert')
     <iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%"
-        style="border:none;"></iframe>
+        style="border:none;" sandbox></iframe>
 </body>
 
 </html>
