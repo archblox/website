@@ -37,14 +37,11 @@
     <div id="Feed">
         <p>#Feed</p>
         <div id="FeedContainer">
-            <p>#FeedContainer</p>
             <div class="FeedContainerBox">
-                .FeedContainerBox
                 <div class="FeedContainerBoxImageContainer">
-                    <p>.FeedContainerBoxImageContainer</p>
+                    <a href="{{ route('profile', $post->user->id) }}"><img alt="Profile Image" src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
                 </div> 
                 <div class="FeedContainerBoxTextContainer">
-                    <p>.FeedContainerBoxTextContainer</p>
                     <p id="FeedContainerBox1Username">#FeedContainerBox1Username<p>
                     <p id="FeedContainerBox1Text">#FeedContainerBox1Text<p>
                     <p id="FeedContainerBox1Timestamp">#FeedContainerBox1Timestamp<p>
