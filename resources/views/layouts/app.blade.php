@@ -17,7 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
-    <script src="{{ asset('js/main.js?id=z3b8JK2bff') }}"></script>
     @yield('extras')
 </head>
 

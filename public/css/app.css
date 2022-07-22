@@ -28,6 +28,38 @@
   color: red;
 }
 
+#logo_full {
+  display: none !important
+}
+#logo_small {
+  display: block !important
+}
+@media (min-width: 1688px) {
+  #logo_full {
+      display: block !important
+  }
+  #logo_small {
+      display: none !important;
+  }
+}
+@media (max-width: 730px) {
+.navbarbuttoncontainer a {
+  position: relative;
+}
+}
+@media (max-width: 970px) {
+.navbarbuttoncontainer a {
+  font-size: 14px;
+  top: 12px
+}
+}
+@media (max-width: 640px) {
+.navbarbuttoncontainer a {
+  font-size: 12px;
+  top: 10px
+}
+}
+
 .popupcontainer {
   top: 0%;
   position: fixed;
