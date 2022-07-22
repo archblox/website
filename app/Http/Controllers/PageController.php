@@ -104,4 +104,9 @@ class PageController extends Controller
     {
         return view('pages.styleguide');
     }
+
+    public function blog()
+    {
+        return view('misc.blog');
+    }
 }

@@ -3,7 +3,7 @@
     <head>
         <title>Terms of Service - {{ env('APP_NAME') }}</title>
         <meta charset="utf-8">
-        <meta content="Privacy Policy - ARCHBLOX" property="og:title" />
+        <meta content="Terms of Service - ARCHBLOX" property="og:title" />
         <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
         <meta content="https://archblox.com" property="og:url" />
         <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image" />

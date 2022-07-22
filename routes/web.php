@@ -26,6 +26,8 @@ Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->nam
 Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
 Route::get('/download', [App\Http\Controllers\PageController::class, 'download'])->name('download');
 Route::get('/styleguide', [App\Http\Controllers\PageController::class, 'styleguide'])->name('styleguide');
+Route::get('/blog', [App\Http\Controllers\PageController::class, 'blog'])->name('blog');
+Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
 
 // Must be logged in
 Route::middleware(['auth'])->group(function () {
@@ -43,8 +45,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 
-    // Incomplete Pages Placeholder -- Replace/Remove these when they are added
-    Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
 
     // Friendship system routes
     Route::get('/my/friends', [App\Http\Controllers\FriendController::class, 'friends'])->name('friends');
