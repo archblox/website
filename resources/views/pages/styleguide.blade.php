@@ -16,7 +16,9 @@
 <button class="redbutton">.redbutton</button>
 <button class="greybutton">.greybutton</button>
 <br>
-<textarea style="resize: none; width: 100%;" readonly>
+<br>
+<p>Code</p>
+<textarea style="resize: none; width: 100%; height: 100px;" readonly>
 <button class="greenbutton">.greenbutton</button>
 <button class="bluebutton">.bluebutton</button>
 <button class="redbutton">.redbutton</button>
@@ -29,7 +31,10 @@
 <br>
 <a href="#" class="tab_selected">.tab_selected</a>
 <a href="#" class="tab">.tab</a>
-<textarea style="resize: none; width: 100%;" readonly>
+<br>
+<br>
+<p>Code</p>
+<textarea style="resize: none; width: 100%; height: 100px;" readonly>
 <a href="#" class="tab_selected">.tab_selected</a>
 <a href="#" class="tab">.tab</a>
 </textarea>
@@ -41,10 +46,13 @@
 <div class="content_special">
     <p>Hello i'm some text in the .content_special/#content_special div</p>
 </div>
-<textarea style="resize: none; width: 100%;" readonly>
+<br>
+<br>
+<p>Code</p>
+<textarea style="resize: none; width: 100%; height: 100px;" readonly>
 <div class="content_special">
-        <p>Hello i'm some text in the .content_special/#content_special div</p>
-    </div>
+    <p>Hello i'm some text in the .content_special/#content_special div</p>
+</div>
 </textarea>
 <br>
 <br>
@@ -67,8 +75,10 @@
         </div>
     </div>
 </div>
-<textarea style="resize: none; width: 100%;" readonly>
-<div id="Feed">
+<br>
+<br>
+<p>Code</p>
+<textarea style="resize: none; width: 100%; height: 100px;" readonly><div id="Feed">
     <p>#Feed</p>
     <div id="FeedContainer">
         <div class="FeedContainerBox">
