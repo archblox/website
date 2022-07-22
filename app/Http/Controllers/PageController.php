@@ -99,4 +99,9 @@ class PageController extends Controller
     {
         return view('pages.incomplete');
     }
+
+    public function styleguide()
+    {
+        return view('pages.styleguide');
+    }
 }

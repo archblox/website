@@ -41,6 +41,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/my/settings/change', [App\Http\Controllers\SettingController::class, 'change_settings'])->name('change_settings');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
+    Route::get('/styleguide', [App\Http\Controllers\KeyController::class, 'styleguide'])->name('styleguide');
 
     // Incomplete Pages Placeholder -- Replace/Remove these when they are added
     Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
