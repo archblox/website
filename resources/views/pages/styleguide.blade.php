@@ -15,11 +15,13 @@
     <button class="redbutton">.redbutton</button>
     <button class="greenbutton">.greenbutton</button>
     <br>
+    <br>
     <h4>Tabs</h4>
     <p>These are used on pages that have sub-pages. These look similar to buttons, but they're not rounder.</p>
     <br>
     <a href="#" class="tab_selected">.tab_selected</a>
     <a href="#" class="tab">.tab</a>
+    <br>
     <br>
     <h4>content_special<h4>
     <p>A div that is used for organising contents using display: inline-flex.</p>
