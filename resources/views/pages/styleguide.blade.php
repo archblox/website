@@ -15,13 +15,12 @@
 <button class="bluebutton">.bluebutton</button>
 <button class="redbutton">.redbutton</button>
 <button class="greybutton">.greybutton</button>
-<textarea style="resize: none" readonly>
-<pre>
+<br>
+<textarea style="resize: none; width: 100%;" readonly>
 <button class="greenbutton">.greenbutton</button>
 <button class="bluebutton">.bluebutton</button>
 <button class="redbutton">.redbutton</button>
 <button class="greybutton">.greybutton</button>
-</pre>
 </textarea>
 <br>
 <br>
@@ -30,11 +29,9 @@
 <br>
 <a href="#" class="tab_selected">.tab_selected</a>
 <a href="#" class="tab">.tab</a>
-<textarea style="resize: none" readonly>
-<pre>
+<textarea style="resize: none; width: 100%;" readonly>
 <a href="#" class="tab_selected">.tab_selected</a>
 <a href="#" class="tab">.tab</a>
-</pre>
 </textarea>
 <br>
 <br>
@@ -44,12 +41,10 @@
 <div class="content_special">
     <p>Hello i'm some text in the .content_special/#content_special div</p>
 </div>
-<textarea style="resize: none" readonly>
-<pre>
+<textarea style="resize: none; width: 100%;" readonly>
 <div class="content_special">
         <p>Hello i'm some text in the .content_special/#content_special div</p>
     </div>
-</pre>
 </textarea>
 <br>
 <br>
@@ -72,8 +67,7 @@
         </div>
     </div>
 </div>
-<textarea style="resize: none" readonly>
-<pre>
+<textarea style="resize: none; width: 100%;" readonly>
 <div id="Feed">
     <p>#Feed</p>
     <div id="FeedContainer">
@@ -90,6 +84,5 @@
         </div>
     </div>
 </div>
-</pre>
 </textarea>
 @endsection
