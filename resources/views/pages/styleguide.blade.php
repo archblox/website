@@ -23,7 +23,7 @@
     <a href="#" class="tab">.tab</a>
     <br>
     <br>
-    <h4>content_special<h4>
+    <h4>content_special</h4>
     <p>A div that is used for organising contents using display: inline-flex.</p>
     <br>
     <div class="content_special">
