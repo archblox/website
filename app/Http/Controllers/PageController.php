@@ -29,11 +29,12 @@ class PageController extends Controller
     {
         $user = User::find($id);
         $badges = DB::table('badges')->get();
-        $friends = $user->getFriends($perPage = 3);
 
         if (!$user) {
             abort(404);
         }
+
+        $friends = $user->getFriends($perPage = 3);
 
         $data = [
             'user' => $user,
