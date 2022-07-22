@@ -12,6 +12,9 @@
 @section('content')
     <div id="profiletopcontainer">
         <h1 id="usernameframe">{{ $data['user']->name }}</h1>
+        @if ($data['user']->settings->changed_name)
+        <h4>Previous Username: {{ $data['user']->settings->old_name }}</h4>
+        @endif
         @if (Cache::has('is_online_' . $data['user']->id))
             <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
         @else
