@@ -26,7 +26,6 @@
     <br>
     <div class="content_special">
         <p>Hello i'm some text</p>
-        <img src="{{ asset('img/reviewpending.png') }}">
         <p>AAAAAAAAAAAAAAAAAAA</p>
     </div>
     <br>
