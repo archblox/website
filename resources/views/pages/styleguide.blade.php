@@ -27,8 +27,7 @@
     <p>A div that is used for organising contents using display: inline-flex.</p>
     <br>
     <div class="content_special">
-        <p>Hello i'm some text</p>
-        <p>AAAAAAAAAAAAAAAAAAA</p>
+        <p>Hello i'm some text in the .content_special/#content_special div</p>
     </div>
     <br>
     <br>
