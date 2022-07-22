@@ -9,7 +9,7 @@
 <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 @section('extras')
-<base href="https://archblox.com" target="_parent">
+<base target="_parent" />
 <style>
 body {
     height: 100%;
