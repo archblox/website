@@ -9,7 +9,7 @@
 <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 @section('extras')
-<base href="https://archblox.blogspot.com" target="_parent">
+<base href="https://archblox.com" target="_parent">
 <style>
 body {
     height: 100%;
@@ -20,6 +20,5 @@ body {
 </style>
 @endsection
 @section('custom_content')
-<iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%"
-    style="border:none;"></iframe>
+<iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%" style="border:none;"></iframe>
 @endsection
