@@ -25,6 +25,7 @@ Route::get('/user/{id}/friends', [App\Http\Controllers\PageController::class, 'p
 Route::get('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
 Route::post('/users', [App\Http\Controllers\PageController::class, 'users'])->name('users');
 Route::get('/download', [App\Http\Controllers\PageController::class, 'download'])->name('download');
+Route::get('/styleguide', [App\Http\Controllers\PageController::class, 'styleguide'])->name('styleguide');
 
 // Must be logged in
 Route::middleware(['auth'])->group(function () {
@@ -41,7 +42,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/my/settings/change', [App\Http\Controllers\SettingController::class, 'change_settings'])->name('change_settings');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
-    Route::get('/styleguide', [App\Http\Controllers\PageController::class, 'styleguide'])->name('styleguide');
 
     // Incomplete Pages Placeholder -- Replace/Remove these when they are added
     Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
