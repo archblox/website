@@ -29,17 +29,17 @@
 }
 
 #logo_full {
-  display: none !important
+  display: none;
 }
 #logo_small {
-  display: block !important
+  display: block;
 }
 @media (min-width: 1688px) {
   #logo_full {
-      display: block !important
+      display: block;
   }
   #logo_small {
-      display: none !important;
+      display: none;
   }
 }
 @media (max-width: 730px) {
