@@ -42,7 +42,7 @@
                     <button class="bluebutton" type="submit">Add Friend</button>
                 </form>
             @endif
-            <a href="#"><button class="greybutton">Message</button></a>
+            <a href="/my/messages/compose?to={{ $data['user']->name }}"><button class="greybutton">Message</button></a>
         @endif
     </div>
     <div class="content_special">

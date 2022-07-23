@@ -56,7 +56,13 @@ Route::middleware(['auth'])->group(function () {
 
     // Message system routes
     Route::get('/my/messages', [App\Http\Controllers\MessageController::class, 'inbox'])->name('inbox');
+    Route::post('/my/messages', [App\Http\Controllers\MessageController::class, 'delete_all'])->name('delete_all');
+    Route::get('/my/messages/sent', [App\Http\Controllers\MessageController::class, 'inbox_sent'])->name('inbox_sent');
     Route::get('/my/messages/compose', [App\Http\Controllers\MessageController::class, 'compose'])->name('compose');
+    Route::get('/my/messages/deleted', [App\Http\Controllers\MessageController::class, 'deleted'])->name('deleted');
+    Route::post('/my/messages/deleted', [App\Http\Controllers\MessageController::class, 'recover_all'])->name('recover_all');
+    Route::get('/my/messages/{id}', [App\Http\Controllers\MessageController::class, 'content'])->name('content');
+    Route::post('/my/messages/{id}', [App\Http\Controllers\MessageController::class, 'delete_message'])->name('delete_message');
 });
 
 // Admin only
