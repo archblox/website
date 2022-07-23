@@ -35,7 +35,8 @@ Route::middleware(['auth'])->group(function () {
 
     // Rate limit + auth
     Route::middleware(['throttle:feed_post'])->group(function () {
-        Route::post('/home', [App\Http\Controllers\HomeController::class, 'feed_post'])->name('feed_post');
+        Route::post('/home', [App\Http\Controllers\HomeController::class, 'feed_post'])->name('feed_post'); // Posting to the feed
+        Route::post('/my/messages/compose', [App\Http\Controllers\MessageController::class, 'send_message'])->name('send_message'); // Sending a message to a user
     });
 
     Route::get('/user/{id}/friends/mutual', [App\Http\Controllers\PageController::class, 'mutual_friends'])->name('mutual_friends');
@@ -52,6 +53,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/my/friends/requests/{id}', [App\Http\Controllers\FriendController::class, 'handle'])->name('friend_handle');
     Route::post('/friends/add/{id}', [App\Http\Controllers\FriendController::class, 'add'])->name('friend_add');
     Route::post('/friends/remove/{id}', [App\Http\Controllers\FriendController::class, 'remove'])->name('friend_remove');
+
+    // Message system routes
+    Route::get('/my/messages', [App\Http\Controllers\MessageController::class, 'inbox'])->name('inbox');
+    Route::get('/my/messages/compose', [App\Http\Controllers\MessageController::class, 'compose'])->name('compose');
 });
 
 // Admin only
