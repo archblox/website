@@ -54,7 +54,7 @@
                     </div>
                 @endforeach
                 @if ($data['posts']->isEmpty())
-                    <p>Your feed is empty.</p>
+                    <p>Your feed is empty.</p>  
                 @endif
             </div>
             {{ $data['posts']->links() }}

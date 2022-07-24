@@ -30,8 +30,8 @@
         <h1>Welcome to ARCHBLOX!</h1>
         <p>ARCHBLOX is a Work-In-Progress revival.</p>
         <br>
-        <a href="{{ route('login') }}">Log In</a>
-        <a href="{{ route('register') }}">Sign Up</a>
+        <a alt="Log In button" href="{{ route('login') }}">Log In</a>
+        <a alt="Sign Up button" href="{{ route('register') }}">Sign Up</a>
         <br>
         <p id="ARCHBLOX" class="invisible">Want to check out the published site? <a href="https://archblox.com">Click
                 here!</a></p>
