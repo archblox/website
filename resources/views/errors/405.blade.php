@@ -13,7 +13,7 @@
         <link rel="apple-touch-startup-image" href="MORBLOXSplash.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css?id=e5Az527Gb1') }}">
         <script src="{{ asset('js/403.js') }}"></script>
     </head>
     <body>
