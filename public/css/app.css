@@ -327,9 +327,12 @@ body {
   padding-top: 5px;
 }
 
-.content_signup input,
 .content_signup button {
-  width: 90%;
+  width: 100%;
+}
+
+.content_signup input {
+  width: 98%;
 }
 
 .content p a,
