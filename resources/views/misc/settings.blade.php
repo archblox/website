@@ -147,10 +147,8 @@
             <div class="content_special" style="width: 100%; flex-wrap: nowrap;">
                 <div class="custom-select" style="width: 90%;">
                     <select name="Theme" style="width: 100%;">
-                        <option value="SKEUO">SKEUOMORPHIC</option>
-                        <option value="FLAT">FLAT</option>
-                        <option value="2013">2013</option>
-                        <option value="2007">2007</option>
+                        <option value="ARCHBLOX">ARCHBLOX</option>
+                        <option value="2018">2018</option>
                     </select>
                 </div>
                 <button style="width: max-content;" class="greenbutton">Save</button>
