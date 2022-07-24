@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use Illuminate\Support\Facades\Artisan;
 
 class AdminController extends Controller
 {
@@ -51,5 +52,11 @@ class AdminController extends Controller
         ];
 
         return view('admin.tree')->with('data', $data);
+    }
+
+    public function pull()
+    {
+        Artisan::call('app:refresh');
+        return Artisan::output();
     }
 }
