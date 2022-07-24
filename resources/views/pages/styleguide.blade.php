@@ -93,8 +93,7 @@
     <div id="FeedContainer">
         <div class="FeedContainerBox">
             <div class="FeedContainerBoxImageContainer">
-                <a href="#"><img alt="Profile Image" src="{{ asset('img/defaultrender.png') }}" width="60px"
-                        height="100%"></a>
+                <a href="#"><img alt="Profile Image" src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
             </div>
             <div class="FeedContainerBoxTextContainer">
                 <a id="FeedContainerBox1Username">#FeedContainerBox1Username</a>
@@ -104,8 +103,7 @@
         </div>
         <div class="FeedContainerBox">
             <div class="FeedContainerBoxImageContainer">
-                <a href="#"><img alt="Profile Image" src="{{ asset('img/defaultrender.png') }}" width="60px"
-                        height="100%"></a>
+                <a href="#"><img alt="Profile Image" src="{{ asset('img/defaultrender.png') }}" width="60px"height="100%"></a>
             </div>
             <div class="FeedContainerBoxTextContainer">
                 <a id="FeedContainerBox1Username">#FeedContainerBox1Username</a>
