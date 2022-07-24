@@ -66,6 +66,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\FeedPost');
     }
 
+    public function messages()
+    {
+        return $this->hasMany('App\Models\Message');
+    }
+
     public function settings()
     {
         return $this->hasOne('App\Models\UserSetting');

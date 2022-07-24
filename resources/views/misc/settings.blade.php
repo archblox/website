@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title')
     <title>Settings - {{ env('APP_NAME') }}</title>
-    <script src="{{ asset('js/settings.js') }}"></script>
+    <script src="{{ asset('js/settings.js?id=h8z4lam02') }}"></script>
     <style>
         .bio_form {
             width: 50%
@@ -71,6 +71,14 @@
                         <option value="1">24 Hour</option>
                     </select>
                 </span>
+                <span class="message_change" id="invisible">
+                    <br>
+                    <select name="message_preference">
+                        <option value="2">Everyone</option>
+                        <option value="1">Friends Only</option>
+                        <option value="0">No one</option>
+                    </select>
+                </span>
                 <br>
                 <br>
                 <button class="bluebutton" type="submit">Confirm</button>
@@ -82,10 +90,10 @@
 
 @section('alert')
     @if ($errors->any())
-        <div style="color:white;background-color:red;text-align:center;margin-top:72px">{{ $errors->first() }}</div>
+        <div id="alert">{{ $errors->first() }}</div>
     @endif
     @if (session()->has('change'))
-        <div style="color:white;background-color:green;text-align:center;margin-top:72px">{{ session()->get('change') }}
+        <div id="alert" style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)">{{ session()->get('change') }}
         </div>
     @endif
 @endsection
@@ -123,12 +131,25 @@
         </p>
         <p style="width: 100%;">Password: ******** <button class="bluebutton" onclick="openPopup(4)">Edit</button></p>
         <p style="width: 100%;">Date Display Preference:
-            {{ Auth::user()->settings->date_preference }} <button class="bluebutton"
-                onclick="openPopup(5)">Edit</button>
+            {{ Auth::user()->settings->date_preference }} <button class="bluebutton" onclick="openPopup(5)">Edit</button>
         </p>
         <p style="width: 100%;">Time Display Preference:
             {{ Auth::user()->settings->time_preference_24hr ? '24 Hour' : '12 Hour' }}
             <button class="bluebutton" onclick="openPopup(6)">Edit</button>
+        </p>
+        <p style="width: 100%;">Message Privacy: @php
+            switch (Auth::user()->settings->message_preference) {
+                case 2:
+                    echo 'Everyone';
+                    break;
+                case 1:
+                    echo 'Friends Only';
+                    break;
+                default:
+                    echo 'No one';
+            }
+        @endphp <button class="bluebutton"
+                onclick="openPopup(7)">Edit</button>
         </p>
     </div>
     </div>
@@ -137,7 +158,8 @@
             style="flex-wrap: wrap; flex-direction: column; width: 50%; align-content: flex-start;">
             <h3>Invite Keys</h3>
             <p>You can only create 1 invite every week. <br>Manage your keys and key history below.</p>
-            <p><button class="bluebutton"><a href="{{ route('key_index') }}" style="font-weight:normal;color:#fff">Create
+            <p><button class="bluebutton"><a href="{{ route('key_index') }}"
+                        style="font-weight:normal;color:#fff">Create
                         Invite Key</a></button></p>
         </div>
         <div class="content_special"

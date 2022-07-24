@@ -13,7 +13,7 @@
     <div id="profiletopcontainer">
         <h1 id="usernameframe">{{ $data['user']->name }}</h1>
         @if ($data['user']->settings->changed_name)
-        <h4>Previous Username: {{ $data['user']->settings->old_name }}</h4>
+            <h4>Previous Username: {{ $data['user']->settings->old_name }}</h4>
         @endif
         @if (Cache::has('is_online_' . $data['user']->id))
             <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
@@ -42,7 +42,20 @@
                     <button class="bluebutton" type="submit">Add Friend</button>
                 </form>
             @endif
-            <a href="#"><button class="greybutton">Message</button></a>
+            @switch($data['user']->settings->message_preference)
+                @case(2)
+                    <a href="/my/messages/compose?to={{ $data['user']->name }}"><button class="greybutton">Message</button></a>
+                    @break
+                @case(1)
+                    @if (Auth::user()->isFriendWith($data['user']))
+                        <a href="/my/messages/compose?to={{ $data['user']->name }}"><button class="greybutton">Message</button></a>
+                    @else
+                        <a href="#"><button class="greybutton" disabled>Message (Friends Only)</button></a>
+                    @endif
+                    @break
+                @default
+                    <a href="#"><button class="greybutton" disabled>Message (Disabled)</button></a>
+            @endswitch
         @endif
     </div>
     <div class="content_special">
@@ -87,7 +100,8 @@
         <div id="profilerightcontainer">
             <div class="content_special" style="justify-content: center;">
                 <h2>Games </h2>
-                <a href="{{ route('incomplete') }}" style="margin-left: 5px"> <button class="bluebutton" style="margin-top: 5px">View
+                <a href="{{ route('incomplete') }}" style="margin-left: 5px"> <button class="bluebutton"
+                        style="margin-top: 5px">View
                         All</button></a>
             </div>
             <p>This user hasn't made any games yet!</p>

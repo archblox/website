@@ -97,6 +97,16 @@ class SettingController extends Controller
 
                 $changeMsg = "Your time display preference has been changed.";
                 break;
+            case 7:
+                $request->validate([
+                    'message_preference' => ['required', 'string', 'in:2,1,0'],
+                ]);
+
+                $userSetting->message_preference = $request->message_preference;
+                $userSetting->save();
+
+                $changeMsg = "Your message privacy preference has been changed.";
+                break;
             default:
                 abort(404);
         }

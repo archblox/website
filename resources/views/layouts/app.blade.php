@@ -59,6 +59,7 @@
             <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() && count(Auth::user()->getFriendRequests())) <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span> @endif</a>
             <a class="smallnavbarbutton" href="{{ route('incomplete') }}">Avatar</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
+            <a class="smallnavbarbutton" href="{{ route('inbox') }}">Messages @if (!Auth::guest() && App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count()) <span class="warningtext">({{ App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count() }})</span> @endif</a>
             <a class="smallnavbarbutton" href="{{ route('blog') }}">Blog</a>
             @if (!Auth::guest() && Auth::user()->isAdmin())
                 <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>

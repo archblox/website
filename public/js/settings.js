@@ -52,6 +52,14 @@ function openPopup(id) {
             document.querySelector('.popup .warningtext').innerHTML = null;
             document.querySelector('.popup #desc').innerHTML = "Choose whether 12 hour or 24 hour time is displayed on the site.";
             break;
+        case 7:
+            active = 7;
+            setActiveSetting(7);
+            document.querySelector('.popup .message_change').removeAttribute('id');
+            document.querySelector('.popup #heading').innerHTML = "Change Message Privacy";
+            document.querySelector('.popup .warningtext').innerHTML = null;
+            document.querySelector('.popup #desc').innerHTML = "Choose who can send you messages on the website.";
+            break;
         default:
             console.error('Invalid setting.');
     }
@@ -77,6 +85,9 @@ function closePopup() {
             break;
         case 6:
             document.querySelector('.popup .time_change').setAttribute("id", "invisible");
+            break;
+        case 7:
+            document.querySelector('.popup .message_change').setAttribute("id", "invisible");
             break;
         default:
             console.error('Invalid setting.');
