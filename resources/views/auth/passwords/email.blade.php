@@ -27,27 +27,28 @@
         <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
-    <h1>Reset Password</h1>
-    <p>Check your junk folder if you do not recieve the email.</p>
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
-        <h3>Email Address</h3>
-        <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email"
-            placeholder="Email address..." autofocus>
-        @error('email')
-            <span class="warningtext" role="alert">
-                <br><strong>{{ $message }}</strong>
-            </span>
-        @enderror
-        <br><br>
+        <h1>Reset Password</h1>
+        <p>Check your junk folder if you do not recieve the email.</p><br>
+        <form method="POST" action="{{ route('password.email') }}">
+            @csrf
+            <h3>Email Address</h3>
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required
+                autocomplete="email" placeholder="Email address..." autofocus>
+            @error('email')
+                <span class="warningtext" role="alert">
+                    <br><strong>{{ $message }}</strong>
+                </span>
+            @enderror
+            <br><br>
 
-        <button type="submit" onClick="this.form.submit();this.disabled=true">
-            Send Password Reset Link
-        </button>
-    </form>
+            <button type="submit" onClick="this.form.submit();this.disabled=true">
+                Send Password Reset Link
+            </button>
+        </form>
     </div>
     <div id="footer_signup">
-        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.
+            We're still Morbin'!</p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>
     </div>
 </body>
