@@ -117,7 +117,7 @@ class SettingController extends Controller
     public function change_bio(Request $request)
     {
         $request->validateWithBag('bio_form', [
-            'bio' => 'required|min:3|max:2000'
+            'bio' => ['required', 'min:3', 'max:2000'],
         ]);
 
         $user = Auth::user();
@@ -125,5 +125,18 @@ class SettingController extends Controller
         $user->save();
 
         return redirect()->back()->with('success', 'Your bio has been updated.');
+    }
+
+    public function change_theme(Request $request)
+    {
+        $request->validateWithBag('theme', [
+            'theme_change' => ['required', 'string', 'in:1,2'],
+        ]);
+
+        $userSetting = Auth::user()->settings;
+        $userSetting->theme = $request->theme_change;
+        $userSetting->save();
+
+        return redirect()->back()->with('theme', 'Your theme has been updated.');
     }
 }

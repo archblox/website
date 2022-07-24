@@ -43,6 +43,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my/settings', [App\Http\Controllers\SettingController::class, 'settings'])->name('settings');
     Route::post('/my/settings', [App\Http\Controllers\SettingController::class, 'change_bio'])->name('change_bio');
     Route::post('/my/settings/change', [App\Http\Controllers\SettingController::class, 'change_settings'])->name('change_settings');
+    Route::post('/my/settings/theme', [App\Http\Controllers\SettingController::class, 'change_theme'])->name('change_theme');
     Route::get('/my/invites', [App\Http\Controllers\KeyController::class, 'index'])->name('key_index');
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 

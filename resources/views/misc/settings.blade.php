@@ -6,6 +6,10 @@
         .bio_form {
             width: 50%
         }
+
+        .theme_form {
+            width: 100%
+        }
     </style>
 @endsection
 @section('titlediscord')
@@ -93,7 +97,9 @@
         <div id="alert">{{ $errors->first() }}</div>
     @endif
     @if (session()->has('change'))
-        <div id="alert" style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)">{{ session()->get('change') }}
+        <div id="alert"
+            style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)">
+            {{ session()->get('change') }}
         </div>
     @endif
 @endsection
@@ -165,16 +171,30 @@
         <div class="content_special"
             style="flex-wrap: wrap; flex-direction: column; width: 50%; text-align: end; align-content: center;">
             <h3>Theme</h3>
-            <p>Selected Theme: SKEUOMORPHIC</p>
-            <div class="content_special" style="width: 100%; flex-wrap: nowrap;">
-                <div class="custom-select" style="width: 90%;">
-                    <select name="Theme" style="width: 100%;">
-                        <option value="ARCHBLOX">ARCHBLOX</option>
-                        <option value="2018">2018</option>
-                    </select>
+            <p>Selected Theme: @php
+                switch (Auth::user()->settings->theme) {
+                    case 2:
+                        echo '2018';
+                        break;
+                    default:
+                        echo 'ARCHBLOX';
+                }
+            @endphp</p>
+            <form action="{{ route('change_theme') }}" method="POST" class="theme_form">
+                @csrf
+                <div class="content_special" style="width: 100%; flex-wrap: nowrap;">
+                    <div class="custom-select" style="width: 90%;">
+                        <select name="theme_change" style="width: 100%;">
+                            <option value="1">ARCHBLOX</option>
+                            <option value="2">2018</option>
+                        </select>
+                    </div>
+                    <button style="width: max-content;" class="greenbutton" type="submit">Save</button>
                 </div>
-                <button style="width: max-content;" class="greenbutton">Save</button>
-            </div>
+            </form>
+            @if (session()->has('theme'))
+                <span style="color:green">{{ session()->get('theme') }}</span>
+            @endif
         </div>
     </div>
     <br>

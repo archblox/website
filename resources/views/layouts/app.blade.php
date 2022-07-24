@@ -16,14 +16,26 @@
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+    @auth
+        @switch (Auth::user()->settings->theme)
+            @case(2)
+                <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+                <link href="{{ asset('css/2018.css?id=e5Az527Gb1') }}" rel="stylesheet">
+            @break
+
+            @default
+                <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+        @endswitch
+    @else
+        <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+    @endauth
     @yield('extras')
 </head>
 
 <body>
     <div class="navbar">
-        <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
-                src="{{ asset('img/MORBLOXlogo.png') }}" width="200" height="40" /></a>
+        <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
+                width="200" height="40" /></a>
         <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
                 src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
         <div class="navbarbuttoncontainer">
@@ -42,8 +54,7 @@
             </div>
         @else
             <div id="navbarsignedincontainer">
-                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a
-                        href="{{ route('logout') }}"
+                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log
                         out...</a></p>
@@ -56,10 +67,17 @@
     </div>
     <div class="smallnav">
         <div class="smallnavbarbuttoncontainer">
-            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() && count(Auth::user()->getFriendRequests())) <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span> @endif</a>
+            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() && count(Auth::user()->getFriendRequests()))
+                    <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span>
+                @endif
+            </a>
             <a class="smallnavbarbutton" href="{{ route('incomplete') }}">Avatar</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
-            <a class="smallnavbarbutton" href="{{ route('inbox') }}">Messages @if (!Auth::guest() && App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count()) <span class="warningtext">({{ App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count() }})</span> @endif</a>
+            <a class="smallnavbarbutton" href="{{ route('inbox') }}">Messages @if (!Auth::guest() && App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count())
+                    <span
+                        class="warningtext">({{ App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count() }})</span>
+                @endif
+            </a>
             <a class="smallnavbarbutton" href="{{ route('blog') }}">Blog</a>
             @if (!Auth::guest() && Auth::user()->isAdmin())
                 <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
@@ -75,7 +93,8 @@
         @yield('content')
     </div>
     <div id="footer">
-        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.
+            We're still Morbin'!</p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a>
         </p>
     </div>
