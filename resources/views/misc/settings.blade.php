@@ -165,7 +165,7 @@
         <div class="content_special"
             style="flex-wrap: wrap; flex-direction: column; width: 50%; text-align: end; align-content: center;">
             <h3>Theme</h3>
-            <p>Selected Theme: SKEUOMORPHIC</p>
+            <p>Selected Theme: ARCHBLOX</p>
             <div class="content_special" style="width: 100%; flex-wrap: nowrap;">
                 <div class="custom-select" style="width: 90%;">
                     <select name="Theme" style="width: 100%;">
