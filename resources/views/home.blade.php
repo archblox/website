@@ -22,11 +22,11 @@
                     <input id="FeedBox" type="text" name="status" placeholder="Say something..." style="width: 80%;"
                         value="{{ old('status') }}">
                     <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton"
-                        type="submit" onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Post
+                        type="submit" alt="Post Button" onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Post
                         it!</button>
                 </p>
                 @if ($errors->any())
-                    <span class="warningtext">{{ $errors->first() }}</span>
+                    <span alt="Error: {{ $errors->first() }}" class="warningtext">{{ $errors->first() }}</span>
                 @endif
                 @if (session()->has('success'))
                     <span style="color:green">{{ session()->get('success') }}</span>
