@@ -1,19 +1,32 @@
-@extends('layouts.app')
-@section('title')
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
     <title>Reset Password - {{ env('APP_NAME') }}</title>
-@endsection
+    <meta charset="utf-8">
+    <meta content="Reset Password - ARCHBLOX" property="og:title" />
+    <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+    <meta content="https://archblox.com" property="og:url" />
+    <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image" />
+    <meta content="#4b4b4b" data-react-helmet="true" name="theme-color" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="{{ asset('img/MORBLOX.png') }}" />
+    <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
 
-@section('alert')
-    @if (session('status'))
-        <div id="alert"
-            style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)"
-            role="alert">
-            {{ session('status') }}
-        </div>
-    @endif
-@endsection
-
-@section('content')
+<body>
+    <br>
+    <div id="logo_signup">
+        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
+                width="200" height="40" /></a>
+        <p id="morbin">We're Still Morbin'</p>
+    </div>
+    <div class="content_signup">
     <h1>Reset Password</h1>
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
@@ -31,4 +44,11 @@
             Send Password Reset Link
         </button>
     </form>
-@endsection
+    </div>
+    <div id="footer_signup">
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
+        <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>
+    </div>
+</body>
+
+</html>
