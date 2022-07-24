@@ -28,6 +28,7 @@
     </div>
     <div class="content_signup">
     <h1>Reset Password</h1>
+    <p>Check your junk folder if you do not recieve the email.</p>
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
         <h3>Email Address</h3>
