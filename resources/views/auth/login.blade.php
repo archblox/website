@@ -43,14 +43,13 @@
             @endif
             <h3>Password</h3>
             <input id="password" type="password" name="password" required autocomplete="current-password">
-            <p class="important">Don't forget your password! Passwords are currently non-recoverable.</p>
             @error('password')
                 <span style="color:red" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
             <br>
-            <input style="width:5%;margin-bottom:15px" type="checkbox" name="remember" id="remember"
+            <input style="width:5%;margin-bottom:15px;margin-top:15px" type="checkbox" name="remember" id="remember"
                 {{ old('remember') ? 'checked' : '' }}>
 
             <label class="form-check-label" for="remember">
@@ -58,10 +57,10 @@
             </label>
             <button type="submit" class="greenbutton">Log in!</button>
             @if (Route::has('password.request'))
-                <br>
+                <br><br>
                 <a class="btn btn-link" href="{{ route('password.request') }}"
                     style="text-align:center;display:block;width:90%">
-                    {{ __('Forgot Your Password?') }}
+                    Forgot Your Password?
                 </a>
             @endif
         </form>
