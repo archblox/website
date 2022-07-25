@@ -53,10 +53,4 @@ class AdminController extends Controller
 
         return view('admin.tree')->with('data', $data);
     }
-
-    public function pull()
-    {
-        Artisan::call('app:refresh');
-        return Artisan::output();
-    }
 }
