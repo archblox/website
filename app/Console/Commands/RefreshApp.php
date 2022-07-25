@@ -109,19 +109,9 @@ class RefreshApp extends Command
 
     private function runPull()
     {
-        chdir("/var/www/MORBLOX-WEBSITE/morblox-site");
-        $chown = new Process(['sudo', 'chown', '$(whoami)', '/var/www/']);
-        $exception = new Process(['/usr/bin/git', 'config', '--global', '--add', 'safe.directory', '/var/www/MORBLOX-WEBSITE/morblox-site']);
-        $process = new Process(['/usr/bin/git', 'pull']);
+        $process = Process::fromShellCommandline('git pull');
+        $process->setWorkingDirectory(base_path());
         $this->info("Running 'git pull'");
-
-        $chown->run(function($type, $buffer) {
-            $this->pullLog[] = $buffer;
-        });
-        
-        $exception->run(function($type, $buffer) {
-            $this->pullLog[] = $buffer;
-        });
 
         $process->run(function($type, $buffer) {
             $this->pullLog[] = $buffer;
