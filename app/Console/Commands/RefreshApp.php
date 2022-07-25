@@ -109,9 +109,16 @@ class RefreshApp extends Command
 
     private function runPull()
     {
+        $addSafe = Process::fromShellCommandline('git config --global --add safe.directory /var/www/MORBLOX-WEBSITE/morblox-site');
+        $addSafe->setWorkingDirectory(base_path());
         $process = Process::fromShellCommandline('git pull');
         $process->setWorkingDirectory(base_path());
+
         $this->info("Running 'git pull'");
+
+        $addSafe->run(function($type, $buffer) {
+            $this->pullLog[] = $buffer;
+        });
 
         $process->run(function($type, $buffer) {
             $this->pullLog[] = $buffer;
