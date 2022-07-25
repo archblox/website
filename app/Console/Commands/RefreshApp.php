@@ -109,9 +109,14 @@ class RefreshApp extends Command
 
     private function runPull()
     {
-
-        $process = new Process(['git pull']);
+        chdir("/var/www/MORBLOX-WEBSITE/morblox-site");
+        $exception = new Process(['/usr/bin/git', 'config', '--global', '--add', 'safe.directory', '/var/www/MORBLOX-WEBSITE/morblox-site']);
+        $process = new Process(['/usr/bin/git', 'pull']);
         $this->info("Running 'git pull'");
+
+        $exception->run(function($type, $buffer) {
+            $this->pullLog[] = $buffer;
+        });
 
         $process->run(function($type, $buffer) {
             $this->pullLog[] = $buffer;
