@@ -30,8 +30,8 @@
         <strong>Requires Windows 7 or newer and Microsoft .net 3.1.</strong>
         <p>ARCHBLOX will be installed to %LOCALAPPDATA%\Archblx\Versions</p>
         <br>
-        <p>ARCHBLOX Launcher v2.5</p>
-        <p class="important">You must be logged in to join games.<p>
+        <p>ARCHBLOX Launcher v2.6</p>
+        <p class="important">You must be logged in to join games. Use studio to log in to your account.<p>
         <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> <a href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
         <br>
         <p>ARCHBLOX Studio Bootstrapper v1.3</p>
