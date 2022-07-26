@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $data['user']->name }}'s Friends (Mutual) - {{ env('APP_NAME') }}</title>
+    <title>{{ $user->name }}'s Friends (Mutual) - {{ env('APP_NAME') }}</title>
 @endsection
 
 @section('content')
-    <h1 id="usernameframe">Your Mutual Friends with {{ $data['user']->name }} ({{ Auth::user()->getMutualFriendsCount($data['user']) }})</h1>
-    <a href="{{ route('profile_friends', $data['user']->id) }}" class="tab">All Friends</a>
+    <h1 id="usernameframe">Your Mutual Friends with {{ $user->name }} ({{ Auth::user()->getMutualFriendsCount($user) }})</h1>
+    <a href="{{ route('profile_friends', $user->id) }}" class="tab">All Friends</a>
     @auth
-    <a href="#" class="tab_selected">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($data['user']) }})</a>
+    <a href="#" class="tab_selected">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($user) }})</a>
     @endauth
     <br>
     <br>
     <div class="content_special" id="FriendsContainer" style="flex-wrap: wrap;">
-        @foreach ($data['friends'] as $friend)
+        @foreach ($friends as $friend)
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
                     <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
@@ -32,7 +32,7 @@
                             {{ Carbon\Carbon::parse($friend->last_seen)->diffForHumans() }}</strong>
                     @endif
                     <br>
-                    @if (Auth::id() == $data['user']->id)
+                    @if (Auth::id() == $user->id)
                         <form action="{{ route('friend_remove', $friend->id) }}" method="POST"
                             style="display:inline-block">
                             @csrf
@@ -42,10 +42,10 @@
                 </div>
             </div>
         @endforeach
-        @if (!Auth::user()->getMutualFriendsCount($data['user']))
-            <p>You don't have any mutual friends with {{ $data['user']->name }}.</p>
+        @if (!Auth::user()->getMutualFriendsCount($user))
+            <p>You don't have any mutual friends with {{ $user->name }}.</p>
         @endif
-        {{ $data['friends']->links() }}
+        {{ $friends->links() }}
     </div>
     <br>
 @endsection

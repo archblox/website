@@ -22,7 +22,8 @@
                     <input id="FeedBox" type="text" name="status" placeholder="Say something..." style="width: 80%;"
                         value="{{ old('status') }}">
                     <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton"
-                        type="submit" alt="Post it!, Button" onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Post
+                        type="submit" alt="Post it!, Button"
+                        onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Post
                         it!</button>
                 </p>
                 @if ($errors->any())
@@ -34,7 +35,7 @@
             </form>
             <br>
             <div id="FeedContainer">
-                @foreach ($data['posts'] as $post)
+                @foreach ($posts as $post)
                     <div class="FeedContainerBox" id="FeedContainerBox1">
                         <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
                             <a href="{{ route('profile', $post->user->id) }}"><img alt="A image of {{ $post->user->name }}"
@@ -46,25 +47,27 @@
                             <p id="FeedContainerBox1Text" style="word-wrap:break-word;max-width:400px">
                                 "{{ $post->status }}"</p>
                             @if (!Auth::user()->settings->time_preference_24hr)
-                                <p id="FeedContainerBox1Timestamp" alt="">{{ $post->created_at->format('F d, Y h:i A') }}</p>
+                                <p id="FeedContainerBox1Timestamp" alt="">
+                                    {{ $post->created_at->format('F d, Y h:i A') }}</p>
                             @else
-                                <p id="FeedContainerBox1Timestamp" alt="">{{ $post->created_at->format('F d, Y H:i') }}</p>
+                                <p id="FeedContainerBox1Timestamp" alt="">
+                                    {{ $post->created_at->format('F d, Y H:i') }}</p>
                             @endif
                         </div>
                     </div>
                 @endforeach
-                @if ($data['posts']->isEmpty())
-                    <p>Your feed is empty.</p>  
+                @if ($posts->isEmpty())
+                    <p>Your feed is empty.</p>
                 @endif
             </div>
-            {{ $data['posts']->links() }}
+            {{ $posts->links() }}
         </div>
         <div id="gamesframe">
             <div class="content_special" style="justify-content: center;">
                 <h2>Friends ({{ Auth::user()->getFriendsCount() }})</h2>
                 @if (Auth::user()->getFriendsCount() > 0)
-                    <a alt="View All, button" href="{{ route('friends') }}" style="margin-left: 5px"> <button class="bluebutton"
-                            style="margin-top: 5px">View
+                    <a alt="View All, button" href="{{ route('friends') }}" style="margin-left: 5px"> <button
+                            class="bluebutton" style="margin-top: 5px">View
                             All</button></a>
                 @endif
             </div>
@@ -74,7 +77,7 @@
                 @if (Auth::user()->getFriendsCount() > 0)
                     <div id="profilefriendcontainer" class="content_special"
                         style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
-                        @foreach ($data['friends'] as $friend)
+                        @foreach ($friends as $friend)
                             <div class="profilefriend">
                                 <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
                                         src="{{ asset('img/defaultrender.png') }}" width="150px" height="110px"></a>

@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (auth()->user()) {
+        if (Auth::check()) {
             return redirect(route('home'));
         }
         return view('index');
@@ -43,21 +43,21 @@ class HomeController extends Controller
             }
 
             $query->whereIn('user_id', $friendIds)
-                ->orWhere('user_id', '=', Auth::id());
-        })->orderBy('id', 'desc')->paginate(10, ["*"], "feedPage");
+                ->orWhere('user_id', Auth::id());
+        })->latest()->paginate(10, ["*"], "feedPage");
 
         $data = [
             'friends' => $friends,
             'posts' => $posts,
         ];
 
-        return view('home')->with('data', $data);
+        return view('home')->with($data);
     }
 
     public function feed_post(Request $request)
     {
         $request->validate([
-            'status' => 'required|min:3|max:100'
+            'status' => ['required', 'min:3', 'max:100']
         ]);
 
         $post = new FeedPost;

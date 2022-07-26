@@ -26,19 +26,19 @@
                     name="searchBy" value="name">Search by Username</button><button class="bluebutton"
                     style="margin-left:2px" name="searchBy" value="id">Search by ID</button></div>
         </form>
-        @if ($data['user'])
+        @if ($user)
             <div id="SearchContainer">
-                <h2>User Found: {{ $data['user']->name }}</h2>
+                <h2>User Found: {{ $user->name }}</h2>
                 <ul>
                     <li>
                         <h3><a
-                                href="{{ route('profile', App\Models\User::where('name', $data['invited_by'])->first()->id) }}" target="_blank">{{ $data['invited_by'] }}</a>
+                                href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" target="_blank">{{ $invited_by }}</a>
                         </h3>
                     </li>
                     <ul>
-                        <li><a href="{{ route('profile', $data['user']->id) }}" target="_blank">{{ $data['user']->name }}</a></li>
+                        <li><a href="{{ route('profile', $user->id) }}" target="_blank">{{ $user->name }}</a></li>
                         <ul>
-                            @foreach ($data['children'] as $child)
+                            @foreach ($children as $child)
                                 <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a></li>
                             @endforeach
                         </ul>
@@ -48,7 +48,7 @@
         @endif
         @if (!request()->has('q'))
             <h5>Enter a username or ID.</h5>
-        @elseif (!$data['user'])
+        @elseif (!$user)
             <h5>No user was found, check if you entered the correct details.</h5>
         @endif
     </div>

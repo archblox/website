@@ -55,7 +55,7 @@ class FriendController extends Controller
     public function accept($id): void
     {
         $user = Auth::user();
-        $recipient = User::find($id);
+        $recipient = User::findOrFail($id);
 
         if (!$user->hasFriendRequestFrom($recipient)) {
             abort(404);
@@ -67,7 +67,7 @@ class FriendController extends Controller
     public function decline($id): void
     {
         $user = Auth::user();
-        $recipient = User::find($id);
+        $recipient = User::findOrFail($id);
 
         if (!$user->hasFriendRequestFrom($recipient)) {
             abort(404);
@@ -79,9 +79,9 @@ class FriendController extends Controller
     public function add($id)
     {
         $user = Auth::user();
-        $recipient = User::find($id);
+        $recipient = User::findOrFail($id);
 
-        if (!$recipient || $recipient->id == $user->id) {
+        if ($recipient->id == $user->id) {
             abort(404);
         }
 
@@ -96,9 +96,9 @@ class FriendController extends Controller
     public function remove($id)
     {
         $user = Auth::user();
-        $recipient = User::find($id);
+        $recipient = User::findOrFail($id);
 
-        if (!$recipient || $recipient->id == $user->id) {
+        if ($recipient->id == $user->id) {
             abort(404);
         }
 

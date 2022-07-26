@@ -27,13 +27,8 @@ class PageController extends Controller
 
     public function profile($id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $badges = DB::table('badges')->get();
-
-        if (!$user) {
-            abort(404);
-        }
-
         $friends = $user->getFriends($perPage = 3);
 
         $data = [
@@ -42,16 +37,12 @@ class PageController extends Controller
             'friends' => $friends
         ];
 
-        return view('pages.profile')->with('data', $data);
+        return view('pages.profile')->with($data);
     }
 
     public function profile_friends($id)
     {
-        $user = User::find($id);
-        if (!$user) {
-            abort(404);
-        }
-
+        $user = User::findOrFail($id);
         $friends = $user->getFriends($perPage = 10);
 
         $data = [
@@ -59,13 +50,13 @@ class PageController extends Controller
             'friends' => $friends
         ];
 
-        return view('pages.profile_friends')->with('data', $data);
+        return view('pages.profile_friends')->with($data);
     }
 
     public function mutual_friends($id)
     {
-        $user = User::find($id);
-        if (!$user || $user->id == Auth::id()) {
+        $user = User::findOrFail($id);
+        if ($user->id == Auth::id()) {
             abort(404);
         }
 
@@ -76,13 +67,13 @@ class PageController extends Controller
             'friends' => $friends
         ];
 
-        return view('pages.mutual_friends')->with('data', $data);
+        return view('pages.mutual_friends')->with($data);
     }
 
     public function users(Request $request)
     {
         if ($request->has('q')) {
-            $users = DB::table('users')->where('name', 'LIKE', '%' . $request->q . '%')->paginate(10);
+            $users = User::where('name', 'LIKE', '%' . $request->q . '%')->paginate(10);
         } else {
             $users = User::paginate(10);
         }

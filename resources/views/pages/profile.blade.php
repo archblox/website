@@ -1,54 +1,54 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $data['user']->name }} - {{ env('APP_NAME') }}</title>
+    <title>{{ $user->name }} - {{ env('APP_NAME') }}</title>
 @endsection
 @section('titlediscord')
-    <meta content="{{ $data['user']->name }} - {{ env('APP_NAME') }}" property="og:title" />
+    <meta content="{{ $user->name }} - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
-    <meta content="{{ $data['user']->blurb }} | ARCHBLOX is a work in progress revival." property="og:description" />
+    <meta content="{{ $user->blurb }} | ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 
 @section('content')
     <div id="profiletopcontainer">
-        <h1 id="usernameframe">{{ $data['user']->name }}</h1>
-        @if ($data['user']->settings->changed_name)
-            <h4>Previous Username: {{ $data['user']->settings->old_name }}</h4>
+        <h1 id="usernameframe">{{ $user->name }}</h1>
+        @if ($user->settings->changed_name)
+            <h4>Previous Username: {{ $user->settings->old_name }}</h4>
         @endif
-        @if (Cache::has('is_online_' . $data['user']->id))
+        @if (Cache::has('is_online_' . $user->id))
             <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
         @else
             <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
-                {{ Carbon\Carbon::parse($data['user']->last_seen)->diffForHumans() }}</strong>
+                {{ Carbon\Carbon::parse($user->last_seen)->diffForHumans() }}</strong>
         @endif
         <br>
-        @if (!Auth::guest() && Auth::id() != $data['user']->id)
-            @if (Auth::user()->hasSentFriendRequestTo($data['user']))
+        @if (!Auth::guest() && Auth::id() != $user->id)
+            @if (Auth::user()->hasSentFriendRequestTo($user))
                 <button class="bluebutton" type="submit" disabled>Pending...</button>
-            @elseif (Auth::user()->hasFriendRequestFrom($data['user']))
-                <form action="{{ route('friend_handle', $data['user']->id) }}" method="POST">
+            @elseif (Auth::user()->hasFriendRequestFrom($user))
+                <form action="{{ route('friend_handle', $user->id) }}" method="POST">
                     @csrf
                     <button class="greenbutton" name="action" type="submit" value="accept">Accept</button>
                     <button class="redbutton" name="action" type="submit" value="decline">Decline</button>
                 </form>
-            @elseif (Auth::user()->isFriendWith($data['user']))
-                <form action="{{ route('friend_remove', $data['user']->id) }}" method="POST" style="display:inline-block">
+            @elseif (Auth::user()->isFriendWith($user))
+                <form action="{{ route('friend_remove', $user->id) }}" method="POST" style="display:inline-block">
                     @csrf
                     <button class="redbutton" type="submit">Unfriend</button>
                 </form>
             @else
-                <form action="{{ route('friend_add', $data['user']->id) }}" method="POST" style="display:inline-block">
+                <form action="{{ route('friend_add', $user->id) }}" method="POST" style="display:inline-block">
                     @csrf
                     <button class="bluebutton" type="submit">Add Friend</button>
                 </form>
             @endif
-            @switch($data['user']->settings->message_preference)
+            @switch($user->settings->message_preference)
                 @case(2)
-                    <a href="/my/messages/compose?to={{ $data['user']->name }}"><button class="greybutton">Message</button></a>
+                    <a href="/my/messages/compose?to={{ $user->name }}"><button class="greybutton">Message</button></a>
                     @break
                 @case(1)
-                    @if (Auth::user()->isFriendWith($data['user']))
-                        <a href="/my/messages/compose?to={{ $data['user']->name }}"><button class="greybutton">Message</button></a>
+                    @if (Auth::user()->isFriendWith($user))
+                        <a href="/my/messages/compose?to={{ $user->name }}"><button class="greybutton">Message</button></a>
                     @else
                         <a href="#"><button class="greybutton" disabled>Message (Friends Only)</button></a>
                     @endif
@@ -60,8 +60,8 @@
     </div>
     <div class="content_special">
         <div id="profileleftcontainer">
-            @if (!empty($data['user']->feedposts->last()->status))
-                <address id="status" style="word-wrap:break-word">"{{ $data['user']->feedposts->last()->status }}"
+            @if (!empty($user->feedposts->last()->status))
+                <address id="status" style="word-wrap:break-word">"{{ $user->feedposts->last()->status }}"
                 </address>
             @else
                 <address id="status">"I'm new to ARCHBLOX!"</address>
@@ -69,21 +69,21 @@
             <img alt="profile image" src="{{ asset('img/defaultrender.png') }}" width="75%">
             <div id="bio"
                 style="min-width:350px;max-width:350px;text-align:center;margin:0 auto;max-height:275px;overflow-y: auto;">
-                {!! nl2br(e($data['user']->blurb)) !!}</div>
+                {!! nl2br(e($user->blurb)) !!}</div>
             <br>
             <div id="stats">
                 @guest
-                    <h3>Joined: {{ $data['user']->created_at->format('d/m/Y') }}</h3>
+                    <h3>Joined: {{ $user->created_at->format('d/m/Y') }}</h3>
                 @else
-                    <h3>Joined: {{ $data['user']->created_at->format(Auth::user()->settings->date_preference) }}</h3>
+                    <h3>Joined: {{ $user->created_at->format(Auth::user()->settings->date_preference) }}</h3>
                 @endguest
                 <h3>Place Visits: 0</h3>
             </div>
             <br>
             <h2>Role</h2>
             <div style="white-space:nowrap">
-                @foreach ($data['badges'] as $badge)
-                    @foreach ($data['user']->badges as $user_badge)
+                @foreach ($badges as $badge)
+                    @foreach ($user->badges as $user_badge)
                         @if ($badge->id == $user_badge)
                             <div style="width:120px;display:inline-block">
                                 <img src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
@@ -107,19 +107,19 @@
             <p>This user hasn't made any games yet!</p>
             <br>
             <div class="content_special" style="justify-content: center;">
-                <h2>Friends ({{ $data['user']->getFriendsCount() }})</h2>
-                @if ($data['user']->getFriendsCount() > 0)
-                    <a href="{{ route('profile_friends', $data['user']->id) }}" style="margin-left: 5px"> <button
+                <h2>Friends ({{ $user->getFriendsCount() }})</h2>
+                @if ($user->getFriendsCount() > 0)
+                    <a href="{{ route('profile_friends', $user->id) }}" style="margin-left: 5px"> <button
                             class="bluebutton" style="margin-top: 5px">View All</button></a>
             </div>
-            @if (Auth::check() && Auth::id() != $data['user']->id && Auth::user()->getMutualFriendsCount($data['user']) > 0)
-                <a href="{{ route('mutual_friends', $data['user']->id) }}"
-                    style="color:blue;font-size:12px">{{ Auth::user()->getMutualFriendsCount($data['user']) }} Mutual
+            @if (Auth::check() && Auth::id() != $user->id && Auth::user()->getMutualFriendsCount($user) > 0)
+                <a href="{{ route('mutual_friends', $user->id) }}"
+                    style="color:blue;font-size:12px">{{ Auth::user()->getMutualFriendsCount($user) }} Mutual
                     Friends</a>
             @endif
             <div id="profilefriendcontainer" class="content_special"
                 style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
-                @foreach ($data['friends'] as $friend)
+                @foreach ($friends as $friend)
                     <div class="profilefriend">
                         <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
                                 src="{{ asset('img/defaultrender.png') }}" width="150px" height="110px"></a>

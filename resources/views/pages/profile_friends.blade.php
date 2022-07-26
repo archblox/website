@@ -1,20 +1,20 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $data['user']->name }}'s Friends - {{ env('APP_NAME') }}</title>
+    <title>{{ $user->name }}'s Friends - {{ env('APP_NAME') }}</title>
 @endsection
 
 @section('content')
-    <h1 id="usernameframe">{{ $data['user']->name }}'s Friends ({{ $data['user']->getFriendsCount() }})</h1>
+    <h1 id="usernameframe">{{ $user->name }}'s Friends ({{ $user->getFriendsCount() }})</h1>
     <a href="#" class="tab_selected">All Friends</a>
     @auth
-    @if ($data['user']->id != Auth::id())
-    <a href="{{ route('mutual_friends', $data['user']->id) }}" class="tab">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($data['user']) }})</a>
+    @if ($user->id != Auth::id())
+    <a href="{{ route('mutual_friends', $user->id) }}" class="tab">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($user) }})</a>
     @endif
     @endauth
     <br>
     <br>
     <div class="content_special" id="FriendsContainer" style="flex-wrap: wrap;">
-        @foreach ($data['friends'] as $friend)
+        @foreach ($friends as $friend)
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
                     <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
@@ -34,7 +34,7 @@
                             {{ Carbon\Carbon::parse($friend->last_seen)->diffForHumans() }}</strong>
                     @endif
                     <br>
-                    @if (Auth::id() == $data['user']->id)
+                    @if (Auth::id() == $user->id)
                         <form action="{{ route('friend_remove', $friend->id) }}" method="POST"
                             style="display:inline-block">
                             @csrf
@@ -44,10 +44,10 @@
                 </div>
             </div>
         @endforeach
-        @if (!$data['user']->getFriendsCount())
-            <p>{{ $data['user']->name }} hasn't made friends with anyone yet.</p>
+        @if (!$user->getFriendsCount())
+            <p>{{ $user->name }} hasn't made friends with anyone yet.</p>
         @endif
-        {{ $data['friends']->links() }}
+        {{ $friends->links() }}
     </div>
     <br>
 @endsection

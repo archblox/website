@@ -13,8 +13,8 @@ class KeyController extends Controller
 {
     public function index()
     {
-        $fetchKeys = InviteKey::where('created_by', Auth::id())->orderBy('id', 'desc')->get();
-        $activeKey = InviteKey::where('created_by', Auth::id())->orderBy('id', 'desc')->first();
+        $fetchKeys = InviteKey::where('created_by', Auth::id())->latest()->get();
+        $activeKey = InviteKey::where('created_by', Auth::id())->latest()->first();
 
         if (!$fetchKeys->isEmpty()) {
             if ($activeKey->created_at->addWeek()->gt(Carbon::now())) {
@@ -36,8 +36,8 @@ class KeyController extends Controller
 
     public function create()
     {
-        $fetchKeys = InviteKey::where('created_by', Auth::id())->orderBy('id', 'desc')->get();
-        $activeKey = InviteKey::where('created_by', Auth::id())->orderBy('id', 'desc')->first();
+        $fetchKeys = InviteKey::where('created_by', Auth::id())->latest()->get();
+        $activeKey = InviteKey::where('created_by', Auth::id())->latest()->first();
 
         // Validation
         if (!$fetchKeys->isEmpty() && $activeKey->created_at->addWeek()->gt(Carbon::now())) {

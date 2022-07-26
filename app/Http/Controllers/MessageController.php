@@ -12,21 +12,21 @@ class MessageController extends Controller
 {
     public function inbox()
     {
-        $messages = Message::where('sendto_id', Auth::id())->where('deleted', false)->orderBy('id', 'desc')->paginate(10);
+        $messages = Message::where('sendto_id', Auth::id())->where('deleted', false)->latest()->paginate(10);
 
         return view('messages.index')->with('messages', $messages);
     }
 
     public function inbox_sent()
     {
-        $messages = Message::where('user_id', Auth::id())->orderBy('id', 'desc')->paginate(10);
+        $messages = Message::where('user_id', Auth::id())->latest()->paginate(10);
 
         return view('messages.sent')->with('messages', $messages);
     }
 
     public function deleted()
     {
-        $messages = Message::where('sendto_id', Auth::id())->where('deleted', true)->orderBy('id', 'desc')->paginate(10);
+        $messages = Message::where('sendto_id', Auth::id())->where('deleted', true)->latest()->paginate(10);
 
         return view('messages.deleted')->with('messages', $messages);
     }
