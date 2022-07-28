@@ -5,9 +5,7 @@
 
 @section('alert')
     @if (session()->has('success'))
-        <div id="alert"
-            style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)">
-            {{ session()->get('success') }}</div>
+        <div id="success">{{ session()->get('success') }}</div>
     @endif
     @if ($errors->any())
         <div id="alert">{{ $errors->first() }}</div>
@@ -37,11 +35,11 @@
             onclick="window.location='/my/messages/{{ $message->id }}';">
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
-                    <a href="{{ route('profile', $message->user_id) }}"><img alt="Profile Image"
+                    <a onclick="window.location='/my/messages/{{ $message->id }}';"><img alt="Profile Image"
                             src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
                 </div>
                 <div id="FriendsContainerBox1TextContainer">
-                    <a href="{{ route('profile', $message->user_id) }}"
+                    <a  onclick="window.location='/my/messages/{{ $message->id }}';"
                         id="FeedContainerBox1Username">{{ $message->user->name }}</a>
                     <p>{{ $message->subject }}</p>
                     @if (!Auth::user()->settings->time_preference_24hr)

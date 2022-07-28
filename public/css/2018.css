@@ -1,3 +1,15 @@
+@keyframes alertanim {
+	0% {
+	  top: 0px;
+	  animation-timing-function: linear;
+	}
+  
+	100% {
+	  background-position-x: 40px;
+	  animation-timing-function: linear;
+	}
+}
+
 html {
 	background: none;
 }
@@ -46,6 +58,21 @@ body {
     font-weight: 500;
 	line-height: 1.92857;
 	height: 28px;
+}
+
+#alert, #success {
+	top: 40px;
+	animation: alertanim;
+	animation-duration: 250ms;
+	animation-iteration-count: 1; 
+}
+
+#alert {
+	background: #D86868;
+}
+
+#success {
+	background: #02b757;
 }
 
 .smallnavbarbutton:nth-child(1):hover, .smallnavbarbutton:nth-child(3):hover, .profilefriend #FeedContainerBox1Username:hover, .smallnavbarbutton:nth-child(4):hover, .smallnavbarbutton:nth-child(5):hover, .smallnavbarbutton:nth-child(6):hover {

@@ -97,10 +97,7 @@
         <div id="alert">{{ $errors->first() }}</div>
     @endif
     @if (session()->has('change'))
-        <div id="alert"
-            style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)">
-            {{ session()->get('change') }}
-        </div>
+        <div id="success">{{ session()->get('change') }}</div>
     @endif
 @endsection
 

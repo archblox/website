@@ -10,10 +10,26 @@
   }
 }
 
-#alert {
+@keyframes alertanim {
+	0% {
+	  top: 0px;
+	  animation-timing-function: linear;
+	}
+  
+	100% {
+	  background-position-x: 72px;
+	  animation-timing-function: linear;
+	}
+}
+
+#alert, #success {
   height: fit-content;
   margin: 0px;
+  animation: alertanim;
+	animation-duration: 250ms;
+	animation-iteration-count: 1; 
   position: fixed;
+  z-index: 10;
   top: 72px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -21,7 +37,14 @@
   padding-left: 5px;
   width: 100%;
   text-align: center;
+}
+
+#alert {
   background: linear-gradient(#f07575 10%, #de2323 100%);
+}
+
+#success {
+  background:linear-gradient(#a3e2bd 10%,#02b757 100%)
 }
 
 .warningtext {
@@ -99,6 +122,7 @@
   padding-bottom: 2px;
   color: white;
   line-height: normal;
+  z-index: 100;
   display: inline-flex;
   vertical-align: middle;
   width: 100%;
@@ -242,6 +266,7 @@ top: 11px;
   padding-left: 5px;
   padding-right: 5px;
   position: fixed;
+  z-index: 100;
   top: 43px;
   padding-top: 2px;
   padding-bottom: 2px;
