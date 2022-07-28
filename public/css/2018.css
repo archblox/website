@@ -73,7 +73,7 @@ body {
 #alert, #success {
 	top: 40px;
 	animation: alertanim;
-	animation-duration: 5s;
+	animation-duration: 2s;
 	animation-iteration-count: 1; 
 }
 
