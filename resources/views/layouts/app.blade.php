@@ -19,15 +19,15 @@
     @auth
         @switch (Auth::user()->settings->theme)
             @case(2)
-                <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
-                <link href="{{ asset('css/2018.css?id=e5Az527Gb1') }}" rel="stylesheet">
+                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+                <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
             @break
 
             @default
-                <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
         @endswitch
     @else
-        <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endauth
     @yield('extras')
 </head>
