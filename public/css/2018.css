@@ -48,6 +48,18 @@ body {
 	height: 28px;
 }
 
+#alert, #success {
+	top: 40px;
+}
+
+#alert {
+	background: #D86868;
+}
+
+#success {
+	background: #02b757;
+}
+
 .smallnavbarbutton:nth-child(1):hover, .smallnavbarbutton:nth-child(3):hover, .profilefriend #FeedContainerBox1Username:hover, .smallnavbarbutton:nth-child(4):hover, .smallnavbarbutton:nth-child(5):hover, .smallnavbarbutton:nth-child(6):hover {
     color: #00a2ff;
     text-decoration: none;

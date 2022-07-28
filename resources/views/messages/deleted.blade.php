@@ -5,8 +5,7 @@
 
 @section('alert')
     @if (session()->has('success'))
-        <div id="alert"
-            style="background:linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%)">
+        <div id="success">
             {{ session()->get('success') }}
         </div>
     @endif
