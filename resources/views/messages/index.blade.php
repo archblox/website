@@ -37,11 +37,11 @@
             onclick="window.location='/my/messages/{{ $message->id }}';">
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
-                    <a href="{{ route('profile', $message->user_id) }}"><img alt="Profile Image"
+                    <a onclick="window.location='/my/messages/{{ $message->id }}';"><img alt="Profile Image"
                             src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
                 </div>
                 <div id="FriendsContainerBox1TextContainer">
-                    <a href="{{ route('profile', $message->user_id) }}"
+                    <a  onclick="window.location='/my/messages/{{ $message->id }}';"
                         id="FeedContainerBox1Username">{{ $message->user->name }}</a>
                     <p>{{ $message->subject }}</p>
                     @if (!Auth::user()->settings->time_preference_24hr)
