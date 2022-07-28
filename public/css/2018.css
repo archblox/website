@@ -1,12 +1,22 @@
-@keyframes in {
-	from {
+@keyframes alertanim {
+	0% {
 	  top: 0px;
 	  animation-timing-function: linear;
 	}
   
-	to {
+	10% {
 	  background-position-x: 40px;
 	  animation-timing-function: linear;
+	}
+
+	90% {
+		background-position-x: 40px;
+		animation-timing-function: linear;
+	  }
+
+	100% {
+		top: 0px;
+		animation-timing-function: linear;
 	}
   }
 
@@ -62,8 +72,8 @@ body {
 
 #alert, #success {
 	top: 40px;
-	animation: in;
-	animation-duration: 50ms;
+	animation: alertanim;
+	animation-duration: 5s;
 	animation-iteration-count: 1; 
 }
 
