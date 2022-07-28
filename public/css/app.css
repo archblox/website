@@ -10,9 +10,24 @@
   }
 }
 
+@keyframes alertanim {
+	0% {
+	  top: 0px;
+	  animation-timing-function: linear;
+	}
+  
+	100% {
+	  background-position-x: 72px;
+	  animation-timing-function: linear;
+	}
+}
+
 #alert, #success {
   height: fit-content;
   margin: 0px;
+  animation: alertanim;
+	animation-duration: 250ms;
+	animation-iteration-count: 1; 
   position: fixed;
   top: 72px;
   padding-top: 2px;
