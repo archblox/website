@@ -55,7 +55,7 @@
             <label class="form-check-label" for="remember">
                 {{ __('Remember Me') }}
             </label>
-            <button type="submit" class="greenbutton">Log in!</button>
+            <button type="submit" class="greenbutton" onClick="this.form.submit();this.disabled=true">Log in!</button>
             @if (Route::has('password.request'))
                 <br><br>
                 <a class="btn btn-link" href="{{ route('password.request') }}"

@@ -12,7 +12,7 @@
 
 @section('content')
     <h1 id="usernameframe">My Messages</h1>
-    <button class="greenbutton"><a href="{{ route('compose') }}" style="color:white;font-weight:normal">New
+    <button type="button" class="greenbutton"><a href="{{ route('compose') }}" style="color:white;font-weight:normal">New
             Message</a></button>
     <br>
     <br>

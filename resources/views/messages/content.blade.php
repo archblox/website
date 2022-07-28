@@ -4,7 +4,10 @@
 @endsection
 
 @section('content')
-    <button class="greybutton" onclick="window.location=document.referrer;">Back</button>
+    <button type="button" class="greybutton" onclick="window.location=document.referrer;">Back</button>
+    @if ($message->sendto_id == Auth::id())
+    <button type="button" class="greybutton" onclick="window.location='/my/messages/compose?replyTo={{ $message->id }}'">Reply</button>
+    @endif
     @if (Auth::id() != $message->user_id)
         <form action="{{ route('delete_message', $message->id) }}" method="post" style="display:inline-block">
             @csrf

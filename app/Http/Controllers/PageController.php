@@ -75,7 +75,7 @@ class PageController extends Controller
         if ($request->has('q')) {
             $users = User::where('name', 'LIKE', '%' . $request->q . '%')->paginate(10);
         } else {
-            $users = User::paginate(10);
+            $users = User::latest('last_seen')->paginate(10);
         }
 
         return view('pages.users')->with('users', $users);

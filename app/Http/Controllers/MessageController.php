@@ -31,9 +31,30 @@ class MessageController extends Controller
         return view('messages.deleted')->with('messages', $messages);
     }
 
-    public function compose()
+    public function compose(Request $request)
     {
-        return view('messages.create');
+        $replyName = "";
+        $replySubject = "RE: ";
+        $replyContent = "\n\n\n-------------------------------------\n";
+
+        if ($request->has('replyTo')) {
+            $id = $request->replyTo;
+            $message = Message::findOrFail($id);
+            if ($message->sendto_id != Auth::id()) {
+                abort(404);
+            }
+            $replyName = $message->user->name;
+            $replySubject .= $message->subject;
+            $replyContent .= "On " .  $message->created_at->format('F d, Y') . " " . $replyName . " wrote: \n" . $message->content;
+        }
+
+        $data = [
+            'replyName' => $replyName,
+            'replySubject' => $replySubject,
+            'replyContent' => $replyContent,
+        ];
+
+        return view('messages.create')->with($data);
     }
 
     public function delete_all()

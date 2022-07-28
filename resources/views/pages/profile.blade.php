@@ -44,7 +44,7 @@
             @endif
             @switch($user->settings->message_preference)
                 @case(2)
-                    <a href="/my/messages/compose?to={{ $user->name }}"><button class="greybutton">Message</button></a>
+                    <a href="/my/messages/compose?to={{ $user->name }}"><button class="greybutton" type="button">Message</button></a>
                     @break
                 @case(1)
                     @if (Auth::user()->isFriendWith($user))
