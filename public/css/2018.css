@@ -1,3 +1,15 @@
+@keyframes in {
+	from {
+	  top: 0px;
+	  animation-timing-function: linear;
+	}
+  
+	to {
+	  background-position-x: 40px;
+	  animation-timing-function: linear;
+	}
+  }
+
 html {
 	background: none;
 }
@@ -50,6 +62,9 @@ body {
 
 #alert, #success {
 	top: 40px;
+	animation: in;
+	animation-duration: 50ms;
+	animation-iteration-count: 1; 
 }
 
 #alert {
