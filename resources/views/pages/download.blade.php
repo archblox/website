@@ -32,7 +32,7 @@
         <br>
         <strong>Requires .NET Framework 4.0.</strong>
         <p>Windows XP/Vista v1.0</p>
-        <p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Launcher</a> <a href="{{ asset('xp/ARCHBLOXBootstrapper.exe') }}">Studio</a></p>
+        <p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Launcher</a> <a href="{{ asset('xp/ARCHBLOXBootstrapper_XP.exe') }}">Studio</a></p>
         <br>
         <strong>The below downloads require Windows 7 or newer and they require .NET Core 3.1.</strong>
         <br>
