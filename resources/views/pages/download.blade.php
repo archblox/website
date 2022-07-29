@@ -27,17 +27,26 @@
     </div>
     <div class="content_signup">
         <h1>Downloads</h1>
-        <strong>Requires Windows 7 or newer and Microsoft .net 3.1.</strong>
         <p>ARCHBLOX will be installed to %LOCALAPPDATA%\Archblx\Versions</p>
+        <p class="important">You must be logged in to join games. Use studio to log in to your account.<p>
+        <br>
+        <p>Windows XP/Vista v1.0</p>
+        <strong>Requires .NET Framework 4.0.</strong>
+        <p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Launcher</a> <a href="{{ asset('xp/ARCHBLOXBootstrapper.exe') }}">Studio</a></p>
+        <br>
+        <p>Windows 7 or newer</p>
+        <strong>Requires .NET Core 3.1.</strong>
         <br>
         <p>ARCHBLOX Launcher v2.6</p>
-        <p class="important">You must be logged in to join games. Use studio to log in to your account.<p>
         <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> <a href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
         <br>
         <p>ARCHBLOX Studio Bootstrapper v1.3</p>
         <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> <a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a></p>
         <br>
         <p>If you get a popup saying "Windows protected your PC", press "More info" and then press "Run anyway".</p>
+        <br>
+        <p>If you get a popup saying "Windows protected your PC", press "More info" and then press "Run anyway".</p>
+
     </div>
     <div id="footer_signup">
         <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
