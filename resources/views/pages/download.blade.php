@@ -34,8 +34,7 @@
         <p>Windows XP/Vista v1.0</p>
         <p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Launcher</a> <a href="{{ asset('xp/ARCHBLOXBootstrapper.exe') }}">Studio</a></p>
         <br>
-        <p>Windows 7 or newer</p>
-        <strong>Requires .NET Core 3.1.</strong>
+        <strong>The below downloads require Windows 7 or newer and they require .NET Core 3.1.</strong>
         <br>
         <p>ARCHBLOX Launcher v2.6</p>
         <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> <a href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
