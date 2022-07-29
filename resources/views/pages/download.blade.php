@@ -27,11 +27,11 @@
     </div>
     <div class="content_signup">
         <h1>Downloads</h1>
-        <p>ARCHBLOX will be installed to %LOCALAPPDATA%\Archblx\Versions</p>
+        <p>ARCHBLOX will be installed to %LOCALAPPDATA%\Archblx</p>
         <p class="important">You must be logged in to join games. Use studio to log in to your account.<p>
         <br>
-        <p>Windows XP/Vista v1.0</p>
         <strong>Requires .NET Framework 4.0.</strong>
+        <p>Windows XP/Vista v1.0</p>
         <p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Launcher</a> <a href="{{ asset('xp/ARCHBLOXBootstrapper.exe') }}">Studio</a></p>
         <br>
         <p>Windows 7 or newer</p>
