@@ -37,8 +37,8 @@
         <!-- <p>You are unable to appeal your ban.</p> --> <!-- If banned from the server -->
         <!-- <p>To reactivate your account, click the button below.</p> --> <!-- If account is disabled only -->
         <p>Your account will be fully deleted in 3 months.</p> <!-- If account is disabled/terminated only, show time remaining. -->
-        <!-- <button class="greybutton">Reactivate Account.</button> --> <!-- Show this button once the ban time period is over, the account is disabled or it is a warn -->
-        <button class="redbutton">Log out</button> <!-- Show this button only if the account is terminated, or is currently in the ban time period.  -->
+        <!-- <a><button class="greybutton">Reactivate Account</button></a> --> <!-- Show this button once the ban time period is over, the account is disabled or it is a warn -->
+        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button class="redbutton">Log out</button></a> <!-- Show this button only if the account is terminated, or is currently in the ban time period.  -->
     </div>
     <div id="footer_signup">
         <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
