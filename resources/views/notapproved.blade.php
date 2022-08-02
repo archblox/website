@@ -20,6 +20,9 @@
 </head>
 
 <body>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                @csrf
+</form>
     <br>
     <div id="logo_signup">
         <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}"
