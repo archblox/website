@@ -27,12 +27,13 @@
         <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
-        <h1>Ban Type Goes here (Warning, [day number] Day Ban, Account Terminated)</h1>
-        <p>Timestamp</p>
-        <p><strong>Moderator Note:</strong> bla bla bla this is some text xd!.</p>
-        <p>If you would like to appeal, please join our discord server.</p>
-        <button class="greybutton">Re-Activate my account</button>
-        <button class="greybutton">Log out</button>
+        <h1>Account Deleted</h1> <!-- Ban Type Goes here (Warning, [day number] Day Ban, Account Deleted) -->
+        <p>01/01/1970 12:00 AM</p> <!-- Timestamp -->
+        <p><strong>Moderator Note:</strong> i like men</p> <!-- Moderator Note -->
+        <p>If you would like to appeal, please join our discord server.</p> <!-- If not banned from the server -->
+        <!-- <p>You are unable to appeal your ban.</p> --> <!-- If banned from the server -->
+        <button class="greybutton">Re-Activate my account</button> <!-- Show this button once the ban time period is over or it is a warn -->
+        <button class="greybutton">Log out</button> <!-- Show this button only if the account is terminated, or is currently in the ban time period.  -->
     </div>
     <div id="footer_signup">
         <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company. We're still Morbin'!</p>
