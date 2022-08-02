@@ -13,7 +13,7 @@
     <div id="UserList">
         <h2>User List</h2>
         <p>Remember, use your powers for good, not for evil.</p>
-        <p>Please do not share other user's birth dates or email adresses without their permission.</p>
+        <p>Please do not share a user's birth date or email address without their permission.</p>
         @if (request()->query('q'))
         <a href="{{ route('admin_users') }}" style="color:navy">Clear Search</a>
         @endif
