@@ -42,6 +42,7 @@
             <p>&#x2022; Don't make accounts named "MORBLOX" or "ARCHBLOX". (Name Change)</p>
             <p>&#x2022; Do not ban evade. (Termination)</p>
             <p>&#x2022; Don't spam. (Warning, Ban for few days)</p>
+            <p>&#x2022; Getting banned from the discord server will result in a ban on the site as well.</p>
             <br>
             <h2>Asset Moderation</h2>
             <p>If we believe that any of your assets is breaking the rules, we will remove or change that Asset as required, and then take action onto your ARCHBLOX account.</p>

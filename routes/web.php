@@ -28,6 +28,7 @@ Route::get('/download', [App\Http\Controllers\PageController::class, 'download']
 Route::get('/styleguide', [App\Http\Controllers\PageController::class, 'styleguide'])->name('styleguide');
 Route::get('/blog', [App\Http\Controllers\PageController::class, 'blog'])->name('blog');
 Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
+Route::get('/not-approved', [App\Http\Controllers\PageController::class, 'notapproved'])->name('notapproved');
 
 // Must be logged in
 Route::middleware(['auth'])->group(function () {

@@ -100,4 +100,9 @@ class PageController extends Controller
     {
         return view('misc.blog');
     }
+
+    public function notapproved()
+    {
+        return view('notapproved');
+    }
 }
