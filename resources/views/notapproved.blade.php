@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <title>{{ env('APP_NAME') }} - We're Still Morbin'</title>
+    <title>{{ env('APP_NAME') }}</title>
     <meta charset="utf-8">
     <meta content="ARCHBLOX" property="og:title" />
     <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
