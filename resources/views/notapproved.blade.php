@@ -27,6 +27,8 @@
         <p id="morbin">We're Still Morbin'</p>
     </div>
     <div class="content_signup">
+        <p class="warningtext">Your account isn't actually terminated. This is just a test page.</p>
+        <br>
         <h1>Account Deleted</h1> <!-- Ban Type Goes here (Warning, [day number] Day Ban, Account Deleted, Account Disabled) -->
         <p><strong>Action taken on:</strong> 01/01/1970 12:00 AM</p> <!-- Timestamp -->
         <p><strong>Reason:</strong> liking the iphone 6</p> <!-- Reason -->
