@@ -23,9 +23,11 @@
     @yield('alert')
 
     <div class="iphone-sidebar">
-        <img src="https://archblox.com/img/MORBLOXlogo.png" width="50%">
+        <img href="{{ route('admin_index') }}" src="https://archblox.com/img/MORBLOXlogo.png" width="50%">
         <p>Admin Panel</p>
         <p>Logged in as: {{ Auth::user()->name }}</p>
+        <br>
+        <a href="{{ route('admin_index') }}">Home</a>
         <br>
         <a href="{{ route('admin_users') }}">User List</a>
         <br>
