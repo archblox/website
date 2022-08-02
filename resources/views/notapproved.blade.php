@@ -31,11 +31,11 @@
         <p><strong>Action taken on:</strong> 01/01/1970 12:00 AM</p> <!-- Timestamp -->
         <p><strong>Reason:</strong> liking the iphone 6</p> <!-- Reason -->
         <p><strong>Moderator Note:</strong> i like men</p> <!-- Moderator Note -->
-        <p>If you would like to appeal, please join our discord server.</p> <!-- If not banned from the server -->
+        <p>If you would like to appeal, please <a href="https://discord.gg/nudzQ7hkWY">join our discord server.</a></p> <!-- If not banned from the server -->
         <!-- <p>You are unable to appeal your ban.</p> --> <!-- If banned from the server -->
-        <!-- <p>To re-enable your account, click the button below.</p> --> <!-- If account is disabled only -->
+        <!-- <p>To reactivate your account, click the button below.</p> --> <!-- If account is disabled only -->
         <p>Your account will be fully deleted in 3 months.</p> <!-- If account is disabled/terminated only, show time remaining. -->
-        <button class="greybutton">Re-Activate my account</button> <!-- Show this button once the ban time period is over, the account is disabled or it is a warn -->
+        <!-- <button class="greybutton">Reactivate Account.</button> --> <!-- Show this button once the ban time period is over, the account is disabled or it is a warn -->
         <button class="redbutton">Log out</button> <!-- Show this button only if the account is terminated, or is currently in the ban time period.  -->
     </div>
     <div id="footer_signup">
