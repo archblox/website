@@ -42,8 +42,9 @@
         <p>ARCHBLOX Studio Bootstrapper v1.3</p>
         <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> <a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a></p>
         <br>
-        <strong>Source Code</strong>
-        <p><a href="https://github.com/Thomasluigi07/ARCHBLOXLauncher">Launcher</a> <a href="https://github.com/Thomasluigi07/ARCHBLOXBootstrapper">Studio Bootstrapper</a> <a href="https://github.com/Thomasluigi07/ARCHBLOXLauncherLegacy">Launcher (XP, Vista)</a> <a href="https://github.com/Thomasluigi07/ARCHBLOXBootstrapperLegacy">Studio Bootstrapper (XP, Vista)</a></p>
+        <p>Source Code</p>
+        <p><a href="https://github.com/Thomasluigi07/ARCHBLOXLauncher">Launcher</a> <a href="https://github.com/Thomasluigi07/ARCHBLOXBootstrapper">Studio Bootstrapper</a></p>
+        <p><a href="https://github.com/Thomasluigi07/ARCHBLOXLauncherLegacy">Launcher (XP, Vista)</a> <a href="https://github.com/Thomasluigi07/ARCHBLOXBootstrapperLegacy">Studio Bootstrapper (XP, Vista)</a></p>
         <br>
         <p>If you get a popup saying "Windows protected your PC", press "More info" and then press "Run anyway".</p>
         <br>
