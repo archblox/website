@@ -40,10 +40,10 @@ local closeButton = backpack.Tabs.CloseButton
 
 waitForChild(backpack.Tabs, "InventoryButton")
 local inventoryButton = backpack.Tabs.InventoryButton
-
-waitForChild(backpack.Tabs, "WardrobeButton")
-local wardrobeButton = backpack.Tabs.WardrobeButton
-
+if game.CoreGui.Version >= 8 then
+	waitForChild(backpack.Tabs, "WardrobeButton")
+	local wardrobeButton = backpack.Tabs.WardrobeButton
+end
 waitForChild(backpack.Parent,"ControlFrame")
 local backpackButton = waitForChild(backpack.Parent.ControlFrame,"BackpackButton")
 local currentTab = "gear"
@@ -54,6 +54,10 @@ local searchBox = waitForChild(backpack.SearchFrame.SearchBoxFrame,"SearchBox")
 local searchButton = waitForChild(backpack.SearchFrame,"SearchButton")
 local resetButton = waitForChild(backpack.SearchFrame,"ResetButton")
 
+local robloxGui = waitForChild(Game.CoreGui, 'RobloxGui')
+local currentLoadout = waitForChild(robloxGui, 'CurrentLoadout')
+local loadoutBackground = waitForChild(currentLoadout, 'Background')
+
 local canToggle = true
 local readyForNextEvent = true
 local backpackIsOpen = false
@@ -61,11 +65,19 @@ local active = true
 
 local humanoidDiedCon = nil
 
+local backpackButtonPos 
+
 local guiTweenSpeed = 0.25 -- how quickly we open/close the backpack
 
 local searchDefaultText = "Search..."
 local tilde = "~"
 local backquote = "`"
+
+local backpackSize = UDim2.new(0, 600, 0, 400)
+
+if robloxGui.AbsoluteSize.Y <= 320 then 
+	backpackSize = UDim2.new(0, 200, 0, 140)
+end 
 
 ------------------------ End Locals ---------------------------
 
@@ -118,6 +130,9 @@ function activateBackpack()
 	initHumanoidDiedConnections()		
 	active = true
 	backpack.Visible = backpackIsOpen
+	if backpackIsOpen then 
+		toggleBackpack() 
+	end 
 end
 
 function initHumanoidDiedConnections()			
@@ -137,7 +152,7 @@ local hideBackpack = function()
 	backpackCloseEvent:Fire(currentTab)
 	backpack.Tabs.Visible = false
 	searchFrame.Visible = false
-	backpack:TweenSizeAndPosition(UDim2.new(0,0,0,0),UDim2.new(0.5,0,0.5,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, guiTweenSpeed, true,
+	backpack:TweenSizeAndPosition(UDim2.new(0, backpackSize.X.Offset,0, 0), UDim2.new(0.5, -backpackSize.X.Offset/2, 1, -85), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, guiTweenSpeed, true,
 		function()
 			game.GuiService:RemoveCenterDialog(backpack)
 			backpack.Visible = false
@@ -147,6 +162,7 @@ local hideBackpack = function()
 		game.GuiService:RemoveCenterDialog(backpack)
 		backpack.Visible = false
 		backpackButton.Selected = false
+		readyForNextEvent = true		
 		canToggle = true
 	end)
 end
@@ -162,20 +178,22 @@ function showBackpack()
 			backpackButton.Selected = false
 	end)
 	backpack.Visible = true
-	backpackButton.Selected = true
-	backpack:TweenSizeAndPosition(UDim2.new(0.55, 0, 0.76, 0),UDim2.new(0.225, 0, 0.09, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, guiTweenSpeed, true)
+	backpackButton.Selected = true	
+	backpack:TweenSizeAndPosition(backpackSize, UDim2.new(0.5, -backpackSize.X.Offset/2, 1, -backpackSize.Y.Offset - 88), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, guiTweenSpeed, true)
 	delay(guiTweenSpeed,function()
-		backpack.Tabs.Visible = true
+		backpack.Tabs.Visible = false
 		searchFrame.Visible = true
 		backpackOpenEvent:Fire(currentTab)
 		canToggle = true
+		readyForNextEvent = true
+		backpackButton.Image = 'http://www.morblox.us/asset/?id=97644093'
+		backpackButton.Position = UDim2.new(0.5, -60, 1, -backpackSize.Y.Offset - 103)
 	end)
 end
 
-function toggleBackpack()
+function toggleBackpack()	
 	if not game.Players.LocalPlayer then return end
 	if not game.Players.LocalPlayer["Character"] then return end
-
 	if not canToggle then return end
 	if not readyForNextEvent then return end
 	readyForNextEvent = false
@@ -183,11 +201,42 @@ function toggleBackpack()
 	
 	backpackIsOpen = not backpackIsOpen
 
-	if backpackIsOpen then
+	if backpackIsOpen then				
+		loadoutBackground.Image = 'http://www.morblox.us/asset/?id=97623721'
+		loadoutBackground.Position = UDim2.new(-0.03, 0, -0.17, 0)
+		loadoutBackground.Size = UDim2.new(1.05, 0, 1.25, 0)
+		loadoutBackground.ZIndex = 2.0
+		loadoutBackground.Visible = true
+		--backpackButton.Position = UDim2.new(0.5, -60, 1, -503)
 		showBackpack()
-	else
-		backpackButton.Selected = false
+	else		
+		backpackButton.Position = UDim2.new(0.5, -60, 1, -44)
+		loadoutBackground.Visible = false
+		backpackButton.Selected = false		
+		backpackButton.Image = "http://www.morblox.us/asset/?id=97617958"
+		loadoutBackground.Image = 'http://www.morblox.us/asset/?id=96536002'
+		loadoutBackground.Position = UDim2.new(-0.1, 0, -0.1, 0)
+		loadoutBackground.Size = UDim2.new(1.2, 0, 1.2, 0)		
 		hideBackpack()
+
+		
+		local clChildren = currentLoadout:GetChildren()
+		for i = 1, #clChildren do 
+			if clChildren[i] and clChildren[i]:IsA('Frame') then 
+				local frame = clChildren[i] 
+				if #frame:GetChildren() > 0 then 
+					backpackButton.Position = UDim2.new(0.5, -60, 1, -108)
+					backpackButton.Visible = true
+					loadoutBackground.Visible = true
+					if frame:GetChildren()[1]:IsA('ImageButton') then 
+						local imgButton = frame:GetChildren()[1]
+						imgButton.Active = true 
+						imgButton.Draggable = false 
+					end 
+				end 
+			end 
+		end 
+		
 	end
 end
 
@@ -314,9 +363,11 @@ inventoryButton.MouseButton1Click:connect(function() newTabClicked("gear") end)
 inventoryButton.MouseEnter:connect(function() mouseOverTab(inventoryButton) end)
 inventoryButton.MouseLeave:connect(function() mouseLeaveTab(inventoryButton) end)
 
-wardrobeButton.MouseButton1Click:connect(function() newTabClicked("wardrobe") end)
-wardrobeButton.MouseEnter:connect(function() mouseOverTab(wardrobeButton) end)
-wardrobeButton.MouseLeave:connect(function() mouseLeaveTab(wardrobeButton) end)
+if game.CoreGui.Version >= 8 then
+	wardrobeButton.MouseButton1Click:connect(function() newTabClicked("wardrobe") end)
+	wardrobeButton.MouseEnter:connect(function() mouseOverTab(wardrobeButton) end)
+	wardrobeButton.MouseLeave:connect(function() mouseLeaveTab(wardrobeButton) end)
+end
 
 closeButton.MouseButton1Click:connect(closeBackpack)
 
@@ -343,6 +394,7 @@ end)
 if game.Players.LocalPlayer["Character"] then
 	activateBackpack()
 end
+
 game.Players.LocalPlayer.CharacterAdded:connect(activateBackpack)
 
 -- search functions
@@ -356,4 +408,9 @@ end)
 searchButton.MouseButton1Click:connect(doSearch)
 resetButton.MouseButton1Click:connect(resetSearch)
 
-backpackButton.Visible = true
+if searchFrame and robloxGui.AbsoluteSize.Y <= 320 then  
+	searchFrame.RobloxLocked = false 
+	searchFrame:Destroy() 
+end 
+
+--backpackButton.Visible = true
