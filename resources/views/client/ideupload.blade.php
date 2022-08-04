@@ -1,4 +1,4 @@
-@extends('layouts.ide')
+@extends('layouts.idenosidebar')
 @section('title')
 <title>{{ env('APP_NAME') }}</title>
 @endsection
