@@ -3,4 +3,5 @@ This is a log of all of the Studio versions.
 You can download these old versions by going to archblox.com/studio/version-(version string goes here).zip
 -Thomas
 
+New Studio version-000000002 at 5/08/2022 9:09 AM
 New Studio version-000000001 at 15/07/2022 8:14 PM
