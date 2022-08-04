@@ -16,6 +16,13 @@ local ADMINS =
 	templater = 1,
 	AliMine8555 = 1,
 	TersisWelvin = 1,
+	Mura = 1,
+	rec01n = 1,
+	sodium = 1,
+	cott = 1,
+	Penguin = 1,
+	MORBLOX = 1,
+	zombieboy667 = 1,
 }
 
 local Images = {
