@@ -60,5 +60,9 @@ class ClientController extends Controller
     {
         return view('client.keepalive');
     }
-
+    
+    public function ideupload()
+    {
+        return view('client.ideupload');
+    }
 }
