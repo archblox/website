@@ -86,3 +86,4 @@ Route::get('/IDE/ClientToolbox.aspx', [App\Http\Controllers\ClientController::cl
 Route::get('/UploadMedia/PostImage.aspx', [App\Http\Controllers\ClientController::class, 'postimage'])->name('postimage');
 Route::get('/UploadMedia/UploadVideo.aspx', [App\Http\Controllers\ClientController::class, 'uploadvideo'])->name('uploadvideo');
 Route::get('/Game/KeepAlivePinger.ashx', [App\Http\Controllers\ClientController::class, 'keepalive'])->name('keepalive');
+Route::get('/Game/Tools/InsertAsset.ashx', [App\Http\Controllers\ClientController::class, 'insertasset'])->name('insertasset');
