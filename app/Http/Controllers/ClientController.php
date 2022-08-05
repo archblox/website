@@ -65,4 +65,9 @@ class ClientController extends Controller
     {
         return view('client.ideupload');
     }
+
+    public function insertasset()
+    {
+        return view('client.insertasset');
+    }
 }
