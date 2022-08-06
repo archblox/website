@@ -70,4 +70,9 @@ class ClientController extends Controller
     {
         return view('client.insertasset');
     }
+
+    public function modelupload()
+    {
+        return view('client.modelupload');
+    }
 }
