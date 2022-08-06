@@ -17,5 +17,5 @@
     updates.</p>
 <br>
 <br>
-<p><button class="greybutton">A</button><button class="greybutton">R</button><button class="greybutton">C</button><button class="greybutton">H</button><button class="greybutton">B</button><button class="greybutton">L</button><button class="greybutton">O</button><button class="greybutton">X</button></p>
+<p><button class="bluebutton">A</button><button class="bluebutton">R</button><button class="bluebutton">C</button><button class="bluebutton">H</button><button class="bluebutton">B</button><button class="bluebutton">L</button><button class="bluebutton">O</button><button class="bluebutton">X</button></p>
 @endsection
