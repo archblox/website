@@ -105,4 +105,9 @@ class PageController extends Controller
     {
         return view('notapproved');
     }
+
+    public function maintenance()
+    {
+        return view('maintenance');
+    }
 }

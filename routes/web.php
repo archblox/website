@@ -29,6 +29,7 @@ Route::get('/styleguide', [App\Http\Controllers\PageController::class, 'stylegui
 Route::get('/blog', [App\Http\Controllers\PageController::class, 'blog'])->name('blog');
 Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
 Route::get('/not-approved', [App\Http\Controllers\PageController::class, 'notapproved'])->name('notapproved');
+Route::get('/maintenance', [App\Http\Controllers\PageController::class, 'maintenance'])->name('maintenance');
 
 // Must be logged in
 Route::middleware(['auth'])->group(function () {
