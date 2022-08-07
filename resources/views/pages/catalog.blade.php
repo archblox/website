@@ -15,7 +15,7 @@
             <div class="catalogitem">
                 <img src="{{ asset('img/reviewpending.png') }}">
                 <p>Item Name</p>
-                <p class="arkotlabel">ARK$</p><p> 30</p>
+                <p class="arkotlabel">ARK$</p><p>10</p>
             </div>
         </div>
     @endsection

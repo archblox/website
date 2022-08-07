@@ -27,6 +27,13 @@
   padding: 5px;
 }
 
+.arkotcontainer {
+  position: relative;
+  padding-right: 10px;
+  margin-right: 0%;
+  margin-left: auto;
+  top: 11px;
+}
 .arkotlabel {
   color: rgb(35, 98, 222);
   font-weight: bold;
@@ -152,10 +159,10 @@
 #navbarlogincontainer,
 #navbarsignedincontainer {
   position: relative;
-padding-right: 10px;
-margin-right: 0%;
-margin-left: auto;
-top: 11px;
+  padding-right: 10px;
+  margin-right: 0%;
+  margin-left: 0%;
+  top: 11px;
 }
 
 #profilefriendscontainer p,
