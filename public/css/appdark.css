@@ -11,18 +11,19 @@
 }
 
 @keyframes alertanim {
-	0% {
-	  top: 0px;
-	  animation-timing-function: linear;
-	}
-  
-	100% {
-	  background-position-x: 72px;
-	  animation-timing-function: linear;
-	}
+  0% {
+    top: 0px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    background-position-x: 72px;
+    animation-timing-function: linear;
+  }
 }
 
-.catalogitem, .catalogitemimage {
+.catalogitem,
+.catalogitemimage {
   width: 126px;
   padding: 5px;
 }
@@ -65,12 +66,13 @@
   font-weight: bold;
 }
 
-#alert, #success {
+#alert,
+#success {
   height: fit-content;
   margin: 0px;
   animation: alertanim;
-	animation-duration: 250ms;
-	animation-iteration-count: 1; 
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
   position: fixed;
   z-index: 10;
   top: 72px;
@@ -87,7 +89,7 @@
 }
 
 #success {
-  background:linear-gradient(#a3e2bd 10%,#02b757 100%)
+  background: linear-gradient(#a3e2bd 10%, #02b757 100%)
 }
 
 .warningtext {
@@ -97,31 +99,37 @@
 #logo_full {
   display: none;
 }
+
 #logo_small {
   display: block;
 }
+
 @media (min-width: 1688px) {
   #logo_full {
-      display: block;
+    display: block;
   }
+
   #logo_small {
-      display: none;
+    display: none;
   }
 }
+
 @media (max-width: 730px) {
-.navbarbuttoncontainer a {
-  position: relative;
+  .navbarbuttoncontainer a {
+    position: relative;
+  }
 }
-}
+
 @media (max-width: 970px) {
-.navbarbuttoncontainer a {
-  font-size: 14px;
+  .navbarbuttoncontainer a {
+    font-size: 14px;
+  }
 }
-}
+
 @media (max-width: 640px) {
-.navbarbuttoncontainer a {
-  font-size: 12px;
-}
+  .navbarbuttoncontainer a {
+    font-size: 12px;
+  }
 }
 
 .popupcontainer {
@@ -230,6 +238,7 @@
   color: red;
   font-weight: bold;
 }
+
 #yes,
 #no {
   width: 50%;
@@ -384,7 +393,7 @@ body {
   padding-left: 5px;
   padding-right: 5px;
   min-height: 300px;
-  background: rgb(25,25,25);
+  background: rgb(25, 25, 25);
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -396,7 +405,7 @@ body {
   margin-top: 30px;
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(25,25,25);
+  background: rgb(25, 25, 25);
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -426,7 +435,7 @@ body {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   /* Fallback for IE 11*/
   min-height: fit-content;
 }
@@ -435,7 +444,7 @@ body {
 
 .tab {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg,#fff 0%,#b8b8b8 49%,#e3e3e3 50%,#f2f2f2 95%,#fff 100%);
+  background: linear-gradient(0deg, #fff 0%, #b8b8b8 49%, #e3e3e3 50%, #f2f2f2 95%, #fff 100%);
   font-weight: 400;
   text-align: center;
   height: 20px;
@@ -449,7 +458,7 @@ body {
 
 .tab_selected {
   background: rgb(35, 98, 222);
-  background: linear-gradient(0deg,#00a2ff 0%,#0074bd 49%,#08f 50%,#57c2fe 95%,#99daff 100%);
+  background: linear-gradient(0deg, #00a2ff 0%, #0074bd 49%, #08f 50%, #57c2fe 95%, #99daff 100%);
   font-weight: 400;
   text-align: center;
   height: 20px;
@@ -464,7 +473,7 @@ body {
 button {
   background: rgb(255, 255, 255);
   /*Fallback for IE 11*/
-  background: linear-gradient(0deg,#fff 0%,#b8b8b8 49%,#e3e3e3 50%,#f2f2f2 95%,#fff 100%);
+  background: linear-gradient(0deg, #fff 0%, #b8b8b8 49%, #e3e3e3 50%, #f2f2f2 95%, #fff 100%);
   font-weight: 400;
   text-align: center;
   height: 20px;
@@ -487,46 +496,47 @@ button:disabled {
 button.bluebutton {
   background: rgb(35, 98, 222);
   /*Fallback for IE 11*/
-  background: linear-gradient(0deg,#00a2ff 0%,#0074bd 49%,#08f 50%,#57c2fe 95%,#99daff 100%);
+  background: linear-gradient(0deg, #00a2ff 0%, #0074bd 49%, #08f 50%, #57c2fe 95%, #99daff 100%);
 }
 
 button:hover.bluebutton {
-  background: linear-gradient(0deg,#32b5ff 0%,#0074bd 49%,#2c99f8 50%,#71c9fa 95%,#b6e5ff 100%);
+  background: linear-gradient(0deg, #32b5ff 0%, #0074bd 49%, #2c99f8 50%, #71c9fa 95%, #b6e5ff 100%);
 }
 
-button:active.bluebutton, button:focus.bluebutton  {
-  background: linear-gradient(0deg,#32b5ff 0%,#0074bd 49%,#2c99f8 50%,#71c9fa 95%,#b6e5ff 100%);
+button:active.bluebutton,
+button:focus.bluebutton {
+  background: linear-gradient(0deg, #32b5ff 0%, #0074bd 49%, #2c99f8 50%, #71c9fa 95%, #b6e5ff 100%);
 }
 
 button.greybutton {
   background: rgb(255, 255, 255);
   color: black;
   /*Fallback for IE 11*/
-  background: linear-gradient(0deg,#fff 0%,#b8b8b8 49%,#e3e3e3 50%,#f2f2f2 95%,#fff 100%);
+  background: linear-gradient(0deg, #fff 0%, #b8b8b8 49%, #e3e3e3 50%, #f2f2f2 95%, #fff 100%);
 }
 
 button:hover.greybutton {
-  background: linear-gradient(0deg,#fff 0%,#b8b8b8 49%,#e3e3e3 50%,#f2f2f2 95%,#fff 100%);
+  background: linear-gradient(0deg, #fff 0%, #b8b8b8 49%, #e3e3e3 50%, #f2f2f2 95%, #fff 100%);
 }
 
 button.redbutton {
   background: rgb(223, 24, 24);
   /*Fallback for IE 11*/
-  background: linear-gradient(0deg,#d86868 0%,#a95151 49%,#bc5c5c 50%,#e96f6f 95%,#fe7979 100%);
+  background: linear-gradient(0deg, #d86868 0%, #a95151 49%, #bc5c5c 50%, #e96f6f 95%, #fe7979 100%);
 }
 
 button:hover.redbutton {
-  background: linear-gradient(0deg,#e27676 0%,#a95151 49%,#ca6363 50%,#f07272 95%,#fd8888 100%);
+  background: linear-gradient(0deg, #e27676 0%, #a95151 49%, #ca6363 50%, #f07272 95%, #fd8888 100%);
 }
 
 button.greenbutton {
   background: rgb(26, 92, 46);
   /*Fallback for IE 11*/
-  background: linear-gradient(0deg,#02b757 0%,#118237 49%,#01a64e 50%,#3fc679 95%,#a3e2bd 100%);
+  background: linear-gradient(0deg, #02b757 0%, #118237 49%, #01a64e 50%, #3fc679 95%, #a3e2bd 100%);
 }
 
 button:hover.greenbutton {
-  background: linear-gradient(0deg,#3fc679 0%,#15933f 49%,#3cc175 50%,#46dc86 95%,#53ff9d 100%);
+  background: linear-gradient(0deg, #3fc679 0%, #15933f 49%, #3cc175 50%, #46dc86 95%, #53ff9d 100%);
 }
 
 
@@ -538,7 +548,7 @@ button:hover.greenbutton {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   min-height: fit-content;
 }
 
@@ -603,7 +613,7 @@ a,
   width: 20%;
   height: 100%;
   margin-left: 0px;
-  background-color: rgb(0,0,0);
+  background-color: rgb(0, 0, 0);
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -614,13 +624,13 @@ a,
   width: 80%;
   height: 100%;
   left: 20%;
-  background-color: rgb(0,0,0);
+  background-color: rgb(0, 0, 0);
   padding-bottom: 5px;
   padding-top: 5px;
-  padding-left: 5px; 
-  padding-right: 0px; 
-  overflow-x: hidden; 
-  position: fixed; 
+  padding-left: 5px;
+  padding-right: 0px;
+  overflow-x: hidden;
+  position: fixed;
   height: 100%;
 }
 
