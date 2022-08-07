@@ -90,4 +90,5 @@ Route::get('/UploadMedia/PostImage.aspx', [App\Http\Controllers\ClientController
 Route::get('/UploadMedia/UploadVideo.aspx', [App\Http\Controllers\ClientController::class, 'uploadvideo'])->name('uploadvideo');
 Route::get('/Game/KeepAlivePinger.ashx', [App\Http\Controllers\ClientController::class, 'keepalive'])->name('keepalive');
 Route::get('/Game/Tools/InsertAsset.ashx', [App\Http\Controllers\ClientController::class, 'insertasset'])->name('insertasset');
+Route::get('/stamper/inseasset.php', [App\Http\Controllers\ClientController::class, 'insertasset'])->name('inseasset');
 Route::get('/UI/Save.aspx', [App\Http\Controllers\ClientController::class, 'modelupload'])->name('modelupload');

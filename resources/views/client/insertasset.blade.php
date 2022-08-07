@@ -20,9 +20,4 @@
         $file = "http://morblox.us/stamper/sid/{$sid}.xml";
         readfile($file);
     }
-    if ($nsets) {
-        header("content-type:text/xml");
-        $file = "http://morblox.us/stamper/sid/{$sid}.xml";
-        readfile($file);
-    }
 @endphp
