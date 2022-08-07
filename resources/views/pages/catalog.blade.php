@@ -10,6 +10,12 @@
     @endsection
 
     @section('content')
-        <h1 id="usernameframe">Catalog</h1>
-        <p>PLACEHOLDER</p>
+        <h1>Catalog</h1>
+        <div class="content_special" style="flex-wrap: wrap">
+            <div class="catalogitem">
+                <img src="{{ asset('img/reviewpending.png') }}">
+                <p>Item Name</p>
+                <p class="arkotlabel">ARK$</p><p> 30</p>
+            </div>
+        </div>
     @endsection
