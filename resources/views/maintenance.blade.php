@@ -13,8 +13,8 @@
 <h1 style="color: #ffffff">Oh Noes! ARCHBLOX is currently under maintenance.</h1>
 <p style="color: #ffffff">ARCHBLOX will be back soon, so please be patient.</p>
 <br>
-<p style="color: #ffffff">Impaitient? <a href="https://discord.gg/nudzQ7hkWY">Join our Discord Server</a> for status updates.</p>
-@if (!Auth::guest() && Auth::user()->isAdmin())
+<p style="color: #ffffff">Impatient? <a href="https://discord.gg/nudzQ7hkWY">Join our Discord Server</a> for status updates.</p>
+@if (Auth::check() && Auth::user()->isAdmin())
 <br>
 <p>Since you are an admin, you may access the main site during maintenance.</p>
 <strong>Note that some features may be broken during this period.</strong>
