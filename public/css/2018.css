@@ -16,13 +16,12 @@ html {
 
 body {
 	background-color: #E3E3E3;
-    color: #191919;
-    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
-    font-size: 16px;
+	color: #191919;
+	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+	font-size: 16px;
 	width: 100%;
-    height: 100%;
-    min-width: 320px;
-    margin-bottom: 168px;
+	height: 100%;
+	margin-bottom: 168px;
 }
 
 :focus-visible {
