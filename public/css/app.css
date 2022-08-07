@@ -261,12 +261,15 @@
   width: 200px;
 }
 
-#feed,
-#profileleftcontainer {
+#feed, #profileleftcontainer {
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
   width: 50%;
+}
+
+#profileleftcontainer, #profilerightcontainer {
+  max-width: 450px;
 }
 
 #gamesframe,
@@ -385,7 +388,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: nowrap;
 }
 

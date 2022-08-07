@@ -11,7 +11,7 @@
 
     @section('content')
         <h1>Catalog</h1>
-        <div class="content_special" style="flex-wrap: wrap">
+        <div class="content_special" style="flex-wrap: wrap; justify-content: flex-start">
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Item Name</p>
