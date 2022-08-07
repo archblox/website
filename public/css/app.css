@@ -324,7 +324,7 @@
 .smallnav {
   height: 25px;
   margin: 0px;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 5px;
   position: fixed;
   z-index: 100;
