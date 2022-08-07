@@ -298,6 +298,7 @@ body {
 	height: 30px;
 }
 #smallnav_open {
+	cursor: pointer;
 	background-image: url("https://images.rbxcdn.com/f4000b6d03a0df7153556d2514045629-navigation_10022018.svg");
 	background-position: 0 0px;
 	background-repeat: no-repeat;

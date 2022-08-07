@@ -50,7 +50,7 @@
         @auth
         @switch (Auth::user()->settings->theme)
         @case(2)
-        <a id="smallnav_open" href="#"></a>
+        <a id="smallnav_open"></a>
         <script>
         function third() {
             document.querySelector('.smallnav').classList.toggle('invisible_navbar');
