@@ -325,6 +325,12 @@ body {
     font-weight: 300;
 }
 
+#footer_signup {
+	/*Remove this for now as i don't know a fix for the broken footer.*/
+	/*Tersis, if you're seeing this, find a way to get the signup footer to work properly*/
+	display: none;
+}
+
 #footer, #footer_signup {
     padding: 12px;
 	background-color: #fff;
