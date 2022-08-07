@@ -80,13 +80,13 @@
                 <h3>Place Visits: 0</h3>
             </div>
             <br>
-            <h2>Role</h2>
+            <h2>ARCHBLOX Badges</h2>
             <div style="white-space:nowrap">
                 @foreach ($badges as $badge)
                     @foreach ($user->badges as $user_badge)
                         @if ($badge->id == $user_badge)
                             <div style="width:120px;display:inline-block">
-                                <img src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
+                                <img alt="{{ $badge->description }}" src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
                                 <h3>{{ $badge->title }}</h3>
                             </div>
                         @endif
