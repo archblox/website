@@ -155,9 +155,9 @@
   width: max-content;
   border-radius: 3px;
   border: 1px solid #3D414A;
-  background: rgb(80, 80, 80);
+  background: #cacbcc;
   /* Fallback for IE 11*/
-  background: linear-gradient(#cacbcc 10%, #2d2d2d 100%);
+  background: linear-gradient(#cacbcc 10%, #606060 100%);
 }
 
 .navbar {

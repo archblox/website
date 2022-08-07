@@ -19,6 +19,7 @@
     @auth
         @switch (Auth::user()->settings->theme)
             @case(3)
+            <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
             <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
             @break
             @case(2)
