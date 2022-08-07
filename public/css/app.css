@@ -22,9 +22,20 @@
 	}
 }
 
-.catalogitem, .catalogitem img {
+.catalogitem, .catalogitemimage {
   width: 126px;
   padding: 5px;
+}
+
+.arkoticon_small {
+  margin: 0px;
+  width: 12px;
+}
+
+.arkoticon_navbar {
+  margin: 0px;
+  margin-right: 3px;
+  width: 20px;
 }
 
 .arkotcontainer {
@@ -32,8 +43,23 @@
   padding-right: 10px;
   margin-right: 0%;
   margin-left: auto;
-  top: 11px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
+
+.smallnavbarbuttoncontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .arkotlabel {
   color: rgb(35, 98, 222);
   font-weight: bold;
@@ -90,13 +116,11 @@
 @media (max-width: 970px) {
 .navbarbuttoncontainer a {
   font-size: 14px;
-  top: 10px
 }
 }
 @media (max-width: 640px) {
 .navbarbuttoncontainer a {
   font-size: 12px;
-  top: 10px
 }
 }
 
@@ -132,6 +156,7 @@
   height: 40px;
   margin: 0px;
   padding-right: 5px;
+  align-content: center;
   padding-left: 5px;
   padding-top: 2px;
   position: fixed;
@@ -149,11 +174,15 @@
 }
 
 .navbarbuttoncontainer,
-.smallnavbarbuttoncontainer,
 .navbarlogincontainer {
   padding-left: 5px;
-  display: table-cell;
   vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #navbarlogincontainer,
@@ -162,7 +191,12 @@
   padding-right: 10px;
   margin-right: 0%;
   margin-left: 0%;
-  top: 11px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #profilefriendscontainer p,
@@ -266,13 +300,14 @@
 
 .navbarbutton {
   position: relative;
-  top: 10px;
+  padding-right: 5px;
   text-align: center;
   font-size: 18px;
 }
 
 .smallnavbarbutton {
   position: relative;
+  padding-right: 5px;
   text-align: center;
   font-size: 15px;
 }
@@ -287,15 +322,15 @@
   top: 43px;
   padding-top: 2px;
   padding-bottom: 2px;
-  display: inline-table;
+  display: inline-flex;
   vertical-align: middle;
   width: 100%;
   line-height: normal;
   color: rgb(255, 255, 255);
   text-size-adjust: auto;
   text-align: left;
-  background: #000000;;
-  background: linear-gradient(#303030 10%, #000000 100%);;
+  background: #000000;
+  background: linear-gradient(#303030 10%, #000000 100%);
 }
 
 .invisible,

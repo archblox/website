@@ -13,9 +13,9 @@
         <h1>Catalog</h1>
         <div class="content_special" style="flex-wrap: wrap">
             <div class="catalogitem">
-                <img src="{{ asset('img/reviewpending.png') }}">
+                <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Item Name</p>
-                <p class="arkotlabel">ARK$</p><p>10</p>
+                <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
         </div>
     @endsection

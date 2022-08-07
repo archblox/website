@@ -53,7 +53,7 @@
                 <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Log In</a></p>
             </div>
         @else
-        <p class="arkotcontainer">ARK$ {{ Auth::user()->morbux }}</p>
+        <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}"><p> {{ Auth::user()->morbux }}</p></div>
             <div id="navbarsignedincontainer">
                 <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
