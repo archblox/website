@@ -95,7 +95,7 @@
         </form>
         @endguest
     </div>
-    <div class="smallnav">
+    <div class="smallnav invisible_navbar">
         <div class="smallnavbarbuttoncontainer">
             <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() &&
                 count(Auth::user()->getFriendRequests()))
