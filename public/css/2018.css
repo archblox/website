@@ -508,4 +508,9 @@ iframe {
 	#logo_full {
 		max-width: 200px;
 	}
+	.content, iframe {
+		padding-left: 180px;
+		width: calc(100% - 250px);
+		padding-right: 10px;
+	}
 }
