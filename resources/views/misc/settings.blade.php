@@ -170,11 +170,14 @@
             <h3>Theme</h3>
             <p>Selected Theme: @php
                 switch (Auth::user()->settings->theme) {
+                    case 3:
+                        echo 'Dark';
+                        break;
                     case 2:
                         echo '2018';
                         break;
                     default:
-                        echo 'ARCHBLOX';
+                        echo 'Light';
                 }
             @endphp</p>
             <form action="{{ route('change_theme') }}" method="POST" class="theme_form">
@@ -182,8 +185,9 @@
                 <div class="content_special" style="width: 100%; flex-wrap: nowrap;">
                     <div class="custom-select" style="width: 90%;">
                         <select name="theme_change" style="width: 100%;">
-                            <option value="1">ARCHBLOX</option>
+                            <option value="1">Light</option>
                             <option value="2">2018</option>
+                            <option value="3">Dark</option>
                         </select>
                     </div>
                     <button style="width: max-content;" class="greenbutton" type="submit">Save</button>

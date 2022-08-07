@@ -41,7 +41,7 @@
             @enderror
             <br><br>
 
-            <button type="submit" onClick="this.form.submit();this.disabled=true">
+            <button class="greybutton" type="submit" onClick="this.form.submit();this.disabled=true">
                 Send Password Reset Link
             </button>
         </form>

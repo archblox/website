@@ -41,11 +41,12 @@ body {
     outline: 0px;
 }
 
-.content_signup, .profilefriend #FeedContainerBox1Username {
+.content_signup, .profilefriend #FeedContainerBox1Username, .content p a, .content a, .content_signup p a, .content_signup a, .content_special p a, .content_special a {
 	color: #191919
 }
 
 .content {
+	color: #000000;
     background-color: #E3E3E3;
     padding-top: 12px;
     margin: 40px auto 0;
