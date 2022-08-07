@@ -16,7 +16,22 @@
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @auth
+        @switch (Auth::user()->settings->theme)
+            @case(3)
+            <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+            @break
+            @case(2)
+                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+                <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
+            @break
+
+            @default
+                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+        @endswitch
+    @else
+        <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @endauth
 </head>
 
 <body>
