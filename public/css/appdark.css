@@ -1,4 +1,3 @@
-
 #alert {
   background: linear-gradient(#ef3232 10%, #6a0f0f 100%);
 }
@@ -21,7 +20,7 @@
   background: linear-gradient(#3690df 10%, #0d1085 100%);
 }
 
-.onlinestatus_website { 
+.onlinestatus_website {
   color: #2260DD;
 }
 
@@ -42,14 +41,19 @@
 .FriendsContainerBox {
   border: 1px solid #787373;
 }
+
 .smallnav {
   color: rgb(255, 255, 255);
   background: linear-gradient(#303030 10%, #000000 100%);
 }
 
 html {
-  background-color: rgb(1, 17, 48);
+  background-color: rgb(31, 31, 31);
   color: white;
+}
+
+.loggedout {
+  background-color: rgb(1, 17, 48);
 }
 
 body {
@@ -120,7 +124,9 @@ a,
   background-color: rgb(255, 255, 255);
 }
 
-textarea, select, input {
+textarea,
+select,
+input {
   background-color: black;
   color: white;
 }

@@ -348,20 +348,24 @@
 }
 
 html {
-  animation-name: animatedbackground;
-  animation-duration: 50s;
-  animation-iteration-count: infinite;
-  background: url('../img/animated.png');
-  background-position: center bottom;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
   margin: 0px;
   font-family: "Helvetica";
   src: url('Helvetica.ttf') format('truetype'), ;
   font-style: normal;
-  background-color: rgb(49, 107, 223);
   height: 100%;
   color: white;
+  background-color: #cccccc;
+}
+
+.loggedout {
+  background: url('../img/animated.png');
+  background-color: rgb(49, 107, 223);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  animation-name: animatedbackground;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
 }
 
 body {

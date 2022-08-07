@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="loggedout">
     <head>
         <title>Video Recorded - {{ env('APP_NAME') }}</title>
         <meta charset="utf-8">
