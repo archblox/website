@@ -17,36 +17,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @auth
-        @switch (Auth::user()->settings->theme)
-            @case(5)
-                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
-                <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
-                <link href="{{ asset('css/classicappdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
-            @break
-            @case(4)
-                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
-                <link href="{{ asset('css/classicapp.css?id=' . Str::random(8)) }}" rel="stylesheet">
-            @break
-            @case(3)
-            <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
-            <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
-            @break
-            @case(2)
-                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
-                <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
-            @break
+    @switch (Auth::user()->settings->theme)
+    @case(5)
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/classicappdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @break
+    @case(4)
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/classicapp.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @break
+    @case(3)
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @break
+    @case(2)
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @break
 
-            @default
-                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
-        @endswitch
+    @default
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    @endswitch
     @else
-        <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endauth
     @yield('extras')
 </head>
 
 <body>
     <div class="navbar">
+        @auth
+        @switch (Auth::user()->settings->theme)
+        @case(2)
+        <a id="smallnav_open" href="#"></a>
+        <script>
+        function third() {
+            document.querySelector('.smallnav').classList.toggle('invisible_navbar');
+               }
+        document.querySelector('#smallnav_open').addEventListener('click', third);
+        </script>
+        @break
+        @default
+        @endswitch
+        @endauth
         <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
                 width="200" height="40" /></a>
         <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
@@ -55,46 +69,50 @@
             <a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a>
             <a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a>
             <a class="navbarbutton" id="smallbtn0" href="{{ route('incomplete') }}">Build</a>
-            <a class="navbarbutton" id="smallbtn2"
-                href="@guest {{ route('login') }}
+            <a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
 @else
 {{ route('profile', Auth::id()) }} @endguest">Profile</a>
             <a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a>
         </div>
         @guest
-            <div id="navbarlogincontainer">
-                <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Log In</a></p>
-            </div>
+        <div id="navbarlogincontainer">
+            <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Log In</a></p>
+        </div>
         @else
-        <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}"><p> {{ Auth::user()->morbux }}</p></div>
-            <div id="navbarsignedincontainer">
-                <p class="nonbolded" id="navbarusername"><a href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a> | <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+        <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
+            <p> {{ Auth::user()->morbux }}</p>
+        </div>
+        <div id="navbarsignedincontainer">
+            <p class="nonbolded" id="navbarusername"><a
+                    href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
+                | <a href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log
-                        out...</a></p>
-            </div>
+                    out...</a></p>
+        </div>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
-                @csrf
-            </form>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+            @csrf
+        </form>
         @endguest
     </div>
     <div class="smallnav">
         <div class="smallnavbarbuttoncontainer">
-            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() && count(Auth::user()->getFriendRequests()))
-                    <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span>
+            <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() &&
+                count(Auth::user()->getFriendRequests()))
+                <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span>
                 @endif
             </a>
             <a class="smallnavbarbutton" href="{{ route('incomplete') }}">Avatar</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
-            <a class="smallnavbarbutton" href="{{ route('inbox') }}">Messages @if (!Auth::guest() && App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count())
-                    <span
-                        class="warningtext">({{ App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count() }})</span>
+            <a class="smallnavbarbutton" href="{{ route('inbox') }}">Messages @if (!Auth::guest() &&
+                App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count())
+                <span
+                    class="warningtext">({{ App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count() }})</span>
                 @endif
             </a>
             <a class="smallnavbarbutton" href="{{ route('blog') }}">Blog</a>
             @if (!Auth::guest() && Auth::user()->isAdmin())
-                <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
+            <a class="smallnavbarbutton" href="{{ route('admin_index') }}">Admin</a>
             @endif
         </div>
     </div>
