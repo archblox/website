@@ -1,10 +1,10 @@
 
 #alert {
-  background: linear-gradient(#f07575 10%, #de2323 100%);
+  background: linear-gradient(#ef3232 10%, #6a0f0f 100%);
 }
 
 #success {
-  background: linear-gradient(#a3e2bd 10%, #02b757 100%)
+  background: linear-gradient(#00c953 10%, #01582a 100%);
 }
 
 .warningtext {
