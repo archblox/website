@@ -1,0 +1,10 @@
+html {
+  background: url('../img/animated.png');
+  background-color: rgb(49, 107, 223);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  animation-name: animatedbackground;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}

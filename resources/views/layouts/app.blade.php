@@ -18,6 +18,15 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @auth
         @switch (Auth::user()->settings->theme)
+            @case(5)
+                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+                <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+                <link href="{{ asset('css/classicappdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+            @break
+            @case(4)
+                <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+                <link href="{{ asset('css/classicapp.css?id=' . Str::random(8)) }}" rel="stylesheet">
+            @break
             @case(3)
             <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
             <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">

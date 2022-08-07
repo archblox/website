@@ -170,6 +170,12 @@
             <h3>Theme</h3>
             <p>Selected Theme: @php
                 switch (Auth::user()->settings->theme) {
+                    case 5:
+                        echo 'Classic Dark';
+                        break;
+                    case 4:
+                        echo 'Classic Light';
+                        break;
                     case 3:
                         echo 'Dark';
                         break;
@@ -188,6 +194,8 @@
                             <option value="1">Light</option>
                             <option value="2">2018</option>
                             <option value="3">Dark</option>
+                            <option value="4">Classic Light</option>
+                            <option value="5">Classic Dark</option>
                         </select>
                     </div>
                     <button style="width: max-content;" class="greenbutton" type="submit">Save</button>
@@ -207,7 +215,7 @@
         <p>These buttons can fully delete data. Use with caution!</p>
         <p>
             <button class="redbutton" disabled>Delete Account</button>
-            <button class="redbutton" disabled>Delete All Places</button>
+            <button class="redbutton" disabled>Delete All Assets (Places and</button>
             <button class="redbutton" disabled>Delete All Avatar Items</button>
         </p>
     </div>

@@ -130,7 +130,7 @@ class SettingController extends Controller
     public function change_theme(Request $request)
     {
         $request->validateWithBag('theme', [
-            'theme_change' => ['required', 'string', 'in:1,2,3'],
+            'theme_change' => ['required', 'string', 'in:1,2,3,4,5'],
         ]);
 
         $userSetting = Auth::user()->settings;
