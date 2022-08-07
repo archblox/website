@@ -58,7 +58,7 @@
                     <h4>New Password</h4>
                     <input type="password" name="password" placeholder=""><br>
                     <h4>Confirm New Password</h4>
-                    <input type="password" name="password_confirmation" placeholder="Confirm New Password Field">
+                    <input type="password" name="password_confirmation" placeholder="">
                 </span>
                 <span class="date_change" id="invisible">
                     <br>
