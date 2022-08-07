@@ -199,6 +199,7 @@
         </div>
     </div>
     <br>
+    <br>
     <div style="flex-wrap: wrap; flex-direction: column;">
         <h3>DANGER ZONE</h3>
         <p style="color: red;">These are inactive for now.<br>In order to delete your account, please ask one of the
