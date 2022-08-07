@@ -11,5 +11,5 @@
 
     @section('content')
         <h1 id="usernameframe">Catalog</h1>
-        <p>currently being worked on..</p>
+        <p>PLACEHOLDER</p>
     @endsection
