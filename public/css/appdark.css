@@ -8,7 +8,7 @@
 }
 
 .warningtext {
-  color: red;
+  color: #ff6767;
 }
 
 
@@ -21,7 +21,7 @@
   background: linear-gradient(#3690df 10%, #0d1085 100%);
 }
 
-.onlinestatus_website {
+.onlinestatus_website { 
   color: #2260DD;
 }
 
@@ -137,4 +137,5 @@ button:hover.greybutton {
 
 .popup {
   color: white;
+  background: linear-gradient(180deg, #747474 10%, #000000 100%);
 }

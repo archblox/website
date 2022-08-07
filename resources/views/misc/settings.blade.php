@@ -54,9 +54,9 @@
                 <span class="password_change" id="invisible">
                     <br>
                     <h4>Old Password</h4>
-                    <input type="password" name="old_password" placeholder="Old Password Field"><br>
+                    <input type="password" name="old_password" placeholder=""><br>
                     <h4>New Password</h4>
-                    <input type="password" name="password" placeholder="New Password Field"><br>
+                    <input type="password" name="password" placeholder=""><br>
                     <h4>Confirm New Password</h4>
                     <input type="password" name="password_confirmation" placeholder="Confirm New Password Field">
                 </span>
@@ -201,7 +201,7 @@
     <br>
     <div style="flex-wrap: wrap; flex-direction: column;">
         <h3>DANGER ZONE</h3>
-        <p style="color: darkred;">These are inactive for now.<br>In order to delete your account, please ask one of the
+        <p style="color: red;">These are inactive for now.<br>In order to delete your account, please ask one of the
             Developers.</p>
         <p>These buttons can fully delete data. Use with caution!</p>
         <p>
