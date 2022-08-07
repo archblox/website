@@ -131,14 +131,51 @@ input {
   color: white;
 }
 
+
+.tab_selected {
+  background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
+}
+
+.tab {
+  color: rgb(255, 255, 255) !important;
+  background: linear-gradient(180deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
+}
+
 button.greybutton {
-  background: black;
+  background: rgb(36, 36, 36);
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
 }
 
 button:hover.greybutton {
   background: linear-gradient(0deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
+}
+
+button.bluebutton {
+  background: #01639c;
+  background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
+}
+
+button:hover.bluebutton {
+  background: linear-gradient(0deg, #00a2ff 0%,  #01639c 100%)
+}
+
+button.redbutton {
+  background: #e42424;
+  background: linear-gradient(180deg, #d86868 0%, #e42424 100%);
+}
+
+button:hover.redbutton {
+  background: linear-gradient(0deg, #d86868 0%, #e42424 100%);
+}
+
+button.greenbutton {
+  background: #1a5c2e;
+  background: linear-gradient(180deg, #02b757 0%, #1a5c2e 100%);
+}
+
+button:hover.greenbutton {
+  background: linear-gradient(0deg, #02b757 0%, #1a5c2e 100%);
 }
 
 .popup {

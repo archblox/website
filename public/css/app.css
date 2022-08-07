@@ -350,7 +350,7 @@
 html {
   margin: 0px;
   font-family: "Helvetica";
-  src: url('Helvetica.ttf') format('truetype'), ;
+  src: url('Helvetica.ttf') format('truetype'),;
   font-style: normal;
   height: 100%;
   color: white;
@@ -511,11 +511,6 @@ button.bluebutton {
 }
 
 button:hover.bluebutton {
-  background: linear-gradient(0deg, #32b5ff 0%, #0074bd 49%, #2c99f8 50%, #71c9fa 95%, #b6e5ff 100%);
-}
-
-button:active.bluebutton,
-button:focus.bluebutton {
   background: linear-gradient(0deg, #32b5ff 0%, #0074bd 49%, #2c99f8 50%, #71c9fa 95%, #b6e5ff 100%);
 }
 
