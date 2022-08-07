@@ -110,4 +110,9 @@ class PageController extends Controller
     {
         return view('maintenance');
     }
+
+    public function catalog()
+    {
+        return view('pages.catalog');
+    }
 }

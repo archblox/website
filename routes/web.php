@@ -35,6 +35,8 @@ Route::get('/maintenance', [App\Http\Controllers\PageController::class, 'mainten
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
+    Route::get('/catalog', [App\Http\Controllers\PageController::class, 'catalog'])->name('catalog');
+
     // Rate limit + auth
     Route::middleware(['throttle:feed_post'])->group(function () {
         Route::post('/home', [App\Http\Controllers\HomeController::class, 'feed_post'])->name('feed_post'); // Posting to the feed
