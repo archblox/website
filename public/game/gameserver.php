@@ -168,11 +168,11 @@ end)
 game:Load("rbxasset://<?php echo $rbxl; ?>")
 -- fix asset ids
 local assetPropertyNames = {"Texture", "TextureId", "SoundId", "MeshId", "SkyboxUp", "SkyboxLf", "SkyboxBk", "SkyboxRt", "SkyboxFt", "SkyboxDn", "PantsTemplate", "ShirtTemplate", "Graphic", "Frame", "ImageLabel", "GuiMain", "Image", "LinkedSource", "AnimationId"}
-local variations = {"http://www%.roblox%.com/asset/%?id=", "http://www%.roblox%.com/asset%?id=", "http://%.roblox%.com/asset/%?id=", "http://%.roblox%.com/asset%?id="}
+local variations = {"http://www%.roblox%.com/asset/%?id=", "http://www%.roblox%.com/asset%?id=", "http://%.roblox%.com/asset/%?id=", "http://%.roblox%.com/asset%?id=", "rbxassetid://", "http://www%.roblox%.com/asset/%?version=1&id=", "http://www%.roblox%.com/Asset/%?id="}
 
 function GetDescendants(o)
 	local allObjects = {}
-	function FindChildren(Object)
+	local function FindChildren(Object)
 		for _,v in pairs(Object:GetChildren()) do
 			table.insert(allObjects,v)
 			FindChildren(v)
@@ -199,6 +199,7 @@ for i, v in pairs(GetDescendants(game)) do
 			v.Source = SourceCode
 		end
 	end
+
 	for _, property in pairs(assetPropertyNames) do
 		pcall(function()
 			if v[property] and not v:FindFirstChild(property) then --Check for property, make sure we're not getting a child instead of a property
@@ -215,9 +216,6 @@ for i, v in pairs(GetDescendants(game)) do
 		end)
 	end
 end
-
-print("Updated " .. replacedProperties .. " AssetIds")
-print("Changed " .. replacedSourceCodes .. " lines of code")
 -- other stuff
 ns:Start(<?php echo $port; ?>, sleeptime)  
 pcall(function() game.LocalSaveEnabled = true end)
