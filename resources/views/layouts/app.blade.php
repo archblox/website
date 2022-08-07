@@ -59,7 +59,7 @@
         @else
         <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}"><p> {{ Auth::user()->morbux }}</p></div>
             <div id="navbarsignedincontainer">
-                <p class="nonbolded" id="navbarusername">{{ Auth::user()->name }} | <a href="{{ route('logout') }}"
+                <p class="nonbolded" id="navbarusername"><a href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a> | <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Log
                         out...</a></p>
