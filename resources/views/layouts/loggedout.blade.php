@@ -69,6 +69,11 @@
         @yield('contentloggedout')
     </div>
     <div id="footer_signup">
+    @if (!Auth::guest() && Auth::user()->isAdmin())
+        <p><strong>{{ App\Models\User::count() }}</strong> users registered | <strong>{{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subMinute()->toDateTimeString())->count(); }}</strong>
+            users are online</p>
+        <br>
+        @endif
         <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.
             We're still Morbin'!</p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>
