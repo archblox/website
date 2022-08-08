@@ -1,6 +1,6 @@
 @php    
 	//header("location:" . $file);
-    if(isset($_GET['nswts'])){
+    if(isset($_GET['nsets'])){
         $nsets = (int)$_GET["nsets"];
     } else {
         $nsets = 0;
