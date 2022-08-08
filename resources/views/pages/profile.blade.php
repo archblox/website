@@ -81,11 +81,11 @@
             </div>
             <br>
             <h2>ARCHBLOX Badges</h2>
-            <div style="white-space:nowrap">
+            <div class="badges">
                 @foreach ($badges as $badge)
                     @foreach ($user->badges as $user_badge)
                         @if ($badge->id == $user_badge)
-                            <div style="width:120px;display:inline-block">
+                            <div class="badgecontainer">
                                 <img alt="{{ $badge->description }}" src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
                                 <h3>{{ $badge->title }}</h3>
                             </div>

@@ -193,6 +193,21 @@
   align-items: center;
 }
 
+.badges {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.badgecontainer {
+  width: 120px;
+  padding: 3px;
+}
+
 #navbarlogincontainer,
 #navbarsignedincontainer {
   position: relative;
