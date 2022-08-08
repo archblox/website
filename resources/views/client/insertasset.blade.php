@@ -29,7 +29,4 @@
         $file = "http://morblox.us/stamper/sid/{$sid}.xml";
         readfile($file);
     }
-    header("content-type:text/txt");
-    $file = "http://morblox.us/fail.txt";
-    readfile($file);
 @endphp
