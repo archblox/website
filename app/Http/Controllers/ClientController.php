@@ -75,4 +75,9 @@ class ClientController extends Controller
     {
         return view('client.modelupload');
     }
+
+    public function stampertools()
+    {
+        return view('client.stampertools');
+    }
 }
