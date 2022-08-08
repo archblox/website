@@ -21,6 +21,6 @@ body {
 }
 </style>
 @endsection
-@section('custom_content')
+@section('content')
 <iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%" style="border:none;" seamless sandbox></iframe>
 @endsection
