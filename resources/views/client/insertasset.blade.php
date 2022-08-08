@@ -12,12 +12,14 @@
         readfile($file);
         //
         //header("location:" . "http://morblox.us/stamper/base/{$userid}.xml");
-    }
-    //http://www.morblox.us/stamper/inseassetcollect.php?sid=433603
-    if ($sid != 0 && $type == "0")
+    } elseif ($sid != 0 && $type == "0")
     {
         header("content-type:text/xml");
         $file = "http://morblox.us/stamper/sid/{$sid}.xml";
+        readfile($file);
+    } else
+        header("content-type:text/xml");
+        $file = "http://morblox.us/fail.xml";
         readfile($file);
     }
 @endphp
