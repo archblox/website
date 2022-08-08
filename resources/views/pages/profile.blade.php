@@ -87,7 +87,7 @@
                         @if ($badge->id == $user_badge)
                             <div class="badgecontainer">
                                 <img alt="{{ $badge->description }}" src="/img/badges/{{ $badge->id }}.png" width="75px" height="75px" />
-                                <h3>{{ $badge->title }}</h3>
+                                <h4>{{ $badge->title }}</h4>
                             </div>
                         @endif
                     @endforeach
