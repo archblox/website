@@ -16,9 +16,6 @@ body {
     width: 100%;
     overflow: hidden;
 }
-.content {
-    display: none;
-}
 </style>
 @endsection
 @section('content')
