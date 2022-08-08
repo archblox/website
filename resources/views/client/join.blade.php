@@ -75,9 +75,9 @@ end)
 
 game:GetService("ChangeHistoryService"):SetEnabled(false)
 game:GetService("ContentProvider"):SetThreadPool(16)
-pcall(function() game:GetService("InsertService"):SetBaseSetsUrl("http://www.morblox.us/stamper/inseasset.maybephp?nsets=10&type=base") end)
-pcall(function() game:GetService("InsertService"):SetUserSetsUrl("http://www.morblox.us/stamper/inseasset.maybephp?nsets=20&type=user&userid=%d") end)
-pcall(function() game:GetService("InsertService"):SetCollectionUrl("http://www.morblox.us/stamper/inseasset.maybephp?sid=%d") end)
+pcall(function() game:GetService("InsertService"):SetBaseSetsUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?nsets=10&type=base") end)
+pcall(function() game:GetService("InsertService"):SetUserSetsUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d") end)
+pcall(function() game:GetService("InsertService"):SetCollectionUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?sid=%d") end)
 pcall(function() game:GetService("InsertService"):SetAssetUrl("http://www.morblox.us/asset/?id=%d") end)
 pcall(function() game:GetService("InsertService"):SetAssetVersionUrl("http://www.morblox.us/asset/?id=%d") end)
 
