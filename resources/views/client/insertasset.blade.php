@@ -8,9 +8,7 @@
         header("content-type:text/xml");
         $file = "http://morblox.us/stamper/base/{$userid}.xml";
         readfile($file);
-        //
-        //header("location:" . "http://morblox.us/stamper/base/{$userid}.xml");
-    } else if ($sid != 0 && $type == "0") {
+    } else if ($sid != 0 && !$sid == null || $type == "0") {
         header("content-type:text/xml");
         $file = "http://morblox.us/stamper/sid/{$sid}.xml";
         readfile($file);
