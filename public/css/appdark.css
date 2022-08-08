@@ -67,12 +67,12 @@ body {
 }
 
 .content {
-  color: white;
+  color: rgb(167 167 167);
   background: rgb(25, 25, 25);
 }
 
 .content_signup {
-  color: rgb(255, 255, 255);
+  color: rgb(167 167 167);
   background: rgb(25, 25, 25);
 }
 
@@ -82,7 +82,7 @@ body {
 .content_signup a,
 .content_special p a,
 .content_special a {
-  color: #d1d1d1;
+  color: #005587;
 }
 
 #footer {
@@ -97,12 +97,12 @@ body {
 #footer a,
 #footer_signup p,
 #footer_signup a {
-  color: white;
+  color: rgb(167 167 167);
 }
 
 a,
 #navbarusername {
-  color: white;
+  color: rgb(200,200,200);
 }
 
 .logoutframe {
@@ -127,8 +127,8 @@ a,
 textarea,
 select,
 input {
-  background-color: black;
-  color: white;
+  background-color: rgb(25, 25, 25);
+  color: rgb(200,200,200);
 }
 
 

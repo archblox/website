@@ -33,9 +33,10 @@
     @else
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <script>
-    function getStylesheet() {
+    function getDarkMode() {
         var currentTime = new Date().getHours();
-        if (7 >= currentTime && currentTime > 18) {} else {
+        if (6 >= currentTime && currentTime > 18) {} else {
+            // it is night time for the user, let's force dark mode.
             var li = document.createElement('link');
             var href = "{{ asset('css/appdark.css?id='.Str::random(8)) }}";
             var rel = 'stylesheet';
@@ -45,7 +46,7 @@
             s.appendChild(li, s);
         }
     }
-    getStylesheet()
+    getDarkMode()
     </script>
     @endauth
     @yield('extras')
