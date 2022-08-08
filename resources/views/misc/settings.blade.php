@@ -210,13 +210,8 @@
     <br>
     <div style="flex-wrap: wrap; flex-direction: column;">
         <h3>DANGER ZONE</h3>
-        <p style="color: red;">These are inactive for now.<br>In order to delete your account, please ask one of the
+        <p style="warningtext">These are inactive for now.<br>In order to delete your account, please ask one of the
             Developers.</p>
-        <p>These buttons can fully delete data. Use with caution!</p>
-        <p>
-            <button class="redbutton" disabled>Delete Account</button>
-            <button class="redbutton" disabled>Delete All Assets (Places and</button>
-            <button class="redbutton" disabled>Delete All Avatar Items</button>
-        </p>
+        <p><button class="redbutton" disabled>Delete Account</button> <button class="redbutton" disabled>Disable Account</button></p>
     </div>
 @endsection
