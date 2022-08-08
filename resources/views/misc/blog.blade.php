@@ -8,16 +8,6 @@
 @section('descdiscord')
 <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
-@section('extras')
-<style>
-body {
-    height: 100%;
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-}
-</style>
-@endsection
 @section('content')
-<iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" width="100%" height="100%" style="border:none;" seamless sandbox></iframe>
+<iframe src="https://archblox.blogspot.com" title="ARCHBLOX Blog" style="border:none;" seamless sandbox></iframe>
 @endsection
