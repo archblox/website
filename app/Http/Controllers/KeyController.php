@@ -19,6 +19,13 @@ class KeyController extends Controller
         if (!$fetchKeys->isEmpty()) {
             if ($activeKey->created_at->addWeek()->gt(Carbon::now())) {
                 $canCreate = false;
+                if (User::isAdmin()) {
+                    if ($activeKey->created_at->addMinute()->gt(Carbon::now())) {
+                        $canCreate = false;
+                    } else {
+                        $canCreate = true;
+                    }   
+                }
             } else {
                 $canCreate = true;
             }
@@ -41,7 +48,7 @@ class KeyController extends Controller
 
         // Validation
         if (!$fetchKeys->isEmpty() && $activeKey->created_at->addWeek()->gt(Carbon::now())) {
-            if (!User::isAdmin())
+            if (!User::isAdmin() || $activeKey->created_at->addMinute()->gt(Carbon::now()))
                 abort(404);
         }
 

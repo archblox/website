@@ -6,17 +6,16 @@
 
 @section('content')
     <h1 id="usernameframe">Create a Key</h1>
-    @if ($data['canCreate'] || App\Models\User::isAdmin())
+    @if ($data['canCreate'])
             <p>You may create @if ($data['fetchKeys']->isEmpty()) your first key below!
                 @else
-                    @if (App\Models\User::isAdmin()) as many keys as you wish because you're an admin. @else a new key because it's been 1 week since creating your last key. @endif @endif
+                    @if (App\Models\User::isAdmin()) a new key every minute because you're an admin. @else a new key because it's been 1 week since creating your last key. @endif @endif
             </p>
         @else
-            <p>You cannot create a new key because 1 week hasn't passed since creating your last key. You can find your
-                key(s) below.</p>
+        <p>@if (App\Models\User::isAdmin()) You cannot create a new key because 1 minute hasn't passed since creating your last key. You can find your key(s) below.. @else You cannot create a new key because 1 week hasn't passed since creating your last key. You can find your key(s) below. @endif</p>
         @endif
         <br>
-        @if ($data['canCreate'] || App\Models\User::isAdmin())
+        @if ($data['canCreate'])
             <form method="POST" action="{{ route('key_create') }}">
                 @csrf
                 <button class="bluebutton" type="submit">Create Invite Key</button>

@@ -160,7 +160,8 @@
         <div class="content_special"
             style="flex-wrap: wrap; flex-direction: column; width: 50%; align-content: flex-start;">
             <h3>Invite Keys</h3>
-            <p>You can only create 1 invite every week. <br>Manage your keys and key history below.</p>
+            <p>@if (App\Models\User::isAdmin()) You can create 1 key per minute. @else You can create 1 key per week. @endif</p>
+            <p>Manage your keys and key history below.</p>
             <p><button class="bluebutton"><a href="{{ route('key_index') }}"
                         style="font-weight:normal;color:#fff">Create
                         Invite Key</a></button></p>
