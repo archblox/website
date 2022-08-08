@@ -53,6 +53,7 @@ html {
 }
 
 .loggedout {
+  background-image: url('../img/animateddark.png');
   background-color: rgb(1, 17, 48);
 }
 
