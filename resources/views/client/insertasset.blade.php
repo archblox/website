@@ -12,9 +12,8 @@
         header("content-type:text/xml");
         $file = "http://morblox.us/stamper/sid/{$sid}.xml";
         readfile($file);
-    } else {
-        header("content-type:text/xml");
-        $file = "http://morblox.us/fail.xml";
-        readfile($file);
     }
+    header("content-type:text/xml");
+    $file = "http://morblox.us/fail.xml";
+    readfile($file);
 @endphp
