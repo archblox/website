@@ -41,6 +41,21 @@
     @endswitch
     @else
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <script>
+    function getStylesheet() {
+        var currentTime = new Date().getHours();
+        if (7 >= currentTime && currentTime > 18) {} else {
+            var li = document.createElement('link');
+            var href = "{{ asset('css/appdark.css?id='.Str::random(8)) }}";
+            var rel = 'stylesheet';
+            li.setAttribute('href', href);
+            li.setAttribute('rel', rel);
+            var s = document.getElementsByTagName('head')[0];
+            s.appendChild(li, s);
+        }
+    }
+    getStylesheet()
+    </script>
     @endauth
     @yield('extras')
 </head>

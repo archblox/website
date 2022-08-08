@@ -207,6 +207,10 @@
   align-items: center;
 }
 
+#navbarlogincontainer {
+  margin-left: auto;
+}
+
 #profilefriendscontainer p,
 #profilefriendscontainer a {
   display: inline;
