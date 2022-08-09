@@ -39,7 +39,6 @@
     @else
     <style> 
     html {
-        // do this to prevent hurting of the eyes while the js loads
         background: black;
     }
     </style>
