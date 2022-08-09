@@ -8,3 +8,12 @@ html {
   animation-duration: 50s;
   animation-iteration-count: infinite;
 }
+
+.content, #footer {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.content {
+  margin-top: 105px;
+}
