@@ -41,6 +41,9 @@
     @endswitch
     @else
     <style> 
+    body {
+        display: none;
+    }
     html {
         background: black;
     }
@@ -75,6 +78,11 @@
     }
     getDarkMode()
     </script>
+    <style>
+    body {
+        display: block !important;
+    }
+    </style>
     @endauth
     @yield('extras')
 </head>
