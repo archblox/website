@@ -24,14 +24,14 @@
     <div class="iphone-sidebar">
         <p><img src="https://archblox.com/img/MORBLOXlogo.png" width="50%"> Studio</p>
         @guest
-            <a href="{{ route('login') }}">Log In</a>
+        <a href="{{ route('login') }}">Log In</a>
         @else
-            <p class="nonbolded">{{ Auth::user()->name }}<p>
-        @endguest        
-        <br>
-        <a style="color: blue;" href="#">My Games</a>
-        <br>
-        <a style="color: black;" href="#">My Assets</a>
+        <p class="nonbolded">{{ Auth::user()->name }}</p>
+            <br>
+            <a style="color: blue;" href="#">My Games</a>
+            <br>
+            <a style="color: white;" href="#">My Assets</a>
+            @endguest
     </div>
     <div class="iphone-content">
         @yield('content')
