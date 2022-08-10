@@ -121,13 +121,13 @@
 }
 
 @media (max-width: 970px) {
-  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p {
+  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p, #navbarlogincontainer {
     font-size: 14px;
   }
 }
 
 @media (max-width: 640px) {
-  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p {
+  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p, #navbarlogincontainer {
     font-size: 12px;
   }
 }
