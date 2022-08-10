@@ -121,13 +121,13 @@
 }
 
 @media (max-width: 970px) {
-  .navbarbuttoncontainer a {
+  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 640px) {
-  .navbarbuttoncontainer a {
+  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p {
     font-size: 12px;
   }
 }
@@ -399,7 +399,7 @@ body {
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 0px;
-  min-width: 700px;
+  min-width: 670px;
   margin-bottom: 0px;
   padding-bottom: 0px;
   height: 100%;
