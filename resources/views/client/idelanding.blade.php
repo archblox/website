@@ -18,7 +18,7 @@
     <h1>My Games</h1>
     <button class="greenbutton">Create a Game (disabled)</button>
     -->
-    <p>This page does not have any functionality yet other than logging in.</p>
+    <p>You cannot currently upload places or models as the functionality for that has not been added yet.</p>
     <p>Please press the New button in order to create a place to host.</p>
 @endguest     
 @endsection

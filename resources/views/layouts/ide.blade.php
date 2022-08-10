@@ -28,7 +28,7 @@
         @else
         <p class="nonbolded">{{ Auth::user()->name }}</p>
             <br>
-            <a style="color: blue;" href="#">My Games</a>
+            <a style="color: white;" href="#">My Games</a>
             <br>
             <a style="color: white;" href="#">My Assets</a>
             @endguest
