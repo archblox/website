@@ -40,7 +40,7 @@ html {
   Height: 40px;
 }
 
-.navbarbuttoncontainer li:hover {
+.navbarbuttoncontainer li:hover, .Redesign .smallnavbarbutton:hover {
 	background: none;
   }
 
