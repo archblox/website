@@ -190,7 +190,7 @@
   height: 25px;
   width: 100%;
   top: 36px;
-  position: relative;
+  position: fixed;
   background: linear-gradient(#000 10%, #191919 100%);
 }
 .subMenu {
@@ -433,7 +433,7 @@ html {
   src: url('Helvetica.ttf') format('truetype'),;
   font-style: normal;
   height: 100%;
-  color: white;
+  color: #000;
   background-color: #cccccc;
 }
 
@@ -467,6 +467,10 @@ body {
   align-content: center;
   justify-content: space-around;
   flex-wrap: nowrap;
+}
+
+.arkotcontainer {
+  color: #fff;
 }
 
 .content {
