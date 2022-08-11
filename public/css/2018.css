@@ -22,6 +22,7 @@ html {
   
   .arkoticon_navbar {
 	margin: 0px;
+	margin-top: -5px;
 	content: url("http://archblox.com/img/ark2018.png");
 	margin-right: 3px;
 	width: 30px;
@@ -32,6 +33,7 @@ body {
 	color: #191919;
 	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
 	font-size: 16px;
+	font-size: 100%;
 	width: 100%;
 	height: 100%;
 	margin-bottom: 168px;
@@ -46,7 +48,7 @@ body {
 }
 
 .content {
-	color: #000000;
+	color: #191919;
     background-color: #E3E3E3;
     padding-top: 12px;
     margin: 40px auto 0;
@@ -63,7 +65,7 @@ body {
 	border: 0;
 }
 
-.smallnavbarbutton {
+.Redesign .smallnavbarbutton {
 	color: #191919;
 	display: flex;
 	margin: 3px;
@@ -71,6 +73,9 @@ body {
     font-weight: 500;
 	line-height: 1.92857;
 	height: 28px;
+}
+.Redesign .smallnavbarbutton:hover {
+	background: transparent;
 }
 
 #alert, #success {
@@ -160,6 +165,10 @@ body {
     background-position: -28px -475px;
 }
 
+.navbarbuttoncontainer li:hover {
+	background: none;
+  }
+
 .smallnavbarbutton:nth-child(6):before {
     content: '';
     background-image: url(https://images.rbxcdn.com/f4000b6d03a0df7153556d2514045629-navigation_10022018.svg);
@@ -174,8 +183,9 @@ body {
 	margin-right: 3px;
 }
 
-.navbar {
+.BannerRedesign {
 	background: #0074bd;
+	border: 0;
 	height: 40px;
 	padding: 0;
 	top: 0;
@@ -188,7 +198,18 @@ body {
 	transform: translateZ(0);
 }
 
-.smallnav {
+#NavigationRedesignBannerContainer {
+	height: 40px;
+	margin: 0;
+	width: 100%;
+}
+.subbar {
+	top: 0;
+	height: 0;
+	width: 0;
+	background: #fff;
+}
+.Redesign .subMenu {
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
 	-ms-transform: none;
@@ -266,13 +287,11 @@ body {
 }
 #logo_small img, #smallnav_open img {
 	padding: 5px 0;
-	padding-top: 7px;
 	width: 30px;
 	height: 30px;
 }
 #logo_full img {
 	padding: 5px 0;
-	padding-top: 10px;
 	max-width: 120px;
 	height: 30px;
 }
@@ -284,17 +303,32 @@ body {
 	background-size: auto auto;
 	width: 30px;
 	margin: 0px;
-	margin-top: 1px;
+	margin-top: 6px;
 	margin-left: 10px;
+	height: 30px;
+	float: left;
+}
+
+#NavigationRedesignBannerContainer p {
+	color: #fff;
+}
+
+#logo_full, #logo_full img {
 	height: 30px;
 }
 
-
 .navbarbuttoncontainer {
 	display: flex;
+	min-height: 40px;
+}
+.navbarbuttoncontainer li {
+	padding: 0;
+	padding-left: 5px;
+	height: 40px
 }
 .navbarbutton {
 	color: #fff;
+	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
 	padding: 6px 9px;
 	width: auto;
 	font-size: 16px;
@@ -305,6 +339,9 @@ body {
 	float: left;
 	margin: 4px auto;
 	top: 0;
+}
+#NavigationRedesignBannerContainer {
+	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
 }
 .navbarbutton:hover {
     background-color: #191919;
@@ -488,11 +525,19 @@ iframe {
 	padding-bottom: 40px
 }
 
+#logo_full {
+	display: none;
+  }
+  
+  #logo_small {
+	display: block;
+  }
+
 @media (min-width: 1688px) {
 	#smallnav_open {
 		display: none;
 	}
-	.smallnav {
+	.subbar {
 		display: block;
 	}
 	#logo_full img, #logo_full {
@@ -503,6 +548,13 @@ iframe {
 		padding-left: 180px;
 		width: calc(100% - 250px);
 		padding-right: 10px;
+	}
+	#logo_full {
+		display: block;
+	}
+	
+	#logo_small {
+		display: none;
 	}
 }
 @media (max-width: 970px) {
@@ -518,15 +570,22 @@ iframe {
 }
 @media (max-width: 767px) {
 	.navbarbuttoncontainer a {
-		font-size: 12px;
+		font-size: 10px;
 		line-height: 1.9em;
 		top: 0px;
 	}
 }
 @media (max-width: 560px) {
 	.navbarbuttoncontainer a {
-		font-size: 10px;
+		font-size: 8px;
 		line-height: 2.2em;
+		top: 0px;
+	}
+}
+@media (max-width: 560px) {
+	.navbarbuttoncontainer a {
+		font-size: 6px;
+		line-height: 3.5em;
 		top: 0px;
 	}
 }

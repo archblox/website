@@ -53,8 +53,8 @@
     <br>
     <h3>Password</h3>
     <input id="password" type="password" name="password" required autocomplete="password">
-    <p>Don't reuse passwords, and don't use a simple one!</p>
-    <p>Passwords must be 8 or more characters, with 1 capital letter, 1 symbol and 1 number.</p>
+    <p class="helpfultip">Don't reuse or use weak passwords!</p>
+    <p>Recommend to be 8 or more characters, with atleast 1 capital letter, 1 symbol and 1 number.</p>
     @error('password')
     <div class="invalid-feedback" style="color:red">
         <strong>{{ $message }}</strong>

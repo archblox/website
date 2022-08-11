@@ -88,57 +88,59 @@
 </head>
 
 <body>
-    <div class="navbar">
-        @auth
-        @switch (Auth::user()->settings->theme)
-        @case(2)
-        <a id="smallnav_open"></a>
-        <script>
-        function third() {
-            document.querySelector('.smallnav').classList.toggle('invisible_navbar');
-        }
-        document.querySelector('#smallnav_open').addEventListener('click', third);
-        </script>
-        @break
-        @default
-        @endswitch
-        @endauth
-        <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"
-                width="200" height="40" /></a>
-        <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
-                src="{{ asset('img/MORBLOXlogoshort.png') }}" width="45" height="40" /></a>
-        <div class="navbarbuttoncontainer">
-            <a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a>
-            <a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a>
-            <a class="navbarbutton" id="smallbtn0" href="{{ route('incomplete') }}">Build</a>
-            <a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
-@else
-{{ route('profile', Auth::id()) }} @endguest">Profile</a>
-            <a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a>
-        </div>
-        @guest
-        <div id="navbarlogincontainer">
-            <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Log In</a></p>
-        </div>
-        @else
-        <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
-            <p> {{ Auth::user()->morbux }}</p>
-        </div>
-        <div id="navbarsignedincontainer">
-            <p class="nonbolded" id="navbarusername"><a
-                    href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
-                | <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">Log
-                    out...</a></p>
-        </div>
+    <div class="BannerRedesign">
+        <div ID="NavigationRedesignBannerContainer" class="BannerCenterContainer">
+            @auth
+            @switch (Auth::user()->settings->theme)
+            @case(2)
+            <a id="smallnav_open"></a>
+            <script>
+            function third() {
+                document.querySelector('.subbar.Redesign').classList.toggle('invisible_navbar');
+            }
+            document.querySelector('#smallnav_open').addEventListener('click', third);
+            </script>
+            @break
+            @default
+            @endswitch
+            @endauth
+            <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
+            <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
+                    src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
+            <div class="navbarbuttoncontainer">
+                <li><a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a></li>
+                <li><a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a></li>
+                <li><a class="navbarbutton" id="smallbtn0" href="{{ route('incomplete') }}">Build</a></li>
+                <li><a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
+    @else
+    {{ route('profile', Auth::id()) }} @endguest">Profile</a></li>
+                <li><a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a><li>
+            </div>
+            @guest
+            <div id="navbarlogincontainer">
+                <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Login</a></p>
+            </div>
+            @else
+            <div id="HeaderLoginButton" class="RightNav">
+                <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
+                    <p> {{ Auth::user()->morbux }}</p>
+                </div>
+                <div id="navbarsignedincontainer">
+                    <p class="nonbolded" id="navbarusername"><a
+                            href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a> | <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Logout</a></p>
+                </div>
+            </div>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
-            @csrf
-        </form>
-        @endguest
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                @csrf
+            </form>
+            @endguest
+            </div>
+        </div>
     </div>
-    <div class="smallnav invisible_navbar">
-        <div class="smallnavbarbuttoncontainer">
+    <div class="subbar Redesign invisible_navbar">
+        <div class="subMenu">
             <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() &&
                 count(Auth::user()->getFriendRequests()))
                 <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span>

@@ -17,3 +17,109 @@ html {
 .content {
   margin-top: 105px;
 }
+
+#logo_full {
+  display: none;
+}
+
+#logo_small {
+  display: block;
+}
+
+#NavigationRedesignBannerContainer {
+  font-family: "Helvetica";
+  height: 40px;;
+}
+
+.BannerCenterContainer {
+  width: 100%;
+}
+
+#logo_full, #logo_full img {
+  width: 200px;
+  Height: 40px;
+}
+
+.navbarbuttoncontainer li:hover {
+	background: none;
+  }
+
+.BannerRedesign {
+  height: 40px;
+  margin: 0px;
+  padding-right: 5px;
+  align-content: center;
+  padding-left: 5px;
+  padding-top: 2px;
+  position: fixed;
+  top: 0px;
+  padding-bottom: 2px;
+  color: white;
+  line-height: normal;
+  z-index: 100;
+  display: inline-flex;
+  vertical-align: middle;
+  width: 100%;
+  background: #2362DE;
+  background: linear-gradient(#5082ed 10%, #0a44b7 100%);
+  border: 0;
+}
+.Redesign .subMenu {
+  height: 25px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 5px;
+  position: fixed;
+  z-index: 100;
+  top: 43px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: inline-flex;
+  vertical-align: middle;
+  width: 100%;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+  text-size-adjust: auto;
+  text-align: left;
+  background: #000000;
+  background: linear-gradient(#303030 10%, #000000 100%);
+}
+.navbarbuttoncontainer {
+  padding-left: 5px;
+}
+.navbarbuttoncontainer li {
+  padding: 0;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.navbarbutton {
+  position: relative;
+  padding-right: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+.Redesign .smallnavbarbutton {
+  position: relative;
+  padding: 0;
+  padding-right: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (min-width: 1688px) {
+  #logo_full {
+    display: block;
+  }
+
+  #logo_small {
+    display: none;
+  }
+}
