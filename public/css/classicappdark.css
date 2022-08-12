@@ -11,6 +11,7 @@ html {
 
 .content, #footer {
   max-width: 1000px;
+  width: 1000px;
   margin: auto;
 }
 
