@@ -14,5 +14,5 @@
 <br>
 <p><a alt="Sign Up button" href="{{ route('register') }}" >Sign Up</a> or <a alt="Log In button" href="{{ route('login') }}">Login</a></p>
 <br>
-<a href="https://discord.gg/nudzQ7hkWY">Join our Discord!</a>
+<a class="hyperlink" href="https://discord.gg/nudzQ7hkWY">Join our Discord!</a>
 @endsection

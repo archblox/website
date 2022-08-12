@@ -89,14 +89,14 @@
 
 <body>
     <div class="BannerRedesign">
-        <div ID="NavigationRedesignBannerContainer" class="BannerCenterContainer">
+        <div id="NavigationRedesignBannerContainer" class="BannerCenterContainer">
             @auth
             @switch (Auth::user()->settings->theme)
             @case(2)
             <a id="smallnav_open"></a>
             <script>
             function third() {
-                document.querySelector('.subbar.Redesign').classList.toggle('invisible_navbar');
+                document.querySelector('.mySubmenuFixed.Redesign').classList.toggle('invisible_navbar');
             }
             document.querySelector('#smallnav_open').addEventListener('click', third);
             </script>
@@ -104,7 +104,7 @@
             @default
             @endswitch
             @endauth
-            <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
+            <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" class = "btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
             <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
                     src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
             <div class="navbarbuttoncontainer">
@@ -118,7 +118,7 @@
             </div>
             @guest
             <div id="navbarlogincontainer">
-                <p><a href="{{ route('register') }}">Sign Up</a> or <a href="{{ route('login') }}">Login</a></p>
+                <p><a id="HeaderSignUp" href="{{ route('register') }}">Sign Up</a><span id="HeaderOr">or</span><span id="loginSpan"><a id="headerLogin" href="{{ route('login') }}"></a></span></p>
             </div>
             @else
             <div id="HeaderLoginButton" class="RightNav">
@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="subbar Redesign invisible_navbar">
+    <div class="mySubmenuFixed Redesign invisible_navbar">
         <div class="subMenu">
             <a class="smallnavbarbutton" href="{{ route('friends') }}">Friends @if (!Auth::guest() &&
                 count(Auth::user()->getFriendRequests()))

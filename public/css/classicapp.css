@@ -40,9 +40,10 @@ html {
   Height: 40px;
 }
 
-.navbarbuttoncontainer li:hover, .Redesign .smallnavbarbutton:hover {
+.btn-logo:hover, .smallnavbarbutton:hover, .navbarbuttoncontainer li:hover {
+	background-image: none;
 	background: none;
-  }
+}
 
 .BannerRedesign {
   height: 40px;
@@ -112,6 +113,13 @@ html {
   padding-right: 5px;
   text-align: center;
   font-size: 15px;
+  line-height: 25px;
+  float: none;
+}
+.mySubmenuFixed.Redesign {
+  background: none;
+  height: 29px;
+  top: 44px;
 }
 
 @media (min-width: 1688px) {
