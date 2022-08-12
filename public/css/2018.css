@@ -50,6 +50,7 @@ body {
 .content {
 	color: #191919;
     background-color: #E3E3E3;
+	width: 970px;
     padding-top: 12px;
     margin: 40px auto 0;
     padding-bottom: 40px;
@@ -545,7 +546,6 @@ iframe {
 	}
 	.content, iframe {
 		padding-left: 180px;
-		width: calc(100% - 250px);
 		padding-right: 10px;
 	}
 	#logo_full {
