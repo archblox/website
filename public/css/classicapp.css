@@ -35,7 +35,7 @@ html {
   width: 100%;
 }
 
-#logo_full, #logo_full img {
+#logo_full, #logo_full .btn-logo {
   width: 200px;
   Height: 40px;
 }
