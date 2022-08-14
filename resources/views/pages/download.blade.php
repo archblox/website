@@ -39,4 +39,6 @@
 <p>If you get a popup saying "Virus detected", open Windows Security (Windows Defender if on Windows 10 or earlier) and
     then press Virus & threat protection, press Manage Settings, select Add or Remove exclusions, make a folder you want
     to exclude and then choose that folder, install the exe there.</p>
+<br>
+<p>If you get a popup saying "The application has failed to start because its side-by-side configuration is incorrect", go <a href="https://www.microsoft.com/en-us/download/details.aspx?id=26368">here</a> to download Microsoft Visual C++ 2008 Redistibutable and choose "x86" when prompted.</p>
 @endsection
