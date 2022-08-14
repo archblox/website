@@ -114,7 +114,7 @@
                 <li><a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
     @else
     {{ route('profile', Auth::id()) }} @endguest">Profile</a></li>
-                <li><a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a><li>
+                <li><a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a></li>
             </div>
             @guest
             <div id="navbarlogincontainer">
@@ -174,8 +174,7 @@
             users are online</p>
         <br>
         @endif
-        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.
-            We're still Morbin'!</p>
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.</p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a>
         </p>
     </div>

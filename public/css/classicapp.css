@@ -15,6 +15,20 @@ html {
   margin: auto;
 }
 
+#footer, #footer_signup {
+  background: rgba(172,172,172,0.75);
+}
+
+.content_signup {
+  background: rgba(255, 255, 255,0.75);
+}
+
+.content {
+  margin-top: 105px;
+  min-height: 550px;
+  background: rgba(255, 255, 255,0.75);
+}
+
 .content {
   margin-top: 105px;
 }
@@ -28,7 +42,7 @@ html {
 }
 
 #NavigationRedesignBannerContainer {
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue";
   height: 40px;;
 }
 
@@ -105,7 +119,7 @@ html {
   padding-right: 5px;
   text-align: center;
   font-size: 18px;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue";
   font-weight: bold;
 }
 .Redesign .smallnavbarbutton {

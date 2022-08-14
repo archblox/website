@@ -168,8 +168,8 @@
 }
 html {
   margin: 0px;
-  font-family: "Helvetica";
-  src: url('Helvetica.ttf') format('truetype'),;
+  font-family: "Helvetica Neue";
+  src: url('Helvetica Neue.ttf') format('truetype'),;
   font-style: normal;
   background-color: rgb(49, 107, 223);
   color: white;
@@ -242,7 +242,7 @@ font-weight: 400;
 text-align: center;
   border-radius: 3px;
 border: 1px solid #3D414A;
-font-family: "Helvetica";
+font-family: "Helvetica Neue";
 color: #fff;
 }
 button.bluebutton {

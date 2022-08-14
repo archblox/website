@@ -1,6 +1,7 @@
 @extends('layouts.loggedout')
 @section('title')
-<title>{{ env('APP_NAME') }} - We're Still Morbin!</title>
+<title>{{ env('APP_NAME') }} - It's Archaic!
+</title>
 @endsection
 @section('titlediscord')
 <meta content="{{ env('APP_NAME') }}" property="og:title" />

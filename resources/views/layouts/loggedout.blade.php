@@ -1,3 +1,37 @@
+@php
+$splash = array(
+'It\'s Archaic!',
+'Think. Build. Create.',
+'MORBLOX never existed.',
+'You make the game.',
+'Memories under the arch.',
+'Watch out for Archviles!',
+'We\'re still Morbin\'',
+'Why yes I play ARCHBLOX, how could you tell?',
+'Do not sell us expensive helicopters',
+'Get better at archery with ARCHBLOX!!!',
+'my bitch got me a walle hat from disney land',
+'We are powering laziness',
+'If you can\'t beat em, join em',
+'We will, we will rock you',
+'I\'m a goofy goober',
+'I LOVE BEING PURPLE',
+'The slogan always changes!',
+'Crosswoods is a great game!',
+'The oldest anarchy server in minecraft.',
+'Good morning U.S.A!',
+'I\'ve got a feeling that it\'s gonna be a wonderful day',
+'The sun in the sky has a smile on his face',
+'And he\'s shining a salute to the American race',
+'OOOH ARCHBLOX\'S OH YEAH',
+'you know what they say all toasters toast toast',
+'omg old roblox!!',
+'Thomas was here!',
+'C# moment!',
+'Laravel moment!'
+);
+@endphp
+
 <!DOCTYPE html>
 <html lang="en-us" class="loggedout">
 
@@ -37,15 +71,16 @@
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endswitch
     @else
-    <style> 
+    <style>
     body {
         display: none;
     }
+
     html {
         background: black;
     }
     </style>
-    <script>        
+    <script>
     function getDarkMode() {
         var currentTime = new Date().getHours();
         if (6 >= currentTime || currentTime > 18) {
@@ -89,19 +124,21 @@
     <div id="logo_signup">
         <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}" width="200"
                 height="40" /></a>
-        <p id="morbin">We're Still Morbin'</p>
+
+        <p id="morbin">@php echo $splash[rand(0, count($splash) - 1)]; @endphp</p>
     </div>
     <div class="content_signup">
         @yield('contentloggedout')
     </div>
     <div id="footer_signup">
-    @if (!Auth::guest() && Auth::user()->isAdmin())
-        <p><strong>{{ App\Models\User::count() }}</strong> users registered | <strong>{{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subMinute()->toDateTimeString())->count(); }}</strong>
-            users are online</p>
+        @if (!Auth::guest() && Auth::user()->isAdmin())
+        <p><strong>{{ App\Models\User::count() }}</strong> users registered |
+            <strong>{{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subMinute()->toDateTimeString())->count(); }}</strong>
+            users are online
+        </p>
         <br>
         @endif
-        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.
-            We're still Morbin'!</p>
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.</p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a></p>
     </div>
 </body>

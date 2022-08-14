@@ -22,6 +22,20 @@
   }
 }
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: url('HelveticaNeue-Normal.ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: normal;
+  src: url('HelveticaNeue-Italic.ttf');
+}
+
 .catalogitem,
 .catalogitemimage {
   width: 126px;
@@ -88,6 +102,7 @@
 .warningtext {
   color: red;
 }
+
 .helpfultip {
   color: orange;
   font-weight: 600;
@@ -97,7 +112,9 @@
   display: inline-block;
   float: left;
 }
-#logo_full, #logo_full .btn-logo {
+
+#logo_full,
+#logo_full .btn-logo {
   width: 200px;
   Height: 35px;
 }
@@ -107,24 +124,36 @@
   display: none;
   float: left;
 }
-#logo_small, #logo_small img {
+
+#logo_small,
+#logo_small img {
   width: 45px;
-  height: 35px; 
+  height: 35px;
 }
 
 @media (max-width: 970px) {
-  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p, #navbarlogincontainer {
+
+  .navbarbuttoncontainer a,
+  #navbarusername,
+  .arkotcontainer p,
+  #navbarlogincontainer {
     font-size: 11px;
   }
+
   .arkoticon_navbar {
     width: 11px;
   }
 }
+
 @media (max-width: 730px) {
   .navbarbuttoncontainer a {
     position: relative;
   }
-  .navbarbuttoncontainer a, #navbarusername, .arkotcontainer p, #navbarlogincontainer {
+
+  .navbarbuttoncontainer a,
+  #navbarusername,
+  .arkotcontainer p,
+  #navbarlogincontainer {
     font-size: 9px;
   }
 }
@@ -162,14 +191,16 @@
   position: relative;
   height: 36px;
   z-index: 200;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: Arial, Helvetica Neue, sans-serif;
 }
+
 .BannerCenterContainer {
   width: 970px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+
 .BannerRedesign {
   height: 35px;
   background: #114081;
@@ -181,37 +212,45 @@
   top: 0;
   display: inline-flex;
 }
-.btn-logo:hover, .navbarbuttoncontainer li:hover {
+
+.btn-logo:hover,
+.navbarbuttoncontainer li:hover {
   background-image: url(/images/RevisedHeader/bg-main_menu_hover.png);
   background-size: auto 35px;
 }
+
 .smallnavbarbutton:hover {
   background-image: url(/images/RevisedHeader/bg-sub_menu_hover.png);
 }
+
 div.mySubmenuFixed {
   position: fixed;
   top: 68px;
   width: 100%;
   z-index: 10000;
 }
+
 div.mySubmenuFixed {
   top: 36px;
   background: linear-gradient(#000 10%, #191919 100%);
   height: 25px;
 }
+
 .mySubmenuFixed.Redesign {
   position: fixed;
   top: 35px;
 }
+
 .mySubmenuFixed.Redesign {
   position: fixed;
   top: 35px;
 }
+
 .subMenu {
   background: #A3514F;
   background-repeat: repeat-x;
   color: White;
-  font-family: Arial,Helvetica,Sans-Serif;
+  font-family: Arial, Helvetica Neue, Sans-Serif;
   font-size: 14px;
   height: 26px;
   position: relative;
@@ -220,6 +259,7 @@ div.mySubmenuFixed {
   border-bottom: solid 3px #6E99C9;
   z-index: 5;
 }
+
 .subMenu {
   width: 970px;
   height: 30px;
@@ -229,6 +269,7 @@ div.mySubmenuFixed {
   z-index: 200;
   margin: 0 auto;
 }
+
 .Redesign .subMenu {
   height: 25px;
   background: linear-gradient(#000 10%, #191919 100%);
@@ -240,6 +281,7 @@ div.mySubmenuFixed {
   z-index: 1000;
   float: left;
 }
+
 .navbarbuttoncontainer li {
   float: left;
   list-style: none;
@@ -271,6 +313,7 @@ div.mySubmenuFixed {
   position: relative;
   *top: -6px;
 }
+
 #HeaderOr {
   font-family: Arial;
   font-weight: normal;
@@ -281,6 +324,7 @@ div.mySubmenuFixed {
   position: relative;
   margin: 0 6px;
 }
+
 #headerLogin {
   color: white;
   background: url(/images/btn-login_dropdown.png) no-repeat;
@@ -290,6 +334,7 @@ div.mySubmenuFixed {
   position: relative;
   cursor: pointer;
 }
+
 #headerLogin:hover {
   background-position: 0 -54px;
 }
@@ -314,7 +359,8 @@ iframe {
   padding: 3px;
 }
 
-#navbarlogincontainer, #navbarsignedincontainer {
+#navbarlogincontainer,
+#navbarsignedincontainer {
   position: relative;
   padding-right: 10px;
   margin-right: 0%;
@@ -381,14 +427,16 @@ iframe {
   width: 200px;
 }
 
-#feed, #profileleftcontainer {
+#feed,
+#profileleftcontainer {
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
   width: 50%;
 }
 
-#profileleftcontainer, #profilerightcontainer {
+#profileleftcontainer,
+#profilerightcontainer {
   max-width: 450px;
 }
 
@@ -435,11 +483,13 @@ iframe {
   float: right;
   position: relative;
 }
+
 #navbarlogincontainer {
   margin-top: 5px;
   float: right;
   position: relative;
 }
+
 #NavigationRedesignBannerContainer .RightNav {
   margin-top: 9px;
 }
@@ -449,8 +499,9 @@ iframe {
   font-size: 13px;
   padding: 0;
   text-decoration: none;
+  font-weight: 800;
   outline: none;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: Arial, Helvetica Neue, sans-serif;
 }
 
 .smallnavbarbutton {
@@ -459,6 +510,7 @@ iframe {
   text-align: center;
   font-size: 15px;
 }
+
 .Redesign .smallnavbarbutton {
   font-size: 12px;
   padding: 5px;
@@ -472,8 +524,7 @@ iframe {
 
 html {
   margin: 0px;
-  font-family: "Helvetica";
-  src: url('Helvetica.ttf') format('truetype'),;
+  font-family: "Helvetica Neue";
   font-style: normal;
   height: 100%;
   color: #000;
@@ -497,8 +548,8 @@ body {
   margin-top: 0px;
   min-width: 670px;
   margin-bottom: 0px;
-  padding-bottom: 0px;
   height: 100%;
+  padding-bottom: 0px;
 }
 
 .content_special,
@@ -518,8 +569,9 @@ body {
 
 .content {
   color: black;
-  min-height: 550px;
+  min-height: 100%;
   padding: 5px 5px 25px 5px;
+     /* Height of the footer */
   margin: 100px auto 0 auto;
   width: 970px;
   background: rgb(255, 255, 255);
@@ -536,15 +588,18 @@ body {
   /* Fallback for IE 11*/
   background-color: rgb(255, 255, 255);
 }
-.content_signup .hyperlink{
+
+.content_signup .hyperlink {
   display: block;
   color: #0074bd;
   transition: .25s all ease-in-out;
 }
+
 .content_signup .hyperlink:hover {
   color: #32cfff;
 }
-.content_signup h1, .content_signup a, .content_signup p {
+
+.content_signup h1, .content_signup a, .content_signup p, .content_signup h2, .content_signup h5 {
   text-align: center;
 }
 
@@ -572,12 +627,14 @@ body {
   margin-right: 10px;
   padding-left: 5px;
   padding-right: 5px;
+  width: calc(100% - 30px);
   padding-bottom: 5px;
   padding-top: 5px;
   background: rgb(172, 172, 172);
   /* Fallback for IE 11*/
   background-color: rgb(172, 172, 172);
   min-height: fit-content;
+  bottom: 0;
 }
 
 /*Button gradients by TersisWilvin*/
@@ -590,7 +647,7 @@ body {
   height: 20px;
   border-radius: 1px;
   border: 1px solid #3D414A;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue";
   padding-left: 5px;
   padding-right: 5px;
   color: rgb(0, 0, 0) !important;
@@ -604,7 +661,7 @@ body {
   height: 20px;
   border-radius: 1px;
   border: 1px solid #3D414A;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue";
   padding-left: 5px;
   padding-right: 5px;
   color: #fff !important;
@@ -619,7 +676,7 @@ button {
   height: 20px;
   border-radius: 3px;
   border: 1px solid #3D414A;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue";
   color: #fff;
 }
 
