@@ -11,15 +11,14 @@
 @section('contentloggedout')
 <h1>Downloads</h1>
 <p>ARCHBLOX will be installed to %LOCALAPPDATA%\Archblx</p>
-<p class="important">You must be logged in to join games. Use studio to log in to your account.
-<p>
-    <br>
-    <strong>Requires .NET Framework 4.0.</strong>
+<p class="important">You must be logged in to join games. Use studio to log in to your account.</p>
+<br>
+<p><strong>Requires .NET Framework 4.0.</strong></p>
 <p>Windows XP/Vista v1.1</p>
 <p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Launcher</a> | <a
         href="{{ asset('xp/ARCHBLOXBootstrapper_XP.exe') }}">Studio</a></p>
 <br>
-<strong>The below downloads require Windows 7 or newer and they require .NET Core 3.1.</strong>
+<p><strong>The below downloads require Windows 7 or newer and they require .NET Core 3.1. These are recommended for anything running Windows 7 or newer.</strong></p>
 <br>
 <p>ARCHBLOX Launcher v2.7</p>
 <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> | <a
