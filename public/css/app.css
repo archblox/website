@@ -589,14 +589,15 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.content_signup .hyperlink {
-  display: block;
+.content_signup a {
   color: #0074bd;
   transition: .25s all ease-in-out;
 }
-
-.content_signup .hyperlink:hover {
+.content_signup a:hover {
   color: #32cfff;
+}
+.hyperlink {
+  display: block;
 }
 
 .content_signup h1, .content_signup a, .content_signup p, .content_signup h2, .content_signup h5 {

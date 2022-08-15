@@ -22,6 +22,9 @@
 <body>
     @yield('alert')
 
+    <div class="MasterContainer" style="display:none;">
+    --(todo after school. | TersisWilvin 2022)
+    </div>
     <div class="iphone-sidebar">
         <img href="{{ route('admin_index') }}" src="https://archblox.com/img/MORBLOXlogo.png" width="50%">
         <p>Admin Panel</p>
