@@ -9,6 +9,30 @@
     </style>
 @endsection
 
+@section('Body')
+<div id="Body" style="width: 970px;">
+<h2 class="MainHeader">
+    User List
+</h2>
+<h5 class="SubHeader Reminder">
+    Reminder to not share details without the users permission. Don't Abuse!
+</h5>
+<div class="Userlist">
+<form method="GET" action="{{ route('admin_users') }}">
+<div>
+<input type="text" id="SearchInput" name="Searchbtn" placeholder="Search" value="{{ request()->q }}">
+@if (request()->query('Searchbtn'))
+<a href="{{ route('admin_users') }}" class="SearchCloseBtn">X</a>
+@endif
+<button class="bluebutton" name="searchBy" value="name">Search by Username</button><button class="bluebutton" name="searchBy" value="id">Search by ID</button></div>
+</form>
+@foreach ($users as $user)
+<div class="SearchContainer">
+</div>
+@endforeach
+</div>
+</div>
+@endsection
 @section('content')
     <div id="UserList">
         <h2>User List</h2>

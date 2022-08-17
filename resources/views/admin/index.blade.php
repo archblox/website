@@ -5,7 +5,6 @@
 
 @section('Body')
 <div id="Body" style="width: 970px;">
-<div class="Container">
 <h2 class="MainHeader">
     Administration Area
 </h2>
@@ -52,7 +51,6 @@
 <span class="Stats">
      Unused Invite Keys
 </span>
-</div>
 </div>
 </div>
 </div>

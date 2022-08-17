@@ -31,6 +31,12 @@
             <a class="Slogan">
                 Admin Panel
             </a>
+            <div class="AuthenticatedUserNameWrapper">
+            Logged in as <a class="AuthenticatedUserName" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
+            </div>
+            <a href="{{ route('home') }}" class="Backbtn">
+                ← Main Site
+            </a>
         </div>
         <div class="AdminSubHeader">
             <ul>

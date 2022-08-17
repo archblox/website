@@ -79,19 +79,25 @@ h6 {
 }
 .NewPanel .AdminSubHeader li a {
   font-size: 14px;
+  font-weight: 100;
   color: #bbb;
+  cursor: pointer;
   transition: .1s all linear;
 }
-.NewPanel .AdminSubHeader li a:hover {
-  font-size: 14px;
+.NewPanel .AdminSubHeader li:hover a {
+  color: #ccc
+}
+.NewPanel .AdminSubHeader li a.Active, .NewPanel .AdminSubHeader li a.Active:active {
+  box-shadow: 0 2px 0 0 #00b7ff;
+}
+.NewPanel .AdminSubHeader li a:hover, .NewPanel .AdminSubHeader li a:active {
   color: #fff;
-  cursor: pointer;
   box-shadow: 0 2px 0 0 #fff;
   transition: .1s all linear;
 }
 .NewPanel .AdminHeader .Slogan {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 100;
   display: block;
   text-align: center;
   cursor: default;
@@ -113,37 +119,126 @@ h6 {
   display: block;
   margin: auto;
 }
-.AdminPanel #Body {
+.NewPanel.AdminPanel #Body {
   background-color: #111;
 }
-.AdminPanel .MainHeader {
+.NewPanel.AdminPanel .MainHeader, .NewPanel.AdminPanel .SubHeader {
   text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.AdminPanel .Stats-Wrapper {
+.AdminPanel .Reminder {
+  color: #ff7300
+}
+.NewPanel.AdminPanel .Stats-Wrapper {
   text-align: center;
   padding: 4px;
 }
-.AdminPanel .StatsContainer {
+.NewPanel.AdminPanel .StatsContainer {
   margin: 15px 15px 0 15px;
   padding: 15px;
-  border: 1px dotted #ff7300;
+  border: 1px dashed #ff7300;
   background-color: #080808;
 }
-.AdminPanel .Stats {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a7a7a7;
+.NewPanel.AdminPanel .Userlist {
+  margin: 10px;
 }
-.AdminPanel .Stats.Counter {
-  font-weight: 600;
+.NewPanel.AdminPanel .Userlist form div {
+  display: flex;
+  justify-content: center;
+}
+.SearchCloseBtn{
+  color: #af1400;
+  left: auto;
+  margin-left: -92px;
+  margin-top: 1px;
+  position: absolute;
+  font-size: 16px;
+}
+.AdminPanel #SearchInput {
+  border: 1px solid #757575;
+  border-radius: 3px;
+  color: #b8b8b8;
+  background-color: #000;
+}
+.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
+  border-color: #0099ff;
+}
+#SearchInput, .bluebutton {
+  margin: 0 5px;
+}
+.AdminPanel #SearchInput:focus-visible {
+  outline: none;
+}
+.NewPanel.AdminPanel .Stats {
+  font-size: 16px;
+  font-weight: 100;
+  color: #a7a7a7;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel.AdminPanel .Stats.Counter {
+  font-weight: 400;
   color: #fff;
 }
-.AdminPanel .Stat-Separator {
+.NewPanel.AdminPanel .Stat-Separator {
   width: 50%;
   height: 1px;
-  background-color: #555;
+  background: linear-gradient(90deg,rgb(85, 85, 85,0) 0%, #555 50%, rgb(85, 85, 85,0) 100%);
   display: block;
   margin: auto;
+}
+.AdminPanel .SearchContainer {
+  width: 25%;
+  background-color: #555;
+}
+.NewPanel .AuthenticatedUserNameWrapper {
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel .AuthenticatedUserNameWrapper .AuthenticatedUserName {
+  color: #00c3ff;
+}
+.NewPanel .AuthenticatedUserNameWrapper .AuthenticatedUserName:hover {
+  text-decoration: underline;
+}
+.NewPanel .Backbtn {
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: 0;
+  padding: 0;
+  height: auto;
+  font-size: 16px;
+  font-weight: 100;
+  display: inline-block;
+  position: absolute;
+  color: #00c3ff;
+}
+.NewPanel .Backbtn:hover {
+  text-decoration: underline;
 }
 
 @media (max-width:1000px) {
@@ -152,8 +247,8 @@ h6 {
   }
 }
 @media (max-width:990px) {
-  #Body, #BodyWrapper, #MasterContainer {
-    width: 100% !important;
+  .NewPanel.AdminPanel #Body, .NewPanel.AdminPanel #BodyWrapper, .NewPanel.AdminPanel #MasterContainer {
+    width: 100% !important; /*!important since late 2012 roblox uses element.style CRINGE!*/
     padding: 0;
   }
 }
