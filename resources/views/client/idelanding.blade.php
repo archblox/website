@@ -16,9 +16,11 @@
     <h1>Welcome, {{ Auth::user()->name }}</h1>
     <!--
     <h1>My Games</h1>
-    <button class="greenbutton">Create a Game (disabled)</button>
     -->
     <p>You cannot currently upload places or models as the functionality for that has not been added yet.</p>
-    <p>Please press the New button in order to create a place to host.</p>
+    <br>
+    <h2>Templates</h2>
+    <a href="http://www.morblox.us/Game/edit.ashx?PlaceID=200">Baseplate</a>
+    <a href="http://www.morblox.us/Game/edit.ashx?PlaceID=201">Flat Terrain</a>
 @endguest     
 @endsection

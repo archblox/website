@@ -80,4 +80,9 @@ class ClientController extends Controller
     {
         return view('client.stampertools');
     }
+
+    public function edit()
+    {
+        return view('client.edit');
+    }
 }
