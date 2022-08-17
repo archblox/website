@@ -116,8 +116,30 @@ h6 {
 .AdminPanel #Body {
   background-color: #111;
 }
-.AdminPanel .MainHeader {
+.AdminPanel .MainHeader, .AdminPanel .Stats-Wrapper {
   text-align: center;
+}
+.AdminPanel .StatsContainer {
+  margin: 15px 15px 0 15px;
+  padding: 15px;
+  border: 1px dotted #ff7300;
+  background-color: #080808;
+}
+.AdminPanel .Stats {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a7a7a7;
+}
+.AdminPanel .Stats.Counter {
+  font-weight: 600;
+  color: #fff;
+}
+.AdminPanel .Stat-Separator {
+  width: 50%;
+  height: 1px;
+  background-color: #555;
+  display: block;
+  margin: auto;
 }
 
 @media (max-width:1000px) {
@@ -125,8 +147,8 @@ h6 {
     width: 750px;
   }
 }
-@media (max-width:970px) {
-  #Body, #BodyWrapper {
+@media (max-width:990px) {
+  #Body, #BodyWrapper, #MasterContainer {
     width: 100% !important;
     padding: 0;
   }

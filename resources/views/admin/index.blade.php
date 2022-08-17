@@ -9,6 +9,51 @@
 <h2 class="MainHeader">
     Administration Area
 </h2>
+<div class="StatsContainer">
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\User::count() }}
+</span>
+<span class="Stats">
+     Registered
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\User::where('admin', true)->count() }}
+</span>
+<span class="Stats">
+     Admin(s)
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subDay()->toDateTimeString())->count(); }}
+</span>
+<span class="Stats">
+     Online within the past day.
+</span>
+</div>
+<br>
+<span class="Stat-Separator"></span>
+<br>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\InviteKey::count() }}
+</span>
+<span class="Stats">
+     Invite Keys
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\InviteKey::where('active', true)->count() }}
+</span>
+<span class="Stats">
+     Unused Invite Keys
+</span>
+</div>
+</div>
 </div>
 </div>
 @endsection
