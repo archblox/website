@@ -116,8 +116,12 @@ h6 {
 .AdminPanel #Body {
   background-color: #111;
 }
-.AdminPanel .MainHeader, .AdminPanel .Stats-Wrapper {
+.AdminPanel .MainHeader {
   text-align: center;
+}
+.AdminPanel .Stats-Wrapper {
+  text-align: center;
+  padding: 4px;
 }
 .AdminPanel .StatsContainer {
   margin: 15px 15px 0 15px;
