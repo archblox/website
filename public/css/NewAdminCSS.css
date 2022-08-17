@@ -28,7 +28,7 @@ h6 {
   font-weight: 200;
 }
 
-#MasterContainer.AdminPanel.NewPanel {
+#MasterContainer.NewPanel.AdminPanel {
   background-color: #111;
 }
 #MasterContainer.NewPanel #BodyWrapper {
@@ -45,7 +45,7 @@ h6 {
 #MasterContainer.NewPanel #AdminWrapper, #MasterContainer.NewPanel #BodyWrapper {
   display: block;
 }
-#AdminWrapper.Navigation {
+.NewPanel #AdminWrapper.Navigation {
   width: 100%;
 }
 .NewPanel .AdminHeader {
@@ -132,7 +132,7 @@ h6 {
   -ms-user-select: none;
   user-select: none;
 }
-.AdminPanel .Reminder {
+.NewPanel.AdminPanel .Reminder {
   color: #ff7300
 }
 .NewPanel.AdminPanel .Stats-Wrapper {
@@ -152,7 +152,7 @@ h6 {
   display: flex;
   justify-content: center;
 }
-.SearchCloseBtn{
+.NewPanel .SearchCloseBtn{
   color: #af1400;
   left: auto;
   margin-left: -92px;
@@ -160,19 +160,19 @@ h6 {
   position: absolute;
   font-size: 16px;
 }
-.AdminPanel #SearchInput {
+.NewPanel.AdminPanel #SearchInput {
   border: 1px solid #757575;
   border-radius: 3px;
   color: #b8b8b8;
   background-color: #000;
 }
-.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
+.NewPanel.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
   border-color: #0099ff;
 }
 #SearchInput, .bluebutton {
   margin: 0 5px;
 }
-.AdminPanel #SearchInput:focus-visible {
+.NewPanel.AdminPanel #SearchInput:focus-visible {
   outline: none;
 }
 .NewPanel.AdminPanel .Stats {
@@ -198,7 +198,7 @@ h6 {
   display: block;
   margin: auto;
 }
-.AdminPanel .SearchContainer {
+.NewPanel.AdminPanel .SearchContainer {
   width: 25%;
   background-color: #555;
 }
