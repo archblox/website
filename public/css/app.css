@@ -799,6 +799,31 @@ a,
   margin-left: auto;
 }
 
+#MasterContainer {
+  background: white;
+  overflow: visible;
+  width: 100%;
+}
+div#testingSitePanelWrapper, #BodyWrapper {
+  margin: 0 auto;
+  width: 970px;
+  background: white;
+}
+#Body {
+  _overflow: hidden;
+  min-height: 550px;
+  padding: 5px 5px 25px 5px;
+  background: white;
+  margin: 0 auto;
+  width: 900px;
+}
+
+.hidden {
+  visibility: hidden!important;
+  display: none!important;
+}
+
+/*Legacy*/
 .iphone-sidebar {
   position: fixed;
   color: rgb(255, 255, 255);

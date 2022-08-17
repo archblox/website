@@ -1,0 +1,144 @@
+body {
+  background-color: #111;
+  min-width: 0px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 20px;
+  font-family: 600;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+h6 {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+#MasterContainer.AdminPanel.NewPanel {
+  background-color: #111;
+}
+#MasterContainer.NewPanel #BodyWrapper {
+  padding-top: 25px;
+  background-color: #111;
+  color: #fff;
+}
+.AdminPanel {
+  height: 100%;
+}
+#MasterContainer.NewPanel .iphone-sidebar, #MasterContainer.NewPanel .iphone-content, #MasterContainer #AdminWrapper, #MasterContainer #BodyWrapper {
+  display: none;
+}
+#MasterContainer.NewPanel #AdminWrapper, #MasterContainer.NewPanel #BodyWrapper {
+  display: block;
+}
+#AdminWrapper.Navigation {
+  width: 100%;
+  height: 100%;
+}
+.NewPanel .AdminHeader {
+  width: 100%;
+  height: 75px;
+  background-color: #333;
+  z-index: 2;
+  position: relative;
+}
+.NewPanel .AdminSubHeader {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(180deg, #333, #191919);
+  box-shadow: 0 2px 8px 0 #000;
+  z-index: 1;
+  position: relative;
+}
+.NewPanel .AdminSubHeader ul {
+  padding: 0;
+  margin: auto auto;
+  width: 970px;
+  height: 25px;
+}
+.NewPanel .AdminSubHeader li {
+  width: 33.334%;
+  text-align: center;
+  list-style: none;
+  float: left;
+  padding: 3px 0;
+  color: #fff;
+}
+.NewPanel .AdminSubHeader li a {
+  font-size: 14px;
+  color: #bbb;
+  transition: .1s all linear;
+}
+.NewPanel .AdminSubHeader li a:hover {
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 0 0 #fff;
+  transition: .1s all linear;
+}
+.NewPanel .AdminHeader .Slogan {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel .AdminHeader .SiteBrand {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  background-image: url(../img/MORBLOXlogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0;
+  display: block;
+  margin: auto;
+}
+.AdminPanel #Body {
+  background-color: #111;
+}
+.AdminPanel .MainHeader {
+  text-align: center;
+}
+
+@media (max-width:1000px) {
+  .NewPanel .AdminSubHeader ul {
+    width: 750px;
+  }
+}
+@media (max-width:970px) {
+  #Body, #BodyWrapper {
+    width: 100% !important;
+    padding: 0;
+  }
+}
+@media (max-width:750px) {
+  .NewPanel .AdminSubHeader ul {
+    width: 400px;
+  }
+}
+@media (max-width:500px) {
+  .NewPanel .AdminSubHeader ul {
+    width: 300px;
+  }
+}

@@ -3,6 +3,15 @@
     <title>Admin | Dashboard - {{ env('APP_NAME') }}</title>
 @endsection
 
+@section('Body')
+<div id="Body" style="width: 970px;">
+<div class="Container">
+<h2 class="MainHeader">
+    Administration Area
+</h2>
+</div>
+</div>
+@endsection
 @section('content')
     <h1>{{ env('APP_NAME') }}</h1>
         <h5>Administration Area</h5><br>

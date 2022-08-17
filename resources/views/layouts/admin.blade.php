@@ -17,13 +17,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+    <link href="/css/NewAdminCSS.css" rel="stylesheet">
 </head>
 
 <body>
     @yield('alert')
 
-    <div class="MasterContainer" style="display:none;">
-    --(todo after school. | TersisWilvin 2022)
+    <div id="MasterContainer" class="AdminPanel" style="width: 100%;">
+    <div id="AdminWrapper" class="Navigation">
+        <div class="AdminHeader">
+            <span class="SiteBrand" href="{{ route('home') }}">
+            </span>
+            <a class="Slogan">
+                Admin Panel
+            </a>
+        </div>
+        <div class="AdminSubHeader">
+            <ul>
+            <li>
+                <a class="sub-menu" href="{{ route('admin_users') }}">
+                    User List
+                </a>
+            </li>
+            <li>
+                <a class="sub-menu" href="{{ route('admin_index') }}">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="sub-menu" href="{{ route('admin_tree') }}">
+                    Invite Tree
+                </a>
+            </li>
+        </div>
+        </ul>
+    </div>
+    <div id="BodyWrapper">
+        @yield('Body')
     </div>
     <div class="iphone-sidebar">
         <img href="{{ route('admin_index') }}" src="https://archblox.com/img/MORBLOXlogo.png" width="50%">
@@ -40,6 +70,7 @@
     </div>
     <div class="iphone-content">
         @yield('content')
+    </div>
     </div>
 </body>
 
