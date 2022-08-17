@@ -92,3 +92,4 @@ Route::get('/Game/KeepAlivePinger.ashx', [App\Http\Controllers\ClientController:
 Route::get('/Game/Tools/InsertAsset.ashx', [App\Http\Controllers\ClientController::class, 'insertasset'])->name('insertasset');
 Route::get('/UI/Save.aspx', [App\Http\Controllers\ClientController::class, 'modelupload'])->name('modelupload');
 Route::get('/Game/Tools/ThumbnailAsset.ashx', [App\Http\Controllers\ClientController::class, 'stampertools'])->name('stampertools');
+Route::get('/Game/edit.ashx', [App\Http\Controllers\ClientController::class, 'edit'])->name('edit');
