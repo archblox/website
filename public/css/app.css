@@ -589,17 +589,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.content_signup a {
-  color: #0074bd;
-  transition: .25s all ease-in-out;
-}
-.content_signup a:hover {
-  color: #32cfff;
-}
-.hyperlink {
-  display: block;
-}
-
 .content_signup h1, .content_signup a, .content_signup p, .content_signup h2, .content_signup h5 {
   text-align: center;
 }
@@ -619,6 +608,20 @@ body {
 .content_special p a,
 .content_special a {
   color: black;
+}
+
+.content_signup a, .content_signup p a {
+  color: #0074bd;
+  transition: .25s all ease-in-out;
+}
+#footer_signup a, #footer_signup p a, #footer a, #footer p a {
+  transition: .25s all ease-in-out;
+}
+.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
+  color: #2fcfff;
+}
+.hyperlink {
+  display: block;
 }
 
 #footer {
@@ -790,12 +793,12 @@ button:hover.greenbutton {
 .btn-primary, .btn-primary:link, .btn-primary:active, .btn-primary:visited {
   border-color: #007001;
   background-color: #007001;
-  background-image: url(/images/Buttons/StyleGuide/bg-btn-green.png);
+  background-image: url(/images/buttons/StyleGuide/bg-btn-green.png);
   color: white;
 }
 .btn-disabled-primary, .btn-disabled-primary:link, .btn-disabled-primary:active, .btn-disabled-primary:visited {
   background-color: #99c699;
-  background-image: url(/images/Buttons/StyleGuide/bg-btn-green.png);
+  background-image: url(/images/buttons/StyleGuide/bg-btn-green.png);
   border-color: #99c699;
   color: white;
 }
@@ -803,12 +806,12 @@ button:hover.greenbutton {
 .btn-neutral, .btn-neutral:link, .btn-neutral:active, .btn-neutral:visited {
   border-color: #0852b7;
   background-color: #0852b7;
-  background-image: url(/images/Buttons/StyleGuide/bg-btn-blue.png);
+  background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
   color: white;
 }
 .btn-disabled-neutral, .btn-disabled-neutral:link, .btn-disabled-neutral:active, .btn-disabled-neutral:visited {
   background-color: #9cbae2;
-  background-image: url(/images/Buttons/StyleGuide/bg-btn-blue.png);
+  background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
   border-color: #9cbae2;
   color: white;
 }
@@ -816,12 +819,12 @@ button:hover.greenbutton {
 .btn-negative, .btn-negative:link, .btn-negative:active, .btn-negative:visited {
   border-color: #565656;
   background-color: #565656;
-  background-image: url(/images/Buttons/StyleGuide/bg-btn-gray.png);
+  background-image: url(/images/buttons/StyleGuide/bg-btn-gray.png);
   color: white;
 }
 .btn-disabled-negative, .btn-disabled-negative:link, .btn-disabled-negative:active, .btn-disabled-negative:visited {
   background-color: #bbbcbb;
-  background-image: url(/images/Buttons/StyleGuide/bg-btn-gray.png);
+  background-image: url(/images/buttons/StyleGuide/bg-btn-gray.png);
   border-color: #bbbcbb;
   color: white;
 }

@@ -246,6 +246,7 @@ h6 {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
 }
 .NewPanel .SearchContainer .UserThumbnail {
   background-image: url(/img/defaultrender.png);
