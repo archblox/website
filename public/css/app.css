@@ -532,7 +532,7 @@ html {
 }
 
 .loggedout {
-  background: url('../img/animated.png');
+  background: url('/img/animated.png');
   background-color: rgb(49, 107, 223);
   background-position: center bottom;
   background-repeat: repeat-x;

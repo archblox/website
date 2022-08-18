@@ -26,6 +26,7 @@
 @endif
 <button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button><button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button></div>
 </form>
+<div class="SearchBoard">
 @foreach ($users as $user)
 <div class="SearchContainer">
     <div class="Thumbnail">
@@ -139,6 +140,7 @@
     Unable to find user, please check if you entered the correct information.
 </span>
 @endif
+</div>
 </div>
 </div>
 {{ $users->appends($_GET)->links() }}

@@ -112,7 +112,7 @@ h6 {
   width: 200px;
   height: 40px;
   padding: 5px;
-  background-image: url(../img/MORBLOXlogo.png);
+  background-image: url(/img/MORBLOXlogo.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0;
@@ -151,7 +151,6 @@ h6 {
   color: #bbb;
   display: inline-block;
   text-align: left;
-  padding-right: 3px;;
 }
 .NewPanel.AdminPanel .Stats-Wrapper {
   text-align: center;
@@ -217,11 +216,11 @@ h6 {
   margin: auto;
 }
 .NewPanel.AdminPanel .SearchContainer {
-  width: 25%;
+  width: 235px;
   height: auto;
   background-color: #555;
   border-radius: 5px;
-  margin-top: 37px;
+  margin: 62px 25px 0 0;
   display: flex;
   align-items: center;
   align-content: center;
@@ -234,6 +233,14 @@ h6 {
   background-color: #555;
   border: 5px solid #111;
   border-radius: 100%;
+}
+.NewPanel .SearchBoard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .NewPanel .SearchContainer .UserThumbnail {
   background-image: url(/img/defaultrender.png);
@@ -267,6 +274,7 @@ h6 {
 .NewPanel .AuthenticatedUserName {
   color: #009dff;
   transition: .25s all ease-in-out;
+  display: inline-block;
 }
 .NewPanel .AdminHeader .HomeBtn {
   color: #009dff;
