@@ -135,6 +135,24 @@ h6 {
 .NewPanel.AdminPanel .Reminder {
   color: #ff7300
 }
+.text-error {
+  display: block;
+  text-align: center;
+  color: #d6241a;
+  font-weight: 200;
+  padding: 5px;
+}
+.text-header {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.text-secondary {
+  color: #bbb;
+  display: inline-block;
+  text-align: left;
+  padding-right: 3px;;
+}
 .NewPanel.AdminPanel .Stats-Wrapper {
   text-align: center;
   padding: 4px;
@@ -155,7 +173,7 @@ h6 {
 .NewPanel .SearchCloseBtn{
   color: #af1400;
   left: auto;
-  margin-left: -92px;
+  margin-left: -105px;
   margin-top: 1px;
   position: absolute;
   font-size: 16px;
@@ -169,7 +187,7 @@ h6 {
 .NewPanel.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
   border-color: #0099ff;
 }
-#SearchInput, .bluebutton {
+#SearchInput, .btn-neutral {
   margin: 0 5px;
 }
 .NewPanel.AdminPanel #SearchInput:focus-visible {
@@ -200,7 +218,35 @@ h6 {
 }
 .NewPanel.AdminPanel .SearchContainer {
   width: 25%;
+  height: auto;
   background-color: #555;
+  border-radius: 5px;
+  margin-top: 37px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.NewPanel .SearchContainer .Thumbnail {
+  height: 64px;
+  width: 64px;
+  margin-top: -37px;
+  background-color: #555;
+  border: 5px solid #111;
+  border-radius: 100%;
+}
+.NewPanel .SearchContainer .UserThumbnail {
+  background-image: url(/img/defaultrender.png);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.NewPanel .SearchContainer .UserDetails {
+  width: 95%;
+  padding: 5px;
+}
+.NewPanel .SearchContainer .SearchBox {
+  width: 100%;
 }
 .NewPanel .AuthenticatedUserNameWrapper {
   top: 10px;
@@ -218,13 +264,23 @@ h6 {
   -ms-user-select: none;
   user-select: none;
 }
-.NewPanel .AuthenticatedUserNameWrapper .AuthenticatedUserName {
-  color: #00c3ff;
+.NewPanel .AuthenticatedUserName {
+  color: #009dff;
+  transition: .25s all ease-in-out;
 }
-.NewPanel .AuthenticatedUserNameWrapper .AuthenticatedUserName:hover {
-  text-decoration: underline;
+.NewPanel .AdminHeader .HomeBtn {
+  color: #009dff;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.NewPanel .Backbtn {
+.NewPanel .HomeBtn {
   top: 10px;
   left: 10px;
   background: none;
@@ -235,10 +291,58 @@ h6 {
   font-weight: 100;
   display: inline-block;
   position: absolute;
-  color: #00c3ff;
 }
-.NewPanel .Backbtn:hover {
-  text-decoration: underline;
+.NewPanel .BackArrow {
+  cursor: default;
+  transition: .25s all ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.1rem;
+  margin-right: 2px;
+}
+.NewPanel .Backbtn {
+  color: inherit;
+  cursor: pointer;
+  transition: .25s all ease-in-out;
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.NewPanel .AuthenticatedUserName:hover, .NewPanel .Backbtn:hover, .NewPanel .Backbtn:hover + .BackArrow {
+  color: #2fcfff;
+  transition: .25s all ease-in-out;
+}
+.NewPanel .SearchContainer .Thumbnail a {
+  width: 12px;
+  height: 12px;
+  display: block;
+  float: right;
+  top: -6px;
+  position: relative;
+  border-radius: 50%;
+}
+.NewPanel .website {
+  background: linear-gradient(0deg, #0087e0 0%, #005085 49%,#005a85 50%, #0099ff 95%, #fff 100%);
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  margin: -5px;
+}
+.NewPanel .offline {
+  background: linear-gradient(0deg, #a3a3a3 0%, #7a7a7a 49%, #797979 50%, #c9c9c9 95%, #fff 100%);
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  margin: -5px;
 }
 
 @media (max-width:1000px) {

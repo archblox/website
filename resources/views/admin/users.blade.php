@@ -20,18 +20,128 @@
 <div class="Userlist">
 <form method="GET" action="{{ route('admin_users') }}">
 <div>
-<input type="text" id="SearchInput" name="Searchbtn" placeholder="Search" value="{{ request()->q }}">
-@if (request()->query('Searchbtn'))
+<input type="text" id="SearchInput" name="q" placeholder="Search" value="{{ request()->q }}">
+@if (request()->query('q'))
 <a href="{{ route('admin_users') }}" class="SearchCloseBtn">X</a>
 @endif
-<button class="bluebutton" name="searchBy" value="name">Search by Username</button><button class="bluebutton" name="searchBy" value="id">Search by ID</button></div>
+<button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button><button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button></div>
 </form>
 @foreach ($users as $user)
 <div class="SearchContainer">
+    <div class="Thumbnail">
+        <div class="UserThumbnail">
+        </div>
+        <a>
+        @if (Cache::has('is_online_' . $user->id))
+            <span class="website">
+            </span>
+        @else
+            <span class="offline">
+            </span>
+        @endif
+        </a>
+    </div>
+    <div class="UserDetails">
+        <div class="text-header">
+            User Details
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Username:
+            </div>
+            <a href="{{ route('profile', $user->id) }}" class="AuthenticatedUserName">
+                {{ $user->name }}
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                ID:
+            </div>
+            <a class="text-secondary">
+                {{ $user->id }}
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Email:
+            </div>
+            @if ($user->admin)
+                <a class="text-secondary">[Redacted]</a>
+            @else
+                <a class="text-secondary">{{ $user->email }}</a>
+            @endif
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                DOB:
+            </div>
+            <a class="text-secondary">
+                @if ($user->admin)
+                    [Redacted]
+                @else
+                    {{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}
+                @endif
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Feeds Status :
+            </div>
+            <a class="text-secondary">
+                @if (!request()->has('q'))
+                    @if (!empty($user->feedposts->last()->status))
+                        "{{ $user->feedposts->last()->status }}"
+                    @else
+                        "I'm new to ARCHBLOX!"
+                    @endif
+                    @else
+                    @if (!empty(App\Models\FeedPost::where('user_id', $user->id)->first()->status))
+                        "{{ App\Models\FeedPost::where('user_id', $user->id)->orderBy('id', 'desc')->first()->status }}"
+                    @else
+                        "I'm new to ARCHBLOX!"
+                    @endif
+                    @endif
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Invited By
+            </div>
+            <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" class="AuthenticatedUserName">
+                {{ App\Models\User::where('id', $user->invited_by)->first()->name }}
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Type:
+            </div>
+            <a class="text-secondary">
+                @if ($user->admin)
+                    Admin
+                @else
+                    Member
+                @endif
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Moderation Status:
+            </div>
+            <a class="text-secondary">
+                Normal
+            </a>
+        </div>
+    </div>
 </div>
 @endforeach
+@if ($users->isEmpty())
+<span class="text-error">
+    Unable to find user, please check if you entered the correct information.
+</span>
+@endif
 </div>
 </div>
+{{ $users->appends($_GET)->links() }}
 @endsection
 @section('content')
     <div id="UserList">
