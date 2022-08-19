@@ -36,28 +36,10 @@
         </p>
     </div>
     <div class="container">
-        <div class="navbar">
-            <ul class="navlist">
-                <li id="NewProject"><p>New Project</p></li>
-                    <li id="MyProjects"><p>My Projects</p></li>
-                <!--li class="lastnav"><p>Recent News</p></li-->
-            </ul>
-        </div>
         <div class="main">
             <div id="TemplatesView" class="welcome-content-area">
 
 <h2 id="StudioGameTemplates">GAME TEMPLATES</h2>
-            <div class="templatetypes">
-                <ul class="templatetypes">
-                        <li js-data-templatetype="Basic"><a href="#Basic">Basic</a></li>
-                </ul>
-                <!--div class="tool-tip">
-                    <img alt="Recommended for users new to ROBLOX studio" src="/images/IDE/img-tail-top.png" class="top" />
-                    <p>Recommended for users new to ROBLOX studio</p>
-                    <a class="closeButton"></a>
-                </div -->
-            </div>
-            
                 <div class="templates" js-data-templatetype="Basic">
                         <div class="template" placeid="200">
                             <a href="" class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t2ak.roblox.com/362ae9c43957047a0287f9cd2c98646c"/></a>
