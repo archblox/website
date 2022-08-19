@@ -17,7 +17,7 @@ h2 {
 }
 h3 {
   font-size: 20px;
-  font-family: 600;
+  font-weight: 600;
 }
 h4 {
   font-size: 18px;
@@ -169,7 +169,7 @@ h6 {
 .NewPanel.AdminPanel .Userlist {
   margin: 10px;
 }
-.NewPanel.AdminPanel .Userlist form div {
+.NewPanel.AdminPanel form div {
   display: flex;
   justify-content: center;
 }
@@ -180,6 +180,9 @@ h6 {
   margin-top: 1px;
   position: absolute;
   font-size: 16px;
+}
+.NewPanel .SearchCloseBtn:hover {
+  color: #d41900;
 }
 .NewPanel.AdminPanel #SearchInput {
   border: 1px solid #757575;

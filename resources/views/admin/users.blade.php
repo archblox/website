@@ -15,7 +15,7 @@
     User List
 </h2>
 <h5 class="SubHeader Reminder">
-    Reminder to not share details without the users permission. Don't Abuse!
+    Reminder, don't leak any users' date of birth or email address.
 </h5>
 <div class="Userlist">
 <form method="GET" action="{{ route('admin_users') }}">
@@ -24,7 +24,10 @@
 @if (request()->query('q'))
 <a href="{{ route('admin_users') }}" class="SearchCloseBtn">X</a>
 @endif
-<button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button><button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button></div>
+</input>
+<button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button>
+<button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button>
+</div>
 </form>
 <div class="SearchBoard">
 @foreach ($users as $user)
@@ -110,6 +113,50 @@
             </div>
             <a class="text-secondary">
                 {!! nl2br(e($user->blurb)) !!}
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Total Friends :
+            </div>
+            <a class="text-secondary">
+                {{ $user->getFriendsCount() }}
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Mutual Friends :
+            </div>
+            <a class="text-secondary">
+                {{ Auth::user()->getMutualFriendsCount($user) }}
+            </a>
+        </div>
+        <div class="Row hidden">
+            <div class="text-secondary">
+                Total Badges :
+            </div>
+            <a class="text-secondary">
+                N/A
+            </a>
+        </div>
+        <div class="Row hidden">
+            <div class="text-secondary">
+                Place Visits :
+            </div>
+            <a class="text-secondary">
+                TODO
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Join Date :
+            </div>
+            <a class="text-secondary">
+                @guest
+                    {{ $user->created_at->format('d/m/Y') }}
+                @else
+                    {{ $user->created_at->format(Auth::user()->settings->date_preference) }}
+                @endguest
             </a>
         </div>
         <div class="Row">
