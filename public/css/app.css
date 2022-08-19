@@ -93,10 +93,12 @@
 
 #alert {
   background: linear-gradient(#f07575 10%, #de2323 100%);
+  color: #fff;
 }
 
 #success {
-  background: linear-gradient(#a3e2bd 10%, #02b757 100%)
+  background: linear-gradient(#a3e2bd 10%, #02b757 100%);
+  color: #fff;
 }
 
 .warningtext {
@@ -111,6 +113,7 @@
 #logo_full {
   display: inline-block;
   float: left;
+  margin-right: 5px;
 }
 
 #logo_full,
@@ -133,8 +136,7 @@
 
 @media (max-width: 970px) {
 
-  .navbarbuttoncontainer a,
-  #navbarusername,
+  #navbarsignedincontainer,
   .arkotcontainer p,
   #navbarlogincontainer {
     font-size: 11px;
@@ -150,8 +152,7 @@
     position: relative;
   }
 
-  .navbarbuttoncontainer a,
-  #navbarusername,
+  #navbarsignedincontainer,
   .arkotcontainer p,
   #navbarlogincontainer {
     font-size: 9px;
@@ -337,6 +338,21 @@ div.mySubmenuFixed {
 
 #headerLogin:hover {
   background-position: 0 -54px;
+}
+
+#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited {
+  border: 0 solid black;
+  font-size: 13px;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  font-family: Arial,Helvetica,sans-serif;
+  text-shadow: #11111191 1px 1px 1px;
+}
+
+.NavigationRedesign ul {
+  margin: 0 auto;
+  padding: 0;
 }
 
 iframe {

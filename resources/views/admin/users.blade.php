@@ -86,7 +86,7 @@
         </div>
         <div class="Row">
             <div class="text-secondary">
-                Feeds Status :
+                Feed Status :
             </div>
             <a class="text-secondary">
                 @if (!request()->has('q'))
@@ -101,7 +101,15 @@
                     @else
                         "I'm new to ARCHBLOX!"
                     @endif
-                    @endif
+                @endif
+            </a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                Bio :
+            </div>
+            <a class="text-secondary">
+                {!! nl2br(e($user->blurb)) !!}
             </a>
         </div>
         <div class="Row">

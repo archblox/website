@@ -19,12 +19,11 @@
         <form action="{{ route('feed_post') }}" method="POST">
             @csrf
             <p style="display: flex;">
-                <input id="FeedBox" type="text" name="status" placeholder="Say something..." style="width: 80%;"
+                <input id="FeedBox" type="text" name="status" placeholder="What are you up to?" style="width: 80%;"
                     value="{{ old('status') }}">
                 <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton"
                     type="submit" alt="Post it!, Button"
-                    onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Post
-                    it!</button>
+                    onClick="this.form.submit();this.disabled=true;this.innerText='Posting…';">Share</button>
             </p>
             @if ($errors->any())
             <span alt="Error: {{ $errors->first() }}" class="warningtext">{{ $errors->first() }}</span>
@@ -57,7 +56,8 @@
             </div>
             @endforeach
             @if ($posts->isEmpty())
-            <p>Your feed is empty.</p>
+            <p>No news about your friends... want to know what your friends are up to?</p>
+            <a href="/users">make some friends now.</a>
             @endif
         </div>
         {{ $posts->links() }}
@@ -92,10 +92,10 @@
     </div>
     @endif
     <br>
-    <h2>Recently Played</h2>
+    <h2>Recently Played Games</h2>
     <br>
     <div class="gamelist">
-        <p>You haven't played any games yet!</p>
+        <p>You haven't played any games recently.</p><a href="/incomplete" class="text-link">Play Now</a>
     </div>
     <br>
 </div>
