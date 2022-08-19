@@ -93,10 +93,12 @@
 
 #alert {
   background: linear-gradient(#f07575 10%, #de2323 100%);
+  color: #fff;
 }
 
 #success {
-  background: linear-gradient(#a3e2bd 10%, #02b757 100%)
+  background: linear-gradient(#a3e2bd 10%, #02b757 100%);
+  color: #fff;
 }
 
 .warningtext {
@@ -111,6 +113,7 @@
 #logo_full {
   display: inline-block;
   float: left;
+  margin-right: 5px;
 }
 
 #logo_full,
@@ -133,8 +136,7 @@
 
 @media (max-width: 970px) {
 
-  .navbarbuttoncontainer a,
-  #navbarusername,
+  #navbarsignedincontainer,
   .arkotcontainer p,
   #navbarlogincontainer {
     font-size: 11px;
@@ -150,8 +152,7 @@
     position: relative;
   }
 
-  .navbarbuttoncontainer a,
-  #navbarusername,
+  #navbarsignedincontainer,
   .arkotcontainer p,
   #navbarlogincontainer {
     font-size: 9px;
@@ -337,6 +338,21 @@ div.mySubmenuFixed {
 
 #headerLogin:hover {
   background-position: 0 -54px;
+}
+
+#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited {
+  border: 0 solid black;
+  font-size: 13px;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  font-family: Arial,Helvetica,sans-serif;
+  text-shadow: #11111191 1px 1px 1px;
+}
+
+.NavigationRedesign ul {
+  margin: 0 auto;
+  padding: 0;
 }
 
 iframe {
@@ -532,7 +548,7 @@ html {
 }
 
 .loggedout {
-  background: url('../img/animated.png');
+  background: url('/img/animated.png');
   background-color: rgb(49, 107, 223);
   background-position: center bottom;
   background-repeat: repeat-x;
@@ -589,17 +605,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.content_signup a {
-  color: #0074bd;
-  transition: .25s all ease-in-out;
-}
-.content_signup a:hover {
-  color: #32cfff;
-}
-.hyperlink {
-  display: block;
-}
-
 .content_signup h1, .content_signup a, .content_signup p, .content_signup h2, .content_signup h5 {
   text-align: center;
 }
@@ -621,6 +626,20 @@ body {
   color: black;
 }
 
+.content_signup a, .content_signup p a {
+  color: #0074bd;
+  transition: .25s all ease-in-out;
+}
+#footer_signup a, #footer_signup p a, #footer a, #footer p a {
+  transition: .25s all ease-in-out;
+}
+.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
+  color: #2fcfff;
+}
+.hyperlink {
+  display: block;
+}
+
 #footer {
   text-align: center;
   margin: auto;
@@ -638,7 +657,7 @@ body {
   bottom: 0;
 }
 
-/*Button gradients by TersisWilvin*/
+/*Legacy Button gradients by TersisWilvin*/
 
 .tab {
   background: rgb(255, 255, 255);
@@ -732,6 +751,99 @@ button:hover.greenbutton {
   background: linear-gradient(0deg, #3fc679 0%, #15933f 49%, #3cc175 50%, #46dc86 95%, #53ff9d 100%);
 }
 
+/*-------------*/
+
+.btn-large, .btn-medium, .btn-small {
+  margin: 0px;
+  display: inline-block;
+  zoom: 1;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  *display: inline;
+  *vertical-align: top;
+}
+.btn-small {
+  padding: 1px 7px 0px 7px;
+  height: 20px;
+  min-width: 40px;
+  font-size: 14px;
+  line-height: 18px;
+  background-position: left -160px;
+  border-radius: 0;
+}
+.btn-small:hover {
+  background-position: left -181px;
+}
+.btn-medium {
+  padding: 1px 13px 3px 13px;
+  height: 28px;
+  min-width: 62px;
+  font-size: 20px;
+  background-position: left -96px;
+  border-radius: 0;
+}
+.btn-medium:hover {
+  background-position: left -128px;
+}
+.btn-large {
+  padding: 9px 13px 0px 13px;
+  height: 39px;
+  min-width: 70px;
+  font-size: 23px;
+  line-height: 27px;
+  background-position: left 0px;
+  border-radius: 0;
+}
+.btn-large:hover {
+  background-position: left -48px;
+}
+.btn-disabled-primary, .btn-disabled-primary:hover, .btn-disabled-neutral, .btn-disabled-neutral:hover, .btn-disabled-negative, .btn-disabled-negative:hover {
+  cursor: default;
+  background-position: left -202px;
+}
+
+.btn-primary, .btn-primary:link, .btn-primary:active, .btn-primary:visited {
+  border-color: #007001;
+  background-color: #007001;
+  background-image: url(/images/buttons/StyleGuide/bg-btn-green.png);
+  color: white;
+}
+.btn-disabled-primary, .btn-disabled-primary:link, .btn-disabled-primary:active, .btn-disabled-primary:visited {
+  background-color: #99c699;
+  background-image: url(/images/buttons/StyleGuide/bg-btn-green.png);
+  border-color: #99c699;
+  color: white;
+}
+
+.btn-neutral, .btn-neutral:link, .btn-neutral:active, .btn-neutral:visited {
+  border-color: #0852b7;
+  background-color: #0852b7;
+  background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
+  color: white;
+}
+.btn-disabled-neutral, .btn-disabled-neutral:link, .btn-disabled-neutral:active, .btn-disabled-neutral:visited {
+  background-color: #9cbae2;
+  background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
+  border-color: #9cbae2;
+  color: white;
+}
+
+.btn-negative, .btn-negative:link, .btn-negative:active, .btn-negative:visited {
+  border-color: #565656;
+  background-color: #565656;
+  background-image: url(/images/buttons/StyleGuide/bg-btn-gray.png);
+  color: white;
+}
+.btn-disabled-negative, .btn-disabled-negative:link, .btn-disabled-negative:active, .btn-disabled-negative:visited {
+  background-color: #bbbcbb;
+  background-image: url(/images/buttons/StyleGuide/bg-btn-gray.png);
+  border-color: #bbbcbb;
+  color: white;
+}
 
 #footer_signup {
   text-align: center;

@@ -1,3 +1,7 @@
+html {
+  background-color: #111;
+}
+
 body {
   background-color: #111;
   min-width: 0px;
@@ -13,7 +17,7 @@ h2 {
 }
 h3 {
   font-size: 20px;
-  font-family: 600;
+  font-weight: 600;
 }
 h4 {
   font-size: 18px;
@@ -28,7 +32,7 @@ h6 {
   font-weight: 200;
 }
 
-#MasterContainer.AdminPanel.NewPanel {
+#MasterContainer.NewPanel.AdminPanel {
   background-color: #111;
 }
 #MasterContainer.NewPanel #BodyWrapper {
@@ -36,7 +40,7 @@ h6 {
   background-color: #111;
   color: #fff;
 }
-.AdminPanel {
+.NewPanel.AdminPanel {
   height: 100%;
 }
 #MasterContainer.NewPanel .iphone-sidebar, #MasterContainer.NewPanel .iphone-content, #MasterContainer #AdminWrapper, #MasterContainer #BodyWrapper {
@@ -45,7 +49,7 @@ h6 {
 #MasterContainer.NewPanel #AdminWrapper, #MasterContainer.NewPanel #BodyWrapper {
   display: block;
 }
-#AdminWrapper.Navigation {
+.NewPanel #AdminWrapper.Navigation {
   width: 100%;
 }
 .NewPanel .AdminHeader {
@@ -79,19 +83,25 @@ h6 {
 }
 .NewPanel .AdminSubHeader li a {
   font-size: 14px;
+  font-weight: 100;
   color: #bbb;
+  cursor: pointer;
   transition: .1s all linear;
 }
-.NewPanel .AdminSubHeader li a:hover {
-  font-size: 14px;
+.NewPanel .AdminSubHeader li:hover a {
+  color: #ccc
+}
+.NewPanel .AdminSubHeader li a.Active, .NewPanel .AdminSubHeader li a.Active:active {
+  box-shadow: 0 2px 0 0 #00b7ff;
+}
+.NewPanel .AdminSubHeader li a:hover, .NewPanel .AdminSubHeader li a:active {
   color: #fff;
-  cursor: pointer;
   box-shadow: 0 2px 0 0 #fff;
   transition: .1s all linear;
 }
 .NewPanel .AdminHeader .Slogan {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 100;
   display: block;
   text-align: center;
   cursor: default;
@@ -106,40 +116,256 @@ h6 {
   width: 200px;
   height: 40px;
   padding: 5px;
-  background-image: url(../img/MORBLOXlogo.png);
+  background-image: url(/img/MORBLOXlogo.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0;
   display: block;
   margin: auto;
 }
-.AdminPanel #Body {
+.NewPanel.AdminPanel #Body {
   background-color: #111;
 }
-.AdminPanel .MainHeader, .AdminPanel .Stats-Wrapper {
+.NewPanel.AdminPanel .MainHeader, .NewPanel.AdminPanel .SubHeader {
   text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.AdminPanel .StatsContainer {
+.NewPanel.AdminPanel .Reminder {
+  color: #ff7300
+}
+.NewPanel .text-error {
+  display: block;
+  text-align: center;
+  color: #d6241a;
+  font-weight: 200;
+  padding: 5px;
+}
+.NewPanel .text-header {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.NewPanel .text-secondary {
+  color: #bbb;
+  display: inline-block;
+  text-align: left;
+}
+.NewPanel.AdminPanel .Stats-Wrapper {
+  text-align: center;
+  padding: 4px;
+}
+.NewPanel.AdminPanel .StatsContainer {
   margin: 15px 15px 0 15px;
   padding: 15px;
-  border: 1px dotted #ff7300;
+  border: 1px dashed #ff7300;
   background-color: #080808;
 }
-.AdminPanel .Stats {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a7a7a7;
+.NewPanel.AdminPanel .Userlist {
+  margin: 10px;
 }
-.AdminPanel .Stats.Counter {
-  font-weight: 600;
+.NewPanel.AdminPanel form div {
+  display: flex;
+  justify-content: center;
+}
+.NewPanel .SearchCloseBtn{
+  color: #af1400;
+  left: auto;
+  margin-left: -105px;
+  margin-top: 1px;
+  position: absolute;
+  font-size: 16px;
+}
+.NewPanel .SearchCloseBtn:hover {
+  color: #d41900;
+}
+.NewPanel.AdminPanel #SearchInput {
+  border: 1px solid #757575;
+  border-radius: 3px;
+  color: #b8b8b8;
+  background-color: #000;
+}
+.NewPanel.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
+  border-color: #0099ff;
+}
+.NewPanel #SearchInput, .NewPanel .btn-neutral {
+  margin: 0 5px;
+}
+.NewPanel.AdminPanel #SearchInput:focus-visible {
+  outline: none;
+}
+.NewPanel.AdminPanel .Stats {
+  font-size: 16px;
+  font-weight: 100;
+  color: #a7a7a7;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel.AdminPanel .Stats.Counter {
+  font-weight: 400;
   color: #fff;
 }
-.AdminPanel .Stat-Separator {
+.NewPanel.AdminPanel .Stat-Separator {
   width: 50%;
   height: 1px;
-  background-color: #555;
+  background: linear-gradient(90deg,rgb(85, 85, 85,0) 0%, #555 50%, rgb(85, 85, 85,0) 100%);
   display: block;
   margin: auto;
+}
+.NewPanel.AdminPanel .SearchContainer {
+  width: 235px;
+  height: auto;
+  background-color: #555;
+  border-radius: 5px;
+  margin: 62px 25px 0 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.NewPanel .SearchContainer .Thumbnail {
+  height: 64px;
+  width: 64px;
+  margin-top: -37px;
+  background-color: #555;
+  border: 5px solid #111;
+  border-radius: 100%;
+}
+.NewPanel .SearchBoard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.NewPanel .SearchContainer .UserThumbnail {
+  background-image: url(/img/defaultrender.png);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.NewPanel .SearchContainer .UserDetails {
+  width: 95%;
+  padding: 5px;
+}
+.NewPanel .SearchContainer .SearchBox {
+  width: 100%;
+}
+.NewPanel .AuthenticatedUserNameWrapper {
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel .AuthenticatedUserName {
+  color: #009dff;
+  transition: .25s all ease-in-out;
+  display: inline-block;
+}
+.NewPanel .AdminHeader .HomeBtn {
+  color: #009dff;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.NewPanel .HomeBtn {
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: 0;
+  padding: 0;
+  height: auto;
+  font-size: 16px;
+  font-weight: 100;
+  display: inline-block;
+  position: absolute;
+}
+.NewPanel .BackArrow {
+  cursor: default;
+  transition: .25s all ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.1rem;
+  margin-right: 2px;
+}
+.NewPanel .Backbtn {
+  color: inherit;
+  cursor: pointer;
+  transition: .25s all ease-in-out;
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.NewPanel .UserDetails .Row {
+  overflow-wrap: anywhere;
+}
+.NewPanel .AuthenticatedUserName:hover, .NewPanel .Backbtn:hover, .NewPanel .Backbtn:hover + .BackArrow {
+  color: #2fcfff;
+  transition: .25s all ease-in-out;
+}
+.NewPanel .SearchContainer .Thumbnail a {
+  width: 12px;
+  height: 12px;
+  display: block;
+  float: right;
+  top: -6px;
+  position: relative;
+  border-radius: 50%;
+}
+.NewPanel .website {
+  background: linear-gradient(0deg, #0087e0 0%, #005085 49%,#005a85 50%, #0099ff 95%, #fff 100%);
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  margin: -5px;
+}
+.NewPanel .offline {
+  background: linear-gradient(0deg, #a3a3a3 0%, #7a7a7a 49%, #797979 50%, #c9c9c9 95%, #fff 100%);
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  margin: -5px;
+}
+.NewPanel.AdminPanel .flex {
+  display: table!important;
 }
 
 @media (max-width:1000px) {
@@ -148,8 +374,8 @@ h6 {
   }
 }
 @media (max-width:990px) {
-  #Body, #BodyWrapper, #MasterContainer {
-    width: 100% !important;
+  .NewPanel.AdminPanel #Body, .NewPanel.AdminPanel #BodyWrapper, .NewPanel.AdminPanel #MasterContainer {
+    width: 100% !important; /*!important since late 2012 roblox uses element.style CRINGE!*/
     padding: 0;
   }
 }

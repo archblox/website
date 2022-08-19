@@ -376,10 +376,6 @@ body {
 	background: none;
 }
 
-#NavigationRedesignBannerContainer p {
-	color: #fff;
-}
-
 #logo_full,
 #logo_full .btn-logo {
 	height: 30px;
@@ -402,7 +398,7 @@ body {
 	height: 40px
 }
 
-.navbarbutton {
+#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited, .navbarbutton {
 	color: #fff;
 	font-family: "Source Sans Pro", Arial, Helvetica Neue, sans-serif;
 	padding: 6px 9px;
@@ -415,13 +411,14 @@ body {
 	float: left;
 	margin: 4px auto;
 	top: 0;
+	text-shadow: none;
 }
 
 #NavigationRedesignBannerContainer {
 	font-family: "Source Sans Pro", Arial, Helvetica Neue, sans-serif;
 }
 
-.navbarbutton:hover {
+#NavigationRedesignBannerContainer ul li a:hover, .navbarbutton:hover {
 	background-color: #191919;
 	background-color: rgba(25, 25, 25, .1);
 	border-radius: 5px;
@@ -620,8 +617,9 @@ input:focus {
 	border-color: #00A2FF
 }
 
-#navbarsignedincontainer p a {
-	color: #fff
+#navbarsignedincontainer a {
+	color: #fff;
+	height: 25px;
 }
 
 button:hover a {

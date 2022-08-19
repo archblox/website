@@ -34,7 +34,8 @@ html {
 }
 
 #logo_full {
-  display: none;
+	display: none;
+	margin-right: 0;
 }
 
 #logo_small {
@@ -114,13 +115,14 @@ html {
   align-items: center;
   height: 40px;
 }
-.navbarbutton {
+#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited, .navbarbutton {
   position: relative;
   padding-right: 5px;
   text-align: center;
   font-size: 18px;
   font-family: "Helvetica Neue";
   font-weight: bold;
+  text-shadow: none;
 }
 .Redesign .smallnavbarbutton {
   position: relative;
@@ -135,6 +137,21 @@ html {
   background: none;
   height: 29px;
   top: 44px;
+}
+
+#footer_signup a, #footer_signup p a, #footer a, #footer p a {
+  transition: none;
+}
+
+.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
+  color: inherit;
+}
+
+#navbarsignedincontainer {
+  display: block;
+}
+#navbarsignedincontainer a:nth-child(1)::after {
+  content: ' | ';
 }
 
 @media (min-width: 1688px) {

@@ -107,7 +107,8 @@
             <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" class = "btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
             <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
                     src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
-            <div class="navbarbuttoncontainer">
+            <div id="NewRedesign" class="navbarbuttoncontainer NavigationRedesign">
+                <ul id="ctl00_cphBanner_ctl00_MenuUL">
                 <li><a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a></li>
                 <li><a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a></li>
                 <li><a class="navbarbutton" id="smallbtn0" href="{{ route('incomplete') }}">Build</a></li>
@@ -115,6 +116,7 @@
     @else
     {{ route('profile', Auth::id()) }} @endguest">Profile</a></li>
                 <li><a class="navbarbutton" id="smallbtn3" href="{{ route('settings') }}">Settings</a></li>
+                </ul>
             </div>
             @guest
             <div id="navbarlogincontainer">
@@ -122,13 +124,12 @@
             </div>
             @else
             <div id="HeaderLoginButton" class="RightNav">
-                <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
-                    <p> {{ Auth::user()->morbux }}</p>
-                </div>
                 <div id="navbarsignedincontainer">
-                    <p class="nonbolded" id="navbarusername"><a
-                            href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a> | <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">Logout</a></p>
+                    <a href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
+                    <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
+                    <p> {{ Auth::user()->morbux }}</p>
+                    </div>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></p>
                 </div>
             </div>
 

@@ -13,6 +13,30 @@
     </style>
 @endsection
 
+@section('Body')
+<div id="Body" style="width: 970px;">
+<h2 class="MainHeader">
+    Invite Tree
+</h2>
+<div class="Userlist">
+<form method="GET" action="{{ route('admin_tree') }}">
+<div>
+<input type="text" id="SearchInput" name="q" placeholder="Search" value="{{ request()->q }}">
+@if (request()->query('q'))
+<a href="{{ route('admin_tree') }}" class="SearchCloseBtn">X</a>
+@endif
+</input>
+<button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button>
+<button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button>
+</div>
+</form>
+@if ($user)
+<div class="UserList">
+</div>
+@endif
+</div>
+</div>
+@endsection
 @section('content')
     <div id="UserList">
         <h2>Invite Tree</h2>
