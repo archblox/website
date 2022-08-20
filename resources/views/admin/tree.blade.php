@@ -18,6 +18,11 @@
         <h2 class="MainHeader">
             Invite Tree
         </h2>
+        @if (!request()->has('q'))
+            <h5 class="SubHeader">Enter a Username or ID.</h5>
+        @elseif (!$user)
+            <h5 class="SubHeader text-error">Unable to find user, please check if you entered the correct information.</h5>
+        @endif
         <div class="Userlist">
             <form method="GET" action="{{ route('admin_tree') }}">
                 <div>
@@ -32,36 +37,22 @@
                 </div>
             </form>
             @if ($user)
-                <div class="UserList">
-                    <h2>User Found: {{ $user->name }}</h2>
-                    <ul>
-                        <li>
-                            <h3><a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}"
-                                    target="_blank">{{ $invited_by }}</a>
-                            </h3>
-                        </li>
-                        <ul>
-                            <li><a href="{{ route('profile', $user->id) }}" target="_blank">{{ $user->name }}</a></li>
-                            <ul>
-                                @foreach ($children as $child)
-                                    <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </ul>
-                    </ul>
-                </div>
-            @endif
-            @if (!request()->has('q'))
-                <h5>Enter a username or ID.</h5>
-            @elseif (!$user)
-                <h5>No user was found, check if you entered the correct details.</h5>
+            <a class="InvitationUserName AuthenticatedUserName" href="{{ route('profile', $user->id) }}">{{ $user->name }}</a>
+            <div class="InvitationSubName">
+            <h4 class="InvitationText">Invited By </h4>
+            <a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" class="AuthenticatedUserName">{{ $invited_by }}</a>
+            <h5 class="InvitationSubText">{{ $user->name }} Invited</h5>
+            @foreach ($children as $child)
+            <li>
+            <a href="{{ route('profile', $child->id) }}" target="_blank" class="AuthenticatedUserName">{{ $child->name }}</a>
+            </li>
+            @endforeach
+            </div>
             @endif
         </div>
     </div>
 @endsection
 @section('content')
-<!-- This is legacy code and won't output to the document - Conkley -->
     <div id="UserList">
         <h2>Invite Tree</h2>
         @if (request()->query('q'))
