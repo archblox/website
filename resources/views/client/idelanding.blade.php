@@ -9,7 +9,7 @@
 <meta content="ARCHBLOX" property="og:description" />
 @endsection
 @section('extras')
-<script src="{{ asset('js/test.js') }}">
+<script src="{{ asset('js/test.js') }}"></script>
 @endsection
 @section('content')
 @guest
