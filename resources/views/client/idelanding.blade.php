@@ -6,13 +6,13 @@
 <html>
 <head>
     <title>Welcome</title>
-    <script type="text/javascript" src="//web.archive.org/web/20130702194455js_/http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="https://web.archive.orgweb.archive.org/web/20130702194455js_/http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='/js/jquery/jquery-1.7.2.min.js'><\/script>")</script>
-<script type="text/javascript" src="//web.archive.org/web/20130702194455js_/http://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="https://web.archive.orgweb.archive.org/web/20130702194455js_/http://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
 <script type="text/javascript">window.Sys || document.write("<script type='text/javascript' src='/js/Microsoft/MicrosoftAjax.js'><\/script>")</script>
 
     
-<link rel="stylesheet" href="/web/20130702194455cs_/http://roblox.com/CSS/Base/CSS/FetchCSS?path=page___70a75bfda0b97b53e5637a9e3af568ee_m.css"/>
+<link rel="stylesheet" href="https://web.archive.org/web/20130702194455cs_/http://roblox.com/CSS/Base/CSS/FetchCSS?path=page___70a75bfda0b97b53e5637a9e3af568ee_m.css"/>
 
     
 <script type="text/javascript" src="https://web.archive.org/web/20130702194455js_/http://jsak.roblox.com/644b0e8baae8d8db3809d69b1924ea60.js"></script>
@@ -26,7 +26,7 @@
 <body id="StudioWelcomeBody">
     <div class="header">
             <div id="header-login-wrapper" class="iframe-login-signup" data-display-opened="">
-                <a href="/web/20130702194455/http://roblox.com/Login/NewAge.aspx" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
+                <a href="https://web.archive.org/web/20130702194455/http://roblox.com/Login/NewAge.aspx" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
                 <span id="header-or">or</span>
                 <span class="studioiFrameLogin">
                     <span id="login-span">
@@ -39,9 +39,9 @@
                 </span>
             </div>
         <!-- This is only after the login stuff because IE7 demands floated elements be before non-floated -->
-        <img src="/web/20130702194455im_/http://roblox.com/images/IDE/img-studio_title.png" alt="Roblox Studio Title"/>
+        <img src="https://web.archive.org/web/20130702194455im_/http://roblox.com/images/IDE/img-studio_title.png" alt="Roblox Studio Title"/>
         <p id="HomeLink">
-            <a class="text-link" href="/web/20130702194455/http://roblox.com/Build/Default.aspx">Switch to Classic View</a>
+            <a class="text-link" href="https://web.archive.org/web/20130702194455/http://roblox.com/Build/Default.aspx">Switch to Classic View</a>
         </p>
     </div>
     <div class="container">
