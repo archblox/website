@@ -14,30 +14,54 @@
 @endsection
 
 @section('Body')
-<div id="Body" style="width: 970px;">
-<h2 class="MainHeader">
-    Invite Tree
-</h2>
-<div class="Userlist">
-<form method="GET" action="{{ route('admin_tree') }}">
-<div>
-<input type="text" id="SearchInput" name="q" placeholder="Search" value="{{ request()->q }}">
-@if (request()->query('q'))
-<a href="{{ route('admin_tree') }}" class="SearchCloseBtn">X</a>
-@endif
-</input>
-<button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button>
-<button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button>
-</div>
-</form>
-@if ($user)
-<div class="UserList">
-</div>
-@endif
-</div>
-</div>
+    <div id="Body" style="width: 970px;">
+        <h2 class="MainHeader">
+            Invite Tree
+        </h2>
+        <div class="Userlist">
+            <form method="GET" action="{{ route('admin_tree') }}">
+                <div>
+                    <input type="text" id="SearchInput" name="q" placeholder="Search" value="{{ request()->q }}">
+                    @if (request()->query('q'))
+                        <a href="{{ route('admin_tree') }}" class="SearchCloseBtn">X</a>
+                    @endif
+                    <button class="btn-neutral btn-small" name="searchBy" value="name" type="submit">Search by
+                        Username</button>
+                    <button class="btn-neutral btn-small" name="searchBy" value="id" type="submit">Search by
+                        ID</button>
+                </div>
+            </form>
+            @if ($user)
+                <div class="UserList">
+                    <h2>User Found: {{ $user->name }}</h2>
+                    <ul>
+                        <li>
+                            <h3><a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}"
+                                    target="_blank">{{ $invited_by }}</a>
+                            </h3>
+                        </li>
+                        <ul>
+                            <li><a href="{{ route('profile', $user->id) }}" target="_blank">{{ $user->name }}</a></li>
+                            <ul>
+                                @foreach ($children as $child)
+                                    <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
+            @endif
+            @if (!request()->has('q'))
+                <h5>Enter a username or ID.</h5>
+            @elseif (!$user)
+                <h5>No user was found, check if you entered the correct details.</h5>
+            @endif
+        </div>
+    </div>
 @endsection
 @section('content')
+<!-- This is legacy code and won't output to the document - Conkley -->
     <div id="UserList">
         <h2>Invite Tree</h2>
         @if (request()->query('q'))
@@ -55,15 +79,16 @@
                 <h2>User Found: {{ $user->name }}</h2>
                 <ul>
                     <li>
-                        <h3><a
-                                href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" target="_blank">{{ $invited_by }}</a>
+                        <h3><a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}"
+                                target="_blank">{{ $invited_by }}</a>
                         </h3>
                     </li>
                     <ul>
                         <li><a href="{{ route('profile', $user->id) }}" target="_blank">{{ $user->name }}</a></li>
                         <ul>
                             @foreach ($children as $child)
-                                <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a></li>
+                                <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a>
+                                </li>
                             @endforeach
                         </ul>
                     </ul>
