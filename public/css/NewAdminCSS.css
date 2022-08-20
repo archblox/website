@@ -403,6 +403,9 @@ h6 {
   -ms-user-select: none;
   user-select: none;
 }
+.NewPanel .InvitationSubName li {
+  list-style: none;
+}
 
 @media (max-width:1000px) {
   .NewPanel .AdminSubHeader ul {
