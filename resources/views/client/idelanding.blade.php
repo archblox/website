@@ -26,16 +26,12 @@
 <body id="StudioWelcomeBody">
     <div class="header">
             <div id="header-login-wrapper" class="iframe-login-signup" data-display-opened="">
-                <a href="https://web.archive.org/web/20130702194455/http://roblox.com/Login/NewAge.aspx" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
+                <a href="../register" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
                 <span id="header-or">or</span>
                 <span class="studioiFrameLogin">
                     <span id="login-span">
-                        <a id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
+                        <a href="../login" id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
                     </span>
-                
-                    <div id="iFrameLogin" class="studioiFrameLogin" style="display: none">
-                        <iframe class="login-frame" src="https://web.archive.org/web/20130702194455if_/https://www.roblox.com/Login/iFrameLogin.aspx?loginRedirect=True&amp;parentUrl=http%3a%2f%2fwww.roblox.com%2fide%2fwelcome" scrolling="no" frameborder="0"></iframe>                                  
-                    </div>
                 </span>
             </div>
         <!-- This is only after the login stuff because IE7 demands floated elements be before non-floated -->
