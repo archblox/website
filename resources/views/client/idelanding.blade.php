@@ -26,6 +26,7 @@
 <body id="StudioWelcomeBody">
     <div class="header">
             <div id="header-login-wrapper" class="iframe-login-signup" data-display-opened="">
+                @guest
                 <a href="../register" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
                 <span id="header-or">or</span>
                 <span class="studioiFrameLogin">
@@ -33,6 +34,9 @@
                         <a href="../login" id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
                     </span>
                 </span>
+                @else
+                <p>Logged in as {{ Auth::user()->name }}</p>
+                @end
             </div>
         <!-- This is only after the login stuff because IE7 demands floated elements be before non-floated -->
         <img src="https://web.archive.org/web/20130702194455im_/http://roblox.com/images/IDE/img-studio_title.png" alt="Roblox Studio Title"/>
