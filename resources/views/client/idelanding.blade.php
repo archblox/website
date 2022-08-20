@@ -36,7 +36,7 @@
                 </span>
                 @else
                 <p>Logged in as {{ Auth::user()->name }}</p>
-                @end
+                @endguest
             </div>
         <!-- This is only after the login stuff because IE7 demands floated elements be before non-floated -->
         <img src="https://web.archive.org/web/20130702194455im_/http://roblox.com/images/IDE/img-studio_title.png" alt="Roblox Studio Title"/>
