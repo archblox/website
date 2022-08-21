@@ -16,7 +16,7 @@
 <div class="header">
             <div id="header-login-wrapper" class="iframe-login-signup" data-display-opened="">
                 @guest
-                <a href="/web/20130702194455/http://roblox.com/Login/NewAge.aspx" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
+                <a href="{{ route('register') }}" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign Up</span></a>
                 <span id="header-or">or</span>
                 <span class="studioiFrameLogin">
                     <span id="login-span">
