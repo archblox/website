@@ -58,12 +58,12 @@
 
                 <div class="templates" js-data-templatetype="Basic" style="display: block">
                     <div class="template" placeid="200">
-                        <a href="#" class="game-image"><img class=""
+                        <a class="game-image"><img class=""
                                 src="https://web.archive.org/web/20130702194455im_/http://t2ak.roblox.com/362ae9c43957047a0287f9cd2c98646c" /></a>
                         <p>Baseplate</p>
                     </div>
                     <div class="template" placeid="201">
-                        <a href="#" class="game-image"><img class=""
+                        <a class="game-image"><img class=""
                                 src="https://web.archive.org/web/20130702194455im_/http://t7ak.roblox.com/ab99a6e34406eb5e7aebd349c90ce35b" /></a>
                         <p>Flat Terrain</p>
                     </div>
