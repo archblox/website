@@ -15,7 +15,7 @@
     <div class="header">
         <div id="header-login-wrapper" class="iframe-login-signup" data-display-opened="">
             @guest
-            <a href="../register" target="_blank" class="GrayButton translate" id="header-signup"><span>Sign
+            <a href="../register" class="GrayButton translate" id="header-signup"><span>Sign
                     Up</span></a>
             <span id="header-or">or</span>
             <span class="studioiFrameLogin">
