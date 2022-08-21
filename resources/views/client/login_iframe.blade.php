@@ -18,7 +18,6 @@
                     <br><input name="login" type="text" id="login" value="{{ old('login') }}" class="LoginFormInput"
                         required autofocus tabindex="1">
                 </div>
-                <h3>Password</h3>
                 <div class="PasswordDiv">
                     <label class="LoginFormLabel" for="Password">Password</label>
                     <a href="ResetPasswordRequest.aspx" target="_top" class="ResetPassword">Forgot password?</a>
