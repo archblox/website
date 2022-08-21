@@ -85,4 +85,9 @@ class ClientController extends Controller
     {
         return view('client.edit');
     }
+
+    public function login_iframe()
+    {
+        return view('client.login_iframe');
+    }
 }
