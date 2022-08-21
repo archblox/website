@@ -8565,7 +8565,8 @@ div.callout {
     display: inline-block;
     cursor: pointer;
     padding: 2px 2px 5px 0;
-    top: 33%;
+    border: none;
+    top: 50%;
     background-position: 0 7;
     position: relative;
     left: 83%;

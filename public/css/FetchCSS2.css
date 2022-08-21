@@ -1229,7 +1229,7 @@ img.SuperSafePrivacyModeImg:hover {
     top: 26px;
     right: 0;
     width: 340px;
-    height: 128px;
+    height: 80px;
     border: 1px solid #0C3060;
     border-top: none;
 }
@@ -1381,7 +1381,7 @@ a.facebook-login span.right {
     letter-spacing: -1px;
 }
 
-#header-signup {
+.header-signup {
     font-family: Arial;
     font-weight: bold;
     color: #fff;
@@ -1782,7 +1782,7 @@ legend span {
 .GrayButton:link,
 .GrayButton:visited,
 .GrayButton:active {
-    background: url(http://web.archive.org/web/20130715023237im_/http://www.roblox.com/images/buttons/bg-form_btn_lg-tile.png) repeat-x top left;
+    background: url(/images/Buttons/StyleGuide/bg-form_btn_lg-tile.png) repeat-x top left;
     border: 1px solid #777;
     padding: 4px 8px 0;
     height: 21px;
@@ -2153,7 +2153,7 @@ table.table {
     line-height: 24px;
     font-size: 13px;
     padding: 0 7px;
-    background-image: url(http://web.archive.org/web/20130715023237im_/http://www.roblox.com/images/StyleGuide/btn-control-large-tile.png);
+    background-image: url(/images/Buttons/StyleGuide/btn-control-large-tile.png);
 }
 
 a.btn-control.top-level {
@@ -2245,7 +2245,7 @@ a.btn-control.top-level {
 .btn-neutral:visited {
     border-color: #0852b7;
     background-color: #0852b7;
-    background-image: url(http://web.archive.org/web/20130715023237im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue.png);
+    background-image: url(/images/Buttons/StyleGuide/bg-btn-blue.png);
     color: #00243d;
 }
 
@@ -2825,7 +2825,7 @@ body#StudioWelcomeBody {
 .header {
     margin-left: -6px;
     height: 84px;
-    background: url('http://web.archive.org/web/20130715023237im_/http://www.roblox.com/images/IDE/bg-header.png') repeat-x;
+    background: url('/images/IDE/bg-header.png') repeat-x;
 }
 
 .header img {
@@ -2961,13 +2961,13 @@ ul.navlist {
     *margin-bottom: -5px;
 }
 
-#header-signup {
+.header-signup {
     margin-right: 5px;
     color: black;
     font-weight: bold;
 }
 
-#header-signup:hover,
+.header-signup:hover,
 #logout:hover {
     cursor: pointer;
 }
@@ -3138,7 +3138,7 @@ div#ButtonRow a {
 .template:hover,
 .template img:hover {
     position: relative;
-    background: url('http://web.archive.org/web/20130715023237im_/http://www.roblox.com/images/IDE/bg-selected_thumb.png') repeat-x;
+    background: url('/images/IDE/bg-selected_thumb.png') repeat-x;
     border: 1px solid;
     border-color: #A7A7A7;
     cursor: pointer;
