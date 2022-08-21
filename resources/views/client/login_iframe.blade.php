@@ -27,10 +27,16 @@
                     <div id="ErrorMessage" style="color:Red"></div>
                     <div class="LoginFormFieldSet">
                         <span
-                            style="font: normal 12px arial;color: black;position: absolute;top: 50%;margin-top: 8px;">
+                            style="font: normal 12px arial;color: black;position: absolute;top: 47%;margin-top: 8px;">
                             Not a member?
                             <a href="{{ route('register') }}" style="font: bold 12px Arial;color: #095FB5;"
                                 target="_top">Sign up!</a>
+                        </span>
+                        <span
+                            style="font: normal 12px arial;color: black;position: absolute;top: 65%;margin-top: 8px;">
+                            Log in not working?
+                            <a href="{{ route('login') }}" style="font: bold 12px Arial;color: #095FB5;"
+                                target="_top">Click here!</a>
                         </span>
                         <span id="LoginButtonActive"><button style="border: none; background-position: 0 0; top: 50%" id="LoginButton" type="submit"
                                 onClick="this.form.submit();this.disabled=true" tabindex="4"
