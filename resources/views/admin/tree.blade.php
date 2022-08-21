@@ -14,28 +14,43 @@
 @endsection
 
 @section('Body')
-<div id="Body" style="width: 970px;">
-<h2 class="MainHeader">
-    Invite Tree
-</h2>
-<div class="Userlist">
-<form method="GET" action="{{ route('admin_tree') }}">
-<div>
-<input type="text" id="SearchInput" name="q" placeholder="Search" value="{{ request()->q }}">
-@if (request()->query('q'))
-<a href="{{ route('admin_tree') }}" class="SearchCloseBtn">X</a>
-@endif
-</input>
-<button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button>
-<button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button>
-</div>
-</form>
-@if ($user)
-<div class="UserList">
-</div>
-@endif
-</div>
-</div>
+    <div id="Body" style="width: 970px;">
+        <h2 class="MainHeader">
+            Invite Tree
+        </h2>
+        @if (!request()->has('q'))
+            <h5 class="SubHeader">Enter a Username or ID.</h5>
+        @elseif (!$user)
+            <h5 class="SubHeader text-error">Unable to find user, please check if you entered the correct information.</h5>
+        @endif
+        <div class="Userlist">
+            <form method="GET" action="{{ route('admin_tree') }}">
+                <div>
+                    <input type="text" id="SearchInput" name="q" placeholder="Search" value="{{ request()->q }}">
+                    @if (request()->query('q'))
+                        <a href="{{ route('admin_tree') }}" class="SearchCloseBtn">X</a>
+                    @endif
+                    <button class="btn-neutral btn-small" name="searchBy" value="name" type="submit">Search by
+                        Username</button>
+                    <button class="btn-neutral btn-small" name="searchBy" value="id" type="submit">Search by
+                        ID</button>
+                </div>
+            </form>
+            @if ($user)
+            <a class="InvitationUserName AuthenticatedUserName" href="{{ route('profile', $user->id) }}">{{ $user->name }}</a>
+            <div class="InvitationSubName">
+            <h4 class="InvitationText">Invited By </h4>
+            <a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" class="AuthenticatedUserName">{{ $invited_by }}</a>
+            <h5 class="InvitationSubText">{{ $user->name }} Invited</h5>
+            @foreach ($children as $child)
+            <li>
+            <a href="{{ route('profile', $child->id) }}" target="_blank" class="AuthenticatedUserName">{{ $child->name }}</a>
+            </li>
+            @endforeach
+            </div>
+            @endif
+        </div>
+    </div>
 @endsection
 @section('content')
     <div id="UserList">
@@ -55,15 +70,16 @@
                 <h2>User Found: {{ $user->name }}</h2>
                 <ul>
                     <li>
-                        <h3><a
-                                href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" target="_blank">{{ $invited_by }}</a>
+                        <h3><a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}"
+                                target="_blank">{{ $invited_by }}</a>
                         </h3>
                     </li>
                     <ul>
                         <li><a href="{{ route('profile', $user->id) }}" target="_blank">{{ $user->name }}</a></li>
                         <ul>
                             @foreach ($children as $child)
-                                <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a></li>
+                                <li><a href="{{ route('profile', $child->id) }}" target="_blank">{{ $child->name }}</a>
+                                </li>
                             @endforeach
                         </ul>
                     </ul>

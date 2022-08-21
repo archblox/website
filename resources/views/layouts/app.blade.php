@@ -104,7 +104,7 @@
             @default
             @endswitch
             @endauth
-            <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" class = "btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
+            <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" class="btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
             <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
                     src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
             <div id="NewRedesign" class="navbarbuttoncontainer NavigationRedesign">

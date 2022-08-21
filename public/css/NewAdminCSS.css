@@ -175,6 +175,7 @@ h6 {
 }
 .NewPanel .SearchCloseBtn{
   color: #af1400;
+  transition: .1s linear;
   left: auto;
   margin-left: -105px;
   margin-top: 1px;
@@ -344,28 +345,66 @@ h6 {
   height: 12px;
   display: block;
   float: right;
-  top: -6px;
+  top: -12px;
   position: relative;
   border-radius: 50%;
 }
 .NewPanel .website {
   background: linear-gradient(0deg, #0087e0 0%, #005085 49%,#005a85 50%, #0099ff 95%, #fff 100%);
+  border: 2px solid #111;
   width: 12px;
   height: 12px;
   display: block;
   border-radius: 50%;
-  margin: -5px;
+  margin: -8px;
 }
 .NewPanel .offline {
   background: linear-gradient(0deg, #a3a3a3 0%, #7a7a7a 49%, #797979 50%, #c9c9c9 95%, #fff 100%);
+  border: 2px solid #111;
   width: 12px;
   height: 12px;
   display: block;
   border-radius: 50%;
-  margin: -5px;
+  margin: -8px;
 }
 .NewPanel.AdminPanel .flex {
   display: table!important;
+}
+.NewPanel .InvitationUserName {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+}
+.NewPanel .InvitationSubName {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+}
+.NewPanel .InvitationSubName .InvitationText {
+  display: inline-block;
+  font-weight: 100;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel .InvitationSubText {
+  text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel .InvitationSubName li {
+  list-style: none;
 }
 
 @media (max-width:1000px) {

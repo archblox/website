@@ -24,7 +24,6 @@
 @if (request()->query('q'))
 <a href="{{ route('admin_users') }}" class="SearchCloseBtn">X</a>
 @endif
-</input>
 <button class="btn-neutral btn-small" name="searchBy" value="name">Search by Username</button>
 <button class="btn-neutral btn-small" name="searchBy" value="id">Search by ID</button>
 </div>
@@ -131,12 +130,12 @@
                 {{ Auth::user()->getMutualFriendsCount($user) }}
             </a>
         </div>
-        <div class="Row hidden">
+        <div class="Row">
             <div class="text-secondary">
                 Total Badges :
             </div>
             <a class="text-secondary">
-                N/A
+                {{ sizeof($user->badges) }}
             </a>
         </div>
         <div class="Row hidden">
