@@ -5,7 +5,7 @@
         ARCHBLOX Login
     </title>
     <link rel="stylesheet"
-        href="https://web.archive.org/web/20130715023249cs_/https://www.roblox.com/CSS/Base/CSS/FetchCSS?path=main___bf363dfd925930252a5f326c7990c31c_m.css">
+        href="{{ asset('css/FetchCSS.css') }}">
 </head>
 
 <body style="background: #E1E1E1;">
@@ -47,9 +47,7 @@
                         <div id="fb-root"></div>
 
                         <div id="facebookSignIn">
-                            <a class="facebook-login"
-                                href="/web/20130715023249/https://www.roblox.com/Facebook/SignIn?returnTo=http%3a%2f%2fwww.roblox.com%2fIDE%2fwelcome"
-                                target="_top" ref="form-facebook">
+                            <a class="facebook-login" href="">
                                 <span class="left"></span>
                                 <span class="middle">Login with Facebook<span>Login with Facebook</span></span>
                                 <span class="right"></span>
