@@ -20,7 +20,8 @@
             <span id="header-or">or</span>
             <span class="studioiFrameLogin">
                 <span id="login-span">
-                    <a href="../login" id="header-login" class="btn-control btn-control-large">Login</a>
+                    <a href="../login" id="header-login" class="btn-control btn-control-large">Login<span
+                            style="display:none"class="grey-arrow">▼</span></a>
                 </span>
             </span>
             @else
