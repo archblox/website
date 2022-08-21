@@ -5,10 +5,10 @@
         ARCHBLOX Login
     </title>
     <link rel="stylesheet"
-        href="/web/20130715023249cs_/https://www.roblox.com/CSS/Base/CSS/FetchCSS?path=main___bf363dfd925930252a5f326c7990c31c_m.css">
+        href="http://web.archive.org/web/20130715023249cs_/https://www.roblox.com/CSS/Base/CSS/FetchCSS?path=main___bf363dfd925930252a5f326c7990c31c_m.css">
 </head>
 
-<body>
+<body style="background: #E1E1E1;">
     <div id="LoginForm">
         <div class="newLogin" id="newLoginContainer">
             <form method="POST" action="{{ route('login') }}">
