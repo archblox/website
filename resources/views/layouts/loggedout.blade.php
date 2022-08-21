@@ -1,4 +1,5 @@
 @php
+// Splash Screens
 $splash = array(
 'It\'s Archaic!',
 'Think. Build. Create.',
@@ -28,7 +29,31 @@ $splash = array(
 'omg old roblox!!',
 'Thomas was here!',
 'C# moment!',
-'Laravel moment!'
+'Laravel moment!',
+'?????????????',
+'If you play, you play.',
+'You die, you respawn.',
+'You game... the build?',
+'#announcements is an inside job',
+'Buy our stocks or we\'ll buy your soul!',
+'The physical equivalent to HALO, apparently',
+':epic:',
+'Arrrrrr! I\'m a pirate!',
+'Now with 1337 viruses!',
+'Are these slogans funny?',
+'my dad left me',
+'Never going to give you up',
+'Never going to let you down.',
+'Never going to run around and desert you.',
+'We\'re all goofy goobers.',
+'you play like an noob dont add me',
+'Half-Life 3... confirmed?',
+'sponge boy me bob..',
+'yea mr krabs?',
+'promise me you\'ll never install archblox ooghghIMFUCKING DYING',
+'okay mr krabs',
+'conkley is EPIC',
+'skeuomorphism is awesome'
 );
 @endphp
 
