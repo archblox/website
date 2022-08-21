@@ -12,7 +12,8 @@
 <script src="{{ asset('js/403.js') }}"></script>
 @endsection
 @section('contentloggedout')
-<h2>405 Method Not Allowed</h2>
+<h2>405 | Method Not Allowed</h2>
+<p><button style="width: fit-content;" disabled class="redbutton">Back</button></p>
 <p>What have you done.</p>
 <p>Luigi: YOU CANNOT ESCAPE. YOU WILL BE DESTROYED IN <span id="timeElement">5</span></p>
 <img alt="Angry Luigi" src="{{ asset('img/error.png') }}" width="100%" height="max-content">

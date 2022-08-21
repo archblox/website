@@ -9,6 +9,7 @@
 <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 @section('contentloggedout')
-<h2>429 Too Many Requests</h2>
+<h2>429 | Too Many Requests</h2>
+<p><button style="width: fit-content;"  class="greybutton" onclick="window.history.back();">Back</button></p>
 <p>You've tried to do something too many times. Please try again in a few minutes.</p>
 @endsection
