@@ -137,7 +137,7 @@ input.Text {
 }
 
 #HeaderContainer #Banner {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/WoodBanner.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/WoodBanner.png);
     background-repeat: no-repeat;
     height: 72px;
     text-align: center;
@@ -183,7 +183,7 @@ input.Text {
 }
 
 #Banner #AuthenticationButton a {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssthemes/base/btn_blue.png") repeat-x scroll 0 0 transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssthemes/base/btn_blue.png") repeat-x scroll 0 0 transparent;
     background-position: 0 0;
     font-weight: bold;
     color: White;
@@ -213,7 +213,7 @@ input.Text {
     width: 140px;
     margin: 0;
     float: none;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssthemes/base/img-robloxlogo.png") no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssthemes/base/img-robloxlogo.png") no-repeat;
 }
 
 #SmallHeaderContainer #Banner #Alerts {
@@ -791,7 +791,7 @@ div.SystemAlert {
 }
 
 .Exclamation {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Icons/exclamation.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/exclamation.png) no-repeat;
     height: 16px;
     width: 16px;
     float: left;
@@ -1109,7 +1109,7 @@ div.SystemAlert {
 }
 
 .WhiteSquareTabsContainer {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/MyMoney_fakeborderbg2.png') bottom repeat-x;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/MyMoney_fakeborderbg2.png') bottom repeat-x;
     width: 100%;
     position: relative;
     padding: 0 0 0 5px;
@@ -1118,7 +1118,7 @@ div.SystemAlert {
 }
 
 .GreenBuyNowBtn.small {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-buynow_grn_sm_v2.png') top left no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-buynow_grn_sm_v2.png') top left no-repeat;
     width: 72px;
     height: 23px;
     display: inline-block;
@@ -1126,7 +1126,7 @@ div.SystemAlert {
 }
 
 .GreenBuyNowBtn.medium {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-buynow_grn_m_v2.png') top left no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-buynow_grn_m_v2.png') top left no-repeat;
     width: 112px;
     height: 34px;
     display: block;
@@ -1150,7 +1150,7 @@ div.SystemAlert {
 }
 
 .GreenBuyNowSharpBtn.small.rentable {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-rent-small.png') top left no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-rent-small.png') top left no-repeat;
     width: 60px;
     height: 23px;
     display: inline-block;
@@ -1388,7 +1388,7 @@ div.ParentsLearningContent div.StandardBoxLightHeader a {
 
 .catalog_nav a,
 .catalog_nav a:visited {
-    background: #b9cee5 url(/web/20130713045325im_/https://www.roblox.com/images/tabmiddle.png) repeat-x;
+    background: #b9cee5 url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tabmiddle.png) repeat-x;
     display: block;
     padding: 5px;
     margin-right: 4px;
@@ -1400,7 +1400,7 @@ div.ParentsLearningContent div.StandardBoxLightHeader a {
 
 .catalog_nav .catalog_navselected {
     display: block;
-    background: #6E99C9 url(/web/20130713045325im_/https://www.roblox.com/images/tabmiddleselected.png) repeat-x;
+    background: #6E99C9 url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tabmiddleselected.png) repeat-x;
     padding: 5px 10px;
     margin-right: 4px;
     font-size: 14px;
@@ -1459,7 +1459,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 
 .catalog_nav a:hover {
     text-decoration: none;
-    background: #6E99C9 url(/web/20130713045325im_/https://www.roblox.com/images/tabmiddleselected.png) repeat-x;
+    background: #6E99C9 url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tabmiddleselected.png) repeat-x;
 }
 
 .catalog_nav ul ul a:hover {
@@ -1506,7 +1506,7 @@ t.menu ul ul a.catalog_navdrop:visited {
     float: left;
     font-size: 16px;
     font-weight: bold;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/step1.png) no-repeat 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/step1.png) no-repeat 0;
     line-height: 32px;
     padding-left: 32px;
 }
@@ -1515,7 +1515,7 @@ t.menu ul ul a.catalog_navdrop:visited {
     float: left;
     font-size: 16px;
     font-weight: bold;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/step2.png) no-repeat 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/step2.png) no-repeat 0;
     line-height: 32px;
     padding-left: 32px;
 }
@@ -1524,7 +1524,7 @@ t.menu ul ul a.catalog_navdrop:visited {
     float: left;
     font-size: 16px;
     font-weight: bold;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/step3.png) no-repeat 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/step3.png) no-repeat 0;
     line-height: 32px;
     padding-left: 32px;
 }
@@ -1532,7 +1532,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 .CatalogOptions {
     float: left;
     padding: 20px;
-    background: #8bc2ff url(/web/20130713045325im_/https://www.roblox.com/images/catalog_options_back.png) repeat-x;
+    background: #8bc2ff url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/catalog_options_back.png) repeat-x;
     border: 0;
     margin-bottom: 0;
     display: none;
@@ -1564,7 +1564,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 }
 
 .CatalogOptionsHelp ul li a {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/smallmetallicbutton.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/smallmetallicbutton.png) repeat-x;
     border: 2px solid transparent;
     padding: 3px;
     font-size: 12px;
@@ -1581,7 +1581,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 
 .bc_iconset,
 #BuildersClubContainer div.icons {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/bc_page_icon_sprites.png?v=2);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/bc_page_icon_sprites.png?v=2);
     background-repeat: no-repeat;
     width: 32px;
     display: inline-block;
@@ -1599,7 +1599,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 }
 
 #BuildersClubContainer div.paid-games-icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Upgrades/BuildersClubBenefitsGrid/paid-access.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Upgrades/BuildersClubBenefitsGrid/paid-access.png) no-repeat;
     height: 27px;
     width: 42px;
 }
@@ -1656,7 +1656,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 }
 
 #BuildersClubContainer div.tradesystem_icon {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Icons/tradeicon.png?v=2);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/tradeicon.png?v=2);
     background-repeat: no-repeat;
     height: 26px;
     width: 23px;
@@ -1664,7 +1664,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 }
 
 #BuildersClubContainer div.upgrades_enabled {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/buybc/bc_sprites_math_enabled.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buybc/bc_sprites_math_enabled.png);
     background-repeat: no-repeat;
     display: inline-block;
     height: 95px;
@@ -1672,7 +1672,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 }
 
 #BuildersClubContainer div.upgrades_disabled {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/buybc/bc_sprites_math_disabled.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buybc/bc_sprites_math_disabled.png);
     background-repeat: no-repeat;
     display: inline-block;
     height: 95px;
@@ -1728,21 +1728,21 @@ t.menu ul ul a.catalog_navdrop:visited {
 }
 
 #BuildersClubContainer .bctotbcconversion {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/BuyBC/bc_lifetime_tbc_lifetime_discount.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/BuyBC/bc_lifetime_tbc_lifetime_discount.png);
     background-repeat: no-repeat;
     height: 95px;
     width: 128px;
 }
 
 #BuildersClubContainer .bctoobcconversion {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/BuyBC/bc_lifetime_obc_lifetime_discount.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/BuyBC/bc_lifetime_obc_lifetime_discount.png);
     background-repeat: no-repeat;
     height: 95px;
     width: 128px;
 }
 
 #BuildersClubContainer .tbctoobcconversion {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/BuyBC/tbc_lifetime_obc_lifetime_discount.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/BuyBC/tbc_lifetime_obc_lifetime_discount.png);
     background-repeat: no-repeat;
     height: 95px;
     width: 128px;
@@ -1767,7 +1767,7 @@ t.menu ul ul a.catalog_navdrop:visited {
     -moz-background-clip: border;
     -moz-background-inline-policy: continuous;
     -moz-background-origin: padding;
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/obctip.png) no-repeat scroll 0 0;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/obctip.png) no-repeat scroll 0 0;
     display: none;
     font-style: normal;
     height: 45px;
@@ -1870,7 +1870,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 
 .AlertSpace .icons,
 .AlertSpace .icons a {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/master_page_image_sprites.png?v=1202010);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/master_page_image_sprites.png?v=1202010);
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -1917,7 +1917,7 @@ t.menu ul ul a.catalog_navdrop:visited {
 
 .OldAlertSpace .icons,
 .OldAlertSpace .icons a {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/master_page_image_sprites.png?v=1202010);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/master_page_image_sprites.png?v=1202010);
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -2223,7 +2223,7 @@ a.twitter_icon {
 
 .MySetsDisplayInfo {
     padding: 10px 20px 10px 20px;
-    background: #8bc2ff url(/web/20130713045325im_/https://www.roblox.com/images/catalog_options_back.png) repeat-x;
+    background: #8bc2ff url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/catalog_options_back.png) repeat-x;
     border: 0;
     margin-bottom: 0;
     overflow: hidden;
@@ -2257,7 +2257,7 @@ a.twitter_icon {
 }
 
 .SetAddButtonAlreadyContainsItem {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/accept.png) no-repeat right 2px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/accept.png) no-repeat right 2px;
 }
 
 .CantAddToSetLabel {
@@ -2315,7 +2315,7 @@ a.twitter_icon {
 }
 
 .SetList .NewVersionAvailableBanner {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Sets/img-update_available-left.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Sets/img-update_available-left.png) no-repeat;
     height: 14px;
     width: 87px;
     position: absolute;
@@ -2326,7 +2326,7 @@ a.twitter_icon {
 
 .SetList a.btn-dropdown,
 a.btn-dropdown-active {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Sets/bg-drop_down_btn.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Sets/bg-drop_down_btn.png) no-repeat right top;
     border: 1px solid #777;
     padding: 6px 17px 0 8px;
     height: 19px;
@@ -2495,7 +2495,7 @@ a.btn-dropdown-active {
 }
 
 .friend_dropdownbutton20 {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/friendsbar/friend_dropdownBtn20h.jpg);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/friend_dropdownBtn20h.jpg);
     float: left;
     cursor: pointer;
     height: 20px;
@@ -2511,7 +2511,7 @@ a.btn-dropdown-active {
     float: left;
     font-size: 20px;
     padding: 4px 10px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Contests/contestbutton.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Contests/contestbutton.png) repeat-x;
     color: #FFF;
     border: 2px solid #193441;
     cursor: pointer;
@@ -2742,7 +2742,7 @@ div.ContestBox {
 div.cannot_vote {
     height: 30px;
     width: 30px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Contests/not_checked_box.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Contests/not_checked_box.png);
     vertical-align: text-top;
     margin-right: 7px;
     float: left;
@@ -2751,7 +2751,7 @@ div.cannot_vote {
 div.can_vote {
     height: 30px;
     width: 30px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Contests/checked_box.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Contests/checked_box.png);
     vertical-align: text-top;
     margin-right: 7px;
     float: left;
@@ -2913,11 +2913,11 @@ div.blinkonheader {
 }
 
 div.blinkoffheader {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/chat/HeaderBarRepeat1x1.jpg');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/HeaderBarRepeat1x1.jpg');
 }
 
 div.blinkonheader {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/chat/HeaderBarRepeat1x1_orange.jpg');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/HeaderBarRepeat1x1_orange.jpg');
 }
 
 div.friend_dock_chatbox_username {
@@ -2952,7 +2952,7 @@ span.friend_dock_onlinestatus {
     margin-left: 16px;
     width: 16px;
     height: 16px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/online.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/online.png);
     background-repeat: no-repeat;
 }
 
@@ -2961,7 +2961,7 @@ span.friend_dock_offlinestatus {
     margin-left: 16px;
     width: 16px;
     height: 16px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/offline.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/offline.png);
     background-repeat: no-repeat;
 }
 
@@ -2971,7 +2971,7 @@ div.friend_dock_onlinestatus {
     margin-left: 5px;
     width: 16px;
     height: 16px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/online.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/online.png);
     background-repeat: no-repeat;
 }
 
@@ -2981,7 +2981,7 @@ div.friend_dock_offlinestatus {
     margin-left: 5px;
     width: 16px;
     height: 16px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/offline.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/offline.png);
     background-repeat: no-repeat;
 }
 
@@ -2991,7 +2991,7 @@ div.friend_dock_newmessage {
     margin-left: 42px;
     width: 16px;
     height: 16px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/newmessage.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/newmessage.png);
     background-repeat: no-repeat;
 }
 
@@ -3078,7 +3078,7 @@ div#statusbar {
     bottom: 0;
     left: 0;
     height: 30px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/chatbarback.jpg);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/chatbarback.jpg);
     border-left: 3px solid #E5E5E5;
     border-right: 3px solid #E5E5E5;
     font-size: 11px;
@@ -3150,7 +3150,7 @@ div#statusbar {
 }
 
 #chat_close {
-    background: url(/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/close.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/close.png);
     height: 10px;
     width: 10px;
     float: right;
@@ -3159,7 +3159,7 @@ div#statusbar {
 }
 
 #chat_mini {
-    background: url(/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/mini.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/mini.png);
     height: 10px;
     width: 10px;
     float: right;
@@ -3305,14 +3305,14 @@ div#statusbar {
 }
 
 .chat-unavailable {
-    background: url(/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/unavailable.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/unavailable.png);
     height: 15px;
     width: 15px;
     float: left;
 }
 
 .chat-available {
-    background: url(/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/available.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/CSS/Base/CSS/available.png);
     height: 15px;
     width: 15px;
     float: left;
@@ -3439,7 +3439,7 @@ div#statusbar {
 }
 
 .followme_green19h {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/followme_19h.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/followme_19h.png');
     background-repeat: no-repeat;
     background-position: left top;
     height: 19px;
@@ -3454,7 +3454,7 @@ div#statusbar {
 }
 
 .followme_gray19h {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/followme_19h-gray.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/followme_19h-gray.png');
     background-repeat: no-repeat;
     background-position: left top;
     height: 19px;
@@ -3470,7 +3470,7 @@ div#statusbar {
 
 .tab_white19h,
 .tab_white19hselected {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_l2.gif') no-repeat left top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_l2.gif') no-repeat left top;
     color: #444;
     display: block;
     float: left;
@@ -3484,7 +3484,7 @@ div#statusbar {
 
 .tab_white19h span,
 .tab_white19hselected span {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_r2.gif') no-repeat right top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_r2.gif') no-repeat right top;
     display: block;
     height: 15px;
     padding: 2px 15px 2px 7px;
@@ -3512,11 +3512,11 @@ div#statusbar {
 }
 
 .tab_white19h_flash {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_l.gif') no-repeat left top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_l.gif') no-repeat left top;
 }
 
 .tab_white19h_flash span {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_r.gif') no-repeat right top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_r.gif') no-repeat right top;
     color: White;
 }
 
@@ -3533,12 +3533,12 @@ div#statusbar {
 }
 
 .InGamePopup {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/containerBkg_01.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/containerBkg_01.png);
     _overflow: hidden;
 }
 
 .voteYes {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/button_vote.jpg);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/button_vote.jpg);
     width: 24px;
     height: 23px;
     background-position: top left;
@@ -3549,7 +3549,7 @@ div#statusbar {
 }
 
 .voteNo {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/button_vote.jpg);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/button_vote.jpg);
     width: 24px;
     height: 23px;
     background-position: top right;
@@ -3583,7 +3583,7 @@ div#statusbar {
 }
 
 .overrideColumn1c .GiftCardLink {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-get_gift_card.jpg) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-get_gift_card.jpg) no-repeat;
     width: 560px;
     height: 90px;
 }
@@ -3639,7 +3639,7 @@ div#statusbar {
 }
 
 #GiftCardCrossLink {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-gifting160-1.jpg) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-gifting160-1.jpg) no-repeat;
     width: 160px;
     height: 600px;
 }
@@ -3649,7 +3649,7 @@ div#statusbar {
 }
 
 #BCGiftCardXLink {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-gifting270_2.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-gifting270_2.png) no-repeat;
     background-color: White;
     margin-bottom: 10px;
 }
@@ -3677,7 +3677,7 @@ div.FrontPageVideoIntro {
 a.ControlLoginButton {
     padding: 6px 0 !important;
     margin: 0 auto;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/UI/btn-big_silver_tile.png") top left;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/btn-big_silver_tile.png") top left;
     display: block;
     width: 88px;
     font-family: Arial;
@@ -3730,7 +3730,7 @@ div.TopPanel {
 }
 
 .FeaturedGameButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/btn-playnow_big2.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/btn-playnow_big2.png) no-repeat;
     height: 214px;
     width: 214px;
     height: 214px;
@@ -3857,7 +3857,7 @@ span.placeName {
 }
 
 a.PlayThisFeaturedGame {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/UI/btn-play_this.png") top left;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/btn-play_this.png") top left;
     display: block;
     width: 112px;
     height: 34px;
@@ -3953,7 +3953,7 @@ a.logoutButton {
 
 a.btn-logo,
 a.btn-logo:visited {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/btn-logo.png?v=2") top left;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn-logo.png?v=2") top left;
     display: inline-block;
     width: 123px;
     height: 38px;
@@ -4051,7 +4051,7 @@ div.FrontPageLoginBox div.UsernameRowLogin {
 }
 
 div.FrontPageLoginBox .fbLoginButton {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Facebook/btn-login_with_fb-big.png") no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Facebook/btn-login_with_fb-big.png") no-repeat;
     width: 170px;
     height: 25px;
 }
@@ -4358,7 +4358,7 @@ table.stats td.hed {
 }
 
 .GreenSubmitButton {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/btn-submit.png");
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn-submit.png");
     height: 50px;
     width: 134px;
     border: 0;
@@ -4508,7 +4508,7 @@ table.stats td.hed {
 }
 
 #CreateBadgeContainer .Robux {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 0 1px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 0 1px;
     padding: 0 0 2px 20px;
     color: #060;
     margin-bottom: 2px;
@@ -4526,7 +4526,7 @@ table.stats td.hed {
 }
 
 #CreateBadgeContainer .InstructionsGraphic {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Badges/badge_instructions.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Badges/badge_instructions.png') no-repeat;
     width: 966px;
     height: 323px;
     position: relative;
@@ -4537,7 +4537,7 @@ table.stats td.hed {
     display: block;
     height: 34px;
     width: 122px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-blue-download_m.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-blue-download_m.png') no-repeat top left;
     position: absolute;
     bottom: 27px;
     left: 33px;
@@ -4551,7 +4551,7 @@ table.stats td.hed {
     display: block;
     height: 51px;
     width: 130px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-green-upload.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-green-upload.png') no-repeat top left;
 }
 
 /* ~/CSS/Base/CSS/BCModal.css */
@@ -4560,11 +4560,11 @@ table.stats td.hed {
     overflow: hidden;
     height: 50px;
     width: 173px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-upgrade_now.png) no-repeat 0 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-upgrade_now.png) no-repeat 0 0;
 }
 
 .ButtonUpgradeNow:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-upgrade_now.png) no-repeat 0 -50px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-upgrade_now.png) no-repeat 0 -50px;
 }
 
 .BCModalImage {
@@ -4585,7 +4585,7 @@ table.stats td.hed {
 
 /* ~/CSS/Base/CSS/Billing.css */
 .buy-robux-button {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/bg-rbx_btn_60.png) repeat-x left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/bg-rbx_btn_60.png) repeat-x left top;
     height: 49px;
     border: 1px solid #007001;
     display: inline-block;
@@ -4691,7 +4691,7 @@ table.stats td.hed {
 .CarouselPager .arrow-next {
     height: 13px;
     width: 36px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Groups/btn-arrowsprite-up_down.png');
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Groups/btn-arrowsprite-up_down.png');
     margin: 5px 0;
     display: inline-block;
 }
@@ -4761,7 +4761,7 @@ table.stats td.hed {
 }
 
 #CatalogContainer .Selected {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/gamesPage_filterArrow.png') no-repeat scroll 0 1px transparent;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gamesPage_filterArrow.png') no-repeat scroll 0 1px transparent;
 }
 
 #CatalogContainer .DisplayFilters {
@@ -5090,12 +5090,12 @@ table.stats td.hed {
 
 .CharSelectCombined .Boy {
     margin: 15px 12px 30px 22px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-play_as_boy_AB.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-play_as_boy_AB.png);
 }
 
 .CharSelectCombined .Girl {
     margin: 15px 0 30px 0;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-play_as_girl_AB.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-play_as_girl_AB.png);
 }
 
 .CharSelectCombined .PlayAsButton:hover {
@@ -5149,7 +5149,7 @@ table.stats td.hed {
 
 .standardform .valid-top,
 .valid-bottom {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat right top;
     width: 180px;
     height: 3px;
 }
@@ -5162,7 +5162,7 @@ table.stats td.hed {
     width: 165px;
     color: #a00;
     font: normal 11px arial;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat left center;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat left center;
     padding-left: 15px;
 }
 
@@ -5173,7 +5173,7 @@ table.stats td.hed {
 .standardform .valid {
     width: 15px;
     height: 13px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/img-check.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/img-check.png) no-repeat;
     margin-top: 3px;
     margin-left: 5px;
     display: none;
@@ -5284,7 +5284,7 @@ div.AspNet-TreeView ul {
 }
 
 #ContentBuilderContainer .GamePass .Robux {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 0 1px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 0 1px;
     padding: 0 0 2px 20px;
     color: #060;
     margin-bottom: 2px;
@@ -5306,7 +5306,7 @@ div.AspNet-TreeView ul {
 }
 
 #ContentBuilderContainer .GamePass .InstructionsGraphic {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/BuildPage/img-instructions.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/BuildPage/img-instructions.png') no-repeat;
     width: 966px;
     height: 323px;
     position: relative;
@@ -5316,7 +5316,7 @@ div.AspNet-TreeView ul {
     display: block;
     height: 34px;
     width: 122px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-blue-download_m.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-blue-download_m.png') no-repeat top left;
     position: absolute;
     bottom: 27px;
     left: 33px;
@@ -5330,7 +5330,7 @@ div.AspNet-TreeView ul {
     display: block;
     height: 51px;
     width: 130px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-green-upload.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-green-upload.png') no-repeat top left;
 }
 
 #ContentBuilderContainer .GamePass .GreenUploadBtn:hover {
@@ -5473,7 +5473,7 @@ a.CurrentContestLink {
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-updatenow.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-updatenow.png);
 }
 
 #UpdateCCButton:hover {
@@ -5494,7 +5494,7 @@ a.CurrentContestLink {
 }
 
 .LoginButton {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Games/CuratedGames/btn_25px_white.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Games/CuratedGames/btn_25px_white.png);
     color: black !important;
     border: 1px solid #666;
     height: 25px;
@@ -5510,7 +5510,7 @@ a.CurrentContestLink {
 }
 
 .SignupButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_25px_blue.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_25px_blue.png) top;
     color: white !important;
     border: 1px solid #029;
     height: 25px;
@@ -5520,7 +5520,7 @@ a.CurrentContestLink {
 }
 
 .SignupButton:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_25px_blue.png) bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_25px_blue.png) bottom;
     border: 1px solid #029;
     text-decoration: none !important;
 }
@@ -5956,11 +5956,11 @@ div.GamesInfoIcon {
 }
 
 .AllowedGearRepeater_Container div.GamesInfoIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/CategoryIcons/CategorySprite.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/CategoryIcons/CategorySprite.png);
 }
 
 .AssetGenreRepeater_Container div.GamesInfoIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/GenreIconsSprite.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/GenreIconsSprite.png);
     height: 14px;
 }
 
@@ -6075,12 +6075,12 @@ div.GamesInfoIcon.Skate.Park {
 }
 
 div.GamesInfoIcon.FPS {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/FPS.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/FPS.png) no-repeat;
     height: 16px;
 }
 
 div.GamesInfoIcon.RPG {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/RPG.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/RPG.png) no-repeat;
     height: 16px;
 }
 
@@ -6106,7 +6106,7 @@ div.GamesInfoIcon.RPG {
 .GameFilter .SelectedFilter,
 .GameFilter .SelectedGenre,
 .GameFilter .SelectedSort {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/gamesPage_filterArrow.png) no-repeat 0 1px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gamesPage_filterArrow.png) no-repeat 0 1px;
     cursor: pointer;
     padding-left: 20px;
     font-weight: normal;
@@ -6204,7 +6204,7 @@ a.GamesGenre.DisabledFilter:hover a {
 }
 
 .SearchIconButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/searchIcon.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/searchIcon.png) no-repeat;
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -6269,7 +6269,7 @@ a.GamesGenre.DisabledFilter:hover a {
     right: 1px;
     width: 34px;
     height: 18px;
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/icons/overlay_personal_small.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/icons/overlay_personal_small.png');
     background-repeat: no-repeat;
 }
 
@@ -6280,7 +6280,7 @@ a.GamesGenre.DisabledFilter:hover a {
     width: 137px;
     height: 38px;
     background-repeat: no-repeat;
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/icons/overlay_personal_big.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/icons/overlay_personal_big.png');
 }
 
 .GameItem .MegaOverlay {
@@ -6383,22 +6383,22 @@ div.GenericModalErrorMessage {
 }
 
 .ConfirmationModal .BlueYes {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Buttons/blue_yes2.png") top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/blue_yes2.png") top;
     width: 101px;
 }
 
 .ConfirmationModal .BlueNo {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Buttons/blue_no.png") top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/blue_no.png") top;
     width: 106px;
 }
 
 .ConfirmationModal .GreyYes {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Buttons/grey_yes.png") top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/grey_yes.png") top;
     width: 112px;
 }
 
 .ConfirmationModal .GreyNo {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Buttons/grey_no2.png") top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/grey_no2.png") top;
     width: 100px;
 }
 
@@ -6559,7 +6559,7 @@ a.genericmodal-close {
 }
 
 .pagerbtns {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Groups/blue_arrow_btns_12x12_sprite.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Groups/blue_arrow_btns_12x12_sprite.png') no-repeat;
     position: relative;
     top: 4px;
 }
@@ -6764,7 +6764,7 @@ textarea {
 #left-column .StandardBox,
 #mid-column .StandardBox,
 #right-column .StandardBox {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x white;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x white;
     color: #000;
 }
 
@@ -6825,7 +6825,7 @@ textarea {
 }
 
 .GroupListItemContainer.selected {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/gamesPage_filterArrow.png') 4px center no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gamesPage_filterArrow.png') 4px center no-repeat;
 }
 
 .selected .GroupListName {
@@ -7063,13 +7063,13 @@ input.default {
 }
 
 .StatusView .top {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Groups/bg-speech_top.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Groups/bg-speech_top.png') no-repeat;
     padding: 5px;
     width: 317px;
 }
 
 .StatusView .bottom {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Groups/bg-speech_bottom.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Groups/bg-speech_bottom.png') no-repeat;
     padding: 5px;
     padding-right: 0;
 }
@@ -7107,7 +7107,7 @@ input.default {
     display: none;
     height: 69px;
     width: 100%;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/spinners/spinner16x16.gif') no-repeat center;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/spinners/spinner16x16.gif') no-repeat center;
     *float: left;
 }
 
@@ -7124,7 +7124,7 @@ input.default {
     top: 0;
     height: 100%;
     width: 100%;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
     z-index: 1;
 }
 
@@ -7268,7 +7268,7 @@ div.MyAuditPage {
 }
 
 #AuditPage #submitButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/catalog/bg-27px_silver_btn.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/catalog/bg-27px_silver_btn.png) repeat-x;
     font: bold 11px Arial, Helvetica, sans-serif;
     color: black;
     text-decoration: none;
@@ -7358,7 +7358,7 @@ div.MyAuditPage {
 
 #Help .descriptionPanels {
     background-color: Transparent;
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/Speech Bubble 225.gif');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Speech Bubble 225.gif');
     width: 225px;
     height: 235px;
     background-repeat: no-repeat;
@@ -7414,7 +7414,7 @@ div.MyAuditPage {
     filter: alpha(opacity=93);
     opacity: .93;
     background-color: #eee;
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/help_gradient.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/help_gradient.png');
     background-repeat: repeat-y;
     background-position: left top;
     width: 150px;
@@ -7434,7 +7434,7 @@ div.MyAuditPage {
     z-index: 1;
     width: 100%;
     height: 153px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/MiniclipHeader_BG.PNG) white bottom repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/MiniclipHeader_BG.PNG) white bottom repeat-x;
 }
 
 #MiniWrapper {
@@ -7503,13 +7503,13 @@ a.facebook-login span.middle {
 
 a.facebook-login span.left {
     width: 27px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/facebook/bg-fblogin_sides.png) left top no-repeat;
+    background: url(/img/bg-fblogin_sides.png) left top no-repeat;
 }
 
 a.facebook-login span.middle {
     height: 18px;
     width: auto;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/facebook/bg-fblogin_middle.png) left top repeat-x;
+    background: url(/img/bg-fblogin_middle.png) left top repeat-x;
     color: #394f7d;
     padding: 7px 2px 0 6px;
 }
@@ -7523,7 +7523,7 @@ a.facebook-login span.middle span {
 
 a.facebook-login span.right {
     width: 5px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/facebook/bg-fblogin_sides.png) right top no-repeat;
+    background: url(/img/bg-fblogin_sides.png) right top no-repeat;
 }
 
 .LoginFormLabel {
@@ -7542,18 +7542,19 @@ a.facebook-login span.right {
 
 .LoginFormFieldSet {
     position: relative;
+    padding-bottom: 35px;
     height: 39px;
-    *margin-top: -10px;
+    /* margin-top: -10px; */
 }
 
 .UserNameDiv {
     float: left;
-    width: 156px;
+    /* width: 156px; */
 }
 
 .PasswordDiv {
     float: right;
-    width: 158px;
+    /* width: 158px; */
     position: relative;
 }
 
@@ -7573,7 +7574,7 @@ a.facebook-login span.right {
 }
 
 .iFrameBlueLogin {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/btn-login.png") no-repeat;
+    background: url("/img/btn-login.png") no-repeat;
     background-position: 0 0;
     height: 23px;
     width: 54px;
@@ -7673,7 +7674,7 @@ a.facebook-login span.right {
 }
 
 #InboxContainer .InboxHeader {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/topNav_black.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/topNav_black.png);
     border: none;
     color: #fff;
     font: 1.2em/normal Verdana, sans-serif;
@@ -7728,7 +7729,7 @@ a.facebook-login span.right {
 
 #Messages .SystemAlertMessage div.RobloxMailIcon,
 #InboxContainer .SystemAlertMessage_Unread div.RobloxMailIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Icons/roblox_16x15.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/roblox_16x15.png) no-repeat;
     height: 15px;
     width: 16px;
     float: left;
@@ -7776,7 +7777,7 @@ a.facebook-login span.right {
 
 /* ~/CSS/Base/CSS/Item.css */
 div.PromoteModalBtn {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-add_to_game-sm.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-add_to_game-sm.png') no-repeat top left;
     display: block;
     width: 100px;
     height: 23px;
@@ -7801,7 +7802,7 @@ div.PromoteModalBtn:hover {
 #PlaceProductPromotionSelectionPanel .thumbs-up-green {
     width: 110px;
     height: 110px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
     display: block;
 }
 
@@ -7939,13 +7940,13 @@ div.PromoteModalBtn:hover {
 
 .GenreInfo .GamesInfoIcon {
     display: inline-block;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/GenreIconsSprite.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GenreIcons/GenreIconsSprite.png);
     width: 16px;
     height: 16px;
 }
 
 .RobuxAndTicketsPurchasePanel {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/UI/img-or_divider.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/img-or_divider.png') no-repeat top left;
     display: block;
     height: 8px;
     width: 147px;
@@ -7981,7 +7982,7 @@ pre.Description.Full,
 }
 
 .BuyPriceBoxContainer .FavoriteStar {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/star.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/star.png') no-repeat;
     padding: 2px 0 2px 20px;
     margin-top: 5px;
 }
@@ -8115,7 +8116,7 @@ pre.Description.Full,
 .closeBtnCircle_35h {
     width: 35px;
     height: 35px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/closeBtnCircle_35h.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/closeBtnCircle_35h.png);
 }
 
 .closeBtnCircle_20h:hover {
@@ -8130,11 +8131,11 @@ pre.Description.Full,
     position: absolute;
     top: 5px;
     left: 5px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x.png);
 }
 
 .PurchaseModal .simplemodal-close a {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x.png') no-repeat top left;
     display: block;
     height: 20px;
     width: 20px;
@@ -8219,7 +8220,7 @@ pre.Description.Full,
 }
 
 .Comments .loading {
-    background: #fff url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
+    background: #fff url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
     width: 100%;
     height: 100px;
 }
@@ -8267,7 +8268,7 @@ pre.Description.Full,
 #ItemContainer .AjaxCommentsContainer .Post,
 #ItemContainer .AjaxCommentsContainer .PostBottom {
     float: none;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/UI/bg-comments-extra-long.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-comments-extra-long.png') no-repeat;
     padding: 15px 15px 15px 35px;
     width: 410px;
 }
@@ -8298,7 +8299,7 @@ pre.Description.Full,
 .AjaxCommentsContainer .PostAComment .Buttons {
     margin: 10px 0 0 0;
     padding: 0 10px 10px 10px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/UI/bg-comments-compose-v2.png') no-repeat -20px bottom;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-comments-compose-v2.png') no-repeat -20px bottom;
     *background-position: 0 bottom;
     *padding-bottom: 0;
 }
@@ -8322,7 +8323,7 @@ pre.Description.Full,
 }
 
 #ItemContainer .AjaxCommentsContainer .CommentText {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/UI/bg-comments-compose-v2.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-comments-compose-v2.png') no-repeat;
     padding-left: 20px;
     width: 440px;
 }
@@ -8351,7 +8352,7 @@ pre.Description.Full,
     height: 50px;
     width: 102px;
     display: inline-block;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_blue_ok_l.png') top left no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_blue_ok_l.png') top left no-repeat;
 }
 
 .btn-blue-ok-sharp:hover {
@@ -8482,13 +8483,13 @@ pre.Description.Full,
 .CurrencyColor1 {
     color: #080;
     padding-left: 20px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -42px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -42px;
 }
 
 .CurrencyColor2 {
     color: #A61;
     padding-left: 20px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -122px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -122px;
 }
 
 .CurrencyColorFree {
@@ -8564,8 +8565,10 @@ div.callout {
     display: inline-block;
     cursor: pointer;
     padding: 2px 2px 5px 0;
-    background-position: bottom;
+    top: 33%;
+    background-position: 0 7;
     position: relative;
+    left: 83%;
 }
 
 #loginButton:hover {
@@ -8574,7 +8577,7 @@ div.callout {
 
 #loginButton span {
     padding: 2px 15px 5px 0;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/LandingGames/loginArrow.png) no-repeat 40px 7px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LandingGames/loginArrow.png) no-repeat 40px 7px;
 }
 
 #loginButton:hover span {
@@ -8629,7 +8632,7 @@ fieldset#body {
 #loginBox #loginSubmit {
     width: auto;
     float: right;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/LandingGames/login_btn.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LandingGames/login_btn.png) repeat-x;
     color: #fff;
     padding: 3px 10px 3px 10px;
     border: 1px solid #339cdf;
@@ -8670,7 +8673,7 @@ input:focus {
 #videoContainer {
     width: 950px;
     height: 371px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/LandingGames/video_bg.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LandingGames/video_bg.png) no-repeat;
     margin: 0 0 15px 16px;
     float: left;
 }
@@ -8692,7 +8695,7 @@ a.crossroads:visited {
     height: 298px;
     display: block;
     margin-right: 10px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/LandingGames/crossroads.gif) bottom no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LandingGames/crossroads.gif) bottom no-repeat;
     cursor: pointer;
     float: left;
 }
@@ -8707,7 +8710,7 @@ a.swordfight:visited {
     height: 298px;
     display: block;
     margin-right: 10px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/LandingGames/swordfight.gif) bottom no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LandingGames/swordfight.gif) bottom no-repeat;
     cursor: pointer;
     float: left;
 }
@@ -8721,7 +8724,7 @@ a.seemoregames:visited {
     width: 330px;
     height: 298px;
     display: block;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/LandingGames/seeMoreGames.gif) bottom no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LandingGames/seeMoreGames.gif) bottom no-repeat;
     cursor: pointer;
     float: left;
 }
@@ -8740,13 +8743,13 @@ a.seemoregames:hover {
 
 /* ~/CSS/Base/CSS/Language.css */
 .SwitchNowButton {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Buttons/SwitchNow.png") top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/SwitchNow.png") top;
     width: 158px;
     height: 50px;
 }
 
 .NoThanksButton {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Buttons/NoThanks.png") top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/NoThanks.png") top;
     width: 145px;
     height: 50px;
 }
@@ -8755,7 +8758,7 @@ a.seemoregames:hover {
     width: 415px;
     height: 157px;
     margin: 10px auto 10px auto;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/LanguageChangeInstructions.jpg");
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/LanguageChangeInstructions.jpg");
 }
 
 /* ~/CSS/Base/CSS/ManageAccount.css */
@@ -9192,7 +9195,7 @@ div#NavRedesign {
 .NavigationRedesign li:hover,
 #NavigationRedesignBannerContainer #AuthenticatedUserNameWrapper:hover,
 #AlertSpace #SettingsButtonContainer:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-main_menu_hover.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-main_menu_hover.png) repeat-x;
 }
 
 #NavigationRedesignBannerContainer #AuthenticatedUserNameWrapper {
@@ -9239,7 +9242,7 @@ div#NavRedesign {
 #NavigationRedesignBannerContainer a.btn-logo,
 .NavigationRedesign a.btn-logo:visited,
 #NavigationRedesignBannerContainer a.btn-logo:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/btn-rbx_logo.png) no-repeat top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/btn-rbx_logo.png) no-repeat top;
     display: inline-block;
     width: 116px;
     height: 35px;
@@ -9265,7 +9268,7 @@ div#NavRedesign {
 }
 
 .BannerRedesign {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-rbx_header.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-rbx_header.png) repeat-x;
     height: 36px;
     background-color: #114081;
     position: fixed;
@@ -9314,47 +9317,47 @@ div#NavRedesign {
 }
 
 #NavigationRedesignBannerContainer .message_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: top;
 }
 
 #NavigationRedesignBannerContainer .MessageAlert:hover .message_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 -20px;
 }
 
 #NavigationRedesignBannerContainer .friends_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 160px;
 }
 
 #NavigationRedesignBannerContainer .FriendsAlert:hover .friends_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 140px;
 }
 
 #NavigationRedesignBannerContainer .AlertItem:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-main_menu_hover.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-main_menu_hover.png) repeat-x;
 }
 
 #NavigationRedesignBannerContainer .robux_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 120px;
 }
 
 #NavigationRedesignBannerContainer .RobuxAlert:hover .robux_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 100px;
 }
 
 #NavigationRedesignBannerContainer div.tickets_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 80px;
     margin-left: 0;
 }
 
 #NavigationRedesignBannerContainer .TicketsAlert:hover .tickets_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 60px;
 }
 
@@ -9374,7 +9377,7 @@ div#NavRedesign {
 }
 
 #NavigationRedesignBannerContainer #SettingsButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png);
     background-position: 0 40px;
     height: 19px;
     width: 20px;
@@ -9384,7 +9387,7 @@ div#NavRedesign {
 }
 
 #NavigationRedesignBannerContainer #SettingsButtonContainer.active #SettingsButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png) repeat-y;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-icon_sprites.png) repeat-y;
     background-position: 0 20px;
 }
 
@@ -9432,7 +9435,7 @@ div#NavRedesign {
     padding: 0 2px;
     cursor: pointer;
     border: none;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/bg-drop_down_arrow.png) top no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/bg-drop_down_arrow.png) top no-repeat;
     height: 5px;
     width: 7px;
     display: inline-block;
@@ -9446,7 +9449,7 @@ div#NavRedesign {
 
 .moreLink.active span#moreMenuToggle,
 .moreLink.active span#moreMenuToggle:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/bg-drop_down_arrow.png) bottom no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/bg-drop_down_arrow.png) bottom no-repeat;
     top: -1px;
 }
 
@@ -9543,7 +9546,7 @@ div#NavRedesign {
 }
 
 #NavigationRedesignBannerContainer .AlertBox {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-alerts-v2.png) no-repeat left;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-alerts-v2.png) no-repeat left;
     float: left;
     height: 11px;
     font: bold 10px Arial, Helvetica, sans-serif;
@@ -9574,7 +9577,7 @@ div#NavRedesign {
 }
 
 .Redesign .subMenu ul li:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-sub_menu_hover.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/RevisedHeader/bg-sub_menu_hover.png) repeat-x;
     background-repeat: repeat no-repeat;
 }
 
@@ -9853,7 +9856,7 @@ div#NavRedesign {
 }
 
 .ReportAbuse .AbuseButton a:hover {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/abuse.png") no-repeat scroll 0 2px transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/abuse.png") no-repeat scroll 0 2px transparent;
     color: #F00;
 }
 
@@ -9913,7 +9916,7 @@ div#NavRedesign {
 .joinBC {
     width: 196px;
     height: 34px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Accounts/btn-joinbuildersclub-green-m.png") no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Accounts/btn-joinbuildersclub-green-m.png") no-repeat;
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -9936,7 +9939,7 @@ a.buyRobux {
 .verifiedEmail {
     width: 52px;
     height: 13px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/Accounts/img-verified.png") no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Accounts/img-verified.png") no-repeat;
     display: inline-block;
     vertical-align: middle;
 }
@@ -10005,7 +10008,7 @@ a.buyRobux {
     cursor: pointer;
     width: 102px;
     height: 50px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Accounts/btn_blue_ok_l.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Accounts/btn_blue_ok_l.png);
 }
 
 .btn_blue_ok_l:hover {
@@ -10335,7 +10338,7 @@ div.MyMoneyPage {
 }
 
 .MyMoneyPage td.Member div.Roblox {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/roblox-icon-round-tiny.jpg') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/roblox-icon-round-tiny.jpg') no-repeat top left;
 }
 
 .MyMoneyPage .roblox-avatar-image,
@@ -10366,7 +10369,7 @@ div.MyMoneyPage {
     position: absolute;
     top: 0;
     left: 1px;
-    background: #fff url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
+    background: #fff url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
     width: 100%;
     height: 100%;
 }
@@ -10451,7 +10454,7 @@ div.MyMoneyPage {
 
 #MyTransactions_tab .loading,
 #TradeItems_tab .loading {
-    background: #fff url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
+    background: #fff url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
     height: 150px;
     position: relative;
     width: 780px;
@@ -10517,11 +10520,11 @@ div.MyMoneyPage {
 }
 
 #MyTransactions_tab th.Amount.Robux {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 10px 12px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 10px 12px;
 }
 
 #MyTransactions_tab th.Amount.Tickets {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Tickets.png?v=2') no-repeat 10px 9px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Tickets.png?v=2') no-repeat 10px 9px;
 }
 
 #MyTransactions_tab .Member span {
@@ -10531,7 +10534,7 @@ div.MyMoneyPage {
 }
 
 .MyMoneyPage th.Member div.Roblox {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/roblox-icon-round-tiny.jpg') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/roblox-icon-round-tiny.jpg') no-repeat top left;
 }
 
 #MyTransactions_tab td.Date,
@@ -10802,7 +10805,7 @@ div.MyMoneyPage {
 }
 
 #ParentsContainer #BCLinks .BCLinksSection {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Parents/collapse_bg.jpg') repeat-x bottom;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Parents/collapse_bg.jpg') repeat-x bottom;
     border: solid 1px #D9D9D9;
     height: auto;
     padding: 10px;
@@ -10824,7 +10827,7 @@ div.MyMoneyPage {
     height: 9px;
     margin-right: 5px;
     display: inline-block;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/gray_arrow.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/gray_arrow.png') no-repeat;
 }
 
 #ParentsContainer #BCLinks .BCLinksSection .header .collapseArrow {
@@ -10832,7 +10835,7 @@ div.MyMoneyPage {
     height: 9px;
     margin-right: 5px;
     display: inline-block;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-expand_arrow.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-expand_arrow.png') no-repeat;
 }
 
 #ParentsContainer .SquareTabGray.selected {
@@ -10844,7 +10847,7 @@ div.MyMoneyPage {
 }
 
 #ParentsContainer .TestimonialContent ul.TestimonialList>li:before {
-    content: url("/web/20130713045325im_/https://www.roblox.com/images/comment-arrow.png");
+    content: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/comment-arrow.png");
     left: -21px;
     position: absolute;
 }
@@ -10906,7 +10909,7 @@ div.MyMoneyPage {
 }
 
 .partyWindow .title {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_l.gif') no-repeat left top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_l.gif') no-repeat left top;
     display: block;
     text-decoration: none;
     padding-left: 2px;
@@ -10916,7 +10919,7 @@ div.MyMoneyPage {
 }
 
 .partyWindow .title span {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_r.gif') no-repeat right top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_blue19h_r.gif') no-repeat right top;
     display: block;
     height: 15px;
     padding: 2px 15px 2px 7px;
@@ -10925,18 +10928,18 @@ div.MyMoneyPage {
 }
 
 .partyWindow .title_flash {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_l2.gif') no-repeat left top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_l2.gif') no-repeat left top;
 }
 
 .partyWindow .title_flash span {
-    background: transparent url('/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_r2.gif') no-repeat right top;
+    background: transparent url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/friendsbar/tab_white19h_r2.gif') no-repeat right top;
     color: #444;
 }
 
 .partyWindow .title strong {
     display: block;
     padding: 2px 15px 4px 6px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/tab_blue21h_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/tab_blue21h_r.png") no-repeat right top;
     color: #fff;
     width: 227px;
     font-weight: bold;
@@ -10992,14 +10995,14 @@ div.MyMoneyPage {
 
 .btn_green21h {
     float: left;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_l.png") no-repeat left top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_l.png") no-repeat left top;
     padding: 0 0 0 2px;
 }
 
 .btn_green21h a {
     display: block;
     padding: 2px 14px 4px 10px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_r.png") no-repeat right top;
     color: White;
     font-family: verdana;
     font-weight: bold;
@@ -11007,23 +11010,23 @@ div.MyMoneyPage {
 }
 
 .btn_green21h:hover {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_over_l.png") no-repeat left top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_over_l.png") no-repeat left top;
 }
 
 .btn_green21h:hover a {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_over_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_green21h_over_r.png") no-repeat right top;
 }
 
 .btn_red21h {
     float: left;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_l.png") no-repeat left top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_l.png") no-repeat left top;
     padding: 0 0 0 2px;
 }
 
 .btn_red21h a {
     display: block;
     padding: 2px 14px 4px 10px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_r.png") no-repeat right top;
     color: White;
     font-family: verdana;
     font-weight: bold;
@@ -11031,16 +11034,16 @@ div.MyMoneyPage {
 }
 
 .btn_red21h:hover {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_over_l.png") no-repeat left top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_over_l.png") no-repeat left top;
 }
 
 .btn_red21h:hover a {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_over_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_red21h_over_r.png") no-repeat right top;
 }
 
 .btn_black21h {
     float: left;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_l.png") no-repeat left top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_l.png") no-repeat left top;
     padding: 0 0 0 2px;
     color: White;
 }
@@ -11048,7 +11051,7 @@ div.MyMoneyPage {
 .btn_black21h a {
     display: block;
     padding: 2px 14px 4px 10px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_r.png") no-repeat right top;
     color: #FFF;
     font-family: verdana;
     font-weight: bold;
@@ -11056,11 +11059,11 @@ div.MyMoneyPage {
 }
 
 .btn_black21h:hover {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_over_l.png") no-repeat left top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_over_l.png") no-repeat left top;
 }
 
 .btn_black21h:hover a {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_over_r.png") no-repeat right top;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/chat/btn_black21h_over_r.png") no-repeat right top;
 }
 
 .main h1 {
@@ -11398,7 +11401,7 @@ dd {
     height: 13px;
     width: 13px;
     display: block;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x-sm.png') top left no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x-sm.png') top left no-repeat;
     position: absolute;
     z-index: 2;
     left: 55px;
@@ -11444,7 +11447,7 @@ dd {
 #GamePassesItemContainer .loading {
     height: 95px;
     width: 100%;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') no-repeat center;
 }
 
 .PlaceProductPromotionsContainer .divider-bottom,
@@ -11690,7 +11693,7 @@ dd {
 }
 
 .ABImageSelected {
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/img-check.png) no-repeat;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/img-check.png) no-repeat;
     position: absolute;
     height: 35px;
     width: 33px;
@@ -11714,14 +11717,14 @@ dd {
 
 .ABPopUpHeader {
     height: 30px;
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/bg-gutter.png) repeat-x;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/bg-gutter.png) repeat-x;
     font: 9px Arial;
     color: #404040;
     text-decoration: none;
 }
 
 .CurvedBanner {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png) no-repeat left top;
     display: inline-block;
     float: left;
     position: relative;
@@ -11735,7 +11738,7 @@ dd {
     margin: 0;
     top: 0;
     float: left;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
     display: inline-block;
     height: 28px;
     padding: 6px 0 0 4px;
@@ -11745,7 +11748,7 @@ dd {
 .HeaderBanner a {
     color: #fff;
     height: 18px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
     background-position: 0 0;
     margin: 0 5px;
     font-weight: bold;
@@ -11785,17 +11788,17 @@ dd {
 }
 
 .UnselectedAvatar {
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/bg-character.png) no-repeat top center;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/bg-character.png) no-repeat top center;
 }
 
 .SelectedAvatar,
 .UnselectedAvatar:hover {
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/bg-character.png) no-repeat center bottom;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/bg-character.png) no-repeat center bottom;
 }
 
 .ABPopUpFooter {
     height: 79px;
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/bg-gutter.png) repeat-x;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/bg-gutter.png) repeat-x;
     padding: 0 10px 0 10px;
 }
 
@@ -11841,11 +11844,11 @@ dd {
 }
 
 .ABDownloadButton {
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/btn-download.png) no-repeat top center;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn-download.png) no-repeat top center;
 }
 
 .ABPlayButton {
-    background: transparent url(/web/20130713045325im_/https://www.roblox.com/images/btn-play.png) no-repeat top center;
+    background: transparent url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn-play.png) no-repeat top center;
 }
 
 .ABPlayButton:hover,
@@ -11869,7 +11872,7 @@ dd {
 #DeleteProductPromotionModal .thumbs-up-green {
     width: 110px;
     height: 110px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
     display: block;
 }
 
@@ -11881,7 +11884,7 @@ dd {
 #DeleteProductPromotionModal .thumbs-up-green {
     width: 110px;
     height: 110px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
     display: block;
 }
 
@@ -11970,7 +11973,7 @@ dd {
 }
 
 .AddRemoveFavorite {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/favoriteStar_20h.png) no-repeat 0 -20px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/favoriteStar_20h.png) no-repeat 0 -20px;
     margin: 0;
     display: inline-block;
     position: relative;
@@ -12120,7 +12123,7 @@ dd {
 
 .MultiplayerVisit,
 .MultiplayerVisitDisabled {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Play.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Play.png);
     width: 250px;
     height: 48px;
 }
@@ -12131,7 +12134,7 @@ dd {
 }
 
 .SoloVisit {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/PlaySolo.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/PlaySolo.png);
     width: 143px;
     height: 48px;
 }
@@ -12141,7 +12144,7 @@ dd {
 }
 
 .BuildSolo {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/BuildSolo2.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/BuildSolo2.png);
     width: 143px;
     height: 48px;
 }
@@ -12152,7 +12155,7 @@ div.VisitButtonsRight a.BuildSolo {
 }
 
 .EditButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/EditMode2.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/EditMode2.png);
     width: 143px;
     height: 48px;
     float: left;
@@ -12186,35 +12189,35 @@ div.VisitButtonsRight a.BuildSolo {
 }
 
 .iPublic {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/public.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/public.png);
 }
 
 .iLocked {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/locked.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/locked.png);
 }
 
 .iUnlocked {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/unlocked.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/unlocked.png);
 }
 
 .SharedIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Shared.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Shared.png);
 }
 
 .CopyLockedIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/CopyLocked.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/CopyLocked.png);
 }
 
 .AllGearIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Suitcase16x16.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Suitcase16x16.png);
 }
 
 .GenreGearIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/GenreSuitcase16x16.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GenreSuitcase16x16.png);
 }
 
 .NoGearIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/NoSuitcase16x16.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/NoSuitcase16x16.png);
 }
 
 #BadgeStatsHeader,
@@ -12400,12 +12403,12 @@ h3.RecommendationHeader2 a {
 .SignupButtonBlue:hover {
     width: 120px;
     height: 50px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-sign_up-blue-lg.png) no-repeat top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-sign_up-blue-lg.png) no-repeat top;
     margin: 0 auto;
 }
 
 .SignupButtonBlue:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-sign_up-blue-lg.png) no-repeat bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-sign_up-blue-lg.png) no-repeat bottom;
 }
 
 #ItemContainer.PlaceItemContainer #Summary {
@@ -12496,7 +12499,7 @@ h3.RecommendationHeader2 a {
 
 .FeaturedGameButton.International,
 .FeaturedGameButton.International:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/I18N_play_now.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/I18N_play_now.png) top;
     height: 214px;
     width: 215px;
     cursor: pointer;
@@ -12508,7 +12511,7 @@ h3.RecommendationHeader2 a {
 
 .FeaturedGameButtonABTest,
 .FeaturedGameButtonABTest:hover {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/playRoblox01.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/playRoblox01.png);
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
@@ -12641,7 +12644,7 @@ legend span {
 .GrayButton:link,
 .GrayButton:visited,
 .GrayButton:active {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/bg-form_btn_lg-tile.png) repeat-x top left;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/bg-form_btn_lg-tile.png) repeat-x top left;
     border: 1px solid #777;
     padding: 4px 8px 0;
     height: 21px;
@@ -12676,7 +12679,7 @@ legend span {
 }
 
 .GrayDropdown .Button {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/bg-drop_down_btn.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/bg-drop_down_btn.png) no-repeat right top;
     border: 1px solid #777;
     padding: 4px 17px 0 8px;
     height: 21px;
@@ -12888,23 +12891,23 @@ legend span {
 }
 
 .Revised .VisitButtonGirlGuest {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-female_character.jpg);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-female_character.jpg);
     background-position: center;
 }
 
 .Revised .VisitButtonBoyGuest {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-male_character.jpg);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-male_character.jpg);
     background-position: center;
     margin-right: 25px;
 }
 
 .Revised .VisitButtonGirlGuest:hover {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-female_character.jpg);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-female_character.jpg);
     background-position: bottom;
 }
 
 .Revised .VisitButtonBoyGuest:hover {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-male_character.jpg);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/AB-male_character.jpg);
     background-position: bottom;
     margin-right: 25px;
 }
@@ -12929,12 +12932,12 @@ legend span {
 }
 
 .RevisedCharacterSelectSignup {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/sign_up_small.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/sign_up_small.png);
     background-position: top;
 }
 
 .RevisedCharacterSelectSignup:hover {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/sign_up_small.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/sign_up_small.png);
     background-position: bottom;
 }
 
@@ -12983,7 +12986,7 @@ textarea {
 }
 
 #SetsPane.StandardBox {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x white;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x white;
 }
 
 #SetInfoPane {
@@ -13289,7 +13292,7 @@ textarea {
     display: none;
     height: 20px;
     width: 20px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Sets/btn-gear_sprite.png') left -1px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Sets/btn-gear_sprite.png') left -1px;
 }
 
 #AssetSetItems .setitem_options:hover {
@@ -13363,7 +13366,7 @@ textarea {
 .newversion_banner {
     height: 14px;
     width: 93px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Sets/update_available.png') top left no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Sets/update_available.png') top left no-repeat;
     position: absolute;
     top: 5px;
     left: 3px;
@@ -13427,7 +13430,7 @@ textarea {
     top: 0;
     left: 0;
     background-color: white;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') center no-repeat #fff;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') center no-repeat #fff;
     margin: 5px;
     z-index: 5000;
     opacity: .75;
@@ -13475,7 +13478,7 @@ textarea {
 }
 
 .ShadowedStandardBox .Header {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/HeaderGradientW800.png) repeat-y top left;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/HeaderGradientW800.png) repeat-y top left;
     text-align: center;
     color: White;
     height: 20px;
@@ -13500,7 +13503,7 @@ textarea {
 
 .Shadow {
     display: block;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/ShadowAlpha.png) no-repeat bottom right !important;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ShadowAlpha.png) no-repeat bottom right !important;
     background: #D3DEFF;
     height: 100%;
     _height: 3000px;
@@ -13850,7 +13853,7 @@ input#FemaleBtn {
 }
 
 .SignupWrapper .loginLink {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/btn-login-gray-small.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/btn-login-gray-small.png);
     background-position: top left;
     width: 51px;
     height: 23px;
@@ -13859,7 +13862,7 @@ input#FemaleBtn {
 }
 
 .SignupWrapper .fbLoginButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/btn-login_with_fb.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/btn-login_with_fb.png);
     background-position: top left;
     width: 170px;
     height: 25px;
@@ -13870,7 +13873,7 @@ input#FemaleBtn {
 }
 
 .SignupWrapper .signupMainButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/btn-sign_up-mainpage.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/btn-sign_up-mainpage.png);
     background-position: top left;
     width: 119px;
     height: 50px;
@@ -13880,7 +13883,7 @@ input#FemaleBtn {
 }
 
 .SignupWrapper .submitMainButton {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/btn-submit.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/btn-submit.png);
     background-position: top left;
     width: 134px;
     height: 50px;
@@ -14031,7 +14034,7 @@ div.NewEmailForm #NewsletterCheckText {
 
 .validator-tooltip-top,
 .validator-tooltip-bottom {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat right top;
     width: 180px;
     height: 3px;
 }
@@ -14045,7 +14048,7 @@ div.NewEmailForm #NewsletterCheckText {
     color: #a00;
     font-weight: normal;
     font-size: 11px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat left center;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/bg-bubble.png) no-repeat left center;
     padding-left: 15px;
 }
 
@@ -14209,13 +14212,13 @@ div.NewEmailForm #NewsletterCheckText {
 }
 
 #NewToolboxContainer #Button {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/IDE/btn-search_glass.png") right no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/IDE/btn-search_glass.png") right no-repeat;
     border: solid 1px #A7A7A7;
     cursor: pointer;
     float: left;
     height: 18px;
     width: 18px;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/IDE/btn-search_glass.png") right no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/IDE/btn-search_glass.png") right no-repeat;
     border-left: 0;
 }
 
@@ -14286,7 +14289,7 @@ div.NewEmailForm #NewsletterCheckText {
 }
 
 #NewToolboxContainer #SetTabs {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/ide/bg-tab-inactive.png");
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ide/bg-tab-inactive.png");
     color: #fff;
     height: 19px;
     clear: both;
@@ -14306,7 +14309,7 @@ div.NewEmailForm #NewsletterCheckText {
 }
 
 #NewToolboxContainer #SetTabs div.Selected {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/ide/bg-tab-active.png");
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ide/bg-tab-active.png");
     color: #444;
 }
 
@@ -14343,7 +14346,7 @@ div.NewEmailForm #NewsletterCheckText {
 }
 
 .dropdownImg {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/IDE/img-dropdown_arrow.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/IDE/img-dropdown_arrow.png) no-repeat;
     position: absolute;
     width: 7px;
     display: block;
@@ -14355,7 +14358,7 @@ div.NewEmailForm #NewsletterCheckText {
 
 #NewToolboxContainer .SetList a.btn-dropdown,
 #NewToolboxContainer a.btn-dropdown-active {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Sets/bg-drop_down_btn.png) no-repeat 0 -3px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Sets/bg-drop_down_btn.png) no-repeat 0 -3px;
     border: solid 1px #A7A7A7;
     padding: 2px 16px 0 6px;
     height: 16px;
@@ -14421,14 +14424,14 @@ div.NewEmailForm #NewsletterCheckText {
 .MakeTradeButton,
 .MakeTradeButton:hover,
 .MakeTradeButton.disabled {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/btn-make_trade.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/btn-make_trade.png) top;
     height: 50px;
     width: 179px;
     margin: 0 auto;
 }
 
 .MakeTradeButton:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/btn-make_trade.png) bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/btn-make_trade.png) bottom;
     cursor: pointer;
 }
 
@@ -14443,11 +14446,11 @@ div.NewEmailForm #NewsletterCheckText {
 }
 
 .LockImage.Green {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/img-trade_icon_green_small.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/img-trade_icon_green_small.png);
 }
 
 .LockImage.Red {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/img-trade_icon_red_small.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/img-trade_icon_red_small.png);
 }
 
 .OfferItems {
@@ -14500,23 +14503,23 @@ div.NewEmailForm #NewsletterCheckText {
 
 #ButtonYes,
 #ButtonYes:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/yes-gray2.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/yes-gray2.png) top;
     margin-right: 10px;
     width: 100px;
 }
 
 #ButtonYes:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/yes-gray2.png) bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/yes-gray2.png) bottom;
 }
 
 #ButtonCancel,
 #ButtonCancel:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/cancel-blue2.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/cancel-blue2.png) top;
     width: 101px;
 }
 
 #ButtonCancel:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/cancel-blue2.png) bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/cancel-blue2.png) bottom;
 }
 
 .InventoryContainer {
@@ -14772,7 +14775,7 @@ div.TradeItemSilverButtonContainer,
 a.TradeItemSilverButton,
 a.TradeItemSilverButton:hover,
 a.TradeItemSilverButtonDisabled {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-small_silver_tile.png) repeat-x top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-small_silver_tile.png) repeat-x top;
     border: 1px solid #a7a7a7;
     color: #000;
     display: block;
@@ -14796,7 +14799,7 @@ a.TradeItemSilverButtonDisabled {
 
 .SendTrade,
 .SendTrade:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/sendTrade2.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/sendTrade2.png) top;
     cursor: pointer;
     height: 50px;
     width: 176px;
@@ -14804,7 +14807,7 @@ a.TradeItemSilverButtonDisabled {
 }
 
 .SendTrade:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/sendTrade2.png) bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/sendTrade2.png) bottom;
 }
 
 .TradeDivider {
@@ -14866,12 +14869,12 @@ a.TradeItemSilverButtonDisabled {
 .MissingItem {
     height: 80px;
     width: 60px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/missing_user_asset.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/missing_user_asset.png) no-repeat;
     margin: 5px auto;
 }
 
 .MissingItem.Deleted {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/deleted_user_asset.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/deleted_user_asset.png) no-repeat;
 }
 
 .RBXImg {
@@ -14903,7 +14906,7 @@ a.TradeItemSilverButtonDisabled {
 
 .OpenTradeButton,
 .OpenTradeButton:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/tradeItems.png) top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/tradeItems.png) top;
     cursor: pointer;
     float: right;
     height: 23px;
@@ -14913,7 +14916,7 @@ a.TradeItemSilverButtonDisabled {
 }
 
 .OpenTradeButton:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/tradeItems.png) bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/tradeItems.png) bottom;
 }
 
 #ButtonAcceptTrade,
@@ -15188,7 +15191,7 @@ a.ViewTradeLink,
 .paging_next {
     height: 24px;
     width: 24px;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Sets/blue_arrow_btns_sprite.png');
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Sets/blue_arrow_btns_sprite.png');
     background-position: left top;
 }
 
@@ -15266,7 +15269,7 @@ a.ViewTradeLink,
     position: absolute;
     top: 5px;
     left: 5px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-x.png);
 }
 
 .unifiedModal .smallModal .closeBtnCircle_20h {
@@ -15925,7 +15928,7 @@ div.GiftCards {
 }
 
 .GiftCards .CheckMark {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-unchecked.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-unchecked.png);
     position: absolute;
     top: 7px;
     right: 7px;
@@ -15934,11 +15937,11 @@ div.GiftCards {
 }
 
 .GiftCards .GCProductSelected .CheckMark {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-checked.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-checked.png);
 }
 
 .GiftCards .ThemeCheckMark {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-checked-small.png) no-repeat 0 -25px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Gifting/img-checked-small.png) no-repeat 0 -25px;
     position: absolute;
     top: 3px;
     right: 4px;
@@ -15951,7 +15954,7 @@ div.GiftCards {
 }
 
 .GiftCards #Product0 {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_bc.jpg") center no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_bc.jpg") center no-repeat;
 }
 
 .GiftCards #Product0:hover {
@@ -15959,7 +15962,7 @@ div.GiftCards {
 }
 
 .GiftCards #Product1 {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_tbc.jpg") center no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_tbc.jpg") center no-repeat;
 }
 
 .GiftCards #Product1:hover {
@@ -15967,7 +15970,7 @@ div.GiftCards {
 }
 
 .GiftCards #Product2 {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_obc.jpg") center no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_obc.jpg") center no-repeat;
 }
 
 .GiftCards #Product2:hover {
@@ -15975,7 +15978,7 @@ div.GiftCards {
 }
 
 .GiftCards #Product3 {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_anyAmount.jpg") center no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/new/gifting_anyAmount.jpg") center no-repeat;
 }
 
 .GiftCards #Product3:hover {
@@ -15983,7 +15986,7 @@ div.GiftCards {
 }
 
 .GiftCards .GCThemeClassic {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-classic.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-classic.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeClassic:hover {
@@ -15991,7 +15994,7 @@ div.GiftCards {
 }
 
 .GiftCards .GCThemeChristmas {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-christmas.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-christmas.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeChristmas:hover {
@@ -15999,7 +16002,7 @@ div.GiftCards {
 }
 
 .GiftCards .GCThemeJustForYou1 {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-justforyou1.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-justforyou1.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeJustForYou1:hover {
@@ -16007,7 +16010,7 @@ div.GiftCards {
 }
 
 .GiftCards .GCThemeJustForYou2 {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-justforyou2.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-thumb-justforyou2.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeJustForYou2:hover {
@@ -16024,19 +16027,19 @@ div.GiftCards {
 }
 
 .GiftCards .GCThemeClassic .ThemePreview {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-classic.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-classic.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeChristmas .ThemePreview {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-christmas.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-christmas.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeJustForYou1 .ThemePreview {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-justforyou1.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-justforyou1.png") no-repeat 0 0;
 }
 
 .GiftCards .GCThemeJustForYou2 .ThemePreview {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-justforyou2.png") no-repeat 0 0;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/gifting/theme-preview-justforyou2.png") no-repeat 0 0;
 }
 
 .GiftCards .Hint {
@@ -16104,7 +16107,7 @@ div.GiftCards {
 }
 
 .OrderSummary .PurchaseAnother {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-purchase_another.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-purchase_another.png) no-repeat;
     display: inline-block;
     *display: inline;
     width: 219px;
@@ -16734,7 +16737,7 @@ div.GiftCards {
     text-align: center;
     height: 350px;
     position: relative;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') center no-repeat;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/ProgressIndicator4.gif') center no-repeat;
 }
 
 #OwnedSetsContainerDiv .NoSets,
@@ -17140,49 +17143,49 @@ div.GiftCards {
 .tab_white_31h_container .ajax__tab_header {
     font-family: verdana, tahoma, helvetica;
     font-size: 11px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-line.gif) repeat-x bottom;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-line.gif) repeat-x bottom;
 }
 
 .tab_white_31h_container .ajax__tab_outer {
     margin: 0;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-right.gif) no-repeat right;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-right.gif) no-repeat right;
     height: 21px;
 }
 
 .tab_white_31h_container .ajax__tab_inner {
     padding-left: 3px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-left.gif) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-left.gif) no-repeat;
 }
 
 .tab_white_31h_container .ajax__tab_tab {
     height: 13px;
     padding: 4px;
     margin: 0;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab.gif) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab.gif) repeat-x;
 }
 
 .tab_white_31h_container .ajax__tab_hover .ajax__tab_outer {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-hover-right.gif) no-repeat right;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-hover-right.gif) no-repeat right;
 }
 
 .tab_white_31h_container .ajax__tab_hover .ajax__tab_inner {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-hover-left.gif) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-hover-left.gif) no-repeat;
 }
 
 .tab_white_31h_container .ajax__tab_hover .ajax__tab_tab {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-hover.gif) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-hover.gif) repeat-x;
 }
 
 .tab_white_31h_container .ajax__tab_active .ajax__tab_outer {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-active-right.gif) no-repeat right;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-active-right.gif) no-repeat right;
 }
 
 .tab_white_31h_container .ajax__tab_active .ajax__tab_inner {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-active-left.gif) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-active-left.gif) no-repeat;
 }
 
 .tab_white_31h_container .ajax__tab_active .ajax__tab_tab {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/tab-active.gif) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/tab-active.gif) repeat-x;
 }
 
 .tab_white_31h_container .ajax__tab_body {
@@ -17245,32 +17248,32 @@ div.GiftCards {
 
 .GreenButton {
     height: 30px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/btn_green_30h_t1.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn_green_30h_t1.png) no-repeat;
 }
 
 .GreenButton span {
     height: 23px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/btn_green_30h_t2.png) no-repeat top right;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn_green_30h_t2.png) no-repeat top right;
 }
 
 .RedButton {
     height: 30px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/btn_red_30h_t1.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn_red_30h_t1.png) no-repeat;
 }
 
 .RedButton span {
     height: 23px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/btn_red_30h_t2.png) no-repeat top right;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/btn_red_30h_t2.png) no-repeat top right;
 }
 
 .RedButton2 {
     height: 40px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_red_40h_t1.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_red_40h_t1.png) no-repeat;
 }
 
 .RedButton2 span {
     height: 28px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_red_40h_t2.png) no-repeat top right;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn_red_40h_t2.png) no-repeat top right;
     padding: 12px 12px 0 5px;
 }
 
@@ -17454,7 +17457,7 @@ div.GiftCards {
 
 .SkinnyRightArrow {
     cursor: pointer;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_right.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_right.png) no-repeat;
     width: 12px;
     height: 55px;
     display: inline-block;
@@ -17467,7 +17470,7 @@ div.GiftCards {
 }
 
 .SkinnyRightArrowDisabled {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_right.png) no-repeat 0 -110px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_right.png) no-repeat 0 -110px;
     width: 12px;
     height: 55px;
     display: inline-block;
@@ -17477,7 +17480,7 @@ div.GiftCards {
 
 .SkinnyLeftArrow {
     cursor: pointer;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_left.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_left.png) no-repeat;
     width: 12px;
     height: 55px;
     display: inline-block;
@@ -17490,7 +17493,7 @@ div.GiftCards {
 }
 
 .SkinnyLeftArrowDisabled {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_left.png) no-repeat 0 -110px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow_skinny55h_left.png) no-repeat 0 -110px;
     width: 12px;
     height: 55px;
     display: inline-block;
@@ -17500,7 +17503,7 @@ div.GiftCards {
 
 .BlueLeftArrow {
     cursor: pointer;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow_36px_left.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow_36px_left.png) no-repeat;
     width: 36px;
     height: 36px;
     display: inline-block;
@@ -17509,12 +17512,12 @@ div.GiftCards {
 }
 
 .BlueLeftArrow:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow36px_leftOn.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow36px_leftOn.png) no-repeat;
 }
 
 .BlueRightArrow {
     cursor: pointer;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow_36px_right.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow_36px_right.png) no-repeat;
     width: 36px;
     height: 36px;
     display: inline-block;
@@ -17523,11 +17526,11 @@ div.GiftCards {
 }
 
 .BlueRightArrow:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/arrow36px_rightOn.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/arrow36px_rightOn.png) no-repeat;
 }
 
 .BCHat {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Games/gamesPage_bcHelmet.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Games/gamesPage_bcHelmet.png) no-repeat;
     width: 35px;
     height: 29px;
     display: inline-block;
@@ -17557,7 +17560,7 @@ div.GiftCards {
 .notificationBoxIE {
     display: inline-block;
     color: #fff;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/bg-notifications.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/bg-notifications.png);
     background-repeat: repeat-x;
     background-position: left top;
     min-width: 24px;
@@ -17571,7 +17574,7 @@ div.GiftCards {
 }
 
 .gray-ok-button {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-ok-gray.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-ok-gray.png) no-repeat;
     width: 102px;
     height: 50px;
     cursor: pointer;
@@ -17585,7 +17588,7 @@ div.GiftCards {
 }
 
 .learn-more-button {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-learn_more.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/btn-learn_more.png) no-repeat;
     width: 159px;
     height: 50px;
     cursor: pointer;
@@ -17700,7 +17703,7 @@ div.GiftCards {
 #videoPrerollJoinBCButton {
     width: 180px;
     height: 40px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/VideoPreRoll/btn-buildersclub.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/VideoPreRoll/btn-buildersclub.png);
     background-position: top;
     display: inline-block;
     vertical-align: middle;
@@ -17880,7 +17883,7 @@ table.table {
 .validator-checkmark {
     width: 15px;
     height: 13px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/UI/img-check.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/UI/img-check.png) no-repeat;
     margin-left: 5px;
     display: none;
 }
@@ -17950,14 +17953,14 @@ table.table {
     height: 18px;
     line-height: 18px;
     font-size: 11px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/btn-control-small-tile.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/btn-control-small-tile.png);
 }
 
 .btn-control.btn-control-medium {
     height: 21px;
     line-height: 21px;
     font-size: 12px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/btn-control-medium-tile.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/btn-control-medium-tile.png);
 }
 
 .btn-control.btn-control-large {
@@ -17965,7 +17968,7 @@ table.table {
     line-height: 24px;
     font-size: 13px;
     padding: 0 7px;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/btn-control-large-tile.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/StyleGuide/btn-control-large-tile.png);
 }
 
 a.btn-control.top-level {
@@ -18047,7 +18050,7 @@ a.btn-control.top-level {
 .btn-primary:visited {
     border-color: #007001;
     background-color: #007001;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-green.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-green.png);
     color: #013401;
 }
 
@@ -18057,7 +18060,7 @@ a.btn-control.top-level {
 .btn-neutral:visited {
     border-color: #0852b7;
     background-color: #0852b7;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue.png);
     color: #00243d;
 }
 
@@ -18067,7 +18070,7 @@ a.btn-control.top-level {
 .btn-negative:visited {
     border-color: #565656;
     background-color: #565656;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
     color: #222;
 }
 
@@ -18086,7 +18089,7 @@ a.btn-control.top-level {
 .btn-disabled-primary:active,
 .btn-disabled-primary:visited {
     background-color: #99c699;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-green.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-green.png);
     border-color: #99c699;
     color: #9aa89a;
 }
@@ -18096,7 +18099,7 @@ a.btn-control.top-level {
 .btn-disabled-neutral:active,
 .btn-disabled-neutral:visited {
     background-color: #9cbae2;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue.png);
     border-color: #9cbae2;
     color: #99a7b1;
 }
@@ -18110,7 +18113,7 @@ a.btn-control.top-level {
 .btn-disabled-negative:active,
 .btn-disabled-negative:visited {
     background-color: #bbbcbb;
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
     border-color: #bbbcbb;
     color: #a5a5a5;
 }
@@ -18145,13 +18148,13 @@ a.btn-control.top-level {
 .btn-play:link {
     padding-left: 60px;
     border-color: #007001;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-lg-green-play.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-lg-green-play.png) no-repeat left top;
     color: #013401;
     min-width: 26px;
 }
 
 .blue-arrow {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue-arrow-md.png) right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue-arrow-md.png) right top;
     border-color: #0852b7;
     color: #00243d;
     padding-right: 36px;
@@ -18159,7 +18162,7 @@ a.btn-control.top-level {
 }
 
 .gray-arrow {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray-arrow-md.png) right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray-arrow-md.png) right top;
     border-color: #565656;
     color: #222;
     padding-right: 36px;
@@ -18173,7 +18176,7 @@ a.btn-control.top-level {
 
 .disabled-blue-arrow,
 .disabled-blue-arrow:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue-arrow-md.png) right -32px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue-arrow-md.png) right -32px;
     border-color: #9cbae2;
     color: #99a7b1;
     padding-right: 36px;
@@ -18183,7 +18186,7 @@ a.btn-control.top-level {
 
 .disabled-gray-arrow,
 .disabled-gray-arrow:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray-arrow-md.png) right -32px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray-arrow-md.png) right -32px;
     border-color: #bbbcbb;
     color: #a5a5a5;
     padding-right: 36px;
@@ -18198,14 +18201,14 @@ a.btn-control.top-level {
 
 .pager.previous {
     display: inline-block;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/Arrows/btn-silver-left-27.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/Arrows/btn-silver-left-27.png') no-repeat top left;
     width: 27px;
     height: 27px;
 }
 
 .pager.next {
     display: inline-block;
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Buttons/Arrows/btn-silver-right-27.png') no-repeat top left;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/Arrows/btn-silver-right-27.png') no-repeat top left;
     width: 27px;
     height: 27px;
 }
@@ -18237,7 +18240,7 @@ a.btn-control.top-level {
 }
 
 .dropdown .button {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/buttons/bg-drop_down_btn.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/buttons/bg-drop_down_btn.png) no-repeat right top;
     font-size: 13px;
     color: #000;
     text-align: center;
@@ -18262,7 +18265,7 @@ a.btn-control.top-level {
 }
 
 .dropdown .button.gear {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/BuildPage/btn-gear_sprite_27px.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/BuildPage/btn-gear_sprite_27px.png);
     height: 27px;
     border: none;
     bottom: 0;
@@ -18307,7 +18310,7 @@ a.btn-control.top-level {
 }
 
 span.robux {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 0 1px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Icons/img-robux.png') no-repeat 0 1px;
     color: #060;
     font-weight: bold;
     padding: 0 0 2px 20px;
@@ -18315,7 +18318,7 @@ span.robux {
 }
 
 span.tickets {
-    background: url('/web/20130713045325im_/https://www.roblox.com/images/Tickets.png') no-repeat 0 1px;
+    background: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Tickets.png') no-repeat 0 1px;
     color: #A61;
     padding: 0 0 2px 20px;
     font-weight: bold;
@@ -18421,7 +18424,7 @@ a[disabled]:hover {
 }
 
 .info-tool-tip {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/Buttons/questionmark-12x12.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/Buttons/questionmark-12x12.png) no-repeat;
     padding-left: 10px;
 }
 
@@ -18497,11 +18500,11 @@ a[disabled]:hover {
 }
 
 .arrow.left {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/GamesPage/arrow_left.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GamesPage/arrow_left.png);
 }
 
 .arrow.right {
-    background-image: url(/web/20130713045325im_/https://www.roblox.com/images/GamesPage/arrow_right.png);
+    background-image: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/GamesPage/arrow_right.png);
 }
 
 .online-player {
@@ -18716,24 +18719,24 @@ a[disabled]:hover {
 }
 
 .PlayButton {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/games/playBtn_off.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/games/playBtn_off.png');
     background-repeat: no-repeat;
 }
 
 .BuildButton {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/games/buildBtn_off.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/games/buildBtn_off.png');
     background-repeat: no-repeat;
 }
 
 .PlayButton:hover,
 .PlayButtonSelected {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/games/playBtn_on.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/games/playBtn_on.png');
     background-repeat: no-repeat;
 }
 
 .BuildButton:hover,
 .BuildButtonSelected {
-    background-image: url('/web/20130713045325im_/https://www.roblox.com/images/games/buildBtn_on.png');
+    background-image: url('http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/games/buildBtn_on.png');
     background-repeat: no-repeat;
 }
 
@@ -18778,7 +18781,7 @@ a[disabled]:hover {
 }
 
 .ReportAbuse .AbuseButton a:hover {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/abuse.png") no-repeat scroll 0 2px transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/abuse.png") no-repeat scroll 0 2px transparent;
     color: #F00;
 }
 
@@ -18794,13 +18797,13 @@ a[disabled]:hover {
 .MultiplayerVisitDisabled {
     width: 212px;
     height: 54px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_play_54h.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_play_54h.png);
 }
 
 .MultiplayerVisitHover {
     width: 212px;
     height: 54px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_play_54h.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_play_54h.png);
     background-position: 0 54px;
 }
 
@@ -18866,34 +18869,34 @@ span.SoloVisitText {
 
 .iPublic,
 .iUnlocked {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_public.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_public.png);
 }
 
 .iLocked {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_public.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_public.png);
     background-position: -20px;
 }
 
 .CopyLockedIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_locked.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_locked.png);
 }
 
 .SharedIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_locked.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_locked.png);
     background-position: -20px;
 }
 
 .AllGearIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_gear.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_gear.png);
 }
 
 .GenreGearIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_gear.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_gear.png);
     background-position: 0 -20px;
 }
 
 .NoGearIcon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_gear.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/icon_gear.png);
     background-position: 0 -40px;
 }
 
@@ -18984,7 +18987,7 @@ span.SoloVisitText {
 }
 
 .subMenu>ul>li:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/topNav_black.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/topNav_black.png);
     background-position: 0 30px;
 }
 
@@ -19080,7 +19083,7 @@ a img {
     padding: 0;
     width: 900px;
     height: 225px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_03.jpg) repeat scroll 0 0 transparent;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_03.jpg) repeat scroll 0 0 transparent;
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: 6;
@@ -19129,14 +19132,14 @@ a img {
 }
 
 #HeaderContainerDefaultPage #Header #Banner #AuthenticationButton #AuthenticationBannerSpanLeft #AuthenticationBannerSpan {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
     display: block;
     height: 28px;
     padding: 6px 10px 0;
 }
 
 #HeaderContainerDefaultPage #Header #Banner #AuthenticationButton #AuthenticationBannerSpanLeft {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png") no-repeat scroll left top transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png") no-repeat scroll left top transparent;
     display: block;
     height: 28px;
     padding: 0 0 0 2px;
@@ -19148,7 +19151,7 @@ a img {
 
 #HeaderContainerDefaultPage #Header #Banner #AuthenticationButton a {
     height: 14px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
     margin: 0 5px;
     font-weight: bold;
     color: White;
@@ -19181,7 +19184,7 @@ a img {
     width: 140px;
     margin: 0;
     float: none;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/img-robloxlogo.png") no-repeat;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/img-robloxlogo.png") no-repeat;
 }
 
 #SmallHeaderContainer #Banner #Authentication {
@@ -19199,7 +19202,7 @@ a img {
 }
 
 #SmallHeaderContainer #Banner #AuthenticationButton #AuthenticationBannerSpanLeft {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png") no-repeat scroll left top transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png") no-repeat scroll left top transparent;
     display: block;
     height: 28px;
     position: relative;
@@ -19211,7 +19214,7 @@ a img {
 }
 
 #SmallHeaderContainer #Banner #AuthenticationButton #AuthenticationBannerSpanLeft #AuthenticationBannerSpan {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
     display: block;
     padding: 0;
     width: 57px;
@@ -19257,7 +19260,7 @@ a img {
 }
 
 #SmallHeaderContainer #Banner #AuthenticationButton a {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
     font-weight: bold;
     color: White;
     font-family: Arial;
@@ -19309,7 +19312,7 @@ a img {
     padding: 0;
     width: 900px;
     height: 225px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_03.jpg) repeat scroll 0 0 transparent;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_03.jpg) repeat scroll 0 0 transparent;
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: 6;
@@ -19343,12 +19346,12 @@ a img {
     font-weight: normal;
     color: Black;
     float: left;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png) no-repeat left top;
     padding: 0 0 0 2px;
 }
 
 #HeaderContainer #Banner #Authentication #OldAuthenticationBannerSpan {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
     display: block;
     height: 28px;
     padding: 6px 10px 0;
@@ -19356,7 +19359,7 @@ a img {
 
 #HeaderContainer #Banner #Authentication a {
     height: 18px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
     background-position: 0 0;
     margin: 0 5px;
     font-weight: bold;
@@ -19397,7 +19400,7 @@ div#testingSitePanelWrapper,
 
 .favorited,
 .notFavorited {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/favoriteStar_20h.png) no-repeat 0 -20px;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/favoriteStar_20h.png) no-repeat 0 -20px;
     width: 21px;
     height: 20px;
     margin: 0;
@@ -19510,7 +19513,7 @@ div#testingSitePanelWrapper,
 }
 
 #Header .SmallHeaderAlertSpaceLeft {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/bg-statbar-left.png") no-repeat scroll left center transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/bg-statbar-left.png") no-repeat scroll left center transparent;
     *background: none;
     height: 21px;
     right: 2px;
@@ -19532,14 +19535,14 @@ div#testingSitePanelWrapper,
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: bold;
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/bg-statbar-right-28h.png") no-repeat scroll right 0 transparent;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/bg-statbar-right-28h.png") no-repeat scroll right 0 transparent;
     height: 28px;
     padding-left: 9px;
     padding-top: 1px;
 }
 
 .SmallHeaderAlertSpaceLeft {
-    background: url("/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png") no-repeat scroll left;
+    background: url("http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png") no-repeat scroll left;
     height: 28px;
     right: 2px;
     padding-left: 3px;
@@ -19549,7 +19552,7 @@ div#testingSitePanelWrapper,
 .SmallHeaderAlertSpaceLeft .AlertSpace a {
     padding-right: 10px;
     padding-left: 19px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
     position: static;
 }
 
@@ -19674,7 +19677,7 @@ div#testingSitePanelWrapper,
 #Header .Navigation {
     width: 900px;
     height: 30px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/topNav_blue.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/topNav_blue.png);
     background-position: 0 0;
     text-align: center;
     line-height: 20px;
@@ -19695,7 +19698,7 @@ div#testingSitePanelWrapper,
 }
 
 .Navigation li:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/topNav_blue.png);
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/topNav_blue.png);
     background-position: 0 30px;
 }
 
@@ -19718,7 +19721,7 @@ div#testingSitePanelWrapper,
 .StandardBox {
     padding: 5px;
     margin-bottom: 8px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x #fff;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x #fff;
     border: 1px solid #aaa;
     z-index: 0;
 }
@@ -19729,7 +19732,7 @@ div#testingSitePanelWrapper,
     padding: 0 7px 0 5px;
     text-align: left;
     z-index: 2;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t1.png) no-repeat left top;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -19738,7 +19741,7 @@ div#testingSitePanelWrapper,
 }
 
 .StandardBoxHeaderGray {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_gray_33h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_gray_33h_t1.png) no-repeat left top;
 }
 
 .StandardBoxHeader span,
@@ -19747,16 +19750,16 @@ div#testingSitePanelWrapper,
     width: 100%;
     height: 29px;
     padding: 5px 5px 0 2px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t2.png) no-repeat right top;
     overflow: hidden;
 }
 
 .StandardBoxHeaderGray span {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_gray_33h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_gray_33h_t2.png) no-repeat right top;
 }
 
 .StandardTabWhite {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_26h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_26h_t1.png) no-repeat left top;
     padding: 0 4px;
     float: none;
     text-align: left;
@@ -19769,7 +19772,7 @@ div#testingSitePanelWrapper,
     height: 26px;
     padding: 5px 5px 0 9px;
     *padding-right: 14px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_26h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_26h_t2.png) no-repeat right top;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #000;
@@ -19788,7 +19791,7 @@ div#testingSitePanelWrapper,
 .StandardTabGray,
 .StandardTabGrayActive {
     position: relative;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
     background-position: left 0;
     height: 31px;
     padding: 0;
@@ -19799,7 +19802,7 @@ div#testingSitePanelWrapper,
 
 .StandardTabGray span,
 .StandardTabGrayActive span {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
     background-position: right 0;
     height: 25px;
     padding: 6px 16px 0 8px;
@@ -19826,7 +19829,7 @@ div#testingSitePanelWrapper,
 
 .StandardTabGray:hover {
     position: relative;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
     background-position: left -31px;
     height: 31px;
     padding: 0;
@@ -19836,7 +19839,7 @@ div#testingSitePanelWrapper,
 }
 
 .StandardTabGray span:hover {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
     background-position: right -31px;
     height: 25px;
     padding: 6px 16px 0 8px;
@@ -19852,7 +19855,7 @@ div#testingSitePanelWrapper,
     position: relative;
     top: -2px;
     padding: 8px 5px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x #fff;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x #fff;
     border: 1px solid #aaa;
 }
 
@@ -19877,7 +19880,7 @@ div#testingSitePanelWrapper,
     position: absolute;
     width: 43px;
     padding-left: 18px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
 }
 
 .StandardBox .SmallHeaderAlertSpaceLeft .AlertSpace a:hover,
@@ -19995,7 +19998,7 @@ a.icons {
     position: absolute;
     width: 43px;
     padding-left: 18px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
 }
 
 .ProfileAlertPanel .SmallHeaderAlertSpaceLeft .AlertSpace a:hover,
@@ -20109,14 +20112,14 @@ a.icons {
 
 .tab_white_31h_container .ajax__tab_inner {
     position: relative;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
     height: 31px;
     padding-left: 0;
     z-index: 2;
 }
 
 .tab_white_31h_container .ajax__tab_header .ajax__tab_tab {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
     height: 25px;
     padding: 6px 16px 0 8px;
     margin: 0 0 0 4px;
@@ -20129,7 +20132,7 @@ a.icons {
 
 .tab_white_31h_container .ajax__tab_hover .ajax__tab_inner {
     position: relative;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
     background-position: left -31px;
     height: 31px;
     padding-left: 0;
@@ -20137,7 +20140,7 @@ a.icons {
 }
 
 .tab_white_31h_container .ajax__tab_hover .ajax__tab_tab {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
     background-position: right -31px;
     height: 25px;
     padding: 6px 16px 0 8px;
@@ -20151,7 +20154,7 @@ a.icons {
 
 .tab_white_31h_container .ajax__tab_active .ajax__tab_inner {
     position: relative;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t1.png) no-repeat left top;
     background-position: left -62px;
     height: 31px;
     padding-left: 0;
@@ -20159,7 +20162,7 @@ a.icons {
 }
 
 .tab_white_31h_container .ajax__tab_active .ajax__tab_tab {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_white_31h_t2.png) no-repeat right top;
     background-position: right -62px;
     height: 25px;
     padding: 6px 16px 0 8px;
@@ -20170,7 +20173,7 @@ a.icons {
     position: relative;
     top: -2px;
     padding: 8px 5px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x #fff;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/standardBox_01_bkg.png) top repeat-x #fff;
     border: 1px solid #aaa;
 }
 
@@ -20237,7 +20240,7 @@ div.rbx2only {
     padding: 0 7px 0 5px;
     text-align: left;
     z-index: 2;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t1.png) no-repeat left top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t1.png) no-repeat left top;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -20248,7 +20251,7 @@ div.rbx2only {
     display: block;
     width: 100%;
     height: 29px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t2.png) no-repeat right top;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/tab_black_33h_t2.png) no-repeat right top;
     overflow: hidden;
     height: 26px;
     padding: 7px 4px 0 3px;
@@ -20263,7 +20266,7 @@ div.rbx2only {
 }
 
 a.rss_icon {
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/topNav_rss.png) no-repeat;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/topNav_rss.png) no-repeat;
 }
 
 .Column1d .StandardTabWhite,
@@ -20299,7 +20302,7 @@ a.rss_icon {
     border: none;
     margin-left: 0;
     margin-right: 0;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_sign.png) 0 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_sign.png) 0 0;
     height: 78px;
 }
 
@@ -20307,7 +20310,7 @@ a.rss_icon {
     position: absolute;
     width: 43px;
     padding-left: 18px;
-    background: url(/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
+    background: url(http://web.archive.org/web/20130713045325im_/https://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 0;
 }
 
 .OldAlertSpace a:hover,

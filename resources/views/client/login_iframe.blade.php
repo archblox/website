@@ -28,7 +28,7 @@
                     <div id="ErrorMessage" style="color:Red"></div>
                     <div class="LoginFormFieldSet">
                         <span
-                            style="font: normal 12px arial;color: black;position: absolute;top: 50%;margin-top: -8px;">
+                            style="font: normal 12px arial;color: black;position: absolute;top: 50%;margin-top: 8px;">
                             Not a member?
                             <a href="{{ route('register') }}" style="font: bold 12px Arial;color: #095FB5;"
                                 target="_top">Sign up!</a>
