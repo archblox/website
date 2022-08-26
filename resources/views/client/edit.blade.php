@@ -1,4 +1,5 @@
 @php
+header("content-type:text/xml");
 ob_start();
 $PlaceID = addslashes($_GET["PlaceID"]);
 @endphp
