@@ -55,7 +55,13 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/asset/" . $id)){
 		sign($file);
 	}else if($id == 20){
         sign($file);
-    }else{
+	}else if ($id == 200) {
+		header("content-type:text/xml");
+        sign($file);
+	}else if ($id == 201) {
+		header("content-type:text/xml");
+		sign($file);
+	}else{
         echo $file;
     }
 }else{
