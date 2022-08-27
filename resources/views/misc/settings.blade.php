@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title')
     <title>Settings - {{ env('APP_NAME') }}</title>
-    <script src="{{ asset('js/settings.js?id=' . Str::random(8)) ) }}"></script>
+    <script src="{{ asset('js/settings.js?id=1234') }}"></script>
     <style>
         .bio_form {
             width: 50%
