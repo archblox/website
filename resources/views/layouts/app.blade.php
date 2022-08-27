@@ -174,7 +174,8 @@
         <div class="popup">
             <h2 id="heading">Launching ARCHBLOX Studio...</h2>
             <br>
-            <img style="height: 50%;width: 50%;"  src="{{ asset('img/iosload.gif') }}" >
+            <img style="height: 7%;width: 7%;"  src="{{ asset('img/iosload.gif') }}" >
+            <br>
             <br>
             <p>Don't have Archblox Studio installed?</p>
             <a href="{{ route('download') }}"><button style="height: 40px;width: 80%;" class="greenbutton">Click here to download ARCHBLOX Studio</button></a>
