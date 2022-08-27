@@ -171,10 +171,10 @@
     @section('popup_content')
 
     <div class="popupcontainer_studio" id="invisible">
-        <div class="popup">
+        <div class="popup" style="width: 390px">
             <h2 id="heading">Launching ARCHBLOX Studio...</h2>
             <br>
-            <img style="height: 7%;width: 7%;"  src="{{ asset('img/iosload.gif') }}" >
+            <img style="height: 7%;width: 62px;"  src="{{ asset('img/iosload.gif') }}" >
             <br>
             <br>
             <p>Don't have Archblox Studio installed?</p>
