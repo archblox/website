@@ -177,7 +177,7 @@
             <img style="height: 7%;width: 62px;"  src="{{ asset('img/iosload.gif') }}" >
             <br>
             <br>
-            <p>Don't have Archblox Studio installed?</p>
+            <p>Don't have ARCHBLOX Studio installed?</p>
             <a href="{{ route('download') }}"><button style="height: 40px;width: 80%;" class="greenbutton">Click here to download ARCHBLOX Studio</button></a>
             <br>
             <br>
