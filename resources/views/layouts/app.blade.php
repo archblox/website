@@ -174,7 +174,7 @@
         <div class="popup">
             <h2 id="heading">Launching ARCHBLOX Studio...</h2>
             <p>Don't have Archblox Studio installed?</p>
-            <a href="{{ route('download') }}"><button style="height=40px;" class="greenbutton">Click here to download ARCHBLOX Studio</button></a>
+            <a href="{{ route('download') }}"><button style="height: 40px;" class="greenbutton">Click here to download ARCHBLOX Studio</button></a>
             <br>
             <button class="redbutton" onclick="closeStudioPopup()">Close</button>
         </div>
