@@ -111,7 +111,7 @@
                 <ul id="ctl00_cphBanner_ctl00_MenuUL">
                 <li><a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a></li>
                 <li><a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a></li>
-                <li><a class="navbarbutton" id="smallbtn0" href="{{ route('incomplete') }}">Build</a></li>
+                <li><a class="navbarbutton" id="smallbtn0" href="archbloxstudio://">Build</a></li>
                 <li><a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
     @else
     {{ route('profile', Auth::id()) }} @endguest">Profile</a></li>
