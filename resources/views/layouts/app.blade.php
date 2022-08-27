@@ -173,10 +173,14 @@
     <div class="popupcontainer_studio" id="invisible">
         <div class="popup">
             <h2 id="heading">Launching ARCHBLOX Studio...</h2>
-            <p>Don't have Archblox Studio installed?</p>
-            <a href="{{ route('download') }}"><button style="height: 40px;" class="greenbutton">Click here to download ARCHBLOX Studio</button></a>
             <br>
-            <button class="redbutton" onclick="closeStudioPopup()">Close</button>
+            <img style="height: 50%;width: 50%;"  src="{{ asset('img/iosload.gif') }}" >
+            <br>
+            <p>Don't have Archblox Studio installed?</p>
+            <a href="{{ route('download') }}"><button style="height: 40px;width: 80%;" class="greenbutton">Click here to download ARCHBLOX Studio</button></a>
+            <br>
+            <br>
+            <button class="redbutton" style="height: 40px;width: 80%;" onclick="closeStudioPopup()">Close</button>
         </div>
     </div>
     <div class="content">
