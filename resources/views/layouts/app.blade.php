@@ -16,6 +16,7 @@
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <script src="{{ asset('js/main.js?id=' . Str::random(8)) }}"></script>
     @auth
     @switch (Auth::user()->settings->theme)
     @case(5)
@@ -111,7 +112,7 @@
                 <ul id="ctl00_cphBanner_ctl00_MenuUL">
                 <li><a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a></li>
                 <li><a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a></li>
-                <li><a class="navbarbutton" id="smallbtn0" href="archbloxstudio://">Build</a></li>
+                <li><a class="navbarbutton" id="smallbtn0" onclick="openStudioPopup()">Build</a></li>
                 <li><a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
     @else
     {{ route('profile', Auth::id()) }} @endguest">Profile</a></li>
@@ -166,6 +167,18 @@
     @yield('custom_content')
 
     @yield('popup_content')
+
+    @section('popup_content')
+
+    <div class="popupcontainer_studio" id="invisible">
+        <div class="popup">
+            <h2 id="heading">Launching ARCHBLOX Studio...</h2>
+            <p>Don't have Archblox Studio installed?</p>
+            <button class="greenbutton">Click here to download ARCHBLOX Studio</button>
+            <br>
+            <button class="redbutton" onclick="closeStudioPopup()">Close</button>
+        </div>
+    </div>
     <div class="content">
         @yield('content')
     </div>
