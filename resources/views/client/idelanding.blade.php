@@ -26,7 +26,10 @@
                      -->
                 </span>
                 @else
-                <span id="header-or">Logged in as {{ Auth::user()->name }}</span>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                    @csrf
+                </form>
+                <span id="header-or">Logged in as {{ Auth::user()->name }} | <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></span>
                 @endguest
             </div>
         <!-- This is only after the login stuff because IE7 demands floated elements be before non-floated -->
