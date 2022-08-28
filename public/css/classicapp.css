@@ -1,3 +1,18 @@
+
+@keyframes alertanim {
+  0% {
+    top: 0px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    background-position-x: 61px;
+    animation-timing-function: linear;
+  }
+}
+
+
+
 html {
   background: url('../img/animated.png');
   background-color: rgb(49, 107, 223);

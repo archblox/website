@@ -1,3 +1,18 @@
+
+@keyframes alertanim {
+  0% {
+    top: 0px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    background-position-x: 72px;
+    animation-timing-function: linear;
+  }
+}
+
+
+
 html {
   background: url('../img/animateddark.png');
   background-color: rgb(1, 17, 48);
@@ -12,7 +27,6 @@ html {
 .content, #footer {
   max-width: 1000px;
   margin: auto;
-  width: 1000px;
 }
 
 #footer, #footer_signup {
@@ -28,12 +42,13 @@ html {
   background: rgba(25, 25, 25,0.75);
   min-height: 550px;
 }
+
 #footer {
+  width: max-content;
 }
 
 #logo_full {
-	display: none;
-	margin-right: 0;
+  display: none;
 }
 
 #logo_small {
@@ -113,14 +128,13 @@ html {
   align-items: center;
   height: 40px;
 }
-#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited, .navbarbutton {
+.navbarbutton {
   position: relative;
   padding-right: 5px;
   text-align: center;
   font-size: 18px;
   font-family: "Helvetica Neue";
   font-weight: bold;
-  text-shadow: none;
 }
 .Redesign .smallnavbarbutton {
   position: relative;
@@ -135,21 +149,6 @@ html {
   background: none;
   height: 29px;
   top: 44px;
-}
-
-#footer_signup a, #footer_signup p a, #footer a, #footer p a {
-  transition: none;
-}
-
-.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
-  color: inherit;
-}
-
-#navbarsignedincontainer {
-  display: block;
-}
-#navbarsignedincontainer a:nth-child(1)::after {
-  content: ' | ';
 }
 
 @media (min-width: 1688px) {
