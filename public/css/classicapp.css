@@ -6,7 +6,7 @@
   }
 
   100% {
-    background-position-x: 61px;
+    background-position-x: 72px;
     animation-timing-function: linear;
   }
 }
@@ -22,6 +22,24 @@ html {
   animation-name: animatedbackground;
   animation-duration: 50s;
   animation-iteration-count: infinite;
+}
+
+#alert,
+#success {
+  height: fit-content;
+  margin: 0px;
+  animation: alertanim;
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
+  position: fixed;
+  z-index: 10;
+  top: 72px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 100%;
+  text-align: center;
 }
 
 .content, #footer {
