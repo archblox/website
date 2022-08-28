@@ -1,3 +1,4 @@
+function editTemplateInStudio(play_placeId) { RobloxLaunch._GoogleAnalyticsCallback = function () { var isInsideRobloxIDE = 'website'; if (Roblox && Roblox.Client && Roblox.Client.isIDE && Roblox.Client.isIDE()) { isInsideRobloxIDE = 'Studio'; }; GoogleAnalyticsEvents.FireEvent(['Edit Location', 'Guest', isInsideRobloxIDE]); GoogleAnalyticsEvents.FireEvent(['Edit', 'Guest', '']); }; Roblox.Client.WaitForRoblox(function () { RobloxLaunch.StartGame('http://www.morblox.us//Game/edit.ashx?PlaceID=' + play_placeId + '&upload=', 'edit.ashx', 'https://web.archive.org/web/20130702194455/https://www.roblox.com//Login/Negotiate.ashx', 'FETCH', true); }); }
 /*
 Wombat.js client-side rewriting engine for web archive replay
 Copyright (C) 2014-2020 Webrecorder Software, Rhizome, and Contributors. Released under the GNU Affero General Public License.

@@ -6,9 +6,6 @@
     <title>Welcome</title>
     <link rel="stylesheet"
         href="{{ asset('css/FetchCSS2.css') }}">
-    <script type="text/javascript">
-        function editTemplateInStudio(play_placeId) { RobloxLaunch._GoogleAnalyticsCallback = function() { var isInsideRobloxIDE = 'website'; if (Roblox && Roblox.Client && Roblox.Client.isIDE && Roblox.Client.isIDE()) { isInsideRobloxIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Edit Location', 'Guest', isInsideRobloxIDE]);GoogleAnalyticsEvents.FireEvent(['Edit', 'Guest', '']); };  Roblox.Client.WaitForRoblox(function() { RobloxLaunch.StartGame('http://www.morblox.us//Game/edit.ashx?PlaceID='+play_placeId+'&upload=', 'edit.ashx', 'https://web.archive.org/web/20130702194455/https://www.roblox.com//Login/Negotiate.ashx', 'FETCH', true); }); }
-    </script>
     <script type="text/javascript" src="{{ asset('js/test.js') }}"></script>
 </head>
 
