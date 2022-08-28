@@ -340,7 +340,7 @@ input.Text {
 }
 
 #Footer.LanguageRedesign span {
-    color: ##899fc1;
+    color: #899fc1;
 }
 
 #Footer .LanguageOptionElement,
@@ -366,7 +366,7 @@ input.Text {
     position: absolute;
     bottom: 15px;
     background-color: #E6E6E6;
-    color: #black;
+    color: black;
     padding: 5px 0;
     left: -9px;
     border: 1px solid black;
@@ -1782,7 +1782,7 @@ legend span {
 .GrayButton:link,
 .GrayButton:visited,
 .GrayButton:active {
-    background: url(/images/Buttons/StyleGuide/bg-form_btn_lg-tile.png) repeat-x top left;
+    background: url(/images/buttons/StyleGuide/bg-form_btn_lg-tile.png) repeat-x top left;
     border: 1px solid #777;
     padding: 4px 8px 0;
     height: 21px;
@@ -2153,7 +2153,7 @@ table.table {
     line-height: 24px;
     font-size: 13px;
     padding: 0 7px;
-    background-image: url(/images/Buttons/StyleGuide/btn-control-large-tile.png);
+    background-image: url(/images/buttons/StyleGuide/btn-control-large-tile.png);
 }
 
 a.btn-control.top-level {
@@ -2245,7 +2245,7 @@ a.btn-control.top-level {
 .btn-neutral:visited {
     border-color: #0852b7;
     background-color: #0852b7;
-    background-image: url(/images/Buttons/StyleGuide/bg-btn-blue.png);
+    background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
     color: #00243d;
 }
 
