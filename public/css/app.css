@@ -214,7 +214,7 @@
   position: relative;
   height: 36px;
   z-index: 200;
-  font-family: Arial, Helvetica Neue, sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, Sans-Serif;
 }
 
 .BannerCenterContainer {
@@ -273,7 +273,7 @@ div.mySubmenuFixed {
   background: #A3514F;
   background-repeat: repeat-x;
   color: White;
-  font-family: Arial, Helvetica Neue, Sans-Serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, Sans-Serif;
   font-size: 14px;
   height: 26px;
   position: relative;
@@ -328,7 +328,7 @@ div.mySubmenuFixed {
 }
 
 #HeaderSignUp {
-  font-family: Arial;
+  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
   font-weight: bold;
   color: #fff;
   font-size: 13px;
@@ -338,7 +338,7 @@ div.mySubmenuFixed {
 }
 
 #HeaderOr {
-  font-family: Arial;
+  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
   font-weight: normal;
   color: #9Ec3E7;
   font-size: 13px;
@@ -368,7 +368,7 @@ div.mySubmenuFixed {
   padding: 0;
   text-decoration: none;
   outline: none;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
   text-shadow: #11111191 1px 1px 1px;
 }
 
@@ -551,7 +551,7 @@ iframe {
   text-decoration: none;
   font-weight: 800;
   outline: none;
-  font-family: Arial, Helvetica Neue, sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
 }
 
 .smallnavbarbutton {
@@ -574,7 +574,7 @@ iframe {
 
 html {
   margin: 0px;
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
   font-style: normal;
   height: 100%;
   color: #000;
@@ -701,7 +701,7 @@ body {
   height: 20px;
   border-radius: 1px;
   border: 1px solid #3D414A;
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
   padding-left: 5px;
   padding-right: 5px;
   color: rgb(0, 0, 0) !important;
@@ -715,7 +715,7 @@ body {
   height: 20px;
   border-radius: 1px;
   border: 1px solid #3D414A;
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
   padding-left: 5px;
   padding-right: 5px;
   color: #fff !important;
@@ -730,7 +730,7 @@ button {
   height: 20px;
   border-radius: 3px;
   border: 1px solid #3D414A;
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
   color: #fff;
 }
 
