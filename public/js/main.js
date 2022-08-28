@@ -10,10 +10,10 @@ function openClientPopup(ip,port,placefile,mode) {
     document.querySelector('.popupcontainer_client').removeAttribute('id');
     if (mode == "host") {
         // user is hosting, use port and place file
-        window.location.href = "archblox://host/" + port + "|" + placefile;
+        window.location.href = "archblox://host/" + port + ":" + placefile;
     } else if (mode == "join") {
         // user is joining a game, use ip and port
-        window.location.href = "archblox://join/" + ip + "|" + port;
+        window.location.href = "archblox://join/" + port + ":" + ip;
     } else {
         // no information so just use the default
         window.location.href = "archblox://";
