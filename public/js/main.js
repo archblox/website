@@ -19,7 +19,7 @@ function openClientPopup(ip,port,placefile,mode) {
         window.location.href = "archblox://host/" + port + ":" + placefile;
         setTimeout(function(){
             window.location.href = "archblox://join/" + port + ":" + ip;
-        },500);
+        },10000);
     } else {
         // no information so just use the default
         window.location.href = "archblox://";
