@@ -17,12 +17,13 @@
                 <span id="header-or">or</span>
                 <span class="studioiFrameLogin">
                     <span id="login-span">
-                        <a id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
+                         <a href="{{ route('login') }}" class="btn-control btn-control-large header-login">Login<!-- <span class="grey-arrow">▼</span>--></a>
                     </span>
-                
+                    <!-- disabled due to bugs
                     <div id="iFrameLogin" class="studioiFrameLogin" style="display: none; background: #E1E1E1">
                         <iframe class="login-frame" src="{{ route('login_iframe') }}" allow-scripts scrolling="no" frameborder="0"></iframe>                                  
                     </div>
+                     -->
                 </span>
                 @else
                 <span id="header-or">Logged in as {{ Auth::user()->name }}</span>

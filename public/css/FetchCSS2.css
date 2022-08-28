@@ -1361,18 +1361,18 @@ a.facebook-login span.right {
     position: relative;
 }
 
-#header-login .grey-arrow {
+.header-login .grey-arrow {
     color: #666;
     font-size: 12px;
 }
 
-#header-login.btn-control.btn-control-large.active {
+.btn-control.btn-control-large.header-login.active {
     background-image: none;
     background-color: #e1e1e1;
     border-color: #000;
 }
 
-#header-login {
+.header-login {
     font-weight: bold;
     display: inline-block;
     width: 62px;
