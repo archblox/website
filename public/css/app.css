@@ -172,7 +172,7 @@
   background-position-x: center;
   background-position-y: center;
   background-image: url("/img/gamethumbnails/1_1.png");
-  background-size: contain;
+  background-size: cover;
   border-width: 0px;
   width: 100%;
   background-repeat: no-repeat;
@@ -183,7 +183,7 @@
   background-position-x: center;
   background-position-y: center;
   background-image: url("/img/gamethumbnails/1_1.png");
-  background-size: contain;
+  background-size: cover;
   border-width: 0px;
   width: 100%;
   background-repeat: no-repeat;
