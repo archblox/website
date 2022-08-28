@@ -21,7 +21,10 @@
     <div class="rightgamecontainer">
         <h1>Natural Disaster Survival</h1> 
         <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
-        <button onclick="openClientPopup(null,'53640','temp.rbxl','host')" class="greenbutton" style="width: 100%; height: 50px; font-size: x-large; margin-top: 115px; align-content: center;">Host</button>
+        <p style="text-align: center;">
+            <button onclick="openClientPopup('localhost','53640','temp.rbxl','hostandplay')" class="greenbutton" style="width: 70%; height: 50px; font-size: x-large; margin-top: 115px; align-content: center;">Host &amp; Play</button>
+            <button onclick="openClientPopup(null,'53640','temp.rbxl','host')" class="greenbutton" style="width: 27%;height: 50px;margin-top: 0px;font-size: x-large;align-content: center;">Host</button>
+        </p>
     </div>
 </div>
 <br>
