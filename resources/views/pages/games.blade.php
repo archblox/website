@@ -9,13 +9,15 @@
     <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
 @endsection
 
+@section('alert')
+<div id="alert">Note that this page does not support joining yet. If you would like to join your own game that you are currently hosting, <a onclick="openClientPopup('localhost','53640',null,'join')">click here</a>.</div>
+@endsection
+
 @section('content')
 <h1>Games</h1>
 <br>
-<p>Note that this page does not support joining yet. If you would like to join your own game that you are currently hosting, <a onclick="openClientPopup('localhost','53640',null,'join')">click here</a>.</p>
-<br>
 <div class="content_special" style="flex-wrap: wrap; justify-content: space-around;">
-    <div id="game1">
+    <div>
         <a href="{{ route('gamespage')}}"><img class="gamethumbnail_small"></a>
         <a href="{{ route('gamespage')}}">Natural Disaster Survival</a> 
         <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
