@@ -35,7 +35,13 @@ Route::get('/maintenance', [App\Http\Controllers\PageController::class, 'mainten
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
+    // catalog
     Route::get('/catalog', [App\Http\Controllers\PageController::class, 'catalog'])->name('catalog');
+
+    // games & game page
+    Route::get('/games', [App\Http\Controllers\PageController::class, 'games'])->name('games');
+    Route::get('/games/1', [App\Http\Controllers\PageController::class, 'gamepage'])->name('gamepage');
+
 
     // Rate limit + auth
     Route::middleware(['throttle:feed_post'])->group(function () {

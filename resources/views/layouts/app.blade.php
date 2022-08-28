@@ -110,7 +110,7 @@
                     src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
             <div id="NewRedesign" class="navbarbuttoncontainer NavigationRedesign">
                 <ul id="ctl00_cphBanner_ctl00_MenuUL">
-                <li><a class="navbarbutton" id="smallbtn5" href="{{ route('incomplete') }}">Games</a></li>
+                <li><a class="navbarbutton" id="smallbtn5" href="{{ route('games') }}">Games</a></li>
                 <li><a class="navbarbutton" id="smallbtn4" href="{{ route('catalog') }}">Catalog</a></li>
                 <li><a class="navbarbutton" id="smallbtn0" onclick="openStudioPopup()">Build</a></li>
                 <li><a class="navbarbutton" id="smallbtn2" href="@guest {{ route('login') }}
@@ -184,6 +184,22 @@
             <button class="redbutton" style="height: 40px;width: 80%;" onclick="closeStudioPopup()">Close</button>
         </div>
     </div>
+
+    <div class="popupcontainer_client" id="invisible">
+        <div class="popup" style="width: 390px">
+            <h2 id="heading">Launching ARCHBLOX...</h2>
+            <br>
+            <img style="height: 7%;width: 62px;"  src="{{ asset('img/iosload.gif') }}" >
+            <br>
+            <br>
+            <p>Don't have ARCHBLOX installed?</p>
+            <a href="{{ route('download') }}"><button style="height: 40px;width: 80%;" class="greenbutton">Click here to download ARCHBLOX</button></a>
+            <br>
+            <br>
+            <button class="redbutton" style="height: 40px;width: 80%;" onclick="closeClientPopup()">Close</button>
+        </div>
+    </div>
+
     <div class="content">
         @yield('content')
     </div>

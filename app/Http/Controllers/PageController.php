@@ -115,4 +115,14 @@ class PageController extends Controller
     {
         return view('pages.catalog');
     }
+
+    public function games()
+    {
+        return view('pages.games');
+    }
+
+    public function gamepage()
+    {
+        return view('pages.gamepage');
+    }
 }
