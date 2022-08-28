@@ -206,7 +206,7 @@
   border: 1px solid #3D414A;
   background: #cacbcc;
   /* Fallback for IE 11*/
-  background: linear-gradient(#cacbcc 10%, #606060 100%);
+  background: linear-gradient(#cacbcc);
 }
 
 #NavigationRedesignBannerContainer {
