@@ -17,7 +17,9 @@ function openClientPopup(ip,port,placefile,mode) {
     } else if (mode == "hostandjoin") {
         // user is hosting and joining their own game, use everything
         window.location.href = "archblox://host/" + port + ":" + placefile;
-        window.location.href = "archblox://join/" + port + ":" + ip;
+        setTimeout(function(){
+            window.location.href = "archblox://join/" + port + ":" + ip;
+        },500);
     } else {
         // no information so just use the default
         window.location.href = "archblox://";
