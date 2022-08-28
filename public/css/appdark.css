@@ -47,7 +47,7 @@
   background: linear-gradient(#303030 10%, #000000 100%);
 }
 
-html {
+body {
   background-color: rgb(31, 31, 31);
   color: white;
 }
@@ -77,7 +77,7 @@ html {
 }
 
 #footer {
-  background: rgb(0, 0, 0);
+  background: rgb(31, 31, 31);
 }
 
 #footer_signup {

@@ -23,6 +23,9 @@ html {
   animation-duration: 50s;
   animation-iteration-count: infinite;
 }
+body {
+  background: transparent;
+}
 
 #alert,
 #success {
@@ -170,6 +173,10 @@ html {
   background: none;
   height: 29px;
   top: 44px;
+}
+
+#NavigationRedesignBannerContainer .HeaderDivider {
+  display: none;
 }
 
 #footer_signup a, #footer_signup p a, #footer a, #footer p a {

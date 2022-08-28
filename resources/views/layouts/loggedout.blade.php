@@ -53,7 +53,9 @@ $splash = array(
 'promise me you\'ll never install archblox ooghghIMFUCKING DYING',
 'okay mr krabs',
 'conkley is EPIC',
-'skeuomorphism is awesome'
+'skeuomorphism is awesome',
+'It\'s free!',
+'It\'s archtastic!'
 );
 @endphp
 
