@@ -52,18 +52,22 @@ body {
   color: white;
 }
 
+.loggedout body {
+  background-color: transparent;
+}
+
 .loggedout {
   background-image: url('../img/animateddark.png');
   background-color: rgb(1, 17, 48);
 }
 
 .content {
-  color: rgb(167 167 167);
+  color: rgb(167, 167, 167);
   background: rgb(25, 25, 25);
 }
 
 .content_signup {
-  color: rgb(167 167 167);
+  color: rgb(167, 167, 167);
   background: rgb(25, 25, 25);
 }
 
@@ -121,7 +125,6 @@ input {
   background-color: rgb(25, 25, 25);
   color: rgb(200,200,200);
 }
-
 
 .tab_selected {
   background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
