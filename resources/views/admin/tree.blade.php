@@ -45,10 +45,9 @@
                     <a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" title="{{ $invited_by }}'s Profile" class="forwardArrow">←</a>
                     <ul id="DropDown" class="TreeList">
                         <li class="subList">
-                            <a href="/iphone/tree?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Invite Tree">
+                            <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s Profile" class="RedirectArrow">
                                 <span>{{ $user->name }}</span>
                             </a>
-                            <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s Profile" class="forwardArrow">←</a>
                             <ul class="TreeList">
                             @foreach ($children as $child)
                                 <li>
