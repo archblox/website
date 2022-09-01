@@ -36,8 +36,8 @@
                         ID</button>
                 </div>
             </form>
-            <ul class="SearchTree">
             @if ($user)
+            <ul class="SearchTree">
                 <li class="Menu">
                     <a title="{{ $invited_by }}'s Invite Tree" href="/iphone/tree?q={{ App\Models\User::where('name', $invited_by)->first()->id }}&searchBy=id">
                         <span>{{ $invited_by }}</span>
@@ -49,21 +49,21 @@
                                 <span>{{ $user->name }}</span>
                             </a>
                             <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s Profile" class="forwardArrow">←</a>
-                            @foreach ($children as $child)
                             <ul class="TreeList">
+                            @foreach ($children as $child)
                                 <li>
                                     <a href="/iphone/tree?q={{ $child->id }}&searchBy=id" title="{{ $child->name }}'s Invite Tree">
                                         <span>{{ $child->name }}</span>
                                     </a>
                                     <a href="{{ route('profile', $child->id) }}" title="{{ $child->name }}'s Profile" class="forwardArrow">←</a>
                                 </li>
-                            </ul>
                             @endforeach
+                            </ul>
                         </li>
                     </ul>
                 </li>
-            @endif
             </ul>
+            @endif
         </div>
     </div>
 @endsection

@@ -41,7 +41,7 @@
 {{ App\Models\InviteKey::count() }}
 </span>
 <span class="Stats">
-     Invite Keys
+     Invite Key(s)
 </span>
 </div>
 <div class="Stats-Wrapper">
@@ -49,7 +49,7 @@
 {{ App\Models\InviteKey::where('active', true)->count() }}
 </span>
 <span class="Stats">
-     Unused Invite Keys
+     Unused Invite Key(s)
 </span>
 </div>
 </div>
