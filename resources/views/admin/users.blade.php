@@ -175,7 +175,7 @@
             <div class="text-secondary">
                 View
             </div>
-            <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" title="View invite tree from {{ $user->name }}" class="AuthenticatedUserName">
+            <a href="/iphone/tree?q={{ $user->id }}&searchBy=id" title="View invite tree from {{ $user->name }}" class="AuthenticatedUserName">
                 Invite Tree
             </a>
         </div>

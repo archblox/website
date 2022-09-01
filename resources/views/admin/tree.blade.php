@@ -42,12 +42,14 @@
                     <a title="{{ $invited_by }}'s Invite Tree" href="/iphone/tree?q={{ App\Models\User::where('name', $invited_by)->first()->id }}&searchBy=id">
                         <span>{{ $invited_by }}</span>
                     </a>
+                    <a href="/iphone/users?q={{ App\Models\User::where('name', $invited_by)->first()->id }}&searchBy=id" title="View {{ App\Models\User::where('name', $invited_by)->first()->name }}'s Details" class="userInfo"></a>
                     <a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" title="{{ $invited_by }}'s Profile" class="forwardArrow"></a>
                     <ul id="DropDown" class="TreeList">
                         <li class="subList">
                             <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s Profile" class="RedirectArrow">
                                 <span>{{ $user->name }}</span>
                             </a>
+                            <a href="/iphone/users?q={{ $user->id }}&searchBy=id" title="View {{ $user->name }}'s Details" class="userInfo"></a>
                             <ul class="TreeList">
                             @foreach ($children as $child)
                                 <li>
