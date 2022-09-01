@@ -37,17 +37,32 @@
                 </div>
             </form>
             @if ($user)
-            <a class="InvitationUserName AuthenticatedUserName" href="{{ route('profile', $user->id) }}">{{ $user->name }}</a>
-            <div class="InvitationSubName">
-            <h4 class="InvitationText">Invited By </h4>
-            <a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" class="AuthenticatedUserName">{{ $invited_by }}</a>
-            <h5 class="InvitationSubText">{{ $user->name }} Invited</h5>
-            @foreach ($children as $child)
-            <li>
-            <a href="{{ route('profile', $child->id) }}" target="_blank" class="AuthenticatedUserName">{{ $child->name }}</a>
-            </li>
-            @endforeach
-            </div>
+            <ul class="SearchTree">
+                <li class="Menu">
+                    <a title="{{ $invited_by }}'s Invite Tree" href="/iphone/tree?q={{ App\Models\User::where('name', $invited_by)->first()->id }}&searchBy=id">
+                        <span>{{ $invited_by }}</span>
+                    </a>
+                    <a href="{{ route('profile', App\Models\User::where('name', $invited_by)->first()->id) }}" title="{{ $invited_by }}'s Profile" class="forwardArrow">←</a>
+                    <ul id="DropDown" class="TreeList">
+                        <li class="subList">
+                            <a href="/iphone/tree?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Invite Tree">
+                                <span>{{ $user->name }}</span>
+                            </a>
+                            <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s Profile" class="forwardArrow">←</a>
+                            @foreach ($children as $child)
+                            <ul class="TreeList">
+                                <li>
+                                    <a href="/iphone/tree?q={{ $child->id }}&searchBy=id" title="{{ $child->name }}'s Invite Tree">
+                                        <span>{{ $child->name }}</span>
+                                    </a>
+                                    <a href="{{ route('profile', $child->id) }}" title="{{ $child->name }}'s Profile" class="forwardArrow">←</a>
+                                </li>
+                            </ul>
+                            @endforeach
+                        </li>
+                    </ul>
+                </li>
+            </ul>
             @endif
         </div>
     </div>

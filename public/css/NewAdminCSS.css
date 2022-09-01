@@ -370,41 +370,91 @@ h6 {
 .NewPanel.AdminPanel .flex {
   display: table!important;
 }
-.NewPanel .InvitationUserName {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: 600;
+/*Heavily based off of the roblox developer tree list (because it looks cool)*/
+.NewPanel .SearchTree {
+  width: 260px;
+  height: 100%;
+  padding: 0;
+  margin: 10px auto 0;
+  min-height: 550px;
+}
+.NewPanel .SearchTree .Menu {
+  list-style-type: none;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  line-height: 20px;
+  min-height: 550px;
+}
+.NewPanel .SearchTree a {
+  color: #9b9b9b;
+  transition: .15s all ease-in-out;
+  font-size: 14px;
+  margin: 0 0 0 38px;
+  padding-right: 5px;
+  position: relative;
+  top: 18px;
+  display: inline-block;
+}
+.NewPanel .SearchTree a:hover {
+  color: #00b7ff;
+}
+.NewPanel .SearchTree a:after {
+  content: '';
+  border: 1px solid #555;
+  border-radius: 100%;
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  left: -10px;
+  position: absolute;
+  top: 9px;
+}
+.NewPanel .SearchTree a span {
   display: block;
 }
-.NewPanel .InvitationSubName {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 100;
-}
-.NewPanel .InvitationSubName .InvitationText {
+.NewPanel .SearchTree .forwardArrow {
+  transform: rotate(180deg);
+  position: relative;
   display: inline-block;
-  font-weight: 100;
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  margin: 0;
+  padding: 0;
+  top: 21px;
+  line-height: 14px;
 }
-.NewPanel .InvitationSubText {
-  text-align: center;
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.NewPanel .SearchTree .forwardArrow::after {
+  display: none;
 }
-.NewPanel .InvitationSubName li {
-  list-style: none;
+.NewPanel .TreeList {
+  border-left: 1px dashed #555;
+  margin: 13px 0 0 30px;
+  padding: 0;
+}
+.NewPanel #DropDown.TreeList {
+  min-height: 550px;
+}
+.NewPanel .SearchTree li ul li {
+  list-style-type: none;
+  position: relative;
+  top: 3px;
+  bottom: 0;
+  padding-bottom: 16px;
+}
+.NewPanel .SearchTree li ul li:last-child {
+  padding-bottom: 11px;
+}
+.NewPanel .SearchTree li ul li.subList {
+  padding-bottom: 0;
+}
+.NewPanel .SearchTree li ul li:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 0;
+  position: absolute;
+  left: 0em;
+  top: 28px;
+  border-top: 1px dashed #555;
 }
 
 @media (max-width:1000px) {
