@@ -478,6 +478,7 @@ h6 {
   top: 3px;
   bottom: 0;
   padding-bottom: 16px;
+  white-space: nowrap;
 }
 .NewPanel .SearchTree li ul li:last-child {
   padding-bottom: 11px;
