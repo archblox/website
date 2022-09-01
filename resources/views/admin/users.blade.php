@@ -82,7 +82,11 @@
                 @if ($user->admin)
                     [Redacted]
                 @else
-                    {{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}
+                @guest
+                {{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}
+                @else
+                {{ Carbon\Carbon::parse($user->dob)->format(Auth::user()->settings->date_preference) }}
+                @endguest
                 @endif
             </a>
         </div>
@@ -164,6 +168,15 @@
             </div>
             <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" class="AuthenticatedUserName">
                 {{ App\Models\User::where('id', $user->invited_by)->first()->name }}
+            </a>
+            <a href="/iphone/tree?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
+        </div>
+        <div class="Row">
+            <div class="text-secondary">
+                View
+            </div>
+            <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" title="View invite tree from {{ $user->name }}" class="AuthenticatedUserName">
+                Invite Tree
             </a>
         </div>
         <div class="Row">

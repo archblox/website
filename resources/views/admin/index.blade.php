@@ -6,7 +6,7 @@
 @section('Body')
 <div id="Body" style="width: 970px;">
 <h2 class="MainHeader">
-    Administration Area
+     Home
 </h2>
 <div class="StatsContainer">
 <div class="Stats-Wrapper">

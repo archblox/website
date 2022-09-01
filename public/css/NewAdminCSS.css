@@ -7,6 +7,14 @@ body {
   min-width: 0px;
 }
 
+@font-face
+{
+	font-family: "copenhagen-icons";
+	src: url(copenhagen-icons-268fb7c014de8a06d7d40310b5000daa..woff) format("woff");
+	font-weight: normal;
+	font-style: normal
+}
+
 h1 {
   font-size: 32px;
   font-weight: 800;
@@ -66,6 +74,8 @@ h6 {
   box-shadow: 0 2px 8px 0 #000;
   z-index: 1;
   position: relative;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .NewPanel .AdminSubHeader ul {
   padding: 0;
@@ -282,12 +292,12 @@ h6 {
   user-select: none;
 }
 .NewPanel .AuthenticatedUserName {
-  color: #009dff;
+  color: #00b7ff;
   transition: .25s all ease-in-out;
   display: inline-block;
 }
 .NewPanel .AdminHeader .HomeBtn {
-  color: #009dff;
+  color: #00b7ff;
   cursor: default;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -337,7 +347,7 @@ h6 {
   overflow-wrap: anywhere;
 }
 .NewPanel .AuthenticatedUserName:hover, .NewPanel .Backbtn:hover, .NewPanel .Backbtn:hover + .BackArrow {
-  color: #2fcfff;
+  color: #7ddaff;
   transition: .25s all ease-in-out;
 }
 .NewPanel .SearchContainer .Thumbnail a {
@@ -413,17 +423,46 @@ h6 {
 .NewPanel .SearchTree a span {
   display: block;
 }
-.NewPanel .SearchTree .forwardArrow {
-  transform: rotate(180deg);
+.NewPanel #BodyWrapper .forwardArrow::before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+.NewPanel #BodyWrapper .forwardArrow::before {
+  content: '\2794';
+}
+.NewPanel .SearchTree .forwardArrow:hover {
+  color: #00b7ff;
+}
+.NewPanel #BodyWrapper .forwardArrow {
   position: relative;
   display: inline-block;
   margin: 0;
   padding: 0;
-  top: 21px;
   line-height: 14px;
 }
-.NewPanel .SearchTree .forwardArrow::after {
+.NewPanel #BodyWrapper .forwardArrow::after, .NewPanel #BodyWrapper .userInfo::after {
   display: none;
+}
+.NewPanel #BodyWrapper .userInfo {
+  margin: 0;
+}
+.NewPanel #BodyWrapper .userInfo::before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+.NewPanel #BodyWrapper .userInfo::before {
+  content: '\2139';
+  padding: 0 2px;
+  border: 1px solid;
+  border-radius: 100%;
 }
 .NewPanel .TreeList {
   border-left: 1px dashed #555;
