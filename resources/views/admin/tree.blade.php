@@ -36,8 +36,8 @@
                         ID</button>
                 </div>
             </form>
-            @if ($user)
             <ul class="SearchTree">
+            @if ($user)
                 <li class="Menu">
                     <a title="{{ $invited_by }}'s Invite Tree" href="/iphone/tree?q={{ App\Models\User::where('name', $invited_by)->first()->id }}&searchBy=id">
                         <span>{{ $invited_by }}</span>
@@ -62,8 +62,8 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
             @endif
+            </ul>
         </div>
     </div>
 @endsection
