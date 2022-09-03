@@ -1,12 +1,8 @@
 @extends('layouts.admin')
 @section('title')
     <title>
-        Admin | User List - {{ env('APP_NAME') }}</title>
-    <style>
-        .flex {
-            display: block !important;
-        }
-    </style>
+        Admin | User List - {{ env('APP_NAME') }}
+    </title>
 @endsection
 
 @section('Body')
@@ -105,17 +101,10 @@
                 Feed Status :
             </div>
             <a class="text-secondary">
-                @if (!request()->has('q'))
-                    @if (!empty($user->feedposts->last()->status))
-                        "{{ $user->feedposts->last()->status }}"
-                    @else
-                        "I'm new to ARCHBLOX!"
-                    @endif
-                    @if (!empty(App\Models\FeedPost::where('user_id', $user->id)->first()->status))
-                        "{{ App\Models\FeedPost::where('user_id', $user->id)->orderBy('id', 'desc')->first()->status }}"
-                    @else
-                        "I'm new to ARCHBLOX!"
-                    @endif
+                @if (!empty($user->feedposts->last()->status))
+                    "{{ $user->feedposts->last()->status }}"
+                @else
+                    "I'm new to ARCHBLOX!"
                 @endif
             </a>
         </div>

@@ -320,45 +320,10 @@ display: -ms-flexbox;
 display: flex;
   flex-direction: row-reverse;
 }
-.NewPanel .HomeBtn {
-  top: 10px;
-  left: 10px;
-  background: none;
-  border: 0;
-  padding: 0;
-  height: auto;
-  font-size: 16px;
-  font-weight: 100;
-  display: inline-block;
-  position: absolute;
-}
-.NewPanel .BackArrow {
-  cursor: default;
-  transition: .25s all ease-in-out;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1.1rem;
-  margin-right: 2px;
-}
-.NewPanel .Backbtn {
-  color: inherit;
-  cursor: pointer;
-  transition: .25s all ease-in-out;
-  -webkit-touch-callout: text;
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}
 .NewPanel .UserDetails .Row {
   overflow-wrap: anywhere;
 }
-.NewPanel .AuthenticatedUserName:hover, .NewPanel .Backbtn:hover, .NewPanel .Backbtn:hover + .BackArrow {
+.NewPanel .AuthenticatedUserName:hover {
   color: #7ddaff;
   transition: .25s all ease-in-out;
 }
@@ -388,9 +353,6 @@ display: flex;
   display: block;
   border-radius: 50%;
   margin: -8px;
-}
-.NewPanel.AdminPanel .flex {
-  display: table!important;
 }
 /*Heavily based off of the roblox developer tree list (because it looks cool)*/
 .NewPanel .SearchTree {
