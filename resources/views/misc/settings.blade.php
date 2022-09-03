@@ -108,7 +108,7 @@
             @csrf
             <div class="content_special" style="flex-wrap: wrap; flex-direction: column; width: 100%;">
                 <h3>Bio</h3>
-                <textarea style="resize: none; width: 100%; height: 75px;" name="bio">
+                <textarea style="resize: none; width: 97%; height: 75px;" name="bio">
 @if (!old('bio'))
 {{ Auth::user()->blurb }}@else{{ old('bio') }}
 @endif
