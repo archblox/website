@@ -192,11 +192,11 @@
                 <div class="content_special" style="width: 100%; flex-wrap: nowrap;">
                     <div class="custom-select" style="width: 90%;">
                         <select name="theme_change" style="width: 100%;">
-                            <option value="1">Light</option>
-                            <option value="2">2018</option>
-                            <option value="3">Dark</option>
-                            <option value="4">Classic Light</option>
-                            <option value="5">Classic Dark</option>
+                            <option value="1" @php switch (Auth::user()->settings->theme) { case 1: echo 'selected'; break; default: echo 'selected'; }@endphp>Light</option>
+                            <option value="2" @php switch (Auth::user()->settings->theme) { case 2: echo 'selected'; break; }@endphp>2018</option>
+                            <option value="3" @php switch (Auth::user()->settings->theme) { case 3: echo 'selected'; break; }@endphp>Dark</option>
+                            <option value="4" @php switch (Auth::user()->settings->theme) { case 4: echo 'selected'; break; }@endphp>Classic Light</option>
+                            <option value="5" @php switch (Auth::user()->settings->theme) { case 5: echo 'selected'; break; }@endphp>Classic Dark</option>
                         </select>
                     </div>
                     <button style="width: max-content;" class="greenbutton" type="submit">Save</button>
