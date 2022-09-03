@@ -248,7 +248,10 @@
   width: 100%;
   z-index: 10001;
   top: 0;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btn-logo:hover,
@@ -422,11 +425,14 @@ iframe {
 
 #navbarlogincontainer,
 #navbarsignedincontainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   padding-right: 10px;
   margin-right: 0%;
   margin-left: 0%;
-  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
@@ -623,7 +629,10 @@ body {
 
 .content_special,
 #content_special {
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
   width: 100%;
   flex-direction: row;
