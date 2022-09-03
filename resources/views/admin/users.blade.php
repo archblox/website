@@ -48,9 +48,13 @@
             <div class="text-secondary">
                 Username:
             </div>
-            <a href="{{ route('profile', $user->id) }}" class="AuthenticatedUserName">
+            <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s profile" class="AuthenticatedUserName">
                 {{ $user->name }}
             </a>
+            @unless (request()->query('q'))
+            <a href="/iphone/users?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
+            @endunless
+            <a href="/iphone/tree?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
         </div>
         @if ($user->settings->changed_name)
         <div class="Row">
@@ -164,21 +168,13 @@
             <div class="text-secondary">
                 Invited By
             </div>
-            <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" class="AuthenticatedUserName">
+            <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Profile" class="AuthenticatedUserName">
                 {{ App\Models\User::where('id', $user->invited_by)->first()->name }}
             </a>
             @unless (request()->query('q'))
             <a href="/iphone/users?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="View {{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
             @endunless
             <a href="/iphone/tree?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
-        </div>
-        <div class="Row">
-            <div class="text-secondary">
-                View
-            </div>
-            <a href="/iphone/tree?q={{ $user->id }}&searchBy=id" title="View invite tree from {{ $user->name }}" class="AuthenticatedUserName">
-                Invite Tree
-            </a>
         </div>
         <div class="Row">
             <div class="text-secondary">

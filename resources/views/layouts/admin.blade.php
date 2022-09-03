@@ -43,7 +43,7 @@
             </li>
             <li>
                 <a class="sub-menu" href="{{ route('admin_index') }}">
-                    Home
+                    Status
                 </a>
             </li>
             <li>

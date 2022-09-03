@@ -6,7 +6,7 @@
 @section('Body')
 <div id="Body" style="width: 970px;">
 <h2 class="MainHeader">
-     Home
+     Status
 </h2>
 <div class="StatsContainer">
 <div class="Stats-Wrapper">
@@ -31,6 +31,14 @@
 </span>
 <span class="Stats">
      Online within the past day.
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subMinute()->toDateTimeString())->count(); }}
+</span>
+<span class="Stats">
+     Currently Online.
 </span>
 </div>
 <br>
