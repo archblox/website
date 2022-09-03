@@ -1,8 +1,10 @@
 #alert {
+  background: #6a0f0f;
   background: linear-gradient(#ef3232 10%, #6a0f0f 100%);
 }
 
 #success {
+  background: #01582a;
   background: linear-gradient(#00c953 10%, #01582a 100%);
 }
 
@@ -92,12 +94,12 @@ body {
 #footer a,
 #footer_signup p,
 #footer_signup a {
-  color: rgb(167 167 167);
+  color: rgb(167, 167, 167);
 }
 
 a,
 #navbarusername {
-  color: rgb(215 215 215);
+  color: rgb(215, 215, 215);
 }
 
 .logoutframe {
@@ -127,10 +129,12 @@ input {
 }
 
 .tab_selected {
+  background: #01639c;
   background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
 }
 
 .tab {
+  background: #4b4b4b;
   color: rgb(255, 255, 255) !important;
   background: linear-gradient(180deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
 }

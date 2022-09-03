@@ -20,7 +20,7 @@
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
                     <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
-                            src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
+                            src="{{ asset('img/defaultrender.png') }}" width="60px" height="60px"></a>
                 </div>
                 <div id="FriendsContainerBox1TextContainer">
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>

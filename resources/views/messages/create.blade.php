@@ -29,7 +29,7 @@
             </p>
             <p>Subject: <input type="text" name="subject" placeholder="Subject" value="{{ old('subject') }}"></p>
             <button class="greybutton" type="button" onClick="document.getElementById('message').value = ''" style="margin-top:3px;margin-bottom:3px">Clear Message</button>
-            <textarea style="width: calc(100% - 5px); height: 170px; min-height: 170px; resize: vertical;"
+            <textarea style="width: 99%; width: calc(100% - 5px); height: 170px; min-height: 170px; resize: vertical;"
                 placeholder="Write your message..." id="message" name="message">{{ old('message') }}</textarea>
             <button class="greenbutton" type="submit">Send</button>
             <button class="redbutton" type="reset"><a href="{{ route('inbox') }}"

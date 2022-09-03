@@ -18,7 +18,7 @@
         <br>
         <form action="{{ route('feed_post') }}" method="POST">
             @csrf
-            <p style="display: flex;">
+            <p style="display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;;">
                 <input id="FeedBox" type="text" name="status" placeholder="What are you up to?" style="width: 80%;"
                     value="{{ old('status') }}">
                 <button style="width: 20%;height: 28px;margin-left: 10px;" class="greybutton" id="FeedButton"
@@ -38,7 +38,7 @@
             <div class="FeedContainerBox" id="FeedContainerBox1">
                 <div class="FeedContainerBoxImageContainer" id="FeedContainerBox1ImageContainer">
                     <a href="{{ route('profile', $post->user->id) }}"><img alt="A image of {{ $post->user->name }}"
-                            src="{{ asset('img/defaultrender.png') }}" width="60px" height="100%"></a>
+                            src="{{ asset('img/defaultrender.png') }}" width="60px" height="60px"></a>
                 </div>
                 <div class="FeedContainerBoxTextContainer" id="FeedContainerBox1TextContainer">
                     <a alt="{{ $post->user->name }} says" href="{{ route('profile', $post->user->id) }}"
@@ -76,7 +76,7 @@
         <div class="friendslist">
             @if (Auth::user()->getFriendsCount() > 0)
             <div id="profilefriendcontainer" class="content_special"
-                style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;display: inline-flex;align-content: center;align-items: center;">
+                style="flex-wrap: wrap;justify-content: space-evenly;flex-direction: row;align-content: center;align-items: center;">
                 @foreach ($friends as $friend)
                 <div class="profilefriend">
                     <a href="{{ route('profile', $friend->id) }}"><img alt="Profile Image"
@@ -95,9 +95,8 @@
     <h2>Recently Played Games</h2>
     <br>
     <div class="gamelist">
-        <p>You haven't played any games recently.</p><a href="/incomplete" class="text-link">Play Now</a>
+        <p>You haven't played any games recently.</p><a href="{{ route('games')}}" class="text-link">Play Now</a>
     </div>
-    <br>
 </div>
 </div>
 <br>
