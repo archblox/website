@@ -127,9 +127,11 @@
             <div id="HeaderLoginButton" class="RightNav">
                 <div id="navbarsignedincontainer">
                     <a href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
+                    <div class="HeaderDivider"></div>
                     <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
                     <p> {{ Auth::user()->morbux }}</p>
                     </div>
+                    <div class="HeaderDivider"></div>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></p>
                 </div>
             </div>

@@ -23,6 +23,9 @@ html {
   animation-duration: 50s;
   animation-iteration-count: infinite;
 }
+body {
+  background: transparent;
+}
 
 .content, #footer {
   max-width: 1000px;
@@ -54,19 +57,20 @@ html {
 .content_signup {
   background: rgba(25, 25, 25,0.75);
 }
-
+.content, #footer {
+  max-width: 1000px;
+  width: 1000px;
+  margin: auto;
+}
 .content {
   margin-top: 105px;
   background: rgba(25, 25, 25,0.75);
   min-height: 550px;
 }
 
-#footer {
-  width: max-content;
-}
-
 #logo_full {
   display: none;
+  margin-right: 0;
 }
 
 #logo_small {
@@ -167,6 +171,30 @@ html {
   background: none;
   height: 29px;
   top: 44px;
+}
+#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited, .navbarbutton {
+  position: relative;
+  padding-right: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  text-shadow: none;
+}
+
+#navbarsignedincontainer {
+  display: block;
+}
+#navbarsignedincontainer a:nth-child(1)::after {
+  content: ' | ';
+}
+
+#NavigationRedesignBannerContainer .HeaderDivider {
+  display: none;
+}
+
+.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
+  color: inherit;
 }
 
 @media (min-width: 1688px) {

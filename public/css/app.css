@@ -377,6 +377,14 @@ div.mySubmenuFixed {
   background-position: 0 -54px;
 }
 
+#NavigationRedesignBannerContainer .HeaderDivider {
+  margin: -5px 5px 0 5px;
+  float: right;
+  height: 25px;
+  width: 0;
+  Border-left: 1px solid #5355a0;
+}
+
 #NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited {
   border: 0 solid black;
   font-size: 13px;
@@ -592,8 +600,6 @@ html {
   font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
   font-style: normal;
   height: 100%;
-  color: #000;
-  background-color: #cccccc;
 }
 
 .loggedout {
@@ -608,12 +614,11 @@ html {
 }
 
 body {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0px;
   height: 100%;
   padding-bottom: 0px;
+  background: #e6e6e6;
+  color: #000;
 }
 
 .content_special,
@@ -687,6 +692,7 @@ body {
 }
 .hyperlink {
   display: block;
+  text-align: center;
 }
 
 #footer {
@@ -699,9 +705,9 @@ body {
   width: calc(100% - 30px);
   padding-bottom: 5px;
   padding-top: 5px;
-  background: rgb(172, 172, 172);
+  background: #e6e6e6;
   /* Fallback for IE 11*/
-  background-color: rgb(172, 172, 172);
+  background-color: #e6e6e6;
   min-height: fit-content;
   bottom: 0;
 }

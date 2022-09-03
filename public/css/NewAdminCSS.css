@@ -7,6 +7,14 @@ body {
   min-width: 0px;
 }
 
+@font-face
+{
+	font-family: "copenhagen-icons";
+	src: url(copenhagen-icons-268fb7c014de8a06d7d40310b5000daa..woff) format("woff");
+	font-weight: normal;
+	font-style: normal
+}
+
 h1 {
   font-size: 32px;
   font-weight: 800;
@@ -66,6 +74,8 @@ h6 {
   box-shadow: 0 2px 8px 0 #000;
   z-index: 1;
   position: relative;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .NewPanel .AdminSubHeader ul {
   padding: 0;
@@ -282,12 +292,12 @@ h6 {
   user-select: none;
 }
 .NewPanel .AuthenticatedUserName {
-  color: #009dff;
+  color: #00b7ff;
   transition: .25s all ease-in-out;
   display: inline-block;
 }
 .NewPanel .AdminHeader .HomeBtn {
-  color: #009dff;
+  color: #00b7ff;
   cursor: default;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -337,7 +347,7 @@ h6 {
   overflow-wrap: anywhere;
 }
 .NewPanel .AuthenticatedUserName:hover, .NewPanel .Backbtn:hover, .NewPanel .Backbtn:hover + .BackArrow {
-  color: #2fcfff;
+  color: #7ddaff;
   transition: .25s all ease-in-out;
 }
 .NewPanel .SearchContainer .Thumbnail a {
@@ -370,41 +380,121 @@ h6 {
 .NewPanel.AdminPanel .flex {
   display: table!important;
 }
-.NewPanel .InvitationUserName {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: 600;
+/*Heavily based off of the roblox developer tree list (because it looks cool)*/
+.NewPanel .SearchTree {
+  width: 260px;
+  height: 100%;
+  padding: 0;
+  margin: 10px auto 0;
+  min-height: 550px;
+}
+.NewPanel .SearchTree .Menu {
+  list-style-type: none;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  line-height: 20px;
+  min-height: 550px;
+}
+.NewPanel .SearchTree a {
+  color: #9b9b9b;
+  transition: .15s all ease-in-out;
+  font-size: 14px;
+  margin: 0 0 0 38px;
+  padding-right: 5px;
+  position: relative;
+  top: 18px;
+  display: inline-block;
+}
+.NewPanel .SearchTree a:hover {
+  color: #00b7ff;
+}
+.NewPanel .SearchTree a:after {
+  content: '';
+  border: 1px solid #555;
+  border-radius: 100%;
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  left: -10px;
+  position: absolute;
+  top: 9px;
+}
+.NewPanel .SearchTree a span {
   display: block;
 }
-.NewPanel .InvitationSubName {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 100;
+.NewPanel #BodyWrapper .forwardArrow::before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
 }
-.NewPanel .InvitationSubName .InvitationText {
+.NewPanel #BodyWrapper .forwardArrow::before {
+  content: '\2794';
+}
+.NewPanel .SearchTree .forwardArrow:hover {
+  color: #00b7ff;
+}
+.NewPanel #BodyWrapper .forwardArrow {
+  position: relative;
   display: inline-block;
-  font-weight: 100;
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
 }
-.NewPanel .InvitationSubText {
-  text-align: center;
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.NewPanel #BodyWrapper .forwardArrow::after, .NewPanel #BodyWrapper .userInfo::after {
+  display: none;
 }
-.NewPanel .InvitationSubName li {
-  list-style: none;
+.NewPanel #BodyWrapper .userInfo {
+  margin: 0;
+}
+.NewPanel #BodyWrapper .userInfo::before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+.NewPanel #BodyWrapper .userInfo::before {
+  content: '\2139';
+  padding: 0 2px;
+  border: 1px solid;
+  border-radius: 100%;
+}
+.NewPanel .TreeList {
+  border-left: 1px dashed #555;
+  margin: 13px 0 0 30px;
+  padding: 0;
+}
+.NewPanel #DropDown.TreeList {
+  min-height: 550px;
+}
+.NewPanel .SearchTree li ul li {
+  list-style-type: none;
+  position: relative;
+  top: 3px;
+  bottom: 0;
+  padding-bottom: 16px;
+  white-space: nowrap;
+}
+.NewPanel .SearchTree li ul li:last-child {
+  padding-bottom: 11px;
+}
+.NewPanel .SearchTree li ul li.subList {
+  padding-bottom: 0;
+}
+.NewPanel .SearchTree li ul li:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 0;
+  position: absolute;
+  left: 0em;
+  top: 28px;
+  border-top: 1px dashed #555;
 }
 
 @media (max-width:1000px) {

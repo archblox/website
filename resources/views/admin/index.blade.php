@@ -6,7 +6,7 @@
 @section('Body')
 <div id="Body" style="width: 970px;">
 <h2 class="MainHeader">
-    Administration Area
+     Home
 </h2>
 <div class="StatsContainer">
 <div class="Stats-Wrapper">
@@ -41,7 +41,7 @@
 {{ App\Models\InviteKey::count() }}
 </span>
 <span class="Stats">
-     Invite Keys
+     Invite Key(s)
 </span>
 </div>
 <div class="Stats-Wrapper">
@@ -49,7 +49,7 @@
 {{ App\Models\InviteKey::where('active', true)->count() }}
 </span>
 <span class="Stats">
-     Unused Invite Keys
+     Unused Invite Key(s)
 </span>
 </div>
 </div>

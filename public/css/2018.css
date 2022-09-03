@@ -642,7 +642,8 @@ button:hover a {
 	color: #b8b8b8;
 }
 
-iframe {
+#NavigationRedesignBannerContainer .HeaderDivider {
+	display: none;
 }
 
 #logo_full {

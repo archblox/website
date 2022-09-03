@@ -47,9 +47,13 @@
   background: linear-gradient(#303030 10%, #000000 100%);
 }
 
-html {
+body {
   background-color: rgb(31, 31, 31);
   color: white;
+}
+
+.loggedout body {
+  background-color: transparent;
 }
 
 .loggedout {
@@ -58,12 +62,12 @@ html {
 }
 
 .content {
-  color: rgb(167 167 167);
+  color: rgb(167, 167, 167);
   background: rgb(25, 25, 25);
 }
 
 .content_signup {
-  color: rgb(167 167 167);
+  color: rgb(167, 167, 167);
   background: rgb(25, 25, 25);
 }
 
@@ -77,7 +81,7 @@ html {
 }
 
 #footer {
-  background: rgb(0, 0, 0);
+  background: rgb(31, 31, 31);
 }
 
 #footer_signup {
@@ -121,7 +125,6 @@ input {
   background-color: rgb(25, 25, 25);
   color: rgb(200,200,200);
 }
-
 
 .tab_selected {
   background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
