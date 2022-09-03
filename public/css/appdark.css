@@ -144,6 +144,7 @@ button:hover.greybutton {
 
 button.bluebutton {
   background: #01639c;
+  color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
 }
 
@@ -153,6 +154,7 @@ button:hover.bluebutton {
 
 button.redbutton {
   background: #e42424;
+  color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #d86868 0%, #e42424 100%);
 }
 
@@ -162,12 +164,18 @@ button:hover.redbutton {
 
 button.greenbutton {
   background: #1a5c2e;
+  color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #02b757 0%, #1a5c2e 100%);
 }
 
 button:hover.greenbutton {
   background: linear-gradient(0deg, #02b757 0%, #1a5c2e 100%);
 }
+
+button {
+  color:rgb(0, 0, 0)
+}
+
 
 .popup {
   color: white;

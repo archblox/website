@@ -17,7 +17,7 @@
   }
 
   100% {
-    background-position-x: 61px;
+    background-position-x: 60px;
     animation-timing-function: linear;
   }
 }
@@ -82,7 +82,7 @@
   animation-iteration-count: 1;
   position: fixed;
   z-index: 10;
-  top: 62px;
+  top: 60px;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-right: 5px;
@@ -185,9 +185,24 @@
   background-image: url("/img/gamethumbnails/1_1.png");
   background-size: cover;
   border-width: 0px;
-  width: 100%;
+  width: 190.8px;
   background-repeat: no-repeat;
   height: 130px;
+}
+
+.gameitem {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.PageTitleBar {
+  display: inline-flex;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .popup {
@@ -604,6 +619,7 @@ body {
 .content_special,
 #content_special {
   display: inline-flex;
+  overflow: hidden;
   width: 100%;
   flex-direction: row;
   align-items: flex-start;

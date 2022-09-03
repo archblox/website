@@ -14,13 +14,66 @@
 @endsection
 
 @section('content')
-<h1>Games</h1>
-<br>
-<div class="content_special" style="flex-wrap: wrap; justify-content: space-around;">
+<div class="PageTitleBar">
+    <h1>Games</h1>
     <div>
+        <input type="text" placeholder="Search" title="Search Catalog Items Box">
+        <button style="height: 22px;" class="greybutton">Search</button>
+    </div>
+</div>
+<div class="content_special">
+    <div class="content_special" style="width: 15%;flex-wrap: wrap; justify-content: flex-start">
+        <p>Sidebar</p>
+    </div>
+<div class="content_special" style="width: 85%;flex-wrap: wrap; justify-content: flex-start">
+    <div class="gameitem">
         <a href="{{ route('gamepage')}}"><img class="gamethumbnail_small"></a>
+        <br>
         <a href="{{ route('gamepage')}}">Natural Disaster Survival</a> 
         <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
     </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+    <div class="gameitem">
+        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <br>
+        <a href="#">PLACEHOLDER</a> 
+        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+    </div>
+</div>
 </div>
 @endsection
