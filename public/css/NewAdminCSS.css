@@ -472,8 +472,6 @@ display: flex;
 }
 .NewPanel #BodyWrapper .userInfo::before {
   content: '\2139';
-  padding: 0 2px;
-  border: 1px solid;
   border-radius: 100%;
 }
 .NewPanel .TreeList {
