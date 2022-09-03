@@ -167,6 +167,9 @@
             <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" class="AuthenticatedUserName">
                 {{ App\Models\User::where('id', $user->invited_by)->first()->name }}
             </a>
+            @unless (request()->query('q'))
+            <a href="/iphone/users?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="View {{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
+            @endunless
             <a href="/iphone/tree?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
         </div>
         <div class="Row">
