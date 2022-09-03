@@ -1,7 +1,7 @@
 window.onload = function() {
     var morblox = document.getElementById("morblox")
     var usernamecontainer = document.getElementById("UsernameContainer");
-    if (window.location.hostname == "morblox.us") {
+    if (window.location.hostname == "archblox.com") {
         morblox.className = "invisible";
     } else {
         morblox.className = "";
