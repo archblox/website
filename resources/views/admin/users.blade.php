@@ -56,6 +56,16 @@
                 {{ $user->name }}
             </a>
         </div>
+        @if ($user->settings->changed_name)
+        <div class="Row">
+            <div class="text-secondary">
+                Previus Username:
+            </div>
+            <a class="text-secondary">
+                {{ $user->settings->old_name }}
+            </a>
+        </div>
+        @endif
         <div class="Row">
             <div class="text-secondary">
                 ID:

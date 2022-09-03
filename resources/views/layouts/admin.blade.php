@@ -23,7 +23,7 @@
 <body>
     @yield('alert')
 
-    <div id="MasterContainer" class="NewPanel AdminPanel" style="width: 100%;">
+    <div id="MasterContainer" class="AdminPanel" style="width: 100%;">
     <div id="AdminWrapper" class="Navigation">
         <div class="AdminHeader">
             <span class="SiteBrand" href="{{ route('home') }}">
