@@ -101,7 +101,6 @@
                     @else
                         "I'm new to ARCHBLOX!"
                     @endif
-                    @else
                     @if (!empty(App\Models\FeedPost::where('user_id', $user->id)->first()->status))
                         "{{ App\Models\FeedPost::where('user_id', $user->id)->orderBy('id', 'desc')->first()->status }}"
                     @else
