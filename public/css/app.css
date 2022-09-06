@@ -1042,3 +1042,9 @@ div#testingSitePanelWrapper, #BodyWrapper {
 #InviteTreeContainer {
   background-color: rgb(255, 255, 255);
 }
+
+@media (max-width:980px) {
+  .content_signup, #footer_signup {
+    width: 100%;
+  }
+}
