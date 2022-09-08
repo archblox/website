@@ -1,8 +1,4 @@
-html {
-  background-color: #111;
-}
-
-body {
+body.NewPanel {
   background-color: #111;
   min-width: 0px;
 }
@@ -40,21 +36,21 @@ h6 {
   font-weight: 200;
 }
 
-#MasterContainer.NewPanel.AdminPanel {
+.NewPanel #MasterContainer.AdminPanel {
   background-color: #111;
 }
-#MasterContainer.NewPanel #BodyWrapper {
+.NewPanel #MasterContainer #BodyWrapper {
   padding-top: 25px;
   background-color: #111;
   color: #fff;
 }
-.NewPanel.AdminPanel {
+.NewPanel .AdminPanel {
   height: 100%;
 }
-#MasterContainer.NewPanel .iphone-sidebar, #MasterContainer.NewPanel .iphone-content, #MasterContainer #AdminWrapper, #MasterContainer #BodyWrapper {
+.NewPanel #MasterContainer .iphone-sidebar, .NewPanel #MasterContainer .iphone-content, #MasterContainer #AdminWrapper, #MasterContainer #BodyWrapper {
   display: none;
 }
-#MasterContainer.NewPanel #AdminWrapper, #MasterContainer.NewPanel #BodyWrapper {
+.NewPanel #MasterContainer #AdminWrapper, .NewPanel #MasterContainer #BodyWrapper {
   display: block;
 }
 .NewPanel #AdminWrapper.Navigation {
@@ -134,10 +130,10 @@ h6 {
   display: block;
   margin: auto;
 }
-.NewPanel.AdminPanel #Body {
+.NewPanel .AdminPanel #Body {
   background-color: #111;
 }
-.NewPanel.AdminPanel .MainHeader, .NewPanel.AdminPanel .SubHeader {
+.NewPanel .AdminPanel .MainHeader, .NewPanel .AdminPanel .SubHeader {
   text-align: center;
   cursor: default;
   -webkit-touch-callout: none;
@@ -147,7 +143,7 @@ h6 {
   -ms-user-select: none;
   user-select: none;
 }
-.NewPanel.AdminPanel .Reminder {
+.NewPanel .AdminPanel .Reminder {
   color: #ff7300
 }
 .NewPanel .text-error {
@@ -167,25 +163,21 @@ h6 {
   display: inline-block;
   text-align: left;
 }
-.NewPanel.AdminPanel .Stats-Wrapper {
+.NewPanel .AdminPanel .Stats-Wrapper {
   text-align: center;
   padding: 4px;
 }
-.NewPanel.AdminPanel .StatsContainer {
+.NewPanel .AdminPanel .StatsContainer {
   margin: 15px 15px 0 15px;
   padding: 15px;
   border: 1px dashed #ff7300;
   background-color: #080808;
 }
-.NewPanel.AdminPanel .Userlist {
+.NewPanel .AdminPanel .Userlist {
   margin: 10px;
 }
-.NewPanel.AdminPanel form div {
-  display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-display: flex;
-  justify-content: center;
+.NewPanel .AdminPanel form div {
+  text-align: center;
 }
 .NewPanel .SearchCloseBtn{
   color: #af1400;
@@ -199,22 +191,22 @@ display: flex;
 .NewPanel .SearchCloseBtn:hover {
   color: #d41900;
 }
-.NewPanel.AdminPanel #SearchInput {
+.NewPanel .AdminPanel #SearchInput {
   border: 1px solid #757575;
   border-radius: 3px;
   color: #b8b8b8;
   background-color: #000;
 }
-.NewPanel.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
+.NewPanel .AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
   border-color: #0099ff;
 }
 .NewPanel #SearchInput, .NewPanel .btn-neutral {
   margin: 0 5px;
 }
-.NewPanel.AdminPanel #SearchInput:focus-visible {
+.NewPanel .AdminPanel #SearchInput:focus-visible {
   outline: none;
 }
-.NewPanel.AdminPanel .Stats {
+.NewPanel .AdminPanel .Stats {
   font-size: 16px;
   font-weight: 100;
   color: #a7a7a7;
@@ -226,11 +218,11 @@ display: flex;
   -ms-user-select: none;
   user-select: none;
 }
-.NewPanel.AdminPanel .Stats.Counter {
+.NewPanel .AdminPanel .Stats.Counter {
   font-weight: 400;
   color: #fff;
 }
-.NewPanel.AdminPanel .Stat-Separator {
+.NewPanel .AdminPanel .Stat-Separator {
   width: 50%;
   height: 1px;
   background: #555; /*/Fallback for older browsers/*/
@@ -238,7 +230,7 @@ display: flex;
   display: block;
   margin: auto;
 }
-.NewPanel.AdminPanel .SearchContainer {
+.NewPanel .AdminPanel .SearchContainer {
   width: 235px;
   height: auto;
   background-color: #555;
@@ -266,9 +258,9 @@ display: flex;
   height: 100%;
   position: relative;
   display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
@@ -281,7 +273,6 @@ display: flex;
   height: 100%;
 }
 .NewPanel .SearchContainer .UserDetails {
-  width: 95%;
   padding: 5px;
 }
 .NewPanel .SearchContainer .SearchBox {
@@ -318,9 +309,9 @@ display: flex;
   -ms-user-select: none;
   user-select: none;
   display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   flex-direction: row-reverse;
 }
 .NewPanel .UserDetails .Row {
@@ -388,7 +379,7 @@ display: flex;
 .NewPanel .SearchTree a:hover {
   color: #00b7ff;
 }
-.NewPanel .SearchTree a:after {
+.NewPanel .SearchTree a::after {
   content: '';
   border: 1px solid #555;
   border-radius: 100%;
@@ -407,7 +398,6 @@ display: flex;
   font-style: normal;
   font-weight: normal;
   line-height: 1em;
-  vertical-align: middle;
   -webkit-font-smoothing: antialiased;
 }
 .NewPanel #BodyWrapper .forwardArrow::before {
@@ -434,7 +424,6 @@ display: flex;
   font-style: normal;
   font-weight: normal;
   line-height: 1em;
-  vertical-align: middle;
   -webkit-font-smoothing: antialiased;
 }
 .NewPanel #BodyWrapper .userInfo::before {
@@ -480,7 +469,7 @@ display: flex;
   }
 }
 @media (max-width:990px) {
-  .NewPanel.AdminPanel #Body, .NewPanel.AdminPanel #BodyWrapper, .NewPanel.AdminPanel #MasterContainer {
+  .NewPanel .AdminPanel #Body, .NewPanel .AdminPanel #BodyWrapper, .NewPanel .AdminPanel #MasterContainer {
     width: 100% !important; /*!important since late 2012 roblox uses element.style CRINGE!*/
     padding: 0;
   }
@@ -490,8 +479,16 @@ display: flex;
     width: 400px;
   }
 }
+@media (max-width: 600px) {
+  .NewPanel .AuthenticatedUserNameWrapper {
+    font-size: 10px;
+  }
+}
 @media (max-width:500px) {
   .NewPanel .AdminSubHeader ul {
     width: 300px;
+  }
+  .NewPanel .AuthenticatedUserNameWrapper {
+    display: none;
   }
 }

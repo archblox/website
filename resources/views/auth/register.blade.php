@@ -71,6 +71,6 @@
     <p>An Invite Key is required to sign up. You can obtain one from a person that has played ARCHBLOX.</p>
     <p>Don't beg for keys.</p>
     <br>
-    <button class="greenbutton" onClick="this.form.submit();this.disabled=true">Sign Up!</button>
+    <button class="greenbutton" onClick="this.form.submit();this.disabled=true">Signup</button>
 
     @endsection

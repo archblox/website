@@ -279,7 +279,7 @@ div.mySubmenuFixed {
 div.mySubmenuFixed {
   top: 36px;
   background: #363636;
-  background: linear-gradient(#000 10%, #191919 100%);
+  background: #191919;
   height: 25px;
 }
 
@@ -319,7 +319,7 @@ div.mySubmenuFixed {
 
 .Redesign .subMenu {
   height: 25px;
-  background: linear-gradient(#000 10%, #191919 100%);
+  background: #191919;
 }
 
 .navbarbuttoncontainer {
@@ -639,6 +639,10 @@ body {
   color: #000;
 }
 
+.loggedout body {
+  background: transparent;
+}
+
 .content_special,
 #content_special {
   display: -webkit-box;
@@ -926,9 +930,9 @@ button:hover.greenbutton {
   width: 970px;
   margin: auto auto;
   padding: 1em 5px;
-  background: rgb(172, 172, 172);
+  background: #e6e6e6;
   /* Fallback for IE 11*/
-  background-color: rgb(172, 172, 172);
+  background-color: #e6e6e6;
   min-height: fit-content;
 }
 

@@ -20,10 +20,10 @@
     <link href="/css/NewAdminCSS.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="NewPanel">
     @yield('alert')
 
-    <div id="MasterContainer" class="NewPanel AdminPanel" style="width: 100%;">
+    <div id="MasterContainer" class="AdminPanel" style="width: 100%;">
     <div id="AdminWrapper" class="Navigation">
         <div class="AdminHeader">
             <span><a href="{{ route('home') }}" title="Main Site" class="SiteBrand"></a></span>
