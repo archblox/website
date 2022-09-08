@@ -194,6 +194,10 @@ body {
   content: ' | ';
 }
 
+#footer p, #footer a, #footer_signup p, #footer_signup a {
+  color: #000;
+}
+
 @media (min-width: 1688px) {
   #logo_full {
     display: block;

@@ -183,6 +183,13 @@ button {
   color:rgb(0, 0, 0)
 }
 
+div.mySubmenuFixed {
+  background: #363636;
+  background: #000;
+}
+.Redesign .subMenu {
+  background: #000;
+}
 
 .popup {
   color: white;
