@@ -1,0 +1,86 @@
+﻿#ContentBuilderContainer
+{
+    margin-top: 10px;
+}
+
+#ContentBuilderContainer h2
+{
+	font-family: Verdana, Sans-Serif;
+	font-size: 2.5em;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+#ContentBuilderContainer h3
+{
+    background-color: #ccc;
+    font-size: 16px;
+    font-weight: bold;
+	padding: 5px;
+	text-align: center;
+}
+
+#ContentBuilderContainer blockquote
+{
+    margin: 0 auto;
+}
+
+#ContentBuilderContainer .InstructionsPanel,
+#ContentBuilderContainer .UploaderPanel,
+#ContentBuilderContainer .UpsellPanel
+{
+
+}
+
+#ContentBuilderContainer .UploaderPanel,
+#ContentBuilderContainer .UpsellPanel
+{
+    text-align: center;
+}
+
+#ContentBuilderContainer .SelectorArea
+{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#ContentBuilderContainer .DisclaimerLink { z-index: 9; display: inline; font-size: 1.2em; }
+#ContentBuilderContainer .DisclaimerLink a span { display: none; }
+#ContentBuilderContainer .DisclaimerLink a:hover { text-decoration: none; border: none; }
+#ContentBuilderContainer .DisclaimerLink a:hover span  
+{
+   display: block;
+   position:  absolute; top: 50%; left: 12%; width: 75%;
+   padding: 5px; margin: 5px; z-index: 10;
+   color: white; background-color: #6e99c9; 
+   border-width: 1px; border-color: Gray; border-style: ridge;
+   text-decoration: none; line-height: 1.4em;
+   font: 12px Verdana, sans-serif; text-align: left; 
+} 
+/*
+     FILE ARCHIVED ON 22:16:46 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:24:49 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 528.934
+  exclusion.robots: 411.83
+  exclusion.robots.policy: 411.821
+  xauthn.identify: 301.253
+  xauthn.chkprivs: 110.33
+  cdx.remote: 0.086
+  esindex: 0.01
+  LoadShardBlock: 95.363 (3)
+  PetaboxLoader3.datanode: 95.085 (4)
+  CDXLines.iter: 13.562 (3)
+  load_resource: 63.453
+  PetaboxLoader3.resolve: 28.236
+*/

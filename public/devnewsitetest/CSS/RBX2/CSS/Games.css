@@ -1,0 +1,84 @@
+﻿#GamesContainer .DisplayFilters {
+    width:126px;
+}
+.WaitCursor, .WaitCursor *
+{
+    cursor: wait !important;
+}
+
+.PlayButton,
+.BuildButton,
+.PlayButtonSelected,
+.BuildButtonSelected
+{ 
+    height: 54px;
+    width: 123px;
+    display: block;
+    cursor: pointer;
+}        
+
+.PlayButton
+{
+    background-image: url('/web/20120907221650im_/http://www.roblox.com/images/games/playBtn_off.png');
+    background-repeat: no-repeat;
+}
+
+.BuildButton
+{
+    background-image: url('/web/20120907221650im_/http://www.roblox.com/images/games/buildBtn_off.png');
+    background-repeat: no-repeat;
+}
+.PlayButton:hover,
+.PlayButtonSelected
+{
+    background-image: url('/web/20120907221650im_/http://www.roblox.com/images/games/playBtn_on.png');
+    background-repeat: no-repeat;
+}
+.BuildButton:hover,
+.BuildButtonSelected
+{
+    background-image: url('/web/20120907221650im_/http://www.roblox.com/images/games/buildBtn_on.png');
+    background-repeat: no-repeat;
+}
+#BCOnlyPlaces
+{
+    width: 416px;
+}
+#BCOnlyPlaces .StandardBoxHeaderGray 
+{
+    width: 399px;
+    height: 33px;
+    padding:0 7px 0 16px;
+}
+#BCOnlyPlaces .StandardBox
+{
+    padding:5px;
+}
+
+#GamesLeftColumn
+{
+    width: 126px;
+}
+/*
+     FILE ARCHIVED ON 22:16:50 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:05:02 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 484.746
+  exclusion.robots: 368.307
+  exclusion.robots.policy: 368.298
+  xauthn.identify: 157.956
+  xauthn.chkprivs: 210.072
+  RedisCDXSource: 26.3
+  esindex: 0.034
+  LoadShardBlock: 61.92 (3)
+  PetaboxLoader3.datanode: 171.372 (4)
+  CDXLines.iter: 25.601 (3)
+  load_resource: 165.729
+  PetaboxLoader3.resolve: 41.923
+*/

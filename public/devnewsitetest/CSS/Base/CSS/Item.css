@@ -1,0 +1,1697 @@
+﻿.AbuseReportTemplate {
+    display: none;
+}
+
+#ItemContainer
+{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+#ItemContainer span.Robux, .PurchaseModal span.Robux {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Icons/img-robux.png') no-repeat 0px 1px;
+    padding: 0px 0 2px 20px;
+    color: #060;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+#ItemContainer span.Tickets, .PurchaseModal span.Tickets {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Tickets.png') no-repeat 0px 1px;
+    padding: 2px 0 2px 20px;
+    color: #a61;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.PlaceItemContainer
+{
+    font-family: Arial, Helvetica,Sans-Serif !important;
+}
+#ItemContainer.PlaceItemContainer #Summary
+{
+    border: none !important;
+    background: none !important;
+    background-color: #fff;
+	border: dashed 1px #555;
+	display: inline;
+	float: right;
+	padding: 7px;
+	width: 235px;
+}
+#ItemContainer.PlaceItemContainer .item-header
+{
+    color: #000;
+    font: bold 18px Arial, Helvetica, Sans-Serif;
+    padding-bottom: 5px;
+}
+.PlaceItemContainer #Actions_Place
+{
+    border: none !important;
+    background: none !important;
+    float:right !important;
+    text-align: right !important;
+    width: auto !important;
+	padding: 0 !important;
+}
+.PlaceItemContainer .PlayGames
+{
+    border: none !important;
+    background: none !important;    
+}
+
+#ItemContainer .StandardBoxHeader,
+#ItemContainer .StandardBox
+{
+	width: 709px;
+}
+
+#ItemContainer h2
+{
+	background-color: #003366;
+	border-bottom: solid 1px #555;
+	color: #ffffff;
+	font-size: x-large;
+	margin: 0;
+	text-align: center;
+}
+
+#ItemContainer h3
+{
+	font-size: 1.5em;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+	line-height: 1em;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+
+#ItemContainer #Item
+{
+	color: #555;
+	float: left;
+	width: 705px;
+}
+
+.PlaceItem
+{
+    font-family: Arial, Sans-Serif;
+    padding: 0px 5px !important;
+}
+
+#ItemContainer #Thumbnail,
+#ItemContainer #Thumbnail_Place
+{
+    border: solid 1px #eeeeee;
+	
+	padding: 0;
+	text-align: left;
+	min-width: 0;
+}
+
+#ItemContainer #Thumbnail
+{
+	height: 320px;
+	width: 320px;
+}
+
+#ItemContainer #Thumbnail_Place
+{
+	width: 420px;
+}
+
+#ItemContainer #Actions,
+#ItemContainer #Actions_Place
+{
+    background-color: #fff;
+	min-width: 0; /* peekaboo bug fix for IE7 */
+	overflow:hidden;
+	top:420px;
+	
+	width: 408px;
+	padding: 5px;
+	text-align: left;
+}
+#ItemContainer #Actions
+{
+    padding: 5px;
+    text-align: left;
+    width: 230px;
+}
+
+.AddRemoveFavorite
+{
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/cssspecific/rbx2/favoriteStar_20h.png) no-repeat 0px -20px;
+	margin:0px;
+	display:inline-block;
+	position:relative;
+	top:3px;
+	*display:inline;
+    *zoom:1;
+    padding-top:4px;
+    padding-left:25px;
+    height: 18px;
+}
+.AddRemoveFavorite:hover, .AddRemoveFavorite.Favorited
+{
+    background-position: 0px 0px;
+}
+#Summary .SummaryDetails {
+    width: 270px;
+    float: left;
+    margin: 0 20px 5px 20px;
+    padding-bottom: 40px;
+    font-size: 11px;
+    position: relative;
+    min-height: 249px;
+    *z-index: 1;
+}
+#Summary .BuyPriceBoxContainer {
+    text-align: center;
+    float: left;
+}
+#Summary .BuyPriceBox {
+    width: 158px;
+    background-color: #e1e1e1;
+    border: 1px solid #a7a7a7;
+    padding: 5px;
+    color: #666;
+    font-size: 11px;
+}
+#ItemContainer .GearGenreContainer {
+    padding: 12px 0px 15px 0px;
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+}
+.GearGenreContainer #GenresDiv, .GearGenreContainer .GearDiv {
+    float: left;
+    width: 135px;
+}
+#GenresDiv .label {
+    margin: 0;
+}
+#ItemContainer .item-header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #363636;
+    margin: 0;
+    padding: 0;
+}
+#ItemContainer .item-type {
+    font-size: 12px;
+    margin: 2px 0 20px 0px;
+    padding: 0;
+}
+#ItemContainer #Summary h3
+{
+}
+
+#ItemContainer #Summary #Creator
+{
+    float: left;
+}
+
+#ItemContainer #Summary #DescriptionLabel
+{
+	margin-bottom: 0.4em;
+	margin-top: 0.7em;
+}
+
+.label 
+{
+    margin-bottom:0.5em;   
+}
+#Summary .DescriptionPanel {
+    clear: both;
+}
+#ItemContainer #Summary .Description
+{
+	font-weight: normal;
+	font-size: 1em;
+	line-height: normal;
+	max-height: none;
+	line-height: 1.5em;
+	padding: 0px;
+	overflow-x: hidden;
+	text-align: left;
+}
+#ItemContainer #Summary .Description a:hover {
+    cursor: pointer;
+}
+
+#ItemContainer #Summary #ReportAbuse
+{
+    margin: 0 auto;
+    padding: 4px;
+    text-align: center;
+}
+/*
+#ItemContainer .ReportAbuse .AbuseButton a {
+    color:#666;
+    font-size: 11px;
+    background:url("/web/20120907221647im_/http://www.roblox.com/images/Icons/btn-abuse.png") no-repeat top left;
+    padding-left: 16px;
+    padding-bottom: 2px;
+}
+
+#ItemContainer .ReportAbuse .AbuseButton a:hover {
+    background-position:bottom left;
+    color:#FF0000;
+}*/
+#ItemContainer #Summary .ButtonGreyed
+{
+    cursor: default;
+    background-color: #A69FA1;
+    border: solid 1px #000;
+    color: Gray;
+    font: .9em Arial, Helvetica, Sans-Serif;
+    padding: 3px 10px;
+}
+
+#ItemContainer #Summary .ButtonGreyed:hover
+{
+    text-decoration: none;
+    color: Gray;
+}
+
+#ItemContainer #Summary #PublicDomainPurchase #BuyForFree
+{
+	float: left;
+	line-height: 2em;
+	width: 100px;
+}
+
+#ItemContainer #Summary #PublicDomainPurchase #BuyForFree .Button:hover
+{
+    background-color: #6e99c9;
+    border: solid 1px #000;
+}
+
+#ItemContainer #Summary #PublicDomainPurchase #BuyForFree a:hover
+{
+    color: #fff;
+}
+
+#ItemContainer #Summary #RobuxPurchase
+{
+}
+
+#ItemContainer #Summary #RobuxPurchase #BuyWithRobux .Button:hover
+{
+    background-color: #49b745;
+    border: solid 1px #000;
+}
+
+#ItemContainer #Summary #RobuxPurchase #BuyWithRobux a:hover
+{
+    color: #fff;
+}
+
+#ItemContainer #Summary #TicketsPurchase
+{
+    clear: left;
+}
+
+#ItemContainer #BuyWithTickets,#ItemContainer #BuyWithRobux
+{
+    margin: 5px 0px;
+}
+
+#ItemContainer #Summary #TicketsPurchase #BuyWithTickets .Button:hover
+{
+	background-color: #fdd017;
+	border: solid 1px #000;
+}
+
+#ItemContainer #Summary #TicketsPurchase #BuyWithTickets a:hover
+{
+    color: #fff;
+}
+
+#ItemContainer #Configuration
+{
+	background-color: #fff;
+	border-bottom: dashed 1px #555;
+	border-left: dashed 1px #555;
+	border-right: dashed 1px #555;
+	clear: right;
+	float: right;
+	margin-left: 10px;
+	margin-top: -10px;
+	padding: 5px 10px;
+	text-align: center;
+	width: 249px;
+}
+
+.PurchaseModalClose
+{
+    cursor: pointer;
+    position: absolute;
+    right: -18px;
+    top: -18px;
+}
+.PurchaseModal
+{
+    width: 435px;
+    display: none;
+    position: absolute;
+    border: 2px solid #272727;
+    background-color: #E1E1E1;
+    padding: 5px;
+}
+.PurchaseModal .titleBar
+{
+    background-color: #E1E1E1;
+    font: bold 27px Arial, Helvetica, Sans-Serif;
+    letter-spacing: -1px;    
+    color: #363636;
+    height: 38px;
+}
+.PurchaseModalBody
+{
+    background-color: #fff;
+}
+.PurchaseModalMessage
+{
+    padding: 10px;
+    font: bold 15px Arial, Helvetica, Sans-Serif;
+    color: #000;
+    height: 110px;
+}
+.PurchaseModalMessageImage
+{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.PurchaseModalMessageText
+{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width: 275px;
+    vertical-align: top;
+    padding-top: 28px;
+}
+.PurchaseModalButtonContainer
+{
+    clear: left;
+    padding-top: 10px;
+    text-align: center;
+}
+.PurchaseModalFooter
+{
+    color: #666;
+    font: normal 12px Arial, Helvetica, Sans-Serif;
+    text-align: center;
+    margin: 10px auto 0px;
+    padding-bottom: 5px;
+}
+.ProcessingModal
+{
+    width: 300px;
+    min-height: 50px;
+    display: none;
+    position: absolute;   
+}
+.ProcessingModalBody
+{
+    margin: 15px auto;
+    text-align: center;
+    vertical-align: middle;
+    font: bold 18px arial, helvetica, sans-serif;
+    background: none;
+    color: #fff;
+}
+.CurrencyColor1
+{
+    color: #080;
+    padding-left: 20px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -42px;
+}
+.CurrencyColor2
+{
+    color: #A61;
+    padding-left: 20px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -122px;
+}
+.CurrencyColorFree
+{
+    color: #080;
+}
+
+.ItemVerb
+{
+	background-color: #fff;
+	border: dashed 1px #555;
+	text-align: center;
+	height: 20px;
+	margin-top: 5px;
+}
+
+.OwnerPlaceActionPanel
+{
+    position:absolute;
+    text-align:right;
+    width: 250px;
+}
+.OwnerPlaceAction
+{
+	height: 20px;
+	margin-top: 5px;
+}
+
+.PlaceItemHR
+{
+    background-color: #848484;
+    border: 0;
+    color: #848484;
+    height: 1px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#ItemContainer .Ownership
+{
+	clear: right;
+	color: #ff0000;
+	float: right;
+	margin-left: 10px;
+	margin-top: 0;
+	padding: 10px 10px;
+	text-align: center;
+	width: 230px;
+}
+
+#ItemContainer .PlayGames
+{
+    background-color: #ccc;
+	border: dashed 1px Green;
+	color: Green;
+	margin-top: 10px;
+	padding: 10px 5px;
+	text-align: center;
+	width: 408px;
+}
+#ItemContainer .BadgeStats
+{
+	width: 720px;
+	padding: 10px 0px;
+}
+
+#ItemContainer .RunningGames
+{
+    background-color: #ccc;
+	border: dashed 1px #555;
+	color: #555;
+	margin-top: 10px;
+	padding: 10px 5px;
+	text-align: center;
+	width: 408px;
+}
+
+#ItemContainer .GameInstances
+{
+    background-color: #fff;
+	border: solid 1px #000;
+	color: #555;
+	width: 408px;
+}
+
+#ItemContainer .RefreshRunningGames
+{
+    margin: 10px 0;
+    text-align: center;
+}
+
+#ItemContainer #Ownership .Button,
+#ItemContainer .PlayGames .Button
+{
+	background-color: #fff;
+}
+
+#ItemContainer #Ownership .Button:Hover
+{
+	background-color: #fff;
+	border: solid 1px #ff0000;
+	color: #ff0000;
+}
+
+#ItemContainer .PlayGames .Button:Hover
+{
+	background-color: #fff;
+	border: solid 1px Green;
+	color: Green;
+}
+#ItemContainer .TabbedInfoContainer
+{
+    margin: 10px;
+    margin-top: 0;
+    width: 665px;
+}
+#ItemContainer .TabbedInfoContainer h3
+{
+    padding: 5px;
+}
+
+#ItemContainer .CommentsContainer,
+#ItemContainer .TabbedInfoContainer
+{
+    margin: 10px;
+    margin-top: 0;
+    width: 665px;
+}
+
+#ItemContainer .TabbedInfoContainer h3
+{
+    padding: 5px;
+}
+
+#ItemContainer .CommentsContainer .HeaderPager,
+#ItemContainer .CommentsContainer .FooterPager
+{
+    padding: 5px 0;
+    text-align: right;
+}
+
+#ItemContainer .CommentsContainer .Comments
+{
+    border: dashed 1px #555;
+    overflow: hidden;
+    width: 663px;
+}
+
+#ItemContainer .CommentsContainer .Comment,
+#ItemContainer .CommentsContainer .AlternateComment
+{
+    padding: 7px 10px;
+}
+
+#ItemContainer .CommentsContainer .Comment
+{
+    background-color: #fff;
+}
+
+#ItemContainer .CommentsContainer .AlternateComment
+{
+    background-color: #eee;
+}
+
+#ItemContainer .CommentsContainer .Commenter
+{
+    float: left;
+    width: 110px;
+}
+
+#ItemContainer .CommentsContainer .Avatar
+{
+    border: solid 1px #555;
+    height: 100px;
+    width: 100px;
+}
+
+.Avatar
+{
+    padding:0 0 8px 0;
+}
+
+#ItemContainer .CommentsContainer .Post
+{
+    float: left;
+    width: 80%;
+}
+
+#ItemContainer .CommentsContainer .Content
+{
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+#ItemContainer .CommentsContainer .PostAComment
+{
+    margin: 10px 0 0 0;
+}
+
+#ItemContainer .CommentsContainer .PostAComment .Buttons
+{
+    margin: 10px 0 0 0;
+}
+
+#ItemContainer .CommentsContainer .MultilineTextBox,
+#ItemContainer .CommentsContainer textarea
+{
+    min-height: 0px;
+    width: 400px;
+}
+
+
+.Avatar
+{
+    padding:0 0 8px 0;
+}
+#EditItemContainer
+{
+	
+}
+
+#EditItem
+{
+	color: #555;
+	float: left;
+	font-family: Arial, Sans-Serif;
+	margin: 0;
+}
+
+#EditItemContainer h2
+{
+	background-color: #ccc;
+	border-bottom: solid 1px #000;
+	color: #333;
+	font-family: Comic Sans MS, Sans-Serif;
+	font-size: x-large;
+	margin: 0;
+	text-align: center;
+}
+
+#EditItemContainer fieldset
+{
+	font-size: 1.2em;
+	margin: 0;
+	color:#000;
+}
+
+#EditItemContainer #Confirmation
+{
+	border: dashed 1px #ff0000;
+	background-color: #ccc;
+	color: #ff0000;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 10px 5px;
+	width: 410px;
+}
+
+#EditItemContainer #ItemName
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	width: 420px;
+}
+
+#EditItemContainer #ItemThumbnail
+{
+	border: solid 1px #555;
+	height: 230px;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	width: 420px;
+}
+
+#EditItemContainer #ItemDescription
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	width: 420px;
+}
+
+#EditItemContainer #Comments,
+#EditItemContainer #PlaceAccess,
+#EditItemContainer #PlaceCopyProtection,
+#EditItemContainer #AllowGear,
+#EditItemContainer #SetGenres,
+#EditItemContainer #VersionHistory,
+#EditItemContainer #PublicDomain,
+#EditItemContainer #SellThisItem,
+#EditItemContainer #PlaceReset,
+#EditItemContainer #PlaceBuildAccess,
+.MyItemOptions
+{
+    padding: 5px;
+    margin: 10px;
+}
+
+#EditItemContainer #SellThisItem #Pricing
+{
+    background-color: #fff;
+    border: dashed 1px #000;
+    margin: 15px 5px 5px 5px;
+    padding: 5px;
+}
+
+#EditItemContainer #SellThisItem #Fee,
+#EditItemContainer #SellThisItem #Profit
+{
+}
+
+#EditItemContainer #SellThisItem #Price
+{
+	margin-top: 10px;
+}
+
+#EditItemContainer #SellThisItem #Price .TextBox
+{
+	padding: 2px 4px;
+	width: 75px;
+}
+
+
+#EditItemContainer .CopyProtectionRow,
+#EditItemContainer .EnableCommentsRow,
+#EditItemContainer .PlayerLimit,
+#EditItemContainer .PlaceType,
+#EditItemContainer .PublicDomainRow,
+#EditItemContainer .SellThisItemRow,
+#EditItemContainer .ChatSettings,
+#EditItemContainer .GearSettings,
+#EditItemContainer .GenreSettings,
+#EditItemContainer .MembershipLevelSettings
+{
+	font-size: .9em;
+	margin: 10px 35px;
+}
+#EditItemContainer .GenreSettings
+{
+	margin: 10px 0px;
+}
+#EditItemContainer .GearSettings
+{
+    margin: 10px 40px;
+}
+#EditItemContainer .PlaceAccessRow,
+#EditItemContainer .ResetPlaceRow
+{
+	font-size: .9em;
+	margin: 10px 0;
+	text-align: center;
+}
+
+#EditItemContainer .PlaceAccessRow
+{
+	margin: 10px 0 10px 100px;
+	text-align: left;
+}
+
+#EditItemContainer .PlayerLimit .ClassicPlace 
+{
+    float:left;
+}
+
+#EditItemContainer .PlayerLimit .MegaPlace 
+{
+    position:relative;
+    left: 20px;
+}
+
+#EditItemContainer .PlayerLimit .ClassicPlace .NumPlayers
+{
+    margin:5px 0 0 22px;
+}
+
+#ConfigurePlaceContainer .ResetPlaceRow .Button
+{
+	margin: 0 auto;
+}
+
+#EditItemContainer .PricingLabel
+{
+	float: left;
+	font-weight: bold;
+	margin-right: 5px;
+	text-align: right;
+	width: 155px;
+}
+
+#EditItemContainer .PricingField_Robux
+{
+	float: left;
+	margin-left: 5px;
+	text-align: left;
+	width: 110px;
+}
+
+#EditItemContainer .PricingField_Tickets
+{
+	float: left;
+	margin-left: 5px;
+	text-align: left;
+	width: 110px;
+}
+
+#EditItemContainer .Buttons
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#EditItemContainer .Button
+{
+	border-color: #555;
+	color: #555;
+	cursor: pointer;
+}
+
+#EditItemContainer .Button:hover
+{
+	background-color: #6e99c9;
+	color: #fff;
+}
+
+#EditItemContainer .Label
+{
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+
+#EditItemContainer .TextBox
+{
+	border: dashed 1px #555;
+	margin: 0;
+	padding: 5px 10px;
+	width: 400px;
+}
+
+#EditItemContainer .Multiline
+{
+	border: dashed 1px #555;
+	margin: 0;
+	padding: 5px 10px;
+	width: 400px;
+}
+
+#EditItemContainer .Suggestion
+{
+	font: normal .8em/normal Verdana, sans-serif;
+	padding-left: 9px;
+}
+
+#EditItemContainer .ItemConfigRadioButton
+{
+    margin-left: 20px;    
+}
+
+#EditItemContainer .ItemConfigNotice
+{
+    margin: 10px 20px;
+    font-size:.8em;
+    color:red;
+}
+
+.GroupBuildRunningGameItem
+{
+    border: solid 2px #5500FF;  
+}
+.PrivateSales {
+    border-top: 1px solid #CCC;
+    padding-top: 20px;
+}
+.PrivateSales .header {
+    font-weight: bold;
+    margin: 0px 0px 15px 0px;
+    font-size: 16px;
+    color: #000;
+}
+#UserSalesTab {
+    width: 330px;
+    color: #000;
+    float: left;
+    margin-right: 7px;
+}
+.ItemSalesTable {
+    width: 100%;
+}
+#UserSalesTab .SellerNameAndSerial {
+    width: 155px;
+    margin-left: 2px;
+}
+#UserSalesTab .SellerName {
+    margin: 2px 0px;
+    padding: 0px;
+}
+#UserSalesTab .SerialNum {
+    margin: 2px 0px;
+    padding: 0px;
+    color: #666;
+    font-size: 10px;
+}
+#UserSalesTab .PriceBuyContainer {
+    text-align: center;
+}
+#UserSalesTab td {
+    padding-bottom: 10px;
+}
+.pgItemsForResale {
+    text-align: center;
+}
+.pgItemsForResale a[disabled=disabled] {
+    text-decoration: none;
+    cursor: default;
+    color: #808080;
+}
+.PriceGraph {
+    width: 380px;
+    float: left;
+    overflow: hidden;
+    padding-left: 7px;
+    border-left: 1px solid #ccc;
+    font-size: 11px;
+}
+.PriceGraph .header {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+}
+#ItemContainer .RobuxText {
+    color: #008000;
+    font-weight: bold;
+}
+.PriceGraph .Options {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+    font-size: 11px;
+}
+.pricestats {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.pricestats .days30,.pricestats .days90,.pricestats .days180 {
+    display: none;
+}
+.pricestats span.selected {
+    display: inline;
+}
+#days30.selected, #days90.selected, #days180.selected {
+    font-weight: bold;
+    color: #000;
+}
+#days30:hover,#days90:hover,#days180:hover {
+    cursor: pointer;
+}
+.VisitButton, .VisitButtonDisabled
+{
+    display: inline;
+    width: 10px;
+}
+.VisitButtonDisabled
+{
+    opacity: .5;
+    filter:alpha(opacity=50);
+}
+.MultiplayerVisit, .MultiplayerVisitDisabled {
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/Play.png);
+    width:250px;
+    height:48px;
+}
+.MultiplayerVisitDisabled 
+{
+    cursor: default;
+    display:none;
+}
+.SoloVisit {
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/PlaySolo.png);
+    width:143px;
+    height:48px;
+}
+.SoloVisitText {
+    display:none;
+}
+.BuildSolo {
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/BuildSolo2.png);
+    width: 143px;
+    height: 48px;
+}
+div.VisitButtonsRight a.BuildSolo {
+	float:left;
+	margin-top:3px;
+}
+.EditButton {
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/EditMode2.png);
+    width: 143px;
+    height: 48px;
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+	display:inline;
+}
+.PersonalServerAccessDenied
+{
+    color: red;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 15px 0;
+}
+
+.PlaceInfoIcons {
+    text-align: center;
+}
+.iPublic,
+.iLocked,
+.iUnlocked,
+.SharedIcon,
+.CopyLockedIcon,
+.AllGearIcon,
+.GenreGearIcon,
+.NoGearIcon
+{
+    display:inline-block;
+    width:16px;
+    height:16px;
+}
+.iPublic
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/public.png);
+}
+.iLocked
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/locked.png);
+}
+.iUnlocked
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/unlocked.png);
+}
+.SharedIcon
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/Shared.png);
+}
+.CopyLockedIcon
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/CopyLocked.png);
+}
+.AllGearIcon
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/Suitcase16x16.png);
+}
+.GenreGearIcon
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/GenreSuitcase16x16.png);
+}
+.NoGearIcon
+{
+    background:url(/web/20120907221647im_/http://www.roblox.com/images/NoSuitcase16x16.png);
+}
+
+/* Badges */
+#BadgeStatsHeader
+{
+    color: #666;
+    font: bold 13px Arial, Helvetica, Sans-Serif;
+    padding-left: 5px;
+}
+.BadgeStatsHR
+{
+    margin-left: 0px;
+    *margin-left: -10px;
+    width:708px;
+}
+#BadgeStats
+{
+    font-size: 10px;
+    width: 708px;
+}
+/* Override width for new item page */
+.PlaceItemContainer .BadgeStatsHR
+{
+    width:720px;
+}
+/* Override width for new item page */
+.PlaceItemContainer #BadgeStats
+{
+    width: 720px;
+}
+#BadgeStats .BadgeTable
+{
+    border: 0px;
+    border-spacing:0px;
+    font: normal 12px arial, helvetica, sans-serif;
+    width: 100%;
+}
+#BadgeStats .BadgeTable a
+{
+    color: #496780
+}
+#BadgeStats .BadgeRow,
+#BadgeStats .AlternatingBadgeRow
+
+
+{
+    height:100px;
+}
+#BadgeStats .AlternatingBadgeRow
+
+{
+    background-color: #dddde0;
+    color: #000;
+}
+#BadgeStats .BadgeIconColumn
+
+{
+    text-align:center;
+    width:100px;
+}
+#BadgeStats .BadgeDescriptionColumn
+
+{
+    width: 60%;
+    padding-right: 50px;
+    padding-left: 5px;
+}
+#BadgeStats .BadgeStatsColumn
+
+{
+    width:26%;
+    padding-left: 5px;
+}
+#BadgeStats .BadgeEmptyTableColumn
+
+{
+    width:100%;
+}
+#BadgesShowContainer
+{
+    text-align: center;
+    margin-top: 5px;
+    font: bold 12px Arial, Helvetica, sans-serif;
+}
+#BadgesShowMore
+{
+    cursor: pointer;
+    color: #00f;   
+}
+/* END Badges */
+
+.item-header h1
+{
+    margin: 0; padding: 0; font-size: 16px; font-style: inherit; display: inline;
+}
+
+.section
+{
+    padding:8px 0 0 0;   
+}
+
+.expires-div
+{
+    margin:0px 0px 5px 0px;
+    font-weight: bold;
+    color: #000;
+}
+
+#timer
+{
+    color:#000;   
+    margin:0 0 5px 0;
+}
+#timer span {
+    font-weight: bold;
+    color: #a00;
+}
+.item-detail div, .creator-name
+{
+    line-height:1.5em;   
+}
+#Summary .item-detail {
+    float: left;
+    padding-left: 5px;
+}
+
+#placeContainer
+{
+    float: left; width: 420px; overflow: hidden;
+}
+#assetContainer {
+    float: left; width: 320px; overflow: hidden;
+}
+
+.updateSetsDiv
+{
+    float: right; width: 248px; border: 2px dashed maroon; margin-top: 5px;
+}
+
+.newVersionMsg
+{
+    padding: 5px 0px 5px 0px; text-align: center; color: Yellow; background-color: Maroon; float: right; width: 100%;
+}
+
+#updateSetContainer
+{
+    padding: 5px; float: right; width: 100%
+}
+
+#updateSetContainer p
+{
+    cursor: pointer; font-size: 12px; float: right; width: 100%;
+}
+
+.resaleError
+{
+    background-color: #fff;
+    padding: 0;
+    color: #a00;
+    font-size: 12px;
+}
+
+.SmallGrayText {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+    padding-top: 10px;
+    display: block;
+}
+
+.resaleConfirmation
+{
+    padding: 5px; background-color: #00FF00;
+}
+
+.sellCollectibleMsg
+{
+    font-family: Verdana,Helvetica,sans-serif; font-weight: bold; font-size: 14px;
+}
+
+.groupBuildingGameText
+{
+  font-size: 16px; font-weight: bold; font-style: italic; line-height: 24px;
+}
+
+
+#ProcessPurchase_Free, #ProcessPurchase_Robux, #ProcessPurchase_Tickets,
+#ProcessRenew_Free, #ProcessRenew_Robux, #ProcessRenew_Tickets,
+#ProcessROBLOXPurchase
+{
+    margin: 2.5em auto; display: none;
+}
+
+#Processing_Free, #Processing_Robux, #Processing_Tickets,
+#Processing_FreeRenew, #Processing_RobuxRenew, #Processing_TicketsRenew,
+.processingMsg
+{
+    margin: 0 auto; text-align: center; vertical-align: middle;
+}
+
+.createSetPanelPopup
+{
+    width: 400px; height: 100%; padding: 0px; float: left; display: none;
+}
+
+.GetAFreeAccount:hover {
+	background-position: 0px 56px;
+}
+.GetAFreeAccount {
+    width:316px; height:56px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/getAFreeAccount.png);   
+}
+
+.PlayAsGuest:hover {
+	background-position: 0px 56px;
+}
+.PlayAsGuest {
+    width:316px; height:56px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/playAsGuest.png);   
+}
+
+.closeBtnCircle_35h:hover {
+	background-position: 0px 35px;
+}
+.closeBtnCircle_35h {
+    width:35px; height:35px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/closeBtnCircle_35h.png);   
+}
+.closeBtnCircle_20h:hover {
+	background-position: 0px 20px;
+}
+.closeBtnCircle_20h {
+    width:20px; height:20px;
+    cursor: pointer; 
+    margin-left:395px; 
+    position:absolute; 
+    top:5px; left:5px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-x.png);   
+}
+.fblike
+{
+    display:inline-block; 
+    float:left;
+    background-color:White;
+}
+
+.btn-buynow 
+{
+    cursor: pointer;
+    padding-top: 10px;
+    margin-left: 135px;
+    width: 117px;
+    height: 40px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-buynow.png);   
+}
+.btn-buynow:hover 
+{
+	background-position: 0px 50px;
+}
+
+.btn-buynow2
+{
+    width: 127px;
+    height: 50px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-buynow-2.png) no-repeat;
+}
+.btn-buynow2:hover 
+{
+	background-position: 0px -50px;
+}
+
+.btn-cancel
+{
+    width: 96px;
+    height: 50px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-cancel.png) no-repeat;
+}
+.btn-cancel:hover 
+{
+	background-position: 0px -50px;
+}
+
+.btn-continueshopping 
+{
+    cursor: pointer;
+    padding-top: 10px;
+    width: 213px;
+    height: 40px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-continue_shopping.png);   
+}
+.btn-continueshopping:hover 
+{
+	background-position: 0px 50px;
+}
+
+.btn-tradecurrency
+{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-trade_currency.png) no-repeat;
+}
+.btn-tradecurrency:hover
+{
+    background-position: 0px -50px;
+}
+
+.btn-sellnow
+{
+    cursor: pointer;
+    width: 129px;
+    height: 50px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-sell_now.png) no-repeat;
+}
+.btn-sellnow:hover
+{
+    background-position: 0px -50px;
+}
+
+.btn-buyrobux
+{
+    cursor: pointer;
+    width: 159px;
+    height: 50px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-buy_robux.png) no-repeat;
+}
+.btn-buyrobux:hover
+{
+    background-position: 0px -50px;
+}
+
+/* Recommendations */
+.RecommendationHeader2
+{
+    color: #666;
+    font: bold 13px Arial, Helvetica, Sans-Serif;
+    padding-left: 5px;
+}
+.WideAspectRatio
+{
+    font: bold 11px Arial, Helvetica, Sans-Serif;
+    padding: 0px 7px;
+    width:160px !important;
+}
+.WideAspectRatio .AssetThumbnail
+{
+	background-color: #FFF;
+	border: 1px #000;
+	height: 100px;
+	width: 160px;
+}
+.WideAspectRatio .AssetDetails
+{
+	overflow: hidden;
+	padding: 5px;
+	height:90px;
+	width: 158px;
+}
+.WideAspectRatio .AssetName a
+{
+	line-height: 1.5em;
+	vertical-align: top;
+}
+/* END Recommendations */
+.RegisterBlueButton
+{
+    background-image: url("/web/20120907221647im_/http://www.roblox.com/images/Buttons/Register-blue.png");
+    height: 20px;
+    width: 92px;
+}
+.RegisterBlueButton:hover
+{
+    background-position: 0 -20px;
+    cursor: pointer;
+}
+.SignupRedButton
+{
+    background-image: url("/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-signup.png");
+    height: 50px;
+    width: 111px;
+}
+.SignupRedButton:hover
+{
+    background-position: 0 -50px;
+    cursor: pointer;
+}
+.DescriptionSeeMore
+{
+    color: #00f;
+    cursor: pointer;    
+}
+.GenreInfo .GamesInfoIcon
+{
+    display: inline-block; 
+    background-image: url(/web/20120907221647im_/http://www.roblox.com/images/GenreIcons/GenreIconsSprite.png);
+    width: 16px;
+    height: 16px;
+}
+.SignupButtonBlue, .SignupButtonBlue:hover {
+    width: 120px;
+    height: 50px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-sign_up-blue-lg.png) no-repeat top;
+    margin: 0 auto;
+}
+.SignupButtonBlue:hover {
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-sign_up-blue-lg.png) no-repeat bottom;
+}
+.PlaceItemContainer .RecommendationHeader2 {
+    text-align: left;
+    width: 247px;
+}
+
+.RobuxAndTicketsPurchasePanel {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/UI/img-or_divider.png') no-repeat top left;
+    display: block;
+    height: 8px;
+    width: 147px;
+    margin: 0px 0px 5px 5px;
+}
+.GreenRobuxBuyBtn {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-buy_with_r$.png') no-repeat;
+}
+.GreenTicketsBuyBtn {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-buy_with_tx.png') no-repeat;
+}
+.GreenRentBtn {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-rent_now.png') no-repeat;
+    width: 124px;
+    height: 34px;
+    display: block;
+    margin-left: 17px;
+    *margin-left: 0;
+}
+.GreenTakeOneBtn {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-take_one.png') no-repeat top left;
+    width: 117px;
+    height: 34px;
+    display: block;
+    margin-left: 21px;
+    *margin-left: 0;
+    margin-bottom: 5px;
+}
+.GreenBorrowBtn {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-borrow.png') no-repeat top left;
+    width: 99px;
+    height: 34px;
+    display: block;
+    margin-left: 30px;
+    *margin-left: 0;
+    margin-bottom: 5px;
+}
+.GreenRobuxBuyBtn,.GreenTicketsBuyBtn {
+    background-position: top left;
+    width: 142px;
+    height: 34px;
+    display: block;
+    margin-left: 8px;
+    *margin-left: 0;
+}
+.GreenRobuxBuyBtn:hover,.GreenTicketsBuyBtn:hover,.GreenRentBtn:hover,.GreenTakeOneBtn:hover,.GreenBorrowBtn:hover {
+    background-position: bottom left;
+}
+.GreenRobuxBuyBtn.BtnDisabled,.GreenTicketsBuyBtn.BtnDisabled,.GreenRentBtn.BtnDisabled,.GreenTakeOneBtn.BtnDisabled,.GreenBorrowBtn.BtnDisabled {
+    background-position: 0px -34px;
+    cursor: default;
+}
+#ItemContainer .GreenBuyNowBtn.medium {
+    margin: 1px 1px 5px 22px;
+    *margin-left: 0;
+}
+
+.LimitedEditionRemaining {
+    color: #a00;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#RobuxPurchaseDisabledMsg,#PricePublicDomain,.PrivateSalesPurchasePanel,.PrivateSalesPurchasePanel .Price,#Summary .BuyPriceBox, .PublicDomainPrice {
+    margin-bottom: 5px;
+}
+.PublicDomainPrice .RobuxText {
+    font-size: 14px;
+}
+.PrivateSalesPurchasePanel .Price {
+    display: block;
+}
+.PrivateSalesPurchasePanel .invisible {
+    display: none;
+}
+#ItemContainer #Summary {
+    padding: 0px;
+    margin-bottom: 20px;
+    *width: 480px;
+    float: left;
+    font-size:11px;
+    color:black;
+}
+#Summary .SocialMediaContainer .fblike 
+{
+    max-width: 275px;
+    margin-left: 20px;
+}
+.Description.Full {
+    white-space: pre;
+}
+.Description.body {
+    white-space: pre-line;
+    *white-space: pre;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+.BuyPriceBoxContainer .FavoriteStar {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/star.png') no-repeat;
+    padding: 2px 0px 2px 20px;
+    margin-top: 5px;
+}
+.BuyPriceBoxContainer .disabled,.BuyPriceBoxContainer .disabled:hover {
+    color: #666;
+    cursor: default;
+    text-decoration: none;
+}
+
+#ItemContainer #Thumbnail {
+    border: none;
+}
+#ItemContainer #Summary .label {
+    color: #666;
+    font-size: 11px;
+    margin: 0;
+}
+.SetList.ItemOptions {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+.SetList.ItemOptions a.btn-dropdown, .ItemOptions a.btn-dropdown-active {
+    width: 13px;
+}
+.AssetRecommenderContainer {
+    font-weight: normal;
+    font-size: 11px;
+    text-align: center;
+}
+.AssetRecommenderContainer .Label {
+    color: #666;
+    font-weight: normal;
+}
+.AssetRecommenderContainer .Label {
+    font-weight: bold;
+}
+.AssetRecommenderContainer td {
+    padding: 0 7px;
+}
+.AssetRecommenderContainer tr {
+    display: block;
+}
+#Summary #Creator .AvatarImage {
+    width: 70px;
+    height: 70px;
+}
+
+.PurchaseModal .simplemodal-close a {
+    background: url('/web/20120907221647im_/http://www.roblox.com/images/Buttons/btn-x.png') no-repeat top left;
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+}
+.PurchaseModal .simplemodal-close a:hover {
+    background-position: bottom left;
+    cursor: pointer;
+}
+
+/*
+     FILE ARCHIVED ON 22:16:47 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:35:48 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 389.607
+  exclusion.robots: 258.947
+  exclusion.robots.policy: 258.939
+  xauthn.identify: 125.682
+  xauthn.chkprivs: 133.003
+  cdx.remote: 0.065
+  esindex: 0.009
+  LoadShardBlock: 106.232 (3)
+  PetaboxLoader3.datanode: 142.324 (4)
+  CDXLines.iter: 11.318 (3)
+  load_resource: 273.965
+  PetaboxLoader3.resolve: 202.332
+*/

@@ -1,0 +1,210 @@
+﻿.foo {} /* W3C CSS validator likes CSS files to start with a class rather than a comment. Soooooo.... */
+
+/* This style sheet is intended to contain RARELY CHANGED rules used when the ChangePassword control adapter is enabled. */
+/* Empty rules are provided merely as a convenience for your future use or experimentation. */
+
+.AspNet-ChangePassword
+{
+}
+
+.AspNet-CreateUserWizard
+{
+}
+
+.AspNet-DataList
+{
+}
+
+.AspNet-DataList table
+{
+}
+
+.AspNet-DataList table caption
+{
+}
+
+.AspNet-DataList table thead
+{
+}
+
+.AspNet-DataList table thead tr
+{
+}
+
+.AspNet-DataList table thead tr th
+{
+}
+
+.AspNet-DataList table tfoot
+{
+}
+
+.AspNet-DataList table tfoot tr
+{
+}
+
+.AspNet-DataList table tfoot tr td
+{
+}
+
+.AspNet-DataList table tbody
+{
+}
+
+.AspNet-DataList table tbody tr
+{
+}
+
+.AspNet-DataList table tbody tr td
+{
+}
+
+div.AspNet-DetailsView-Data ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+div.AspNet-DetailsView-Data li
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.AspNet-FormView-Pagination
+{
+}
+
+.AspNet-GridView
+{
+}
+
+.AspNet-Login
+{
+}
+
+.AspNet-LoginStatus
+{
+}
+
+ul.AspNet-Menu 
+{
+    position: relative;
+}
+
+
+ul.AspNet-Menu, 
+ul.AspNet-Menu ul
+{
+    margin: 0;
+    padding: 0;
+    display: block;
+
+}
+
+ul.AspNet-Menu li
+{
+    position: relative;
+    list-style: none;
+}
+
+ul.AspNet-Menu li a,
+ul.AspNet-Menu li span
+{
+    display: block;
+    text-decoration: none;
+}
+
+ul.AspNet-Menu ul
+{
+    position: absolute;
+    display: none;    
+}
+
+/* Add more rules here if your menus have more than three (3) tiers */
+ul.AspNet-Menu li:hover ul ul,
+ul.AspNet-Menu li:hover ul ul ul,
+ul.AspNet-Menu li.AspNet-Menu-Hover ul ul,
+ul.AspNet-Menu li.AspNet-Menu-Hover ul ul ul
+{
+    display: none;
+}
+
+/* Add more rules here if your menus have more than three (3) tiers */
+ul.AspNet-Menu li:hover ul,
+ul.AspNet-Menu li li:hover ul,
+ul.AspNet-Menu li li li:hover ul,
+ul.AspNet-Menu li.AspNet-Menu-Hover ul,
+ul.AspNet-Menu li li.AspNet-Menu-Hover ul,
+ul.AspNet-Menu li li li.AspNet-Menu-Hover ul
+{
+    display: block;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* When the Menu control's Orientation property is Horizontal the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Horizontal. This allows us to force the top tier of the menu to layout */
+/* horizontally, whereas all subsequent tiers of the menu lay out vertically. */
+
+.AspNet-Menu-Horizontal ul.AspNet-Menu li
+{
+    float: left;
+}
+
+.AspNet-Menu-Horizontal ul.AspNet-Menu li li
+{
+    float: none;
+}
+
+.AspNet-PasswordRecovery
+{
+}
+
+div.AspNet-TreeView
+{
+    margin: 0;
+    padding: 0;
+}
+
+div.AspNet-TreeView ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.AspNet-TreeView-Show
+{
+}
+
+.AspNet-TreeView-Hide
+{
+    display:none;
+}
+
+/*
+     FILE ARCHIVED ON 22:16:46 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:22:45 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 187.511
+  exclusion.robots: 104.327
+  exclusion.robots.policy: 104.317
+  xauthn.identify: 79.021
+  xauthn.chkprivs: 24.955
+  cdx.remote: 0.106
+  esindex: 0.012
+  LoadShardBlock: 59.569 (3)
+  PetaboxLoader3.datanode: 60.188 (4)
+  CDXLines.iter: 13.23 (3)
+  load_resource: 37.904
+  PetaboxLoader3.resolve: 26.006
+*/

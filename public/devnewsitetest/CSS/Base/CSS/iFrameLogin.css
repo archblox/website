@@ -1,0 +1,166 @@
+﻿/* File Created: April 11, 2012 */
+#iFrameLogin
+{
+	position: absolute;
+	top: 27px;
+	right: 0px;
+	width: 340px;
+	height: 128px;
+	border: 1px solid #0C3060;
+	border-top: none;
+}
+.fbSplashPageConnect 
+{
+	margin: 5px 0px;
+}
+#facebookSignIn 
+{
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 10px;
+}
+.fbLoginButton
+{
+	background: url("/web/20120907221646im_/http://www.roblox.com/images/Facebook/btn-login_w_fb.png") no-repeat;
+	background-position: 0px 0px;
+	width: 153px;
+	height: 22px;
+	display: inline-block;
+}
+.fbLoginButton: hover
+{
+	background-position: 0px -22px;
+}
+.LoginFormLabel
+{
+	font: normal 11px arial;
+	color: black;
+}
+.LoginFormInput 
+{
+	width: 150px;
+	height: 19px;
+	border: 1px solid #A7A7A7;
+	background: #fff;
+	padding-left: 4px;
+	*margin-left: -10px /*hack for ie7 and below*/
+}
+.LoginFormFieldSet 
+{
+	position: relative;
+	height: 39px;
+	*margin-top : -10px;
+}
+.UserNameDiv
+{
+	float: left;
+	width: 156px;
+}
+.PasswordDiv
+{
+	float: right;
+	width: 158px;
+	position: relative;
+}
+.ResetPassword
+{
+	font: normal 11px Arial;
+	color: #095FB5;
+	right: 0;
+	position: absolute;
+}
+.newLogin 
+{
+	margin: 10px;
+}
+#SocialNetworkSignIn {
+	border-top: 1px solid #ACACAC;
+}
+.iFrameBlueLogin
+{
+	background: url("/web/20120907221646im_/http://www.roblox.com/images/btn-login.png") no-repeat;
+	background-position: 0px 0px;
+	height: 23px;
+	width: 54px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -12px;
+}
+.iFrameBlueLogin: hover
+{
+	background-position: 0px -23px;
+}
+.iFrameLoginSignUp
+{
+	margin-top: 6px;
+	float: right;
+	position: relative;
+}
+#headerLogin: hover
+{
+	background-position: 0px -54px;
+}
+#headerLogin.active
+{
+	background-position: 0px -27px;
+}
+#headerLogin
+{
+	color: white;
+	background: url("/web/20120907221646im_/http://www.roblox.com/images/btn-login_dropdown.png") no-repeat;
+	display: inline-block;
+	height: 27px;
+	width: 62px;
+	position: relative;
+	cursor:pointer; 
+}
+#HeaderSignUp
+{
+	font-family: Arial;
+	font-weight: bold;
+	color: #fff;
+	font-size: 13px;
+	top: -8px;
+	position: relative;
+	*top: -6px;
+}
+#HeaderOr
+{
+	font-family: Arial;
+	font-weight: normal;
+	color: #9Ec3E7;
+	font-size: 13px;
+	top: -8px;
+	*top: -6px;
+	position: relative;
+	margin: 0px 6px;
+}
+.loginFrame 
+{
+	height: 100%;
+	width: 100%;
+}
+/*
+     FILE ARCHIVED ON 22:16:46 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:32:57 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 320.886
+  exclusion.robots: 117.302
+  exclusion.robots.policy: 117.294
+  xauthn.identify: 70.719
+  xauthn.chkprivs: 46.332
+  cdx.remote: 0.071
+  esindex: 0.009
+  LoadShardBlock: 145.792 (3)
+  PetaboxLoader3.datanode: 158.982 (4)
+  CDXLines.iter: 13.154 (3)
+  load_resource: 54.364
+  PetaboxLoader3.resolve: 23.251
+*/

@@ -1,0 +1,95 @@
+﻿.StandardText {
+    font-family: arial;
+    font-size: 12px;
+    color: #000;
+}
+
+.StandardHeaderTopLvl {
+    font-size: 40px;
+    font-weight: bold;
+    color: #363636;
+    letter-spacing: -2px;
+    margin: 12px 0 12px 0; 
+}
+
+
+.StandardHeader2ndLvlText,
+.StandardHeader2ndLvl {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.StandardHeader2ndLvl {
+    margin: 12px 0 20px 0;
+}
+
+.StandardHeader3rdLvl {
+    font-size: 15px;
+    font-weight: bold;
+    color: #363636;
+}
+
+.StandardDividerTop {
+    border-top: 1px solid #ccc;
+}
+.StandardDividerBottom {
+    border-bottom: 1px solid #ccc;
+}
+.StandardDividerLeft {
+    border-left: 1px solid #ccc;
+}
+.StandardDividerRight {
+    border-right: 1px solid #ccc;
+}
+
+
+a.StandardSmallButton,
+span.StandardSmallButtonDisabled {
+	background:url('/web/20120907221649im_/http://www.roblox.com/images/buttons/btn-small_silver_tile.png') repeat-x top left;
+	border: 1px solid #a7a7a7;
+	height: 15px;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+    padding: 1px 4px 0 4px;
+}
+
+a.StandardSmallButton {
+	color: Black;
+}
+	
+a.StandardSmallButton:hover {
+	background-position: bottom left;
+	border-color: #777;
+	text-decoration: none;
+}
+	
+span.StandardSmallButtonDisabled {
+	color: #a7a7a7;
+}
+/*
+     FILE ARCHIVED ON 22:16:49 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:53:07 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 389.814
+  exclusion.robots: 308.666
+  exclusion.robots.policy: 308.657
+  xauthn.identify: 163.536
+  xauthn.chkprivs: 144.868
+  cdx.remote: 0.102
+  esindex: 0.014
+  LoadShardBlock: 46.586 (3)
+  PetaboxLoader3.datanode: 62.768 (4)
+  CDXLines.iter: 18.724 (3)
+  load_resource: 51.963
+  PetaboxLoader3.resolve: 32.783
+*/

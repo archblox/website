@@ -1,0 +1,71 @@
+﻿/* Usage: wrap your form in a div that contains the class standardform 
+to access input colors, instruction colors, and the common validation bubbles and checkmarks. */
+
+.standardform span.instructions 
+{
+    padding-top: 2px;
+    color: #666;
+    display: block;
+    font-size: 11px;
+}
+.standardform div.validation {
+    color: #c00;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline;
+    float: left;
+    position: relative;
+}
+.standardform label 
+{
+    font-size: 13px;
+    color: black;
+    font-weight: bold;    
+}
+.standardform input
+{
+    border: 1px solid #999;
+    padding:3px;
+}
+.standardform select {
+    margin:0;
+    height: 21px;
+    margin-right: 5px;
+}
+
+.standardform .valid-container {position:absolute;width:180px;height: 48px;}
+.standardform .valid-top, .valid-bottom {background:url(/web/20120907221646im_/http://www.roblox.com/images/UI/bg-bubble.png) no-repeat right top;width:180px;height:3px;}
+.standardform .valid-bottom {background-position:right bottom;}
+.standardform .valid-main {width:165px;color:#a00;font:normal 11px arial;background:url(/web/20120907221646im_/http://www.roblox.com/images/UI/bg-bubble.png) no-repeat left center;padding-left:15px;}
+.standardform .valid-main p {margin:0px;}
+.standardform .valid {
+    width: 15px;
+    height: 13px;
+    background: url(/web/20120907221646im_/http://www.roblox.com/images/UI/img-check.png) no-repeat;
+    margin-top: 3px;
+    margin-left: 5px;
+    display: none;
+}
+/*
+     FILE ARCHIVED ON 22:16:46 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:22:04 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 358.789
+  exclusion.robots: 187.164
+  exclusion.robots.policy: 187.155
+  xauthn.identify: 150.468
+  xauthn.chkprivs: 36.439
+  cdx.remote: 0.07
+  esindex: 0.009
+  LoadShardBlock: 147.768 (3)
+  PetaboxLoader3.datanode: 70.736 (4)
+  CDXLines.iter: 17.692 (3)
+  PetaboxLoader3.resolve: 148.014 (3)
+  load_resource: 73.536
+*/

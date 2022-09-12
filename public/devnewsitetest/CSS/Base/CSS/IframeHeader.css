@@ -1,0 +1,53 @@
+﻿.iframeHeader  #Nav 
+{
+    width: 100%  !important; 
+}
+.MiniHeaderBG
+{
+    margin-top:-3px;
+    z-index:1;
+    width:100%;
+    height:153px;
+    background: url(/web/20120907221647im_/http://www.roblox.com/images/MiniclipHeader_BG.PNG) white bottom repeat-x;
+}
+#MiniWrapper
+{
+    width:960px;
+    overflow:hidden;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-1px;
+    margin-bottom:0;
+    padding: 0;
+}
+.MiniclipHeader
+{
+    padding: 0;
+    border:none;
+    margin-top:-2px;
+    margin-left:-7px; 
+    display: block;
+}
+/*
+     FILE ARCHIVED ON 22:16:47 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:34:15 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1354.587
+  exclusion.robots: 121.388
+  exclusion.robots.policy: 121.38
+  xauthn.identify: 72.874
+  xauthn.chkprivs: 48.241
+  cdx.remote: 0.079
+  esindex: 0.009
+  LoadShardBlock: 1159.797 (3)
+  PetaboxLoader3.datanode: 270.915 (4)
+  CDXLines.iter: 11.984 (3)
+  load_resource: 123.892
+  PetaboxLoader3.resolve: 64.337
+*/

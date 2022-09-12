@@ -1,0 +1,700 @@
+﻿.TradeWindowContainer {
+    height:608px;
+    width:882px
+}
+
+.TradeHeader {
+    margin-left:15px;
+    max-height:20px;
+    padding:10px 5px 15px 0
+}
+
+.TradeTitle {
+    color:#000;
+    font-family:Arial;
+    font-size:16px;
+    font-weight:700
+}
+
+.TradingPartner {
+    color:#000;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:400
+}
+
+.MakeTradeButton,.MakeTradeButton:hover,.MakeTradeButton.disabled {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/buttons/btn-make_trade.png) top;
+    height:50px;
+    width:179px;
+    margin:0 auto
+}
+
+.MakeTradeButton:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/buttons/btn-make_trade.png) bottom;
+    cursor:pointer
+}
+
+.OfferList {
+    min-height:125px
+}
+
+.LockImage {
+    height:15px;
+    padding-right:2px;
+    width:15px
+}
+
+.LockImage.Green {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/buttons/img-trade_icon_green_small.png)
+}
+
+.LockImage.Red {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/buttons/img-trade_icon_red_small.png)
+}
+
+.OfferItems {
+    min-height:68px;
+    padding-left:2px
+}
+
+.OfferHeaderWrapper {
+    text-align:center;
+    width:100%;
+    margin:0 auto;
+    padding:15px 0 5px 5px
+}
+
+.OfferHeader {
+    color:#363636;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:700
+}
+
+.Offer {
+    background:#e1e1e1;
+    border:1px solid #a7a7a7;
+    display:inline-block;
+    min-height:355px;
+    width:268px;
+    margin:0 0 0 20px
+}
+
+.ExitText {
+    color:#000;
+    cursor:pointer;
+    float:right;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:400;
+    text-align:right;
+    *margin-top:-15px
+}
+
+#ButtonCancel,#ButtonCancel:hover,#ButtonYes,#ButtonYes:hover {
+    cursor:pointer;
+    width: 176px;
+    float:left;
+    height:50px
+}
+
+#ButtonYes,#ButtonYes:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/yes-gray.png) top;
+    margin-right:10px;
+    width:89px
+}
+
+#ButtonYes:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/yes-gray.png) bottom
+}
+
+#ButtonCancel,#ButtonCancel:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/cancel-blue.png) top;
+    width:106px
+}
+
+#ButtonCancel:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/cancel-blue.png) bottom
+}
+
+.InventoryContainer {
+    width:559px;
+    margin:0 5px
+}
+
+.InventoryContainer .InventoryHeaderWrapper {
+    margin-bottom:10px
+}
+
+.InventoryContainer .InventoryHeader {
+    color:#363636;
+    font:bold 15px Arial
+}
+
+.InventoryContainer .InventoryDropDownContainer {
+    color:#363636;
+    font:bold 11px Arial
+}
+
+.InventoryContainer .InventorySmall {
+    color:#000;
+    font:normal 11px Arial
+}
+
+.InventoryContainer .InventoryHandle {
+height: 208px;
+}
+
+.InventoryContainer .InventoryRowContainer {
+        display:block;
+    height:250px;
+    width:576px
+}
+
+.InventoryContainer .PagingContainerDivTop {
+    text-align:center;
+    padding:8px 0 12px
+}
+
+.InventoryContainer .paging_wrapper {
+    color:#363636;
+    font-family:Arial;
+    font-size:11px
+}
+
+.InventoryItemContainerInner {
+    width:60px;
+    z-index:1
+}
+
+.InventoryItemContainerInner,.InventoryItemContainerInner:hover {
+    background:#FFF;
+    border:0;
+    outline:0;
+    overflow:visible;
+    position:absolute;
+    margin:0;
+    padding:0
+}
+
+.InventoryItemContainerInner:hover {
+    position:absolute
+}
+
+.SmallInventoryItem {
+    background:#FFF;
+    border:1px solid #ccc;
+    height:60px;
+    position:relative;
+    width:60px
+}
+
+.SmallInventoryItem .InventoryItemContainerInner {
+    height:60px;
+    position:relative;
+    width:60px
+}
+
+.LargeInventoryItem .InventoryItemContainerInner {
+    height:94px;
+    width:76px
+}
+
+.SmallInventoryItem:hover .InventoryItemContainerInner {
+    border:1px solid #ccc;
+    height:150px;
+    left:-25px;
+    top:-28px;
+    width:109px;
+    z-index:6
+}
+
+.LargeInventoryItem {
+    background:#FFF;
+    border:1px solid #ccc;
+    height:94px;
+    position:relative;
+    width:76px
+}
+
+.LargeInventoryItem:hover .InventoryItemContainerInner {
+    border:1px solid #ccc;
+    height:182px;
+    left:-17px;
+    top:-25px;
+    width:109px;
+    z-index:6
+}
+
+#TradeRequest .LargeInventoryItem:hover .InventoryItemContainerInner {
+    border:1px solid #ccc;
+    height:157px;
+    left:-17px;
+    top:-25px;
+    width:109px;
+    z-index:6
+}
+
+.InventoryItemName {
+    color:#000;
+    font:bold 10px Arial, sans-serif;
+    text-align:center;
+    width:69px;
+}
+
+.SmallInventoryItem .InventoryItemName {
+    display:none;
+    height:25px;
+    padding: 0 2px;
+    overflow: hidden;
+    margin:auto
+}
+
+.LargeInventoryItem .InventoryItemName {
+    display:block;
+    height:25px;
+    overflow:hidden;
+    text-align:center
+}
+
+.InventoryItemContainerInner:hover .InventoryItemName {
+    display:block;
+    text-align:center;
+    width:96%;
+    margin:0
+}
+
+.ItemInfoLabel,.InventoryItemContainerInner:hover .ItemInfoLabel {
+    color:#666;
+    display:none;
+    font:9px Arial, sans-serif;
+    margin-left:6px;
+    margin-right:3px;
+    text-align:left;
+    padding:0
+}
+
+.ItemInfoData,.InventoryItemContainerInner:hover .ItemInfoData {
+    color:#006c00;
+    display:none;
+    font:bold 9px Arial, sans-serif;
+    margin-left:2px;
+    padding:0
+}
+
+.InventoryItemContainerInner .InventoryItemSerial,.InventoryItemContainerInner .SerialNumberTotal {
+    color:#000;
+    display:none;
+    font:9px Arial, sans-serif;
+    margin:0;
+    padding:0
+}
+
+.InventoryItemContainerInner .HoverContent {
+    display:block;
+    line-height:15px
+}
+
+.InventoryItemContainerInner .ItemImg {
+    border:0;
+    height:60px;
+    outline:0;
+    text-align:center;
+    width:60px;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.InventoryContainer .AddButton, .InventoryContainer .RequestButton {
+    cursor: pointer;    
+}
+
+.LargeInventoryItem:hover .ItemImg {
+    height:83px;
+    width:83px;
+    margin:5px 5px 5px 2px
+}
+
+.SmallInventoryItem:hover .ItemImg {
+    margin-bottom:2px;
+    margin-top: 2px;
+}
+
+.InventoryItemContainerOuter {
+    float:left;
+    padding:4px 2px
+}
+
+div.ItemLinkDiv {
+    height:60px;
+    width:60px;
+    margin:auto
+}
+#TradeConfirmModal {
+    *margin-top: -150px;
+}
+.LargeInventoryItem:hover div.ItemLinkDiv {
+    height:88px;
+    width:88px
+}
+
+div.TradeItemSilverButtonContainer,.InventoryItemContainerInner:hover div.TradeItemSilverButtonContainer {
+    display:none;
+    left:5px;
+    padding-top:6px;
+    width:94px;
+    margin:auto
+}
+
+.InventoryItemContainerInner:hover div.TradeItemSilverButtonContainer {
+    display:block
+}
+
+a.TradeItemSilverButton,a.TradeItemSilverButton:hover,a.TradeItemSilverButtonDisabled {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/btn-small_silver_tile.png) repeat-x top;
+    border:1px solid #a7a7a7;
+    color:#000;
+    display:block;
+    font:normal 11px Arial, Helvetica, sans-serif;
+    height:15px;
+    padding-top:1px;
+    text-align:center;
+    text-decoration:none!important
+}
+
+a.TradeItemSilverButton:hover {
+    background-position:bottom;
+    border-color:#777
+}
+
+a.TradeItemSilverButtonDisabled {
+    border:1px solid #CCC;
+    color:#A7A7A7;
+    cursor:default
+}
+
+.SendTrade,.SendTrade:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/sendTrade.png) top;
+    cursor:pointer;
+    height:50px;
+    width:183px;
+    margin:0 auto
+}
+
+.SendTrade:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/sendTrade.png) bottom
+}
+
+.TradeDivider {
+    border-top:1px solid #A7A7A7;
+    height:15px;
+    margin-left:5px;
+    width:574px
+}
+
+.ErrorText {
+    color:#C00;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:700
+}
+
+.ErrorTextContainer {
+    padding-left:15px;
+    padding-top:10px;
+    width:275px
+}
+
+.ModalButtonContainer {
+    width:220px;
+    margin:50px auto 10px
+}
+
+.BlankItem {
+    background:#FFF;
+    border:1px solid #ccc;
+    float:left;
+    height:60px;
+    width:60px;
+    margin:4px 2px 0
+}
+
+.BlankItem.LargeInventoryItem {
+    background:#FFF;
+    border:1px solid #ccc;
+    height:93px;
+    position:relative;
+    width:73px;
+    margin:4px 2px 0
+}
+
+.MissingItemContainer {
+    border:1px solid #ccc;
+    height:93px;
+    position:relative;
+    width:73px;
+    float:left;
+    margin:4px 2px 0
+}
+.MissingItem 
+{
+    height: 80px;
+    width: 60px;
+    background: url(/web/20120907221649im_/http://www.roblox.com/images/missing_user_asset.png) no-repeat;
+    margin: 5px auto;
+}
+.MissingItem.Deleted {
+    background: url(/web/20120907221649im_/http://www.roblox.com/images/deleted_user_asset.png) no-repeat;
+}
+.RBXImg {
+    margin:0 2px
+}
+
+.OfferValue {
+    color:#006800
+}
+
+.OfferValueContainer {
+    clear:both;
+    font-family:Arial, Helvetica, Sans-Serif;
+    font-size:11px;
+    text-align:center;
+    margin:5px auto 10px
+}
+
+.OpenTradeButton,.OpenTradeButton:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/tradeItems.png) top;
+    cursor:pointer;
+    float:right;
+    height:23px;
+    margin-right:10px;
+    *margin-top:-24px;
+    width:91px
+}
+
+.OpenTradeButton:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/tradeItems.png) bottom
+}
+
+#ButtonAcceptTrade,#ButtonAcceptTrade:hover,#ButtonCounterTrade,#ButtonCounterTrade:hover,#ButtonDeclineTrade,#ButtonDeclineTrade:hover {
+    float:left;
+    height:50px;
+    margin-right:5px;
+    width:123px;
+    cursor:pointer
+}
+
+#ButtonCancelTrade, #ButtonCancelTrade:hover {
+    width: 176px;
+    float: left;
+    background: url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/btn-cancel_trade.png) no-repeat top;
+    cursor: pointer;
+    height: 50px;
+    margin-left: 5px;
+}
+
+#ButtonCancelTrade:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/btn-cancel_trade.png) no-repeat bottom   
+}
+
+#ButtonDeclineTrade,#ButtonDeclineTrade:hover {
+    width:115px;
+    cursor:pointer
+}
+
+#ButtonAcceptTrade {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/accept.png) no-repeat top
+}
+
+#ButtonAcceptTrade:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/accept.png) no-repeat bottom
+}
+
+#ButtonCounterTrade {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/counter.png) no-repeat top;
+    float:left;
+    height:50px;
+    width:123px
+}
+
+#ButtonCounterTrade:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/counter.png) no-repeat bottom
+}
+
+#ButtonDeclineTrade {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/decline.png) no-repeat top
+}
+
+#ButtonDeclineTrade:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/decline.png) no-repeat bottom
+}
+
+div#TradeRequest {
+    width: 528px;
+    *top:-200px;
+}
+
+#TradeRequest div.ActionButtonContainer {
+    padding-bottom:10px;
+    width:380px;
+    margin:0 auto
+}
+
+#TradeRequest .ButtonOK,#TradeRequest .ButtonOK:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/ok.png) no-repeat top;
+    height:50px;
+    width:100px;
+    float: left;
+    cursor:pointer
+}
+
+#TradeRequest .ButtonOK:hover {
+    background:url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/ok.png) no-repeat bottom
+}
+
+#TradeRequest div.ReviewButtonContainer {
+    padding-bottom:10px;
+    width:285px;
+    margin: 0 auto;
+    *padding-top: 0px;
+}
+
+#TradeRequest .ViewButtonContainer {
+    padding-bottom:10px;
+    width: 100px;
+    margin: 0 auto;
+    *padding-top: 0px;
+}
+
+.TradePartnerName {
+    color:#095fb5
+}
+
+#TradeRequest .TradeExpiration {
+    color:#666;
+    font-family:Arial;
+    font-size:11px;
+    text-align:center
+}
+
+#TradeRequest .TradeRequestText {
+    color:#363636;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:700;
+    text-align:center
+}
+
+#TradeRequest .roblox-avatar-image img[Title] {
+    height:142px;
+    width:106px
+}
+
+#TradeRequest .roblox-avatar-image img[style] {
+    left:15px!important
+}
+
+#TradeRequestExpiration.Red {
+    color:#C00
+}
+
+#TradeRequest .roblox-avatar-image {
+    margin:12px auto -12px
+}
+
+#TradeRequest .LeftContentContainer {
+    border-right:1px solid #CCC;
+    display:inline;
+    float:left;
+    height:320px;
+    width:148px;
+    margin:12px 0 10px
+}
+
+#TradeRequest .closeBtnCircle_20h {
+    cursor:pointer;
+    margin-left:503px;
+    position:absolute;
+    top:5px
+}
+
+#TradeRequest .OfferHeaderWrapper {
+    padding:5px 0 5px 5px
+}
+
+.InventoryDropDowns {
+    *margin-top:-15px
+}
+
+.InventoryContainer .InventoryDropDowns,.TradeWindowContainer .Inventories {
+    float:right
+}
+
+.Inventories {
+    width: 580px;
+}
+
+.InventoryItemContainerInner .RBXImg,div.FooterButtonPlaceHolder,.HeaderButtonPlaceHolder {
+    display:none
+}
+
+.TradeWindowContainer .GenericModal {
+    *top:-50px
+}
+
+div.InventoryItemContentContainer {
+    text-align:center;
+    position:relative;
+    margin-left:-2px;
+    padding:0 2px
+}
+
+div.InventoryDropDownContainer.noItems {
+    text-align:center;
+    font-size:11px
+}
+
+div.LargeInventoryItem div.InventoryNameWrapper {
+    overflow:hidden;
+    text-align:center;
+    height: 27px;
+    padding: 0 2px;
+}
+
+.InventoryItemContainerInner:hover .ItemInfoLabel,.InventoryItemContainerInner:hover .ItemInfoData,.InventoryItemContainerInner:hover .InventoryItemSerial,.InventoryItemContainerInner:hover .SerialNumberTotal,.InventoryItemContainerInner:hover .RBXImg {
+    display:inline
+}
+
+a.ViewTradeLink,.AddToOffer,.RequestFor {
+    cursor:pointer
+}
+
+.InventoryItemContainerInner .InventoryItemLink,#TradeRequest .roblox-avatar-image div,#TradeRequest .OfferHeader {
+    text-align:center
+}
+#TradeRequest a:hover, .TradeWindowContainer a:hover {
+    color: black;
+}
+/*
+     FILE ARCHIVED ON 22:16:49 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:54:49 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 281.05
+  exclusion.robots: 150.695
+  exclusion.robots.policy: 150.687
+  xauthn.identify: 84.777
+  xauthn.chkprivs: 65.678
+  RedisCDXSource: 0.827
+  esindex: 0.007
+  LoadShardBlock: 113.373 (3)
+  PetaboxLoader3.datanode: 124.957 (4)
+  CDXLines.iter: 13.125 (3)
+  load_resource: 90.041
+*/

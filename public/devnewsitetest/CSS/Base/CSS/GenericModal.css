@@ -1,0 +1,84 @@
+﻿.GenericModal .Title {
+    font-family:Arial, Helvetica, Sans-Serif;
+    font-weight:bold;
+    font-size:27px;
+    color:#363636;
+    margin: 5px 0;
+    letter-spacing: -1px;
+}
+
+.GenericModal {
+    padding: 5px;
+    *top: -150px;
+}
+
+.GenericModalBody {
+    background-color:#fff;
+    padding:10px
+}
+
+.GenericModal .Message {
+    display:inline-block;
+    width:275px;
+    vertical-align:middle;
+    font:bold 15px Arial,Helvetica,Sans-Serif;
+    letter-spacing: 0;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+.GenericModal div.ImageContainer {
+    display:inline-block;
+    height:110px;
+    width:110px;
+    overflow:hidden;
+    vertical-align:middle;
+    margin-left: -15px;
+    *float: left;
+    *margin-left: 0px;
+}
+
+.GenericModal img.GenericModalImage {
+    display:inline-block;
+    max-height:110px;
+    max-width:110px
+}
+
+.GenericModal .GenericModalButtonContainer {
+    text-align:center;
+    margin: 5px auto;
+    *margin-top: 115px;
+}
+
+div.GenericModalErrorMessage {
+    background-color: #FAE5E5;
+    border: 1px solid #C00;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    padding: 5px;
+    margin: 0 5px;
+}
+/*
+     FILE ARCHIVED ON 22:16:46 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:29:45 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 562.633
+  exclusion.robots: 295.611
+  exclusion.robots.policy: 295.6
+  xauthn.identify: 219.115
+  xauthn.chkprivs: 76.279
+  cdx.remote: 0.065
+  esindex: 0.009
+  LoadShardBlock: 73.971 (3)
+  PetaboxLoader3.datanode: 66.402 (4)
+  CDXLines.iter: 12.848 (3)
+  load_resource: 46.453
+  PetaboxLoader3.resolve: 23.836
+*/

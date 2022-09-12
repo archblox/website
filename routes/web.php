@@ -78,9 +78,9 @@ Route::middleware(['auth'])->group(function () {
 
 // Admin only
 Route::group(['middleware' => 'AdminCheck'], function() {
-    Route::get('/iphone/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin_index');
-    Route::get('/iphone/users', [App\Http\Controllers\AdminController::class, 'users'])->name('admin_users');
-    Route::get('/iphone/tree', [App\Http\Controllers\AdminController::class, 'tree'])->name('admin_tree');
+    Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin_index');
+    Route::get('/admin/users', [App\Http\Controllers\AdminController::class, 'users'])->name('admin_users');
+    Route::get('/admin/tree', [App\Http\Controllers\AdminController::class, 'tree'])->name('admin_tree');
 });
 
 // Client routes

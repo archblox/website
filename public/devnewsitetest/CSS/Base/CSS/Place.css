@@ -1,0 +1,475 @@
+﻿.GuestPlayAvatarImage
+{
+    border: solid 3px green;
+}
+.GuestPlayAvatarImage:Hover
+{
+    border: solid 3px #0C0;
+}
+#ConfigurePlaceContainer
+{
+	background-color: #eee;
+	border: solid 1px #000;
+	color: #555;
+	margin: 0 auto;
+	width: 620px;
+}
+
+#ConfigurePlaceContainer h2
+{
+	background-color: #ccc;
+	border-bottom: solid 1px #000;
+	color: #333;
+	font-size: x-large;
+	margin: 0;
+	text-align: center;
+}
+
+#ConfigurePlaceContainer fieldset
+{
+	font-size: 1.2em;
+	margin: 0;
+}
+
+#ConfigurePlaceContainer #PlaceName
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	width: 420px;
+}
+
+#ConfigurePlaceContainer #PlaceThumbnail
+{
+	border: solid 1px #555;
+	height: 230px;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	width: 420px;
+}
+
+#ConfigurePlaceContainer #PlaceDescription
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	width: 420px;
+}
+
+#ConfigurePlaceContainer #PlaceAccess,
+#ConfigurePlaceContainer #PlaceCopyProtection,
+#ConfigurePlaceContainer #Comments,
+#ConfigurePlaceContainer #PlaceIsDefault,
+#ConfigurePlaceContainer #PlaceReset,
+#ConfigurePlaceContainer #AllowGear,
+#ConfigurePlaceContainer #SetGenres,
+#ConfigurePlaceContainer #PlaceBuildAccess
+{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 420px;
+}
+
+#ConfigurePlaceContainer .PlaceAccessRow,
+#ConfigurePlaceContainer .CopyProtectionRow,
+#ConfigurePlaceContainer .EnableCommentsRow,
+#ConfigurePlaceContainer .PlaceIsDefaultRow,
+.MyItemIndentedOption
+{
+	font-size: .9em;
+	margin: 10px 0 10px 100px;
+}
+
+#ConfigurePlaceContainer .ResetPlaceRow
+{
+	font-size: .9em;
+	margin: 10px 0;
+	text-align: center;
+}
+
+#ConfigurePlaceContainer .ResetPlaceRow .Button
+{
+	margin: 0 auto;
+}
+
+#ConfigurePlaceContainer .Buttons
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#ConfigurePlaceContainer .Button
+{
+	border-color: #555;
+	color: #555;
+	cursor: pointer;
+}
+
+#ConfigurePlaceContainer .Button:hover
+{
+	background-color: #6e99c9;
+	color: #fff;
+}
+
+#ConfigurePlaceContainer .Label
+{
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+
+#ConfigurePlaceContainer .TextBox
+{
+	border: dashed 1px #555;
+	margin: 0;
+	padding: 5px 10px;
+	width: 400px;
+}
+
+#ConfigurePlaceContainer .MultilineTextBox
+{
+	border: dashed 1px #555;
+	margin: 0;
+	padding: 5px 10px;
+	width: 400px;
+}
+
+#ConfigurePlaceContainer .Suggestion
+{
+	font: normal .8em/normal Verdana, sans-serif;
+	padding-left: 9px;
+}
+
+#ConfigurePlaceContainer .popupControl
+{
+	border-color: #000;
+}
+
+#ConfigurePlaceContainer .PopUpOption
+{
+	font: normal .8em/normal Verdana, sans-serif;
+	padding: 4px;
+}
+
+#ConfigurePlaceContainer .PopUpInstruction
+{
+	font: normal 1.1em/normal Verdana, sans-serif;
+	padding: 4px;
+	text-align: center;
+}
+
+#Place_PlacePanel
+{
+	float: left;
+	width: 490px;
+	margin-right: 10px;
+}
+
+#Place_AuthorPanel
+{
+	float: left;
+	width: 200px;
+}
+
+#Place_GamesPanel
+{
+	margin-top: 10px;
+	width: 700px;
+	clear: left;
+}
+
+#ConfigureShowcase
+{
+    font-family: Verdana, sans-serif;
+}
+
+#ConfigureShowcase h2
+{
+	font-size: 2.5em;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+#ConfigureShowcase .CallbackStyle
+{
+	border: thin blue inset;
+}
+
+#ConfigureShowcase .DragHandle
+{
+	width: 161px;
+	height: 101px;
+	/* background-color: Blue; */
+	/* background-image: url(/web/20120907221648im_/http://www.roblox.com/images/bg-menu-main.png); */
+	cursor: move;
+	border: outset 1px white;
+}
+
+#ConfigureShowcase .ItemArea
+{
+	float: left;
+	font-size: 1.2em;
+	height: 82px;
+	padding: 10px;
+	text-align: left;
+	width: 500px;
+}
+
+#ConfigureShowcase .ActionsArea
+{
+    float: left;
+    font-weight: bold;
+    height: 82px;
+    padding: 10px;
+    text-align: right;
+    width: 155px;
+}
+
+#ConfigureShowcase .ReorderCue
+{
+	border: dashed thin black;
+	width: 100%;
+	height: 101px;
+}
+
+#ConfigureShowcase ul,
+#ConfigureShowcase ol
+{
+    margin: 0;
+}
+
+#ConfigureShowcase li
+{
+    background: #EEEEEE;
+    border: solid 1px #000;
+    color: #000;
+	list-style: none;
+	margin: 3px 0;
+	/* background-image: url(/web/20120907221648im_/http://www.roblox.com/images/bg_nav.gif); */
+	/* background-repeat: repeat-x; */
+	/* color: #fff; */
+	width: 100%;
+}
+
+#ConfigureShowcase li a
+{
+    /* color: Blue !important; */
+    /* color: #fff !important; */
+    /* font-weight: bold; */
+}
+
+#ConfigureShowcase blockquote li
+{
+    border-style: none;
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+/*Start AB Test Character PopUp Styles*/
+.ABGuestPlayAvatarImage
+{
+    padding-top:5px;
+}
+.ABImageSelected
+{   
+    background: transparent url(/web/20120907221648im_/http://www.roblox.com/images/img-check.png) no-repeat;
+    position: absolute;
+    height:35px;
+    width:33px;
+    right: -3px;
+    top: -7px;
+}
+.ABCloseCircle
+{
+    cursor: pointer; position:absolute; top:-10px; right:-10px;
+}
+.ABPopUp
+{
+    background-color: #fff; 
+    width:516px; 
+    height:470px;
+    font-family: Arial, Sans-Serif;
+}
+.ABPopUpHeader
+{
+    height: 30px; 
+    background:transparent url(/web/20120907221648im_/http://www.roblox.com/images/bg-gutter.png) repeat-x; 
+    font: 9px Arial; 
+    color: #404040;
+    text-decoration: none;
+}
+.CurvedBanner
+{
+    background: url(/web/20120907221648im_/http://www.roblox.com/images/cssspecific/rbx2/head_bkg_t1.png) no-repeat left top;
+    display:inline-block;
+    float:left;
+    position:relative; 
+	height: 28px;
+	width:3px;
+	top:0px;
+	margin-left:4px;
+}
+.HeaderBanner
+{   
+    margin:0px;
+    top:0px;
+    float:left;
+    background:url(/web/20120907221648im_/http://www.roblox.com/images/cssspecific/rbx2/head_bkg_t2.png) no-repeat scroll right top transparent;
+    display:inline-block;
+    height:28px;
+    padding: 6px 0px 0 4px;
+    width: 128px;
+}
+.HeaderBanner a
+{
+    color:#fff;
+    height: 18px;
+	background: url(/web/20120907221648im_/http://www.roblox.com/images/cssspecific/rbx2/btn_blue18h.png) repeat-x;
+	background-position: 0px 0px;
+	margin: 0px 5px;
+    font-weight:bold;
+    font-size: 10px;
+	padding: 2px 5px;
+	cursor:pointer;
+}
+.HeaderBanner a:hover 
+{
+    color:#fff;
+	background-position: 0px -18px;
+    text-decoration: none;
+}
+              
+.ABPopUpBody
+{
+    height:300px; 
+    text-align:center; 
+    padding: 30px 40px 30px 40px; 
+    position:relative; 
+}
+.BodyHeaderText
+{
+    font:bold 18px Arial; 
+    display:inline-block; 
+    padding-bottom:15px;
+}
+.Avatars
+{
+    height:125px; 
+    width:115px;
+    position:relative;
+    cursor:pointer;
+}
+.Avatars span
+{
+    font: bold 14px Arial;
+}
+.UnselectedAvatar
+{
+    background: transparent url(/web/20120907221648im_/http://www.roblox.com/images/bg-character.png) no-repeat top center;
+}
+.SelectedAvatar,
+.UnselectedAvatar:hover
+{
+    background: transparent url(/web/20120907221648im_/http://www.roblox.com/images/bg-character.png) no-repeat center bottom;
+}
+.ABPopUpFooter
+{
+height: 79px; 
+background: transparent url(/web/20120907221648im_/http://www.roblox.com/images/bg-gutter.png) repeat-x; 
+padding: 0px 10px 0px 10px;
+}
+.SecureImgs
+{
+    margin-top:7px;
+    background: #fff;
+    float:left; 
+    border:1px solid #404040; 
+    font: 13px Arial; 
+    color:#404040; 
+    text-align:center;
+    width: 220px;
+    padding: 5px;
+}
+.ABPopUpFooter .SecureImgs span
+{
+    display:inline-block;
+    padding-bottom: 10px;
+}
+.ABPopUpFooter a, .ABPopUpFooter a:hover
+{
+    text-decoration: none;
+}
+.Message
+{
+    margin-top:12px;   
+    float:right; 
+    width:200px;
+    font: 12px Arial; 
+    color:#404040; 
+    text-align:left; 
+    padding: 0px;
+}
+.ABDownloadButton
+/*, .ABDownloadButton:hover*/,
+.ABPlayButton
+/*, .ABPlayButton:hover*/
+{  
+    width: 300px;
+    margin:auto;
+    margin-top: 60px;
+    cursor: pointer;
+    height: 54px;
+}
+.ABDownloadButton
+/*, .ABDownloadButton:hover */
+{
+    background: transparent url(/web/20120907221648im_/http://www.roblox.com/images/btn-download.png) no-repeat top center;
+}
+.ABPlayButton
+/*, .ABPlayButton:hover*/
+{
+    background: transparent url(/web/20120907221648im_/http://www.roblox.com/images/btn-play.png) no-repeat top center;
+}
+.ABPlayButton:hover, .ABDownloadButton:hover
+{  
+    background-position: center bottom;
+}
+#DownloadText
+{
+    font: 13px Arial;
+    color: #404040;
+    display:inline-block;
+    padding-top: 3px;
+}
+/*End AB Test Character PopUp Styles*/
+/*
+     FILE ARCHIVED ON 22:16:48 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:45:22 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 443.008
+  exclusion.robots: 171.108
+  exclusion.robots.policy: 171.098
+  xauthn.identify: 123.355
+  xauthn.chkprivs: 47.482
+  cdx.remote: 0.068
+  esindex: 0.01
+  LoadShardBlock: 210.51 (3)
+  PetaboxLoader3.datanode: 237.877 (4)
+  CDXLines.iter: 11.746 (3)
+  load_resource: 114.37
+  PetaboxLoader3.resolve: 58.326
+*/

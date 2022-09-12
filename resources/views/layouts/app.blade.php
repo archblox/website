@@ -41,14 +41,6 @@
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endswitch
     @else
-    <style> 
-    body {
-        display: none;
-    }
-    html {
-        background: black;
-    }
-    </style>
     <script>        
     function getDarkMode() {
         var currentTime = new Date().getHours();
@@ -79,11 +71,6 @@
     }
     getDarkMode()
     </script>
-    <style>
-    body {
-        display: block !important;
-    }
-    </style>
     @endauth
     @yield('extras')
 </head>

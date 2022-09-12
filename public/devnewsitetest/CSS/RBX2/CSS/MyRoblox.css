@@ -1,0 +1,89 @@
+﻿.sbMini {
+    margin-top:5px;
+    font-family:Verdana, Sans-Serif;
+    font-size:16px;
+    margin-right: 7px;
+}
+.ProfileAlertPanel {
+    border:none;   
+}
+#UserPlaces .Place .Statistics, #UserPlaces .Place .Configuration {
+    border:none;
+}
+#GroupTitle {
+    width:888px;
+}
+.Column2b .StandardBoxGrey {
+    width:454px;   
+}
+.subMenu {
+    width:970px;
+    height:30px;
+    border:none;
+    text-align:center;
+    background:#363636;
+	z-index:200; 
+    margin: 0px auto;
+}
+.subMenu ul {
+    margin:0 0 0 105px;
+}
+.subMenu > ul > li {
+    height:30px;
+    margin:0 2px;
+}
+.subMenu ul ul 
+{
+    left: -104px;
+}
+.subMenu ul ul a,
+.subMenu ul ul a:visited
+{
+    background: #444;
+    border: none;
+}
+.subMenu ul ul a:hover
+{
+    background: #777;
+}
+
+.subMenu > ul > li:hover {
+    background: url(/web/20120907221650im_/http://www.roblox.com/images/topNav_black.png);
+    background-position: 0px 30px;
+}
+.subMenu :hover > a, .subMenu ul ul :hover > a {
+    text-decoration: none;
+}
+.subMenu a:hover {
+    background:none;
+    text-decoration:none;
+}
+.subMenu a, .subMenu a:visited {
+    border:none;
+}
+.subMenu .subMenuItemselected {
+    border:none;
+}
+/*
+     FILE ARCHIVED ON 22:16:50 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:05:54 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 5512.461
+  exclusion.robots: 186.075
+  exclusion.robots.policy: 186.068
+  xauthn.identify: 106.312
+  xauthn.chkprivs: 79.491
+  cdx.remote: 0.076
+  esindex: 0.009
+  LoadShardBlock: 39.854 (3)
+  PetaboxLoader3.datanode: 49.363 (4)
+  CDXLines.iter: 18.023 (3)
+  load_resource: 44.567
+  PetaboxLoader3.resolve: 29.198
+*/

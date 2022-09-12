@@ -1,0 +1,50 @@
+﻿table.stats 
+{text-align: center;
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ;
+font-weight: normal;
+font-size: 11px;
+color: #fff;
+width: 280px;
+background-color: #666;
+border: 0px;
+border-collapse: collapse;
+border-spacing: 0px;}
+
+table.stats td 
+{background-color: #CCC;
+color: #000;
+padding: 4px;
+text-align: left;
+border: 1px #fff solid;}
+
+table.stats td.hed
+{background-color: #666;
+color: #fff;
+padding: 4px;
+text-align: left;
+border-bottom: 2px #fff solid;
+font-size: 12px;
+font-weight: bold;} 
+/*
+     FILE ARCHIVED ON 22:16:45 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:14:49 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1299.963
+  exclusion.robots: 174.573
+  exclusion.robots.policy: 174.564
+  xauthn.identify: 126.384
+  xauthn.chkprivs: 47.881
+  cdx.remote: 0.092
+  esindex: 0.009
+  LoadShardBlock: 1091.756 (3)
+  PetaboxLoader3.datanode: 1017.34 (4)
+  CDXLines.iter: 16.964 (3)
+  load_resource: 138.8
+  PetaboxLoader3.resolve: 105.242
+*/

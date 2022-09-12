@@ -1,0 +1,73 @@
+﻿.unifiedModal
+{
+    background-color: #e1e1e1;
+    font: bold 27px Arial;
+    letter-spacing:-2px;
+    color:#363636;
+    border:2px solid #272727;
+    text-align:center;
+    position: relative; 
+}
+.unifiedModalContent
+{
+    text-align:left;
+    background-color:White;
+    color:#000;
+    font: Bold 15px Arial;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    letter-spacing:normal;
+}
+.unifiedModalSubtext
+{
+    color: #666;
+    font: bold 12px Arial;
+    border:none;
+    letter-spacing:normal;
+    cursor:pointer;
+    text-align:center;
+    margin-top:10px;
+    padding-bottom:5px;
+}
+.smallModal
+{
+    width: 425px;    
+}
+.closeBtnCircle_20h:hover {
+	background-position: 0px 20px;
+}
+.closeBtnCircle_20h {
+    width:20px; height:20px;
+    cursor: pointer; 
+    position:absolute; 
+    top:5px; left:5px;
+    background: url(/web/20120907221649im_/http://www.roblox.com/images/Buttons/btn-x.png);   
+}
+.unifiedModal .smallModal .closeBtnCircle_20h
+{
+    margin-left:395px; 
+}
+/*
+     FILE ARCHIVED ON 22:16:49 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:56:30 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1566.541
+  exclusion.robots: 1215.958
+  exclusion.robots.policy: 1215.948
+  xauthn.identify: 1175.771
+  xauthn.chkprivs: 39.846
+  cdx.remote: 0.119
+  esindex: 0.012
+  LoadShardBlock: 269.987 (3)
+  PetaboxLoader3.resolve: 266.292 (4)
+  PetaboxLoader3.datanode: 74.124 (4)
+  CDXLines.iter: 18.535 (3)
+  load_resource: 79.654
+*/

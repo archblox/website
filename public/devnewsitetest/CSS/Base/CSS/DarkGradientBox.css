@@ -1,0 +1,84 @@
+﻿/* Box with a Dark Gradient Background
+
+	Important Note: Due to the gradient image, this box is currently limited to a skinny width of 150px.
+
+	Example Usage:
+       <div class="DarkGradientBox">
+            <div class="DGB_Header">
+                Box Title
+            </div>
+            <div class="DGB_Content">
+                <asp:Label CssClass="DGB_Label" ... />
+                <asp:TextBox CssClass="DGB_TextBox" ... />            
+                <asp:LinkButton CssClass="DGB_Button" ... />          
+			</div>
+        </div>	
+
+*/
+
+.DarkGradientBox
+{
+    border: solid 2px #7DADE0;
+}
+
+.DarkGradientBox .DGB_Header
+{
+    border-bottom: solid 2px #6e99c9;
+}
+
+.DarkGradientBox .DGB_Content
+{
+	/* This is intentionally empty. It is a placeholder for possible future styling, but currently none is needed. */
+}
+.DarkGradientBox .DGB_Button
+{
+    cursor:pointer;
+    
+    background-color:#435D77;
+    color: White;
+    text-decoration:none;
+    
+    border: solid 1px #777;
+    padding: 6px 10px 6px 10px;
+    
+    font-family:Verdana,Sans-Serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;    
+    white-space: nowrap;
+}
+.DarkGradientBox .DGB_Button:link , .DarkGradientBox .DGB_Button:visited
+{
+    background-color: #435D77;    
+    color: White;
+    text-decoration:none;
+}
+.DarkGradientBox .DGB_Button:hover, .DarkGradientBox .DGB_Button:active
+{
+    background-color:#B6CCE4;
+    color: #435D77;
+    text-decoration:none;
+}
+/*
+     FILE ARCHIVED ON 22:16:46 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:28:08 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 243.195
+  exclusion.robots: 182.43
+  exclusion.robots.policy: 182.421
+  xauthn.identify: 123.347
+  xauthn.chkprivs: 58.8
+  cdx.remote: 0.088
+  esindex: 0.011
+  LoadShardBlock: 36.946 (3)
+  PetaboxLoader3.datanode: 56.175 (4)
+  CDXLines.iter: 16.892 (3)
+  load_resource: 52.06
+  PetaboxLoader3.resolve: 29.73
+*/

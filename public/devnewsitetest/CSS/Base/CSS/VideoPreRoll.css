@@ -1,0 +1,95 @@
+﻿
+#videoPrerollPanel 
+{
+    display:none; 
+    width: 713px; 
+    height: 473px; 
+    padding: 20px 20px 20px 35px; 
+    background-color: #fff;
+}
+#videoPrerollTitleDiv
+{
+    font-family: Arial, Sans-Serif; font-size: 17px; font-weight: bold; padding-bottom: 20px;
+}
+#videoPrerollMainDiv 
+{
+    width:391px; 
+    height:312px; 
+    margin: 0; 
+    padding: 0; 
+    float: left;
+}
+#videoPrerollCompanionAd
+{
+    width:300px; 
+    height: 250px; 
+    margin: 0; 
+    padding-top: 25px; 
+    padding-left: 20px; 
+    float: left;
+}
+#videoPrerollLoadingDiv 
+{
+    margin-left: auto; margin-right: auto; font-family: Arial, Sans-Serif; font-weight: bold; font-size: 12px; clear:both; width: 584px; padding-top: 30px;
+}
+#videoPrerollLoadingBar
+{
+    width: 582px; 
+    height: 8px; 
+    border: 1px solid #697D03; /*rgb(105,125,3);*/ 
+    background-color: #808081; /*rgb(128,128,129);*/
+}
+#videoPrerollLoadingBarCompleted
+{
+    background-color: rgb(203, 255, 1); /* #CBFF01; */
+    height: 8px; 
+    width:0px; 
+    padding: 0; 
+    margin: 0;
+}
+#videoPrerollJoinBC
+{
+    text-align:center; 
+    font-size: 15px; 
+    font-family: Arial, Sans-Serif; 
+    font-weight: bold; 
+    padding-top: 22px;
+}
+
+#videoPrerollJoinBCButton
+{
+    width:180px; 
+    height:40px; 
+    background-image: url(/web/20120907221649im_/http://www.roblox.com/images/VideoPreRoll/btn-buildersclub.png); 
+    background-position: top; 
+    display: inline-block; 
+    vertical-align:middle;
+}
+#videoPrerollJoinBCButton:hover
+{
+    background-position: bottom;
+}
+
+/*
+     FILE ARCHIVED ON 22:16:49 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:58:36 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 240.069
+  exclusion.robots: 156.793
+  exclusion.robots.policy: 156.782
+  xauthn.identify: 99.854
+  xauthn.chkprivs: 56.7
+  RedisCDXSource: 8.746
+  esindex: 0.008
+  LoadShardBlock: 57.824 (3)
+  PetaboxLoader3.datanode: 57.661 (4)
+  CDXLines.iter: 13.412 (3)
+  load_resource: 41.466
+  PetaboxLoader3.resolve: 28.358
+*/

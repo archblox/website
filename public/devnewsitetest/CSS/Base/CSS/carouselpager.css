@@ -1,0 +1,59 @@
+.CarouselPager
+{
+    text-align:center;
+}
+.CarouselPager .arrow-up, .CarouselPager .arrow-down
+{
+    height: 13px;
+    width: 36px;
+    background:url('/web/20120907221645im_/http://www.roblox.com/images/Groups/btn-arrowsprite-up_down.png');
+    margin: 5px 0;
+    display:inline-block;
+}
+.CarouselPager .arrow-up
+{
+    background-position:left top;
+}
+.CarouselPager .arrow-down
+{
+    background-position:right top;
+}
+.CarouselPager .arrow-up:hover
+{
+    background-position:left -13px;
+}
+.CarouselPager .arrow-down:hover
+{
+    background-position:right -13px;
+}
+.CarouselPager .arrow-up.disabled
+{
+    background-position:left bottom;
+}
+.CarouselPager .arrow-down.disabled
+{
+     background-position:right bottom;
+}
+/*
+     FILE ARCHIVED ON 22:16:45 Sep 07, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:21:00 Sep 12, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 488.691
+  exclusion.robots: 133.564
+  exclusion.robots.policy: 133.553
+  xauthn.identify: 90.316
+  xauthn.chkprivs: 42.953
+  cdx.remote: 0.079
+  esindex: 0.01
+  LoadShardBlock: 295.003 (3)
+  PetaboxLoader3.datanode: 287.346 (4)
+  CDXLines.iter: 18.749 (3)
+  load_resource: 33.226
+  PetaboxLoader3.resolve: 19.284
+*/
