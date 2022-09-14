@@ -3,6 +3,7 @@ This is a log of all of the Client versions.
 You can download these old versions by going to archblox.com/client/version-(version string goes here).zip
 -Thomas
 
+New Client version-000000010 at 14/09/2022 7:36 PM
 New Client version-000000009 at 11/08/2022 5:03 AM
 New Client version-000000008 at 11/08/2022 4:00 AM
 New Client version-000000007 at 13/07/2022 12:32 AM
