@@ -9,11 +9,11 @@ $userId = addslashes($_GET["userId"]);
     <External>nil</External>
     <Item class="BodyColors">
         <Properties>
-            <int name="HeadColor">45</int>
-            <int name="LeftArmColor">45</int>
+            <int name="HeadColor">11</int>
+            <int name="LeftArmColor">11</int>
             <int name="LeftLegColor">1003</int>
             <string name="Name">Body Colors</string>
-            <int name="RightArmColor">45</int>
+            <int name="RightArmColor">11</int>
             <int name="RightLegColor">1003</int>
             <int name="TorsoColor">1003</int>
             <bool name="archivable">true</bool>
