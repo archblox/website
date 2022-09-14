@@ -30,6 +30,7 @@ Route::get('/blog', [App\Http\Controllers\PageController::class, 'blog'])->name(
 Route::get('/incomplete', [App\Http\Controllers\PageController::class, 'incomplete'])->name('incomplete');
 Route::get('/not-approved', [App\Http\Controllers\PageController::class, 'notapproved'])->name('notapproved');
 Route::get('/maintenance', [App\Http\Controllers\PageController::class, 'maintenance'])->name('maintenance');
+Route::get('/buttonhell', [App\Http\Controllers\PageController::class, 'buttonhell'])->name('buttonhell');
 
 // Must be logged in
 Route::middleware(['auth'])->group(function () {

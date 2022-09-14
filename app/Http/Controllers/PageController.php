@@ -130,4 +130,9 @@ class PageController extends Controller
     {
         return view('pages.avatar');
     }
+
+    public function buttonhell()
+    {
+        return view('pages.buttonhell');
+    }
 }
