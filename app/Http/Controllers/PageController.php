@@ -125,4 +125,9 @@ class PageController extends Controller
     {
         return view('pages.gamepage');
     }
+
+    public function avatar()
+    {
+        return view('pages.avatar');
+    }
 }

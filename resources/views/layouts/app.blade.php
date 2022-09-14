@@ -137,7 +137,7 @@
                 <span class="warningtext">({{ count(Auth::user()->getFriendRequests()) }})</span>
                 @endif
             </a>
-            <a class="smallnavbarbutton" href="{{ route('incomplete') }}">Avatar</a>
+            <a class="smallnavbarbutton" href="{{ route('avatar') }}">Avatar</a>
             <a class="smallnavbarbutton" href="{{ route('users') }}">Users</a>
             <a class="smallnavbarbutton" href="{{ route('inbox') }}">Messages @if (!Auth::guest() &&
                 App\Models\Message::where(['sendto_id' => Auth::id(), 'read' => false])->count())

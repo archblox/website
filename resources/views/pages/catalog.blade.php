@@ -28,7 +28,7 @@
         <div class="content_special" style="width: 85%;flex-wrap: wrap; justify-content: flex-start">
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>ARCHBLOX Visor</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">

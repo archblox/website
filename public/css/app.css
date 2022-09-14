@@ -160,7 +160,10 @@
     font-size: 9px;
   }
 }
-.popupcontainer, .popupcontainer_studio, .popupcontainer_client {
+
+.popupcontainer,
+.popupcontainer_studio,
+.popupcontainer_client {
   top: 0%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -180,6 +183,7 @@
   background-repeat: no-repeat;
   height: 266px;
 }
+
 .gamethumbnail_small {
   background-color: black;
   background-position-x: center;
@@ -200,14 +204,14 @@
 
 .PageTitleBar {
   display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-display: flex;
-    width: 100%;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .popup {
@@ -352,7 +356,7 @@ div.mySubmenuFixed {
 }
 
 #HeaderSignUp {
-  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, Sans-Serif;
   font-weight: bold;
   color: #fff;
   font-size: 13px;
@@ -362,7 +366,7 @@ div.mySubmenuFixed {
 }
 
 #HeaderOr {
-  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, Sans-Serif;
   font-weight: normal;
   color: #9Ec3E7;
   font-size: 13px;
@@ -394,13 +398,14 @@ div.mySubmenuFixed {
   Border-left: 1px solid #5355a0;
 }
 
-#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited {
+#NavigationRedesignBannerContainer ul li a,
+.NavigationRedesign ul li a:visited {
   border: 0 solid black;
   font-size: 13px;
   padding: 0;
   text-decoration: none;
   outline: none;
-  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, Sans-Serif;
   text-shadow: #11111191 1px 1px 1px;
 }
 
@@ -521,13 +526,14 @@ iframe {
   width: 50%;
 }
 
-.leftgamecontainer  {
+.leftgamecontainer {
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
   width: inherit;
 }
-.rightgamecontainer  {
+
+.rightgamecontainer {
   text-align: right;
   padding-left: 5px;
   padding-right: 5px;
@@ -592,7 +598,7 @@ iframe {
   text-decoration: none;
   font-weight: 800;
   outline: none;
-  font-family: Arial, 'Helvetica Neue', Helvetica,  Sans-Serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, Sans-Serif;
 }
 
 .smallnavbarbutton {
@@ -666,7 +672,7 @@ body {
   color: black;
   min-height: 100%;
   padding: 5px 5px 25px 5px;
-     /* Height of the footer */
+  /* Height of the footer */
   margin: 100px auto 0 auto;
   width: 970px;
   background: rgb(255, 255, 255);
@@ -684,7 +690,11 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.content_signup h1, .content_signup a, .content_signup p, .content_signup h2, .content_signup h5 {
+.content_signup h1,
+.content_signup a,
+.content_signup p,
+.content_signup h2,
+.content_signup h5 {
   text-align: center;
 }
 
@@ -705,16 +715,28 @@ body {
   color: black;
 }
 
-.content_signup a, .content_signup p a {
+.content_signup a,
+.content_signup p a {
   color: #0074bd;
   transition: .25s all ease-in-out;
 }
-#footer_signup a, #footer_signup p a, #footer a, #footer p a {
+
+#footer_signup a,
+#footer_signup p a,
+#footer a,
+#footer p a {
   transition: .25s all ease-in-out;
 }
-.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
+
+.content_signup a:hover,
+.content_signup p a:hover,
+#footer_signup a:hover,
+#footer_signup p a:hover,
+#footer a:hover,
+#footer p a:hover {
   color: #2fcfff;
 }
+
 .hyperlink {
   display: block;
   text-align: center;
@@ -833,7 +855,9 @@ button:hover.greenbutton {
 
 /*-------------*/
 
-.btn-large, .btn-medium, .btn-small {
+.btn-large,
+.btn-medium,
+.btn-small {
   margin: 0px;
   display: inline-block;
   zoom: 1;
@@ -846,6 +870,7 @@ button:hover.greenbutton {
   *display: inline;
   *vertical-align: top;
 }
+
 .btn-small {
   padding: 1px 7px 0px 7px;
   height: 20px;
@@ -855,9 +880,11 @@ button:hover.greenbutton {
   background-position: left -160px;
   border-radius: 0;
 }
+
 .btn-small:hover {
   background-position: left -181px;
 }
+
 .btn-medium {
   padding: 1px 13px 3px 13px;
   height: 28px;
@@ -866,9 +893,11 @@ button:hover.greenbutton {
   background-position: left -96px;
   border-radius: 0;
 }
+
 .btn-medium:hover {
   background-position: left -128px;
 }
+
 .btn-large {
   padding: 9px 13px 0px 13px;
   height: 39px;
@@ -878,47 +907,75 @@ button:hover.greenbutton {
   background-position: left 0px;
   border-radius: 0;
 }
+
 .btn-large:hover {
   background-position: left -48px;
 }
-.btn-disabled-primary, .btn-disabled-primary:hover, .btn-disabled-neutral, .btn-disabled-neutral:hover, .btn-disabled-negative, .btn-disabled-negative:hover {
+
+.btn-disabled-primary,
+.btn-disabled-primary:hover,
+.btn-disabled-neutral,
+.btn-disabled-neutral:hover,
+.btn-disabled-negative,
+.btn-disabled-negative:hover {
   cursor: default;
   background-position: left -202px;
 }
 
-.btn-primary, .btn-primary:link, .btn-primary:active, .btn-primary:visited {
+.btn-primary,
+.btn-primary:link,
+.btn-primary:active,
+.btn-primary:visited {
   border-color: #007001;
   background-color: #007001;
   background-image: url(/images/buttons/StyleGuide/bg-btn-green.png);
   color: white;
 }
-.btn-disabled-primary, .btn-disabled-primary:link, .btn-disabled-primary:active, .btn-disabled-primary:visited {
+
+.btn-disabled-primary,
+.btn-disabled-primary:link,
+.btn-disabled-primary:active,
+.btn-disabled-primary:visited {
   background-color: #99c699;
   background-image: url(/images/buttons/StyleGuide/bg-btn-green.png);
   border-color: #99c699;
   color: white;
 }
 
-.btn-neutral, .btn-neutral:link, .btn-neutral:active, .btn-neutral:visited {
+.btn-neutral,
+.btn-neutral:link,
+.btn-neutral:active,
+.btn-neutral:visited {
   border-color: #0852b7;
   background-color: #0852b7;
   background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
   color: white;
 }
-.btn-disabled-neutral, .btn-disabled-neutral:link, .btn-disabled-neutral:active, .btn-disabled-neutral:visited {
+
+.btn-disabled-neutral,
+.btn-disabled-neutral:link,
+.btn-disabled-neutral:active,
+.btn-disabled-neutral:visited {
   background-color: #9cbae2;
   background-image: url(/images/buttons/StyleGuide/bg-btn-blue.png);
   border-color: #9cbae2;
   color: white;
 }
 
-.btn-negative, .btn-negative:link, .btn-negative:active, .btn-negative:visited {
+.btn-negative,
+.btn-negative:link,
+.btn-negative:active,
+.btn-negative:visited {
   border-color: #565656;
   background-color: #565656;
   background-image: url(/images/buttons/StyleGuide/bg-btn-gray.png);
   color: white;
 }
-.btn-disabled-negative, .btn-disabled-negative:link, .btn-disabled-negative:active, .btn-disabled-negative:visited {
+
+.btn-disabled-negative,
+.btn-disabled-negative:link,
+.btn-disabled-negative:active,
+.btn-disabled-negative:visited {
   background-color: #bbbcbb;
   background-image: url(/images/buttons/StyleGuide/bg-btn-gray.png);
   border-color: #bbbcbb;
@@ -941,6 +998,15 @@ button:hover.greenbutton {
 #footer_signup p,
 #footer_signup a {
   color: #555;
+}
+
+#ColorChooser {
+  height: 240px;
+  width: 194px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 21px;
 }
 
 p,
@@ -996,11 +1062,14 @@ a,
   overflow: visible;
   width: 100%;
 }
-div#testingSitePanelWrapper, #BodyWrapper {
+
+div#testingSitePanelWrapper,
+#BodyWrapper {
   margin: 0 auto;
   width: 970px;
   background: white;
 }
+
 #Body {
   _overflow: hidden;
   min-height: 550px;
@@ -1011,12 +1080,14 @@ div#testingSitePanelWrapper, #BodyWrapper {
 }
 
 .hidden {
-  visibility: hidden!important;
-  display: none!important;
+  visibility: hidden !important;
+  display: none !important;
 }
 
 @media (max-width:980px) {
-  .content_signup, #footer_signup {
+
+  .content_signup,
+  #footer_signup {
     width: 100%;
   }
 }
