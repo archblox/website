@@ -2,7 +2,7 @@
 header("content-type:application/xml");
 ob_start();
 $userId = addslashes($_GET["userId"]);
-$hat1 = 0;
+$hat1 = 300;
 $hat2 = 0;
 $hat3 = 0;
 $shirt = 0;
