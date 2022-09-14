@@ -4,8 +4,7 @@
 
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet"
-        href="{{ asset('css/FetchCSS2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/FetchCSS2.css') }}">
     <script type="text/javascript" src="{{ asset('js/test.js') }}"></script>
 </head>
 
@@ -21,7 +20,7 @@
                     </span>
                     <!-- disabled due to bugs
                     <div id="iFrameLogin" class="studioiFrameLogin" style="display: none; background: #E1E1E1">
-                        <iframe class="login-frame" src="{{ route('login_iframe') }}" allow-scripts scrolling="no" frameborder="0"></iframe>                                  
+                        <iframe class="login-frame" src=" route('login_iframe') " allow-scripts scrolling="no" frameborder="0"></iframe>                                  
                     </div>
                      -->
                 </span>
