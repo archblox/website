@@ -234,8 +234,8 @@ local success, err = pcall(function()
 	
 	-- Overriden
 	onPlayerAdded(player)
-	
-	player.CharacterAppearance = "<?php echo $app; ?>"	
+	player.CharacterAppearance = "test"
+	-- player.CharacterAppearance = "http://morblox.us/Asset/CharacterFetch.ashx?userId=<?php echo $app; ?>"	
 	if not test then visit:SetUploadUrl("")end
     player.Name = "<?php echo $username; ?>"
 end)
