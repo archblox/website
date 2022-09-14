@@ -7,7 +7,7 @@
 <meta content="{{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
-<meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+<meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 @section('contentloggedout')
 <h1>Welcome to ARCHBLOX!</h1>

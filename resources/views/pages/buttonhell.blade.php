@@ -6,7 +6,7 @@
     <meta content="Button Hell - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
-    <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+    <meta content="Welcome to Button Hell. Population: Around 20000+ buttons." property="og:description" />
 @endsection
 
 @section('alert')

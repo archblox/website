@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>archblox.com - ARCHBLOX HQ</title>
-        <meta content="archblox.com - ARCHBLOX HQ" property="og:title"/>
-        <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description"/>
-        <meta content="https://archblox.com/" property="og:url"/>
-        <meta content="https://archblox.com/MORBLOXlogo.png" property="og:image"/>
+        <title>morblox.us - MORBLOX HQ</title>
+        <meta content="morblox.us - MORBLOX HQ" property="og:title"/>
+        <meta content="MORBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description"/>
+        <meta content="{{ route('classicsite/main.css') }}" property="og:url"/>
+        <meta content="{{ asset('classicsite/MORBLOXlogo.png') }}" property="og:image"/>
         <meta content="#4b4b4b" data-react-helmet="true" name="theme-color"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-        <link rel="apple-touch-icon" href="MORBLOX.png"/>
-        <link rel="apple-touch-startup-image" href="MORBLOXSplash.png"/>
-        <link rel="icon" type="image/x-icon" href="MORBLOX.ico">
-        <link rel="stylesheet" href="main.css">
-        <script src="main.js"></script>
+        <link rel="apple-touch-icon" href="{{ asset('classicsite/MORBLOX.png') }}"/>
+        <link rel="apple-touch-startup-image" href="{{ asset('classicsite/MORBLOXSplash.png') }}"/>
+        <link rel="icon" type="image/x-icon" href="{{ asset('classicsite/morblox.ico') }}">
+        <link rel="stylesheet" href="{{ asset('classicsite/main.css') }}">
+        <script src="{{ asset('classicsite/main.js') }}"></script>
     </head>
     <body>
         <div class="navbar">
-            <a id="logo_full" href="home.html"><img alt="ARCHBLOX Logo" src="MORBLOXlogo.png" width="200" height="40"/></a>
-            <a id="logo_small" class="invisible" href="home.html"><img alt="ARCHBLOX Logo" src="MORBLOXlogoshort.png" width="45" height="40"/></a>
+            <a id="logo_full" href="home.html"><img alt="MORBLOX Logo" src="MORBLOXlogo.png" width="200" height="40"/></a>
+            <a id="logo_small" class="invisible" href="home.html"><img alt="MORBLOX Logo" src="MORBLOXlogoshort.png" width="45" height="40"/></a>
             <div class="navbarbuttoncontainer">
                 <a class="navbarbutton" id="smallbtn5" href="games.html">Games</a>
                 <a class="navbarbutton" id="smallbtn4" href="catalog.html">Catalog</a>
@@ -48,8 +48,8 @@
         <div class="invisible" id="LoadingGame">
             <button class="redbutton" id="closebuttondl">X</button>
             <img id="loadlogo" src="MORBLOXlogoshort.png">
-            <p>Loading ARCHBLOX...</p>
-            <p id="downloadask">Don't have ARCHBLOX installed?</p>
+            <p>Loading MORBLOX...</p>
+            <p id="downloadask">Don't have MORBLOX installed?</p>
             <button class="bluebutton" id="loadingdlbutton">Download and Play!</button>
         </div>
         <div class="content">
@@ -71,7 +71,7 @@
             </div>
         </div>
         <div id="footer">
-            <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin time!</p>
+            <p>MORBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo and Morbius. It's Morbin time!</p>
             <p><a href="privacy.html">Privacy Policy</a> <a href="tos.html">Terms of Service</a></p>      
         </div id="footer">
     </body>

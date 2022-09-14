@@ -4,7 +4,7 @@
         <title>Image Posted - {{ env('APP_NAME') }}</title>
         <meta charset="utf-8">
         <meta content="Image Posted - ARCHBLOX" property="og:title" />
-        <meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+        <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
         <meta content="https://archblox.com" property="og:url" />
         <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image" />
         <meta content="#4b4b4b" data-react-helmet="true" name="theme-color" />

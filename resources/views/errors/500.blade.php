@@ -6,7 +6,7 @@
 <meta content="500 - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
-<meta content="ARCHBLOX is a work in progress revival." property="og:description" />
+<meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 @section('contentloggedout')
 <h2>500 | Internal Server Error</h2>

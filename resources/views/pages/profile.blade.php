@@ -6,7 +6,7 @@
     <meta content="{{ $user->name }} - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
-    <meta content="{{ $user->blurb }} | ARCHBLOX is a work in progress revival." property="og:description" />
+    <meta content="'{{ $user->feedposts->last()->status }}'" property="og:description" />
 @endsection
 
 @section('content')
