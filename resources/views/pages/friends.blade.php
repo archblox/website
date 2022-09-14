@@ -4,16 +4,13 @@
 @endsection
 
 @section('content')
+    <div class="PageTitleBar">
     <h1 id="usernameframe">Friends ({{ Auth::user()->getFriendsCount() }})</h1>
+    <div>
     <a href="#" class="tab_selected">All Friends</a>
     <a href="{{ route('requests') }}" class="tab">Pending Requests ({{ count(Auth::user()->getFriendRequests()) }})</a>
-    <br>
-    <!--
-            <form method="GET" action="{{ route('friends') }}">
-                <p><input type="text" id="q" name="q" placeholder="Enter a Username..." value="{{ request()->q }}">
-                    <button class="greybutton" type="submit">Search</button>
-                </p>
-            </form>-->
+    </div>
+    </div>
     <br>
     <div class="content_special" id="FriendsContainer" style="flex-wrap: wrap;">
         @foreach ($userFriends as $user)

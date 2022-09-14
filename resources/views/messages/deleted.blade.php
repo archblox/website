@@ -15,14 +15,17 @@
 @endsection
 
 @section('content')
+    <div class="PageTitleBar">
     <h1 id="usernameframe">My Messages</h1>
+    <div>
     <button type="button" class="greenbutton"><a href="{{ route('compose') }}" style="color:white;font-weight:normal">New
             Message</a></button>
     <form action="{{ route('recover_all') }}" method="POST" style="display:inline-block">
         @csrf
         <button class="greenbutton" type="submit">Recover All Messages</button>
     </form>
-    <br>
+    </div>  
+    </div>
     <br>
     <a href="{{ route('inbox') }}" class="tab">Inbox
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', false)->count() }})</a>

@@ -10,6 +10,7 @@
 @endsection
 
 @section('content')
+    <div class="PageTitleBar">
     @if (request()->query('q'))
         <h1 id="usernameframe">Users -
             {{ DB::table('users')->where('name', 'LIKE', '%' . request()->query('q') . '%')->count() }} found</h1>
@@ -23,6 +24,7 @@
             <button class="greybutton" type="submit">Search</button>
         </p>
     </form>
+    </div>
     <br>
     <div id="SearchContainer">
         @foreach ($users as $user)

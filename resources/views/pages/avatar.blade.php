@@ -14,7 +14,12 @@
 @endsection
 
 @section('content')
+    <div class="PageTitleBar">
     <h1>Avatar Editor</h1>
+    <div>
+        <button class="tab_selected">Wardrobe</button> <button class="tab">My Outfits</button>
+    </div>
+    </div>
     <br>
     <div class="content_special">
         <div class="avatarleft" style="width: 30%;">
@@ -46,7 +51,6 @@
             </div>
         </div>
         <div class="avatarright" style="width: 69%;">
-            <button class="tab_selected">Wardrobe</button> <button class="tab">My Outfits</button>
             <div class="wardrobecontainer"> 
                 
             </div>

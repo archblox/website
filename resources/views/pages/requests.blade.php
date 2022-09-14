@@ -4,10 +4,13 @@
 @endsection
 
 @section('content')
+    <div class="PageTitleBar">
     <h1 id="usernameframe">Friends</h1>
+    <div>
     <a href="{{ route('friends') }}" class="tab">All Friends</a>
     <a href="#" class="tab_selected">Pending Requests ({{ count(Auth::user()->getFriendRequests()) }})</a>
-    <br>
+    </div>
+    </div>
     <br>
     <div class="content_special" id="FriendsContainer" style="flex-wrap: wrap;">
         @foreach ($userRequests as $userReq)

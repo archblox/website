@@ -92,9 +92,13 @@
             @default
             @endswitch
             @endauth
-            <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" class="btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
-            <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo"
-                    src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
+            @guest
+                <a id="logo_full" href="{{ route('index') }}"><img alt="ARCHBLOX Logo" class="btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
+                <a id="logo_small" href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
+            @else
+                <a id="logo_full" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" class="btn-logo" src="{{ asset('img/MORBLOXlogo.png') }}"/></a>
+                <a id="logo_small" href="{{ route('home') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/MORBLOXlogoshort.png') }}"/></a>
+            @endguest
             <div id="NewRedesign" class="navbarbuttoncontainer NavigationRedesign">
                 <ul id="ctl00_cphBanner_ctl00_MenuUL">
                 <li><a class="navbarbutton" id="smallbtn5" href="{{ route('games') }}">Games</a></li>

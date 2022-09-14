@@ -10,7 +10,8 @@
 @endsection
 
 @section('content')
-    <div id="profiletopcontainer">
+    <div class="PageTitleBar" style="align-content: flex-end; align-items: flex-end;">
+        <div>
         <h1 id="usernameframe">{{ $user->name }}</h1>
         @if ($user->settings->changed_name)
             <h4>Previous Username: {{ $user->settings->old_name }}</h4>
@@ -21,7 +22,8 @@
             <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
                 {{ Carbon\Carbon::parse($user->last_seen)->diffForHumans() }}</strong>
         @endif
-        <br>
+        </div>
+        <div>
         @if (!Auth::guest() && Auth::id() != $user->id)
             @if (Auth::user()->hasSentFriendRequestTo($user))
                 <button class="bluebutton" type="submit" disabled>Pending...</button>
@@ -50,14 +52,16 @@
                     @if (Auth::user()->isFriendWith($user))
                         <a href="/my/messages/compose?to={{ $user->name }}"><button class="greybutton">Message</button></a>
                     @else
-                        <a href="#"><button class="greybutton" disabled>Message (Friends Only)</button></a>
+                        <a href="#"><button class="greybutton" disabled>Message</button></a>
                     @endif
                     @break
                 @default
-                    <a href="#"><button class="greybutton" disabled>Message (Disabled)</button></a>
+                    <a href="#"><button class="greybutton" disabled>Message</button></a>
             @endswitch
         @endif
+        </div>
     </div>
+    <br>
     <div class="content_special">
         <div id="profileleftcontainer">
             @if (!empty($user->feedposts->last()->status))
@@ -100,9 +104,9 @@
         <div id="profilerightcontainer">
             <div class="content_special" style="justify-content: center;">
                 <h2>Games </h2>
-                <a href="{{ route('incomplete') }}" style="margin-left: 5px"> <button class="bluebutton"
+                <!--<a href="route('incomplete')" style="margin-left: 5px"> <button class="bluebutton"
                         style="margin-top: 5px">View
-                        All</button></a>
+                        All</button></a>-->
             </div>
             <p>This user hasn't made any games yet!</p>
             <br>

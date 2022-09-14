@@ -66,6 +66,7 @@ body {
 	width: 970px;
 	padding-top: 12px;
 	margin: 40px auto 0;
+	margin-top: 60px;
 	padding-bottom: 40px;
 	min-height: calc(100% - 40px);
 }
@@ -672,8 +673,7 @@ button:hover a {
 		width: 120px;
 	}
 
-	.content,
-	iframe {
+	.content, iframe {
 		padding-left: 180px;
 		padding-right: 10px;
 	}

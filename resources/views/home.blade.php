@@ -56,8 +56,8 @@
             </div>
             @endforeach
             @if ($posts->isEmpty())
-            <p>No news about your friends... want to know what your friends are up to?</p>
-            <a href="/users">make some friends now.</a>
+            <p>It's quiet... Too quiet... Why not make a post on your feed, or </p>
+            <a href="{{ route('games')}}">make some friends!</a>
             @endif
         </div>
         {{ $posts->links() }}
@@ -71,7 +71,6 @@
                     All</button></a>
             @endif
         </div>
-        <br>
         <br>
         <div class="friendslist">
             @if (Auth::user()->getFriendsCount() > 0)
@@ -88,14 +87,14 @@
             </div>
         </div>
         @else
-        <p>You don't have any friends yet!</p>
+        <p>You don't have any friends yet. <a href="{{ route('users')}}">Why not make some!</a></p>
     </div>
     @endif
     <br>
     <h2>Recently Played Games</h2>
     <br>
     <div class="gamelist">
-        <p>You haven't played any games recently.</p><a href="{{ route('games')}}" class="text-link">Play Now</a>
+        <p>You haven't played any games recently.</p> <a href="{{ route('games')}}" class="text-link">Play Now!</a>
     </div>
 </div>
 </div>
