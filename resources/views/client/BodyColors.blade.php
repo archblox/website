@@ -1,6 +1,12 @@
 @php
 header("content-type:text/plain");
 $userId = addslashes($_GET["userId"]);
+$headcolor = 11
+$leftarmcolor = 11
+$leftlegcolor = 1003
+$rightarmcolor = 11
+$rightlegcolor = 1003
+$torsocolor = 1003
 //TODO: add avatar system 
 @endphp
 <?xml version="1.0" encoding="utf-8" ?>
@@ -9,13 +15,13 @@ $userId = addslashes($_GET["userId"]);
     <External>nil</External>
     <Item class="BodyColors">
         <Properties>
-            <int name="HeadColor">11</int>
-            <int name="LeftArmColor">11</int>
-            <int name="LeftLegColor">1003</int>
+            <int name="HeadColor">@php echo $headcolor @endphp</int>
+            <int name="LeftArmColor">@php echo $leftarmcolor @endphp</int>
+            <int name="LeftLegColor">@php echo $leftlegcolor @endphp</int>
             <string name="Name">Body Colors</string>
-            <int name="RightArmColor">11</int>
-            <int name="RightLegColor">1003</int>
-            <int name="TorsoColor">1003</int>
+            <int name="RightArmColor">@php echo $rightarmcolor @endphp</int>
+            <int name="RightLegColor">@php echo $rightlegcolor @endphp</int>
+            <int name="TorsoColor">@php echo $torsocolor @endphp</int>
             <bool name="archivable">true</bool>
         </Properties>
     </Item>
