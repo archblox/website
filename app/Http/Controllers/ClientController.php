@@ -90,4 +90,14 @@ class ClientController extends Controller
     {
         return view('client.login_iframe');
     }
+
+    public function bodycolors()
+    {
+        return view('client.BodyColors');
+    }
+
+    public function characterfetch()
+    {
+        return view('client.CharacterFetch');
+    }
 }

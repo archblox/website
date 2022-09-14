@@ -11,15 +11,15 @@ $app = addslashes($_GET["app"]);*/
 if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
 	$id = addslashes(Auth::id());
+	$app = addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
 	$id = 0;
+	$app = 0
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
-$app = 'test';
-//$app = addslashes($_GET["app"]);
 
 ob_start();
 @endphp
@@ -235,7 +235,7 @@ local success, err = pcall(function()
 	-- Overriden
 	onPlayerAdded(player)
 	
-	player.CharacterAppearance = "<?php echo $app; ?>"	
+	player.CharacterAppearance = "http://morblox.us/Asset/CharacterFetch.ashx?userId=<?php echo $app; ?>"	
 	if not test then visit:SetUploadUrl("")end
     player.Name = "<?php echo $username; ?>"
 end)
