@@ -99,5 +99,6 @@ Route::get('/Game/Tools/InsertAsset.ashx', [App\Http\Controllers\ClientControlle
 Route::get('/UI/Save.aspx', [App\Http\Controllers\ClientController::class, 'modelupload'])->name('modelupload');
 Route::get('/Game/Tools/ThumbnailAsset.ashx', [App\Http\Controllers\ClientController::class, 'stampertools'])->name('stampertools');
 Route::get('/Game/edit.ashx', [App\Http\Controllers\ClientController::class, 'edit'])->name('edit');
+// THIS SHIT DOESNT WORK!!! BROKEN CLIENT!!
 //Route::get('/Asset/BodyColors.ashx', [App\Http\Controllers\ClientController::class, 'bodycolors'])->name('bodycolors');
 //Route::get('/Asset/CharacterFetch.ashx', [App\Http\Controllers\ClientController::class, 'characterfetch'])->name('characterfetch');
