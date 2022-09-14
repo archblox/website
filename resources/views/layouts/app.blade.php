@@ -115,8 +115,23 @@
                 <div id="navbarsignedincontainer">
                     <a href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
                     <div class="HeaderDivider"></div>
-                    <div class="arkotcontainer"><img class="arkoticon_navbar" src="{{ asset('img/arkot.png') }}">
-                    <p> {{ Auth::user()->morbux }}</p>
+                    <div class="arkotcontainer"><img class="arkoticon_navbar" alt="{{ Auth::user()->morbux }}" src="{{ asset('img/arkot.png') }}">
+                        <p>
+                            @php
+                                $n = Auth::user()->morbux;
+                                if ($n < 1000000) {
+                                    // Anything less than a million
+                                    $n_format = number_format($n);
+                                } else if ($n < 1000000000) {
+                                    // Anything less than a billion
+                                    $n_format = number_format($n / 1000000, 3) . 'M';
+                                } else {
+                                    // At least a billion
+                                    $n_format = number_format($n / 1000000000, 3) . 'B';
+                                }
+                                echo $n_format
+                            @endphp
+                        </p>
                     </div>
                     <div class="HeaderDivider"></div>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></p>
