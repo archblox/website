@@ -16,7 +16,7 @@ if (Auth::check()) {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
 	$id = 0;
-	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0'
+	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0';
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
