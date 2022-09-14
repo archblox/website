@@ -11,16 +11,15 @@ $app = addslashes($_GET["app"]);*/
 if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
 	$id = addslashes(Auth::id());
-	$app = '' . addslashes(Auth::id());
+	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=' . addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
 	$id = 0;
-	$app = '0'
+	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0'
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
-$app = '0';
 
 ob_start();
 @endphp
