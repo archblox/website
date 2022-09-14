@@ -1,3 +1,4 @@
+<!-- Hey inspect element user! Thomas here, trying to figure out how to get place launching working in studio. If you have any idea on how to fix this issue, please, DM me on discord! -->
 <!DOCTYPE html>
 
 <html>
