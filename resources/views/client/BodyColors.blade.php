@@ -1,12 +1,12 @@
 @php
 header("content-type:text/plain");
 $userId = addslashes($_GET["userId"]);
-$headcolor = 11
-$leftarmcolor = 11
-$leftlegcolor = 1003
-$rightarmcolor = 11
-$rightlegcolor = 1003
-$torsocolor = 1003
+$headcolor = 11;
+$leftarmcolor = 11;
+$leftlegcolor = 1003;
+$rightarmcolor = 11;
+$rightlegcolor = 1003;
+$torsocolor = 1003;
 //TODO: add avatar system 
 @endphp
 <?xml version="1.0" encoding="utf-8" ?>
