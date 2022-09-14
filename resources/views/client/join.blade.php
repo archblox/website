@@ -20,6 +20,7 @@ if (Auth::check()) {
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
+$app = 'test';
 
 ob_start();
 @endphp
