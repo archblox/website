@@ -52,9 +52,9 @@
                 @if (!empty($user->name)) {{ $user->name }} @else N/A @endif
             </a>
             @unless (request()->query('q'))
-            <a href="/admin/users?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
+            <a href="/admin/users?q@if (!empty($user->id)) {{ $user->id }}@else N/A @endif&searchBy=id" title="@if (!empty($user->name)) {{ $user->name }}@else N/A @endif's Details" class="AuthenticatedUserName userInfo"></a>
             @endunless
-            <a href="/admin/tree?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
+            <a href="/admin/tree?q=@if (!empty($user->id)) {{ $user->id }}@else N/A @endif&searchBy=id" title="@if (!empty($user->name)) {{ $user->name }}@else N/A @endif's Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
         </div>
         @if ($user->settings->changed_name)
         <div class="Row">
@@ -71,7 +71,7 @@
                 ID:
             </div>
             <div class="text-secondary">
-                {{ $user->id }}
+                @if (!empty($user->id)) {{ $user->id }}@else N/A @endif
             </div>
         </div>
         <div class="Row">
@@ -81,7 +81,7 @@
             @if ($user->admin)
                 <div class="text-secondary hidden-info">[Hidden]</div>
             @else
-                <div class="text-secondary">{{ $user->email }}</div>
+                @if (!empty($user->email)) {{ $user->email }}@else N/A @endif
             @endif
         </div>
         <div class="Row">
@@ -89,12 +89,12 @@
                 DOB:
             </div>
             @if ($user->admin)
-            <div class="text-secondary hidden-info">[Hidden]</div>
+                <div class="text-secondary hidden-info">[Hidden]</div>
             @else
             @guest
-            <div class="text-secondary">{{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}</div>
+                @if (!empty($user->dob)) <div class="text-secondary">{{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}</div> @else N/A @endif
             @else
-            <div class="text-secondary">{{ Carbon\Carbon::parse($user->dob)->format(Auth::user()->settings->date_preference) }}</div>
+                @if (!empty($user->dob)) <div class="text-secondary">{{ Carbon\Carbon::parse($user->dob)->format(Auth::user()->settings->date_preference) }}</div> @else N/A @endif
             @endguest
             @endif
         </div>
@@ -115,7 +115,7 @@
                 Bio :
             </div>
             <div class="text-secondary">
-                {!! nl2br(e($user->blurb)) !!}
+                @if (!empty($user->blurb)) {!! nl2br(e($user->blurb)) !!} @else N/A @endif
             </div>
         </div>
         <div class="Row">
@@ -164,9 +164,9 @@
             </div>
             <div class="text-secondary">
                 @guest
-                    {{ $user->created_at->format('d/m/Y') }}
+                    @if (!empty($user->created_at))  {{ $user->created_at->format('d/m/Y') }}  @else N/A @endif
                 @else
-                    {{ $user->created_at->format(Auth::user()->settings->date_preference) }}
+                    @if (!empty($user->created_at))  {{ $user->created_at->format(Auth::user()->settings->date_preference) }}  @else N/A @endif
                 @endguest
             </div>
         </div>
@@ -184,8 +184,8 @@
             <div class="text-secondary">
                 Invited By
             </div>
-            <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Profile" class="AuthenticatedUserName">
-                {{ App\Models\User::where('id', $user->invited_by)->first()->name }}
+            <a href="@if (!empty($user->invited_by))   {{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }} @else # @endif" title="@if (!empty($user->invited_by))  {{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Profile @else N/A @endif" class="AuthenticatedUserName">
+                @if (!empty($user->invited_by))   {{ App\Models\User::where('id', $user->invited_by)->first()->name }}  @else N/A @endif
             </a>
             @unless (request()->query('q'))
             <a href="/admin/users?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="View {{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
