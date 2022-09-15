@@ -44,7 +44,7 @@ end)
 
 -- Your Favorite Catgirl Medic is here, Meow!
 -- im keeping the catgirl text thomas
-scriptContext:AddCoreScript(6,screenGui,"CoreScripts/DialogScript")
+scriptContext:AddCoreScript(6,screenGui,"CoreScripts/MainBotChatScript")
 
 -- Popup Script
 scriptContext:AddCoreScript(7,screenGui,"CoreScripts/PopupScript")
