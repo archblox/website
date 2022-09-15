@@ -184,8 +184,8 @@
             <div class="text-secondary">
                 Invited By
             </div>
-            <a href="@if (!empty($user->invited_by))   {{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }} @else # @endif" class="AuthenticatedUserName">
-                @if (!empty($user->invited_by))   {{ App\Models\User::where('id', $user->invited_by)->first()->name }}  @else N/A @endif
+            <a href="@if (!empty($user->id))   {{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }} @else # @endif" class="AuthenticatedUserName">
+                @if (!empty($user->id))   {{ App\Models\User::where('id', $user->invited_by)->first()->name }}  @else N/A @endif
             </a>
             @unless (request()->query('q'))
             <a href="/admin/users?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="View {{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
