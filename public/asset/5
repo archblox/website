@@ -25,7 +25,7 @@ local updateVideoCaptureDropDownSelection = nil
 local tweenTime = 0.2
 
 local mouseLockLookScreenUrl = "http://www.morblox.us/asset?id=54071825"
-local classicLookScreenUrl = "http://www.morblox.us/Asset?id=45915798"
+local classicLookScreenUrl = "http://www.morblox.us/asset?id=45915798"
 
 local hasGraphicsSlider = (game:GetService("CoreGui").Version >= 5)
 local GraphicsQualityLevels = 10 -- how many levels we allow on graphics slider
