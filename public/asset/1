@@ -42,8 +42,7 @@ pcall(function()
 	end
 end)
 
--- Your Favorite Catgirl Medic is here, Meow!
--- im keeping the catgirl text thomas
+-- MainBotChatScript
 scriptContext:AddCoreScript(6,screenGui,"CoreScripts/MainBotChatScript")
 
 -- Popup Script
