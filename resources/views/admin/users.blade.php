@@ -48,8 +48,8 @@
             <div class="text-secondary">
                 Username:
             </div>
-            <a href="@if (!empty($user->id)) {{ route('profile', $user->id) }} @else #" title="@if (!empty($user->name)) {{ $user->name }}'s profile @else N/A" class="AuthenticatedUserName">
-                @if (!empty($user->name)) {{ $user->name }} @else N/A
+            <a href="@if (!empty($user->id)) {{ route('profile', $user->id) }} @else # @endif" title="@if (!empty($user->name)) {{ $user->name }}'s profile @else N/A @endif" class="AuthenticatedUserName">
+                @if (!empty($user->name)) {{ $user->name }} @else N/A @endif
             </a>
             @unless (request()->query('q'))
             <a href="/admin/users?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
