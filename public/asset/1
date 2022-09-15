@@ -89,3 +89,6 @@ if game.CoreGui.Version >= 3 then
 	-- Wardrobe script handles all character dressing operations
 	scriptContext:AddCoreScript(16,Backpack,"CoreScripts/BackpackScripts/BackpackWardrobe")
 end
+
+-- Your Favorite Catgirl Medic is here, Meow!
+scriptContext:AddCoreScript(17,screenGui,"CoreScripts/DialogScript")
