@@ -263,9 +263,10 @@
                             @endif
                         </p>
                         <p><strong>Status:</strong> Normal</p>
+                                    <!-- Note to Tersis/Conkley, please revert this change sooner or later -->
                         <p><strong>Invited By:</strong> <a style="color:blue"
-                                href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}">{{ App\Models\User::where('id', $user->invited_by)->first()->name }}</a>
-                            (ID: {{ App\Models\User::where('id', $user->invited_by)->first()->id }})
+                                href="#">N/A</a>
+                            (ID: N/A)
                         </p>
                         <!--
                                 <button class="greybutton">Check Reports For This User</button>
