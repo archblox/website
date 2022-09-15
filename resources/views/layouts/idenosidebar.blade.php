@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon" href="{{ asset('img/MORBLOX.png') }}" />
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
 </head>

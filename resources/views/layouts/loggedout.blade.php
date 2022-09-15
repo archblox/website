@@ -69,32 +69,36 @@ $splash = array(
     @yield('descdiscord')
     <meta content="https://archblox.com" property="og:url" />
     <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image" />
-    <meta content="#4b4b4b" data-react-helmet="true" name="theme-color" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon" href="{{ asset('img/MORBLOX.png') }}" />
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @auth
     @switch (Auth::user()->settings->theme)
     @case(5)
+    <meta content="#011130" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(4)
+    <meta content="#316bdf" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(3)
+    <meta content="#011130" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(2)
+    <meta content="#ffffff" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @default
+    <meta content="#316bdf" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endswitch
     @else
@@ -118,11 +122,22 @@ $splash = array(
             li.setAttribute('rel', rel);
             var s = document.getElementsByTagName('head')[0];
             s.appendChild(li, s);
+
             var li = document.createElement('link');
             var href = "{{ asset('css/appdark.css?id='.Str::random(8)) }}";
             var rel = 'stylesheet';
             li.setAttribute('href', href);
             li.setAttribute('rel', rel);
+            var s = document.getElementsByTagName('head')[0];
+            s.appendChild(li, s);
+
+            var li = document.createElement('meta');
+            var content = "#011130";
+            var datareacthelmet = 'true';
+            var name = "theme-color"
+            li.setAttribute('content', content);
+            li.setAttribute('data-react-helmet', datareacthelmet);
+            li.setAttribute('name',name)
             var s = document.getElementsByTagName('head')[0];
             s.appendChild(li, s);
         } else {
@@ -131,6 +146,16 @@ $splash = array(
             var rel = 'stylesheet';
             li.setAttribute('href', href);
             li.setAttribute('rel', rel);
+            var s = document.getElementsByTagName('head')[0];
+            s.appendChild(li, s);
+
+            var li = document.createElement('meta');
+            var content = "#316bdf";
+            var datareacthelmet = 'true';
+            var name = "theme-color"
+            li.setAttribute('content', content);
+            li.setAttribute('data-react-helmet', datareacthelmet);
+            li.setAttribute('name',name)
             var s = document.getElementsByTagName('head')[0];
             s.appendChild(li, s);
         }
