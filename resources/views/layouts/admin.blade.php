@@ -23,17 +23,25 @@
 <body class="NewPanel">
     @yield('alert')
 
-    <div id="MasterContainer" class="AdminPanel" style="width: 100%;">
+    <div id="MasterContainer" class="AdminPanel EnableLogoutBtn" style="width: 100%;">
     <div id="AdminWrapper" class="Navigation">
         <div class="AdminHeader">
-            <span><a href="{{ route('home') }}" title="Main Site" class="SiteBrand"></a></span>
+            <span><a href="{{ route('home') }}" title="ARCHBLOX Home" class="SiteBrand"></a></span>
             <a class="Slogan">
                 Admin Panel
             </a>
             <div class="AuthenticatedUserNameWrapper">
             Logged in as <a class="AuthenticatedUserName" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
             </div>
+            <div class="logoutbtn">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout AuthenticatedUserName">Logout</a>
+            <span class="logoutarrow"><span>
+            </div>
+        </a>
         </div>
+        <form id="logout-form" class="hidden" action="{{ route('logout') }}" method="POST">
+            @csrf
+        </form>
         <div class="AdminSubHeader">
             <ul>
             <li>

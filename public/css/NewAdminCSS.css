@@ -74,6 +74,15 @@ h6 {
   font-weight: 200;
 }
 
+br {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .NewPanel #MasterContainer.AdminPanel {
   background-color: #111;
 }
@@ -115,14 +124,18 @@ h6 {
 .NewPanel .AdminSubHeader ul {
   padding: 0;
   margin: auto auto;
-  width: 970px;
+  width: 100%;
   height: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
 }
 .NewPanel .AdminSubHeader li {
-  width: 33.334%;
+  width: 25%;
   text-align: center;
   list-style: none;
-  float: left;
   padding: 5px 0;
   color: #fff;
 }
@@ -133,18 +146,60 @@ h6 {
   cursor: pointer;
   transition: .1s all linear;
 }
-.NewPanel .AdminSubHeader li:hover a {
-  color: #ccc
-}
-.NewPanel .AdminSubHeader li a.Active, .NewPanel .AdminSubHeader li a.Active:active {
-  box-shadow: 0 2px 0 0 #00b7ff;
-}
 .NewPanel .AdminSubHeader li a:hover, .NewPanel .AdminSubHeader li a:active {
   color: #fff;
   box-shadow: 0 2px 0 0 #fff;
   transition: .1s all linear;
 }
+.NewPanel .AdminSubHeader li a.active {
+  box-shadow: 0 2px 0 0 #00b7ff;
+}
+.NewPanel .AdminSubHeader li a:focus {
+  color: #dbdbdb;
+  box-shadow: 0 2px 0 0 #dbdbdb;
+}
+.NewPanel .AdminSubHeader li a.active:focus {
+  box-shadow: 0 2px 0 0 #11749b;
+}
+.NewPanel .AdminPanel .logoutbtn {
+  color: #00b7ff;
+  cursor: default;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.NewPanel .AdminPanel .logoutarrow {
+  height: 16px;
+  width: 16px;
+}
+.NewPanel .AdminPanel .logoutarrow:before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  transform: rotate(180deg);
+  position: absolute;
+}
+.NewPanel .AdminPanel .logoutarrow:before {
+  content: '\2794';
+}
 .NewPanel .AdminHeader .Slogan {
+  color: #bbb;
+  text-shadow: #11111191 2px 2px;
   font-size: 16px;
   font-weight: 100;
   display: block;
@@ -165,8 +220,13 @@ h6 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0;
+  opacity: .75;
+  transition: .1s opacity linear;
   display: block;
   margin: auto;
+}
+.NewPanel .AdminHeader .SiteBrand:hover {
+  opacity: 1;
 }
 .NewPanel .AdminPanel #Body {
   background-color: #111;
@@ -217,7 +277,7 @@ h6 {
 .NewPanel .AdminPanel form div {
   text-align: center;
 }
-.NewPanel .SearchCloseBtn{
+.NewPanel .SearchCloseBtn {
   color: #af1400;
   transition: .1s linear;
   left: auto;
@@ -230,9 +290,9 @@ h6 {
   color: #d41900;
 }
 .NewPanel .AdminPanel #SearchInput {
-  border: 1px solid #757575;
+  border: 1px solid #555;
   border-radius: 3px;
-  color: #b8b8b8;
+  color: #bbb;
   background-color: #000;
 }
 .NewPanel .AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
@@ -241,8 +301,8 @@ h6 {
 .NewPanel #SearchInput, .NewPanel .btn-neutral {
   margin: 0 5px;
 }
-.NewPanel .AdminPanel #SearchInput:focus-visible {
-  outline: none;
+.NewPanel :focus-visible {
+  outline: none !important;
 }
 .NewPanel .AdminPanel .Stats {
   font-size: 16px;
@@ -332,32 +392,17 @@ h6 {
   -ms-user-select: none;
   user-select: none;
 }
-.NewPanel .AuthenticatedUserName {
+.NewPanel .AuthenticatedUserName, .NewPanel .logoutarrow {
   color: #00b7ff;
   transition: .25s all ease-in-out;
   display: inline-block;
 }
-.NewPanel .AdminHeader .HomeBtn {
-  color: #00b7ff;
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: row-reverse;
+.NewPanel .AuthenticatedUserName:hover, .NewPanel .logout:hover + .logoutarrow {
+  color: #7ddaff;
+  transition: .25s all ease-in-out;
 }
 .NewPanel .UserDetails .Row {
   overflow-wrap: anywhere;
-}
-.NewPanel .AuthenticatedUserName:hover {
-  color: #7ddaff;
-  transition: .25s all ease-in-out;
 }
 .NewPanel .SearchContainer .Thumbnail a {
   width: 12px;
@@ -387,6 +432,9 @@ h6 {
   display: block;
   border-radius: 50%;
   margin: -8px;
+}
+.NewPanel .hidden-info{
+  font-style: italic;
 }
 /*Heavily based off of the roblox developer tree list (because it looks cool)*/
 .NewPanel .SearchTree {
@@ -501,20 +549,10 @@ h6 {
   border-top: 1px dashed #555;
 }
 
-@media (max-width:1000px) {
-  .NewPanel .AdminSubHeader ul {
-    width: 750px;
-  }
-}
 @media (max-width:990px) {
   .NewPanel .AdminPanel #Body, .NewPanel .AdminPanel #BodyWrapper, .NewPanel .AdminPanel #MasterContainer {
     width: 100% !important; /*!important since late 2012 roblox uses element.style CRINGE!*/
     padding: 0;
-  }
-}
-@media (max-width:750px) {
-  .NewPanel .AdminSubHeader ul {
-    width: 400px;
   }
 }
 @media (max-width: 600px) {
@@ -523,9 +561,6 @@ h6 {
   }
 }
 @media (max-width:500px) {
-  .NewPanel .AdminSubHeader ul {
-    width: 300px;
-  }
   .NewPanel .AuthenticatedUserNameWrapper {
     display: none;
   }
