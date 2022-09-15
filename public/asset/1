@@ -42,11 +42,9 @@ pcall(function()
 	end
 end)
 
--- MainBotChatScript
-scriptContext:AddCoreScript(6,screenGui,"CoreScripts/MainBotChatScript")
-
 -- Your Favorite Catgirl Medic is here, Meow!
-scriptContext:AddCoreScript(17,screenGui,"CoreScripts/DialogScript")
+-- im keeping the catgirl text thomas
+scriptContext:AddCoreScript(6,screenGui,"CoreScripts/DialogScript")
 
 -- Popup Script
 scriptContext:AddCoreScript(7,screenGui,"CoreScripts/PopupScript")
