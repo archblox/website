@@ -181,16 +181,17 @@
             @endunless
         </div>
         <div class="Row">
+            <!-- Note to Tersis/Conkley, please revert this change sooner or later -->
             <div class="text-secondary">
                 Invited By
             </div>
-            <a href="@if (!empty($user->id))   {{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }} @else # @endif" class="AuthenticatedUserName">
-                @if (!empty($user->id))   {{ App\Models\User::where('id', $user->invited_by)->first()->name }}  @else N/A @endif
+            <a href="#" class="AuthenticatedUserName">
+                N/A
             </a>
             @unless (request()->query('q'))
-            <a href="/admin/users?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="View {{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
+            <a href="/admin/users?q=1&searchBy=id" title="N/A" class="AuthenticatedUserName userInfo"></a>
             @endunless
-            <a href="/admin/tree?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
+            <a href="/admin/tree?q=1&searchBy=id" title="N/A" class="forwardArrow AuthenticatedUserName"></a>
         </div>
         <div class="Row">
             <div class="text-secondary">
