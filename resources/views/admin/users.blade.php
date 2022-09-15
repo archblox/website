@@ -181,7 +181,7 @@
             @endunless
         </div>
         <div class="Row">
-            <!-- Note to Tersis/Conkley, please revert this change sooner or later -->
+            <!-- Note to Tersis/Conkley, please revert this change sooner or later. I'm tired and might fix the !empty issue later.  -->
             <div class="text-secondary">
                 Invited By
             </div>
@@ -263,7 +263,7 @@
                             @endif
                         </p>
                         <p><strong>Status:</strong> Normal</p>
-                                    <!-- Note to Tersis/Conkley, please revert this change sooner or later -->
+                                    <!-- Note to Tersis/Conkley, please revert this change sooner or later. I'm tired and might fix the !empty issue later. -->
                         <p><strong>Invited By:</strong> <a style="color:blue"
                                 href="#">N/A</a>
                             (ID: N/A)
