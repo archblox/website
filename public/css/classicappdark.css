@@ -118,6 +118,7 @@ body {
 }
 .Redesign .subMenu {
   height: 25px;
+  left: 0;
   margin: 0px;
   padding-left: 10px;
   padding-right: 5px;
