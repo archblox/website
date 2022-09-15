@@ -6,7 +6,7 @@
     <meta content="{{ $user->name }} - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
-    <meta content="'{{ $user->feedposts->last()->status }}'" property="og:description" />
+    <meta content="'@if (!empty($user->feedposts->last()->status)) {{ $user->feedposts->last()->status }} @else I'm new to ARCHBLOX!@endif'" property="og:description" />
 @endsection
 
 @section('content')
