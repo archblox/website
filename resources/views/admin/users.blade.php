@@ -52,7 +52,7 @@
                 @if (!empty($user->name)) {{ $user->name }} @else N/A @endif
             </a>
             @unless (request()->query('q'))
-            <a href="/admin/users?q@if (!empty($user->id)) {{ $user->id }}@else N/A @endif&searchBy=id" title="@if (!empty($user->name)) {{ $user->name }}@else N/A @endif's Details" class="AuthenticatedUserName userInfo"></a>
+            <a href="/admin/users?q=@if (!empty($user->id)) {{ $user->id }}@else N/A @endif&searchBy=id" title="@if (!empty($user->name)) {{ $user->name }}@else N/A @endif's Details" class="AuthenticatedUserName userInfo"></a>
             @endunless
             <a href="/admin/tree?q=@if (!empty($user->id)) {{ $user->id }}@else N/A @endif&searchBy=id" title="@if (!empty($user->name)) {{ $user->name }}@else N/A @endif's Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
         </div>
