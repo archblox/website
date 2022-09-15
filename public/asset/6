@@ -1,17 +1,4 @@
 %6%
-function waitForProperty(instance, name)
-	while not instance[name] do
-		instance.Changed:wait()
-	end
-end
-
-function waitForChild(instance, name)
-	while not instance:FindFirstChild(name) do
-		instance.ChildAdded:wait()
-	end
-end
-
-
 local mainFrame
 local choices = {}
 local lastChoice
@@ -35,15 +22,6 @@ local timeoutScript
 local reenableDialogScript
 local dialogMap = {}
 local dialogConnections = {}
-
-local gui = nil
-waitForChild(game,"CoreGui")
-waitForChild(game.CoreGui,"RobloxGui")
-if game.CoreGui.RobloxGui:FindFirstChild("ControlFrame") then
-	gui = game.CoreGui.RobloxGui.ControlFrame
-else
-	gui = game.CoreGui.RobloxGui
-end
 
 function currentTone()
 	if currentConversationDialog then
@@ -426,7 +404,7 @@ end
 
 function checkForLeaveArea()
 	while currentConversationDialog do
-		if currentConversationDialog.Parent and (player:DistanceFromCharacter(currentConversationDialog.Parent.Position) >= currentConversationDialog.ConversationDistance) then
+		if player:DistanceFromCharacter(currentConversationDialog.Parent.Position) >= currentConversationDialog.ConversationDistance then
 			wanderDialog()
 		end
 		wait(1)		
@@ -438,7 +416,7 @@ function startDialog(dialog)
 		if player:DistanceFromCharacter(dialog.Parent.Position) >= dialog.ConversationDistance then
 			showMessage(tooFarAwayMessage, tooFarAwaySize)
 			return
-		end	
+		end
 		
 		for dialog, gui in pairs(dialogMap) do
 			if dialog and gui then
@@ -450,6 +428,19 @@ function startDialog(dialog)
 
 		delay(1, checkForLeaveArea)
 		doDialog(dialog)
+	end
+end
+
+
+function waitForProperty(instance, name)
+	while not instance[name] do
+		instance.Changed:wait()
+	end
+end
+
+function waitForChild(instance, name)
+	while not instance:FindFirstChild(name) do
+		instance.ChildAdded:wait()
 	end
 end
 
@@ -465,57 +456,43 @@ function removeDialog(dialog)
 end	
 
 function addDialog(dialog)
-	if dialog.Parent then
-		if dialog.Parent:IsA("BasePart") then
-			local chatGui = chatNotificationGui:clone()
-			chatGui.Enabled = not dialog.InUse		
-			chatGui.Adornee = dialog.Parent
-			chatGui.RobloxLocked = true
-			chatGui.Parent = game.CoreGui
-			chatGui.Image.Button.MouseButton1Click:connect(function() startDialog(dialog) end)
-			setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
-			
-			dialogMap[dialog] = chatGui
+	if dialog.Parent and dialog.Parent:IsA("BasePart") then
+		local chatGui = chatNotificationGui:clone()
+		chatGui.Enabled = not dialog.InUse		
+		chatGui.Adornee = dialog.Parent
+      chatGui.RobloxLocked = true
+		chatGui.Parent = game.CoreGui
+		chatGui.Image.Button.MouseButton1Click:connect(function() startDialog(dialog) end)
+		setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
+		
+      dialogMap[dialog] = chatGui
 
-			dialogConnections[dialog] = dialog.Changed:connect(function(prop)
-				if prop == "Parent" and dialog.Parent then 
-					--This handles the reparenting case, seperate from removal case
-					removeDialog(dialog) 
-					addDialog(dialog) 
-				elseif prop == "InUse" then
-					chatGui.Enabled = not currentConversationDialog and not dialog.InUse
-					if dialog == currentConversationDialog then
+      dialogConnections[dialog] = dialog.Changed:connect(function(prop)
+          if prop == "Parent" and dialog.Parent then 
+		        --This handles the reparenting case, seperate from removal case
+              removeDialog(dialog) 
+				  addDialog(dialog) 
+          elseif prop == "InUse" then
+              chatGui.Enabled = not currentConversationDialog and not dialog.InUse
+				  if dialog == currentConversationDialog then
 						timeoutDialog()
-					end
-				elseif prop == "Tone" or prop == "Purpose" then
-					setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
-				end 
-			end)
-		else -- still need to listen to parent changes even if current parent is not a BasePart
-			dialogConnections[dialog] = dialog.Changed:connect(function(prop)
-				if prop == "Parent" and dialog.Parent then 
-					--This handles the reparenting case, seperate from removal case
-					removeDialog(dialog) 
-					addDialog(dialog) 
-				end 
-			end)
-		end
+				  end
+			 elseif prop == "Tone" or prop == "Purpose" then
+				  setChatNotificationTone(chatGui, dialog.Purpose, dialog.Tone)
+          end 
+		end)
 	end
 end
 
 function fetchScripts()
+   --print("InsertService")
 	local model = game:GetService("InsertService"):LoadAsset(39226062)
-    if type(model) == "string" then -- load failed, lets try again
-		wait(0.1)
+   --print(model)
+   while model == "No assetUrl set" do
+		--print("Trying again to fetch Scripts")
 		model = game:GetService("InsertService"):LoadAsset(39226062)
 	end
-	if type(model) == "string" then -- not going to work, lets bail
-		return
-	end
-	
-	waitForChild(model,"TimeoutScript")
 	timeoutScript = model.TimeoutScript
-	waitForChild(model,"ReenableDialogScript")
 	reenableDialogScript = model.ReenableDialogScript
 end
 
@@ -529,14 +506,17 @@ function onLoad()
 
   --print("Creating Guis")
   createChatNotificationGui()
+  
+  --print("Waiting for RobloxGui")
+  waitForChild(game.CoreGui, "RobloxGui")
 
   --print("Creating MessageDialog")
   createMessageDialog()
   messageDialog.RobloxLocked = true
-  messageDialog.Parent = gui
+  messageDialog.Parent = game.CoreGui.RobloxGui
   
   --print("Waiting for BottomLeftControl")
-  waitForChild(gui, "BottomLeftControl")
+  waitForChild(game.CoreGui.RobloxGui, "BottomLeftControl")
   
   --print("Initializing Frame")
   local frame = Instance.new("Frame")
@@ -545,7 +525,7 @@ function onLoad()
   frame.Size = UDim2.new(0,0,0,0)
   frame.BackgroundTransparency = 1
   frame.RobloxLocked = true
-  frame.Parent = gui.BottomLeftControl
+  frame.Parent = game.CoreGui.RobloxGui.BottomLeftControl
   initialize(frame)
 
   --print("Adding Dialogs")
