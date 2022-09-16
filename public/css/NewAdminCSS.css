@@ -433,9 +433,24 @@ br {
   border-radius: 50%;
   margin: -8px;
 }
-.NewPanel .hidden-info{
+.NewPanel .info-hidden {
   font-style: italic;
 }
+.NewPanel .info-error {
+  color: #ff3300;
+  font-style: italic;
+  cursor: not-allowed;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.NewPanel .info-email {
+  color: #c9c9c9;
+}
+
 /*Heavily based off of the roblox developer tree list (because it looks cool)*/
 .NewPanel .SearchTree {
   width: 260px;
