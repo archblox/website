@@ -29,7 +29,7 @@ local message = Instance.new("Message")
 message.Parent = workspace
 message.archivable = false
 
-game:GetService("ScriptInformationProvider"):SetAssetUrl("http://www.morblox.us/Asset/")
+game:GetService("ScriptInformationProvider"):SetAssetUrl("http://www.morblox.us/asset/")
 game:GetService("ContentProvider"):SetThreadPool(16)
 pcall(function() game:GetService("InsertService"):SetFreeModelUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?type=fm&q=%s&pg=%d&rs=%d") end) -- Used for free model search (insert tool)
 pcall(function() game:GetService("InsertService"):SetFreeDecalUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?type=fd&q=%s&pg=%d&rs=%d") end) -- Used for free decal search (insert tool)
@@ -41,8 +41,8 @@ settings().Diagnostics:LegacyScriptMode()
 game:GetService("InsertService"):SetBaseSetsUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?nsets=10&type=base")
 game:GetService("InsertService"):SetUserSetsUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d")
 game:GetService("InsertService"):SetCollectionUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?sid=%d")
-game:GetService("InsertService"):SetAssetUrl("http://www.morblox.us/Asset/?id=%d")
-game:GetService("InsertService"):SetAssetVersionUrl("http://www.morblox.us/Asset/?assetversionid=%d")
+game:GetService("InsertService"):SetAssetUrl("http://www.morblox.us/asset/?id=%d")
+game:GetService("InsertService"):SetAssetVersionUrl("http://www.morblox.us/asset/?assetversionid=%d")
 
 pcall(function() game:GetService("SocialService"):SetFriendUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=IsFriendsWith&playerid=%d&userid=%d") end)
 pcall(function() game:GetService("SocialService"):SetBestFriendUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=IsBestFriendsWith&playerid=%d&userid=%d") end)
