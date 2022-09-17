@@ -234,7 +234,7 @@
             @else
             <div title="N/A" class="info-error">
                 N/A
-            </a>
+            </div>
             @endif
             @endif
         </div>
