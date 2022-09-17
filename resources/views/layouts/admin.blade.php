@@ -23,7 +23,7 @@
 <body class="NewPanel">
     @yield('alert')
 
-    <div id="MasterContainer" class="AdminPanel EnableLogoutBtn" style="width: 100%;">
+    <div id="MasterContainer" class="AdminPanel" style="width: 100%;">
     <div id="AdminWrapper" class="Navigation">
         <div class="AdminHeader">
             <span><a href="{{ route('home') }}" title="ARCHBLOX Home" class="SiteBrand"></a></span>
@@ -37,7 +37,6 @@
             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout AuthenticatedUserName">Logout</a>
             <span class="logoutarrow"><span>
             </div>
-        </a>
         </div>
         <form id="logout-form" class="hidden" action="{{ route('logout') }}" method="POST">
             @csrf
@@ -59,11 +58,12 @@
                     Invite Tree
                 </a>
             </li>
+            </ul>
         </div>
-        </ul>
     </div>
     <div id="BodyWrapper">
         @yield('Body')
+    </div>
     </div>
     <div class="iphone-sidebar">
         <img href="{{ route('admin_index') }}" src="https://archblox.com/img/MORBLOXlogo.png" width="50%">
@@ -80,7 +80,6 @@
     </div>
     <div class="iphone-content">
         @yield('content')
-    </div>
     </div>
 </body>
 

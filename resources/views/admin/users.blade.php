@@ -49,13 +49,27 @@
                 Username:
             </div>
             @if (!empty($user->id))
+            @if (!empty($user->name))
             <a href="{{ route('profile', $user->id) }}" title="{{ $user->name }}'s profile" class="AuthenticatedUserName">
-                @if (!empty($user->name)) {{ $user->name }} @else N/A @endif
+                {{ $user->name }}
             </a>
+            @else
+            <a title="N/A" class="info-error">
+                N/A
+            </a>
+            @endif
             @unless (request()->query('q'))
+            @if (!empty($user->name))
             <a href="/admin/users?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Details" class="AuthenticatedUserName userInfo"></a>
+            @else
+            <a href="/admin/users?q={{ $user->id }}&searchBy=id" title="N/A" class="AuthenticatedUserName userInfo"></a>
+            @endif
             @endunless
+            @if (!empty($user->name))
             <a href="/admin/tree?q={{ $user->id }}&searchBy=id" title="{{ $user->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
+            @else
+            <a href="/admin/tree?q={{ $user->id }}&searchBy=id" title="N/A" class="forwardArrow AuthenticatedUserName"></a>
+            @endif
             @else
             <a title="N/A" class="info-error">
                 N/A
@@ -209,6 +223,7 @@
                 Invited By
             </div>
             @if (!empty($user->id))
+            @if (!empty(App\Models\User::where('id', $user->invited_by)->first()->id))
             <a href="{{ route('profile', App\Models\User::where('id', $user->invited_by)->first()->id) }}" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Profile" class="AuthenticatedUserName">
                 {{ App\Models\User::where('id', $user->invited_by)->first()->name }}
             </a>
@@ -217,9 +232,10 @@
             @endunless
             <a href="/admin/tree?q={{ App\Models\User::where('id', $user->invited_by)->first()->id }}&searchBy=id" title="{{ App\Models\User::where('id', $user->invited_by)->first()->name }}'s Invite Tree" class="forwardArrow AuthenticatedUserName"></a>
             @else
-            <div class="info-error">
+            <div title="N/A" class="info-error">
                 N/A
             </a>
+            @endif
             @endif
         </div>
         <div class="Row">
@@ -230,7 +246,7 @@
                 @if ($user->admin)
                     Admin
                 @else
-                    Member
+                    User
                 @endif
             </div>
         </div>
@@ -288,15 +304,21 @@
                             @if ($user->admin)
                                 Admin
                             @else
-                                Member
+                                User
                             @endif
                         </p>
                         <p><strong>Status:</strong> Normal</p>
-                                    <!-- Note to Tersis/Conkley, please revert this change sooner or later. I'm tired and might fix the !empty issue later. -->
-                        <p><strong>Invited By:</strong> <a style="color:blue"
-                                href="#">N/A</a>
+                        @if (!empty($user->id))
+                        @if (!empty(App\Models\User::where('id', $user->invited_by)->first()->id))
+                        <p><strong>Invited By:</strong> <a style="color:blue">{{ App\Models\User::where('id', $user->invited_by)->first()->name }}</a>
+                            (ID: {{ App\Models\User::where('id', $user->invited_by)->first()->id }})
+                        </p>
+                        @else
+                        <p><strong>Invited By:</strong> <a style="color:blue">N/A</a>
                             (ID: N/A)
                         </p>
+                        @endif
+                        @endif
                         <!--
                                 <button class="greybutton">Check Reports For This User</button>
                                 <button class="bluebutton">Edit User Data</button>
