@@ -266,10 +266,10 @@
     Unable to find user, please check if you entered the correct information.
 </span>
 @endif
+</div>
+</div>
+</div>
 {{ $users->appends($_GET)->links() }}
-</div>
-</div>
-</div>
 @endsection
 @section('content')
     <div id="UserList">
