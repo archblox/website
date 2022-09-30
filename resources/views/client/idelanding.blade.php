@@ -62,31 +62,31 @@
             
                 <div class="templates" js-data-templatetype="Basic" style="display: block;">
                         <div class="template" placeid="200">
-                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t2ak.roblox.com/362ae9c43957047a0287f9cd2c98646c"></a>
+                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t2ak.morblox.us/362ae9c43957047a0287f9cd2c98646c"></a>
                             <p>Baseplate</p>
                         </div>
                         <div class="template" placeid="201">
-                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t7ak.roblox.com/ab99a6e34406eb5e7aebd349c90ce35b"></a>
+                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t7ak.morblox.us/ab99a6e34406eb5e7aebd349c90ce35b"></a>
                             <p>Flat Terrain</p>
                         </div>
                 </div>
                 <div class="templates" js-data-templatetype="Strategy">
                         <div class="template" placeid="0">
-                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t3ak.roblox.com/2db15742ba86f0dfe6cd2762a8debbde"></a>
+                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t3ak.morblox.us/2db15742ba86f0dfe6cd2762a8debbde"></a>
                             <p>Capture The Flag</p>
                         </div>
                         <div class="template" placeid="0">
-                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t2ak.roblox.com/426308e89cd36c0bb531b9dd8e990c10"></a>
+                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t2ak.morblox.us/426308e89cd36c0bb531b9dd8e990c10"></a>
                             <p>Control Points</p>
                         </div>
                 </div>
                 <div class="templates" js-data-templatetype="Action">
                         <div class="template" placeid="0">
-                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t7ak.roblox.com/4ae1c9ec91cd33a9b38ad741ac1d0a4f"></a>
+                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t7ak.morblox.us/4ae1c9ec91cd33a9b38ad741ac1d0a4f"></a>
                             <p>Free For All</p>
                         </div>
                         <div class="template" placeid="0">
-                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t3ak.roblox.com/f6e818f03afa39b999a4ed33b464c0cb"></a>
+                            <a class="game-image"><img class="" src="https://web.archive.org/web/20130702194455im_/http://t3ak.morblox.us/f6e818f03afa39b999a4ed33b464c0cb"></a>
                             <p>Team Deathmatch</p>
                         </div>
                 </div>

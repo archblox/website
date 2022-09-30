@@ -4,7 +4,7 @@
 	ROBLOX Help
 </title><link href="/CSS/RobloxOld.css" type="text/css" rel="stylesheet"><link rel="stylesheet" type="text/css"></head>
 	<body>
-		<form name="Form1" method="post" action="roblox.com/Game/Help.aspx" id="Form1">
+		<form name="Form1" method="post" action="morblox.us/Game/Help.aspx" id="Form1">
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMDU5NjU4NjhkZIKJzjfFEOdRA2+w7aT1UMPiON7a">
 
 			<p>Besides using simple blocks, you can insert Things that other people have built 
