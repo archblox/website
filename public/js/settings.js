@@ -16,9 +16,9 @@ function openPopup(id) {
             active = 2;
             setActiveSetting(2);
             document.querySelector('.popup .email_change').removeAttribute('id');
-            document.querySelector('.popup #heading').innerHTML = "Change E-Mail";
+            document.querySelector('.popup #heading').innerHTML = "Change Email";
             document.querySelector('.popup .warningtext').innerHTML = null;
-            document.querySelector('.popup #desc').innerHTML = "Enter your new E-Mail below as well as confirming it.<br>E-Mails are primarily used to reset passwords.";
+            document.querySelector('.popup #desc').innerHTML = "Enter your new Email below as well as confirming it.<br>Emails are primarily used to reset passwords.";
             break;
         case 3:
             active = 3;

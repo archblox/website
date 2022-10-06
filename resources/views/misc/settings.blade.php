@@ -41,10 +41,10 @@
                 </span>
                 <span class="email_change" id="invisible">
                     <br>
-                    <h4>New E-Mail</h4>
-                    <input type="email" name="email" placeholder="New E-Mail Field"><br>
-                    <h4>Confirm New E-Mail</h4>
-                    <input type="email" name="email_confirmation" placeholder="Confirm New E-Mail Field">
+                    <h4>New Email</h4>
+                    <input type="email" name="email" placeholder="New Email Field"><br>
+                    <h4>Confirm New Email</h4>
+                    <input type="email" name="email_confirmation" placeholder="Confirm New Email Field">
                 </span>
                 <span class="dob_change" id="invisible">
                     <br>
@@ -127,7 +127,7 @@
         style="flex-wrap: wrap; flex-direction: row-reverse; width: 50%; text-align: end; align-content: flex-end;">
         <p style="width: 100%;">Username: {{ Auth::user()->name }} <button class="bluebutton"
                 onclick="openPopup(1)">Edit</button></p>
-        <p style="width: 100%;">E-Mail: {{ Auth::user()->email }} <button class="bluebutton"
+        <p style="width: 100%;">Email: {{ Auth::user()->email }} <button class="bluebutton"
                 onclick="openPopup(2)">Edit</button></p>
         <p style="width: 100%;">Date of Birth: {{ Auth::user()->dob }} <button class="bluebutton"
                 onclick="openPopup(3)">Edit</button>

@@ -294,9 +294,9 @@
                     <div id="ProfileContainerBox1TextContainer" style="color:black">
                         <p><strong>Username:</strong> {{ $user->name }}</p>
                         @if ($user->admin)
-                            <p><strong>E-Mail:</strong> <i>Admin E-Mail Hidden</i></p>
+                            <p><strong>Email:</strong> <i>Admin Email Hidden</i></p>
                         @else
-                            <p><strong>E-Mail:</strong> {{ $user->email }}</p>
+                            <p><strong>Email:</strong> {{ $user->email }}</p>
                         @endif
                         <p><strong>ID:</strong> {{ $user->id }}</p>
                         <p><strong>DOB:</strong> {{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}</p>

@@ -25,15 +25,15 @@
         @foreach ($data['fetchKeys'] as $fKey)
             <div class="FeedContainerBox" id="FeedContainerBox1">
                 <div id="ProfileContainerBox1TextContainer">
-                    <h3>Invite Key - @if (!$fKey->active)
+                    <h3>Invite Key | @if (!$fKey->active)
                             You Invited: <a href="{{ route('profile', App\Models\User::find($fKey->user_invited)->id) }}"
                                 style="font-weight:normal;color:blue">{{ App\Models\User::find($fKey->user_invited)->name }}</a>
-                            -
+                            |
                         @endif Created {{ $fKey->created_at->format('d/m/Y') }}</h3>
                     @if ($fKey->active)
-                        <h5 style="color:green">Status: Active</h5>
+                        <h5 style="color:green">Active</h5>
                     @else
-                        <h5 style="color:red">Status: Inactive</h5>
+                        <h5 style="color:red">Inactive</h5>
                     @endif
                     <address>{{ $fKey->key }}</address>
                 </div>

@@ -12,7 +12,7 @@
 <h1>Welcome to ARCHBLOX!</h1>
 <p>Have an account already? <a href="{{ route('login') }}">Click here</a> to log in.</p>
 <br>
-<p>Before entering anything, please read the <a href="{{ route('privacy') }}">Privacy Policy</a> and the <a
+<p>Before signing up, please read the <a href="{{ route('privacy') }}">Privacy Policy</a> and the <a
         href="{{ route('tos') }}">Terms of Service</a>.</p>
 <br>
 <form method="POST" action="{{ route('register') }}">
@@ -20,21 +20,21 @@
     <h3>Username</h3>
     <input id="name" type="text" placeholder="Enter a username!" name="name" value="{{ old('name') }}" required
         autocomplete="name" autofocus>
-    <p>Usernames must be 3-20 characters, and must not break the rules.</p>
+    <p>Usernames must be 3-20 alphanumeric characters and can include underscores, dashes, points, and spaces.</p>
     @error('name')
     <div class="invalid-feedback" style="color:red">
         <strong>{{ $message }}</strong>
     </div>
     @enderror
     <br>
-    <h3>E-Mail Address</h3>
+    <h3>Email Address</h3>
     <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email">
     @error('email')
     <div class="invalid-feedback" style="color:red">
         <strong>{{ $message }}</strong>
     </div>
     @enderror
-    <h3>Confirm E-Mail Address</h3>
+    <h3>Confirm Email Address</h3>
     <input id="email-confirm" type="email" name="email_confirmation" value="{{ old('email_confirmation') }}" required
         autocomplete="email">
     @error('email_confirmation')
@@ -53,8 +53,8 @@
     <br>
     <h3>Password</h3>
     <input id="password" type="password" name="password" required autocomplete="password">
-    <p class="helpfultip">Don't reuse or use weak passwords!</p>
-    <p>Recommend to be 8 or more characters, with atleast 1 capital letter, 1 symbol and 1 number.</p>
+    <p class="helpfultip">Don't reuse passwords, or use weak passwords!</p>
+    <p>Passwords must be 8 or more characters with at least 1 capital letter, 1 symbol, and 1 number.</p>
     @error('password')
     <div class="invalid-feedback" style="color:red">
         <strong>{{ $message }}</strong>
@@ -65,12 +65,12 @@
     <input id="key" type="text" name="key" placeholder="Invite Key" value="{{ old('key') }}" required>
     @error('key')
     <div class="invalid-feedback" style="color:red">
-        <strong>Incorrect invite key.</strong>
+        <strong>Invalid invite key! The invite key may be inactive or it no longer exists.</strong>
     </div>
     @enderror
-    <p>An Invite Key is required to sign up. You can obtain one from a person that has played ARCHBLOX.</p>
-    <p>Don't beg for keys.</p>
+    <p>An Invite Key is required to sign up. You can obtain one from a person that has an ARCHBLOX Account.</p>
+    <p>Don't bother random people for keys, or beg for one.</p>
     <br>
-    <button class="greenbutton" onClick="this.form.submit();this.disabled=true">Signup</button>
+    <button class="greenbutton" onClick="this.form.submit();this.disabled=true">Sign Up</button>
 
     @endsection

@@ -14,7 +14,7 @@
 <br>
 <form method="POST" action="{{ route('login') }}">
     @csrf
-    <h3>Username/E-Mail Address</h3>
+    <h3>Username or Email Address</h3>
     <input id="login" type="text" name="login" value="{{ old('login') }}" required autofocus>
     @if ($errors->has('name') || $errors->has('email'))
     <span style="color:red" role="alert">
@@ -39,7 +39,7 @@
     @if (Route::has('password.request'))
     <br><br>
     <span class="hyperlink"><a class="btn btn-link" href="{{ route('password.request') }}">
-        Forgot Your Password?
+        Forgot your password?
     </a>
     </span>
     @endif
