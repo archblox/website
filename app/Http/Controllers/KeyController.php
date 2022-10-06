@@ -15,10 +15,9 @@ class KeyController extends Controller
     {
         $fetchKeys = InviteKey::where('created_by', Auth::id())->latest()->get();
         $activeKey = InviteKey::where('created_by', Auth::id())->latest()->first();
-        $userJoin = User::where('created_at', Auth::id())
 
         if (!$fetchKeys->isEmpty()) {
-            if ($activeKey->created_at->addWeek()->gt(Carbon::now()) || !$userJoin->addWeek()->gt(Carbon::now())) {
+            if ($activeKey->created_at->addWeek()->gt(Carbon::now())) {
                 $canCreate = false;
                 if (User::isAdmin()) {
                     if ($activeKey->created_at->addMinute()->gt(Carbon::now())) {
