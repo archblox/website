@@ -9,6 +9,8 @@ use Webpatser\Uuid\Uuid;
 use App\Models\InviteKey;
 use App\Models\User;
 
+// TODO: Make it so users cannot make an invite key as soon as they join.
+
 class KeyController extends Controller
 {
     public function index()
