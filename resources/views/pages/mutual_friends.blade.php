@@ -4,11 +4,15 @@
 @endsection
 
 @section('content')
+    <div class="PageTitleBar">
     <h1 id="usernameframe">Your Mutual Friends with {{ $user->name }} ({{ Auth::user()->getMutualFriendsCount($user) }})</h1>
+    <div>
     <a href="{{ route('profile_friends', $user->id) }}" class="tab">All Friends</a>
     @auth
     <a href="#" class="tab_selected">Mutual Friends ({{ Auth::user()->getMutualFriendsCount($user) }})</a>
     @endauth
+    </div>
+    </div>
     <br>
     <br>
     <div class="content_special" id="FriendsContainer" style="flex-wrap: wrap;">
