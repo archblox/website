@@ -63,8 +63,9 @@
                 <button class="tab">Left Legs</button>  
                 <button class="tab">Right Legs</button>
             </div>
+            <br>
             <div class="wardrobecontainer"> 
-                <p>You don't own any Hats yet.</p>
+                <p style="text-align: center;">You don't own any Hats yet.</p>
             </div>
         </div>
     </div>
