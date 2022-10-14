@@ -22,8 +22,11 @@
                 </div>
                 <div id="FriendsContainerBox1TextContainer">
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
-                    <p>"I'm new to ARCHBLOX!"</p>
-                    @if (Cache::has('is_online_' . $user->id))
+                    @if (!empty($user->feedposts->last()->status))
+                        <p>"{{ $user->feedposts->last()->status }}"</p>
+                    @else
+                        <p>"I'm new to ARCHBLOX!"</p>
+                    @endif                    @if (Cache::has('is_online_' . $user->id))
                         <strong id="onlinestatus" class="onlinestatus_website">Website</strong>
                     @else
                         <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
