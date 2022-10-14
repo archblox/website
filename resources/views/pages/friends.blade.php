@@ -19,7 +19,8 @@
                     <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
                             src="{{ asset('img/defaultrender.png') }}" width="60px" height="60px"></a>
                 </div>
-                <div id="FriendsContainerBox1TextContainer">
+                <div class="content_special" id="FriendsContainerBox1TextContainer">
+                    <div>
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
                     @if (!empty($user->feedposts->last()->status))
                         <p>"{{ $user->feedposts->last()->status }}"</p>
@@ -32,11 +33,13 @@
                         <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
                             {{ Carbon\Carbon::parse($user->last_seen)->diffForHumans() }}</strong>
                     @endif
-                    <br>
+                    </div>
+                    <div>
                     <form action="{{ route('friend_remove', $user->id) }}" method="POST" style="display:inline-block">
                         @csrf
                         <button class="redbutton" type="submit">Unfriend</button>
                     </form>
+                    </div>
                 </div>
             </div>
         @endforeach
