@@ -17,7 +17,9 @@
     <div class="PageTitleBar">
     <h1>Avatar Editor</h1>
     <div>
-        <button class="tab_selected">Wardrobe</button> <button class="tab">My Outfits</button>
+        <button class="tab_selected">Wardrobe</button> 
+        <button class="tab">Currently Wearing</button>
+        <button class="tab">My Outfits</button>
     </div>
     </div>
     <div class="content_special">
