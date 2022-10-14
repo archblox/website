@@ -33,57 +33,57 @@
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Placeholder Item</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*(),.?</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Real Item</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Fake Item</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Fortnite BALLS</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Angry Luigi</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>T-Shirt</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Ok</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>No More ITEMS!</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>Shut up!</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>Item Name</p>
+                <p>No.</p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
         </div>
