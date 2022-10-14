@@ -46,7 +46,7 @@
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
-                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*(),.?</p>
+                <p>Only Thirty Characters........</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
                     <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
