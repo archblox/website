@@ -82,13 +82,15 @@ $splash = array(
     <meta content="#011130" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/classicappdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(4)
     <meta content="#316bdf" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <link href="{{ asset('css/classicapp.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(3)
-    <meta content="#011130" data-react-helmet="true" name="theme-color" />
+    <meta content="#00004a" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
@@ -98,7 +100,7 @@ $splash = array(
     <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @default
-    <meta content="#316bdf" data-react-helmet="true" name="theme-color" />
+    <meta content="#0057d1" data-react-helmet="true" name="theme-color" />
     <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endswitch
     @else
@@ -132,7 +134,7 @@ $splash = array(
             s.appendChild(li, s);
 
             var li = document.createElement('meta');
-            var content = "#011130";
+            var content = "#00004a";
             var datareacthelmet = 'true';
             var name = "theme-color"
             li.setAttribute('content', content);
@@ -150,7 +152,7 @@ $splash = array(
             s.appendChild(li, s);
 
             var li = document.createElement('meta');
-            var content = "#316bdf";
+            var content = "#0057d1";
             var datareacthelmet = 'true';
             var name = "theme-color"
             li.setAttribute('content', content);
