@@ -5,8 +5,7 @@
 
 @section('content')
     <div class="PageTitleBar">
-    <h1 id="usernameframe">Friends ({{ Auth::user()->getFriendsCount() }})</h1>
-    <div>
+    <h1 id="usernameframe">{{ $user->name }}'s Friends ({{ $user->getFriendsCount() }})</h1>    <div>
     <a href="#" class="tab_selected">All Friends</a>
     @auth
     @if ($user->id != Auth::id())
