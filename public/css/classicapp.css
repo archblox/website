@@ -60,7 +60,7 @@ body {
 .content, #footer {
   max-width: 1000px;
   width: auto;
-  padding: 0;
+  padding: 5px;
   margin: auto;
 }
 
