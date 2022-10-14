@@ -14,7 +14,7 @@
     <h1 id="usernameframe">New Message</h1>
     <div>
     <button class="greybutton" type="button" onClick="document.getElementById('message').value = ''" style="margin-top:3px;margin-bottom:3px">Clear Message</button>
-    <button class="redbutton" type="reset"><a href="{{ route('inbox') }}" style="font-weight:normal">Cancel</a></button>
+    <button class="redbutton" type="reset"><a href="{{ route('inbox') }}" style="color: white; font-weight:normal">Cancel</a></button>
     </div>
     </div>
     <br>
