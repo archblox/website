@@ -35,6 +35,7 @@
                     @endif
                     </div>
                     <div>
+                    <a href="/my/messages/compose?to={{ $user->name }}"><button class="greybutton">Message</button></a>
                     <form action="{{ route('friend_remove', $user->id) }}" method="POST" style="display:inline-block">
                         @csrf
                         <button class="redbutton" type="submit">Unfriend</button>
