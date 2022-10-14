@@ -639,6 +639,7 @@ html {
 
 .loggedout {
   background: transparent url(/img/background.jpg) no-repeat scroll center top;
+  background-size: cover;
   /*
   background: url('/img/animated.png');
   background-color: rgb(49, 107, 223);
