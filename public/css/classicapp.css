@@ -59,7 +59,8 @@ body {
 
 .content, #footer {
   max-width: 1000px;
-  width: 1000px;
+  width: auto;
+  padding: 0;
   margin: auto;
 }
 
