@@ -59,8 +59,11 @@ body {
 }
 
 .loggedout {
+  background: transparent url(/img/backgrounddark.jpg) no-repeat scroll center top;
+  /*
   background-image: url('../img/animateddark.png');
   background-color: rgb(1, 17, 48);
+  */
 }
 
 .content {

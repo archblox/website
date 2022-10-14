@@ -11,6 +11,17 @@
   }
 }
 
+@keyframes animatedbackground {
+  from {
+    background-position-x: 0px;
+    animation-timing-function: linear;
+  }
+
+  to {
+    background-position-x: 2000px;
+    animation-timing-function: linear;
+  }
+}
 
 
 html {

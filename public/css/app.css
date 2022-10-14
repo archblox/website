@@ -638,6 +638,8 @@ html {
 }
 
 .loggedout {
+  background: transparent url(/img/background.jpg) no-repeat scroll center top;
+  /*
   background: url('/img/animated.png');
   background-color: rgb(49, 107, 223);
   background-position: center bottom;
@@ -646,6 +648,7 @@ html {
   animation-name: animatedbackground;
   animation-duration: 50s;
   animation-iteration-count: infinite;
+  */
 }
 
 body {
