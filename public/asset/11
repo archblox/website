@@ -5,11 +5,14 @@
 -- Super Util
 -------------------- 
 
+----FORMER ADMINS-----
+-- SQL, Stick, cott --
+----------------------
+
 local ADMINS =
 {
 	Thomas = 1,
 	ARCHBLOX = 1,
-	SQL = 1,
 	Conkley = 1,
 	Penguin = 1,
 	BagOfDreams = 1,
@@ -18,10 +21,7 @@ local ADMINS =
 	TersisWelvin = 1,
 	Mura = 1,
 	rec01n = 1,
-	Stick = 1,
 	sodium = 1,
-	cott = 1,
-	Penguin = 1,
 	MORBLOX = 1,
 	zombieboy667 = 1,
 }
