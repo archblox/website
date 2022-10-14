@@ -31,10 +31,7 @@
                 <p>ARCHBLOX Visor</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
                 </div>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
@@ -43,11 +40,8 @@
                 <p>Placeholder Item</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>           
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -55,11 +49,8 @@
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*(),.?</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>           
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -67,11 +58,8 @@
                 <p>Real Item</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>          
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -79,11 +67,8 @@
                 <p>Fake Item</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>          
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -91,11 +76,8 @@
                 <p>Fortnite BALLS</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>          
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -103,11 +85,8 @@
                 <p>Angry Luigi</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>         
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -115,11 +94,8 @@
                 <p>T-Shirt</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>           
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -127,11 +103,8 @@
                 <p>Ok</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>          
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -139,11 +112,8 @@
                 <p>No More ITEMS!</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>             
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -151,11 +121,8 @@
                 <p>Shut up!</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>              
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
@@ -163,11 +130,8 @@
                 <p>No.</p>
                 <div class="content_special">
                     <p style="padding-right: 5px;">By</p> 
-                    <a href="#" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    overflow-wrap: normal;">OnlyTwentyCharacters</a>
-                </div>                
+                    <a href="#" class="ellipsis">OnlyTwentyCharacters</a>
+                </div>            
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
         </div>

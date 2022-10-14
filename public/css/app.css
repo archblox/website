@@ -43,6 +43,12 @@
   overflow-wrap: break-word;
 }
 
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: normal;
+}
+
 .arkoticon_small {
   margin: 0px;
   width: 12px;
