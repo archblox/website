@@ -60,6 +60,7 @@ body {
 
 .loggedout {
   background: transparent url(/img/backgrounddark.jpg) no-repeat scroll center top;
+  background-color: #000000;
   background-size: cover;
   /*
   background-image: url('../img/animateddark.png');
