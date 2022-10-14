@@ -20,7 +20,8 @@
                     <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
                             src="{{ asset('img/defaultrender.png') }}" width="60px" height="60px"></a>
                 </div>
-                <div id="FriendsContainerBox1TextContainer">
+                <div class="content_special" style="justify-content: space-between; align-items: center; padding-right: 5px" id="FriendsContainerBox1TextContainer">
+                    <div>
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
                     @if (!empty($user->feedposts->last()->status))
                         <p>"{{ $user->feedposts->last()->status }}"</p>
@@ -32,12 +33,14 @@
                         <strong id="onlinestatus" class="onlinestatus_offline">Offline - Last Online
                             {{ Carbon\Carbon::parse($user->last_seen)->diffForHumans() }}</strong>
                     @endif
-                    <br>
+                    </div>
+                    <div>
                     <form action="{{ route('friend_handle', $user->id) }}" method="POST">
                         @csrf
                         <button class="greenbutton" name="action" type="submit" value="accept">Accept</button>
                         <button class="redbutton" name="action" type="submit" value="decline">Decline</button>
                     </form>
+                    </div>
                 </div>
             </div>
         @endforeach
