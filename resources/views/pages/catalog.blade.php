@@ -29,61 +29,73 @@
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>ARCHBLOX Visor</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Placeholder Item</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*(),.?</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Real Item</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Fake Item</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Fortnite BALLS</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Angry Luigi</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>T-Shirt</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Ok</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>No More ITEMS!</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>Shut up!</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
             <div class="catalogitem">
                 <img class="catalogitemimage" src="{{ asset('img/reviewpending.png') }}">
                 <p>No.</p>
+                <p>By <a href="#">OnlyTwentyCharacters</a></p>
                 <strong><img class="arkoticon_small" src="{{ asset('img/arkot.png') }}">10</strong>
             </div>
         </div>
