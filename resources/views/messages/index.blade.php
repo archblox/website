@@ -16,21 +16,21 @@
     <div class="PageTitleBar">
     <h1 id="usernameframe">My Messages</h1>
     <div>
-    <button type="button" class="greenbutton"><a href="{{ route('compose') }}" style="color:white;font-weight:normal">New
-            Message</a></button>
-    <form action="{{ route('delete_all') }}" method="POST" style="display:inline-block">
-        @csrf
-        <button class="redbutton" type="submit">Delete All Messages</button>
-    </form>
-    </div>
-    </div>
-    <br>
     <a href="#" class="tab_selected">Inbox
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', false)->count() }})</a>
     <a href="{{ route('inbox_sent') }}" class="tab">Sent
         ({{ App\Models\Message::where('user_id', Auth::id())->count() }})</a>
     <a href="{{ route('deleted') }}" class="tab">Deleted
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', true)->count() }})</a>
+    </div>
+    </div>
+    <br>
+    <button type="button" class="greenbutton"><a href="{{ route('compose') }}" style="color:white;font-weight:normal">New
+            Message</a></button>
+    <form action="{{ route('delete_all') }}" method="POST" style="display:inline-block">
+        @csrf
+        <button class="redbutton" type="submit">Delete All Messages</button>
+        </form>
     <br>
     <br>
     @foreach ($messages as $message)

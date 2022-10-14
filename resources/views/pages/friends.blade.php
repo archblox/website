@@ -19,7 +19,7 @@
                     <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
                             src="{{ asset('img/defaultrender.png') }}" width="60px" height="60px"></a>
                 </div>
-                <div class="content_special" style="justify-content: space-between; align-items: center" id="FriendsContainerBox1TextContainer">
+                <div class="content_special" style="justify-content: space-between; align-items: center; padding-right: 5px" id="FriendsContainerBox1TextContainer">
                     <div>
                     <a href="{{ route('profile', $user->id) }}" id="FeedContainerBox1Username">{{ $user->name }}</a>
                     @if (!empty($user->feedposts->last()->status))
