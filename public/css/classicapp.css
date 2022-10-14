@@ -26,14 +26,14 @@
 
 
 html {
-  background: url('../img/animated.png');
-  background-color: rgb(49, 107, 223);
-  background-position: center bottom;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
-  animation-name: animatedbackground;
-  animation-duration: 50s;
-  animation-iteration-count: infinite;
+  background: url('../img/animated.png') !important;
+  background-color: rgb(49, 107, 223) !important;
+  background-position: center bottom !important;
+  background-repeat: repeat-x !important;
+  background-attachment: fixed !important;
+  animation-name: animatedbackground !important;
+  animation-duration: 50s !important;
+  animation-iteration-count: infinite !important;
 }
 body {
   background: transparent;
