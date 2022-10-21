@@ -1,22 +1,20 @@
 @php
 header("content-type:text/plain");
 $userId = addslashes($_GET["userId"]);
-if (userId == 0)
-{ 
+if ($userId == 0) { 
     $headcolor = 2;
-$leftarmcolor = 1003;
-$leftlegcolor = 1003;
-$rightarmcolor = 1003;
-$rightlegcolor = 1003;
-$torsocolor = 1003;
-}
-else {
+    $leftarmcolor = 1003;
+    $leftlegcolor = 1003;
+    $rightarmcolor = 1003;
+    $rightlegcolor = 1003;
+    $torsocolor = 1003;
+} else {
     $headcolor = 11;
-$leftarmcolor = 11;
-$leftlegcolor = 1003;
-$rightarmcolor = 11;
-$rightlegcolor = 1003;
-$torsocolor = 1003;
+    $leftarmcolor = 11;
+    $leftlegcolor = 1003;
+    $rightarmcolor = 11;
+    $rightlegcolor = 1003;
+    $torsocolor = 1003;
 }
 //TODO: add avatar system 
 @endphp
