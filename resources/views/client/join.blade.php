@@ -15,7 +15,7 @@ if (Auth::check()) {
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
-	$id = 0;
+	$id = mt_rand(1000, 9999);
 	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0';
 }
 $ip = addslashes($_GET["ip"]);
@@ -116,10 +116,10 @@ function setMessage(message)
 end
 
 -- Check if client is not logged in
-if <?php echo $id; ?> == 0 then
-	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
-	error("Not logged in")
-end
+--if <?php echo $id; ?> == 0 then
+--	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
+--	error("Not logged in")
+--end
 
 function showErrorWindow(message, errorType, errorCategory)
 	game:SetMessage(message)
