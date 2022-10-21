@@ -1,5 +1,5 @@
 <?php
-
+// OLD JOIN SCRIPT DO NOT USE //
 header("content-type:text/plain");
 
 $username = addslashes($_GET["username"]);

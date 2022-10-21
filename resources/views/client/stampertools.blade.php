@@ -30,4 +30,4 @@ echo "Copy failed.";
 $textbox = ($id . "+" . $width[1] . "+" . $height[1] );
 header("Location: http://www.morblox.us/stamper/icons/{$textbox}");
 exit();
-@endphp
+@endphp 
