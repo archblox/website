@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title')
-    <title>Natural Disaster Survival - {{ env('APP_NAME') }}</title>
+    <title>dummy place - {{ env('APP_NAME') }}</title>
 @endsection
 @section('titlediscord')
-    <meta content="Natural Disaster Survival - {{ env('APP_NAME') }}" property="og:title" />
+    <meta content="dummy place - {{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
     <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
