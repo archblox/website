@@ -33,10 +33,10 @@
         <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
     </div>
     <div class="gameitem">
-        <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
+        <a href="{{ route('thomasgame')}}"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
         <br>
         <a href="#">dummy place</a> 
-        <p>By <a href="{{ route('profile', 2) }}">Thomas</a></p>
+        <p>By <a href="{{ route('thomasgame')}}">Thomas</a></p>
     </div>
     <div class="gameitem">
         <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
