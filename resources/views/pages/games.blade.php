@@ -9,10 +9,6 @@
     <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 
-@section('alert')
-    <div id="alert">Note that this page does not support joining yet. If you would like to play your own game that you are currently hosting, <a style="cursor: pointer;" onclick="openClientPopup('localhost','53640',null,'join')">click here</a>.</div>
-@endsection
-
 @section('content')
 <div class="PageTitleBar">
     <h1>Games</h1>
