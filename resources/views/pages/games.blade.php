@@ -35,8 +35,8 @@
     <div class="gameitem">
         <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>
         <br>
-        <a href="#">PLACEHOLDER</a> 
-        <p>By <a href="{{ route('profile', 1) }}">ARCHBLOX</a></p>
+        <a href="#">dummy place</a> 
+        <p>By <a href="{{ route('profile', 2) }}">Thomas</a></p>
     </div>
     <div class="gameitem">
         <a href="#"><img style="background-image: url(/img/reviewpending.png);" class="gamethumbnail_small"></a>

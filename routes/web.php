@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     // games & game page
     Route::get('/games', [App\Http\Controllers\PageController::class, 'games'])->name('games');
     Route::get('/games/1', [App\Http\Controllers\PageController::class, 'gamepage'])->name('gamepage');
+    Route::get('/games/2', [App\Http\Controllers\PageController::class, 'thomasgame'])->name('thomasgame');
 
 
     // Rate limit + auth

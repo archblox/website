@@ -538,6 +538,7 @@ iframe {
 }
 
 .leftgamecontainer {
+  height: 270px;
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
@@ -545,6 +546,17 @@ iframe {
 }
 
 .rightgamecontainer {
+    height: 270px;
+    display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
   text-align: right;
   padding-left: 5px;
   padding-right: 5px;
