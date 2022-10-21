@@ -21,7 +21,7 @@
         </div>
         <div>
             <p>This place requires Radmin VPN.</p>
-            <button onclick="openClientPopup('26.220.138.92','53640', null, 'join')" class="greenbutton" style="width: 100%;height: 50px;font-size: x-large;align-content: center;">Join</button>
+            <button onclick="openClientPopup('26.220.138.92','53640', null, 'join')" class="greenbutton" style="width: 100%;height: 50px;font-size: x-large;align-content: center;">Play</button>
         </div>
     </div>
 </div>
