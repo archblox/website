@@ -14,15 +14,15 @@
 <p class="important">You must be logged in to join games. Use studio to log in to your account.</p>
 <br>
 <p><strong>Requires .NET Framework 4.0, and Windows XP or newer. Not recommended for anything running Windows 7 or newer.</strong></p>
-<p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Windows XP/Vista Launcher v1.2</a> | <a href="{{ asset('xp/ARCHBLOXBootstrapper_XP.exe') }}">Windows XP/Vista Studio v1.1</a></p>
+<p><a href="{{ asset('xp/ARCHBLOXLauncher_XP.exe') }}">Windows XP/Vista Launcher v1.3</a> | <a href="{{ asset('xp/ARCHBLOXBootstrapper_XP.exe') }}">Windows XP/Vista Studio v1.2</a></p>
 <br>
 <p><strong>The below downloads require Windows 7 or newer and they require .NET Core 3.1. These are recommended for anything running Windows 7 or newer.</strong></p>
 <br>
-<p>ARCHBLOX Launcher v2.8</p>
+<p>ARCHBLOX Launcher v2.9</p>
 <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> | <a
         href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
 <br>
-<p>ARCHBLOX Studio Bootstrapper v1.4</p>
+<p>ARCHBLOX Studio Bootstrapper v1.5</p>
 <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> | <a
         href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a></p>
 <br>
