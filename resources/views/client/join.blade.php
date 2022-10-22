@@ -118,7 +118,7 @@ function setMessage(message)
 end
 
 -- Check if client is not logged in
---if <?php echo $authorised; ?> == 0 then
+--if "<?php echo $authorised; ?>" == "0" then
 --	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
 --	error("Not logged in")
 --end
@@ -228,7 +228,7 @@ local success, err = pcall(function()
 	
 	playerConnectSucces, player = pcall(function() return client:PlayerConnect(<?php echo $id; ?>, "<?php echo $ip; ?>", <?php echo $port; ?>, 0, threadSleepTime) end)
 
-	if <?php echo $authorised ?> == 0 then
+	if "<?php echo $authorised; ?>" == "0" then
 		-- guest
 		player:SetSuperSafeChat(true)
 		pcall(function() player:SetUnder13(true) end)
