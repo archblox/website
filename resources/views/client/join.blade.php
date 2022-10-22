@@ -8,17 +8,17 @@ $port = addslashes($_GET["port"]);
 $id = addslashes($_GET["id"]);
 $app = addslashes($_GET["app"]);*/
 
-$authorised = 0
+$authorised = 0;
 
 if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
-	$authorised = 1
+	$authorised = 1;
 	$id = addslashes(Auth::id());
 	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=' . addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
-	$authorised = 0
+	$authorised = 0;
 	$id = mt_rand(1000, 9999);
 	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0';
 }
