@@ -6,7 +6,7 @@ if ($userId == 0) {
     $hat1 = 300;
     $hat2 = 0;
     $hat3 = 0;
-    $shirt = 400;
+    $shirt = 401;
     $pants = 0;
     $shirtgraphic = 0;
     $face = 0;
