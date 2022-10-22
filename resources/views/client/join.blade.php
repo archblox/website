@@ -8,6 +8,8 @@ $port = addslashes($_GET["port"]);
 $id = addslashes($_GET["id"]);
 $app = addslashes($_GET["app"]);*/
 
+$authorised = 0
+
 if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
 	$authorised = 1
