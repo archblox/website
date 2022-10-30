@@ -2,7 +2,7 @@
 
 function addWarning() {
     let alertDiv = document.createElement("div");
-    alertDiv.innerHTML = "You are on an unsupported url of the site. Please go to <a href='https://archblox.com'>archblox.com</a> instead.";
+    alertDiv.innerHTML = "You are on an unsupported version of the site. Please go to <a href='https://archblox.com'>archblox.com</a> instead.";
     alertDiv.setAttribute("id","alert");
     document.body.appendChild(alertDiv);
 }
