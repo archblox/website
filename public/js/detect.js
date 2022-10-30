@@ -7,6 +7,6 @@ function addWarning() {
     document.body.appendChild(alertDiv);
 }
 
-if (window.location.href == "https://archblox.com" || window.location.href == "http://archblox.com" || window.location.href == "https://archblox.com/" || window.location.href == "http://archblox.com/") {} else {
+if (window.document.location.hostname == "archblox.com") {} else {
     addWarning();
 }
