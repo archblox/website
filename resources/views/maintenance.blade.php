@@ -8,6 +8,13 @@
 @section('descdiscord')
 <meta content="Currently under maintenance." property="og:description" />
 @endsection
+@section('extras')
+<style>
+    body {
+        color: black !important;
+    }
+</style>
+@endsection
 
 @section('content')
 <h1 style="color: #ffffff">Oh Noes! ARCHBLOX is currently under maintenance.</h1>
