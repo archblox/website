@@ -9,9 +9,13 @@
 <meta content="Currently under maintenance." property="og:description" />
 <style>
     body {
-        color: black !important;
+        background: black;
     }
-</style>    
+
+    html {
+        background: black;
+    }
+    </style>  
 @endsection
 
 @section('content')
