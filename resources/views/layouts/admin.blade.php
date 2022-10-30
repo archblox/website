@@ -18,6 +18,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
     <link href="/css/NewAdminCSS.css" rel="stylesheet">
+    <script src="{{ asset('js/detect_iphone.js') }}" defer></script>
 </head>
 
 <body class="NewPanel">
