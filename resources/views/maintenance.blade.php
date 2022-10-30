@@ -1,6 +1,6 @@
 @extends('layouts.idenosidebar')
 @section('title')
-<title>{{ env('APP_NAME') }}</title>
+<title>BRB! - {{ env('APP_NAME') }}</title>
 @endsection
 @section('titlediscord')
 <meta content="{{env('APP_NAME')}}" property="og:title" />
@@ -12,6 +12,12 @@
 @section('content')
 <h1 style="color: #ffffff">Oh Noes! ARCHBLOX is currently under maintenance.</h1>
 <p style="color: #ffffff">ARCHBLOX will be back soon, so please be patient.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <p style="color: #ffffff">Impatient? <a href="https://discord.gg/nudzQ7hkWY">Join our Discord Server</a> for status updates.</p>
 @if (Auth::check() && Auth::user()->isAdmin())
