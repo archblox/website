@@ -259,9 +259,9 @@
 
 .BannerRedesign {
   height: 35px;
-  background: #114081;
+  background: #883100;
   background-image: url(/images/RevisedHeader/bg-rbx_header.png);
-  border-bottom: 1px solid #0A2246;
+  border-bottom: 1px solid #7b2d01;
   position: fixed;
   width: 100%;
   z-index: 10001;
