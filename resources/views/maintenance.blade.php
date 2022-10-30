@@ -9,15 +9,14 @@
 <meta content="Currently under maintenance." property="og:description" />
 <style>
     body {
-        background: black;
+        background: black !important;
     }
 
     html {
-        background: black;
+        background: black !important;
     }
     </style>  
 @endsection
-
 @section('content')
 <h1 style="color: #ffffff">Oh Noes! ARCHBLOX is currently under maintenance.</h1>
 <p style="color: #ffffff">ARCHBLOX will be back soon, so please be patient.</p>
