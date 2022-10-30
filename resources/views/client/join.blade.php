@@ -8,14 +8,18 @@ $port = addslashes($_GET["port"]);
 $id = addslashes($_GET["id"]);
 $app = addslashes($_GET["app"]);*/
 
+$authorised = 0;
+
 if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
+	$authorised = 1;
 	$id = addslashes(Auth::id());
 	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=' . addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
-	$id = 0;
+	$authorised = 0;
+	$id = mt_rand(1000, 9999);
 	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0';
 }
 $ip = addslashes($_GET["ip"]);
@@ -116,10 +120,10 @@ function setMessage(message)
 end
 
 -- Check if client is not logged in
-if <?php echo $id; ?> == 0 then
-	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
-	error("Not logged in")
-end
+--if "<?php echo $authorised; ?>" == "0" then
+--	setMessage("You are not logged in. (ID: 400)", "Kick", "Kick")
+--	error("Not logged in")
+--end
 
 function showErrorWindow(message, errorType, errorCategory)
 	game:SetMessage(message)
@@ -226,10 +230,20 @@ local success, err = pcall(function()
 	
 	playerConnectSucces, player = pcall(function() return client:PlayerConnect(<?php echo $id; ?>, "<?php echo $ip; ?>", <?php echo $port; ?>, 0, threadSleepTime) end)
 
-	player:SetSuperSafeChat(false)
-	pcall(function() player:SetUnder13(false) end)
-	pcall(function() player:SetMembershipType(Enum.MembershipType.None) end)
-	pcall(function() player:SetAccountAge(365) end)
+	if "<?php echo $authorised; ?>" == "0" then
+		-- guest
+		player:SetSuperSafeChat(true)
+		pcall(function() player:SetUnder13(true) end)
+		pcall(function() player:SetMembershipType(Enum.MembershipType.None) end)
+		pcall(function() player:SetAccountAge(0) end)
+	else
+		-- user
+		player:SetSuperSafeChat(false)
+		pcall(function() player:SetUnder13(false) end)
+		pcall(function() player:SetMembershipType(Enum.MembershipType.None) end)
+		pcall(function() player:SetAccountAge(365) end)
+	end
+	
 	player.Idled:connect(onPlayerIdled)
 	
 	-- Overriden

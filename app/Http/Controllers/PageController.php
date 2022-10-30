@@ -126,6 +126,11 @@ class PageController extends Controller
         return view('pages.gamepage');
     }
 
+    public function thomasgame()
+    {
+        return view('pages.thomasgame');
+    }
+
     public function avatar()
     {
         return view('pages.avatar');
