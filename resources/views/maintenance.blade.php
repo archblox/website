@@ -8,12 +8,12 @@
 @section('descdiscord')
 <meta content="Currently under maintenance." property="og:description" />
 @endsection
-@section('extras')
+@section('extra')
 <style>
     body {
         color: black !important;
     }
-</style>
+</style>    
 @endsection
 
 @section('content')
