@@ -22,6 +22,18 @@
   }
 }
 
+@keyframes alertanim_loggedout {
+  0% {
+    top: -23px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    background-position-x: 0px;
+    animation-timing-function: linear;
+  }
+}
+
 @font-face {
   font-family: 'Helvetica Neue';
   font-style: normal;
@@ -78,6 +90,11 @@
 .arkotlabel {
   color: rgb(35, 98, 222);
   font-weight: bold;
+}
+
+.loggedout #alert {
+  animation: alertanim_loggedout !important;
+  top: 0px !important;
 }
 
 #alert,
