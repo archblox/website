@@ -1,13 +1,15 @@
 @extends('layouts.loggedout')
 @section('title')
-<title>{{ env('APP_NAME') }} - It's Archaic!
-</title>
+<title>{{ env('APP_NAME') }} - It's Archaic!</title>
 @endsection
 @section('titlediscord')
 <meta content="{{ env('APP_NAME') }}" property="og:title" />
 @endsection
 @section('descdiscord')
 <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
+@endsection
+@section('extras')
+<script src="{{ asset('js/detect.js') }}"></script>
 @endsection
 @section('contentloggedout')
 <h1>Welcome to ARCHBLOX!</h1>
