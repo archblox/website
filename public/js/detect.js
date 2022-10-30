@@ -20,8 +20,8 @@ function addWarning() {
 }
 
 if (window.document.location.hostname == "archblox.com") {
-    console.log("User is on " + window.document.location.hostname + ". Known URL.");
+    console.log("User is on " + window.document.location.hostname + ". Supported URL.");
 } else {
-    console.log("User is on " + window.document.location.hostname + ". Unknown URL.");
+    console.log("User is on " + window.document.location.hostname + ". Unsupported/legacy URL.");
     addWarning();
 }
