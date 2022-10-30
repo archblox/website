@@ -170,6 +170,7 @@ $splash = array(
     }
     </style>
     @endauth
+    <script src="{{ asset('js/detect.js') }}" defer></script>
     @yield('extras')
 </head>
 

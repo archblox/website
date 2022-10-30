@@ -8,9 +8,6 @@
 @section('descdiscord')
 <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
-@section('extras')
-<script src="{{ asset('js/detect.js') }}" defer></script>
-@endsection
 @section('contentloggedout')
 <h1>Welcome to ARCHBLOX!</h1>
 <p>ARCHBLOX is a Work-In-Progress revival.</p>
