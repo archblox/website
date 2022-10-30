@@ -20,7 +20,7 @@
 <p>ARCHBLOX is not associated or partnered with Roblox Corp in any way.</p>
 <h2>How we store your passwords</h2>
 <p>As with every other site that uses passwords, we need a way to secure them, so no bad actors can read them. We use
-    an encryption algorithm to store your passwords securely. In the event of a database breach, please change your password and email, to be safe. Please do not reuse any passwords.</p>
+    password hashing to store your passwords securely. In the event of a database breach, please change your password and email, to be safe. Please do not reuse any passwords.</p>
 <h2>What is Personal Information and why do we collect it?</h2>
 <p>Personal Information is information that identifies an individual. The Personal Information we collect include your
     username, age and email address.
