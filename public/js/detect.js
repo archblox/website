@@ -19,8 +19,16 @@ function addWarning() {
     document.body.appendChild(alertDiv);
 }
 
+function addDatabaseBackupRestoreWarning() {
+    let alertDiv = document.createElement("div");
+    alertDiv.innerHTML = "Please do not change any settings, accept/decline friend requests, send/delete messages or post to your feed. We are currently in the process of backing up our database.";
+    alertDiv.setAttribute("id","alert");
+    document.body.appendChild(alertDiv);
+}
+
 if (window.document.location.hostname == "archblox.com") {
     console.log("User is on " + window.document.location.hostname + ". Supported URL.");
+    addDatabaseBackupRestoreWarning();
 } else {
     console.log("User is on " + window.document.location.hostname + ". Unsupported/legacy URL.");
     addWarning();
