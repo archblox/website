@@ -125,8 +125,8 @@ body {
   display: inline-flex;
   vertical-align: middle;
   width: 100%;
-  background: #de6f23;
-  background: linear-gradient(#de6f23 10%, #492707 100%);
+  background: #2362DE;
+  background: linear-gradient(#3690df 10%, #0d1085 100%);
   border: 0;
 }
 .Redesign .subMenu {

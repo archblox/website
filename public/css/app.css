@@ -276,9 +276,9 @@
 
 .BannerRedesign {
   height: 35px;
-  background: #883100;
+  background: #114081;
   background-image: url(/images/RevisedHeader/bg-rbx_header.png);
-  border-bottom: 1px solid #7b2d01;
+  border-bottom: 1px solid #0A2246;
   position: fixed;
   width: 100%;
   z-index: 10001;
@@ -423,7 +423,7 @@ div.mySubmenuFixed {
   float: right;
   height: 25px;
   width: 0;
-  Border-left: 1px solid #511b00;
+  Border-left: 1px solid #5355a0;
 }
 
 #NavigationRedesignBannerContainer ul li a,
