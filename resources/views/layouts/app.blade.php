@@ -96,7 +96,7 @@
     getDarkMode()
     </script>
     @endauth
-    <script src="{{ asset('js/detect.js') }}" defer></script>
+    <script src="{{ asset('js/detect.js?id=' . Str::random(8)) }}" defer></script>
     @yield('extras')
 </head>
 
