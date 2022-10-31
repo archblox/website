@@ -9,7 +9,7 @@
 <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 @section('contentloggedout')
-<h1>SIGN UP HAS BEEN DISABLED TEMPORARILY></h1>
+<h1>SIGN UP HAS BEEN DISABLED TEMPORARILY</h1>
 <br>
 <br>
 <h1>Welcome to ARCHBLOX!</h1>
