@@ -9,6 +9,9 @@
 <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 @section('contentloggedout')
+<h1>SIGN UP HAS BEEN DISABLED TEMPORARILY></h1>
+<br>
+<br>
 <h1>Welcome to ARCHBLOX!</h1>
 <p>Have an account already? <a href="{{ route('login') }}">Click here</a> to log in.</p>
 <br>
@@ -71,6 +74,10 @@
     <p>An Invite Key is required to sign up. You can obtain one from a person that has an ARCHBLOX Account.</p>
     <p>Don't bother random people for keys, or beg for one.</p>
     <br>
-    <button class="greenbutton" onClick="this.form.submit();this.disabled=true">Sign Up</button>
-
+    <!--SU BUTTON-->
     @endsection
+
+    @php
+    // signup button goes here for now
+    //<button class="greenbutton" onClick="this.form.submit();this.disabled=true">Sign Up</button>
+    @endphp
