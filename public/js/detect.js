@@ -21,7 +21,7 @@ function addWarning() {
 
 function addDatabaseBackupRestoreWarning() {
     let alertDiv = document.createElement("div");
-    alertDiv.innerHTML = "Please do not change any settings, accept/decline friend requests, send/delete messages or post to your feed. We are currently in the process of backing up our database.";
+    alertDiv.innerHTML = "Thanks for playing! We'll be back as soon as I can get a new VPS. (Please don't change settings, message or post anything!)";
     alertDiv.setAttribute("id","alert");
     document.body.appendChild(alertDiv);
 }
