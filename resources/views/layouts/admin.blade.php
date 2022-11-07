@@ -21,7 +21,7 @@
     <script src="{{ asset('js/detect_iphone.js') }}" defer></script>
 </head>
 
-<body class="NewPanel">
+<body class="dark-theme">
     @yield('alert')
 
     <div id="MasterContainer" class="AdminPanel" style="width: 100%;">
@@ -65,22 +65,6 @@
     <div id="BodyWrapper">
         @yield('Body')
     </div>
-    </div>
-    <div class="iphone-sidebar">
-        <img href="{{ route('admin_index') }}" src="https://archblox.com/img/MORBLOXlogo.png" width="50%">
-        <p>Admin Panel</p>
-        <p>Logged in as: {{ Auth::user()->name }}</p>
-        <br>
-        <a href="{{ route('admin_index') }}">Home</a>
-        <br>
-        <a href="{{ route('admin_users') }}">User List</a>
-        <br>
-        <a href="{{ route('admin_tree') }}">Invite Tree</a>
-        <br><br>
-        <a href="{{ route('home') }}"><span style="font-size:20px">←</span> Return to Main Site</a>
-    </div>
-    <div class="iphone-content">
-        @yield('content')
     </div>
 </body>
 

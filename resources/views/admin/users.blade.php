@@ -32,7 +32,7 @@
         </div>
         <a>
         @if (Cache::has('is_online_' . $user->id))
-            <span class="website" title="Online">
+            <span class="online" title="Online">
             </span>
         @else
             <span class="offline" title="Offline">
@@ -270,68 +270,4 @@
 </div>
 </div>
 {{ $users->appends($_GET)->links() }}
-@endsection
-@section('content')
-    <div id="UserList">
-        <h2>User List</h2>
-        <p>Remember, use your powers for good, not for evil.</p>
-        <p>Please do not share a user's birth date or email address without their permission.</p>
-        @if (request()->query('q'))
-        <a href="{{ route('admin_users') }}" style="color:navy">Clear Search</a>
-        @endif
-
-        <form method="GET" action="{{ route('admin_users') }}">
-            <div style="margin-top:10px;margin-bottom:10px;"><input type="text" id="q" name="q" placeholder="Search..." value="{{ request()->q }}"><button
-                    class="bluebutton" style="margin-left:2px" name="searchBy" value="name">Search by Username</button><button class="bluebutton" style="margin-left:2px" name="searchBy" value="id">Search by ID</button></div>
-        </form>
-        @foreach ($users as $user)
-            <div id="SearchContainer">
-                <div class="ProfileContainerBox" id="ProfileContainerBox1" style="background-color: white;">
-                    <div id="ProfileContainerBox1ImageContainer">
-                        <img alt="Profile Image" src="https://archblox.com/img/defaultrender.png" width="60px"
-                            height="100%">
-                    </div>
-                    <div id="ProfileContainerBox1TextContainer" style="color:black">
-                        <p><strong>Username:</strong> {{ $user->name }}</p>
-                        @if ($user->admin)
-                            <p><strong>Email:</strong> <i>Admin Email Hidden</i></p>
-                        @else
-                            <p><strong>Email:</strong> {{ $user->email }}</p>
-                        @endif
-                        <p><strong>ID:</strong> {{ $user->id }}</p>
-                        <p><strong>DOB:</strong> {{ Carbon\Carbon::parse($user->dob)->format('d/m/Y') }}</p>
-                        <p><strong>Rank:</strong>
-                            @if ($user->admin)
-                                Admin
-                            @else
-                                User
-                            @endif
-                        </p>
-                        <p><strong>Status:</strong> Normal</p>
-                        @if (!empty($user->id))
-                        @if (!empty(App\Models\User::where('id', $user->invited_by)->first()->id))
-                        <p><strong>Invited By:</strong> <a style="color:blue">{{ App\Models\User::where('id', $user->invited_by)->first()->name }}</a>
-                            (ID: {{ App\Models\User::where('id', $user->invited_by)->first()->id }})
-                        </p>
-                        @else
-                        <p><strong>Invited By:</strong> <a style="color:blue">N/A</a>
-                            (ID: N/A)
-                        </p>
-                        @endif
-                        @endif
-                        <!--
-                                <button class="greybutton">Check Reports For This User</button>
-                                <button class="bluebutton">Edit User Data</button>
-                                <button class="bluebutton">Warn/Ban History</button>
-                                <button class="redbutton">Warn</button>
-                                <button class="redbutton">Ban/Terminate</button>-->
-                    </div>
-                </div>
-            </div>
-        @endforeach
-        @if ($users->isEmpty())
-            <h5>No user was found, check if you entered the correct details.</h5>
-        @endif
-    </div>
-    {{ $users->appends($_GET)->links() }}
 @endsection
