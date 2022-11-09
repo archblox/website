@@ -5,6 +5,9 @@
 
 @section('Body')
 <div id="Body" style="width: 970px;">
+<h2 class="MainHeader hidden">
+     ARCHBLOX Status
+</h2>
 <h2 class="MainHeader">
      Status
 </h2>

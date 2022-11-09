@@ -1,16 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    <title>
-        Admin | Invite Tree - {{ env('APP_NAME') }}</title>
-    <style>
-        .flex {
-            display: block !important;
-        }
-
-        #SearchContainer a {
-            font-weight: normal !important;
-        }
-    </style>
+    <title>Admin | Invite Tree - {{ env('APP_NAME') }}</title>
 @endsection
 
 @section('Body')
@@ -21,7 +11,7 @@
         @if (!request()->has('q'))
             <h5 class="SubHeader">Enter a Username or ID.</h5>
         @elseif (!$user)
-            <h5 class="SubHeader text-error">Unable to find user, please check if you entered the correct information.</h5>
+            <h5 class="SubHeader text-error">Unable to get user information, please make sure the information you provided is correct.</h5>
         @endif
         <div class="Userlist">
             <form method="GET" action="{{ route('admin_tree') }}">

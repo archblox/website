@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    <title>
-        Admin | User List - {{ env('APP_NAME') }}
-    </title>
+    <title>Admin | User List - {{ env('APP_NAME') }}</title>
 @endsection
 
 @section('Body')
@@ -11,7 +9,7 @@
     User List
 </h2>
 <h5 class="SubHeader Reminder">
-    Reminder, don't leak any users' date of birth or email address.
+    (Reminder) Please don't leak any users information!
 </h5>
 <div class="Userlist">
 <form method="GET" action="{{ route('admin_users') }}">
@@ -263,7 +261,7 @@
 @endforeach
 @if ($users->isEmpty())
 <span class="text-error">
-    Unable to find user, please check if you entered the correct information.
+    Unable to get user information, please make sure the information you provided is correct.
 </span>
 @endif
 </div>

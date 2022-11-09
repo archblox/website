@@ -1,3 +1,7 @@
+/*/ Written by TersisWilvin (TersisWilvin#0087) for the ARCHBLOX Admin Panel Utility Pages. 
+Includes -> Fallback Theme (Color Theme) -> Light Theme -> Dark Theme.
+/*/
+
 body {
   min-width: 0px;
   font-family: Arial,Helvetica,sans-serif;
@@ -60,6 +64,12 @@ a {
   font-weight: normal;
 }
 
+.AdminPanel {
+  height: 100%;
+}
+#MasterContainer.AdminPanel {
+  background: #e3e3e3;
+}
 .light-theme #MasterContainer.AdminPanel {
   background-color: #ccc;
 }
@@ -69,6 +79,10 @@ a {
 #MasterContainer #BodyWrapper {
   padding-top: 25px;
 }
+#MasterContainer #BodyWrapper {
+  background: #e3e3e3;
+  color: #191919;
+}
 .light-theme #MasterContainer #BodyWrapper {
   background-color: #ccc;
   color: #2d312d;
@@ -77,13 +91,11 @@ a {
   background-color: #111;
   color: #ddd
 }
-.AdminPanel {
-  height: 100%;
-}
 #AdminWrapper.Navigation {
   width: 100%;
 }
 .AdminHeader {
+  background: #0074bd;
   width: 100%;
   height: 75px;
   z-index: 2;
@@ -96,6 +108,9 @@ a {
   background-color: #333;
 }
 .AdminSubHeader {
+  background: #0074bd; /*/Fallback for older browsers/*/
+  background: linear-gradient(180deg, #0074bd, #004774);
+  box-shadow: 0 2px 8px 0 #000;
   width: 100%;
   height: 25px;
   z-index: 1;
@@ -125,6 +140,7 @@ a {
   justify-content: center;
 }
 .AdminSubHeader li {
+  color: #191919;
   width: 25%;
   text-align: center;
   list-style: none;
@@ -137,6 +153,7 @@ a {
   color: #fff;
 }
 .AdminSubHeader li a {
+  color: #fff;
   font-size: 14px;
   font-weight: 100;
   cursor: pointer;
@@ -151,7 +168,7 @@ a {
 .AdminSubHeader li a:hover, .AdminSubHeader li a:active {
   transition: .1s all linear;
 }
-.light-theme .AdminSubHeader li a:hover, .light-theme .AdminSubHeader li a:active, .dark-theme .AdminSubHeader li a:hover, .dark-theme .AdminSubHeader li a:active {
+.AdminSubHeader li a:hover, .AdminSubHeader li a:active, .light-theme .AdminSubHeader li a:hover, .light-theme .AdminSubHeader li a:active, .dark-theme .AdminSubHeader li a:hover, .dark-theme .AdminSubHeader li a:active {
   color: #fff;
   box-shadow: 0 2px 0 0 #fff;
 }
@@ -202,6 +219,8 @@ a {
   content: '\2794';
 }
 .AdminHeader .Slogan {
+  color: #fff;
+  text-shadow: #00000091 2px 2px;
   font-size: 16px;
   font-weight: 100;
   display: block;
@@ -226,6 +245,7 @@ a {
   width: 200px;
   height: 40px;
   padding: 5px;
+  opacity: .9;
   background-image: url(/img/MORBLOXlogo.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -242,6 +262,9 @@ a {
 }
 .AdminHeader .SiteBrand:hover {
   opacity: 1;
+}
+.AdminPanel #Body {
+  background: #e3e3e3
 }
 .light-theme .AdminPanel #Body {
   background-color: #ccc;
@@ -260,14 +283,20 @@ a {
   user-select: none;
 }
 .AdminPanel .Reminder {
+  color: #f68802
+}
+.light-theme .AdminPanel .Reminder, .dark-theme .AdminPanel .Reminder {
   color: #ff7300
 }
 .text-error {
   display: block;
   text-align: center;
-  color: #d6241a;
+  color: #d86868;
   font-weight: 200;
   padding: 5px;
+}
+.light-theme .text-error, .dark-theme .text-error {
+  color: #d6241a;
 }
 .text-header {
   display: block;
@@ -275,6 +304,7 @@ a {
   padding: 5px 0;
 }
 .text-secondary {
+  color: #191919;
   display: inline-block;
   text-align: left;
 }
@@ -293,8 +323,11 @@ a {
   padding: 15px;
   border: 1px dashed #ff7300;
 }
+.AdminPanel .StatsContainer {
+  background-color: #b8b8b8;
+ }
 .light-theme .AdminPanel .StatsContainer {
-  background-color: #aaa;
+ background-color: #aaa;
 }
 .dark-theme .AdminPanel .StatsContainer {
   background-color: #080808;
@@ -318,6 +351,9 @@ a {
   color: #d41900;
 }
 .AdminPanel #SearchInput {
+  border: 1px solid #b8b8b8;
+  color: #191919;
+  background: #fff;
   border-radius: 3px;
 }
 .light-theme .AdminPanel #SearchInput {
@@ -337,6 +373,7 @@ a {
   margin: 0 5px;
 }
 .AdminPanel .Stats {
+  color: #191919;
   font-size: 16px;
   font-weight: 100;
   cursor: default;
@@ -354,6 +391,7 @@ a {
   color: #a7a7a7;
 }
 .AdminPanel .Stats.Counter {
+  color: #000;
   font-weight: 400;
 }
 .light-theme .AdminPanel .Stats.Counter {
@@ -363,6 +401,8 @@ a {
   color: #fff;
 }
 .AdminPanel .Stat-Separator {
+  background: #000; /*/Fallback for older browsers/*/
+  background: linear-gradient(90deg,#ffffff00 0%, #fff 50%, #ffffff00 100%);
   width: 50%;
   height: 1px;
   display: block;
@@ -377,6 +417,7 @@ a {
   background: linear-gradient(90deg,#55555500 0%, #555 50%, rgb(85, 85, 85,0) 100%);
 }
 .AdminPanel .SearchContainer {
+  background: #b8b8b8;
   width: 235px;
   height: auto;
   border-radius: 5px;
@@ -397,6 +438,8 @@ a {
   background-color: #555;
 }
 .SearchContainer .Thumbnail {
+  background-color: #b8b8b8;
+  border: 5px solid #e3e3e3;
   height: 64px;
   width: 64px;
   margin-top: -37px;
@@ -404,11 +447,11 @@ a {
 }
 .light-theme .SearchContainer .Thumbnail {
   background-color: #bbb;
-  border: 5px solid #ccc;
+  border-color: #ccc;
 }
 .dark-theme .SearchContainer .Thumbnail {
   background-color: #555;
-  border: 5px solid #111;
+  border-color: #111;
 }
 .SearchBoard {
   width: 100%;
@@ -458,8 +501,12 @@ a {
   color: #fff;
 }
 .AuthenticatedUserName, .logoutarrow {
+  color: #00a2ff;
   transition: .25s all ease-in-out;
   display: inline-block;
+}
+.AuthenticatedUserName {
+  color: #00a2ff;
 }
 .light-theme .AuthenticatedUserName, .light-theme .logoutarrow {
   color: #0387bb;
@@ -504,11 +551,14 @@ a {
   border-radius: 50%;
   margin: -8px;
 }
+.online, .offline, .ingame {
+  border: 2px solid #e3e3e3;
+}
 .light-theme .online, .light-theme .offline, .light-theme .ingame {
-  border: 2px solid #ccc;
+  border-color: #ccc;
 }
 .dark-theme .online, .dark-theme .offline, .dark-theme .ingame {
-  border: 2px solid #111;
+  border-color: #111;
 }
 .info-hidden {
   font-style: italic;
@@ -525,7 +575,7 @@ a {
   user-select: none;
 }
 .info-email {
-  color: #c9c9c9;
+  color: #444;
 }
 
 /*Heavily based off of the roblox developer tree list (because it looks cool)*/
@@ -545,6 +595,7 @@ a {
   min-height: 550px;
 }
 .SearchTree a {
+  color: #191919;
   transition: .15s all ease-in-out;
   font-size: 14px;
   margin: 0 0 0 38px;
@@ -552,6 +603,9 @@ a {
   position: relative;
   top: 18px;
   display: inline-block;
+}
+.SearchTree a:hover {
+  color: #00a2ff;
 }
 .light-theme .SearchTree a {
   color: #565656;
@@ -567,6 +621,7 @@ a {
 }
 .SearchTree a::after {
   content: '';
+  border: 1px solid #191919;
   border-radius: 100%;
   width: 2px;
   height: 2px;
@@ -576,10 +631,10 @@ a {
   top: 9px;
 }
 .light-theme .SearchTree a::after {
-  border: 1px solid #222;
+  border-color: #222;
 }
 .dark-theme .SearchTree a::after {
-  border: 1px solid #555;
+  border-color: #555;
 }
 .SearchTree a span {
   display: block;
@@ -593,9 +648,6 @@ a {
 }
 #BodyWrapper .forwardArrow::before {
   content: '\2794';
-}
-.SearchTree .forwardArrow:hover {
-  color: #00b7ff;
 }
 #BodyWrapper .forwardArrow {
   position: relative;
@@ -622,14 +674,15 @@ a {
   border-radius: 100%;
 }
 .TreeList {
+  border-left: 1px dashed #191919;
   margin: 13px 0 0 30px;
   padding: 0;
 }
 .light-theme .TreeList {
-  border-left: 1px dashed #222;
+  border-color: #222;
 }
 .dark-theme .TreeList {
-  border-left: 1px dashed #555;
+  border-color: #555;
 }
 #DropDown.TreeList {
   min-height: 550px;
@@ -649,6 +702,7 @@ a {
   padding-bottom: 0;
 }
 .SearchTree li ul li:before {
+  border-top: 1px dashed #191919;
   content: '';
   display: inline-block;
   width: 25px;
@@ -658,10 +712,10 @@ a {
   top: 28px;
 }
 .light-theme .SearchTree li ul li:before {
-  border-top: 1px dashed #222;
+  border-color: #222;
 }
 .dark-theme .SearchTree li ul li:before {
-  border-top: 1px dashed #555;
+  border-color: #555;
 }
 
 @media (max-width:990px) {
