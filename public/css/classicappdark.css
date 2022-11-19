@@ -45,6 +45,42 @@ body {
   margin: auto;
 }
 
+.success {
+  background: #02b757;
+  background: linear-gradient(#a3e2bd 10%, #02b757 100%);
+  max-width: 100%;
+}
+.loading {
+  background: #808080;
+  background: linear-gradient(0deg, #3d3d3d, #808080);
+  max-width: 100%;
+}
+.warning {
+  background: #de2323;
+  background: linear-gradient(#f07575 10%, #de2323 100%);
+  max-width: 100%;
+}
+.alert {
+  -webkit-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  transition: all 0s ease;
+  height: fit-content;
+  margin: 0px;
+  animation: alertanim;
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 0;
+}
+.alert.visible {
+  top: 72px;
+}
+
+/*/ Legacy Alert CSS (For pages that require the old deprecated banner css.) /*/
+
 #alert, 
 #success {
   height: fit-content;

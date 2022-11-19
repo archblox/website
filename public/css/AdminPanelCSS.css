@@ -2,7 +2,12 @@
 Includes -> Fallback Theme (Color Theme) -> Light Theme -> Dark Theme.
 /*/
 
+::selection {
+  background-color: #75757580;
+}
+
 body {
+  background: #e3e3e3;
   min-width: 0px;
   font-family: Arial,Helvetica,sans-serif;
 }

@@ -10,7 +10,7 @@
 @endsection
 
 @section('alert')
-    <div id="alert">Avatar Editor is currently work in progress.</div>
+    <div class="alert warning visible ontop">Avatar Editor is currently work in progress.</div>
 @endsection
 
 @section('content')

@@ -23,13 +23,13 @@ html, .loggedout {
 .arkoticon_small {
 	margin: 0px;
 	width: 30px;
-	content: url("http://archblox.com/img/ark2018nbd.png");
+	content: url("/img/ark2018nbd.png");
 }
 
 .arkoticon_navbar {
 	margin: 0px;
 	margin-top: -5px;
-	content: url("http://archblox.com/img/ark2018.png");
+	content: url("/img/ark2018.png");
 	margin-right: 3px;
 	width: 30px;
 }
@@ -96,6 +96,40 @@ body {
 	height: 28px;
 }
 
+.success {
+	background: #02b757;
+	max-width: 970px;
+}
+.loading {
+	background: #b8b8b8;
+	max-width: 970px;
+}
+.warning {
+	background: #d86868;
+	max-width: 970px;
+}
+.alert {
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	top: -40px;
+	border-radius: 0;
+	padding: 15px;
+}
+.loggedout .alert,
+.no-navigation .alert {
+	top: -60px;
+}
+.loggedout .alert.visible,
+.no-navigation .alert.visible {
+	top: 0;
+}
+.alert.visible {
+	top: 40px;
+}
+
+/*/ Legacy Alert CSS (For pages that require the old deprecated banner css.) /*/
+
 #alert,
 #success {
     border: 0;
@@ -105,7 +139,6 @@ body {
     font-size: 20px;
     line-height: 1em;
 }
-
 #alert {
 	background: #D86868;
 }

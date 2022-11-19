@@ -10,7 +10,7 @@
     @endsection
 
     @section('alert')
-    <div id="alert">The catalog is currently work in progress.</div>
+    <div class="alert warning visible ontop">The catalog is currently work in progress.</div>
 @endsection
 
     @section('content')
