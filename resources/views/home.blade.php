@@ -56,8 +56,8 @@
             </div>
             @endforeach
             @if ($posts->isEmpty())
-            <p>It's quiet... Too quiet... Why not make a post on your feed, or </p>
-            <a href="{{ route('games')}}">make some friends!</a>
+            <p>No news about your friends... want to know what your friends are up to?</p>
+            <a href="{{ route('games')}}">make some friends now.</a>
             @endif
         </div>
         {{ $posts->links() }}
@@ -87,14 +87,14 @@
             </div>
         </div>
         @else
-        <p>You don't have any friends yet. <a href="{{ route('users')}}">Why not make some!</a></p>
+        <p><a href="{{ route('users')}}">Find your friends</a> on ARCHBLOX</p>
     </div>
     @endif
     <br>
     <h2>Recently Played Games</h2>
     <br>
     <div class="gamelist">
-        <p>You haven't played any games recently.</p> <a href="{{ route('games')}}" class="text-link">Play Now!</a>
+        <p>You haven't played any games recently.</p> <a href="{{ route('games')}}" class="text-link">Play Now</a>
     </div>
 </div>
 </div>
