@@ -18,6 +18,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
     <link href="/css/AdminPanelCSS.css" rel="stylesheet">
+    <link href="/css/AdminPanel.css" rel="stylesheet">
     <script src="{{ asset('js/detect_iphone.js') }}" defer></script>
 </head>
 
@@ -28,37 +29,19 @@
     <div id="AdminWrapper" class="Navigation">
         <div class="AdminHeader">
             <span><a href="{{ route('home') }}" title="ARCHBLOX Home" class="SiteBrand"></a></span>
-            <a class="Slogan">
-                Admin Panel
-            </a>
-            <div class="AuthenticatedUserNameWrapper">
-            Logged in as <a class="AuthenticatedUserName" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
-            </div>
+            <a class="Slogan">Admin Panel</a>
+            <div class="AuthenticatedUserNameWrapper">Logged in as <a class="AuthenticatedUserName" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a></div>
             <div class="logoutbtn">
             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout AuthenticatedUserName">Logout</a>
             <span class="logoutarrow"><span>
             </div>
         </div>
-        <form id="logout-form" class="hidden" action="{{ route('logout') }}" method="POST">
-            @csrf
-        </form>
+        <form id="logout-form" class="hidden" action="{{ route('logout') }}" method="POST">@csrf</form>
         <div class="AdminSubHeader">
             <ul>
-            <li>
-                <a class="sub-menu" href="{{ route('admin_users') }}">
-                    User List
-                </a>
-            </li>
-            <li>
-                <a class="sub-menu" href="{{ route('admin_index') }}">
-                    Status
-                </a>
-            </li>
-            <li>
-                <a class="sub-menu" href="{{ route('admin_tree') }}">
-                    Invite Tree
-                </a>
-            </li>
+                <li><a class="sub-menu" href="{{ route('admin_users') }}">User List</a></li>
+                <li><a class="sub-menu" href="{{ route('admin_index') }}">Status</a></li>
+                <li><a class="sub-menu" href="{{ route('admin_tree') }}">Invite Tree</a></li>
             </ul>
         </div>
     </div>
@@ -66,6 +49,6 @@
         @yield('Body')
     </div>
     </div>
+    @yield('AdminPanel')
 </body>
-
 </html>

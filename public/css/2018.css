@@ -476,6 +476,10 @@ body {
 	border-color: #00A2FF;
 }
 
+.content_special, #content_special {
+    overflow: visible;
+}
+
 #feed {
 	background-color: #fff;
 	box-shadow: 0 1px 4px 0 rgb(25 25 25 / 30%);
@@ -517,6 +521,7 @@ body {
 #footer_signup p,
 #footer_signup a:nth-child(2) {
 	color: #b8b8b8;
+	transition: none;
 }
 
 #footer a:nth-child(2):hover,
@@ -524,16 +529,18 @@ body {
 #footer_signup a:nth-child(2):hover,
 #footer_signup a:nth-child(2):focus {
 	color: #191919;
+	text-decoration: none;
 }
 
 #footer a:nth-child(1),
-#footer_signup a:nth-child(1) {
+#footer_signup a:nth-child(1), .content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
 	color: #00a2ff;
+	transition: none;
 }
 
 #footer a:nth-child(1):hover,
 #footer_signup a:nth-child(1):hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 #footer p,
@@ -628,6 +635,10 @@ div[style="color:white;background-color:green;text-align:center;margin-top:72px"
 p[style="color: darkred;"],
 .important {
 	color: #D86868 !important;
+}
+
+.rightgamecontainer {
+    text-align: left;
 }
 
 a,

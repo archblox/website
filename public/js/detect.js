@@ -24,7 +24,7 @@ function addDatabaseBackupRestoreWarning() {
     document.body.appendChild(alertsystemdiv);
 }
 
-if (window.document.location.hostname == "archblox.com") {
+if (window.document.location.hostname == "archblox.com" || window.document.location.hostname == "localhost") {
     console.log("User is on " + window.document.location.hostname + ". Supported URL.");
     addDatabaseBackupRestoreWarning();
 } else {

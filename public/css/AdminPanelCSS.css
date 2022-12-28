@@ -723,9 +723,13 @@ a {
   border-color: #555;
 }
 
+body:not(.EnableNewPanel) .NewAdminPanel {
+  display: none;;
+}
+
 @media (max-width:990px) {
   .AdminPanel #Body, .AdminPanel #BodyWrapper, .AdminPanel #MasterContainer {
-    width: 100% !important; /*!important since late 2012 roblox uses element.style CRINGE!*/
+    width: 100% !important;
     padding: 0;
   }
 }
