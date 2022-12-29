@@ -99,51 +99,30 @@ body.Segoe-Font {
     position: relative;
     z-index: 10000;
 }
-.Admin-Navigation .SubHeader {
-    background: #a0a0a0;
-    background: linear-gradient(0deg, #5b5457 0%, #a0a0a0 100%);
-    width: 100%;
-    height: 25px;
-    position: absolute;
-    display: -webkit-box;
-    display: inline-flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    box-shadow: 0px 0px 10px 5px #606060;
-    box-shadow: 0px 0px 10px 5px rgba(0 0 0 / 50%);
-    z-index: 9999;
-}
-.Admin-Navigation .sub-menu {
-    display: block;
-    width: 25%;
-    text-align: center;
-    margin: auto;
-}
 .Admin-Navigation .Header .PanelLogo {
-    background-image: url(/img/MORBLOXlogo.png);
-    background-size: 200px 35px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 200px;
-    height: 35px;
-    opacity: .8;
-    -webkit-transition: all .125s ease-in-out;
-    transition: all .125s ease-in-out;
-    transition-property: opacity, transform;
-    transform: scale(95%);
     display: block;
     margin: auto;
     padding: 6px;
+    width: 200px;
+    height: 35px;
+    opacity: .8;
+    background-image: url(/img/MORBLOXlogo.png);
+    background-size: 190px 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: auto;
+    -webkit-transition: opacity .125s ease-in-out, background-size .125s ease-in-out;
+    -moz-transition: opacity .125s ease-in-out, background-size .125s ease-in-out;
+    -ms-transition: opacity .125s ease-in-out, background-size .125s ease-in-out;
+    -o-transition: opacity .125s ease-in-out, background-size .125s ease-in-out;
+    transition: opacity .125s ease-in-out, background-size .125s ease-in-out;
 }
 .Admin-Navigation .Header .PanelLogo:hover {
-    transform: scale(100%);
+    background-size: 200px 35px;
     opacity: 1;
 }
 .Admin-Navigation .Header .PanelLogo:active {
-    transform: scale(92.5%);
+    background-size: 185px 32px;
     opacity: .7;
 }
 .Admin-Navigation .Header .SubSlogan {
@@ -169,20 +148,57 @@ body.Segoe-Font {
 }
 .usernamecontainer .usernamelink {
     color: #3d3c3b;
-    -webkit-transition: all .125s ease-in-out;
-    transition: .125s all ease-in-out;
-    transition-property: color, box-shadow;
+    -webkit-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
+    -moz-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
+    -ms-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
+    -o-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
+    transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
 }
 .usernamecontainer .usernamelink:hover {
     color: #efebec;
     box-shadow: 0 2px 0 0 #efebec;
 }
-
+.Admin-Navigation .SubHeader {
+    background: #a0a0a0;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0px 0px 10px 5px #606060;
+    box-shadow: 0px 0px 10px 5px rgba(0 0 0 / 50%);
+    z-index: 9999;
+}
+.Admin-Navigation .SubHeader::after {
+    content: '';
+    background-image: url(/img/ABX-Header.png);
+    opacity: .5;
+    width: 100%;
+    height: 25px;
+    display: block;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.Admin-Navigation .sub-menu {
+    display: block;
+    position: relative;
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    z-index: 1;
+}
 .Admin-Navigation .menu {
     font-size: 14px;
-    -webkit-transition: all .125s ease-in-out;
-    transition: .1s all ease-in-out;
-    transition-property: color, box-shadow, padding;
+    line-height: 1.7rem;
+    -webkit-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, padding .125s ease-in-out;
+    -moz-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, padding .125s ease-in-out;
+    -ms-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, padding .125s ease-in-out;
+    -o-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, padding .125s ease-in-out;
+    transition: color .125s ease-in-out, box-shadow .125s ease-in-out, padding .125s ease-in-out;
 }
 .Admin-Navigation .menu[active] {
     padding: 0 0 2px 0;
@@ -193,6 +209,7 @@ body.Segoe-Font {
     padding: 0 0 2px 0;
     box-shadow: 0 2px 0 0 #efebec;
 }
+
 .Btn-Demo {
     width: 32.7%;
     width: max-content;
@@ -210,11 +227,21 @@ body.Segoe-Font {
     width: 100%;
     text-align: center;
 }
-body.Y23R .AdminContainer .SH-8B07, body:not(.Y23R) .S-Ia06 .SSH-kR0q, body:not(.Y23R) .AdminContainer .UH-vXb0 {
+body.Y23R .AdminContainer .SH-8B07, body:not(.Y23R) .S-Ia06 .SSH-kR0q, body:not(.Y23R) .AdminContainer .UH-vXb0, .no-Header .Admin-Navigation .Header, .no-Nav .Admin-Navigation {
     display: none;
 }
 body:not(.Y23R) .AdminContainer .SH-8B07, body.Y23R .AdminContainer .UH-vXb0 {
     margin: 15px 0;
+}
+
+.no-Nav .AdminContainer {
+    margin: 0 auto;
+}
+.no-Header .AdminContainer {
+    margin: 55px auto 0 auto;
+}
+.no-Header .Admin-Navigation {
+    height: 25px;
 }
 
 .hidden {
