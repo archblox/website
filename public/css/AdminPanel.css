@@ -17,12 +17,6 @@ a, a:hover, a:focus, a:link, a:visited {
     color: inherit;
     font-weight: 300;
     text-decoration: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -247,6 +241,15 @@ body:not(.Y23R) .AdminContainer .SH-8B07, body.Y23R .AdminContainer .UH-vXb0 {
 .hidden {
     display: none !important;
     visibility: hidden !important;
+}
+
+.NewAdminPanel .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /*/=={ Status }==/*/

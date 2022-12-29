@@ -274,7 +274,7 @@
         <nav class="Admin-Navigation">
             <div class="Header">
                 <a href="{{ route('home') }}" title="ARCHBLOX Home" class="PanelLogo"></a>
-                <span class="SubSlogan">Admin Panel</span>
+                <span class="SubSlogan noselect">Admin Panel</span>
                 <div class="usernamecontainer">
                 <a class="usernamelink" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
                 </div>
