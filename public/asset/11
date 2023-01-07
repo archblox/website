@@ -6,7 +6,7 @@
 -------------------- 
 
 ----FORMER ADMINS-----
--- SQL, Stick, cott --
+-- SQL, Stick       --
 ----------------------
 
 local ADMINS =
@@ -22,6 +22,7 @@ local ADMINS =
 	Mura = 1,
 	rec01n = 1,
 	sodium = 1,
+	cott = 1,
 	MORBLOX = 1,
 	zombieboy667 = 1,
 }
