@@ -51,8 +51,7 @@ h6 {
 body.EnableNewPanel {
     background: #c3c5c9;
     color: #3d3c3b;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 16px;
+    font: 16px Arial,Helvetica,sans-serif;
     font-weight: 300;
     height: 100%;
     width: 100%;
@@ -135,22 +134,51 @@ body.Segoe-Font {
     right: 10px;
     display: inline-block;
     position: absolute;
+    -webkit-transition: top .125s ease-in-out, right .125s ease-in-out, left .125s ease-in-out;
+    -moz-transition: top .125s ease-in-out, right .125s ease-in-out, left .125s ease-in-out;
+    -ms-transition: top .125s ease-in-out, right .125s ease-in-out, left .125s ease-in-out;
+    -o-transition: top .125s ease-in-out, right .125s ease-in-out, left .125s ease-in-out;
+    transition: top .125s ease-in-out, right .125s ease-in-out, left .125s ease-in-out;
 }
-.Y23R .Admin-Navigation .Header .usernamecontainer {
+.Admin-Navigation .Header .usernamecontainer:active {
+    top: 11px;
+    right: 8px;
+}
+.APURO2 .Admin-Navigation .Header .usernamecontainer {
     left: 10px;
     right: auto;
 }
-.usernamecontainer .usernamelink {
-    color: #3d3c3b;
-    -webkit-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
-    -moz-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
-    -ms-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
-    -o-transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
-    transition: color .125s ease-in-out, box-shadow .125s ease-in-out;
+.APURO2 .Admin-Navigation .Header .usernamecontainer:active {
+    Left: 12px;
 }
-.usernamecontainer .usernamelink:hover {
+.usernamecontainer .stext {
+    color: #3d3c3b;
+    text-shadow: 2px 1px 1px #767A73;
+    -webkit-transition: text-shadow .125s ease-in-out;
+    -moz-transition: text-shadow .125s ease-in-out;
+    -ms-transition: text-shadow .125s ease-in-out;
+    -o-transition: text-shadow .125s ease-in-out;
+    transition: text-shadow .125s ease-in-out;
+    display: none;
+}
+.usernamecontainer .clickabletext {
+    -webkit-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, text-shadow .125s ease-in-out;
+    -moz-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, text-shadow .125s ease-in-out;
+    -ms-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, text-shadow .125s ease-in-out;
+    -o-transition: color .125s ease-in-out, box-shadow .125s ease-in-out, text-shadow .125s ease-in-out;
+    transition: color .125s ease-in-out, box-shadow .125s ease-in-out, text-shadow .125s ease-in-out;
+    display: unset;
+}
+.APURO2 .usernamecontainer .stext {
+    display: unset;
+}
+.usernamecontainer .clickabletext:hover {
     color: #efebec;
     box-shadow: 0 2px 0 0 #efebec;
+}
+.usernamecontainer .clickabletext:active, .usernamecontainer:active .stext {
+    text-shadow: 0 0 0 #b7b9ba;
+    box-shadow: 0 0 0 0 transparent;
 }
 .Admin-Navigation .SubHeader {
     background: #a0a0a0;
@@ -168,7 +196,7 @@ body.Segoe-Font {
 }
 .Admin-Navigation .SubHeader::after {
     content: '';
-    background-image: url(/img/ABX-Header.png);
+    background-image: url(/img/ABXAdmin-SubHeader.png);
     opacity: .5;
     width: 100%;
     height: 25px;
@@ -216,18 +244,6 @@ body.Segoe-Font {
     margin: 0 0 5px;
 }
 
-.AdminContainer .H-12sB, .AdminContainer .H-16sB, .AdminContainer .H-20sB, .AdminContainer .H-24sB, .AdminContainer .H-28sB, .AdminContainer .H-32sB {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-body.Y23R .AdminContainer .SH-8B07, body:not(.Y23R) .S-Ia06 .SSH-kR0q, body:not(.Y23R) .AdminContainer .UH-vXb0, .no-Header .Admin-Navigation .Header, .no-Nav .Admin-Navigation {
-    display: none;
-}
-body:not(.Y23R) .AdminContainer .SH-8B07, body.Y23R .AdminContainer .UH-vXb0 {
-    margin: 15px 0;
-}
-
 .no-Nav .AdminContainer {
     margin: 0 auto;
 }
@@ -238,12 +254,12 @@ body:not(.Y23R) .AdminContainer .SH-8B07, body.Y23R .AdminContainer .UH-vXb0 {
     height: 25px;
 }
 
-.hidden {
+[hidden] {
     display: none !important;
     visibility: hidden !important;
 }
 
-.NewAdminPanel .noselect {
+[noselect] {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -254,55 +270,7 @@ body:not(.Y23R) .AdminContainer .SH-8B07, body.Y23R .AdminContainer .UH-vXb0 {
 
 /*/=={ Status }==/*/
 
-.AdminContainer .S-Ia06 {
-    width: 720px;
-    height: 100%;
-    background: #929497;
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px dashed #e4780d;
-    margin: auto;
-    padding: 15px;
-}
-.AdminContainer .SSH-kR0q {
-    padding-bottom: 15px;
-}
-.S-5mjl {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-}
-.S-aS25 {
-    width: 25%;
-    height: auto;
-    text-align: center;
-    float: left;
-}
-.S-aS50 {
-    width: 50%;
-    height: auto;
-    text-align: center;
-    float: left;
-}
-.S-5mjl:nth-child(3)::before {
-    content: '';
-    background: #3d3c3b;
-    background: linear-gradient(90deg, #3d3c3b00 0, #3d3c3b 50%, #3d3c3b00 100%);
-    display: block;
-    margin: 10px auto;
-    width: 75%;
-    height: 2px;
-}
-.S-H1sm {
-    color: #4f4e4d;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
 
-@media (max-width: 752px) {
-    .AdminContainer .S-Ia06 {
-        width: unset;
-    }
-}
 
 /*/=={ Buttons }==/*/
 

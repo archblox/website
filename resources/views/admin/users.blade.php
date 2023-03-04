@@ -274,21 +274,16 @@
         <nav class="Admin-Navigation">
             <div class="Header">
                 <a href="{{ route('home') }}" title="ARCHBLOX Home" class="PanelLogo"></a>
-                <span class="SubSlogan noselect">Admin Panel</span>
-                <div class="usernamecontainer">
-                <a class="usernamelink" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
-                </div>
+                <span class="SubSlogan" noselect>Admin Panel</span>
+               <div class="usernamecontainer">
+                    <a class="stext" noselect>Hi </a>
+                    <a class="stext clickabletext" href="@guest {{ route('login') }} @else {{ route('profile', Auth::id()) }} @endguest">{{ Auth::user()->name }}</a>
+               </div>
             </div>
             <ul class="SubHeader">
-                <li class="sub-menu">
-                    <a class="menu" href="{{ route('admin_users') }}" active>Users</a>
-                </li>
-                <li class="sub-menu">
-                    <a class="menu" href="{{ route('admin_index') }}">Status</a>
-                </li>
-                <li class="sub-menu">
-                    <a class="menu" href="{{ route('admin_tree') }}">Invites</a>
-                </li>
+                <li class="sub-menu"><a class="menu" href="{{ route('admin_users') }}" active>Users</a></li>
+                <li class="sub-menu"><a class="menu" href="{{ route('admin_index') }}">Dashboard</a></li>
+                <li class="sub-menu"><a class="menu" href="{{ route('admin_tree') }}">Invites</a></li>
             </ul>
         </nav>
         <div class="AdminContainer">
