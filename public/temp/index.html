@@ -1,34 +1,40 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <title>ARCHBLOX - BRB</title>
-        <meta content="ARCHBLOX" property="og:title"/>
-        <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description"/>
-        <meta content="https://archblox.com/" property="og:url"/>
-        <meta content="https://archblox.com/MORBLOXlogo.png" property="og:image"/>
-        <meta content="#4b4b4b" data-react-helmet="true" name="theme-color"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-        <link rel="apple-touch-icon" href="https://archblox.com/MORBLOX.png"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-startup-image" href="https://archblox.com/MORBLOXSplash.png"/>
-        <link rel="icon" type="image/x-icon" href="https://archblox.com/MORBLOX.ico">
-        <link rel="stylesheet" href="https://archblox.com/main.css">
-        <link rel="manifest" href="https://archblox.com/manifest.json">
-        <script type="text/javascript" src="https://archblox.com/index.js"></script>
-        <meta content="Currently under maintenance." property="og:description" />
-<style>
-    body {
-        background: black !important;
-    }
+<head>
+    <title>ARCHBLOX - BRB!</title>
+    <meta charset="utf-8">
+    <meta content="ARCHBLOX" property="og:title"> 
+    <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description">
+    <meta content="https://archblox.com" property="og:url" />
+    <meta content="https://archblox.com/img/MORBLOXlogo.png" property="og:image" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="{{ asset('img/MORBLOX.png') }}" />
+    <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <script src="{{ asset('js/darkmode.js?id=' . Str::random(8)) }}"></script>
+    <script>
+    getDarkMode()
+    </script>
+    <script src="{{ asset('js/detect.js') }}" defer></script>
+</head>
 
-    html {
-        background: black !important;
-    }
-    </style>  
-    </head>
-    <body>
-        <h1 style="color: #ffffff">Oh Noes! ARCHBLOX is currently under maintenance.</h1>
-        <p style="color: #ffffff">ARCHBLOX will be back soon, so please be patient.</p>
-    </body>
-</html> 
+<body>
+    <br>
+    <div id="logo_signup">
+        <a href="{{ route('index') }}"><img alt="ARCHBLOX Logo" src="{{ asset('img/ARCHBLOXarched.png') }}" width="200"
+                height="40" /></a>
+
+        <p id="morbin">We'll be right back.</p>
+    </div>
+    <div class="content_signup">
+       <h1>Oh Noes! ARCHBLOX is currently under maintenance.</h1>
+       <p>ARCHBLOX will be back soon, so please be patient.</p>
+    </div>
+    <div id="footer_signup">
+        <p>ARCHBLOX is not affiliated with Roblox Corp, Lego, Sony, SEGA, Microsoft, Nintendo or any other company.</p>
+    </div>
+</body>
+
+</html>

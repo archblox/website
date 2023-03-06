@@ -1,0 +1,263 @@
+
+@keyframes alertanim {
+  0% {
+    top: 0px;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    background-position-x: 72px;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes animatedbackground {
+  from {
+    background-position-x: 0px;
+    animation-timing-function: linear;
+  }
+
+  to {
+    background-position-x: 2000px;
+    animation-timing-function: linear;
+  }
+}
+
+
+
+html, .loggedout {
+  background: url('../img/animated.png');
+  background-color: rgb(49, 107, 223);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  animation-name: animatedbackground;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}
+body {
+  background: transparent;
+}
+
+.success {
+  background: #02b757;
+  background: linear-gradient(#a3e2bd 10%, #02b757 100%);
+  max-width: 100%;
+}
+.loading {
+  background: #808080;
+  background: linear-gradient(0deg, #3d3d3d, #808080);
+  max-width: 100%;
+}
+.warning {
+  background: #de2323;
+  background: linear-gradient(#f07575 10%, #de2323 100%);
+  max-width: 100%;
+}
+.alert {
+  -webkit-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  transition: all 0s ease;
+  height: fit-content;
+  margin: 0px;
+  animation: alertanim;
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 0;
+}
+.alert.visible {
+  top: 72px;
+}
+
+/*/ Legacy Alert CSS (For pages that require the old deprecated banner css.) /*/
+
+#alert,
+#success {
+  height: fit-content;
+  margin: 0px;
+  animation: alertanim;
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
+  position: fixed;
+  z-index: 10;
+  top: 72px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.content, #footer {
+  max-width: 1000px;
+  width: auto;
+  padding: 5px;
+  margin: auto;
+}
+
+#footer, #footer_signup {
+  background: rgba(172,172,172,0.75);
+}
+
+.content_signup {
+  background: rgba(255, 255, 255,0.75);
+}
+
+.content {
+  margin-top: 105px;
+  min-height: 550px;
+  background: rgba(255, 255, 255,0.75);
+}
+
+.content {
+  margin-top: 105px;
+}
+
+#logo_full {
+	display: none;
+	margin-right: 0;
+}
+
+#logo_small {
+  display: block;
+}
+
+#NavigationRedesignBannerContainer {
+  font-family: "Helvetica Neue";
+  height: 40px;;
+}
+
+.BannerCenterContainer {
+  width: 100%;
+}
+
+#logo_full, #logo_full .btn-logo {
+  width: 200px;
+  Height: 40px;
+}
+
+.btn-logo:hover, .smallnavbarbutton:hover, .navbarbuttoncontainer li:hover {
+	background-image: none;
+	background: none;
+}
+
+.BannerRedesign {
+  height: 40px;
+  margin: 0px;
+  padding-right: 5px;
+  align-content: center;
+  padding-left: 5px;
+  padding-top: 2px;
+  position: fixed;
+  top: 0px;
+  padding-bottom: 2px;
+  color: white;
+  line-height: normal;
+  z-index: 100;
+  display: inline-flex;
+  vertical-align: middle;
+  width: 100%;
+  background: #2362DE;
+  background: linear-gradient(#5082ed 10%, #0a44b7 100%);
+  border: 0;
+}
+.Redesign .subMenu {
+  height: 25px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 5px;
+  position: fixed;
+  z-index: 100;
+  top: 43px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: inline-flex;
+  vertical-align: middle;
+  left: 0;
+  width: 100%;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+  text-size-adjust: auto;
+  text-align: left;
+  background: #000000;
+  background: linear-gradient(#303030 10%, #000000 100%);
+}
+.mySubmenuFixed.Redesign {
+  background: #000000;
+  background: linear-gradient(#303030 10%, #000000 100%); 
+}
+.navbarbuttoncontainer {
+  padding-left: 5px;
+}
+.navbarbuttoncontainer li {
+  padding: 0;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+#NavigationRedesignBannerContainer ul li a, .NavigationRedesign ul li a:visited, .navbarbutton {
+  position: relative;
+  padding-right: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  text-shadow: none;
+}
+.Redesign .smallnavbarbutton {
+  position: relative;
+  padding: 0;
+  padding-right: 5px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  float: none;
+}
+.mySubmenuFixed.Redesign {
+  background: none;
+  height: 29px;
+  top: 44px;
+}
+
+#NavigationRedesignBannerContainer .HeaderDivider {
+  display: none;
+}
+
+#footer_signup a, #footer_signup p a, #footer a, #footer p a {
+  transition: none;
+}
+
+.content_signup a:hover, .content_signup p a:hover, #footer_signup a:hover, #footer_signup p a:hover, #footer a:hover, #footer p a:hover {
+  color: inherit;
+}
+
+#navbarsignedincontainer {
+  display: block;
+}
+#navbarsignedincontainer a:nth-child(1)::after {
+  content: ' | ';
+}
+
+#footer p, #footer a, #footer_signup p, #footer_signup a {
+  color: #000;
+}
+
+@media (min-width: 1688px) {
+  #logo_full {
+    display: block;
+  }
+
+  #logo_small {
+    display: none;
+  }
+}
