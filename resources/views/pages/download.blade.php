@@ -22,7 +22,7 @@
 <p><a href="{{ asset('launcher/ARCHBLOXLauncher-32bit.exe') }}">32 Bit</a> | <a
         href="{{ asset('launcher/ARCHBLOXLauncher-64bit.exe') }}">64 Bit</a></p>
 <br>
-<p>ARCHBLOX Studio Bootstrapper v1.5</p>
+<p>ARCHBLOX Studio Bootstrapper v1.6</p>
 <p><a href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-32bit.exe') }}">32 Bit</a> | <a
         href="{{ asset('bootstrapper/ARCHBLOXBootstrapper-64bit.exe') }}">64 Bit</a></p>
 <br>
