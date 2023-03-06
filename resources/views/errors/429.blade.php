@@ -9,7 +9,6 @@
 <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 @section('contentloggedout')
-<h2>429 | Too Many Requests</h2>
-<p><button style="width: fit-content;"  class="greybutton" onclick="window.history.back();">Back</button></p>
+<h2>429 | Too Many Requests <button style="width: fit-content;"  class="greybutton" onclick="window.history.back();">Back</button></h2>
 <p>You've tried to do something too many times. Please try again in a few minutes.</p>
 @endsection

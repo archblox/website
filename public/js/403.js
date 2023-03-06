@@ -4,6 +4,11 @@ function redirect() {
 	window.location.replace("https://archblox.com");
 }
 
+function remove(el) {
+  var element = el;
+  element.remove();
+}
+
 function countdown() {
 	if (time > 0) {
     time--;

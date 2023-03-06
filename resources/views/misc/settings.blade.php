@@ -30,35 +30,32 @@
                 <p id="desc"></p>
                 <span class="username_change" id="invisible">
                     <br>
-                    <h4>New Username</h4>
                     <input type="text" placeholder="New Username..." id="name" name="name">
                     <br>
                     <br>
                     <input type="checkbox" id="username_change_confirm" name="username_change_confirm" value="true">
-                    <label for="username_change_confirm"> I understand that changing my username is permanent<br> and can
-                        only
-                        be done once.</label>
+                    <label for="username_change_confirm"> I understand that I can't change my username after this.</label>
                 </span>
                 <span class="email_change" id="invisible">
+                    <br>    
+                    <input type="email" name="email" placeholder="New Email">
                     <br>
-                    <h4>New Email</h4>
-                    <input type="email" name="email" placeholder="New Email Field"><br>
-                    <h4>Confirm New Email</h4>
-                    <input type="email" name="email_confirmation" placeholder="Confirm New Email Field">
+                    <br>
+                    <input type="email" name="email_confirmation" placeholder="Confirm New Email">
                 </span>
                 <span class="dob_change" id="invisible">
                     <br>
-                    <h4>New Date of Birth</h4>
                     <input type="date" name="dob">
                 </span>
                 <span class="password_change" id="invisible">
                     <br>
-                    <h4>Old Password</h4>
-                    <input type="password" name="old_password" placeholder=""><br>
-                    <h4>New Password</h4>
-                    <input type="password" name="password" placeholder=""><br>
-                    <h4>Confirm New Password</h4>
-                    <input type="password" name="password_confirmation" placeholder="">
+                    <input type="password" name="old_password" placeholder="Old Password">
+                    <br>
+                    <br>
+                    <input type="password" name="password" placeholder="New Password">
+                    <br>
+                    <br>
+                    <input type="password" name="password_confirmation" placeholder="Confirm New Password">
                 </span>
                 <span class="date_change" id="invisible">
                     <br>
@@ -79,13 +76,13 @@
                     <br>
                     <select name="message_preference">
                         <option value="2">Everyone</option>
-                        <option value="1">Friends Only</option>
-                        <option value="0">No one</option>
+                        <option value="1">Friends</option>
+                        <option value="0">Nobody</option>
                     </select>
                 </span>
                 <br>
                 <br>
-                <button class="bluebutton" type="submit">Confirm</button>
+                <button class="bluebutton" type="submit">Save</button>
                 <button class="redbutton" type="reset" onclick="closePopup()">Cancel</button>
             </form>
         </div>
@@ -146,10 +143,10 @@
                     echo 'Everyone';
                     break;
                 case 1:
-                    echo 'Friends Only';
+                    echo 'Friends';
                     break;
                 default:
-                    echo 'No one';
+                    echo 'Nobody';
             }
         @endphp <button class="bluebutton"
                 onclick="openPopup(7)">Edit</button>
@@ -171,6 +168,9 @@
             <h3>Theme</h3>
             <p>Selected Theme: @php
                 switch (Auth::user()->settings->theme) {
+                    case 6:
+                        echo 'Automatic';
+                        break;
                     case 5:
                         echo 'Classic Dark';
                         break;
@@ -197,6 +197,7 @@
                             <option value="3" @php switch (Auth::user()->settings->theme) { case 3: echo 'selected'; break; }@endphp>Dark</option>
                             <option value="4" @php switch (Auth::user()->settings->theme) { case 4: echo 'selected'; break; }@endphp>Classic Light</option>
                             <option value="5" @php switch (Auth::user()->settings->theme) { case 5: echo 'selected'; break; }@endphp>Classic Dark</option>
+                            <option value="6" @php switch (Auth::user()->settings->theme) { case 6: echo 'selected'; break; }@endphp>Automatic</option>
                         </select>
                     </div>
                     <button style="width: max-content;" class="greenbutton" type="submit">Save</button>

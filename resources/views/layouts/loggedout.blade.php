@@ -55,7 +55,24 @@ $splash = array(
 'conkley is EPIC',
 'skeuomorphism is awesome',
 'It\'s free!',
-'It\'s archtastic!'
+'It\'s archtastic!',
+'The plural of horse is heese',
+'SUPER MARIO SUPER MARIO WORLD',
+'We died for like 5 months lol',
+'This shit was dead',
+'I\'m Glenn Quagmire.',
+'JESSE LOOK, IM SANS!',
+'I ain\'t reading allat :joy:',
+'i can\'t take it much longer',
+'wtf',
+'Obey the iPhone 5.',
+'This slogan has been sponsored by Buy-n-Large!',
+'Now with IP leaks!',
+'This slogan has been sponsored by RAID: SHADOW LEGENDS.',
+'This slogan has been sponsored by Super Mario 8.',
+'wawsdawsdwasdwasdwawds',
+'Hello Mario.',
+'Luigi is ALWAYS watching.'
 );
 @endphp
 
@@ -76,32 +93,34 @@ $splash = array(
     <link rel="apple-touch-startup-image" href="{{ asset('img/MORBLOXsplash.png') }}" />
     <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
+    <script src="{{ asset('js/darkmode.js?id=' . Str::random(8)) }}"></script>
     @auth
     @switch (Auth::user()->settings->theme)
+    @case(6)
+    <script>
+            getDarkMode();
+    </script>
+    @break
     @case(5)
     <meta content="#011130" data-react-helmet="true" name="theme-color" />
-    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/classicappdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(4)
     <meta content="#316bdf" data-react-helmet="true" name="theme-color" />
-    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/classicapp.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(3)
     <meta content="#00004a" data-react-helmet="true" name="theme-color" />
-    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @case(2)
     <meta content="#ffffff" data-react-helmet="true" name="theme-color" />
-    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     <link href="{{ asset('css/2018.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @break
     @default
     <meta content="#0057d1" data-react-helmet="true" name="theme-color" />
-    <link href="{{ asset('css/app.css?id=' . Str::random(8)) }}" rel="stylesheet">
     @endswitch
     @else
     <style>
@@ -114,54 +133,6 @@ $splash = array(
     }
     </style>
     <script>
-    function getDarkMode() {
-        var currentTime = new Date().getHours();
-        if (6 >= currentTime || currentTime > 18) {
-            var li = document.createElement('link');
-            var href = "{{ asset('css/app.css?id='.Str::random(8)) }}";
-            var rel = 'stylesheet';
-            li.setAttribute('href', href);
-            li.setAttribute('rel', rel);
-            var s = document.getElementsByTagName('head')[0];
-            s.appendChild(li, s);
-
-            var li = document.createElement('link');
-            var href = "{{ asset('css/appdark.css?id='.Str::random(8)) }}";
-            var rel = 'stylesheet';
-            li.setAttribute('href', href);
-            li.setAttribute('rel', rel);
-            var s = document.getElementsByTagName('head')[0];
-            s.appendChild(li, s);
-
-            var li = document.createElement('meta');
-            var content = "#00004a";
-            var datareacthelmet = 'true';
-            var name = "theme-color"
-            li.setAttribute('content', content);
-            li.setAttribute('data-react-helmet', datareacthelmet);
-            li.setAttribute('name',name)
-            var s = document.getElementsByTagName('head')[0];
-            s.appendChild(li, s);
-        } else {
-            var li = document.createElement('link');
-            var href = "{{ asset('css/app.css?id='.Str::random(8)) }}";
-            var rel = 'stylesheet';
-            li.setAttribute('href', href);
-            li.setAttribute('rel', rel);
-            var s = document.getElementsByTagName('head')[0];
-            s.appendChild(li, s);
-
-            var li = document.createElement('meta');
-            var content = "#0057d1";
-            var datareacthelmet = 'true';
-            var name = "theme-color"
-            li.setAttribute('content', content);
-            li.setAttribute('data-react-helmet', datareacthelmet);
-            li.setAttribute('name',name)
-            var s = document.getElementsByTagName('head')[0];
-            s.appendChild(li, s);
-        }
-    }
     getDarkMode()
     </script>
     <style>
