@@ -24,9 +24,9 @@ function addDatabaseBackupRestoreWarning() {
     document.body.appendChild(alertsystemdiv);
 }
 
-if (window.document.location.hostname == "archblox.com" || window.document.location.hostname == "localhost") {
+if (window.document.location.hostname == "archblox.com" || window.document.location.hostname == "localhost" || window.document.location.hostname == "127.0.0.1" || window.document.location.hostname == "127.0.0.1:8000") {
     console.log("User is on " + window.document.location.hostname + ". Supported URL.");
-    addDatabaseBackupRestoreWarning();
+    //addDatabaseBackupRestoreWarning(); -- only when the sever is backing up. 
 } else {
     console.log("User is on " + window.document.location.hostname + ". Unsupported/legacy URL.");
     addWarning();
