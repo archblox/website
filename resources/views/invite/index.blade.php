@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-    <h1>INVITES HAVE BEEN DISABLED UNTIL FURTHER NOTICE</h1>
-    <br>
     <h1 id="usernameframe">Create a Key</h1>
     @if ($data['canCreate'])
             <p>You may create @if ($data['fetchKeys']->isEmpty()) your first key below!
@@ -18,9 +16,9 @@
         @endif
         <br>
         @if ($data['canCreate'])
-            <form method="POST" action="{{ route('home') }}">
+            <form method="POST" action="{{ route('key_create') }}">
                 @csrf
-                <button disabled class="bluebutton" type="submit">Create Invite Key</button>
+                <button class="bluebutton" type="submit">Create Invite Key</button>
             </form>
             <br>
         @endif
