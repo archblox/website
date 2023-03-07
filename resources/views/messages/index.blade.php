@@ -20,7 +20,7 @@
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', false)->count() }})</a>
     <a href="{{ route('inbox_sent') }}" class="tab">Sent
         ({{ App\Models\Message::where('user_id', Auth::id())->count() }})</a>
-    <a href="{{ route('deleted') }}" class="tab">Deleted
+    <a href="{{ route('deleted') }}" class="tab">Archived
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', true)->count() }})</a>
     </div>
     </div>
@@ -29,7 +29,7 @@
             Message</a></button>
     <form action="{{ route('delete_all') }}" method="POST" style="display:inline-block">
         @csrf
-        <button class="redbutton" type="submit">Delete All Messages</button>
+        <button class="redbutton" type="submit">Archive All Messages</button>
         </form>
     <br>
     <br>

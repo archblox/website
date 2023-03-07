@@ -17,7 +17,7 @@
     <a href="{{ route('inbox') }}" class="tab">Inbox
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', false)->count() }})</a>
     <a href="#" class="tab_selected">Sent ({{ App\Models\Message::where('user_id', Auth::id())->count() }})</a>
-    <a href="{{ route('deleted') }}" class="tab">Deleted
+    <a href="{{ route('deleted') }}" class="tab">Archived
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', true)->count() }})</a>
 </div>
     </div>

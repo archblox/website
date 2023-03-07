@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    <title>Deleted Messages - {{ env('APP_NAME') }}</title>
+    <title>Archived Messages - {{ env('APP_NAME') }}</title>
 @endsection
 
 @section('alert')
@@ -22,7 +22,7 @@
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', false)->count() }})</a>
     <a href="{{ route('inbox_sent') }}" class="tab">Sent
         ({{ App\Models\Message::where('user_id', Auth::id())->count() }})</a>
-    <a href="#" class="tab_selected">Deleted
+    <a href="#" class="tab_selected">Archived
         ({{ App\Models\Message::where('sendto_id', Auth::id())->where('deleted', true)->count() }})</a>
     </div>  
     </div>

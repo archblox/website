@@ -24,7 +24,7 @@
         @if ($message->deleted)
             <button class="greenbutton" type="submit">Recover</button>
         @else
-            <button class="redbutton" type="submit">Delete</button>
+            <button class="redbutton" type="submit">Archive</button>
         @endif
     </form>
     @endif
