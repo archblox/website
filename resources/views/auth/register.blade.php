@@ -73,4 +73,5 @@
     <br>
     <!--SU BUTTON-->
     <button class="greenbutton" onClick="this.form.submit();this.disabled=true">Sign Up</button>
+    <p class="important">If you recieve a 500 error once you sign up, please message Thomas on the discord.</p>
     @endsection

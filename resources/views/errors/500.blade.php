@@ -11,4 +11,8 @@
 @section('contentloggedout')
 <h2>500 | Internal Server Error <button style="width: fit-content;"  class="greybutton" onclick="window.history.back();">Back</button></h2>
 <p>Please go back and try again. If it still does not work, contact one of the developers.</p>
+@auth
+<br />
+<p>Please report this error with your USERID: {{ Auth::id() }}</p>
+@endauth
 @endsection

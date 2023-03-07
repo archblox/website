@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="PageTitleBar">
-    <h1 id="usernameframe">Friends</h1>
+    <h1 id="usernameframe">Friend Requests</h1>
     <div>
     <a href="{{ route('friends') }}" class="tab">All Friends</a>
     <a href="#" class="tab_selected">Pending Requests ({{ count(Auth::user()->getFriendRequests()) }})</a>
@@ -15,6 +15,7 @@
     <div class="content_special" id="FriendsContainer" style="flex-wrap: wrap;">
         @foreach ($userRequests as $userReq)
             @php $user = App\Models\User::find($userReq->sender_id) @endphp
+            @if (!empty($user))
             <div class="FriendsContainerBox" id="FriendsContainerBox1">
                 <div id="FriendsContainerBox1ImageContainer">
                     <a href="{{ route('profile', $user->id) }}"><img alt="Profile Image"
@@ -43,6 +44,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         @endforeach
         @if (!count($userRequests))
             <p>You have no pending friend requests.</p>

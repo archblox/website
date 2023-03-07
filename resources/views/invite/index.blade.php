@@ -26,8 +26,10 @@
             <div class="FeedContainerBox" id="FeedContainerBox1">
                 <div id="ProfileContainerBox1TextContainer">
                     <h3>Invite Key | @if (!$fKey->active)
-                            You Invited: <a href="{{ route('profile', App\Models\User::find($fKey->user_invited)->id) }}"
-                                style="font-weight:normal;color:blue">{{ App\Models\User::find($fKey->user_invited)->name }}</a>
+                            You Invited: <a href="@if (!empty(App\Models\User::find($fKey->user_invited)->id))
+                            {{ route('profile', App\Models\User::find($fKey->user_invited)->id) }}
+                            @endif" 
+                                style="font-weight:normal;color:blue">@if (!empty(App\Models\User::find($fKey->user_invited)->id)){{ App\Models\User::find($fKey->user_invited)->name }}@else[ Deleted User ]@endif</a>
                             |
                         @endif Created {{ $fKey->created_at->format('d/m/Y') }}</h3>
                     @if ($fKey->active)

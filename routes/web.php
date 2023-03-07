@@ -97,6 +97,7 @@ Route::get('/game/ChatFilter.ashx', [App\Http\Controllers\ClientController::clas
 Route::get('/game/join.ashx', [App\Http\Controllers\ClientController::class, 'join'])->name('join');
 Route::get('/IDE/Landing.aspx', [App\Http\Controllers\ClientController::class, 'idelanding'])->name('idelanding');
 Route::get('/ide/welcome', [App\Http\Controllers\ClientController::class, 'idelanding'])->name('idewelcome');
+Route::get('/ide/login', [App\Http\Controllers\ClientController::class, 'login_iframe'])->name('login_iframe');
 Route::get('/IDE/Upload.aspx', [App\Http\Controllers\ClientController::class, 'ideupload'])->name('ideupload');
 Route::get('/IDE/ClientToolbox.aspx', [App\Http\Controllers\ClientController::class, 'toolbox'])->name('toolbox');
 Route::get('/UploadMedia/PostImage.aspx', [App\Http\Controllers\ClientController::class, 'postimage'])->name('postimage');

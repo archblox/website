@@ -71,16 +71,17 @@ class RegisterController extends Controller
         $this->verifyKey($data['key']);
         $invited_by = $this->getInviter($data['key']);
         $this->updateKeyTable($data['key']);
+        
 
-        UserSetting::create(['user_id' => User::all()->last()->id+1]);
+        UserSetting::create(['user_id' => User::all()->last()->id]);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'dob' => $data['dob'],
             'password' => Hash::make($data['password']),
             'badges' => [3],
-            'invited_by' => $invited_by,
-        ]);
+            'invited_by' => $invited_by
+        ]);;
     }
 
     protected function verifyKey($key)
