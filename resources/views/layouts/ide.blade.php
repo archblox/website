@@ -17,6 +17,17 @@
     <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
+    <script>
+        var a=document.getElementsByTagName("a");
+        for(var i=0;i<a.length;i++)
+        {
+            a[i].onclick=function()
+            {
+                window.location=this.getAttribute("href");
+                return false
+            }
+        }
+    </script>
     <script src="{{ asset('js/detect_small.js') }}" defer></script>
 </head>
 

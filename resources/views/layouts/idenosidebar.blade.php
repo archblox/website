@@ -18,6 +18,17 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="{{ asset('css/app.css?id=e5Az527Gb1') }}" rel="stylesheet">
     <link href="{{ asset('css/appdark.css?id=e5Az527Gb1') }}" rel="stylesheet">
+    <script>
+        var a=document.getElementsByTagName("a");
+        for(var i=0;i<a.length;i++)
+        {
+            a[i].onclick=function()
+            {
+                window.location=this.getAttribute("href");
+                return false
+            }
+        }
+    </script>
     <script src="{{ asset('js/detect_small.js') }}" defer></script>
 </head>
 
