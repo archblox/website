@@ -1186,7 +1186,7 @@ div#testingSitePanelWrapper,
 
   .content_signup,
   #footer_signup {
-    width: 100%;
+    /*width: 100%;*/
   }
   .alert-system .alert {
     border-radius: 0;
