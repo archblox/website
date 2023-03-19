@@ -784,9 +784,9 @@ body {
   border-color: white;
   border-radius: 5px;
   margin: 30px auto 0 auto;
-  background: rgb(0 0 0 / 53%);
+  background: rgba(0,0,0,0.5);
   /* Fallback for IE 11*/
-  background-color: rgb(0 0 0 / 53%);}
+  background-color: rgba(0,0,0,0.5);}
 
 .content_signup h1,
 .content_signup a,
@@ -1095,7 +1095,7 @@ button:hover.greenbutton {
 #footer a,
 #footer_signup p,
 #footer_signup a {
-  color: black;
+  color: white;
 }
 
 #ColorChooser {
