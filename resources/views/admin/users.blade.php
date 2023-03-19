@@ -9,7 +9,7 @@
     User List
 </h2>
 <h5 class="SubHeader Reminder">
-    (Reminder) Please don't leak any users information!
+    DO NOT LEAK ANY USER INFORMATION. DOING SO WILL GET YOU BANNED.
 </h5>
 <div class="Userlist">
 <form method="GET" action="{{ route('admin_users') }}">

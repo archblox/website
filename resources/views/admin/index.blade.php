@@ -17,7 +17,7 @@
 {{ App\Models\User::count() }}
 </span>
 <span class="Stats">
-     Registered
+     Users
 </span>
 </div>
 <div class="Stats-Wrapper">
@@ -25,7 +25,7 @@
 {{ App\Models\User::where('admin', true)->count() }}
 </span>
 <span class="Stats">
-     Admin(s)
+     Admins
 </span>
 </div>
 <div class="Stats-Wrapper">
@@ -33,7 +33,7 @@
 {{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subDay()->toDateTimeString())->count(); }}
 </span>
 <span class="Stats">
-     Online within the past day.
+     Users online today.
 </span>
 </div>
 <div class="Stats-Wrapper">
@@ -41,7 +41,34 @@
 {{ App\Models\User::where('last_seen', '>', Carbon\Carbon::now()->subMinute()->toDateTimeString())->count(); }}
 </span>
 <span class="Stats">
-     Currently Online.
+     Users currently online.
+</span>
+</div>
+<br>
+<span class="Stat-Separator"></span>
+<br>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+0
+</span>
+<span class="Stats">
+     Assets in moderation queue
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+0
+</span>
+<span class="Stats">
+     Places in moderation queue
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+0
+</span>
+<span class="Stats">
+     Reports in moderation queue
 </span>
 </div>
 <br>
@@ -52,7 +79,7 @@
 {{ App\Models\InviteKey::count() }}
 </span>
 <span class="Stats">
-     Invite Key(s)
+     Total Invite Keys
 </span>
 </div>
 <div class="Stats-Wrapper">
@@ -60,7 +87,15 @@
 {{ App\Models\InviteKey::where('active', true)->count() }}
 </span>
 <span class="Stats">
-     Unused Invite Key(s)
+     Unused Invite Keys
+</span>
+</div>
+<div class="Stats-Wrapper">
+<span class="Stats Counter">
+{{ App\Models\InviteKey::where('active', false)->count() }}
+</span>
+<span class="Stats">
+     Used Invite Keys
 </span>
 </div>
 </div>

@@ -8,6 +8,9 @@
         <h2 class="MainHeader">
             Invite Tree
         </h2>
+        <h5 class="SubHeader Reminder">
+    DO NOT LEAK ANY USER INFORMATION. DOING SO WILL GET YOU BANNED.
+</h5>
         @if (!request()->has('q'))
             <h5 class="SubHeader">Enter a Username or ID.</h5>
         @elseif (!$user)
