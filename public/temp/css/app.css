@@ -776,14 +776,17 @@ body {
 }
 
 .content_signup {
-  color: black;
-  width: 970px;
+  color: white;
+  max-width: 500px;
   padding: 5px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  border-radius: 5px;
   margin: 30px auto 0 auto;
-  background: rgb(255, 255, 255);
+  background: rgb(0 0 0 / 53%);
   /* Fallback for IE 11*/
-  background-color: rgb(255, 255, 255);
-}
+  background-color: rgb(0 0 0 / 53%);}
 
 .content_signup h1,
 .content_signup a,
@@ -1079,12 +1082,12 @@ button:hover.greenbutton {
 
 #footer_signup {
   text-align: center;
-  width: 970px;
+  max-width: 500px;
   margin: auto auto;
   padding: 1em 5px;
-  background: #e6e6e6;
-  /* Fallback for IE 11*/
-  background-color: #e6e6e6;
+  /* background: #e6e6e6; */
+  /* Fallback for IE 11 */
+  /* background-color: #e6e6e6; */
   min-height: fit-content;
 }
 
@@ -1092,7 +1095,7 @@ button:hover.greenbutton {
 #footer a,
 #footer_signup p,
 #footer_signup a {
-  color: #555;
+  color: black;
 }
 
 #ColorChooser {
