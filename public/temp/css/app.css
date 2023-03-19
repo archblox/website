@@ -784,9 +784,10 @@ body {
   border-color: white;
   border-radius: 5px;
   margin: 30px auto 0 auto;
-  background: rgba(0,0,0,0.5);
   /* Fallback for IE 11*/
-  background-color: rgba(0,0,0,0.5);}
+  background-color: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.5);
+}
 
 .content_signup h1,
 .content_signup a,
