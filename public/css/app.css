@@ -129,8 +129,6 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   font-size: 16px;
-  overflow-y: scroll;
-  max-height: 21px;
   padding: 10px;
   margin: auto;
   left: 0;
@@ -778,13 +776,17 @@ body {
 }
 
 .content_signup {
-  color: black;
-  width: 970px;
+  color: white;
+  max-width: 500px;
   padding: 5px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  border-radius: 5px;
   margin: 30px auto 0 auto;
-  background: rgb(255, 255, 255);
   /* Fallback for IE 11*/
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.5);
 }
 
 .content_signup h1,
@@ -1081,12 +1083,12 @@ button:hover.greenbutton {
 
 #footer_signup {
   text-align: center;
-  width: 970px;
+  max-width: 500px;
   margin: auto auto;
   padding: 1em 5px;
-  background: #e6e6e6;
-  /* Fallback for IE 11*/
-  background-color: #e6e6e6;
+  /* background: #e6e6e6; */
+  /* Fallback for IE 11 */
+  /* background-color: #e6e6e6; */
   min-height: fit-content;
 }
 
@@ -1094,7 +1096,7 @@ button:hover.greenbutton {
 #footer a,
 #footer_signup p,
 #footer_signup a {
-  color: #555;
+  color: white;
 }
 
 #ColorChooser {
@@ -1185,7 +1187,7 @@ div#testingSitePanelWrapper,
 
   .content_signup,
   #footer_signup {
-    width: 100%;
+    /*width: 100%;*/
   }
   .alert-system .alert {
     border-radius: 0;

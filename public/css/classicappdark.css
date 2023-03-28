@@ -99,12 +99,37 @@ body {
   text-align: center;
 }
 
+#footer_signup {
+  text-align: center;
+  width: 970px;
+  max-width: 500px;
+  margin: auto auto;
+  padding: 1em 5px;
+  background: #e6e6e6;
+  /* Fallback for IE 11*/
+  background-color: #e6e6e6;
+  background: #e6e6e6;
+  /* Fallback for IE 11 */
+  background-color: #e6e6e6;
+  min-height: fit-content;
+}
+
 #footer, #footer_signup {
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.75) !important;
 }
 
 .content_signup {
-  background: rgba(25, 25, 25,0.75);
+  color: white;
+  width: 970px;
+  padding: 5px;
+  margin: 30px auto 0 auto;
+  background: rgb(255, 255, 255);
+  /* Fallback for IE 11*/
+  background-color: rgb(255, 255, 255);
+}
+
+.content_signup {
+  background: rgba(25, 25, 25,0.75) !important;
 }
 .content, #footer {
   max-width: 1000px;

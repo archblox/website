@@ -73,11 +73,6 @@ body {
   background: rgb(25, 25, 25);
 }
 
-.content_signup {
-  color: rgb(167, 167, 167);
-  background: rgb(25, 25, 25);
-}
-
 .content p a,
 .content a,
 .content_signup p a,
@@ -89,17 +84,6 @@ body {
 
 #footer {
   background: rgb(31, 31, 31);
-}
-
-#footer_signup {
-  background: rgb(0, 0, 0);
-}
-
-#footer p,
-#footer a,
-#footer_signup p,
-#footer_signup a {
-  color: rgb(167, 167, 167);
 }
 
 a,
