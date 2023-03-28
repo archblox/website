@@ -9,6 +9,10 @@
     <meta content="ARCHBLOX is a work in progress 2012 ROBLOX revival with a heavy emphasis on Skeuomorphic UI." property="og:description" />
 @endsection
 
+@section('alert')
+<div style="font-size: 12px;"class="alert warning visible ontop"><b>NOTICE:</b> When playing any old Roblox client, Use a sandbox (like <a href="https://sandboxie-plus.com/downloads/">Sandboxie</a> or <a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview">Windows Sandbox</a>) or a VM (that <b>doesn't</b> have host disk access). Old Roblox clients are known to have security vunerabilities, so run them at your own risk.</div>
+@endsection
+
 @section('content')
 <div class="PageTitleBar">
     <h1>Games</h1>
