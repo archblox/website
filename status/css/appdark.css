@@ -1,0 +1,201 @@
+#alert {
+  background: #6a0f0f;
+  background: linear-gradient(#ef3232 10%, #6a0f0f 100%);
+}
+
+#success {
+  background: #01582a;
+  background: linear-gradient(#00c953 10%, #01582a 100%);
+}
+
+.warningtext {
+  color: #ff6767;
+}
+
+
+.popupcontainer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  background: #2362DE;
+  background: linear-gradient(#3690df 10%, #0d1085 100%);
+}
+
+.onlinestatus_website {
+  color: #2260DD;
+}
+
+.onlinestatus_studio {
+  color: rgb(185, 135, 20);
+}
+
+.onlinestatus_ingame {
+  color: green;
+}
+
+.onlinestatus_offline {
+  color: #727272;
+}
+
+.FeedContainerBox,
+.ProfileContainerBox,
+.FriendsContainerBox {
+  border: 1px solid #787373;
+}
+
+.smallnav {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#303030 10%, #000000 100%);
+}
+
+body {
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+
+.loggedout body {
+  background-color: transparent;
+}
+
+.loggedout {
+  background: transparent url(/img/backgrounddark.jpg) no-repeat scroll center top;
+  background-color: #000000;
+  background-size: cover;
+  /*
+  background-image: url('../img/animateddark.png');
+  background-color: rgb(1, 17, 48);
+  */
+}
+
+.content {
+  color: rgb(167, 167, 167);
+  background: rgb(25, 25, 25);
+}
+
+.content_signup {
+  color: rgb(167, 167, 167);
+  background: rgb(25, 25, 25);
+}
+
+.content p a,
+.content a,
+.content_signup p a,
+.content_signup a,
+.content_special p a,
+.content_special a {
+  color: #005587;
+}
+
+#footer {
+  background: rgb(31, 31, 31);
+}
+
+#footer_signup {
+  background: rgb(0, 0, 0);
+}
+
+#footer p,
+#footer a,
+#footer_signup p,
+#footer_signup a {
+  color: rgb(167, 167, 167);
+}
+
+a,
+#navbarusername {
+  color: rgb(215, 215, 215);
+}
+
+.logoutframe {
+  background: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+.iphone-sidebar {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.iphone-content {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+#InviteTreeContainer {
+  background-color: rgb(255, 255, 255);
+}
+
+textarea,
+select,
+input {
+  background-color: rgb(25, 25, 25);
+  color: rgb(200,200,200);
+}
+
+.tab_selected {
+  background: #01639c;
+  background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
+}
+
+.tab {
+  background: #4b4b4b;
+  color: rgb(255, 255, 255) !important;
+  background: linear-gradient(180deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
+}
+
+button.greybutton {
+  background: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
+}
+
+button:hover.greybutton {
+  background: linear-gradient(0deg, #4b4b4b 0%, rgb(36, 36, 36) 100%);
+}
+
+button.bluebutton {
+  background: #01639c;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #00a2ff 0%,  #01639c 100%)
+}
+
+button:hover.bluebutton {
+  background: linear-gradient(0deg, #00a2ff 0%,  #01639c 100%)
+}
+
+button.redbutton {
+  background: #e42424;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #d86868 0%, #e42424 100%);
+}
+
+button:hover.redbutton {
+  background: linear-gradient(0deg, #d86868 0%, #e42424 100%);
+}
+
+button.greenbutton {
+  background: #1a5c2e;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #02b757 0%, #1a5c2e 100%);
+}
+
+button:hover.greenbutton {
+  background: linear-gradient(0deg, #02b757 0%, #1a5c2e 100%);
+}
+
+button {
+  color:rgb(0, 0, 0)
+}
+
+div.mySubmenuFixed {
+  background: #101010;
+}
+.Redesign .subMenu {
+  background: #101010;
+}
+
+.popup {
+  color: white;
+  background: black;
+}

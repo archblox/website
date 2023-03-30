@@ -1,0 +1,745 @@
+/*/ Written by TersisWilvin (TersisWilvin#0087) for the ARCHBLOX Admin Panel Utility Pages. 
+Includes -> Fallback Theme (Color Theme) -> Light Theme -> Dark Theme.
+/*/
+
+::selection {
+  background-color: #75757580;
+}
+
+body {
+  background: #e3e3e3;
+  min-width: 0px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+body :focus-visible {
+  outline: none !important;
+}
+.light-theme {
+  background-color: #ccc;
+  color: #2d312d;
+}
+.dark-theme {
+  background-color: #111;
+  color: #ddd;
+}
+
+@font-face
+{
+	font-family: "copenhagen-icons";
+	src: url(copenhagen-icons-268fb7c014de8a06d7d40310b5000daa..woff) format("woff");
+	font-weight: normal;
+	font-style: normal
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+h6 {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+br {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a {
+  color: inherit;
+  font-weight: normal;
+}
+
+.AdminPanel {
+  height: 100%;
+}
+#MasterContainer.AdminPanel {
+  background: #e3e3e3;
+}
+.light-theme #MasterContainer.AdminPanel {
+  background-color: #ccc;
+}
+.dark-theme #MasterContainer.AdminPanel {
+  background-color: #111;
+}
+#MasterContainer #BodyWrapper {
+  padding-top: 25px;
+}
+#MasterContainer #BodyWrapper {
+  background: #e3e3e3;
+  color: #191919;
+}
+.light-theme #MasterContainer #BodyWrapper {
+  background-color: #ccc;
+  color: #2d312d;
+}
+.dark-theme #MasterContainer #BodyWrapper {
+  background-color: #111;
+  color: #ddd
+}
+#AdminWrapper.Navigation {
+  width: 100%;
+}
+.AdminHeader {
+  background: #0074bd;
+  width: 100%;
+  height: 75px;
+  z-index: 2;
+  position: relative;
+}
+.light-theme .AdminHeader {
+  background-color: #aaa;
+}
+.dark-theme .AdminHeader {
+  background-color: #333;
+}
+.AdminSubHeader {
+  background: #0074bd; /*/Fallback for older browsers/*/
+  background: linear-gradient(180deg, #0074bd, #004774);
+  box-shadow: 0 2px 8px 0 #000;
+  width: 100%;
+  height: 25px;
+  z-index: 1;
+  position: relative;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.light-theme .AdminSubHeader {
+  background: #aaa; /*/Fallback for older browsers/*/
+  background: linear-gradient(180deg, #aaa, #555);
+  box-shadow: 0 2px 8px 0 #000;
+}
+.dark-theme .AdminSubHeader {
+  background: #333; /*/Fallback for older browsers/*/
+  background: linear-gradient(180deg, #333, #191919);
+  box-shadow: 0 2px 8px 0 #000;
+}
+.AdminSubHeader ul {
+  padding: 0;
+  margin: auto auto;
+  width: 100%;
+  height: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+.AdminSubHeader li {
+  color: #191919;
+  width: 25%;
+  text-align: center;
+  list-style: none;
+  padding: 5px 0;
+}
+.light-theme .AdminSubHeader li {
+  color: #000;
+}
+.dark-theme .AdminSubHeader li {
+  color: #fff;
+}
+.AdminSubHeader li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: .1s all linear;
+}
+.light-theme .AdminSubHeader li a {
+  color: #222;
+}
+.dark-theme .AdminSubHeader li a {
+  color: #bbb;
+}
+.AdminSubHeader li a:hover, .AdminSubHeader li a:active {
+  transition: .1s all linear;
+}
+.AdminSubHeader li a:hover, .AdminSubHeader li a:active, .light-theme .AdminSubHeader li a:hover, .light-theme .AdminSubHeader li a:active, .dark-theme .AdminSubHeader li a:hover, .dark-theme .AdminSubHeader li a:active {
+  color: #fff;
+  box-shadow: 0 2px 0 0 #fff;
+}
+.AdminSubHeader li a.active {
+  box-shadow: 0 2px 0 0 #00b7ff;
+}
+.AdminSubHeader li a:focus {
+  color: #dbdbdb;
+  box-shadow: 0 2px 0 0 #dbdbdb;
+}
+.AdminSubHeader li a.active:focus {
+  box-shadow: 0 2px 0 0 #11749b;
+}
+.AdminPanel .logoutbtn {
+  color: #00b7ff;
+  cursor: default;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.AdminPanel .logoutarrow {
+  height: 16px;
+  width: 16px;
+}
+.AdminPanel .logoutarrow:before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  transform: rotate(180deg);
+  position: absolute;
+}
+.AdminPanel .logoutarrow:before {
+  content: '\2794';
+}
+.AdminHeader .Slogan {
+  color: #fff;
+  text-shadow: #00000091 2px 2px;
+  font-size: 16px;
+  font-weight: 100;
+  display: block;
+  text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.light-theme .AdminHeader .Slogan {
+  color: #222;
+  text-shadow: #55555591 2px 2px;
+}
+.dark-theme .AdminHeader .Slogan {
+  color: #bbb;
+  text-shadow: #11111191 2px 2px;
+}
+.AdminHeader .SiteBrand {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  opacity: .9;
+  background-image: url(/img/MORBLOXlogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0;
+  transition: .1s opacity linear;
+  display: block;
+  margin: auto;
+}
+.light-theme .AdminHeader .SiteBrand {
+  opacity: .7;
+}
+.dark-theme .AdminHeader .SiteBrand {
+  opacity: .8;
+}
+.AdminHeader .SiteBrand:hover {
+  opacity: 1;
+}
+.AdminPanel #Body {
+  background: #e3e3e3
+}
+.light-theme .AdminPanel #Body {
+  background-color: #ccc;
+}
+.dark-theme .AdminPanel #Body {
+  background-color: #111;
+}
+.AdminPanel .MainHeader, .AdminPanel .SubHeader {
+  text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.AdminPanel .Reminder {
+  color: #f68802
+}
+.light-theme .AdminPanel .Reminder, .dark-theme .AdminPanel .Reminder {
+  color: #ff7300
+}
+.text-error {
+  display: block;
+  text-align: center;
+  color: #d86868;
+  font-weight: 200;
+  padding: 5px;
+}
+.light-theme .text-error, .dark-theme .text-error {
+  color: #d6241a;
+}
+.text-header {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.text-secondary {
+  color: #191919;
+  display: inline-block;
+  text-align: left;
+}
+.light-theme .text-secondary {
+  color: #555;
+}
+.dark-theme .text-secondary {
+  color: #bbb;
+}
+.AdminPanel .Stats-Wrapper {
+  text-align: center;
+  padding: 4px;
+}
+.AdminPanel .StatsContainer {
+  margin: 15px 15px 0 15px;
+  padding: 15px;
+  border: 1px dashed #ff7300;
+}
+.AdminPanel .StatsContainer {
+  background-color: #b8b8b8;
+ }
+.light-theme .AdminPanel .StatsContainer {
+ background-color: #aaa;
+}
+.dark-theme .AdminPanel .StatsContainer {
+  background-color: #080808;
+}
+.AdminPanel .Userlist {
+  margin: 10px;
+}
+.AdminPanel form div {
+  text-align: center;
+}
+.SearchCloseBtn {
+  color: #af1400;
+  transition: .1s linear;
+  left: auto;
+  margin-left: -23px;
+  margin-top: 3px;
+  position: absolute;
+  font-size: 16px;
+}
+.SearchCloseBtn:hover {
+  color: #d41900;
+}
+.AdminPanel #SearchInput {
+  border: 1px solid #b8b8b8;
+  color: #191919;
+  background: #fff;
+  border-radius: 3px;
+}
+.light-theme .AdminPanel #SearchInput {
+  border: 1px solid #bbb;
+  color: #1b1b1b;
+  background-color: #fff;
+}
+.dark-theme .AdminPanel #SearchInput {
+  border: 1px solid #555;
+  color: #bbb;
+  background-color: #000;
+}
+.AdminPanel #SearchInput:focus, .AdminPanel #SearchInput:active {
+  border-color: #0099ff;
+}
+#SearchInput, .btn-neutral {
+  margin: 0 5px;
+}
+.AdminPanel .Stats {
+  color: #191919;
+  font-size: 16px;
+  font-weight: 100;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.light-theme .AdminPanel .Stats {
+  color: #222;
+}
+.dark-theme .AdminPanel .Stats {
+  color: #a7a7a7;
+}
+.AdminPanel .Stats.Counter {
+  color: #000;
+  font-weight: 400;
+}
+.light-theme .AdminPanel .Stats.Counter {
+  color: #000;
+}
+.dark-theme .AdminPanel .Stats.Counter {
+  color: #fff;
+}
+.AdminPanel .Stat-Separator {
+  background: #000; /*/Fallback for older browsers/*/
+  background: linear-gradient(90deg,#ffffff00 0%, #fff 50%, #ffffff00 100%);
+  width: 50%;
+  height: 1px;
+  display: block;
+  margin: auto;
+}
+.light-theme .AdminPanel .Stat-Separator {
+  background: #000; /*/Fallback for older browsers/*/
+  background: linear-gradient(90deg,#00000000 0%, #000 50%, #00000000 100%);
+}
+.dark-theme .AdminPanel .Stat-Separator {
+  background: #555; /*/Fallback for older browsers/*/
+  background: linear-gradient(90deg,#55555500 0%, #555 50%, rgb(85, 85, 85,0) 100%);
+}
+.AdminPanel .SearchContainer {
+  background: #b8b8b8;
+  width: 235px;
+  height: auto;
+  border-radius: 5px;
+  margin: 62px 25px 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: block; /*/Fallback for older browsers/*/
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.light-theme .AdminPanel .SearchContainer {
+  background-color: #bbb;
+}
+.dark-theme .AdminPanel .SearchContainer {
+  background-color: #555;
+}
+.SearchContainer .Thumbnail {
+  background-color: #b8b8b8;
+  border: 5px solid #e3e3e3;
+  height: 64px;
+  width: 64px;
+  margin-top: -37px;
+  border-radius: 100%;
+}
+.light-theme .SearchContainer .Thumbnail {
+  background-color: #bbb;
+  border-color: #ccc;
+}
+.dark-theme .SearchContainer .Thumbnail {
+  background-color: #555;
+  border-color: #111;
+}
+.SearchBoard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.SearchContainer .UserThumbnail {
+  background-image: url(/img/defaultrender.png);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.SearchContainer .UserDetails {
+  padding: 5px;
+}
+.SearchContainer .SearchBox {
+  width: 100%;
+}
+.AuthenticatedUserNameWrapper {
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.light-theme .AuthenticatedUserNameWrapper {
+  color: #0D0D0D;
+}
+.dark-theme .AuthenticatedUserNameWrapper {
+  color: #fff;
+}
+.AuthenticatedUserName, .logoutarrow {
+  color: #00a2ff;
+  transition: .25s all ease-in-out;
+  display: inline-block;
+}
+.AuthenticatedUserName {
+  color: #00a2ff;
+}
+.light-theme .AuthenticatedUserName, .light-theme .logoutarrow {
+  color: #0387bb;
+}
+.dark-theme .AuthenticatedUserName, .dark-theme .logoutarrow {
+  color: #00b7ff;
+}
+.AuthenticatedUserName:hover, .logout:hover + .logoutarrow {
+  color: #7ddaff;
+  transition: .25s all ease-in-out;
+}
+.UserDetails .Row {
+  overflow-wrap: anywhere;
+}
+.SearchContainer .Thumbnail a {
+  width: 12px;
+  height: 12px;
+  display: block;
+  float: right;
+  top: -12px;
+  position: relative;
+  border-radius: 50%;
+}
+.ingame {
+  display: none; /*TODO*/
+}
+.online {
+  background: #0087e0; /*/Fallback for older browsers/*/
+  background: linear-gradient(0deg, #0087e0 0%, #005085 49%,#005a85 50%, #0099ff 95%, #fff 100%);
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  margin: -8px;
+}
+.offline {
+  background: #a3a3a3; /*/Fallback for older browsers/*/
+  background: linear-gradient(0deg, #a3a3a3 0%, #7a7a7a 49%, #797979 50%, #c9c9c9 95%, #fff 100%);
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  margin: -8px;
+}
+.online, .offline, .ingame {
+  border: 2px solid #e3e3e3;
+}
+.light-theme .online, .light-theme .offline, .light-theme .ingame {
+  border-color: #ccc;
+}
+.dark-theme .online, .dark-theme .offline, .dark-theme .ingame {
+  border-color: #111;
+}
+.info-hidden {
+  font-style: italic;
+}
+.info-error {
+  color: #ff3300;
+  font-style: italic;
+  cursor: not-allowed;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.info-email {
+  color: #444;
+}
+
+/*Heavily based off of the roblox developer tree list (because it looks cool)*/
+.SearchTree {
+  width: 260px;
+  height: 100%;
+  padding: 0;
+  margin: 10px auto 0;
+  min-height: 550px;
+}
+.SearchTree .Menu {
+  list-style-type: none;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  line-height: 20px;
+  min-height: 550px;
+}
+.SearchTree a {
+  color: #191919;
+  transition: .15s all ease-in-out;
+  font-size: 14px;
+  margin: 0 0 0 38px;
+  padding-right: 5px;
+  position: relative;
+  top: 18px;
+  display: inline-block;
+}
+.SearchTree a:hover {
+  color: #00a2ff;
+}
+.light-theme .SearchTree a {
+  color: #565656;
+}
+.dark-theme .SearchTree a {
+  color: #9b9b9b;
+}
+.light-theme .SearchTree a:hover {
+  color: #0387bb;
+}
+.dark-theme .SearchTree a:hover {
+  color: #00b7ff;
+}
+.SearchTree a::after {
+  content: '';
+  border: 1px solid #191919;
+  border-radius: 100%;
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  left: -10px;
+  position: absolute;
+  top: 9px;
+}
+.light-theme .SearchTree a::after {
+  border-color: #222;
+}
+.dark-theme .SearchTree a::after {
+  border-color: #555;
+}
+.SearchTree a span {
+  display: block;
+}
+#BodyWrapper .forwardArrow::before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+#BodyWrapper .forwardArrow::before {
+  content: '\2794';
+}
+#BodyWrapper .forwardArrow {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+}
+#BodyWrapper .forwardArrow::after, #BodyWrapper .userInfo::after {
+  display: none;
+}
+#BodyWrapper .userInfo {
+  margin: 0;
+}
+#BodyWrapper .userInfo::before {
+  font-family: "copenhagen-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+#BodyWrapper .userInfo::before {
+  content: '\2139';
+  border-radius: 100%;
+}
+.TreeList {
+  border-left: 1px dashed #191919;
+  margin: 13px 0 0 30px;
+  padding: 0;
+}
+.light-theme .TreeList {
+  border-color: #222;
+}
+.dark-theme .TreeList {
+  border-color: #555;
+}
+#DropDown.TreeList {
+  min-height: 550px;
+}
+.SearchTree li ul li {
+  list-style-type: none;
+  position: relative;
+  top: 3px;
+  bottom: 0;
+  padding-bottom: 16px;
+  white-space: nowrap;
+}
+.SearchTree li ul li:last-child {
+  padding-bottom: 11px;
+}
+.SearchTree li ul li.subList {
+  padding-bottom: 0;
+}
+.SearchTree li ul li:before {
+  border-top: 1px dashed #191919;
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 0;
+  position: absolute;
+  left: 0em;
+  top: 28px;
+}
+.light-theme .SearchTree li ul li:before {
+  border-color: #222;
+}
+.dark-theme .SearchTree li ul li:before {
+  border-color: #555;
+}
+
+body:not(.EnableNewPanel) .NewAdminPanel {
+  display: none;;
+}
+
+@media (max-width:990px) {
+  .AdminPanel #Body, .AdminPanel #BodyWrapper, .AdminPanel #MasterContainer {
+    width: 100% !important;
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .AuthenticatedUserNameWrapper {
+    font-size: 10px;
+  }
+}
+@media (max-width:500px) {
+  .AuthenticatedUserNameWrapper {
+    display: none;
+  }
+}

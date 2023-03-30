@@ -1,0 +1,9 @@
+{
+    "name": "ARCHBLOX",
+    "short_name": "ARCHBLOX",
+    "lang": "en-US",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "version": "1.0.0"
+}
