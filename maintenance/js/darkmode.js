@@ -2,7 +2,7 @@ function getDarkMode() {
     var currentTime = new Date().getHours();
     if (6 >= currentTime || currentTime > 18) {
         var li = document.createElement('link');
-        var href = "{{ asset('css/appdark.css?id='.Str::random(8)) }}";
+        var href = "https://archblox.com/css/appdark.css";
         var rel = 'stylesheet';
         li.setAttribute('href', href);
         li.setAttribute('rel', rel);

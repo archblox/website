@@ -75,7 +75,8 @@ body {
 
 .content_signup {
   color: rgb(167, 167, 167);
-  background: rgb(25, 25, 25);
+  background-color: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.5)
 }
 
 .content p a,
@@ -92,7 +93,7 @@ body {
 }
 
 #footer_signup {
-  background: rgb(0, 0, 0);
+  /*background: rgb(0, 0, 0);*/
 }
 
 #footer p,
