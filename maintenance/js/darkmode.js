@@ -1,6 +1,6 @@
 function getDarkMode() {
     var currentTime = new Date().getHours();
-    if (6 >= currentTime || currentTime > 18) {
+    if (6 >= currentTime || currentTime > 16) {
         var li = document.createElement('link');
         var href = "https://archblox.com/css/appdark.css";
         var rel = 'stylesheet';
