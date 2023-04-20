@@ -76,6 +76,7 @@ body {
 .content_signup {
   color: rgb(167, 167, 167);
   background-color: rgba(0,0,0,0.5);
+  border-color: black;
   background: rgba(0,0,0,0.5)
 }
 
