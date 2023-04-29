@@ -241,7 +241,7 @@
             users are online</p>
         <br>
         @endif
-        <p><a href="{{ route('blog') }}">Blog</a> <a href="https://github.archblox.com">Github</a> <a href="https://twitter.archblox.com">Twitter</a> <a href="https://classic.archblox.com">Classic</a> <a href="https://status.archblox.com">Status</a> <a href="https://help.archblox.com">Help</a></p>  <a href="https://discord.archblox.com">Discord</a></p>
+        <p><a href="{{ route('blog') }}">Blog</a> <a href="https://github.archblox.com">Github</a> <a href="https://twitter.archblox.com">Twitter</a> <a href="https://classic.archblox.com">Classic</a> <a href="https://status.archblox.com">Status</a> <a href="https://help.archblox.com">Help</a> <a href="https://discord.archblox.com">Discord</a></p>
         <p><a href="{{ route('privacy') }}">Privacy Policy</a> <a href="{{ route('tos') }}">Terms of Service</a>
         </p>
     </div>
