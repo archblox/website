@@ -1,0 +1,2 @@
+/studio/* https://github.com/archblox/website/raw/main/public/studio/:splat 301
+/client/* https://github.com/archblox/website/raw/main/public/client/:splat 301
