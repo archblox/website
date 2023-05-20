@@ -1,3 +1,4 @@
 /studio/* https://github.com/archblox/website/raw/main/public/studio/:splat 302
 /client/* https://github.com/archblox/website/raw/main/public/client/:splat 302
+/asset?id=* https://github.com/archblox/website/raw/main/public/asset/:splat 307
 /asset/* https://github.com/archblox/website/raw/main/public/asset/:splat 302
