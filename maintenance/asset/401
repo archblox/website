@@ -4,7 +4,7 @@
 	<Item class="Shirt" referent="RBX0">
 		<Properties>
 			<string name="Name">Clothing</string>
-			<Content name="ShirtTemplate"><url>http://morblox.us/asset/?id=400</url></Content>
+			<Content name="ShirtTemplate"><url>http://jarfeh.xyz/asset/?id=400</url></Content>
 		</Properties>
 	</Item>
 </roblox>

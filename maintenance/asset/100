@@ -1,4 +1,4 @@
-<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.morblox.us/roblox.xsd" version="4">
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.jarfeh.xyz/roblox.xsd" version="4">
 	<External>null</External>
 	<External>nil</External>
 	<Item class="Tool" referent="RBX0">
@@ -20,7 +20,7 @@
 				<R22>0.217036352</R22>
 			</CoordinateFrame>
 			<string name="Name">BloxyCola</string>
-			<Content name="TextureId"><url>http://www.morblox.us/asset/?id=10472127</url></Content>
+			<Content name="TextureId"><url>http://www.jarfeh.xyz/asset/?id=10472127</url></Content>
 			<string name="ToolTip"></string>
 		</Properties>
 		<Item class="Part" referent="RBX1">
@@ -95,7 +95,7 @@
 				<Properties>
 					<token name="LODX">2</token>
 					<token name="LODY">2</token>
-					<Content name="MeshId"><url>http://www.morblox.us/asset/?id=10470609</url></Content>
+					<Content name="MeshId"><url>http://www.jarfeh.xyz/asset/?id=10470609</url></Content>
 					<token name="MeshType">5</token>
 					<string name="Name">Mesh</string>
 					<Vector3 name="Offset">
@@ -108,7 +108,7 @@
 						<Y>1.20000005</Y>
 						<Z>1.20000005</Z>
 					</Vector3>
-					<Content name="TextureId"><url>http://www.morblox.us/asset/?id=10470600</url></Content>
+					<Content name="TextureId"><url>http://www.jarfeh.xyz/asset/?id=10470600</url></Content>
 					<Vector3 name="VertexColor">
 						<X>1</X>
 						<Y>1</Y>
@@ -2677,7 +2677,7 @@
 					<string name="Name">DrinkSound</string>
 					<float name="Pitch">1</float>
 					<bool name="PlayOnRemove">false</bool>
-					<Content name="SoundId"><url>http://www.morblox.us/asset/?id=10722059</url></Content>
+					<Content name="SoundId"><url>http://www.jarfeh.xyz/asset/?id=10722059</url></Content>
 					<float name="Volume">0.5</float>
 				</Properties>
 			</Item>
@@ -2687,7 +2687,7 @@
 					<string name="Name">OpenSound</string>
 					<float name="Pitch">1</float>
 					<bool name="PlayOnRemove">false</bool>
-					<Content name="SoundId"><url>http://www.morblox.us/asset/?id=10721950</url></Content>
+					<Content name="SoundId"><url>http://www.jarfeh.xyz/asset/?id=10721950</url></Content>
 					<float name="Volume">0.5</float>
 				</Properties>
 			</Item>

@@ -14,13 +14,13 @@ if (Auth::check()) {
 	$username = addslashes(Auth::user()->name);
 	$authorised = 1;
 	$id = addslashes(Auth::id());
-	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=' . addslashes(Auth::id());
+	$app = 'http://jarfeh.xyz/Asset/CharacterFetch.ashx?userId=' . addslashes(Auth::id());
 } else {
 	$randName = mt_rand(1, 9999);
 	$username = "Guest " . $randName;
 	$authorised = 0;
 	$id = mt_rand(1000, 9999);
-	$app = 'http://morblox.us/Asset/CharacterFetch.ashx?userId=0';
+	$app = 'http://jarfeh.xyz/Asset/CharacterFetch.ashx?userId=0';
 }
 $ip = addslashes($_GET["ip"]);
 $port = addslashes($_GET["port"]);
@@ -79,20 +79,20 @@ end)
 
 game:GetService("ChangeHistoryService"):SetEnabled(false)
 game:GetService("ContentProvider"):SetThreadPool(16)
-pcall(function() game:GetService("InsertService"):SetBaseSetsUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?nsets=10&type=base") end)
-pcall(function() game:GetService("InsertService"):SetUserSetsUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d") end)
-pcall(function() game:GetService("InsertService"):SetCollectionUrl("http://www.morblox.us/Game/Tools/InsertAsset.ashx?sid=%d") end)
-pcall(function() game:GetService("InsertService"):SetAssetUrl("http://www.morblox.us/asset/?id=%d") end)
-pcall(function() game:GetService("InsertService"):SetAssetVersionUrl("http://www.morblox.us/asset/?id=%d") end)
+pcall(function() game:GetService("InsertService"):SetBaseSetsUrl("http://www.jarfeh.xyz/Game/Tools/InsertAsset.ashx?nsets=10&type=base") end)
+pcall(function() game:GetService("InsertService"):SetUserSetsUrl("http://www.jarfeh.xyz/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d") end)
+pcall(function() game:GetService("InsertService"):SetCollectionUrl("http://www.jarfeh.xyz/Game/Tools/InsertAsset.ashx?sid=%d") end)
+pcall(function() game:GetService("InsertService"):SetAssetUrl("http://www.jarfeh.xyz/asset/?id=%d") end)
+pcall(function() game:GetService("InsertService"):SetAssetVersionUrl("http://www.jarfeh.xyz/asset/?id=%d") end)
 
-pcall(function() game:GetService("SocialService"):SetFriendUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=IsFriendsWith&playerid=%d&userid=%d") end)
-pcall(function() game:GetService("SocialService"):SetBestFriendUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=IsBestFriendsWith&playerid=%d&userid=%d") end)
-pcall(function() game:GetService("SocialService"):SetGroupUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=IsInGroup&playerid=%d&groupid=%d") end)
-pcall(function() game:GetService("SocialService"):SetGroupRankUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRank&playerid=%d&groupid=%d") end)
-pcall(function() game:GetService("SocialService"):SetGroupRoleUrl("http://www.morblox.us/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&playerid=%d&groupid=%d") end)
-pcall(function() game:GetService("GamePassService"):SetPlayerHasPassUrl("http://www.morblox.us/Game/GamePass/GamePassHandler.ashx?Action=HasPass&UserID=%d&PassID=%d") end)
-pcall(function() game:GetService("MarketplaceService"):SetProductInfoUrl("https://api.morblox.us/marketplace/productinfo?assetId=%d") end)
-pcall(function() game:GetService("MarketplaceService"):SetPlayerOwnsAssetUrl("https://api.morblox.us/ownership/hasasset?userId=%d&assetId=%d") end)
+pcall(function() game:GetService("SocialService"):SetFriendUrl("http://www.jarfeh.xyz/Game/LuaWebService/HandleSocialRequest.ashx?method=IsFriendsWith&playerid=%d&userid=%d") end)
+pcall(function() game:GetService("SocialService"):SetBestFriendUrl("http://www.jarfeh.xyz/Game/LuaWebService/HandleSocialRequest.ashx?method=IsBestFriendsWith&playerid=%d&userid=%d") end)
+pcall(function() game:GetService("SocialService"):SetGroupUrl("http://www.jarfeh.xyz/Game/LuaWebService/HandleSocialRequest.ashx?method=IsInGroup&playerid=%d&groupid=%d") end)
+pcall(function() game:GetService("SocialService"):SetGroupRankUrl("http://www.jarfeh.xyz/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRank&playerid=%d&groupid=%d") end)
+pcall(function() game:GetService("SocialService"):SetGroupRoleUrl("http://www.jarfeh.xyz/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&playerid=%d&groupid=%d") end)
+pcall(function() game:GetService("GamePassService"):SetPlayerHasPassUrl("http://www.jarfeh.xyz/Game/GamePass/GamePassHandler.ashx?Action=HasPass&UserID=%d&PassID=%d") end)
+pcall(function() game:GetService("MarketplaceService"):SetProductInfoUrl("https://api.jarfeh.xyz/marketplace/productinfo?assetId=%d") end)
+pcall(function() game:GetService("MarketplaceService"):SetPlayerOwnsAssetUrl("https://api.jarfeh.xyz/ownership/hasasset?userId=%d&assetId=%d") end)
 pcall(function() game:SetCreatorID(0, Enum.CreatorType.User) end)
 
 pcall(function() game:GetService("Players"):SetChatStyle(Enum.ChatStyle.ClassicAndBubble) end)

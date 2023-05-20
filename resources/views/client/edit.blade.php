@@ -3,7 +3,7 @@ header("content-type:text/xml");
 ob_start();
 $PlaceID = addslashes($_GET["PlaceID"]);
 @endphp
-game:Load("http://morblox.us/asset?id=@php echo $PlaceID @endphp")
+game:Load("http://jarfeh.xyz/asset?id=@php echo $PlaceID @endphp")
 @php
 $data = ob_get_clean();
 $signature;

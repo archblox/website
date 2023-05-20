@@ -3,7 +3,7 @@
 	<External>nil</External>
 	<Item class="ShirtGraphic" referent="RBX0">
 		<Properties>
-			<Content name="Graphic"><url>http://morblox.us/asset/?id=304</url></Content>
+			<Content name="Graphic"><url>http://jarfeh.xyz/asset/?id=304</url></Content>
 			<string name="Name">Shirt Graphic</string>
 		</Properties>
 	</Item>

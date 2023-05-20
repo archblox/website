@@ -63,7 +63,7 @@ local hereText
 
 -- user facing images
 local assetUrls = {}
-local assetUrl = "http://www.morblox.us/Asset/?id=" 
+local assetUrl = "http://www.jarfeh.xyz/Asset/?id=" 
 local errorImageUrl = assetUrl .. "42557901" table.insert(assetUrls, errorImageUrl)
 local buyImageUrl = assetUrl .. "104651457" table.insert(assetUrls,buyImageUrl)
 local buyImageDownUrl = assetUrl .. "104651515" table.insert(assetUrls, buyImageDownUrl)
@@ -661,9 +661,9 @@ function startSpinner()
 
 			while pos < 8 do
 				if pos == spinPos or pos == ((spinPos+1)%8) then
-					spinnerIcons[pos+1].Image = "http://www.morblox.us/Asset?id=45880668"
+					spinnerIcons[pos+1].Image = "http://www.jarfeh.xyz/Asset?id=45880668"
 				else
-					spinnerIcons[pos+1].Image = "http://www.morblox.us/Asset?id=45880710"
+					spinnerIcons[pos+1].Image = "http://www.jarfeh.xyz/Asset?id=45880710"
 				end
 				
 				pos = pos + 1
@@ -716,7 +716,7 @@ function createSpinner(size,position,parent)
 		spinnerImage.Position = UDim2.new(.5+.3*math.cos(math.rad(45*spinnerNum)), -8, .5+.3*math.sin(math.rad(45*spinnerNum)), -8)
 		spinnerImage.BackgroundTransparency = 1
 		spinnerImage.ZIndex = 10
-	    spinnerImage.Image = "http://www.morblox.us/Asset/?id=45880710"
+	    spinnerImage.Image = "http://www.jarfeh.xyz/Asset/?id=45880710"
 		spinnerImage.Parent = spinnerFrame
 
 	    spinnerIcons[spinnerNum] = spinnerImage

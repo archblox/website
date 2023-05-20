@@ -11,7 +11,7 @@
  //echo $height[1];
  $id = substr($redirect_linka, strpos($redirect_linka, "aid=") + 4);
  //echo $id;
- $assetimage = file_get_contents('https://assetgame.morblox.us/Thumbs/Asset.asmx/RequestThumbnail_v2?assetId=' . $id . '&assetVersionId=0&width=' . $width . '&height=' . $height . '&imageFormat=%22' . $format .'%22&thumbnailFormatId=296&overrideModeration=false');
+ $assetimage = file_get_contents('https://assetgame.jarfeh.xyz/Thumbs/Asset.asmx/RequestThumbnail_v2?assetId=' . $id . '&assetVersionId=0&width=' . $width . '&height=' . $height . '&imageFormat=%22' . $format .'%22&thumbnailFormatId=296&overrideModeration=false');
  //echo $text;
  preg_match('/"url":"(.*?)"}}/', $assetimage, $imageurl);
  //echo $imageurl[1];
@@ -27,6 +27,6 @@ if ( copy($imageurl[1], $newfile) ) {
 }
 }
 $textbox = ($id . "+" . $width[1] . "+" . $height[1] );
-header("Location: http://www.morblox.us/stamper/icons/{$textbox}");
+header("Location: http://www.jarfeh.xyz/stamper/icons/{$textbox}");
  exit();
  ?>
