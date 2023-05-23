@@ -100,4 +100,9 @@ class ClientController extends Controller
     {
         return view('client.CharacterFetch');
     }
+
+    public function assetIndex()
+    {
+        return view('client.assetIndex');
+    }
 }

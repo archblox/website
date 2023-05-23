@@ -1,6 +1,9 @@
 /node_modules
 /public/hot
 /public/storage
+/resources/privkey/PrivKey.pem
+/public/GameRBLX/PrivKey.pem
+/public/asset/PrivKey.pem
 /storage/*.key
 /vendor
 .env
