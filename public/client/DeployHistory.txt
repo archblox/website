@@ -3,6 +3,7 @@ This is a log of all of the Client versions.
 You can download older versions by going to github.archblox.com/archive.
 -Thomas
 
+New Studio version-000000012 at 23/05/2023 9:24 PM
 New Client version-000000011 at 02/05/2023 12:28 PM
 New Client version-000000010 at 14/09/2022 7:36 PM
 New Client version-000000009 at 11/08/2022 5:03 AM
