@@ -212,8 +212,8 @@
     <br>
     <div style="flex-wrap: wrap; flex-direction: column;">
         <h3>DANGER ZONE</h3>
-        <!--<p style="warningtext">These are inactive for now.<br>In order to delete your account, please ask one of the
-            Developers.</p>-->
-        <p><a href="{{ route('delete') }}"> <button class="redbutton" >Delete Account</button></a> <button class="redbutton" disabled>Disable Account</button></p>
+        <p style="warningtext">These are inactive for now.<br>In order to delete your account, please ask one of the
+            Developers.</p>
+        <p><a href="#"> <button disabled class="redbutton" >Delete Account</button></a> <button class="redbutton" disabled>Disable Account</button></p>
     </div>
 @endsection

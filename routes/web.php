@@ -61,8 +61,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/my/invites', [App\Http\Controllers\KeyController::class, 'create'])->name('key_create');
 
     // Account Management routes
-    Route::get('/deleteaccount', [App\Http\Controllers\AccountController::class, 'delete'])->name('delete');
-    Route::post('/deleteaccountrequestbyebye', [App\Http\Controllers\AccountController::class, 'deleteaccount'])->name('deleteaccount');
+
+    // NO use brokey :(((
+    //Route::get('/deleteaccount', [App\Http\Controllers\AccountController::class, 'delete'])->name('delete');
+    //Route::post('/deleteaccountrequestbyebye', [App\Http\Controllers\AccountController::class, 'deleteaccount'])->name('deleteaccount');
 
 
     // Friendship system routes
